@@ -1,10 +1,119 @@
 server {
     server_name calq.it www.calq.it;
+    client_max_body_size 1000M;
     root /var/www/calq;
     index index.html;
 
+    location = /transcripts/review {
+        return 301 https://$host/to-do;
+    }
+
+    location = /transcripts/review.html {
+        return 301 https://$host/to-do;
+    }
+
+    location = /transcripts {
+        return 301 https://$host/transcripts/;
+    }
+
+    location /transcripts/ {
+        auth_basic off;
+        proxy_pass http://127.0.0.1:8877/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Accept-Encoding "";
+        proxy_buffering off;
+        proxy_cache off;
+        client_max_body_size 2000M;
+    }
+
+    
+    location = /internal_hub_auth {
+        internal;
+        proxy_pass http://127.0.0.1:4201/api/auth_check;
+        proxy_pass_request_body off;
+        proxy_set_header Content-Length "";
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header Cookie $http_cookie;
+    }
+
+    location /console/ttyd/ {
+        auth_basic off;
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/console/;
+        error_page 403 =302 https://$host/console/;
+        proxy_pass http://127.0.0.1:7681;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Accept-Encoding "";
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        proxy_socket_keepalive on;
+        keepalive_timeout 86400s;
+        proxy_buffering off;
+        proxy_cache off;
+        tcp_nodelay on;
+
+        sub_filter "</head>" "<style>::-webkit-scrollbar,.xterm-viewport::-webkit-scrollbar{width:16px !important;height:16px !important;}::-webkit-scrollbar-track,.xterm-viewport::-webkit-scrollbar-track{background:#11151c !important;}::-webkit-scrollbar-thumb,.xterm-viewport::-webkit-scrollbar-thumb{background:#586069 !important;border-radius:8px !important;border:3px solid #11151c !important;}::-webkit-scrollbar-thumb:hover,.xterm-viewport::-webkit-scrollbar-thumb:hover{background:#8b949e !important;}.xterm-viewport{scrollbar-width:auto !important;scrollbar-color:#586069 #11151c !important;}</style></head>";
+        sub_filter_once on;
+    }
+
+    location = /console {
+        return 301 https://$host/console/;
+    }
+
+    location /console/ {
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 300s;
+        proxy_send_timeout 300s;
+        auth_basic off;
+        proxy_pass http://127.0.0.1:4201/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Accept-Encoding "";
+        proxy_buffering off;
+        proxy_cache off;
+        client_max_body_size 2000M;
+    }
+
     location /api/ {
-        proxy_pass http://127.0.0.1:3920/api/;
+        proxy_pass http://127.0.0.1:4201/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Accept-Encoding "";
+        proxy_buffering off;
+        proxy_cache off;
+    }
+
+    location = /thoughts {
+        return 301 https://$host/thoughts/;
+    }
+
+    location = /flying-thoughts {
+        return 301 https://$host/thoughts/;
+    }
+
+    location = /flying-thoughts/ {
+        return 301 https://$host/thoughts/;
+    }
+
+    location /thoughts/ {
+        auth_basic off;
+        proxy_pass http://127.0.0.1:3040/;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -14,9 +123,43 @@ server {
         proxy_cache off;
     }
 
+    location = /unito {
+        return 301 https://$host/unito/;
+    }
+
+    location /unito/api/telemetry/ {
+        auth_basic off;
+        proxy_pass http://127.0.0.1:8765/api/telemetry/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_cache off;
+    }
+
+    location /unito/ {
+        auth_basic off;
+        add_header Cache-Control "no-cache, must-revalidate, max-age=0" always;
+        try_files $uri $uri/ /unito/index.html;
+    }
+
+    location = /fitness {
+        return 301 https://$host/fitness/;
+    }
+
+    location /fitness/ {
+        proxy_pass http://84.8.254.222/fitness/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
     location / {
-        auth_basic "Restricted Access";
-        auth_basic_user_file /etc/nginx/.htpasswd_calq;
+        auth_basic off;
         try_files $uri $uri/ /index.html;
     }
 
@@ -40,5 +183,6 @@ server {
     listen 80;
     listen [::]:80;
     server_name calq.it www.calq.it;
+    client_max_body_size 1000M;
     return 404; # managed by Certbot
 }
