@@ -11,6 +11,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from academic.exam_analytics import get_analytics, record_session
+from academic.exam_notes import get_user_notes, save_user_note, save_bulk_notes
 
 router = APIRouter(tags=["exams"])
 
@@ -22,13 +23,20 @@ EXAM_HIST_FILE = os.path.join(EXAMS_DIR, "history.json")
 
 class ExamSubmitRequest(BaseModel):
     answers: dict  # {question_id: selected_option}
+    comments: Optional[dict] = None  # {question_id: comment_text}
     time_spent_seconds: int
     mode: Optional[str] = "practice"
 
 
+class NoteSaveRequest(BaseModel):
+    question_id: str
+    comment: str
+    answer: Optional[str] = None
+
+
 @router.get("/api/exams/questions")
 def get_exam_questions(section: Optional[str] = None, category: Optional[str] = None):
-    """Returns questions filtered by section (A, B, C) and/or category."""
+    """Returns questions filtered by section and category, enriched with saved notes."""
     if not os.path.exists(EXAM_DB_FILE):
         raise HTTPException(status_code=404, detail="Database esami non trovato.")
     with open(EXAM_DB_FILE, "r", encoding="utf-8") as f:
@@ -38,7 +46,25 @@ def get_exam_questions(section: Optional[str] = None, category: Optional[str] = 
         questions = [q for q in questions if q.get("section") == section.upper()]
     if category:
         questions = [q for q in questions if q.get("category", "").lower() == category.lower()]
+
+    user_notes = get_user_notes()
+    for q in questions:
+        n = user_notes.get(q.get("id"), {})
+        q["saved_comment"] = n.get("comment", "")
+        q["saved_answer"] = n.get("selected_answer", "")
     return questions
+
+
+@router.get("/api/exams/notes")
+def get_notes_endpoint():
+    """Returns all user notes and reasoning saved per question."""
+    return get_user_notes()
+
+
+@router.post("/api/exams/notes")
+def save_note_endpoint(req: NoteSaveRequest):
+    """Saves or updates a user note/reasoning for a question."""
+    return save_user_note(req.question_id, req.comment, req.answer)
 
 
 @router.post("/api/exams/submit")
@@ -76,6 +102,7 @@ def submit_exam(req: ExamSubmitRequest):
         if is_correct:
             cat_breakdown[cat]["correct"] += 1
 
+        comment_text = req.comments.get(qid, "") if req.comments else ""
         details.append({
             "id": qid,
             "question": q["question"],
@@ -85,8 +112,12 @@ def submit_exam(req: ExamSubmitRequest):
             "correct_answer": correct_ans,
             "is_correct": is_correct,
             "explanation": q.get("explanation", ""),
-            "section": sec
+            "section": sec,
+            "user_comment": comment_text
         })
+
+    if req.comments or req.answers:
+        save_bulk_notes(req.comments or {}, req.answers)
 
     session_data = record_session(
         score=score,

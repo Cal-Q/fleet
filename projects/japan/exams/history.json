@@ -45,6 +45,38 @@
         }
       },
       "category_breakdown": {}
+    },
+    {
+      "session_id": "sess_1789251391",
+      "timestamp": "2026-09-12T22:16:31.346696",
+      "score": 2,
+      "total": 2,
+      "percentage": 100.0,
+      "time_seconds": 45,
+      "breakdown": {
+        "A": {
+          "correct": 2,
+          "total": 2
+        },
+        "B": {
+          "correct": 0,
+          "total": 0
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading / Kanji Writing": {
+          "correct": 1,
+          "total": 1
+        },
+        "Grammar Particles": {
+          "correct": 1,
+          "total": 1
+        }
+      }
     }
   ]
 }

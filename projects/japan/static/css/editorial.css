@@ -38,6 +38,18 @@ html, body {
   overflow: hidden;
 }
 
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 /* Zen Shōji Screen Lattice Pattern */
 .zen-shoji-pattern {
   background-color: var(--zen-washi);

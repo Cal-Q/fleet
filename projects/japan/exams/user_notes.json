@@ -1,0 +1,68 @@
+{
+  "MEXT-A-01": {
+    "question_id": "MEXT-A-01",
+    "comment": "Easy",
+    "selected_answer": "A",
+    "updated_at": "2026-09-12T22:54:21.223560"
+  },
+  "MEXT-A-02": {
+    "question_id": "MEXT-A-02",
+    "comment": "Easy",
+    "selected_answer": "B",
+    "updated_at": "2026-09-12T22:54:34.877214"
+  },
+  "MEXT-A-03": {
+    "question_id": "MEXT-A-03",
+    "comment": "Could be \"AU\" but I don't I feel like ma ni au is better",
+    "selected_answer": "A",
+    "updated_at": "2026-09-12T22:55:17.672747"
+  },
+  "MEXT-B-01": {
+    "question_id": "MEXT-B-01",
+    "comment": "I don't know this. Many kanji and vocabs I don't know.",
+    "selected_answer": "A",
+    "updated_at": "2026-09-12T22:56:05.224205"
+  },
+  "MEXT-B-02": {
+    "question_id": "MEXT-B-02",
+    "comment": "I literally have no idea",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T22:56:23.836729"
+  },
+  "MEXT-B-03": {
+    "question_id": "MEXT-B-03",
+    "comment": "A lot of words and kanji I do not know",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T22:56:45.744058"
+  },
+  "MEXT-C-01": {
+    "question_id": "MEXT-C-01",
+    "comment": "",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T22:57:10.898912"
+  },
+  "MEXT-2014-A-09": {
+    "question_id": "MEXT-2014-A-09",
+    "comment": "Here i'm not convinced",
+    "selected_answer": "D",
+    "updated_at": "2026-09-12T22:59:32.638613"
+  },
+  "MEXT-2014-A-16": {
+    "question_id": "MEXT-2014-A-16",
+    "comment": "I don't know",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T23:00:11.826668"
+  },
+  "MEXT-2014-B-01": {
+    "question_id": "MEXT-2014-B-01",
+    "comment": "I don't know",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T23:00:29.129849"
+  },
+  "MEXT-2014-B-02": {
+    "question_id": "MEXT-2014-B-02",
+    "comment": "I dont know",
+    "selected_answer": "",
+    "updated_at": "2026-09-12T23:00:41.830454"
+  }
+}

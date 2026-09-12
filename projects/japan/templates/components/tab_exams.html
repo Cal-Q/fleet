@@ -2,18 +2,18 @@
 <section id="section-exams" class="h-full flex flex-col space-y-3 overflow-hidden">
   <!-- Asymmetrical Telemetry Strip (Anti-Clone) -->
   <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-3">
-    <div class="flex items-center gap-2">
-      <span class="w-6 h-6 flex items-center justify-center bg-[#C23B22] text-white text-xs font-bold jp-font">問</span>
+    <div class="flex items-center gap-2.5">
+      <span class="w-7 h-7 flex items-center justify-center bg-[#C23B22] text-white text-sm font-bold jp-font">問</span>
       <div>
-        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">MEXT Written Examination Lab</h2>
-        <span class="text-[10px] font-mono text-neutral-400">Archivio 2014-2015 • Analisi dei 3 Distrattori • Blind Mock 2016-2019</span>
+        <h2 class="text-sm md:text-base font-bold font-editorial-serif uppercase text-[#181A1B]">MEXT Exam & Interview Lab</h2>
+        <span class="text-xs font-mono text-neutral-500">Scritto Past Papers (A, B, C) • Orale Keigo • Diagnostica</span>
       </div>
     </div>
-    <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Accuratezza: <b id="statOverallAccuracy" class="text-[#181A1B]">0.0%</b></span>
-      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Pacing: <b id="statAvgPacing" class="text-[#181A1B]">0.0s</b></span>
-      <span class="px-2 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332]">Target Roma: <b>58% - 65%</b></span>
-      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-600 font-bold" id="examTimer">⏱️ <span id="timeElapsed">00:00</span></span>
+    <div class="flex flex-wrap items-center gap-2 text-xs md:text-sm font-mono">
+      <span class="px-2.5 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Accuratezza: <b id="statOverallAccuracy" class="text-[#181A1B]">0.0%</b></span>
+      <span class="px-2.5 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Pacing: <b id="statAvgPacing" class="text-[#181A1B]">0.0s</b></span>
+      <span class="px-2.5 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332]">Target Roma: <b>58% - 65%</b></span>
+      <span class="px-2.5 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-600 font-bold" id="examTimer">⏱️ <span id="timeElapsed">00:00</span></span>
     </div>
   </div>
 
@@ -22,52 +22,61 @@
     <!-- Branch Selector Trunk (Col 4) -->
     <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
       <div class="space-y-2">
-        <!-- Branch 1: Drill (Shu-iro) -->
-        <div id="branch_btn_exam_drill" onclick="switchExamBranch('drill')" class="branch-shu p-3 border border-black/10 bg-white cursor-pointer transition tap-press space-y-2">
-          <div class="flex items-center justify-between font-mono text-xs">
+        <!-- Branch 1: Drill (Shu-iro) - Slot 4 -->
+        <div id="branch_btn_exam_drill" onclick="switchExamBranch('drill')" class="branch-shu p-3.5 border border-black/10 bg-white cursor-pointer transition tap-press space-y-2">
+          <div class="flex items-center justify-between font-mono text-xs md:text-sm">
             <div class="flex items-center gap-2">
-              <span class="w-5 h-5 flex items-center justify-center bg-[#C23B22] text-white text-[10px] font-bold jp-font">問</span>
-              <strong class="text-[#C23B22]">LABORATORIO DRILL</strong>
+              <span class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center bg-[#C23B22] text-white text-xs font-bold jp-font">問</span>
+              <strong class="text-[#C23B22]">1. SCRITTO: DRILL LAB</strong>
             </div>
-            <span class="text-[10px] font-mono text-neutral-500" id="statQuestionsCount">0 quesiti</span>
+            <span class="text-xs font-mono text-neutral-500" id="statQuestionsCount">0 quesiti</span>
           </div>
-          <div class="grid grid-cols-2 gap-1 font-mono text-[10px] pt-1">
-            <button onclick="event.stopPropagation(); loadExam('all')" class="px-2 py-1 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95">Tutte (A,B,C)</button>
-            <button onclick="event.stopPropagation(); loadExam('A')" class="px-2 py-1 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95">Part A (初級)</button>
-            <button onclick="event.stopPropagation(); loadExam('B')" class="px-2 py-1 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95">Part B (中級)</button>
-            <button onclick="event.stopPropagation(); loadExam('C')" class="px-2 py-1 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95">Part C (上級)</button>
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-xs md:text-sm pt-1">
+            <button id="btn_sec_all" onclick="event.stopPropagation(); loadExam('all')" class="px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center">Tutte (A,B,C)</button>
+            <button id="btn_sec_A" onclick="event.stopPropagation(); loadExam('A')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part A (初級)</button>
+            <button id="btn_sec_B" onclick="event.stopPropagation(); loadExam('B')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part B (中級)</button>
+            <button id="btn_sec_C" onclick="event.stopPropagation(); loadExam('C')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part C (上級)</button>
           </div>
         </div>
 
-        <!-- Branch 2: Diagnostics (Aizome) -->
-        <div id="branch_btn_exam_analytics" onclick="switchExamBranch('analytics')" class="branch-aizome p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
-          <div class="flex items-center justify-between font-mono text-xs">
+        <!-- Branch 2: Oral Interview (Aizome) - Slot 3 -->
+        <div id="branch_btn_exam_interview" onclick="switchExamBranch('interview')" class="branch-aizome p-3.5 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs md:text-sm">
             <div class="flex items-center gap-2">
-              <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">析</span>
-              <strong class="text-[#1E2C3A]">DIAGNOSTICA & PACING</strong>
+              <span class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center bg-[#1E2C3A] text-white text-xs font-bold jp-font">面</span>
+              <strong class="text-[#1E2C3A]">2. ORALE: COLLOQUIO KEIGO</strong>
             </div>
-            <span class="text-[10px] font-mono text-neutral-500" id="statTotalSessions">0 sessioni</span>
+            <span class="text-xs font-mono text-[#264332] bg-[#EEF7F1] px-2 py-0.5 border border-[#264332]/20 font-bold">Slot 3</span>
           </div>
-          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Analisi punti deboli e velocità di risposta</div>
+          <div class="text-xs md:text-sm font-mono text-neutral-500 pt-0.5">Sintesi vocale & Modelli risposte ufficiali</div>
+        </div>
+
+        <!-- Branch 3: Diagnostics (Matcha) -->
+        <div id="branch_btn_exam_analytics" onclick="switchExamBranch('analytics')" class="branch-matcha p-3.5 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs md:text-sm">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center bg-[#264332] text-white text-xs font-bold jp-font">析</span>
+              <strong class="text-[#264332]">3. DIAGNOSTICA & PACING</strong>
+            </div>
+            <span class="text-xs font-mono text-neutral-500" id="statTotalSessions">0 sessioni</span>
+          </div>
+          <div class="text-xs md:text-sm font-mono text-neutral-500 pt-0.5">Analisi punti deboli e velocità di risposta</div>
         </div>
       </div>
 
-      <!-- Action & Invariant Box: 4-Pillar Guidance -->
-      <div class="p-3 bg-[#FAF8F5] border border-black/10 space-y-2 text-xs font-mono">
-        <div class="font-bold text-[#C23B22] uppercase text-[11px] border-b border-black/5 pb-1">
-          Guida Rapida • Slot 4 (1h)
+      <!-- Action & Invariant Box: Guidance -->
+      <div id="examTrunkActionBox" class="p-3.5 bg-[#FAF8F5] border border-black/10 space-y-2.5 text-xs md:text-sm font-mono">
+        <div class="font-bold text-[#C23B22] uppercase text-xs md:text-sm border-b border-black/5 pb-1 flex justify-between">
+          <span>Guida Rapida • Slot 4</span>
+          <span id="trunkProgressPill" class="text-neutral-500 font-bold">0/0</span>
         </div>
-        <div class="text-[11px] text-neutral-600 space-y-1">
-          <div>• <b>Cosa fare</b>: Drill Part A (target 95% = 33/35 pt).</div>
-          <div>• <b>Come farlo</b>: Rispondi ai quesiti eliminando i distrattori.</div>
-          <div>• <b>Quando ho finito</b>: Registrazione automatica all'invio.</div>
+        <div class="text-xs md:text-sm text-neutral-600 space-y-1">
+          <div>• <b>Azione</b>: Clicca un'opzione (A, B, C, D) per ogni quesito.</div>
+          <div>• <b>Target</b>: Part A al 95% (33/35 pt) senza esitazioni.</div>
         </div>
-        <button id="submitExamBtn" onclick="submitExam()" class="w-full py-2 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs uppercase transition tap-press">
+        <button id="submitExamBtn" onclick="submitExam()" class="w-full py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
           Invia Esame & Correggi →
         </button>
-        <div class="text-[10px] text-neutral-500 font-mono text-center">
-          Come continuare: Consegna per chiudere la routine (4/4h).
-        </div>
       </div>
     </div>
 
@@ -75,29 +84,38 @@
     <div class="md:col-span-8 flex flex-col bg-white border border-black/10 overflow-hidden">
       <!-- Leaf 1: Drill Questions & Results -->
       <div id="leaf_exam_drill" class="flex flex-col h-full overflow-hidden">
-        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
-          <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Quesiti Prove Scritte Ministeriali</span>
-          <span class="text-[10px] font-mono text-neutral-500">Reverse engineering distrattori</span>
+        <div class="flex-shrink-0 p-3.5 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span id="drillLeafTitle" class="text-xs md:text-base font-mono font-bold text-[#181A1B] uppercase">Quesiti Prove Scritte • Tutte le Sezioni</span>
+          <span id="drillAnswerProgress" class="text-xs md:text-sm font-mono font-bold px-2.5 py-1 bg-white border border-black/10 text-neutral-700">0 / 0 risposte (0%)</span>
         </div>
-        <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3 space-y-3">
-          <div id="examContainer" class="space-y-3"></div>
+        <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3.5 space-y-3.5">
+          <div id="examContainer" class="space-y-3.5"></div>
           <div id="examResultsBox" class="hidden"></div>
         </div>
       </div>
 
-      <!-- Leaf 2: Analytics & Competence Map -->
+      <!-- Leaf 2: Keigo Oral Interview Simulator -->
+      <div id="leaf_exam_interview" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3.5 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span class="text-xs md:text-base font-mono font-bold text-[#181A1B] uppercase">Domande Probabili della Commissione (Roma)</span>
+          <span class="text-xs md:text-sm font-mono font-bold px-2.5 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332]">Triade Sociologica</span>
+        </div>
+        <div id="interviewContainer" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3.5 space-y-3.5"></div>
+      </div>
+
+      <!-- Leaf 3: Analytics & Competence Map -->
       <div id="leaf_exam_analytics" class="hidden flex flex-col h-full overflow-hidden">
-        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
-          <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Mappa Accuratezza & Punti Critici</span>
-          <button onclick="loadExamAnalytics()" class="text-[10px] font-mono border border-black px-2 py-0.5 hover:bg-black hover:text-white transition tap-press active:scale-95">Aggiorna</button>
+        <div class="flex-shrink-0 p-3.5 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span class="text-xs md:text-base font-mono font-bold text-[#181A1B] uppercase">Mappa Accuratezza & Punti Critici</span>
+          <button onclick="loadExamAnalytics()" class="text-xs md:text-sm font-mono border border-black px-3 py-1 hover:bg-black hover:text-white transition tap-press active:scale-95 font-bold">Aggiorna</button>
         </div>
         <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-4 space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-bold font-mono text-[#181A1B] uppercase">Accuratezza per Categoria:</span>
+          <div class="space-y-2.5">
+            <span class="text-xs md:text-sm font-bold font-mono text-[#181A1B] uppercase">Accuratezza per Categoria:</span>
             <div id="categoryStatsList" class="space-y-2"></div>
           </div>
-          <div class="pt-2 border-t border-black/10 space-y-2">
-            <span class="text-xs font-bold font-mono text-[#181A1B] uppercase">Diagnostica Metodo & Focus:</span>
+          <div class="pt-2 border-t border-black/10 space-y-2.5">
+            <span class="text-xs md:text-sm font-bold font-mono text-[#181A1B] uppercase">Diagnostica Metodo & Focus:</span>
             <div id="diagnosticsFocusBox"></div>
           </div>
         </div>

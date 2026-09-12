@@ -1,157 +1,189 @@
-// static/js/modules/exams.js — MEXT Exam Drill Engine & Analytics
+// static/js/modules/exams.js — MEXT Exam Drill Engine & Branch Manager
 // Strictly <= 200 lines invariant.
 
+import { loadInterview } from "./interview.js";
+import { renderExamResults, loadExamAnalytics } from "./exam_analytics.js";
+import { initExamNotes, getUserComment, getAllUserComments, saveQuestionNote } from "./exam_notes.js";
+
+export { loadExamAnalytics, saveQuestionNote };
+
 let currentQuestions = [];
+let userAnswers = {};
+let currentSection = "all";
 let examStartTime = null;
 let timerInterval = null;
 
-export async function loadExam(section = 'all') {
-  const url = (section === 'all') ? '/api/exams/questions' : `/api/exams/questions?section=${section}`;
+export function getUserAnswer(qid) { return userAnswers[qid] || ""; }
+
+export async function loadExam(section = "all") {
+  currentSection = section;
+  highlightSectionBtn(section);
+
+  const url = (section === "all") ? "/api/exams/questions" : `/api/exams/questions?section=${section}`;
   const res = await fetch(url);
   currentQuestions = await res.json();
 
-  const container = document.getElementById('examContainer');
-  const resultsBox = document.getElementById('examResultsBox');
+  const container = document.getElementById("examContainer");
+  const resultsBox = document.getElementById("examResultsBox");
   if (!container) return;
-  container.innerHTML = '';
-  if (resultsBox) resultsBox.classList.add('hidden');
+  container.innerHTML = "";
+  if (resultsBox) resultsBox.classList.add("hidden");
+
+  const titleMap = { all: "Tutte le Sezioni (A, B, C)", A: "Part A (初級 - N5/N4)", B: "Part B (中級 - N3/N2)", C: "Part C (上級 - N1)" };
+  const leafTitle = document.getElementById("drillLeafTitle");
+  if (leafTitle) leafTitle.innerText = `Quesiti Prove Scritte • ${titleMap[section] || section}`;
+
+  try {
+    userAnswers = { ...JSON.parse(localStorage.getItem("mext_exam_answers") || "{}") };
+  } catch (e) { userAnswers = {}; }
+
+  const serverNotes = {};
+  currentQuestions.forEach(q => {
+    if (q.saved_comment) serverNotes[q.id] = q.saved_comment;
+    if (q.saved_answer && !userAnswers[q.id]) userAnswers[q.id] = q.saved_answer;
+  });
+  initExamNotes(serverNotes);
 
   currentQuestions.forEach((q, idx) => {
-    const card = document.createElement('div');
-    card.className = 'p-5 border border-black/10 bg-white space-y-3';
+    const card = document.createElement("div");
+    card.className = "p-4 md:p-5 border border-black/10 bg-white space-y-3.5";
+    card.id = `q_card_${q.id}`;
+    const sel = userAnswers[q.id] || "";
+    const note = getUserComment(q.id);
+
     card.innerHTML = `
-      <div class="flex items-center justify-between text-xs text-neutral-500 border-b border-black/5 pb-2 font-mono">
-        <span class="font-bold text-[#E63920]">Q.${String(idx + 1).padStart(2, '0')} • SEZIONE ${q.section} (${q.level || 'N/A'})</span>
-        <span class="text-neutral-600">${q.category || 'Generale'}</span>
+      <div class="flex items-center justify-between text-xs md:text-sm text-neutral-500 border-b border-black/5 pb-2 font-mono">
+        <span class="font-bold text-[#E63920]">Q.${String(idx + 1).padStart(2, "0")} • SEZ. ${q.section} (${q.level || "N/A"})</span>
+        <span id="q_badge_${q.id}" class="${sel ? "text-xs font-mono px-2 py-0.5 border border-[#264332]/30 bg-[#EEF7F1] text-[#264332] font-bold" : "text-xs font-mono px-2 py-0.5 border border-black/10 bg-[#FAF8F5] text-neutral-400"}">${sel ? `✓ Risposta: ${sel}` : "In attesa"}</span>
       </div>
-      <div class="jp-font text-base text-[#111111] font-medium whitespace-pre-line leading-relaxed">${q.question}</div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 pt-1 font-mono text-xs">
-        ${['A', 'B', 'C', 'D'].filter(k => q.options[k]).map(k => `
-          <label class="flex items-center gap-3 p-3 border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black cursor-pointer transition tap-press">
-            <input type="radio" name="question_${q.id}" value="${k}" class="accent-[#E63920]">
-            <span class="font-bold text-neutral-500">${k}.</span>
-            <span class="jp-font text-[#111111] font-medium">${q.options[k]}</span>
-          </label>
-        `).join('')}
+      <div class="jp-font text-base md:text-xl text-[#111111] font-medium whitespace-pre-line leading-relaxed tracking-wide">${q.question}</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1 font-mono text-xs md:text-sm">
+        ${["A", "B", "C", "D"].filter(k => q.options && q.options[k]).map(k => {
+          const isSel = (sel === k);
+          return `
+          <button type="button" id="opt_${q.id}_${k}" onclick="window.selectExamOption('${q.id}', '${k}')" class="exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left">
+            <span class="opt-indicator w-6 h-6 md:w-7 md:h-7 flex-shrink-0 flex items-center justify-center border ${isSel ? "border-white bg-white text-[#181A1B]" : "border-black/20 bg-white text-neutral-600"} text-xs md:text-sm font-bold font-mono">${isSel ? "✓" : k}</span>
+            <span class="jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug">${q.options[k]}</span>
+          </button>`;
+        }).join("")}
+      </div>
+      <div class="pt-2 border-t border-black/5 space-y-1">
+        <div class="flex items-center justify-between text-xs font-mono text-neutral-500">
+          <span class="flex items-center gap-1 font-bold text-[#181A1B]"><span>📝</span><span>Nota / Ragionamento per revisione:</span></span>
+          <span id="note_status_${q.id}" class="text-[11px] font-mono text-neutral-400">Salvataggio automatico</span>
+        </div>
+        <textarea id="note_${q.id}" rows="2" placeholder="Scrivi qui il tuo ragionamento o dubbi per la revisione..." oninput="window.saveQuestionNote('${q.id}')" class="w-full p-2.5 text-xs md:text-sm border border-black/10 bg-[#FAF9F6] focus:bg-white focus:border-black focus:outline-none transition rounded-none resize-y font-sans leading-relaxed">${(note && !note.includes('Commento aggiornato')) ? note : ''}</textarea>
       </div>
     `;
     container.appendChild(card);
   });
 
-  // Start timer
+  const bottomBar = document.createElement("div");
+  bottomBar.className = "p-4 border border-black/10 bg-[#FAF8F5] flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-4";
+  bottomBar.innerHTML = `
+    <div>
+      <div id="leafBottomCount" class="text-sm md:text-base font-mono font-bold text-[#181A1B]">0 / ${currentQuestions.length} completati</div>
+      <div class="text-xs md:text-sm text-neutral-500 font-mono">Tutte le risposte e note vengono salvate per la revisione.</div>
+    </div>
+    <button onclick="submitExam()" class="px-5 py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
+      Invia Esame & Correggi →
+    </button>
+  `;
+  container.appendChild(bottomBar);
+
+  updateProgressUI();
+
   examStartTime = Date.now();
   if (timerInterval) clearInterval(timerInterval);
   timerInterval = setInterval(() => {
     const sec = Math.floor((Date.now() - examStartTime) / 1000);
-    const m = String(Math.floor(sec / 60)).padStart(2, '0');
-    const s = String(sec % 60).padStart(2, '0');
-    const tEl = document.getElementById('timeElapsed');
+    const m = String(Math.floor(sec / 60)).padStart(2, "0"), s = String(sec % 60).padStart(2, "0");
+    const tEl = document.getElementById("timeElapsed");
     if (tEl) tEl.innerText = `${m}:${s}`;
   }, 1000);
 }
 
+function highlightSectionBtn(sec) {
+  ["all", "A", "B", "C"].forEach(s => {
+    const b = document.getElementById("btn_sec_" + s);
+    if (!b) return;
+    b.className = (s === sec)
+      ? "px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center shadow-sm text-xs md:text-sm"
+      : "px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold text-neutral-700 text-xs md:text-sm";
+  });
+}
+
+export function selectExamOption(qid, optKey) {
+  userAnswers[qid] = optKey;
+  try { localStorage.setItem("mext_exam_answers", JSON.stringify(userAnswers)); } catch (e) {}
+
+  ["A", "B", "C", "D"].forEach(k => {
+    const el = document.getElementById(`opt_${qid}_${k}`);
+    if (!el) return;
+    const ind = el.querySelector(".opt-indicator"), txt = el.querySelector(".jp-font");
+    const isSel = (k === optKey);
+    el.className = `exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left`;
+    if (txt) txt.className = `jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug`;
+    if (ind) {
+      ind.className = `opt-indicator w-6 h-6 md:w-7 md:h-7 flex-shrink-0 flex items-center justify-center border ${isSel ? "border-white bg-white text-[#181A1B]" : "border-black/20 bg-white text-neutral-600"} text-xs md:text-sm font-bold font-mono`;
+      ind.innerText = isSel ? "✓" : k;
+    }
+  });
+
+  const badge = document.getElementById(`q_badge_${qid}`);
+  if (badge) {
+    badge.className = "text-xs font-mono px-2 py-0.5 border border-[#264332]/30 bg-[#EEF7F1] text-[#264332] font-bold";
+    badge.innerText = `✓ Risposta: ${optKey}`;
+  }
+  updateProgressUI();
+}
+
+function updateProgressUI() {
+  const answered = Object.keys(userAnswers).length, total = currentQuestions.length;
+  const pct = total ? Math.round((answered / total) * 100) : 0;
+  const set = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
+  set("drillAnswerProgress", `${answered} / ${total} (${pct}%)`);
+  set("trunkProgressPill", `${answered}/${total}`);
+  set("submitExamBtn", answered === total ? "Invia Esame & Correggi →" : `Invia Esame (${answered}/${total}) →`);
+  set("leafBottomCount", `${answered} / ${total} completati`);
+}
+
 export async function submitExam() {
+  const answered = Object.keys(userAnswers).length, total = currentQuestions.length;
+  if (answered < total) {
+    if (!confirm(`Attenzione: ci sono ancora ${total - answered} quesiti senza risposta.\nVuoi consegnare comunque? Le risposte omesse risulteranno errate.`)) return;
+  }
   if (timerInterval) clearInterval(timerInterval);
   const spent = examStartTime ? Math.floor((Date.now() - examStartTime) / 1000) : 0;
   const answers = {};
+  currentQuestions.forEach(q => { answers[q.id] = userAnswers[q.id] || ""; });
+  const comments = getAllUserComments();
 
-  currentQuestions.forEach(q => {
-    const checked = document.querySelector(`input[name="question_${q.id}"]:checked`);
-    if (checked) answers[q.id] = checked.value;
-  });
-
-  const res = await fetch('/api/exams/submit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ answers, time_spent_seconds: spent })
+  const res = await fetch("/api/exams/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ answers, comments, time_spent_seconds: spent })
   });
   const result = await res.json();
   loadExamAnalytics();
-  if (typeof window.markRoutineSlotDone === 'function') window.markRoutineSlotDone('slot4');
-
-  const resultsBox = document.getElementById('examResultsBox');
-  if (!resultsBox) return;
-  resultsBox.classList.remove('hidden');
-  resultsBox.innerHTML = `
-    <div class="p-4 border border-black/10 bg-white space-y-3">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-black/10 pb-3">
-        <div>
-          <div class="text-xl font-bold font-mono text-[#111111]">Punteggio: ${result.score} / ${result.total} (${result.percentage}%)</div>
-          <div class="text-xs text-neutral-500 font-mono">Tempo: ${Math.floor(spent / 60)}m ${spent % 60}s (${result.seconds_per_question}s/q)</div>
-        </div>
-        <div class="text-xs space-y-0.5 text-right font-mono">
-          ${Object.entries(result.breakdown).map(([sec, d]) => `<div>Sez. ${sec}: <strong class="text-[#1E5233]">${d.correct}</strong>/${d.total}</div>`).join('')}
-        </div>
-      </div>
-      <div class="space-y-2 pt-1">
-        <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-[#111111]">Analisi Risposte & Distrattori:</h3>
-        ${result.details.map(d => `
-          <div class="p-2.5 border ${d.is_correct ? 'border-[#1E5233]/20 bg-[#EEF7F1]' : 'border-[#E63920]/20 bg-[#FDF1EF]'} space-y-1 text-xs">
-            <div class="flex items-center justify-between font-mono text-[11px]">
-              <span class="font-bold ${d.is_correct ? 'text-[#1E5233]' : 'text-[#E63920]'}">${d.is_correct ? '✅ ESATTA' : '❌ ERRATA'}</span>
-              <span class="text-neutral-600">Tua: <b>${d.user_answer || '—'}</b> | Corretta: <b>${d.correct_answer}</b></span>
-            </div>
-            <div class="text-neutral-800 font-sans">💡 <b>Analisi:</b> ${d.explanation}</div>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
-}
-
-export async function loadExamAnalytics() {
-  try {
-    const res = await fetch('/api/exams/analytics');
-    const data = await res.json();
-    const set = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
-    set('statOverallAccuracy', `${data.overall_accuracy}%`);
-    set('statQuestionsCount', `${data.total_questions} quesiti svolti`);
-    set('statTotalSessions', `${data.total_sessions} sessioni`);
-    set('statTotalTime', `${data.total_time_minutes} min studio`);
-    set('statAvgPacing', `${data.avg_seconds_per_question}s`);
-
-    const catListEl = document.getElementById('categoryStatsList');
-    if (catListEl) {
-      if (!data.category_accuracy || !Object.keys(data.category_accuracy).length) {
-        catListEl.innerHTML = '<div class="text-neutral-400 italic text-center py-2 text-xs">Nessuna sessione registrata.</div>';
-      } else {
-        catListEl.innerHTML = Object.entries(data.category_accuracy).map(([cat, info]) => `
-          <div class="space-y-1 text-xs font-mono">
-            <div class="flex justify-between text-[11px]">
-              <span class="truncate max-w-[200px]" title="${cat}">${cat}</span>
-              <span class="${info.percentage >= 80 ? 'text-[#1E5233]' : (info.percentage >= 60 ? 'text-amber-700' : 'text-[#E63920]')} font-bold">${info.percentage}% (${info.correct}/${info.total})</span>
-            </div>
-            <div class="w-full bg-neutral-200 h-1"><div class="${info.percentage >= 80 ? 'bg-[#1E5233]' : (info.percentage >= 60 ? 'bg-amber-600' : 'bg-[#E63920]')} h-full" style="width: ${info.percentage}%"></div></div>
-          </div>
-        `).join('');
-      }
-    }
-
-    const diagEl = document.getElementById('diagnosticsFocusBox');
-    if (diagEl) {
-      let h = '';
-      if (data.weaknesses?.length) h += `<div class="p-2 border border-[#E63920]/20 bg-[#FDF1EF] text-xs"><b class="text-[#E63920] font-mono">⚠️ Criticità (<65%):</b><ul class="list-disc list-inside mt-1">${data.weaknesses.map(w => `<li>${w.category}: ${w.percentage}%</li>`).join('')}</ul></div>`;
-      if (data.strengths?.length) h += `<div class="p-2 border border-[#1E5233]/20 bg-[#EEF7F1] text-xs"><b class="text-[#1E5233] font-mono">✅ Solidi (≥80%):</b><ul class="list-disc list-inside mt-1">${data.strengths.map(s => `<li>${s.category}: ${s.percentage}%</li>`).join('')}</ul></div>`;
-      diagEl.innerHTML = h || '<div class="text-xs text-neutral-400 font-mono">Completa almeno 2 quesiti per categoria per attivare i consigli.</div>';
-    }
-  } catch (err) { console.error('Error loading exam analytics:', err); }
+  if (typeof window.markRoutineSlotDone === "function") window.markRoutineSlotDone("slot4");
+  renderExamResults(result, spent, currentSection);
 }
 
 export function switchExamBranch(branch) {
-  const isDrill = branch === 'drill';
-  const leafDrill = document.getElementById('leaf_exam_drill');
-  const leafAnalytics = document.getElementById('leaf_exam_analytics');
-  const btnDrill = document.getElementById('branch_btn_exam_drill');
-  const btnAnalytics = document.getElementById('branch_btn_exam_analytics');
-  if (leafDrill) leafDrill.classList.toggle('hidden', !isDrill);
-  if (leafAnalytics) leafAnalytics.classList.toggle('hidden', isDrill);
-  if (btnDrill) {
-    btnDrill.classList.toggle('bg-white', isDrill);
-    btnDrill.classList.toggle('opacity-70', !isDrill);
-  }
-  if (btnAnalytics) {
-    btnAnalytics.classList.toggle('bg-white', !isDrill);
-    btnAnalytics.classList.toggle('opacity-70', isDrill);
-  }
-}
+  ["drill", "interview", "analytics"].forEach(b => {
+    const leaf = document.getElementById("leaf_exam_" + b);
+    const btn = document.getElementById("branch_btn_exam_" + b);
+    const active = (b === branch);
+    if (leaf) leaf.classList.toggle("hidden", !active);
+    if (btn) {
+      btn.classList.toggle("bg-white", active);
+      btn.classList.toggle("opacity-100", active);
+      btn.classList.toggle("opacity-70", !active);
+    }
+  });
 
+  if (branch === "interview") loadInterview();
+  else if (branch === "analytics") loadExamAnalytics();
+  else if (branch === "drill" && !currentQuestions.length) loadExam(currentSection);
+}

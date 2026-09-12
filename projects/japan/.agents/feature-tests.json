@@ -176,5 +176,106 @@
         "api_unlocked_titles": ["いたす", "なさる", "はずだ", "ことができる", "がひつよう"]
       }
     }
+  },
+  {
+    "feature": "prove_section_redesign_with_tactile_feedback_and_interview_integration",
+    "timestamp": "2026-09-12T22:17:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "Prove section had zero feedback on button clicks, invisible option selection, inverted submit flow, missing progress counter, and orphaned Keigo Oral Interview leaf.",
+      "implementation_details": [
+        "Updated tab_exams.html into a clean 3-branch architecture (1. Scritto: Drill Lab, 2. Orale: Colloquio Keigo, 3. Diagnostica & Pacing).",
+        "Built tactile option selection (selectExamOption) with immediate solid dark active state, checkmark, and card status badge '✓ Risposto (A)'.",
+        "Implemented live progress counter (drillAnswerProgress) tracking answered / total questions and completion percentage.",
+        "Added prominent in-leaf bottom submit bar with missing question confirmation guard to prevent accidental omissions.",
+        "Integrated orphaned Keigo Oral Interview simulator into Leaf 2 with TTS audio playback and disclosure drawers for model answers.",
+        "Modularized exams.js and exam_analytics.js to strictly adhere to the <= 200 lines invariant.",
+        "Bumped index.html asset version to v=20260912_18 for instant cache-busting."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "url": "https://japan.calq.it/",
+        "part_a_questions": 13,
+        "first_question_id": "MEXT-A-01",
+        "submit_endpoint": "/api/exams/submit tested and verified",
+        "interview_questions": 5,
+        "script_version": "main.js?v=20260912_18",
+        "line_counts": {
+          "tab_exams.html": 126,
+          "exams.js": 178,
+          "exam_analytics.js": 70,
+          "interview.js": 71,
+          "main.js": 104
+        }
+      }
+    }
+  },
+  {
+    "feature": "desktop_responsive_typography_and_kanji_legibility_scaling",
+    "timestamp": "2026-09-12T22:30:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "Text and complex Japanese kanji strokes were too small and strained to read on desktop/computer screens (10px-12px badges, 16px questions, 12-14px options).",
+      "implementation_details": [
+        "Added responsive root font-size scaling in editorial.css (17px on >=1024px desktop, 18px on >=1440px wide desktop) scaling all rem-based typography cleanly.",
+        "Scaled Japanese question text from text-base to text-base md:text-xl with generous leading and tracking in exams.js and interview.js.",
+        "Scaled exam option card text from text-xs sm:text-sm to text-sm md:text-base, option indicators to w-6 h-6 md:w-7 md:h-7, and padding to p-3 md:p-3.5.",
+        "Replaced hardcoded text-[10px] and text-[11px] with responsive text-xs md:text-sm across tab_exams.html, exams.js, exam_analytics.js, and interview.js.",
+        "Enlarged results score header to text-xl md:text-2xl and distractor analysis text to text-xs md:text-sm leading-relaxed.",
+        "Bumped cache-busting assets to editorial.css?v=20260912_19 and main.js?v=20260912_19.",
+        "Verified strictly <= 200 lines per file across all codebases."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "url": "https://japan.calq.it/",
+        "css_desktop_media_query": "@media (min-width: 1024px) html { font-size: 17px; }",
+        "question_text_class": "jp-font text-base md:text-xl",
+        "option_text_class": "jp-font text-sm md:text-base",
+        "line_counts": {
+          "editorial.css": 151,
+          "tab_exams.html": 126,
+          "exams.js": 180,
+          "exam_analytics.js": 70,
+          "interview.js": 71,
+          "index.html": 59
+        }
+      }
+    }
+  },
+  {
+    "feature": "persistent_exam_answers_and_user_notes_for_ai_review",
+    "timestamp": "2026-09-12T22:34:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "User answers were not preserved across sessions/reloads, and there was no way to write personal notes/reasoning per question for future AI review.",
+      "implementation_details": [
+        "Created academic/exam_notes.py managing persistent JSON storage of user reasoning in /opt/japan/exams/user_notes.json.",
+        "Added POST and GET /api/exams/notes endpoints in api/routes/exam_routes.py and enriched GET /api/exams/questions with saved_comment and saved_answer.",
+        "Updated ExamSubmitRequest to accept comments dictionary and persist notes in both session details and user_notes.json.",
+        "Created static/js/modules/exam_notes.js with debounced auto-save (600ms), visual status indicator ('💾 Salvato per revisione'), and dual localStorage fallback.",
+        "Added note textarea on each exam question card in exams.js and restored user answers from persistent storage on load.",
+        "Rendered user comments in the distractor analysis results box in exam_analytics.js.",
+        "Bumped index.html asset version to v=20260912_20.",
+        "Verified all files strictly <= 200 lines."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "url": "https://japan.calq.it/",
+        "post_notes_status": "verified (MEXT-A-01 saved and returned)",
+        "get_notes_status": "verified (/api/exams/notes returns persistent dictionary)",
+        "get_questions_enriched": "verified (saved_answer and saved_comment present in /api/exams/questions)",
+        "submit_exam_with_comments": "verified (/api/exams/submit logged comment in details and persisted to disk)",
+        "script_version": "main.js?v=20260912_20",
+        "line_counts": {
+          "academic/exam_notes.py": 63,
+          "api/routes/exam_routes.py": 163,
+          "static/js/modules/exam_notes.js": 61,
+          "static/js/modules/exams.js": 189,
+          "static/js/modules/exam_analytics.js": 76,
+          "static/js/main.js": 106,
+          "templates/index.html": 59
+        }
+      }
+    }
   }
 ]
