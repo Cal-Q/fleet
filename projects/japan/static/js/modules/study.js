@@ -67,7 +67,7 @@ function renderVocabPreview(items) {
         <span class="text-[10px] font-mono text-neutral-400">${String(i + 1).padStart(2, '0')}</span>
         <span class="jp-font font-bold text-[#111111]">${v.word || v.kana || ''}</span>
         ${v.reading && v.reading !== v.word ? `<span class="text-[10px] font-mono text-neutral-400">(${v.reading})</span>` : ''}
-        ${v.required_by_grammar ? '<span class="text-[9px] font-mono px-1 py-0.2 bg-[#EEF7F1] text-[#1E5233] border border-[#1E5233]/20">req</span>' : ''}
+        ${(v.required_by_grammar || v.priority) ? `<span class="text-[9px] font-mono px-1 py-0.5 bg-[#EEF7F1] text-[#1E5233] border border-[#1E5233]/20 font-bold" title="${v.source || 'Prerequisito grammatica'}">req</span>` : ''}
       </div>
       <span class="font-mono text-[11px] text-neutral-600 truncate max-w-[200px]" title="${v.meaning || v.english || ''}">${v.meaning || v.english || ''}</span>
     </div>
@@ -82,17 +82,23 @@ function renderGrammarPreview(items) {
     return;
   }
   container.innerHTML = items.map(g => {
-    const isLocked = g.unreviewed_vocab_count > 0;
-    const cBadge = g.mext_cluster ? `<span class="text-[9px] font-mono px-1 py-0.5 bg-[#EEF7F1] text-[#1E5233] border border-[#1E5233]/20 font-bold">${g.mext_cluster.split(':')[0]}</span>` : '';
-    const samples = (g.unreviewed_vocab_samples || []).join(', ');
+    const isLocked = (g.unreviewed_vocab_count || g.missing_vocab?.length || 0) > 0;
+    const cBadge = g.cluster || g.mext_cluster ? `<span class="text-[9px] font-mono px-1 py-0.5 bg-[#EEF7F1] text-[#1E5233] border border-[#1E5233]/20 font-bold">${(g.cluster || g.mext_cluster).split(':')[0]}</span>` : '';
+    const samples = (g.unreviewed_vocab_samples || g.missing_vocab || []).slice(0, 5).join(', ');
     const lockInfo = isLocked ? `
       <div class="mt-1 p-1.5 bg-[#FDF1EF] border border-[#C23B22]/20 text-[10px] font-mono flex items-center justify-between gap-1">
-        <span class="text-[#C23B22] truncate" title="Mancano: ${samples || g.unreviewed_vocab_count + ' vocaboli'}">🔒 <b>Coperta (Sospesa):</b> mancano: <b>${samples || g.unreviewed_vocab_count + ' vocaboli'}</b></span>
+        <span class="text-[#C23B22] truncate" title="Mancano: ${samples}">🔒 <b>Coperta (Sospesa):</b> mancano: <b>${samples}</b></span>
         <button onclick="switchStudyBranch('vocab')" class="flex-shrink-0 text-[9px] px-1 py-0.5 bg-[#1E2C3A] text-white font-bold hover:bg-black uppercase">Vocaboli →</button>
       </div>` : `
       <div class="mt-1 px-1.5 py-0.5 bg-[#EEF7F1] border border-[#264332]/20 text-[10px] font-mono text-[#264332] font-bold">
         ✅ Vocaboli Noti: si attiva subito come Nuova in Anki
       </div>`;
+    const sList = (g.sentences || []).slice(0, 2).map(s => `
+      <div class="p-1.5 bg-[#FAF8F5] border border-black/5 text-xs">
+        <div class="jp-font text-[#111111] font-medium">${s.clean_jp || s.plain_jp || ''}</div>
+        <div class="text-[10px] font-mono text-neutral-500">${s.clean_en || ''}</div>
+      </div>`).join('');
+    const sBox = sList ? `<div class="mt-1.5 pt-1.5 border-t border-black/5 space-y-1"><div class="text-[10px] font-mono text-neutral-400 font-bold">FRASI BUNPRO:</div>${sList}</div>` : '';
     return `
     <div class="p-2.5 border border-black/10 bg-white space-y-1">
       <div class="flex items-center justify-between text-xs">
@@ -101,24 +107,22 @@ function renderGrammarPreview(items) {
       </div>
       <div class="text-[11px] text-neutral-600 italic font-mono">${g.meaning}</div>
       ${lockInfo}
+      ${sBox}
     </div>`;
   }).join('');
 }
 
-export function switchStudyBranch(branch) {
-  ['kanji', 'vocab', 'grammar'].forEach(b => {
-    const leaf = document.getElementById(`leaf_${b}`);
-    const btn = document.getElementById(`branch_btn_${b}`);
-    if (leaf) leaf.classList.toggle('hidden', b !== branch);
+export function switchStudyBranch(b) {
+  ['kanji', 'vocab', 'grammar'].forEach(x => {
+    document.getElementById(`leaf_${x}`)?.classList.toggle('hidden', x !== b);
+    const btn = document.getElementById(`branch_btn_${x}`);
     if (btn) {
-      btn.classList.toggle('bg-white', b === branch);
-      btn.classList.toggle('shadow-sm', b === branch);
-      btn.classList.toggle('bg-[#FAF8F5]', b !== branch);
-      btn.classList.toggle('opacity-70', b !== branch);
+      btn.classList.toggle('bg-white', x === b); btn.classList.toggle('shadow-sm', x === b);
+      btn.classList.toggle('bg-[#FAF8F5]', x !== b); btn.classList.toggle('opacity-70', x !== b);
     }
   });
 }
-export function toggleDrawer(id) { const el = document.getElementById(id); if (el) el.classList.toggle('open'); }
+export function toggleDrawer(id) { document.getElementById(id)?.classList.toggle('open'); }
 
 export async function syncBatchGroup(type) {
   if (isSyncing) return;

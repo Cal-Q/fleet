@@ -22,9 +22,7 @@ USER_VOCAB_FILE = os.path.join(DATA_DIR, "user_anki_vocab.json")
 REVIEWED_VOCAB_FILE = os.path.join(DATA_DIR, "user_reviewed_vocab.json")
 GRAMMAR_FILE = os.path.join(DATA_DIR, "bunpro_grammar_sentences.json")
 GRAMMAR_PROGRESS_FILE = os.path.join(DATA_DIR, "grammar_progress.json")
-
 LEVEL_ORDER = {"N5": 1, "N4": 2, "N3": 3, "N2": 4, "N1": 5, "Other": 6, "Hyōgai": 7}
-
 _JSON_CACHE: Dict[str, Any] = {}
 _JSON_MTIMES: Dict[str, float] = {}
 
@@ -45,9 +43,7 @@ def load_cached_json(path: str) -> Any:
 
 def get_existing_vocab_words() -> Set[str]:
     data = load_cached_json(USER_VOCAB_FILE)
-    if isinstance(data, list):
-        return {item["word"] for item in data if "word" in item}
-    return set(data.keys()) if isinstance(data, dict) else set()
+    return {item["word"] for item in data if "word" in item} if isinstance(data, list) else (set(data.keys()) if isinstance(data, dict) else set())
 
 
 def get_reviewed_vocab_set(refresh: bool = False) -> Set[str]:
@@ -59,18 +55,28 @@ def get_reviewed_vocab_set(refresh: bool = False) -> Set[str]:
     try:
         col = open_anki_db()
         cur = col.cursor()
-        cur.execute("""
-            SELECT notes.flds 
-            FROM notes 
-            JOIN cards ON notes.id=cards.nid 
-            WHERE cards.did=1759999324396 AND cards.reps>0
-        """)
         rev_set = set()
+        cur.execute("SELECT notes.flds FROM notes JOIN cards ON notes.id=cards.nid WHERE cards.did=1759999324396 AND cards.reps>0")
         for (flds,) in cur.fetchall():
-            raw = flds.split(chr(31))[0].strip()
+            parts = flds.split(chr(31))
+            raw = parts[0].strip()
             rev_set.add(raw)
-            clean = re.sub(r'<[^>]+>', '', raw).strip()
+            clean = re.sub(r'<[^>]+>', '', re.sub(r'<rt>.*?</rt>', '', raw, flags=re.DOTALL)).strip()
             rev_set.add(clean)
+            if len(parts) > 1 and parts[1]:
+                k_clean = re.sub(r'<[^>]+>', '', parts[1].split('<br>')[0]).strip()
+                if k_clean:
+                    rev_set.add(k_clean)
+
+        cur.execute("SELECT notes.flds FROM notes JOIN cards ON notes.id=cards.nid WHERE cards.did=1757158925901 AND cards.reps>0")
+        for (flds,) in cur.fetchall():
+            parts = flds.split(chr(31))
+            if parts[0].strip():
+                rev_set.add(parts[0].strip()[0])
+            if len(parts) > 3 and parts[3]:
+                k_clean = re.sub(r'<[^>]+>', '', parts[3].split('<br>')[0]).strip()
+                if k_clean:
+                    rev_set.add(k_clean)
         col.close()
 
         with open(REVIEWED_VOCAB_FILE, "w", encoding="utf-8") as f:
@@ -85,49 +91,50 @@ def get_unstudied_grammar_points() -> List[Dict[str, Any]]:
     gp_data = load_cached_json(GRAMMAR_PROGRESS_FILE)
     if not gp_data:
         return []
-    unstudied = []
-    for _lvl, pts in gp_data.get("unstudied_by_level", {}).items():
-        for p in pts:
-            unstudied.append(p)
-    return unstudied
+    return [p for pts in gp_data.get("unstudied_by_level", {}).values() for p in pts]
 
 
 def evaluate_grammar_queue(grammar_limit: int = 5) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     unstudied = get_unstudied_grammar_points()
     if not unstudied:
         return [], []
+    unstudied.sort(key=grammar_sort_key)
 
     reviewed_vocab = get_reviewed_vocab_set()
+    sent_data = load_cached_json(GRAMMAR_FILE)
+    sent_map = {x.get("id", k): x.get("sentences", []) for k, x in (sent_data.items() if isinstance(sent_data, dict) else [(i.get("id"), i) for i in sent_data])}
+
     dict_conn = open_dict_db()
     dict_cur = dict_conn.cursor()
-
-    unlocked = []
-    locked = []
+    unlocked, locked = [], []
 
     try:
+        from collections import defaultdict
+        dict_cur.execute("SELECT grammar_id, title FROM bunpro_grammar_vocab_coverage")
+        cov_by_gid = defaultdict(list)
+        for gid, title in dict_cur.fetchall():
+            cov_by_gid[gid].append(title)
+
         for g in unstudied:
             gid = g.get("id")
-            dict_cur.execute("SELECT title FROM bunpro_grammar_vocab_coverage WHERE grammar_id = ?", (gid,))
-            titles = [r[0] for r in dict_cur.fetchall()]
-            valid_words = [
-                t for t in titles 
-                if dict_cur.execute("SELECT 1 FROM furigana WHERE text = ? LIMIT 1", (t,)).fetchone() 
-                or dict_cur.execute("SELECT 1 FROM reading_elements WHERE reading = ? LIMIT 1", (t,)).fetchone()
-            ]
-            missing = [w for w in valid_words if w not in reviewed_vocab]
+            cov_words = cov_by_gid.get(gid, [])
+            sents = sent_map.get(gid, [])[:5]
+            sent_text = " ".join((s.get("plain_jp", "") + " " + s.get("clean_jp", "")) for s in sents)
+            active_words = [w for w in cov_words if w in sent_text]
+            missing = [w for w in active_words if w not in reviewed_vocab]
 
             item = dict(g)
-            item["required_vocab_count"] = len(valid_words)
+            item["required_vocab_count"] = len(active_words)
             item["missing_vocab"] = missing
+            item["unreviewed_vocab_count"] = len(missing)
+            item["unreviewed_vocab_samples"] = missing[:5]
             item["cluster"] = classify_mext_cluster(g)
+            item["sentences"] = sents
 
             if not missing:
                 unlocked.append(item)
             else:
                 locked.append(item)
-
-        unlocked.sort(key=grammar_sort_key)
-        locked.sort(key=grammar_sort_key)
 
         return unlocked[:grammar_limit], locked[:grammar_limit]
     finally:
@@ -136,49 +143,53 @@ def evaluate_grammar_queue(grammar_limit: int = 5) -> Tuple[List[Dict[str, Any]]
 
 def get_grammar_priority_vocab(vocab_limit: int = 20) -> List[Dict[str, Any]]:
     unstudied = get_unstudied_grammar_points()
+    if not unstudied:
+        return []
+    unstudied.sort(key=grammar_sort_key)
     existing_words = get_existing_vocab_words()
     reviewed_vocab = get_reviewed_vocab_set()
+    sent_data = load_cached_json(GRAMMAR_FILE)
+    sent_map = {x.get("id", k): x.get("sentences", []) for k, x in (sent_data.items() if isinstance(sent_data, dict) else [(i.get("id"), i) for i in sent_data])}
 
     dict_conn = open_dict_db()
     dict_cur = dict_conn.cursor()
-
     priority_items = []
     seen = set()
 
     try:
+        from collections import defaultdict
+        dict_cur.execute("SELECT grammar_id, title, furigana, meaning, level FROM bunpro_grammar_vocab_coverage")
+        cov_by_gid = defaultdict(list)
+        for r in dict_cur.fetchall():
+            cov_by_gid[r[0]].append(dict(r))
+
         for g in unstudied:
             gid = g.get("id")
-            dict_cur.execute("""
-                SELECT title, furigana, meaning, level 
-                FROM bunpro_grammar_vocab_coverage 
-                WHERE grammar_id = ?
-            """, (gid,))
-            for r in dict_cur.fetchall():
-                word, reading, meaning, lvl = r[0], r[1], r[2], r[3]
+            cov_items = cov_by_gid.get(gid, [])
+            sents = sent_map.get(gid, [])[:5]
+            sent_text = " ".join((s.get("plain_jp", "") + " " + s.get("clean_jp", "")) for s in sents)
+            active = [c for c in cov_items if c["title"] in sent_text]
+            for c in active:
+                word = c["title"]
                 if word in existing_words or word in reviewed_vocab or word in seen:
                     continue
                 seen.add(word)
                 priority_items.append({
-                    "word": word,
-                    "reading": reading or word,
-                    "meaning": meaning or "Grammar prerequisite vocabulary",
-                    "level": lvl or g.get("level", "N3"),
-                    "source": f"Bunpro Grammar Prerequisite: {g.get('title', '')}",
-                    "priority": True
+                    "word": word, "reading": c.get("furigana") or word, "level": c.get("level") or g.get("level", "N3"),
+                    "meaning": c.get("meaning") or "Grammar prerequisite vocabulary",
+                    "source": f"Bunpro: {g.get('title', '')}",
+                    "priority": True, "required_by_grammar": True
                 })
                 if len(priority_items) >= vocab_limit:
                     return priority_items
 
-        # Fill remaining slots with normal curriculum
-        vocab_all = load_cached_json(VOCAB_FILE)
-        if isinstance(vocab_all, list):
-            for v in vocab_all:
-                w = v.get("word", "")
-                if w and w not in existing_words and w not in seen:
-                    seen.add(w)
-                    priority_items.append(v)
-                    if len(priority_items) >= vocab_limit:
-                        break
+        for v in (load_cached_json(VOCAB_FILE) or []):
+            w = v.get("word", "")
+            if w and w not in existing_words and w not in seen:
+                seen.add(w)
+                priority_items.append(v)
+                if len(priority_items) >= vocab_limit:
+                    break
 
         return priority_items
     finally:

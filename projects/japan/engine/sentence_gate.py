@@ -21,22 +21,11 @@ def audit_and_suspend_sentences() -> Dict[str, Any]:
     col_cur = col_conn.cursor()
     dict_cur = dict_conn.cursor()
 
-    try:
-        # 1. Get reviewed vocab (reps > 0) in deck 1759999324396
-        col_cur.execute("""
-            SELECT notes.flds 
-            FROM cards 
-            JOIN notes ON cards.nid = notes.id 
-            WHERE cards.did = 1759999324396 AND cards.reps > 0
-        """)
-        rev_set = set()
-        for (flds,) in col_cur.fetchall():
-            raw = flds.split(chr(31))[0].strip()
-            rev_set.add(raw)
-            clean = re.sub(r'<[^>]+>', '', raw).strip()
-            rev_set.add(clean)
+    from engine.grammar_vocab_gate import get_reviewed_vocab_set
+    rev_set = get_reviewed_vocab_set()
 
-        # 2. Get 0-review cards in Jap Sentences (did 1770845308673)
+    try:
+        # 1. Get 0-review cards in Jap Sentences (did 1770845308673)
         col_cur.execute("""
             SELECT cards.id, cards.queue, notes.flds 
             FROM cards 
@@ -67,16 +56,12 @@ def audit_and_suspend_sentences() -> Dict[str, Any]:
                 gid = row[0]
                 dict_cur.execute('SELECT title FROM bunpro_grammar_vocab_coverage WHERE grammar_id = ?', (gid,))
                 titles = [r[0] for r in dict_cur.fetchall()]
-                valid_words = [
-                    t for t in titles 
-                    if dict_cur.execute('SELECT 1 FROM furigana WHERE text = ? LIMIT 1', (t,)).fetchone() 
-                    or dict_cur.execute('SELECT 1 FROM reading_elements WHERE reading = ? LIMIT 1', (t,)).fetchone()
-                ]
-                unreviewed = [w for w in valid_words if w not in rev_set]
+                active_words = [t for t in titles if t in plain or t in jp_raw]
+                unreviewed = [w for w in active_words if w not in rev_set]
 
                 if unreviewed and queue != -1:
                     to_suspend.append(cid)
-                elif not unreviewed and valid_words and queue == -1:
+                elif not unreviewed and queue == -1:
                     to_unsuspend.append(cid)
             else:
                 if queue != -1:

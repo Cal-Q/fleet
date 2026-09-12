@@ -79,5 +79,81 @@
         "[JAP] [TRAVEL] [2] Jap Review Sentences (2 cards)"
       ]
     }
+  },
+  {
+    "feature": "srs_telemetry_due_calculation_fix",
+    "timestamp": "2026-09-12T16:09:30Z",
+    "status": "passed",
+    "evidence": {
+      "bug_identified": "Mathematical error in SQLite query where col.crt was added instead of calculating (now_ts - crt) / 86400, causing all 6932 review cards to be marked due.",
+      "fix_applied": "Calculated today_days from (now_ts - crt) // 86400 and queried c.queue IN (2, 3) AND c.due <= today_days.",
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "verified_api_output": {
+        "verified": true,
+        "due_total": 0,
+        "today_reviews": 2,
+        "deck_breakdown": {
+          "[JAP]::[TRAVEL]::Kanji - Image Deck": 2
+        }
+      }
+    }
+  },
+  {
+    "feature": "grammar_sentences_display_and_prerequisite_gating",
+    "timestamp": "2026-09-12T16:20:40Z",
+    "status": "passed",
+    "evidence": {
+      "explanation": "Grammar points were locked under the Vocab-First (i+1 Comprehensible Input) gate because required vocabulary words were not yet reviewed.",
+      "bug_fixes": [
+        "Fixed ruby furigana stripping in grammar_vocab_gate.py and sentence_gate.py so words like 確認 are properly recognized as reviewed instead of raw rt tags.",
+        "Added Kanji - Image Deck (did 1757158925901) to reviewed vocabulary set so single-kanji words (私, 駅) are recognized as known.",
+        "Attached sentences from bunpro_grammar_sentences.json to grammar queue objects so sentences are accessible in frontend preview and batch ingestion.",
+        "Updated renderGrammarPreview in static/js/modules/study.js to render Bunpro example sentences directly on grammar cards."
+      ],
+      "verified_api_output": {
+        "grammar_sample": "いらっしゃる",
+        "sentences_attached": 5,
+        "sample_sentence": "分からない人はいらっしゃいますか。 | Is there anyone who doesn't understand?"
+      }
+    }
+  },
+  {
+    "feature": "vocab_queue_req_badge_and_fast_grammar_gate",
+    "timestamp": "2026-09-12T16:32:00Z",
+    "status": "passed",
+    "evidence": {
+      "key_mismatch_resolved": "Checked both required_by_grammar and priority in study.js; returned required_by_grammar: true in /api/study/next.",
+      "reviewed_vocab_refreshed": "Refreshed user_reviewed_vocab.json with kana readings (e.g. すみません from 済みません) and single-kanji cards so already-studied words are omitted from prereq queue.",
+      "bulk_coverage_query": "Replaced per-rule loop in grammar_vocab_gate.py with a single bulk query on bunpro_grammar_vocab_coverage, reducing runtime from 3s to 0.43s.",
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "verified_live_output": {
+        "public_url": "https://japan.calq.it/api/study/next",
+        "first_vocab": "漢字",
+        "required_by_grammar": true,
+        "priority": true,
+        "source": "Bunpro Grammar Prerequisite: ことができる",
+        "grammar_sentences": 5
+      }
+    }
+  },
+  {
+    "feature": "active_sentence_grammar_gating_and_curriculum_ordered_vocab",
+    "timestamp": "2026-09-12T16:39:30Z",
+    "status": "passed",
+    "evidence": {
+      "unlocked_n4_rules": "24 out of 57 N4 grammar rules unlocked immediately based on active 5-sentence vocabulary verification.",
+      "curriculum_ordered_priority_vocab": "Priority vocab ordered strictly by upcoming grammar rules: 忘年会 (いらっしゃる), 漢字 and 間違え (つづける), 一時間 (はずがない), etc.",
+      "sentence_gate_per_sentence_check": "Refactored audit_and_suspend_sentences in sentence_gate.py to verify vocabulary per active sentence text rather than global grammar point coverage.",
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_public_verification": {
+        "url": "https://japan.calq.it/api/study/next",
+        "first_5_unlocked": ["いたす", "なさる", "はずだ", "ことができる", "がひつよう"],
+        "top_priority_vocab": [
+          {"word": "忘年会", "source": "Bunpro: いらっしゃる", "required_by_grammar": true},
+          {"word": "漢字", "source": "Bunpro: つづける", "required_by_grammar": true},
+          {"word": "間違え", "source": "Bunpro: つづける", "required_by_grammar": true}
+        ]
+      }
+    }
   }
 ]

@@ -120,7 +120,11 @@ def verify_travel_srs(do_sync: bool = False) -> Dict[str, Any]:
         due_breakdown = {}
         total_due = 0
         now_ts = int(datetime.now().timestamp())
-        
+        cur.execute("SELECT crt FROM col LIMIT 1")
+        crt_row = cur.fetchone()
+        crt = crt_row[0] if crt_row else 0
+        today_days = (now_ts - crt) // 86400
+
         # Exact due query according to Anki scheduler
         cur.execute("""
             SELECT d.name, count(*)
@@ -129,10 +133,10 @@ def verify_travel_srs(do_sync: bool = False) -> Dict[str, Any]:
             WHERE d.name LIKE '%[TRAVEL]%'
               AND (
                 (c.queue = 1 AND c.due <= ?) OR
-                (c.queue = 2 AND c.due <= (SELECT crt FROM col LIMIT 1) + (? / 86400))
+                (c.queue IN (2, 3) AND c.due <= ?)
               )
             GROUP BY d.name
-        """, (now_ts, now_ts))
+        """, (now_ts, today_days))
         
         for dname, cnt in cur.fetchall():
             clean = dname.replace(chr(31), "::")
