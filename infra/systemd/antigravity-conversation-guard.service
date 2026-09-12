@@ -1,0 +1,11 @@
+[Unit]
+Description=Antigravity Conversation Database Integrity & Summary Guard
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /usr/local/bin/antigravity-conversation-guard.py
+
+[Install]
+WantedBy=multi-user.target

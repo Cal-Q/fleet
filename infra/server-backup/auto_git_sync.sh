@@ -16,9 +16,18 @@ cp /etc/systemd/system/smash*.service /etc/server-infra/systemd-units/ 2>/dev/nu
 cp /etc/systemd/system/pokevault*.service /etc/server-infra/systemd-units/ 2>/dev/null || true
 cp /etc/systemd/system/remote-print.service /etc/server-infra/systemd-units/ 2>/dev/null || true
 cp /etc/systemd/system/anki-sync.* /etc/server-infra/systemd-units/ 2>/dev/null || true
+cp /etc/systemd/system/japan*.service /etc/server-infra/systemd-units/ 2>/dev/null || true
+cp /etc/systemd/system/japan*.timer /etc/server-infra/systemd-units/ 2>/dev/null || true
 cp /etc/systemd/system/server-backup.* /etc/server-infra/systemd-units/ 2>/dev/null || true
 cp /etc/systemd/system/rclone-mount.service /etc/server-infra/systemd-units/ 2>/dev/null || true
 cp /opt/server-backup/*.sh /etc/server-infra/systemd-units/ 2>/dev/null || true
+
+# Mirror infra to /opt/fleet/infra
+mkdir -p /opt/fleet/infra/nginx /opt/fleet/infra/systemd /opt/fleet/infra/server-backup
+cp -r /etc/nginx/sites-available/* /opt/fleet/infra/nginx/ 2>/dev/null || true
+cp -r /etc/systemd/system/*.service /etc/systemd/system/*.timer /opt/fleet/infra/systemd/ 2>/dev/null || true
+cp -r /opt/server-backup/*.sh /opt/fleet/infra/server-backup/ 2>/dev/null || true
+
 
 declare -A REPOS=(
     ["smash-agent"]="/home/smashbot/smash-agent:smashbot"
@@ -27,8 +36,7 @@ declare -A REPOS=(
     ["sinoira-gang"]="/home/SinoiaGang/sinoira-gang:SinoiaGang"
     ["remote-print"]="/opt/remote-print:printbot"
     ["japan-exam-tutor"]="/home/tutor/japan_exam_tutor:tutor"
-    ["bunpro-anki"]="/opt/bunpro-anki:bunkibot"
-    ["japan"]="/opt/japan:japan"
+    ["fleet"]="/opt/fleet:master"
     ["cloudprint"]="/opt/cloudprint:root"
     ["server-infra"]="/etc/server-infra:root"
 )

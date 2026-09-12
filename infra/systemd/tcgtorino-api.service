@@ -1,0 +1,15 @@
+[Unit]
+Description=TCG Torino Flask API
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www/tcgtorino/api
+ExecStart=/usr/bin/python3 /var/www/tcgtorino/api/app.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

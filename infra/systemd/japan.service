@@ -1,0 +1,18 @@
+[Unit]
+Description=Japan Platform & Studies (japan.calq.it)
+After=network.target
+
+[Service]
+Type=simple
+User=japan
+WorkingDirectory=/opt/japan
+Environment="PYTHONPATH=/opt/japan"
+Environment="HOME=/opt/japan"
+ExecStart=/opt/japan/.venv/bin/uvicorn api.app:app --host 127.0.0.1 --port 3033
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

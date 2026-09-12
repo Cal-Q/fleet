@@ -1,0 +1,19 @@
+[Unit]
+Description=Flying Thoughts & Considerations Flow Capture Web App
+After=network.target
+
+[Service]
+Type=simple
+User=thoughts
+Group=thoughts
+WorkingDirectory=/opt/thoughts
+Environment=PYTHONPATH=/opt/thoughts
+Environment=PORT=3040
+Environment=THOUGHTS_TOKEN=superpato777
+ExecStart=/usr/bin/gunicorn -w 2 -b 127.0.0.1:3040 app:app
+Restart=always
+RestartSec=3
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

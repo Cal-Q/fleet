@@ -1,0 +1,16 @@
+[Unit]
+Description=MarketSniper Switch V1 Hunter & Station 1 Telemetry API
+After=network.target
+
+[Service]
+Type=simple
+User=marketsniper
+WorkingDirectory=/opt/marketplace-sniper
+Environment="PYTHONPATH=/opt/marketplace-sniper"
+Environment="PATH=/opt/marketplace-sniper/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/opt/marketplace-sniper/.venv/bin/uvicorn api:app --host 127.0.0.1 --port 3940
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Master Hub Real-Time Project Auto-Discovery Daemon
+After=network.target hub.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/hub
+ExecStart=/usr/bin/python3 /opt/hub/bin/hub-project-discovery.py
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

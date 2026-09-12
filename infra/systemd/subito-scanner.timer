@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Subito Scanner every minute
+
+[Timer]
+# Wait 30 seconds after boot before starting the first time
+OnBootSec=30s
+# Run every 1 minute after the last run finished
+OnUnitActiveSec=1min
+# Ensures it runs even if the VPS was temporarily down
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Filebrowser for Pokevault
+After=network.target
+
+[Service]
+User=pokeuser
+Group=pokeuser
+WorkingDirectory=/opt/pokevault
+ExecStart=/usr/local/bin/filebrowser -d /opt/pokevault/filebrowser.db -p 8080 -a 127.0.0.1 -b /calq-browser
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

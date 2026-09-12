@@ -1,0 +1,12 @@
+[Unit]
+Description=Japan Platform AnkiWeb Sync & Leech Lifecycle
+After=network.target
+
+[Service]
+Type=oneshot
+User=japan
+WorkingDirectory=/opt/japan/core
+Environment=HOME=/opt/japan
+Environment=PYTHONPATH=/usr/local/share/anki/app_packages
+ExecStart=/usr/local/share/anki/python/bin/python3 /opt/japan/core/sync_and_push.py
+TimeoutSec=300

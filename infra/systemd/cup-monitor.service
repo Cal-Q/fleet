@@ -1,0 +1,18 @@
+[Unit]
+Description=CUP Piemonte Appointment Monitor
+After=network.target redis.service
+
+[Service]
+Type=simple
+User=cupbot
+WorkingDirectory=/opt/cup-monitor
+Environment=PATH=/opt/cup-monitor/.venv/bin:/usr/bin
+EnvironmentFile=/opt/cup-monitor/.env
+ExecStart=/opt/cup-monitor/.venv/bin/uvicorn backend.main:app --host 127.0.0.1 --port 4100
+Restart=always
+RestartSec=5
+MemoryMax=500M
+CPUQuota=80%
+
+[Install]
+WantedBy=multi-user.target

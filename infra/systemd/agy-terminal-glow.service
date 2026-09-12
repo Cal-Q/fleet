@@ -1,0 +1,13 @@
+[Unit]
+Description=Antigravity Terminal Green Glow & Status Watchdog
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /usr/local/bin/agy-terminal-glow-daemon.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

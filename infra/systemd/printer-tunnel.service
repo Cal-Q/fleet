@@ -1,0 +1,14 @@
+[Unit]
+Description=SSH tunnel to home printer (Chromebook -> FritzBox:9100)
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=printbot
+ExecStart=/usr/bin/ssh -N -L 127.0.0.1:9100:192.168.178.1:9100 -p 2223 -i /opt/remote-print/.ssh/id_ed25519 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -o BatchMode=yes patrik@localhost
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
