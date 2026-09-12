@@ -1,0 +1,1091 @@
+[
+  {
+    "id": 1,
+    "name_ja": "北海道大学",
+    "name_en": "Hokkaido University",
+    "location_ja": "北海道札幌市",
+    "location_en": "Sapporo‐shi, Hokkaido",
+    "region": "Hokkaido",
+    "guide_page": 1,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 2,
+    "name_ja": "北海道教育大学",
+    "name_en": "Hokkaido University of Education",
+    "location_ja": "北海道札幌市 等",
+    "location_en": "Sapporo‐shi, Hokkaido etc.",
+    "region": "Hokkaido",
+    "guide_page": 4,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 3,
+    "name_ja": "弘前大学",
+    "name_en": "Hirosaki University",
+    "location_ja": "青森県弘前市",
+    "location_en": "Hirosaki‐shi, Aomori",
+    "region": "Tohoku",
+    "guide_page": 6,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 4,
+    "name_ja": "岩手大学",
+    "name_en": "Iwate University",
+    "location_ja": "岩手県盛岡市",
+    "location_en": "Morioka‐shi, Iwate",
+    "region": "Tohoku",
+    "guide_page": 9,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 5,
+    "name_ja": "東北大学",
+    "name_en": "Tohoku University",
+    "location_ja": "宮城県仙台市",
+    "location_en": "Sendai‐shi, Miyagi",
+    "region": "Tohoku",
+    "guide_page": 12,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 6,
+    "name_ja": "秋田大学",
+    "name_en": "Akita University",
+    "location_ja": "秋田県秋田市",
+    "location_en": "Akita‐shi, Akita",
+    "region": "Tohoku",
+    "guide_page": 15,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 7,
+    "name_ja": "山形大学",
+    "name_en": "Yamagata University",
+    "location_ja": "山形県山形市",
+    "location_en": "Yamagata‐shi, Yamagata",
+    "region": "Tohoku",
+    "guide_page": 18,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 8,
+    "name_ja": "茨城大学",
+    "name_en": "Ibaraki University",
+    "location_ja": "茨城県水戸市",
+    "location_en": "Mito‐shi, Ibaraki",
+    "region": "Other",
+    "guide_page": 21,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 9,
+    "name_ja": "宇都宮大学",
+    "name_en": "Utsunomiya University",
+    "location_ja": "栃木県宇都宮市",
+    "location_en": "Utsunomiya‐shi, Tochigi",
+    "region": "Other",
+    "guide_page": 23,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 10,
+    "name_ja": "群馬大学",
+    "name_en": "Gunma University",
+    "location_ja": "群馬県前橋市",
+    "location_en": "Maebashi‐shi, Gunma",
+    "region": "Other",
+    "guide_page": 26,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 11,
+    "name_ja": "埼玉大学",
+    "name_en": "Saitama University",
+    "location_ja": "埼玉県さいたま市",
+    "location_en": "Saitama‐shi, Saitama",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 29,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 12,
+    "name_ja": "千葉大学",
+    "name_en": "Chiba University",
+    "location_ja": "千葉県千葉市",
+    "location_en": "Chiba‐shi, Chiba",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 32,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 13,
+    "name_ja": "横浜国立大学",
+    "name_en": "Yokohama National University",
+    "location_ja": "神奈川県横浜市",
+    "location_en": "Yokohama‐shi, Kanagawa",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 35,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 14,
+    "name_ja": "山梨大学",
+    "name_en": "University of Yamanashi",
+    "location_ja": "山梨県甲府市",
+    "location_en": "Kofu‐shi, Yamanashi",
+    "region": "Other",
+    "guide_page": 38,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 15,
+    "name_ja": "信州大学",
+    "name_en": "Shinshu University",
+    "location_ja": "長野県松本市",
+    "location_en": "Matsumoto‐shi, Nagano",
+    "region": "Other",
+    "guide_page": 41,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 16,
+    "name_ja": "新潟大学",
+    "name_en": "Niigata University",
+    "location_ja": "新潟県新潟市",
+    "location_en": "Niigata‐shi, Niigata",
+    "region": "Other",
+    "guide_page": 44,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 17,
+    "name_ja": "筑波大学",
+    "name_en": "University of Tsukuba",
+    "location_ja": "茨城県つくば市",
+    "location_en": "Tsukuba‐shi, Ibaraki",
+    "region": "Other",
+    "guide_page": 47,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 18,
+    "name_ja": "上越教育大学",
+    "name_en": "Joetsu University of Education",
+    "location_ja": "新潟県上越市",
+    "location_en": "Joetsu‐shi, Niigata",
+    "region": "Other",
+    "guide_page": 50,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 19,
+    "name_ja": "お茶の水女子大学",
+    "name_en": "Ochanomizu University",
+    "location_ja": "東京都文京区",
+    "location_en": "Bunkyo‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 53,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 20,
+    "name_ja": "東京外国語大学",
+    "name_en": "Tokyo University of Foreign Studies",
+    "location_ja": "東京都府中市",
+    "location_en": "Fuchu‐shi, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 56,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)",
+    "preference_rank": 2,
+    "preference_label": "⭐ 2ª Scelta (Seconda Scelta)",
+    "official_selection": true,
+    "faculty_center": "Japanese Language Center for International Students (JLC)",
+    "sociological_rationale": "Polo statale nazionale per la pedagogia linguistica intensiva e la glottodidattica; programma interamente strutturato sulla transizione linguistica accelerata da N3 verso N2 ed N1; curricolo focalizzato sulla mediazione culturale attiva tra studenti internazionali e comunità locale."
+  },
+  {
+    "id": 21,
+    "name_ja": "東京学芸大学",
+    "name_en": "Tokyo Gakugei University",
+    "location_ja": "東京都小金井市",
+    "location_en": "Koganei‐shi, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 59,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 22,
+    "name_ja": "一橋大学",
+    "name_en": "Hitotsubashi University",
+    "location_ja": "東京都国立市",
+    "location_en": "Kunitachi‐shi, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 62,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 23,
+    "name_ja": "富山大学",
+    "name_en": "University of Toyama",
+    "location_ja": "富山県富山市",
+    "location_en": "Toyama‐shi, Toyama",
+    "region": "Other",
+    "guide_page": 65,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 24,
+    "name_ja": "金沢大学",
+    "name_en": "Kanazawa University",
+    "location_ja": "石川県金沢市",
+    "location_en": "Kanazawa‐shi, Ishikawa",
+    "region": "Other",
+    "guide_page": 68,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 25,
+    "name_ja": "福井大学",
+    "name_en": "University of Fukui",
+    "location_ja": "福井県福井市",
+    "location_en": "Fukui‐shi, Fukui",
+    "region": "Other",
+    "guide_page": 71,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 26,
+    "name_ja": "岐阜大学",
+    "name_en": "Gifu University",
+    "location_ja": "岐阜県岐阜市",
+    "location_en": "Gifu‐shi, Gifu",
+    "region": "Other",
+    "guide_page": 74,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 27,
+    "name_ja": "静岡大学",
+    "name_en": "Shizuoka University",
+    "location_ja": "静岡県静岡市",
+    "location_en": "Shizuoka‐shi, Shizuoka",
+    "region": "Chubu / Tokai",
+    "guide_page": 77,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 28,
+    "name_ja": "名古屋大学",
+    "name_en": "Nagoya University",
+    "location_ja": "愛知県名古屋市",
+    "location_en": "Nagoya‐shi, Aichi",
+    "region": "Chubu / Tokai",
+    "guide_page": 80,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 29,
+    "name_ja": "三重大学",
+    "name_en": "Mie University",
+    "location_ja": "三重県津市",
+    "location_en": "Tu‐shi, Mie",
+    "region": "Other",
+    "guide_page": 83,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 30,
+    "name_ja": "京都大学",
+    "name_en": "Kyoto University",
+    "location_ja": "京都府京都市",
+    "location_en": "Kyoto‐shi, Kyoto",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 86,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 31,
+    "name_ja": "京都教育大学",
+    "name_en": "Kyoto University of Education",
+    "location_ja": "京都府京都市",
+    "location_en": "Kyoto‐shi, Kyoto",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 89,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 32,
+    "name_ja": "大阪大学",
+    "name_en": "Osaka University",
+    "location_ja": "大阪府吹田市",
+    "location_en": "Suita‐shi, Osaka",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 92,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 33,
+    "name_ja": "大阪教育大学",
+    "name_en": "Osaka Kyoiku University",
+    "location_ja": "大阪府柏原市",
+    "location_en": "Kashiwara‐shi, Osaka",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 95,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 34,
+    "name_ja": "神戸大学",
+    "name_en": "Kobe University",
+    "location_ja": "兵庫県神戸市",
+    "location_en": "Kobe‐shi, Hyogo",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 98,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 35,
+    "name_ja": "奈良教育大学",
+    "name_en": "Nara University of Education",
+    "location_ja": "奈良県奈良市",
+    "location_en": "Nara‐shi, Nara",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 101,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 36,
+    "name_ja": "奈良女子大学",
+    "name_en": "Nara Women's University",
+    "location_ja": "奈良県奈良市",
+    "location_en": "Nara‐shi, Nara",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 104,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 37,
+    "name_ja": "和歌山大学",
+    "name_en": "Wakayama University",
+    "location_ja": "和歌山県和歌山市",
+    "location_en": "Wakayama‐shi, Wakayama",
+    "region": "Other",
+    "guide_page": 107,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 38,
+    "name_ja": "兵庫教育大学",
+    "name_en": "Hyogo University of Teacher Education",
+    "location_ja": "兵庫県加東市",
+    "location_en": "Kato‐shi, Hyogo",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 110,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 39,
+    "name_ja": "鳥取大学",
+    "name_en": "Tottori University",
+    "location_ja": "鳥取県鳥取市",
+    "location_en": "Tottori‐shi, Tottori",
+    "region": "Other",
+    "guide_page": 113,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 40,
+    "name_ja": "島根大学",
+    "name_en": "Shimane University",
+    "location_ja": "島根県松江市",
+    "location_en": "Matsue‐shi, Shimane",
+    "region": "Other",
+    "guide_page": 116,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 41,
+    "name_ja": "岡山大学",
+    "name_en": "Okayama University",
+    "location_ja": "岡山県岡山市",
+    "location_en": "Okayama‐shi, Okayama",
+    "region": "Chugoku",
+    "guide_page": 119,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 42,
+    "name_ja": "広島大学",
+    "name_en": "Hiroshima University",
+    "location_ja": "広島県東広島市",
+    "location_en": "HigashiHiroshima-shi, Hiroshima",
+    "region": "Chugoku",
+    "guide_page": 122,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 43,
+    "name_ja": "山口大学",
+    "name_en": "Yamaguchi University",
+    "location_ja": "山口県山口市",
+    "location_en": "Yamaguchi‐shi, Yamaguchi",
+    "region": "Other",
+    "guide_page": 125,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 44,
+    "name_ja": "香川大学",
+    "name_en": "Kagawa University",
+    "location_ja": "香川県高松市",
+    "location_en": "Takamatsu‐shi, Kagawa",
+    "region": "Other",
+    "guide_page": 128,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 45,
+    "name_ja": "高知大学",
+    "name_en": "Kochi University",
+    "location_ja": "高知県高知市",
+    "location_en": "Kochi‐shi, Kochi",
+    "region": "Other",
+    "guide_page": 131,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 46,
+    "name_ja": "九州大学",
+    "name_en": "Kyushu University",
+    "location_ja": "福岡県福岡市",
+    "location_en": "Fukuoka‐shi, Fukuoka",
+    "region": "Kyushu",
+    "guide_page": 134,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 47,
+    "name_ja": "福岡教育大学",
+    "name_en": "University of Teacher Education Fukuoka",
+    "location_ja": "福岡県宗像市",
+    "location_en": "Munakata‐shi, Fukuoka",
+    "region": "Kyushu",
+    "guide_page": 137,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 48,
+    "name_ja": "佐賀大学",
+    "name_en": "Saga University",
+    "location_ja": "佐賀県佐賀市",
+    "location_en": "Saga‐shi, Saga",
+    "region": "Other",
+    "guide_page": 139,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 49,
+    "name_ja": "長崎大学",
+    "name_en": "Nagasaki University",
+    "location_ja": "長崎県長崎市",
+    "location_en": "Nagasaki‐shi, Nagasaki",
+    "region": "Kyushu",
+    "guide_page": 142,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 50,
+    "name_ja": "熊本大学",
+    "name_en": "Kumamoto University",
+    "location_ja": "熊本県熊本市",
+    "location_en": "Kumamoto‐shi, Kumamoto",
+    "region": "Kyushu",
+    "guide_page": 145,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 51,
+    "name_ja": "大分大学",
+    "name_en": "Oita University",
+    "location_ja": "大分県大分市",
+    "location_en": "Oita‐shi, Oita",
+    "region": "Other",
+    "guide_page": 148,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 52,
+    "name_ja": "宮崎大学",
+    "name_en": "University of Miyazaki",
+    "location_ja": "宮崎県宮崎市",
+    "location_en": "Miyazaki‐shi, Miyazaki",
+    "region": "Other",
+    "guide_page": 151,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 53,
+    "name_ja": "鹿児島大学",
+    "name_en": "Kagoshima University",
+    "location_ja": "鹿児島県鹿児島市",
+    "location_en": "Kagoshima‐shi, Kagoshima",
+    "region": "Kyushu",
+    "guide_page": 154,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 54,
+    "name_ja": "琉球大学",
+    "name_en": "University of the Ryukyus",
+    "location_ja": "沖縄県西原町",
+    "location_en": "Nishihara‐cho, Okinawa",
+    "region": "Other",
+    "guide_page": 157,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "National University (国立大学)"
+  },
+  {
+    "id": 55,
+    "name_ja": "神戸市外国語大学",
+    "name_en": "Kobe City University of Foreign Studies",
+    "location_ja": "兵庫県神戸市",
+    "location_en": "Kobe‐shi, Hyogo",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 160,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Public University (公立大学)"
+  },
+  {
+    "id": 56,
+    "name_ja": "青森中央学院大学",
+    "name_en": "Aomori Chuo Gakuin University",
+    "location_ja": "青森県青森市",
+    "location_en": "Aomori‐shi, Aomori",
+    "region": "Tohoku",
+    "guide_page": 163,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 57,
+    "name_ja": "慶應義塾大学",
+    "name_en": "Keio University",
+    "location_ja": "東京都港区",
+    "location_en": "Minato‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 166,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)",
+    "preference_rank": 3,
+    "preference_label": "⭐ 3ª Scelta (Terza Scelta)",
+    "official_selection": true,
+    "faculty_center": "Japanese Language Program (JLP)",
+    "sociological_rationale": "Storico programma intensivo d'élite (fondato nel 1953) della prestigiosa università privata Keio (Sōkei); percorso strutturato rigidamente su livelli progressivi (1-9) con lezioni giornaliere di grammatica complessa, esposizione orale e scrittura accademica; collocazione centrale a Minato-ku (Tokyo) con vivace tessuto associativo universitario."
+  },
+  {
+    "id": 58,
+    "name_ja": "上智大学",
+    "name_en": "Sophia University",
+    "location_ja": "東京都千代田区",
+    "location_en": "Chiyoda‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 168,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 59,
+    "name_ja": "大東文化大学",
+    "name_en": "Daito Bunka University",
+    "location_ja": "東京都板橋区",
+    "location_en": "Itabashi‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 171,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 60,
+    "name_ja": "法政大学",
+    "name_en": "Hosei University",
+    "location_ja": "東京都千代田区",
+    "location_en": "Chiyoda‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 174,
+    "course_types": [
+      "a",
+      "b"
+    ],
+    "course_types_str": "Type (a) & Type (b)",
+    "focus": "Both Language & Culture/History",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 61,
+    "name_ja": "早稲田大学",
+    "name_en": "Waseda University",
+    "location_ja": "東京都新宿区",
+    "location_en": "Shinjyuku‐ku, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 177,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)",
+    "preference_rank": 1,
+    "preference_label": "⭐ 1ª Scelta (Prima Scelta)",
+    "official_selection": true,
+    "faculty_center": "Center for Japanese Language (CJL)",
+    "sociological_rationale": "Massimo prestigio privato (Sōkei); eccellenza didattica del Center for Japanese Language (CJL); collocazione nel distretto di Shinjuku/Takadanobaba ad altissima densità di spazi aggregativi giovanili e 'Terzi Luoghi' urbani; osservatorio d'elezione per l'analisi sul campo delle dinamiche associative tra pari (sākuru)."
+  },
+  {
+    "id": 62,
+    "name_ja": "創価大学",
+    "name_en": "Soka University",
+    "location_ja": "東京都八王子市",
+    "location_en": "Hachioji‐shi, Tokyo",
+    "region": "Kanto (Tokyo Area)",
+    "guide_page": 180,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 63,
+    "name_ja": "南山大学",
+    "name_en": "Nanzan University",
+    "location_ja": "愛知県名古屋市",
+    "location_en": "Nagoya‐shi, Aichi",
+    "region": "Chubu / Tokai",
+    "guide_page": 183,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 64,
+    "name_ja": "名古屋学院大学",
+    "name_en": "Nagoya Gakuin University",
+    "location_ja": "愛知県名古屋市",
+    "location_en": "Nagoya‐shi, Aichi",
+    "region": "Chubu / Tokai",
+    "guide_page": 186,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 65,
+    "name_ja": "北陸大学",
+    "name_en": "Hokuriku University",
+    "location_ja": "石川県金沢市",
+    "location_en": "Kanazawa‐shi, Ishikawa",
+    "region": "Other",
+    "guide_page": 189,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 66,
+    "name_ja": "愛知淑徳大学",
+    "name_en": "Aichi Shukutoku University",
+    "location_ja": "愛知県長久手市",
+    "location_en": "Nagakute‐shi, Aichi",
+    "region": "Chubu / Tokai",
+    "guide_page": 192,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 67,
+    "name_ja": "京都外国語大学",
+    "name_en": "Kyoto University of Foreign Studies",
+    "location_ja": "京都府京都市",
+    "location_en": "Kyoto‐shi, Kyoto",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 195,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 68,
+    "name_ja": "同志社大学",
+    "name_en": "Doshisha University",
+    "location_ja": "京都府京都市",
+    "location_en": "Kyoto‐shi, Kyoto",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 198,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)",
+    "preference_rank": 4,
+    "preference_label": "📌 Riserva Accademica (Reserve)",
+    "official_selection": false,
+    "is_reserve": true,
+    "faculty_center": "Center for Japanese Language and Culture (CJLC)",
+    "sociological_rationale": "Prestigioso ateneo privato di vertice nel Kansai (Kankandoritsu); curricolo puro Type (b) orientato al consolidamento linguistico intensivo; sede a Kyoto ideale per l'osservazione comparativa dell'aggregazione studentesca tra Tokyo e Kansai."
+  },
+  {
+    "id": 69,
+    "name_ja": "神戸女子大学",
+    "name_en": "Kobe Women's University",
+    "location_ja": "兵庫県神戸市",
+    "location_en": "Kobe‐shi, Hyogo",
+    "region": "Kansai (Kyoto/Osaka Area)",
+    "guide_page": 201,
+    "course_types": [
+      "b"
+    ],
+    "course_types_str": "Type (b)",
+    "focus": "Language Proficiency",
+    "category": "Private University (私立大学)"
+  },
+  {
+    "id": 70,
+    "name_ja": "山陽学園大学",
+    "name_en": "Sanyo Gakuen University",
+    "location_ja": "岡山県岡山市",
+    "location_en": "Okayama‐shi, Okayama",
+    "region": "Chugoku",
+    "guide_page": 203,
+    "course_types": [
+      "a"
+    ],
+    "course_types_str": "Type (a)",
+    "focus": "Culture, Affairs & History",
+    "category": "Private University (私立大学)"
+  }
+]

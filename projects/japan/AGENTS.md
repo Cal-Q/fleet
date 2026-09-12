@@ -1,0 +1,1 @@
+/opt/master/.agents/rules/GLOBAL_AGENTS.md

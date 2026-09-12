@@ -1,0 +1,338 @@
+{
+  "last_synced": "2026-09-05T23:41:41.410386",
+  "source": "Bunki (AnkiManager) on relay",
+  "total_reviews": 213839,
+  "mature_cards": 5052,
+  "young_cards": 2295,
+  "learning_cards": 34,
+  "active_decks": {
+    "[JAP]::[TRAVEL]::Kanji - Image Deck": {
+      "total": 1120,
+      "review": 1090,
+      "learning": 10,
+      "new": 12
+    },
+    "[JAP]::Kanji -> Writing Practice": {
+      "total": 1102,
+      "review": 913,
+      "learning": 18,
+      "new": 171
+    },
+    "[JAP]::[TRAVEL]::Japanese -> Phonetic + Meaning": {
+      "total": 3546,
+      "review": 3400,
+      "learning": 2,
+      "new": 75
+    },
+    "[1] Stuff I make::Counters": {
+      "total": 178,
+      "review": 178,
+      "learning": 0,
+      "new": 0
+    },
+    "[JAP]::[TRAVEL]::[1] Jap Sentences": {
+      "total": 1310,
+      "review": 1295,
+      "learning": 0,
+      "new": 15
+    },
+    "[1] Letteratura per ragazzi": {
+      "total": 2,
+      "review": 0,
+      "learning": 0,
+      "new": 2
+    },
+    "Storia del Giappone::Modulo 1": {
+      "total": 458,
+      "review": 442,
+      "learning": 4,
+      "new": 9
+    },
+    "Lingua Inglese::Linguistica": {
+      "total": 36,
+      "review": 29,
+      "learning": 0,
+      "new": 7
+    },
+    "[JAP]::[TRAVEL]::[2] Jap Review Sentences": {
+      "total": 2,
+      "review": 0,
+      "learning": 0,
+      "new": 0
+    }
+  },
+  "core_metrics": {
+    "vocab_known": 3400,
+    "sentences_mastered": 1295,
+    "kanji_recognition": 1090,
+    "kanji_writing": 913,
+    "unito_history_cards": 442,
+    "counters_learned": 178
+  },
+  "self_assessment": "N4 Solido",
+  "diagnostic": "Volume lessicale (~3500 vocaboli) e kanji (~1100) già da livello N3+/N2 base! Il focus primario deve essere sui connettori logici, verbi composti e Keigo per la Part B.",
+  "sample_sentences": [
+    {
+      "meaning": "I received chopsticks and a glass from my grandmother.",
+      "japanese": "<span><ruby>私<rt>わたし</rt></ruby></span><span>は</span><span>お<ruby>祖母<rt>ばあ</rt></ruby>さん</span><span>から</span><span>おはし</span><span>と</span><span>コップ</span><span>を</span><span><span>もらった</span></span>。"
+    },
+    {
+      "meaning": "I'll buy you a cake that you like.",
+      "japanese": "あなたが好きな<span>ケーキ</span><span>を</span><span><ruby>買<rt>か</rt></ruby>ってあげよう</span>。"
+    },
+    {
+      "meaning": "I (will do) study.",
+      "japanese": "<ruby>私<rt>わたし</rt></ruby><span>は</span><ruby>勉強<rt>べんきょう</rt></ruby><span>を</span><span><span>する</span></span>。"
+    },
+    {
+      "meaning": "I did not like dinner.",
+      "japanese": "<ruby>晩<rt>ばん</rt></ruby>ごはん<span>が</span><span><ruby>好<rt>す</rt></ruby>き</span><span><span>ではなかった</span></span>。"
+    },
+    {
+      "meaning": "I will wash my hands before I eat.",
+      "japanese": "<ruby>食<rt>た</rt></ruby>べ<span>る</span><span><span>まえに</span></span><ruby>手<rt>て</rt></ruby><span>を</span><span><ruby>洗<rt>あら</rt></ruby>います</span>。"
+    },
+    {
+      "meaning": "To watch TV until eight o'clock.",
+      "japanese": "<ruby>８<rt>はち</rt></ruby><ruby>時<rt>じ</rt></ruby><span><span>まで</span></span>、テレビ<span>を</span><ruby>見<rt>み</rt></ruby><span>る</span>。"
+    },
+    {
+      "meaning": "Won't you go shopping (with me) on Friday?",
+      "japanese": "<ruby>金曜日<rt>きんようび</rt></ruby><span>に</span>、<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<span><span><ruby>行<rt>い</rt></ruby>きませんか</span></span>。"
+    },
+    {
+      "meaning": "The only (one) thing that is great about her is her clothes.",
+      "japanese": "<ruby>彼女<rt>かのじょ</rt></ruby><span>が</span><ruby>素敵<rt>すてき</rt></ruby><span><span>なのは</span></span><ruby>服<rt>ふく</rt></ruby><span>だけ</span><span>だ</span>。"
+    },
+    {
+      "meaning": "Since I will give you some paper, take some notes. (away)",
+      "japanese": "<ruby>紙<rt>かみ</rt></ruby><span>を</span><span><span>あげる</span></span><span>ので</span>メモ<span>して</span>。"
+    },
+    {
+      "meaning": "A mother speaking with a child: 'You will gradually lose interest in sweets.'",
+      "japanese": "<span>お<ruby>母<rt>かあ</rt></ruby>さん<span>が</span><ruby>子供<rt>こども</rt></ruby><span>と</span><ruby>話<rt>はな</rt></ruby>し<span>ている</span></span>：「あなた<span>は</span><span>だんだん</span>おかし<span>を</span><ruby>食<rt>た</rt></ruby>べ<span>たくな</span><span>くな</span>る。」"
+    },
+    {
+      "meaning": "'I am sorry because I cannot serve you anything but tea.'",
+      "japanese": "「お<ruby>茶<rt>ちゃ</rt></ruby>しか<span><ruby>出<rt>だ</rt></ruby>さなくて</span><span>すみません</span>。」"
+    },
+    {
+      "meaning": "'I want to live without regret.'",
+      "japanese": "「<ruby>後悔<rt>こうかい</rt></ruby><span>しないで</span><ruby>生<rt>い</rt></ruby>き<span>たい</span>。」"
+    },
+    {
+      "meaning": "I blew out (extinguished) the candles on the cake.",
+      "japanese": "<span>ケーキ</span><span>の</span><span><ruby>上<rt>うえ</rt></ruby></span><span>に</span><ruby>乗<rt>の</rt></ruby>っ<span>ていた</span>ロウソク<span><span>を</span></span><span><ruby>消<rt>け</rt></ruby>した</span>。"
+    },
+    {
+      "meaning": "Don't say 'おまえ'. Please rephrase what you said!",
+      "japanese": "「お<ruby>前<rt>まえ</rt></ruby>」<span>って</span><ruby>言<rt>い</rt></ruby><span>う</span><span>な</span>。<span><ruby>言<rt>い</rt></ruby>い<ruby>直<rt>なお</rt></ruby>してください</span>。"
+    },
+    {
+      "meaning": "It means that you want to break up? (Phrase to noun)",
+      "japanese": "<span>もう</span><ruby>別<rt>わか</rt></ruby>れ<span>たい</span><span>という<ruby>事<rt>こと</rt></ruby></span>？"
+    },
+    {
+      "meaning": "I often hear that this restaurant is delicious. (Phrase to noun)",
+      "japanese": "<span>この</span><ruby>店<rt>みせ</rt></ruby><span>は</span><ruby>美味<rt>おい</rt></ruby>し<span>い</span><span>という<ruby>事<rt>こと</rt></ruby></span><span>を</span>よく<ruby>聞<rt>き</rt></ruby>き<span>ます</span>。"
+    },
+    {
+      "meaning": "I have to arrive at school by 8 o'clock.",
+      "japanese": "<ruby>８<rt>はち</rt></ruby><ruby>時<rt>じ</rt></ruby><span>までに</span><ruby>学校<rt>がっこう</rt></ruby><span>に</span>つか<span>なくてはいけない</span>。"
+    },
+    {
+      "meaning": "Around what time will you come home?",
+      "japanese": "<ruby>何時<rt>なんじ</rt></ruby><span><ruby>頃<rt>ごろ</rt></ruby></span><ruby>帰<rt>かえ</rt></ruby><span>って</span><span><ruby>来<rt>く</rt></ruby>る</span>？"
+    },
+    {
+      "meaning": "We will talk later.",
+      "japanese": "<span>あとで</span><ruby>話<rt>はなし</rt></ruby><span>がある</span>。"
+    },
+    {
+      "meaning": "Japanese is harder to speak than English.",
+      "japanese": "<ruby>日本語<rt>にほんご</rt></ruby><span>は</span><ruby>英語<rt>えいご</rt></ruby><span>より</span><ruby>話<rt>はな</rt></ruby>し<span>にくい</span>。"
+    },
+    {
+      "meaning": "Please speak as honestly as possible.",
+      "japanese": "<span>なるべく</span><ruby>正直<rt>しょうじき</rt></ruby>に<ruby>話<rt>はな</rt></ruby>し<span>てください</span>。"
+    },
+    {
+      "meaning": "I want to go to as many famous places as possible.",
+      "japanese": "<span>なるべく</span><span><ruby>沢山<rt>たくさん</rt></ruby></span><span>の</span><ruby>人気<rt>にんき</rt></ruby>な<ruby>場所<rt>ばしょ</rt></ruby><span>へ<ruby>行<rt>い</rt></ruby>き</span><span>たい</span>。"
+    },
+    {
+      "meaning": "Even though I said it was impossible, you're still going to do it? (despite)",
+      "japanese": "<ruby>無理<rt>むり</rt></ruby><span>って</span><ruby>言<rt>い</rt></ruby><span>った</span><span>のに</span><span>まだ</span>やるの？"
+    },
+    {
+      "meaning": "I can't speak English at all.",
+      "japanese": "<span><ruby>私<rt>わたし</rt></ruby></span><span>は</span><span><ruby>全然<rt>ぜんぜん</rt></ruby></span><span><ruby>英語<rt>えいご</rt></ruby></span><span>を</span><ruby>話<rt>はな</rt></ruby>せない<span>です</span>。"
+    },
+    {
+      "meaning": "I wonder if there is still cake in the fridge.",
+      "japanese": "<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>にケーキ<span>まだ</span>ある<span>かな</span>。"
+    }
+  ],
+  "sample_vocab": [
+    {
+      "word": "年上",
+      "reading_meaning": "としうえ<br>- Older"
+    },
+    {
+      "word": "ベランダ",
+      "reading_meaning": "ベランダ<br>- balcony"
+    },
+    {
+      "word": "根",
+      "reading_meaning": "ね<br>- root (of a plant)"
+    },
+    {
+      "word": "寿命",
+      "reading_meaning": "じゅみょう<br>- lifespan"
+    },
+    {
+      "word": "喜ぶ",
+      "reading_meaning": "よろこぶ<br>- to be delighted [Vt] [Vi]<br>- to be pleased [Vt] [Vi]<br>- to be glad [Vt] [Vi]"
+    },
+    {
+      "word": "経験",
+      "reading_meaning": "けいけん<br>- experience [Vs] [Vt]"
+    },
+    {
+      "word": "書き<ruby>順<rt>じゅん</rt></ruby>",
+      "reading_meaning": "かきじゅん<br>- stroke order"
+    },
+    {
+      "word": "残業",
+      "reading_meaning": "ざんぎょう<br>- overtime (work) [Vs] [Vi]"
+    },
+    {
+      "word": "迎えにいく",
+      "reading_meaning": "むかえにいく<br>- to go to meet (someone)<br>- to go to pick up"
+    },
+    {
+      "word": "デート",
+      "reading_meaning": "デート<br>- date (with someone) [Vs] [Vi]"
+    },
+    {
+      "word": "ペット",
+      "reading_meaning": "ペット<br>- Pet<br>- trumpet (abbreviation)"
+    },
+    {
+      "word": "ビスケット",
+      "reading_meaning": "ビスケット<br>- biscuit"
+    },
+    {
+      "word": "ミュージカル",
+      "reading_meaning": "ミュージカル<br>- Musical"
+    },
+    {
+      "word": "海",
+      "reading_meaning": "うみ<br>- ocean<br>- Sea"
+    },
+    {
+      "word": "予約",
+      "reading_meaning": "よやく<br>- Reservation [Vs] [Vt]"
+    },
+    {
+      "word": "小父さん",
+      "reading_meaning": "おじさん<br>- Uncle (familiar language) (伯父さん is older than one's parent and 叔父さん is younger) [Ko] (honorific or respectful (sonkeigo) language)"
+    },
+    {
+      "word": "受信",
+      "reading_meaning": "じゅしん<br>- receiving (a message, letter, email, etc.) [Vs] [Vt]"
+    },
+    {
+      "word": "白書",
+      "reading_meaning": "はくしょ<br>- White paper (government report)"
+    },
+    {
+      "word": "文書",
+      "reading_meaning": "ぶんしょ<br>- document"
+    },
+    {
+      "word": "交じる",
+      "reading_meaning": "まじる<br>- To associate with [Vi] (usu. 交じる)"
+    },
+    {
+      "word": "交わす",
+      "reading_meaning": "かわす<br>- to exchange (messages, greetings, arguments, etc.) [Vt]"
+    },
+    {
+      "word": "校正",
+      "reading_meaning": "こうせい<br>- Proofreading [Vs] [Vt]"
+    },
+    {
+      "word": "糸口",
+      "reading_meaning": "いとぐち<br>- beginning"
+    },
+    {
+      "word": "日比",
+      "reading_meaning": "にちひ<br>- Japan and the Philippines"
+    },
+    {
+      "word": "二倍",
+      "reading_meaning": "にばい<br>- double"
+    },
+    {
+      "word": "九十",
+      "reading_meaning": "きゅうじゅう<br>- ninety"
+    },
+    {
+      "word": "予防",
+      "reading_meaning": "よぼう<br>- Prevention [Vs] [Vt]"
+    },
+    {
+      "word": "圧力",
+      "reading_meaning": "あつりょく<br>- Pressure (physics)"
+    },
+    {
+      "word": "辺り",
+      "reading_meaning": "あたり<br>- such as [Ko]<br>- about [Ko]<br>- Or thereabouts [Ko]"
+    },
+    {
+      "word": "布地",
+      "reading_meaning": "ぬのじ<br>- fabric"
+    },
+    {
+      "word": "吊る",
+      "reading_meaning": "つる<br>- to hang [Vt]"
+    },
+    {
+      "word": "回りくどい",
+      "reading_meaning": "まわりくどい<br>- indirect"
+    },
+    {
+      "word": "発令",
+      "reading_meaning": "はつれい<br>- official announcement [Vs] [Vt]"
+    },
+    {
+      "word": "白米",
+      "reading_meaning": "はくまい<br>- polished rice"
+    },
+    {
+      "word": "おでこ",
+      "reading_meaning": "おでこ<br>- forehead [Ko]"
+    },
+    {
+      "word": "はなび",
+      "reading_meaning": "はなび<br>- Fireworks (work of art, literature, music, etc. name)"
+    },
+    {
+      "word": "へ",
+      "reading_meaning": "へ<br>- Towards (indicates direction or goal; pronounced え in modern Japanese; occ. written as 江)"
+    },
+    {
+      "word": "夫",
+      "reading_meaning": "おっと<br>- husband"
+    },
+    {
+      "word": "半",
+      "reading_meaning": "はん<br>- half"
+    },
+    {
+      "word": "食べ物",
+      "reading_meaning": "たべもの<br>- food"
+    }
+  ]
+}

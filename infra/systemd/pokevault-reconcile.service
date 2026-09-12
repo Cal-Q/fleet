@@ -1,0 +1,14 @@
+[Unit]
+Description=Take consumed PTCG codes off sale (event-driven)
+After=network.target
+
+[Service]
+Type=simple
+User=pokeuser
+WorkingDirectory=/opt/pokevault
+ExecStart=/usr/bin/python3 -u /opt/pokevault/reconcile_consumed.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

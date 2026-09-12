@@ -1,0 +1,132 @@
+<!-- tools/templates/components/tab_bunki.html — Zen Action Stage (Zero-Scroll) -->
+<section id="section-bunki" class="h-full flex flex-col space-y-3 overflow-hidden">
+  <!-- Slot 1 Zen Shōji Header -->
+  <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="w-6 h-6 flex items-center justify-center bg-[#181A1B] text-white text-xs font-bold jp-font">壱</span>
+      <div>
+        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">Fase 1 • Slot 1: Ripasso Fondamenta SRS (1h)</h2>
+        <span class="text-[10px] font-mono text-neutral-500">Mantenimento ritenzione attiva • Obiettivo: Zero Arretrati (0 Due Cards)</span>
+      </div>
+    </div>
+    <span id="slot1StatusBadge" onclick="window.verifySlot1WithAnkiWeb()" title="Clicca per convalidare con AnkiWeb" class="text-[10px] font-mono font-bold px-2 py-1 border border-black/20 bg-[#FAF8F5] text-neutral-600 uppercase cursor-pointer hover:bg-black hover:text-white transition tap-press active:scale-95">
+      DA COMPLETARE
+    </span>
+  </div>
+
+  <!-- Pure Action Stage: The 4 Pillars (Cosa, Come, Quando, Come Continuare) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-3 overflow-hidden">
+    <!-- Colonna Sinistra: Obiettivo & Metodo -->
+    <div class="flex flex-col space-y-3 overflow-hidden">
+      <!-- Pillar 1: COSA DEVO FARE -->
+      <div class="p-3.5 bg-white border border-black/10 border-l-4 border-l-[#181A1B] space-y-2">
+        <div class="flex items-center gap-2 font-mono text-xs font-bold text-[#181A1B] uppercase tracking-wider">
+          <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">一</span>
+          <span>Cosa Devo Fare</span>
+        </div>
+        <p class="text-xs text-neutral-700 leading-relaxed font-sans">
+          Svolgi tutte le recensioni giornaliere in scadenza nell'app Anki per garantire il consolidamento delle <b>5.052 carte mature</b> e azzerare la coda di ripasso dei mazzi <b>[TRAVEL]</b>.
+        </p>
+        <div class="p-2 bg-[#FAF8F5] border border-black/5 text-[11px] font-mono text-neutral-600 space-y-0.5">
+          <div>• <b>Obiettivo Target</b>: 0 carte in scadenza nei mazzi <b>[TRAVEL]</b>.</div>
+          <div>• <b>Mazzi Monitorati</b>: <i>Vocaboli</i>, <i>Kanji Image</i>, <i>Frasi Bunpro</i> (Mazzo Scrittura escluso).</div>
+        </div>
+      </div>
+
+      <!-- Pillar 2: COME DEVO FARLO -->
+      <div class="p-3.5 bg-white border border-black/10 border-l-4 border-l-[#181A1B] space-y-2 flex-grow overflow-hidden">
+        <div class="flex items-center gap-2 font-mono text-xs font-bold text-[#181A1B] uppercase tracking-wider">
+          <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">二</span>
+          <span>Come Devo Farlo</span>
+        </div>
+        <ol class="text-xs text-neutral-700 space-y-2 list-decimal list-inside font-sans leading-relaxed">
+          <li><b>Apri l'app Anki</b> sul tuo computer o smartphone sincronizzato.</li>
+          <li><b>Esegui i ripassi</b> dedicando circa 45-60 minuti continuativi senza distrazioni.</li>
+          <li><b>Applica rigore nel richiamo attivo</b>: premi <i>Ripeti</i> in caso di minima esitazione o dubbio fonetico/semantico; non tirare a indovinare.</li>
+          <li><b>Sincronizza con AnkiWeb</b> al termine della sessione per aggiornare il database cloud.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Colonna Destra: Conferma & Avanzamento -->
+    <div class="flex flex-col space-y-3 overflow-hidden">
+      <!-- Pillar 3: QUANDO HO FINITO DI FARLO (Verifica Empirica AnkiWeb) -->
+      <div class="p-3.5 bg-white border border-black/10 border-l-4 border-l-[#264332] space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-[#264332] uppercase tracking-wider">
+            <span class="w-5 h-5 flex items-center justify-center bg-[#264332] text-white text-[10px] font-bold jp-font">三</span>
+            <span>Quando Ho Finito Di Farlo</span>
+          </div>
+          <span class="text-[9px] font-mono text-neutral-400 bg-[#FAF8F5] px-1 border border-black/5">Verifica DB AnkiWeb</span>
+        </div>
+        <p class="text-xs text-neutral-600 leading-relaxed font-sans">
+          Svolgi tutti i ripassi dei mazzi <b>[TRAVEL]</b> su Anki (PC/smartphone) fino a <b>0 carte in scadenza</b> e premi <b>Sincronizza</b>. Poi premi qui per convalidare:
+        </p>
+        <button id="btnSlot1VerifyAction" onclick="window.verifySlot1WithAnkiWeb()" class="w-full py-2.5 px-4 bg-[#181A1B] hover:bg-[#264332] text-white font-mono text-xs font-bold uppercase tracking-wider transition tap-press flex items-center justify-center gap-2">
+          <span>🔄 Verifica Sincronizzazione AnkiWeb</span>
+        </button>
+        <div id="slot1VerifyFeedback" class="hidden p-2 text-xs font-mono"></div>
+      </div>
+
+      <!-- Pillar 4: COME CONTINUARE -->
+      <div class="p-3.5 bg-white border border-black/10 border-l-4 border-l-[#C23B22] space-y-2.5 flex-grow overflow-hidden flex flex-col justify-between">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-[#C23B22] uppercase tracking-wider">
+            <span class="w-5 h-5 flex items-center justify-center bg-[#C23B22] text-white text-[10px] font-bold jp-font">四</span>
+            <span>Come Continuare</span>
+          </div>
+          <p class="text-xs text-neutral-700 leading-relaxed font-sans">
+            Passa direttamente allo <b>Slot 2</b> della routine: grammatica attiva Bunpro per completare le 3.1 lezioni del ritmo quotidiano e blindare l'N4 al 100% entro fine mese.
+          </p>
+        </div>
+        <button onclick="window.launchRoutineSlot(2)" class="w-full py-2.5 px-4 bg-[#264332] hover:bg-[#1b3024] text-white font-mono text-xs font-bold uppercase tracking-wider transition tap-press flex items-center justify-center gap-2">
+          <span>Procedi allo Slot 2: Sprint N4 Grammatica (1h15m) →</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible Technical Telemetry & Decks Drawer (Separate Secondary View) -->
+  <div class="flex-shrink-0">
+    <button onclick="window.toggleDrawer('bunkiTelemetryDrawer')" class="w-full py-2 px-3 bg-[#FAF8F5] hover:bg-neutral-100 border border-black/10 text-xs font-mono text-neutral-500 hover:text-black flex items-center justify-between transition tap-press">
+      <span class="flex items-center gap-2">
+        <span>⚙️</span>
+        <span class="font-bold uppercase">Visualizza Statistiche Avanzate & Mappa Mazzi Server (Opzionale)</span>
+      </span>
+      <span>↓</span>
+    </button>
+    <div id="bunkiTelemetryDrawer" class="disclosure-drawer transition-all duration-300 mt-2">
+      <div class="p-3 bg-white border border-black/10 space-y-3">
+        <!-- Telemetry Strip -->
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono border-b border-black/5 pb-2">
+          <span class="text-neutral-500 font-bold uppercase text-[10px]">Relay 82.165.61.120 • Profile User 1</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332]">Mature: <b id="bunkiMatureCount">5,052</b></span>
+            <span class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700">Reps: <b id="bunkiTotalReviews">213,839</b></span>
+            <span class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700">Vocab: <b id="bunkiVocabKnown">3,400</b></span>
+            <span class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700">Kanji KLC: <b id="bunkiKanjiWriting">913</b></span>
+          </div>
+        </div>
+        <!-- Decks & Leeches Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-48 overflow-y-auto overscroll-contain">
+          <div class="space-y-1">
+            <div class="text-[11px] font-mono font-bold text-[#181A1B] uppercase">Distribuzione Mazzi Server:</div>
+            <div id="bunkiDecksList" class="space-y-1"></div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-[11px] font-mono font-bold text-[#C23B22] uppercase">Leech Quarantine:</div>
+            <div id="leechesList" class="space-y-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { if (typeof window.syncSlot1UI === 'function') window.syncSlot1UI(); });
+  } else {
+    if (typeof window.syncSlot1UI === 'function') window.syncSlot1UI();
+  }
+</script>
+

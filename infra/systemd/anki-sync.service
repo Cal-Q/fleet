@@ -1,0 +1,14 @@
+[Unit]
+Description=Regenerate Anki decks from JMdict/Kodansha data and sync to AnkiWeb
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=bunkibot
+WorkingDirectory=/opt/bunpro-anki/AnkiManager
+Environment=HOME=/opt/bunpro-anki
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /opt/bunpro-anki/AnkiManager/sync_and_push.py
+TimeoutSec=300
+KillMode=control-group

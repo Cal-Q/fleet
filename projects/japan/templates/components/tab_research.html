@@ -1,0 +1,58 @@
+<!-- tools/templates/components/tab_research.html — Zen Shōji Branching Tree (Zero-Scroll) -->
+<section id="section-research" class="h-full flex flex-col space-y-3 overflow-hidden hidden">
+  <!-- Asymmetrical Telemetry Strip (Anti-Clone) -->
+  <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="w-6 h-6 flex items-center justify-center bg-[#1E2C3A] text-white text-xs font-bold jp-font">報</span>
+      <div>
+        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">Archivio Dossier Deep Research</h2>
+        <span class="text-[10px] font-mono text-neutral-400">Fonti Primarie Verificate • Anti-Bot Residential Proxy (futro)</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+      <span class="px-2 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332] font-bold">Proxy Bypass OK</span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Akamai Bot Manager</span>
+    </div>
+  </div>
+
+  <!-- Branching Information Tree: Master (Left) & Detail Leaf (Right) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-3 overflow-hidden">
+    <!-- Master Selector Trunk (Col 4) -->
+    <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
+      <div class="space-y-2 flex-grow overflow-hidden flex flex-col">
+        <div class="branch-aizome p-3 border border-black/10 bg-white flex items-center justify-between font-mono text-xs flex-shrink-0">
+          <div class="flex items-center gap-2">
+            <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">報</span>
+            <strong class="text-[#1E2C3A]">DOSSIER DISPONIBILI</strong>
+          </div>
+          <button onclick="loadResearchDossiers()" class="text-[10px] border border-black px-1.5 py-0.5 hover:bg-black hover:text-white transition tap-press active:scale-95">Aggiorna</button>
+        </div>
+
+        <!-- Scrollable Dossiers List -->
+        <div id="researchDossiersList" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-270px)] space-y-2 pr-1"></div>
+      </div>
+
+      <!-- Invariant Box -->
+      <div class="p-2.5 bg-[#FAF8F5] border border-black/10 text-neutral-500 text-[10px] font-mono leading-tight flex-shrink-0">
+        I report di ricerca contengono estratti verificati su convenzioni UniTO, bandi e Course Guide.
+      </div>
+    </div>
+
+    <!-- Detail Leaf Stage (Col 8) -->
+    <div class="md:col-span-8 flex flex-col bg-white border border-black/10 overflow-hidden">
+      <div id="dossierViewerBox" class="flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#C23B22]"></span>
+            <h3 id="dossierViewerTitle" class="text-xs font-mono font-bold text-[#181A1B] uppercase truncate max-w-md" title="Seleziona un dossier">Seleziona un dossier</h3>
+          </div>
+          <span class="text-[10px] font-mono text-neutral-400">Viewer Testuale</span>
+        </div>
+        <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-4 bg-[#FAF8F5]">
+          <pre id="dossierViewerContent" class="text-xs font-mono text-neutral-800 whitespace-pre-wrap leading-relaxed">Fai clic su "Leggi Dossier →" da uno dei report a sinistra per visualizzarne il testo completo.</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

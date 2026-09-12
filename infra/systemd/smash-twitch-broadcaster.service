@@ -1,0 +1,15 @@
+[Unit]
+Description=Smash Bare-Metal C11 AVX2 SIMD Twitch Broadcaster
+After=network.target smash-service.service
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-agent/server
+ExecStart=/home/smashbot/smash-agent/server/zen_broadcaster
+Restart=always
+RestartSec=1
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

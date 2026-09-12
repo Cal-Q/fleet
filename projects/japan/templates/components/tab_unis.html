@@ -1,0 +1,93 @@
+<!-- tools/templates/components/tab_unis.html — Zen Shōji Branching Tree (Zero-Scroll) -->
+<section id="section-unis" class="h-full flex flex-col space-y-3 overflow-hidden hidden">
+  <!-- Asymmetrical Telemetry Strip (Anti-Clone) -->
+  <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="w-6 h-6 flex items-center justify-center bg-[#181A1B] text-white text-xs font-bold jp-font">校</span>
+      <div>
+        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">Placement Preference Form & Course Guide</h2>
+        <span class="text-[10px] font-mono text-neutral-400">Pure Language Track Type (b) • 70 Atenei Ministeriali</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+      <span class="px-2 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332] font-bold">1ª Waseda (61)</span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">2ª TUFS (20)</span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">3ª Keio (57)</span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-500">Riserva: Doshisha (68)</span>
+    </div>
+  </div>
+
+  <!-- Branching Information Tree: Trunk (Left) & Leaf Stage (Right) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-3 overflow-hidden">
+    <!-- Branch Selector Trunk (Col 4) -->
+    <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
+      <div class="space-y-2">
+        <!-- Branch 1: Selected Unis (Kurogane) -->
+        <div id="branch_btn_unis_pref" onclick="switchUnisBranch('pref')" class="branch-kurogane p-3 border border-black/10 bg-white cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">選</span>
+              <strong class="text-[#181A1B]">3+1 SCELTE UFFICIALI</strong>
+            </div>
+            <span class="text-[10px] font-bold text-[#264332] bg-[#EEF7F1] px-1.5 py-0.5 border border-[#264332]/20">Type (b)</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Waseda, TUFS, Keio + Doshisha</div>
+        </div>
+
+        <!-- Branch 2: 70 Universities Catalog (Aizome) -->
+        <div id="branch_btn_unis_catalog" onclick="switchUnisBranch('catalog')" class="branch-aizome p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">総</span>
+              <strong class="text-[#1E2C3A]">CATALOGO 70 ATENEI</strong>
+            </div>
+            <span class="text-[10px] font-mono text-neutral-500">MEXT Course Guide</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Ricerca per prefettura, ateneo e tipologia corso</div>
+        </div>
+      </div>
+
+      <!-- PDF Download & Strategy Box -->
+      <div class="p-3 bg-[#FAF8F5] border border-black/10 space-y-2 text-xs">
+        <a href="/download/applications/2026_Placement_Preference_Form.pdf" download class="block text-center py-1.5 border border-black bg-white hover:bg-[#181A1B] hover:text-white font-mono text-[11px] font-bold uppercase transition tap-press">
+          📄 Scarica Modulo PDF Ufficiale
+        </a>
+        <p class="text-[10px] text-neutral-500 font-mono leading-tight">
+          Waseda CJL: 400+ corsi e sede ideale per il lavoro sul campo su circoli (sākuru) e Terzi Luoghi urbani a Tokyo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Leaf Stage (Col 8) -->
+    <div class="md:col-span-8 flex flex-col bg-white border border-black/10 overflow-hidden">
+      <!-- Leaf 1: 3+1 Preferences -->
+      <div id="leaf_unis_pref" class="flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Atenei Selezionati nel Modulo Ufficiale</span>
+          <span class="text-[10px] font-mono text-[#264332] bg-[#EEF7F1] px-2 py-0.5 border border-[#264332]/20 font-bold">Roster Bloccato</span>
+        </div>
+        <div id="placementPreferencesCards" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3 grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </div>
+
+      <!-- Leaf 2: 70 Universities Catalog -->
+      <div id="leaf_unis_catalog" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex flex-wrap items-center justify-between gap-2 bg-[#FAF8F5]">
+          <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Catalogo Completo Course Guide (70 Atenei)</span>
+          <div class="flex items-center gap-2 font-mono text-xs">
+            <button onclick="toggleSelectedFilter()" id="uniBtnOnlySelected" class="px-2 py-1 border border-black/20 hover:border-black bg-white text-[11px] transition tap-press active:scale-95">
+              ⭐ Selezionate
+            </button>
+            <input type="text" id="uniSearch" oninput="filterUnis()" placeholder="Cerca ateneo/città..." class="px-2 py-1 border border-black/20 bg-white text-[11px] w-36">
+            <select id="uniTypeFilter" onchange="filterUnis()" class="px-2 py-1 border border-black/20 bg-white text-[11px]">
+              <option value="">Tutti</option>
+              <option value="a">Tipo (a)</option>
+              <option value="b">Tipo (b)</option>
+            </select>
+          </div>
+        </div>
+        <div id="unisGrid" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-250px)] p-3 grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+

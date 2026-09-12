@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "id": "app_form",
+      "name": "Application Form (Modulo di Candidatura FY2027)",
+      "file_path": "applications/2026_Application_Form.pdf",
+      "status": "pending",
+      "notes": "Compilare in lingua inglese o giapponese (digitato). Focus su 研修目的 (motivazioni e piano di studi 2027/2028).",
+      "mandatory": true,
+      "exists": true,
+      "size_bytes": 302010,
+      "size_str": "294.9 KB"
+    },
+    {
+      "id": "placement_form",
+      "name": "Placement Preference Application Form (Scelta Università)",
+      "file_path": "applications/2026_Placement_Preference_Form.pdf",
+      "status": "pending",
+      "notes": "Indicare fino a 3 università selezionate dal Course Guide (Tipo a: Cultura/Storia, Tipo b: Lingua).",
+      "mandatory": true,
+      "exists": true,
+      "size_bytes": 237638,
+      "size_str": "232.1 KB"
+    },
+    {
+      "id": "unito_transcript",
+      "name": "Certificato di iscrizione con esami (UniTO - Segreteria Polo Umanistico)",
+      "file_path": "applications/unito_iscrizione_esami_timbrato.pdf",
+      "status": "pending",
+      "notes": "ATTENZIONE: Timbro a inchiostro e firma originale della segreteria (Complesso Aldo Moro / Palazzo Nuovo). Autocertificazione NON valida.",
+      "mandatory": true,
+      "exists": false,
+      "size_bytes": 0,
+      "size_str": "Non trovato"
+    },
+    {
+      "id": "recommendation_letter",
+      "name": "Recommendation Letter (Lettera di Raccomandazione)",
+      "file_path": "applications/unito_recommendation_letter.pdf",
+      "status": "pending",
+      "notes": "Docente di giapponese/storia di UniTO su carta intestata d'ateneo. Modello MEXT solo indicativo.",
+      "mandatory": true,
+      "exists": false,
+      "size_bytes": 0,
+      "size_str": "Non trovato"
+    },
+    {
+      "id": "certificate_of_health",
+      "name": "Certificate of Health (Certificato Medico Ufficiale MEXT)",
+      "file_path": "applications/2026_Certificate_of_Health.pdf",
+      "status": "pending",
+      "notes": "Compilato, timbrato e firmato da medico abilitato con esami sangue/urine/Rx torace e punto 7 compilato. Consegnabile anche a mano al test.",
+      "mandatory": true,
+      "exists": true,
+      "size_bytes": 186186,
+      "size_str": "181.8 KB"
+    },
+    {
+      "id": "passport",
+      "name": "Passaporto Ordinario Italiano (Questura di Torino)",
+      "file_path": "documents/passaporto_patrik.pdf",
+      "status": "pending",
+      "notes": "Prenotazione su passaportonline.poliziadistato.it. Costo: € 73,50 (marca da bollo) + € 42,50 (bollettino postale c/c 67422490). Prerequisito per MEXT e Working Holiday.",
+      "mandatory": true,
+      "exists": false,
+      "size_bytes": 0,
+      "size_str": "Non trovato"
+    },
+    {
+      "id": "jlpt_cert",
+      "name": "Copia Certificato JLPT (Score Report)",
+      "file_path": "applications/jlpt_score_report.pdf",
+      "status": "optional",
+      "notes": "Conseguito negli ultimi 2 anni. Deve mostrare nome, livello e punteggio dettagliato.",
+      "mandatory": false,
+      "exists": false,
+      "size_bytes": 0,
+      "size_str": "Non trovato"
+    }
+  ],
+  "metadata": {
+    "embassy_email": "ryugaku@ro.mofa.go.jp",
+    "embassy_phone": "06-487991",
+    "email_subject": "Candidatura Japanese Studies 2027",
+    "max_email_attachment_bytes": 10485760,
+    "deadline_note": "Entro inizio febbraio 2027 ore 8:00 a.m. (telefonare in Ambasciata dopo l'invio per conferma ricezione)."
+  },
+  "last_updated": "2026-09-05T19:15:42.508029",
+  "total_attachment_bytes": 725834,
+  "total_attachment_mb": "0.69 MB",
+  "is_under_limit": true
+}

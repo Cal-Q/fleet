@@ -1,0 +1,901 @@
+{
+  "2026-09-05": {
+    "date": "2026-09-05",
+    "kanji": 10,
+    "vocab": 20,
+    "grammar": 0,
+    "items": [
+      {
+        "time": "23:19:04",
+        "category": "kanji",
+        "label": "#259 湖 (LAKE)"
+      },
+      {
+        "time": "23:19:04",
+        "category": "kanji",
+        "label": "#731 碗 (BOWL)"
+      },
+      {
+        "time": "23:19:04",
+        "category": "kanji",
+        "label": "#905 賑 (FLOURISH)"
+      },
+      {
+        "time": "23:19:04",
+        "category": "kanji",
+        "label": "#1072 捨 (DISCARD)"
+      },
+      {
+        "time": "23:19:04",
+        "category": "kanji",
+        "label": "#1119 滴 (DROP)"
+      },
+      {
+        "time": "23:22:42",
+        "category": "kanji",
+        "label": "#1123 授 (CONFER ・ INSTRUCT)"
+      },
+      {
+        "time": "23:22:42",
+        "category": "kanji",
+        "label": "#1280 景 (SCENE)"
+      },
+      {
+        "time": "23:22:42",
+        "category": "kanji",
+        "label": "#1459 章 (CHAPTER ・ BADGE)"
+      },
+      {
+        "time": "23:22:42",
+        "category": "kanji",
+        "label": "#1605 筆 (BRUSH ・ WRITING)"
+      },
+      {
+        "time": "23:22:42",
+        "category": "kanji",
+        "label": "#1625 酔 (BECOME INTOXICATED)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#3 Ｌサイズ (Ｌサイズ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#4 Ｔシャツ (Ｔシャツ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#5 ばつ (ばつ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#6 Ｙシャツ (Ｙシャツ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#9 あのー (あのー)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#17 いい事 (いいこと)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#18 いい子 (いいこ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#20 イタリア (イタリア)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#28 エアコン (エアコン)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#29 ええ (ええ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#31 エレベーター (エレベーター)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#33 オレンジ (オレンジ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#34 お休み (おやすみ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#37 お土産 (おみやげ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#44 お弁当 (おべんとう)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#54 お祖父さん (おじいさん)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#55 お祭り (おまつり)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#60 お返事 (おへんじ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#61 お酒 (おさけ)"
+      },
+      {
+        "time": "23:26:08",
+        "category": "vocab",
+        "label": "#63 お金持ち (おかねもち)"
+      }
+    ]
+  },
+  "2026-09-10": {
+    "date": "2026-09-10",
+    "kanji": 0,
+    "vocab": 60,
+    "grammar": 5,
+    "items": [
+      {
+        "time": "15:52:41",
+        "category": "grammar",
+        "label": "#134 ていただけませんか (5 frasi)"
+      },
+      {
+        "time": "15:52:41",
+        "category": "grammar",
+        "label": "#187 ございます (5 frasi)"
+      },
+      {
+        "time": "15:52:41",
+        "category": "grammar",
+        "label": "#188 でございます (5 frasi)"
+      },
+      {
+        "time": "15:52:41",
+        "category": "grammar",
+        "label": "#189 お～ください (5 frasi)"
+      },
+      {
+        "time": "15:52:41",
+        "category": "grammar",
+        "label": "#190 お～になる (5 frasi)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#64 お願いします (おねがいします)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#387 分かる (わかる)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#643 明日 (あした)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#963 読む (よむ)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#972 あなた (あなた)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#1151 お出でになる (おいでになる)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#1053 電車 (でんしゃ)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#2577 一緒 (いっしょ)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#3339 状況 (じょうきょう)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#6789 拝見 (はいけん)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#6790 拝借 (はいしゃく)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#7709 やる気 (やるき)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#134 スポーツ (スポーツ)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#216 ペン (ペン)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#564 彼 (かれ)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#1080 飲み物 (のみもの)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#2916 計画 (けいかく)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#3262 出席 (しゅっせき)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#3826 納得 (なっとく)"
+      },
+      {
+        "time": "16:27:14",
+        "category": "vocab",
+        "label": "#4521 勘違い (かんちがい)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#168 ドア (ドア)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#392 初めて (はじめて)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#828 直ぐに (すぐに)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#8767 込める (こめる)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#6922 分 (ふん)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#167 テレビ (テレビ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#660 晴れ (はれ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#740 水 (みず)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#2499 マラソン (マラソン)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#101 こんな (こんな)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#492 好き (すき)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#7201 来る (きたる)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#712 次 (つぎ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#6604 脱出 (だっしゅつ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#8513 迎え (むかえ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#149 それ (それ)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#164 テスト (テスト)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#1077 食べる (たべる)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#3986 母親 (ははおや)"
+      },
+      {
+        "time": "16:27:35",
+        "category": "vocab",
+        "label": "#4164 立派 (りっぱ)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#4383 一気に (いっきに)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#247 一人で (ひとりで)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#495 姉 (あね)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#1745 上手く (うまく)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#3709 提出 (ていしゅつ)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#957 話 (はなし)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#4229 箒 (ほうき)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#9075 集中力 (しゅうちゅうりょく)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#118 シャワー (シャワー)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#7246 力 (りき)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#455 夏休み (なつやすみ)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#6626 弾く (はじく)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#716 歌 (うた)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#8738 行ける (いける)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#220 ホテル (ホテル)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#3229 終える (おえる)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#3703 剃刀 (かみそり)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#3876 板 (いた)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#243 レストラン (レストラン)"
+      },
+      {
+        "time": "16:27:55",
+        "category": "vocab",
+        "label": "#248 ちょっと (ちょっと)"
+      }
+    ]
+  },
+  "2026-09-11": {
+    "date": "2026-09-11",
+    "kanji": 0,
+    "vocab": 80,
+    "grammar": 0,
+    "items": [
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#1581 見物 (けんぶつ)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#2097 本当に (ほんとうに)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#3868 抜ける (ぬける)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#4972 治安 (ちあん)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#7547 デザイン (デザイン)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#28 エアコン (エアコン)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#497 始める (はじめる)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#10140 迷惑 (めいわく)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#732 母 (はは)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#2887 偶々 (たまたま)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#5156 上司 (じょうし)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#6834 扉 (とびら)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#136 スマホ (スマホ)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#1113 アニメ (アニメ)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#2891 繰り返す (くりかえす)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#3562 打つかる (ぶつかる)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#4237 アイデア (アイデア)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#4938 思いつく (おもいつく)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#2415 ドラマ (ドラマ)"
+      },
+      {
+        "time": "21:16:17",
+        "category": "vocab",
+        "label": "#2892 訓練 (くんれん)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#102 コンビニ (コンビニ)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#452 売る (うる)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#4115 遊園地 (ゆうえんち)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#6952 平仮名 (ひらがな)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#6968 片仮名 (かたかな)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#3130 姿 (すがた)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#8536 月食 (げっしょく)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#9845 二度と (にどと)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#236 もっと (もっと)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#3041 高速 (こうそく)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#652 時 (とき)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#2323 さっき (さっき)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#2615 煙 (けむり)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#10145 面皰 (にきび)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#694 来月 (らいげつ)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#1512 帰り (かえり)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#7046 本気 (ほんき)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#662 暇 (ひま)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#458 外 (そと)"
+      },
+      {
+        "time": "21:42:00",
+        "category": "vocab",
+        "label": "#823 皆 (みな)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#2735 割る (わる)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#8386 叫ぶ (さけぶ)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#695 来週 (らいしゅう)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#7247 力強い (ちからづよい)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#157 タバコ (タバコ)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#563 あれ (あれ)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#2394 チーム (チーム)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#3299 小屋 (こや)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#2760 看板 (かんばん)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#63 お金持ち (おかねもち)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#6682 点数 (てんすう)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#4180 例える (たとえる)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#7028 訪れる (おとずれる)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#44 お弁当 (おべんとう)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#225 ママ (ママ)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#413 卵 (たまご)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#2466 プラスチック (プラスチック)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#7614 ばれる (ばれる)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#121 ジュース (ジュース)"
+      },
+      {
+        "time": "21:42:08",
+        "category": "vocab",
+        "label": "#371 円 (えん)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2342 じゃん拳 (じゃんけん)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#3926 夫婦 (ふうふ)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#9599 抽選 (ちゅうせん)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#178 とても (とても)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#879 絵 (え)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2420 トンネル (トンネル)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#8055 海賊 (かいぞく)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#8833 鮫 (さめ)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2410 どこか (どこか)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2318 コンクリート (コンクリート)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#3349 職人 (しょくにん)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#3466 石油 (せきゆ)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#3842 売れ行き (うれゆき)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#6673 爪 (つめ)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#7484 セール (セール)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#9742 塗装 (とそう)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2664 火山 (かざん)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#2827 急速 (きゅうそく)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#3123 使用 (しよう)"
+      },
+      {
+        "time": "21:42:21",
+        "category": "vocab",
+        "label": "#6526 足跡 (あしあと)"
+      }
+    ]
+  }
+}

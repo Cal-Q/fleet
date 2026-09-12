@@ -1,0 +1,85 @@
+<!-- tools/templates/components/bottom_dock.html — Tactile Thumb Bottom Dock Navigation -->
+<!-- Strictly <= 200 lines invariant. -->
+<nav class="w-full flex-shrink-0 bg-[#FAF8F5] border-t-2 border-black/10 text-[#111111] select-none z-30">
+  <div class="w-full max-w-2xl mx-auto flex items-stretch justify-around font-mono text-xs h-[52px] sm:h-[56px] relative overflow-hidden">
+    <!-- Continuous Real-Time Sliding Black Selection Zone (Sinoira Gang Pattern) -->
+    <div
+      id="dockSlidingPill"
+      class="absolute top-0 bottom-0 left-0 bg-[#181A1B] pointer-events-none will-change-transform"
+      style="width: 20%; transform: translate3d(0%, 0, 0);"
+    >
+      <!-- Dynamic Color Accent Bar -->
+      <div id="dockAccentBar" class="h-1 w-full bg-[#181A1B] transition-colors duration-150"></div>
+    </div>
+
+    <!-- 01: 日課 Routine -->
+    <button
+      id="dockBtn_routine"
+      type="button"
+      aria-label="Vai a Routine"
+      class="flex-1 py-1 px-1 sm:px-2 flex flex-col items-center justify-center gap-0.5 transition-colors touch-manipulation relative z-10 cursor-pointer active:scale-95 bg-transparent text-white font-bold"
+    >
+      <div class="flex items-center gap-1">
+        <span class="dock-kanji font-bold text-xs jp-font text-[#181A1B]">日課</span>
+        <span class="hidden md:inline text-[8px] px-1 py-0.2 border border-current opacity-40 font-mono">1</span>
+      </div>
+      <span class="text-[10px] sm:text-[11px] uppercase tracking-wider">Routine</span>
+    </button>
+
+    <!-- 02: 学習 Studio -->
+    <button
+      id="dockBtn_study"
+      type="button"
+      aria-label="Vai a Studio"
+      class="flex-1 py-1 px-1 sm:px-2 flex flex-col items-center justify-center gap-0.5 transition-colors touch-manipulation relative z-10 cursor-pointer active:scale-95 bg-transparent text-neutral-500 hover:text-black"
+    >
+      <div class="flex items-center gap-1">
+        <span class="dock-kanji font-bold text-xs jp-font">学習</span>
+        <span class="hidden md:inline text-[8px] px-1 py-0.2 border border-current opacity-40 font-mono">2</span>
+      </div>
+      <span class="text-[10px] sm:text-[11px] uppercase tracking-wider">Studio</span>
+    </button>
+
+    <!-- 03: 復習 Bunki -->
+    <button
+      id="dockBtn_bunki"
+      type="button"
+      aria-label="Vai a Bunki SRS"
+      class="flex-1 py-1 px-1 sm:px-2 flex flex-col items-center justify-center gap-0.5 transition-colors touch-manipulation relative z-10 cursor-pointer active:scale-95 bg-transparent text-neutral-500 hover:text-black"
+    >
+      <div class="flex items-center gap-1">
+        <span class="dock-kanji font-bold text-xs jp-font">復習</span>
+        <span class="hidden md:inline text-[8px] px-1 py-0.2 border border-current opacity-40 font-mono">3</span>
+      </div>
+      <span class="text-[10px] sm:text-[11px] uppercase tracking-wider">Bunki</span>
+    </button>
+
+    <!-- 04: 試練 Prove / Test -->
+    <button
+      id="dockBtn_exams"
+      type="button"
+      aria-label="Vai a Prove ed Esami"
+      class="flex-1 py-1 px-1 sm:px-2 flex flex-col items-center justify-center gap-0.5 transition-colors touch-manipulation relative z-10 cursor-pointer active:scale-95 bg-transparent text-neutral-500 hover:text-black"
+    >
+      <div class="flex items-center gap-1">
+        <span class="dock-kanji font-bold text-xs jp-font">試練</span>
+        <span class="hidden md:inline text-[8px] px-1 py-0.2 border border-current opacity-40 font-mono">4</span>
+      </div>
+      <span class="text-[10px] sm:text-[11px] uppercase tracking-wider">Prove</span>
+    </button>
+
+    <!-- 05: 計画 Dossier / Piano -->
+    <button
+      id="dockBtn_dossier"
+      type="button"
+      aria-label="Vai a Dossier e Piano"
+      class="flex-1 py-1 px-1 sm:px-2 flex flex-col items-center justify-center gap-0.5 transition-colors touch-manipulation relative z-10 cursor-pointer active:scale-95 bg-transparent text-neutral-500 hover:text-black"
+    >
+      <div class="flex items-center gap-1">
+        <span class="dock-kanji font-bold text-xs jp-font">計画</span>
+        <span class="hidden md:inline text-[8px] px-1 py-0.2 border border-current opacity-40 font-mono">5</span>
+      </div>
+      <span class="text-[10px] sm:text-[11px] uppercase tracking-wider">Dossier</span>
+    </button>
+  </div>
+</nav>

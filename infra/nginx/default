@@ -1,0 +1,2584 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>PokePatrikVault - Instant Pokémon TCG Codes</title>
+    <meta name="description" content="Get your Pokémon TCG Live codes instantly at PokéVault Pro. 24/7 automated delivery.">
+
+    <link rel="icon" href="compressed/logo.png" sizes="48x48">
+    <meta property="og:title" content="PokePatrikVault">
+    <meta property="og:description" content="Instant delivery of Pokémon TCG Live codes.">
+    <meta property="og:image" content="compressed/logo.png">
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://accounts.google.com/gsi/client" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' },
+                        surface: { 50: '#f3f4f6', 800: '#1f2937', 900: '#111827' },
+                        danger: '#ef4444',
+                        success: '#10b981',
+                        community: '#8b5cf6'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s ease-out forwards',
+                        'slide-up': 'slideUp 0.3s ease-out forwards',
+                        'bounce-check': 'bounceCheck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(1rem)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        bounceCheck: { '0%': { transform: 'scale(0)' }, '50%': { transform: 'scale(1.2)' }, '100%': { transform: 'scale(1)' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #comm-stock-count {
+            font-variant-numeric: tabular-nums;
+            transition: all 0.5s ease;
+        }
+
+        .has-stock {
+            animation: pulse-soft 2s infinite;
+        }
+
+        @keyframes pulse-soft {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .dark .glass-panel {
+            background: rgba(31, 41, 55, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .front-exp-icon {
+            height: 60px;
+            width: auto;
+            max-width: 90%;
+            object-fit: contain;
+            display: block;
+            margin-top: -35px;
+            margin-bottom: -15px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 10;
+            position: relative;
+            flex-shrink: 0;
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        #toast-container {
+            position: fixed;
+            bottom: 8rem;
+            right: 1rem;
+            left: 1rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            pointer-events: none;
+            align-items: center;
+        }
+
+        .toast-element {
+            pointer-events: auto;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .view-section {
+            display: none !important;
+        }
+
+        .view-section.active {
+            display: block !important;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-50 text-gray-900 dark:bg-surface-900 dark:text-gray-100 antialiased min-h-screen flex flex-col transition-colors duration-300 pb-28">
+
+    <div id="session-warning" data-i18n="sessionWarning"
+        class="fixed top-0 left-0 right-0 bg-danger text-white text-center py-2 text-sm font-bold z-[1000] transform -translate-y-full transition-transform duration-300">
+        ? Your secure session expires in 1 minute. Please checkout or reopen the store.
+    </div>
+
+   <div id="welcome-gate"
+    class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-surface-50 dark:bg-surface-900 px-4 transition-opacity duration-300">
+    
+    <div class="text-center mb-8 animate-slide-up">
+        <img src="compressed/logo.png" class="w-20 h-20 mx-auto mb-4 drop-shadow-lg">
+        <h1 class="text-4xl font-extrabold tracking-tight mb-2">PokéVault <span class="text-brand-500">Pro</span></h1>
+        <p class="text-gray-500 dark:text-gray-400 font-medium" data-i18n="gateSubtitle">Choose your destination</p>
+    </div>
+
+    <div class="w-full max-w-3xl flex justify-center mb-6 animate-fade-in" style="animation-delay: 0.1s;">
+        <div class="relative">
+            <select onchange="changeLanguage(this.value)" id="gate-lang-select"
+                class="py-3 pl-5 pr-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-2xl font-bold focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer shadow-sm text-center appearance-none text-sm transition-shadow hover:shadow-md">
+                <option value="en">???? English</option>
+                <option value="es">???? Español</option>
+                <option value="fr">???? Français</option>
+                <option value="de">???? Deutsch</option>
+                <option value="ja">???? ???</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in" style="animation-delay: 0.2s;">
+        <button onclick="enterView('store')"
+            class="glass-panel p-8 rounded-3xl flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-2xl border-2 border-transparent hover:border-brand-500 group">
+            <div class="w-20 h-20 bg-brand-100 dark:bg-brand-900/30 rounded-2xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:scale-110 transition-transform">
+                <i data-lucide="shopping-bag" class="w-10 h-10"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-2" data-i18n="gateStoreTitle">Commercial Storefront</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium" data-i18n="gateStoreDesc">Browse and purchase instantly delivered PTCGL codes from our verified vault.</p>
+        </button>
+
+        <button onclick="enterView('community')"
+            class="glass-panel p-8 rounded-3xl flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-2xl border-2 border-transparent hover:border-community group">
+            <div class="w-20 h-20 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-community mb-6 group-hover:scale-110 transition-transform">
+                <i data-lucide="users" class="w-10 h-10"></i>
+            </div>
+            <h2 class="text-2xl font-extrabold mb-2" data-i18n="gateCommTitle">Community Hub</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium" data-i18n="gateCommDesc">Donate your unused codes to the community or claim free codes shared by others.</p>
+        </button>
+    </div>
+
+    <div class="mt-12 opacity-60 hover:opacity-100 transition-opacity">
+        <a href="https://pokepatrikvault.com/privacy.html" class="text-xs font-bold text-gray-400 hover:text-brand-500 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-3 h-3"></i>
+            Privacy Policy
+        </a>
+    </div>
+</div>
+
+    <main id="main-app" class="flex-grow w-full max-w-7xl mx-auto px-4 py-6 hidden opacity-0 transition-opacity duration-300">
+
+        <div class="glass-panel rounded-2xl p-5 mb-6 shadow-sm">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                    <img src="compressed/logo.png" class="w-10 h-10 drop-shadow-sm cursor-pointer" onclick="resetToGate()">
+                    <div>
+                        <h1 class="font-extrabold text-2xl tracking-tight" id="welcome-text">Welcome!</h1>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium" id="auth-status-text">Please log in to purchase or donate.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+                    <div class="bg-success/15 text-success px-4 py-2 rounded-xl font-bold text-lg flex items-center gap-2">
+                        <i data-lucide="wallet" class="w-5 h-5"></i> €<span id="user-balance">0.00</span>
+                    </div>
+
+                    <select id="lang-select" onchange="changeLanguage(this.value)"
+                        class="p-2 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-xl font-bold focus:outline-none cursor-pointer outline-none">
+                        <option value="en">???? EN</option>
+                        <option value="es">???? ES</option>
+                        <option value="fr">???? FR</option>
+                        <option value="de">???? DE</option>
+                        <option value="ja">???? JA</option>
+                    </select>
+
+                    <button id="theme-toggle" class="p-2.5 rounded-xl bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300" aria-label="Toggle Dark Mode">
+                        <div id="theme-icon-wrapper"><i data-lucide="moon" class="w-5 h-5"></i></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="google-btn-container" class="flex justify-center mt-2"></div>
+
+            <div class="hidden flex-wrap gap-2 mt-4" id="web-actions">
+                <button id="btn-topup"
+                    class="flex-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl py-2 px-4 font-bold text-sm flex justify-center items-center shadow-sm active:scale-95 transition-transform"
+                    onclick="openTopupModal()">
+                    <i data-lucide="plus-circle" class="w-4 h-4 mr-1.5"></i> <span data-i18n="topUp">Top-Up</span>
+                </button>
+                <button
+                    class="flex-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl py-2 px-4 font-bold text-sm flex justify-center items-center shadow-sm active:scale-95 transition-transform"
+                    onclick="openHistoryModal()">
+                    <i data-lucide="history" class="w-4 h-4 mr-1.5"></i> <span data-i18n="history">History</span>
+                </button>
+                <button
+                    class="flex-none bg-danger/10 text-danger border border-danger/20 rounded-xl py-2 px-4 font-bold text-sm flex justify-center items-center active:scale-95 transition-transform"
+                    onclick="handleLogout()">
+                    <i data-lucide="log-out" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+           <div class="mt-6 mb-4 flex flex-col sm:flex-row bg-gray-200/80 dark:bg-gray-800/80 p-1.5 rounded-xl gap-1 shadow-inner">
+                <button onclick="switchView('store')" id="tab-store"
+                    class="flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 bg-white dark:bg-gray-700 shadow-md text-brand-600 dark:text-brand-400 cursor-default active:scale-95">
+                    <i data-lucide="store" class="w-4 h-4"></i> <span data-i18n="tabStore">Store</span>
+                </button>
+                <button onclick="switchView('community')" id="tab-community"
+                    class="flex-1 py-2 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:text-gray-900 dark:hover:text-white bg-transparent hover:bg-gray-300/50 dark:hover:bg-gray-600/50 cursor-pointer active:scale-95">
+                    <i data-lucide="users" class="w-4 h-4"></i> <span data-i18n="tabComm">Community</span>
+                </button>
+            </div>
+
+        <div id="view-store" class="view-section active">
+            <div class="mb-8 space-y-4">
+                <div class="relative">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                    <input type="text"
+                        class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl py-3 pl-12 pr-4 font-medium focus:ring-2 focus:ring-brand-500 outline-none"
+                        id="search-bar" data-i18n-placeholder="search" placeholder="Search products by name..."
+                        oninput="updateSettings()">
+                </div>
+
+                <div class="glass-panel rounded-xl p-4 flex flex-col sm:flex-row gap-4 shadow-sm text-sm font-semibold">
+                    <div class="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-4">
+                        <span class="text-gray-500 dark:text-gray-400" data-i18n="sort">Sort</span>
+                        <select id="sort-select" onchange="updateSettings()" class="bg-surface-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-1.5 focus:outline-none focus:border-brand-500">
+                            <option value="release" data-i18n="releaseDate">Release Date</option>
+                            <option value="alpha" data-i18n="alphabetical">Alphabetical</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-4 sm:ml-auto">
+                        <span class="text-gray-500 dark:text-gray-400" data-i18n="hideSoldOut">Hide Sold Out</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="hide-sold-out" onchange="updateSettings()" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-500"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-4">
+                        <span class="text-gray-500 dark:text-gray-400" data-i18n="flattenView">Flatten View</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="flatten-view" onchange="updateSettings()" class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-500"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="store-content">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 animate-pulse mt-12">
+                    <div class="bg-gray-200 dark:bg-gray-800 h-64 rounded-2xl w-full"></div>
+                    <div class="bg-gray-200 dark:bg-gray-800 h-64 rounded-2xl w-full"></div>
+                    <div class="bg-gray-200 dark:bg-gray-800 h-64 rounded-2xl w-full hidden sm:block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-community" class="view-section">
+            <div class="glass-panel p-6 rounded-2xl border-l-4 border-community mb-8">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
+                    <h2 class="text-xl font-extrabold m-0" data-i18n="commWelcomeTitle">Welcome to the Hub!</h2>
+                    
+                    <div class="bg-purple-100 dark:bg-purple-900/40 text-community px-3 py-1.5 rounded-xl text-xs font-black flex items-center gap-1.5 shadow-sm w-fit">
+                        <i data-lucide="database" class="w-3 h-3"></i>
+                        <span id="comm-stock-count">0</span>
+                        <span data-i18n="codesAvailable">Codes Available</span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="commWelcomeDesc">
+                    This space is powered entirely by players like you. Give back by donating your spare physical codes, or claim a free code if you're building your deck!
+                </p>
+            </div>
+
+            <h3 class="text-xl font-extrabold mb-4 flex items-center gap-2">
+                <i data-lucide="award" class="text-yellow-500"></i> 
+                <span data-i18n="topDonators">Top Donators</span>
+            </h3>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 dark:bg-gray-900/50 text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider font-bold">
+                            <th class="p-4" data-i18n="rank">Rank</th>
+                            <th class="p-4" data-i18n="trainer">Trainer</th>
+                            <th class="p-4 text-right" data-i18n="codes">Codes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body" class="divide-y divide-gray-200 dark:divide-gray-700 text-sm font-medium">
+                        <tr>
+                            <td colspan="3" class="p-8 text-center text-gray-500">
+                                <i data-lucide="loader" class="animate-spin w-6 h-6 mx-auto mb-2"></i> 
+                                Loading leaderboard...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="checkout-bar"
+        class="fixed bottom-0 left-0 right-0 glass-panel px-4 py-4 pb-8 transform translate-y-full transition-transform duration-300 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] rounded-t-3xl border-b-0">
+        <button id="checkout-btn" onclick="openCartModal()"
+            class="w-full max-w-7xl mx-auto bg-brand-600 hover:bg-brand-500 text-white font-extrabold text-lg py-4 rounded-xl shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="checkout-text" data-i18n="reviewOrder">Review Order</span>
+        </button>
+    </div>
+
+    <div id="community-bar"
+    class="fixed bottom-0 left-0 right-0 glass-panel px-4 py-4 pb-8 transform translate-y-full transition-transform duration-300 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] rounded-t-3xl border-b-0 flex gap-3 justify-center items-center">
+    <div class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
+        <button onclick="openCommunitySettingsModal()" class="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 sm:px-4 py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg shrink-0" title="Profile Settings">
+            <i data-lucide="settings" class="w-6 h-6 shrink-0"></i>
+        </button>
+        <button onclick="openDonateModal()" class="flex-1 bg-community hover:bg-purple-600 text-white font-extrabold text-lg py-4 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95">
+            <i data-lucide="upload-cloud" class="w-6 h-6 shrink-0"></i> <span data-i18n="btnDonate" class="text-center">Submit Codes</span>
+        </button>
+        <button onclick="claimCommunityCode()" id="btn-claim-free" class="flex-1 bg-surface-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-community text-gray-900 dark:text-white font-extrabold text-lg py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg">
+            <i data-lucide="gift" class="w-6 h-6 text-community shrink-0"></i> <span data-i18n="btnClaim" class="text-center">Claim Free Code</span>
+        </button>
+    </div>
+</div>
+
+    <div id="modal-overlay"
+        class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-[200] hidden flex-col justify-end opacity-0 transition-opacity duration-300">
+        <div id="modal-content-wrapper"
+            class="bg-white dark:bg-surface-800 w-full max-h-[85vh] overflow-y-auto rounded-t-3xl p-6 shadow-2xl transform translate-y-full transition-transform duration-300">
+        </div>
+    </div>
+
+    <div id="success-overlay"
+        class="fixed inset-0 bg-white dark:bg-surface-900 z-[9999] hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="w-24 h-24 bg-success rounded-full flex items-center justify-center text-white shadow-[0_10px_25px_rgba(16,185,129,0.4)] mb-6 transform scale-0" id="success-check">
+            <i data-lucide="check" class="w-12 h-12"></i>
+        </div>
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-2" data-i18n="actionConfirmed">Action Confirmed!</h2>
+        <p class="text-gray-500 dark:text-gray-400 font-medium text-lg" id="success-subtext">Processing...</p>
+    </div>
+
+    <div id="toast-container"></div>
+    <footer class="w-full py-6 mt-auto border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-xs text-gray-400 font-medium">
+                © 2026 PokePatrikVault
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://pokepatrikvault.com/privacy.html" class="text-xs font-bold text-gray-500 hover:text-community transition-colors">
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+       const i18n = {
+            en: {
+                qrImageWarning: "Make sure the QR codes are well visible. If the QR code is damaged, we suggest to type the codes directly to avoid lost codes.",
+                welcomeUser: "Welcome, {name}!",
+                welcomeLogin: "Welcome! Please log in.",
+                authReq: "Please log in to purchase or donate.",
+                subtitle: "The premier automated vault specializing in instant delivery of Pokémon TCG Live (PTCGL) codes.",
+                search: "Search products by name...",
+                sort: "Sort",
+                hideSoldOut: "Hide Sold Out",
+                flattenView: "Flatten View",
+                reviewOrder: "Review Order",
+                allExpansions: "All Expansions",
+                soldOut: "Sold Out",
+                orderSummary: "Order Summary",
+                cartEmpty: "Your cart is empty",
+                confirmPay: "Confirm & Pay",
+                emptyCartMsg: "Return to the storefront to add digital assets to your repository.",
+                topUp: "Top-Up",
+                history: "History",
+                releaseDate: "Release Date",
+                alphabetical: "Alphabetical",
+                supportContact: "Support & Contact",
+                tgAdmin: "Telegram Administrator",
+                discordSupport: "Discord Support",
+                legal: "Legal",
+                sessionWarning: "? Your secure session expires in 1 minute. Please checkout or reopen the store.",
+                sessionExpiredText: "?? Session Expired. Please close and reopen.",
+                sessionExpiredBtn: "Session Expired",
+                loginSuccess: "Login successful!",
+                loginFailed: "Login Failed: ",
+                logoutSuccess: "Logged out successfully.",
+                vaultOffline: "Vault offline: ",
+                connLost: "Connection Lost",
+                orderConfirmed: "Order Confirmed!",
+                sendingReceipt: "Sending receipt to your chat...",
+                limitReached: "Vault limit reached for this item.",
+                tapLocate: "Tap to locate",
+                remove: "Remove",
+                availBalance: "Available Balance:",
+                orderTotal: "Order Total:",
+                remaining: "Remaining:",
+                insufficientFunds: "Insufficient Funds! Please top-up your balance to proceed with this checkout.",
+                purchaseFinalWarning: "Purchases are final after 30 mins. Report issues to the <button onclick='openAdminContactModal()' class='font-bold underline text-brand-600 dark:text-brand-400'>Administrator</button>.",
+                back: "Back",
+                topUpNow: "Top-Up Now",
+                processing: "Processing...",
+                andMoreCodes: "...and {count} more codes.",
+                downloadReceipt: "Download Full Receipt",
+                close: "Close",
+                topUpInstructions: "Send payment via Revolut/PayPal. Must include your code in notes:",
+                yourCode: "Your Code",
+                topUpFooter: "Min. 0.10€. Payments are processed manually to keep the service fee-free. I will do my best to process them as soon as I can. Thank you very much for supporting my service!",
+                redeemVoucher: "Redeem Voucher",
+                enterCode: "Enter code",
+                redeem: "Redeem",
+                redeemed: "Redeemed +€",
+                invalidVoucher: "Invalid Voucher",
+                noHistory: "No history found.",
+                andMore: "...and {count} more.",
+                checkoutFailed: "Checkout failed",
+                netErrorVault: "Network Error connecting to Vault",
+                networkError: "Network Error",
+                cantLoadHistory: "Could not load history",
+                googleLoginReq: "Please log in with Google to purchase.",
+                googleLoginDonateReq: "Please log in with Google to donate.",
+                googleLoginClaimReq: "Please log in with Google to claim.",
+                loginTopupReq: "Login to view Top-Up code.",
+                loginHistoryReq: "Login to view history.",
+                "Booster Pack": "Booster Pack",
+                "Elite Trainer Box": "Elite Trainer Box",
+                "Build & Battle Box": "Build & Battle Box",
+                "V Box": "V Box",
+                "Premium Collection": "Premium Collection",
+                "Blister Pack": "Blister Pack",
+                "Tin": "Tin",
+                "Mini Tin": "Mini Tin",
+                "Special Collection": "Special Collection",
+                "Promo": "Promo",
+                "Deck": "Deck",
+                gateSubtitle: "Choose your destination",
+                gateStoreTitle: "Commercial Storefront",
+                gateStoreDesc: "Browse and purchase instantly delivered PTCGL codes from our verified vault.",
+                gateCommTitle: "Community Hub",
+                gateCommDesc: "Donate your unused codes to the community or claim free codes shared by others.",
+                tabStore: "Store",
+                tabComm: "Community Hub",
+                commWelcomeTitle: "Welcome to the Hub!",
+                commWelcomeDesc: "This space is powered entirely by players like you. Give back by donating your spare physical codes, or claim a free code if you're building your deck!",
+                btnDonate: "Submit Codes",
+                btnClaim: "Claim Free Code",
+                topDonators: "Top Donators",
+                rank: "Rank",
+                trainer: "Trainer",
+                codes: "Codes",
+                donateTitle: "Donate Codes",
+                donateMethodText: "Type Codes manually (Auto-Generates QR)",
+                donateMethodImg: "Upload Image",
+                typeCodesHere: "Type or paste codes here (one per line)...",
+                btnUploadQR: "Generate & Upload",
+                qrGenInfo: "We will automatically convert valid codes into a QR image for our scanners.",
+                uploadImgBtn: "Select & Upload Photo",
+                donationThanks: "Thank you for supporting the community!",
+                codesAvailable: "Codes Available",
+                loginToPurchase: "Login to purchase"
+            },
+            es: {
+                loginToPurchase: "Iniciar sesión para comprar",
+                welcomeUser: "¡Bienvenido, {name}!",
+                welcomeLogin: "¡Bienvenido! Por favor, inicia sesión.",
+                authReq: "Por favor, inicia sesión para comprar o donar.",
+                subtitle: "La principal bóveda automatizada especializada en la entrega instantánea de códigos de Pokémon TCG Live (PTCGL).",
+                search: "Buscar productos por nombre...",
+                sort: "Ordenar",
+                hideSoldOut: "Ocultar agotados",
+                flattenView: "Vista plana",
+                reviewOrder: "Revisar pedido",
+                allExpansions: "Todas las expansiones",
+                soldOut: "Agotado",
+                orderSummary: "Resumen del pedido",
+                cartEmpty: "Tu carrito está vacío",
+                confirmPay: "Confirmar y Pagar",
+                emptyCartMsg: "Regresa a la tienda para añadir activos digitales a tu repositorio.",
+                topUp: "Recargar",
+                history: "Historial",
+                releaseDate: "Fecha de lanzamiento",
+                alphabetical: "Alfabético",
+                supportContact: "Soporte y Contacto",
+                tgAdmin: "Administrador de Telegram",
+                discordSupport: "Soporte de Discord",
+                legal: "Legal",
+                legalText: "Todas las compras son finales 30 minutos después de la entrega del código.",
+                sessionWarning: "? Tu sesión segura expira en 1 minuto. Por favor, realiza el pago o vuelve a abrir la tienda.",
+                sessionExpiredText: "?? Sesión expirada. Por favor, cierra y vuelve a abrir.",
+                sessionExpiredBtn: "Sesión Expirada",
+                loginSuccess: "¡Inicio de sesión exitoso!",
+                loginFailed: "Error al iniciar sesión: ",
+                logoutSuccess: "Sesión cerrada con éxito.",
+                vaultOffline: "Bóveda fuera de línea: ",
+                connLost: "Conexión perdida",
+                orderConfirmed: "¡Pedido Confirmado!",
+                sendingReceipt: "Enviando recibo a tu chat...",
+                limitReached: "Límite de la bóveda alcanzado para este artículo.",
+                tapLocate: "Toca para localizar",
+                remove: "Eliminar",
+                availBalance: "Saldo Disponible:",
+                orderTotal: "Total del Pedido:",
+                remaining: "Restante:",
+                insufficientFunds: "¡Fondos insuficientes! Por favor, recarga tu saldo para proceder con este pago.",
+                purchaseFinalWarning: "Las compras son finales después de 30 minutos. Reporta problemas al <button onclick='openAdminContactModal()' class='font-bold underline text-brand-600 dark:text-brand-400'>Administrador</button>.",
+                back: "Atrás",
+                topUpNow: "Recargar Ahora",
+                processing: "Procesando...",
+                andMoreCodes: "...y {count} códigos más.",
+                downloadReceipt: "Descargar Recibo Completo",
+                close: "Cerrar",
+                topUpInstructions: "Envía el pago a través de Revolut/PayPal. Debes incluir tu código en las notas:",
+                yourCode: "Tu Código",
+                topUpFooter: "Mín. 0.10€. Los pagos se procesan manualmente para mantener el servicio sin comisiones. Haré todo lo posible por procesarlos cuanto antes. ¡Muchas gracias por apoyar mi servicio!",
+                redeemVoucher: "Canjear Cupón",
+                enterCode: "Ingresar código",
+                redeem: "Canjear",
+                redeemed: "Canjeado +€",
+                invalidVoucher: "Cupón Inválido",
+                noHistory: "No se encontró historial.",
+                andMore: "...y {count} más.",
+                checkoutFailed: "El pago falló",
+                netErrorVault: "Error de red al conectar con la Bóveda",
+                networkError: "Error de Red",
+                cantLoadHistory: "No se pudo cargar el historial",
+                googleLoginReq: "Por favor, inicia sesión con Google para comprar.",
+                googleLoginDonateReq: "Por favor, inicia sesión con Google para donar.",
+                googleLoginClaimReq: "Por favor, inicia sesión con Google para reclamar.",
+                loginTopupReq: "Inicia sesión para ver el código de recarga.",
+                loginHistoryReq: "Inicia sesión para ver el historial.",
+                "Booster Pack": "Paquete de Mejora",
+                "Elite Trainer Box": "Caja de Entrenador Élite",
+                "Build & Battle Box": "Caja de Combate y Construcción",
+                "V Box": "Caja V",
+                "Premium Collection": "Colección Premium",
+                "Blister Pack": "Blíster",
+                "Tin": "Lata",
+                "Mini Tin": "Mini Lata",
+                "Special Collection": "Colección Especial",
+                "Promo": "Promo",
+                "Deck": "Mazo",
+                gateSubtitle: "Elige tu destino",
+                gateStoreTitle: "Tienda Comercial",
+                gateStoreDesc: "Explora y compra códigos de PTCGL entregados al instante desde nuestra bóveda verificada.",
+                gateCommTitle: "Centro de la Comunidad",
+                gateCommDesc: "Dona tus códigos sin usar a la comunidad o reclama códigos gratuitos compartidos por otros.",
+                tabStore: "Tienda",
+                tabComm: "Centro de la Comunidad",
+                commWelcomeTitle: "¡Bienvenido al Centro!",
+                commWelcomeDesc: "Este espacio está impulsado por jugadores como tú. ¡Devuelve el favor donando tus códigos físicos de sobra, o reclama un código gratis si estás armando tu mazo!",
+                btnDonate: "Enviar Códigos",
+                btnClaim: "Reclamar Código Gratis",
+                topDonators: "Principales Donantes",
+                rank: "Rango",
+                trainer: "Entrenador",
+                codes: "Códigos",
+                donateTitle: "Donar Códigos",
+                donateMethodText: "Escribir códigos manualmente (Auto-Genera QR)",
+                donateMethodImg: "Subir Imagen",
+                typeCodesHere: "Escribe o pega los códigos aquí (uno por línea)...",
+                btnUploadQR: "Generar y Subir",
+                qrGenInfo: "Convertiremos automáticamente los códigos válidos en una imagen QR para nuestros escáneres.",
+                uploadImgBtn: "Seleccionar y Subir Foto",
+                donationThanks: "¡Gracias por apoyar a la comunidad!",
+                codesAvailable: "Códigos Disponibles"
+            },
+            fr: {
+                loginToPurchase: "Connectez-vous pour acheter",
+                welcomeUser: "Bienvenue, {name} !",
+                welcomeLogin: "Bienvenue ! Veuillez vous connecter.",
+                authReq: "Veuillez vous connecter pour acheter ou faire un don.",
+                subtitle: "Le coffre-fort automatisé de premier choix spécialisé dans la livraison instantanée de codes Pokémon TCG Live (PTCGL).",
+                search: "Rechercher des produits par nom...",
+                sort: "Trier",
+                hideSoldOut: "Masquer les ruptures",
+                flattenView: "Vue aplatie",
+                reviewOrder: "Revoir la commande",
+                allExpansions: "Toutes les extensions",
+                soldOut: "Épuisé",
+                orderSummary: "Résumé de la commande",
+                cartEmpty: "Votre panier est vide",
+                confirmPay: "Confirmer et Payer",
+                emptyCartMsg: "Retournez à la boutique pour ajouter des actifs numériques à votre répertoire.",
+                topUp: "Recharger",
+                history: "Historique",
+                releaseDate: "Date de sortie",
+                alphabetical: "Alphabétique",
+                supportContact: "Support & Contact",
+                tgAdmin: "Administrateur Telegram",
+                discordSupport: "Support Discord",
+                legal: "Légal",
+                legalText: "Tous les achats sont définitifs 30 minutes après la livraison du code.",
+                sessionWarning: "? Votre session sécurisée expire dans 1 minute. Veuillez procéder au paiement ou rouvrir la boutique.",
+                sessionExpiredText: "?? Session expirée. Veuillez fermer et rouvrir.",
+                sessionExpiredBtn: "Session Expirée",
+                loginSuccess: "Connexion réussie !",
+                loginFailed: "Échec de la connexion : ",
+                logoutSuccess: "Déconnexion réussie.",
+                vaultOffline: "Coffre-fort hors ligne : ",
+                connLost: "Connexion perdue",
+                orderConfirmed: "Commande Confirmée !",
+                sendingReceipt: "Envoi du reçu sur votre chat...",
+                limitReached: "Limite du coffre-fort atteinte pour cet article.",
+                tapLocate: "Appuyez pour localiser",
+                remove: "Supprimer",
+                availBalance: "Solde Disponible :",
+                orderTotal: "Total de la commande :",
+                remaining: "Restant :",
+                insufficientFunds: "Fonds insuffisants ! Veuillez recharger votre solde pour procéder à ce paiement.",
+                purchaseFinalWarning: "Les achats sont définitifs après 30 minutes. Signalez les problèmes à <button onclick='openAdminContactModal()' class='font-bold underline text-brand-600 dark:text-brand-400'>l'Administrateur</button>.",
+                back: "Retour",
+                topUpNow: "Recharger Maintenant",
+                processing: "Traitement en cours...",
+                andMoreCodes: "...et {count} codes de plus.",
+                downloadReceipt: "Télécharger le reçu complet",
+                close: "Fermer",
+                topUpInstructions: "Envoyez le paiement via Revolut/PayPal. Vous devez inclure votre code dans les notes :",
+                yourCode: "Votre Code",
+                topUpFooter: "Min. 0.10€. Les paiements sont traités manuellement pour garder le service sans frais. Je ferai de mon mieux pour les traiter le plus rapidement possible. Merci beaucoup de soutenir mon service !",
+                redeemVoucher: "Utiliser un bon",
+                enterCode: "Entrez le code",
+                redeem: "Utiliser",
+                redeemed: "Utilisé +€",
+                invalidVoucher: "Bon invalide",
+                noHistory: "Aucun historique trouvé.",
+                andMore: "...et {count} de plus.",
+                checkoutFailed: "Le paiement a échoué",
+                netErrorVault: "Erreur réseau lors de la connexion au coffre-fort",
+                networkError: "Erreur réseau",
+                cantLoadHistory: "Impossible de charger l'historique",
+                googleLoginReq: "Veuillez vous connecter avec Google pour acheter.",
+                googleLoginDonateReq: "Veuillez vous connecter avec Google pour faire un don.",
+                googleLoginClaimReq: "Veuillez vous connecter avec Google pour réclamer.",
+                loginTopupReq: "Connectez-vous pour voir le code de recharge.",
+                loginHistoryReq: "Connectez-vous pour voir l'historique.",
+                "Booster Pack": "Booster",
+                "Elite Trainer Box": "Coffret Dresseur d'Élite",
+                "Build & Battle Box": "Boîtier Stratégies et Combats",
+                "V Box": "Coffret V",
+                "Premium Collection": "Collection Premium",
+                "Blister Pack": "Pack Blister",
+                "Tin": "Pokébox",
+                "Mini Tin": "Mini Pokébox",
+                "Special Collection": "Collection Spéciale",
+                "Promo": "Promo",
+                "Deck": "Deck",
+                gateSubtitle: "Choisissez votre destination",
+                gateStoreTitle: "Boutique Commerciale",
+                gateStoreDesc: "Parcourez et achetez des codes PTCGL livrés instantanément depuis notre coffre-fort vérifié.",
+                gateCommTitle: "Centre Communautaire",
+                gateCommDesc: "Faites don de vos codes inutilisés à la communauté ou réclamez des codes gratuits partagés par d'autres.",
+                tabStore: "Boutique",
+                tabComm: "Centre Communautaire",
+                commWelcomeTitle: "Bienvenue sur le Centre !",
+                commWelcomeDesc: "Cet espace est entièrement alimenté par des joueurs comme vous. Donnez en retour en faisant don de vos codes physiques en double, ou réclamez un code gratuit si vous construisez votre deck !",
+                btnDonate: "Soumettre des Codes",
+                btnClaim: "Réclamer un Code Gratuit",
+                topDonators: "Meilleurs Donateurs",
+                rank: "Rang",
+                trainer: "Dresseur",
+                codes: "Codes",
+                donateTitle: "Faire un don de Codes",
+                donateMethodText: "Taper les codes manuellement (Génère automatiquement un QR)",
+                donateMethodImg: "Télécharger une Image",
+                typeCodesHere: "Tapez ou collez les codes ici (un par ligne)...",
+                btnUploadQR: "Générer et Télécharger",
+                qrGenInfo: "Nous convertirons automatiquement les codes valides en une image QR pour nos scanners.",
+                uploadImgBtn: "Sélectionner et Télécharger une Photo",
+                donationThanks: "Merci de soutenir la communauté !",
+                codesAvailable: "Codes Disponibles"
+            },
+            de: {
+                loginToPurchase: "Anmelden um zu kaufen",
+                welcomeUser: "Willkommen, {name}!",
+                welcomeLogin: "Willkommen! Bitte melde dich an.",
+                authReq: "Bitte melde dich an, um zu kaufen oder zu spenden.",
+                subtitle: "Der führende automatisierte Tresor, spezialisiert auf die sofortige Lieferung von Pokémon TCG Live (PTCGL) Codes.",
+                search: "Produkte nach Namen suchen...",
+                sort: "Sortieren",
+                hideSoldOut: "Ausverkaufte ausblenden",
+                flattenView: "Flache Ansicht",
+                reviewOrder: "Bestellung überprüfen",
+                allExpansions: "Alle Erweiterungen",
+                soldOut: "Ausverkauft",
+                orderSummary: "Bestellübersicht",
+                cartEmpty: "Dein Warenkorb ist leer",
+                confirmPay: "Bestätigen & Bezahlen",
+                emptyCartMsg: "Kehre zum Schaufenster zurück, um digitale Assets hinzuzufügen.",
+                topUp: "Aufladen",
+                history: "Verlauf",
+                releaseDate: "Erscheinungsdatum",
+                alphabetical: "Alphabetisch",
+                supportContact: "Support & Kontakt",
+                tgAdmin: "Telegram Administrator",
+                discordSupport: "Discord Support",
+                legal: "Rechtliches",
+                legalText: "Alle Käufe sind 30 Minuten nach Code-Lieferung endgültig.",
+                sessionWarning: "? Deine sichere Sitzung läuft in 1 Minute ab. Bitte zur Kasse gehen oder den Store neu öffnen.",
+                sessionExpiredText: "?? Sitzung abgelaufen. Bitte schließen und neu öffnen.",
+                sessionExpiredBtn: "Sitzung abgelaufen",
+                loginSuccess: "Erfolgreich angemeldet!",
+                loginFailed: "Anmeldung fehlgeschlagen: ",
+                logoutSuccess: "Erfolgreich abgemeldet.",
+                vaultOffline: "Tresor offline: ",
+                connLost: "Verbindung unterbrochen",
+                orderConfirmed: "Bestellung bestätigt!",
+                sendingReceipt: "Sende Quittung an deinen Chat...",
+                limitReached: "Tresor-Limit für diesen Artikel erreicht.",
+                tapLocate: "Tippen zum Finden",
+                remove: "Entfernen",
+                availBalance: "Verfügbares Guthaben:",
+                orderTotal: "Bestellsumme:",
+                remaining: "Verbleibend:",
+                insufficientFunds: "Unzureichendes Guthaben! Bitte lade dein Guthaben auf, um fortzufahren.",
+                purchaseFinalWarning: "Käufe sind nach 30 Min. endgültig. Melde Probleme an den <button onclick='openAdminContactModal()' class='font-bold underline text-brand-600 dark:text-brand-400'>Administrator</button>.",
+                back: "Zurück",
+                topUpNow: "Jetzt aufladen",
+                processing: "Wird bearbeitet...",
+                andMoreCodes: "...und {count} weitere Codes.",
+                downloadReceipt: "Komplette Quittung herunterladen",
+                close: "Schließen",
+                topUpInstructions: "Sende die Zahlung via Revolut/PayPal. Du musst deinen Code in die Notizen eintragen:",
+                yourCode: "Dein Code",
+                topUpFooter: "Min. 0.10€. Zahlungen werden manuell bearbeitet, um den Service gebührenfrei zu halten. Ich werde mein Bestes tun, um sie so schnell wie möglich zu bearbeiten. Vielen Dank für die Unterstützung meines Services!",
+                redeemVoucher: "Gutschein einlösen",
+                enterCode: "Code eingeben",
+                redeem: "Einlösen",
+                redeemed: "Eingelöst +€",
+                invalidVoucher: "Ungültiger Gutschein",
+                noHistory: "Kein Verlauf gefunden.",
+                andMore: "...und {count} weitere.",
+                checkoutFailed: "Kasse fehlgeschlagen",
+                netErrorVault: "Netzwerkfehler bei der Verbindung zum Tresor",
+                networkError: "Netzwerkfehler",
+                cantLoadHistory: "Verlauf konnte nicht geladen werden",
+                googleLoginReq: "Bitte melde dich mit Google an, um zu kaufen.",
+                googleLoginDonateReq: "Bitte melde dich mit Google an, um zu spenden.",
+                googleLoginClaimReq: "Bitte melde dich mit Google an, um einzulösen.",
+                loginTopupReq: "Melde dich an, um den Aufladecode zu sehen.",
+                loginHistoryReq: "Melde dich an, um den Verlauf zu sehen.",
+                "Booster Pack": "Boosterpack",
+                "Elite Trainer Box": "Top-Trainer-Box",
+                "Build & Battle Box": "Build & Battle Box",
+                "V Box": "V-Box",
+                "Premium Collection": "Premium-Kollektion",
+                "Blister Pack": "Blisterpack",
+                "Tin": "Tin-Box",
+                "Mini Tin": "Mini-Tin",
+                "Special Collection": "Spezial-Kollektion",
+                "Promo": "Promo",
+                "Deck": "Deck",
+                gateSubtitle: "Wähle dein Ziel",
+                gateStoreTitle: "Kommerzieller Store",
+                gateStoreDesc: "Durchstöbere und kaufe sofort gelieferte PTCGL-Codes aus unserem verifizierten Tresor.",
+                gateCommTitle: "Community-Hub",
+                gateCommDesc: "Spende deine ungenutzten Codes an die Community oder beanspruche kostenlose Codes von anderen.",
+                tabStore: "Store",
+                tabComm: "Community-Hub",
+                commWelcomeTitle: "Willkommen im Hub!",
+                commWelcomeDesc: "Dieser Bereich wird komplett von Spielern wie dir angetrieben. Gib etwas zurück, indem du deine überschüssigen physischen Codes spendest, oder beanspruche einen kostenlosen Code, wenn du dein Deck baust!",
+                btnDonate: "Codes einreichen",
+                btnClaim: "Kostenlosen Code beanspruchen",
+                topDonators: "Top-Spender",
+                rank: "Rang",
+                trainer: "Trainer",
+                codes: "Codes",
+                donateTitle: "Codes spenden",
+                donateMethodText: "Codes manuell eingeben (Generiert automatisch QR)",
+                donateMethodImg: "Bild hochladen",
+                typeCodesHere: "Codes hier eingeben oder einfügen (einer pro Zeile)...",
+                btnUploadQR: "Generieren & Hochladen",
+                qrGenInfo: "Wir wandeln gültige Codes automatisch in ein QR-Bild für unsere Scanner um.",
+                uploadImgBtn: "Foto auswählen & hochladen",
+                donationThanks: "Danke, dass du die Community unterstützt!",
+                codesAvailable: "Codes verfügbar"
+            },
+            ja: {
+                loginToPurchase: "????????????????",
+                welcomeUser: "?????{name}!",
+                welcomeLogin: "????!???????????",
+                authReq: "??????????????????????",
+                subtitle: "????TCG???(PTCGL)???????????????????????",
+                search: "??????...",
+                sort: "????",
+                hideSoldOut: "???????",
+                flattenView: "???????",
+                reviewOrder: "???????",
+                allExpansions: "?????????",
+                soldOut: "????",
+                orderSummary: "?????",
+                cartEmpty: "???????",
+                confirmPay: "???????",
+                emptyCartMsg: "?????????????????????????????",
+                topUp: "????",
+                history: "??",
+                releaseDate: "???",
+                alphabetical: "????",
+                supportContact: "????&??????",
+                tgAdmin: "Telegram???",
+                discordSupport: "Discord????",
+                legal: "????",
+                legalText: "??????30??????????????",
+                sessionWarning: "? ??????????????1??????????????????????????",
+                sessionExpiredText: "?? ??????????????????????????????????",
+                sessionExpiredBtn: "???????",
+                loginSuccess: "???????????!",
+                loginFailed: "??????:",
+                logoutSuccess: "?????????????",
+                vaultOffline: "???????????:",
+                connLost: "?????????",
+                orderConfirmed: "?????????!",
+                sendingReceipt: "????????????...",
+                limitReached: "?????????????????",
+                tapLocate: "???????",
+                remove: "??",
+                availBalance: "??????:",
+                orderTotal: "????:",
+                remaining: "??:",
+                insufficientFunds: "??????!????????????????????????",
+                purchaseFinalWarning: "???30?????????????????<button onclick='openAdminContactModal()' class='font-bold underline text-brand-600 dark:text-brand-400'>???</button>??????????",
+                back: "??",
+                topUpNow: "???????",
+                processing: "???...",
+                andMoreCodes: "...? {count} ??????",
+                downloadReceipt: "????????????",
+                close: "???",
+                topUpInstructions: "Revolut/PayPal???????????????????????????????:",
+                yourCode: "???????",
+                topUpFooter: "?? 0.10€??????????????????????????????????????????????????????????????????????!",
+                redeemVoucher: "??????????",
+                enterCode: "??????",
+                redeem: "?????",
+                redeemed: "?????? +€",
+                invalidVoucher: "????????",
+                noHistory: "???????????",
+                andMore: "...? {count} ??",
+                checkoutFailed: "?????????",
+                netErrorVault: "????????????????????????",
+                networkError: "?????????",
+                cantLoadHistory: "?????????????",
+                googleLoginReq: "??????Google????????????",
+                googleLoginDonateReq: "??????Google????????????",
+                googleLoginClaimReq: "??????Google????????????",
+                loginTopupReq: "?????????????????????????",
+                loginHistoryReq: "????????????????????",
+                "Booster Pack": "????????",
+                "Elite Trainer Box": "?????????????",
+                "Build & Battle Box": "???&???????",
+                "V Box": "V????",
+                "Premium Collection": "???????????",
+                "Blister Pack": "????????",
+                "Tin": "?",
+                "Mini Tin": "???",
+                "Special Collection": "???????????",
+                "Promo": "???",
+                "Deck": "???",
+                gateSubtitle: "????????????",
+                gateStoreTitle: "?????",
+                gateStoreDesc: "????????????????PTCGL??????????????",
+                gateCommTitle: "????????",
+                gateCommDesc: "??????????????????????????????????????????",
+                tabStore: "???",
+                tabComm: "????????",
+                commWelcomeTitle: "???????!",
+                commWelcomeDesc: "??????????????????????????????????????????????????????????????????????????????????!",
+                btnDonate: "??????",
+                btnClaim: "??????????",
+                topDonators: "??????",
+                rank: "???",
+                trainer: "?????",
+                codes: "???",
+                donateTitle: "??????",
+                donateMethodText: "????????? (QR?????)",
+                donateMethodImg: "?????????",
+                typeCodesHere: "????????????????????? (1??1?)...",
+                btnUploadQR: "??????????",
+                qrGenInfo: "??????????????QR?????????????",
+                uploadImgBtn: "?????????????",
+                donationThanks: "???????????????????????????!",
+                codesAvailable: "????????"
+            }
+        };
+        let currentLang = localStorage.getItem('vault_lang') || 'en';
+        let currentUserDisplayName = null;
+        let currentUserData = null; // ADDED: Stores the full user object from API to check 'can_redeem_free_codes'
+
+        function t(key, vars = {}) {
+            let str = i18n[currentLang][key] !== undefined ? i18n[currentLang][key] : (i18n['en'][key] !== undefined ? i18n['en'][key] : key);
+            for (let k in vars) { str = str.replace(`{${k}}`, vars[k]); }
+            return str;
+        }
+
+        function updateWelcomeText() {
+            const el = document.getElementById('welcome-text');
+            if (currentUserDisplayName) { el.innerText = t('welcomeUser', { name: currentUserDisplayName }); } 
+            else { el.innerText = t('welcomeLogin'); }
+        }
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('vault_lang', lang);
+            
+            // Sync main store select
+            const storeSelect = document.getElementById('lang-select');
+            if(storeSelect) storeSelect.value = lang;
+            
+            // Sync welcome gate select
+            const gateSelect = document.getElementById('gate-lang-select');
+            if(gateSelect) gateSelect.value = lang;
+
+            updateWelcomeText();
+
+            document.querySelectorAll('[data-i18n]').forEach(el => { el.innerText = t(el.getAttribute('data-i18n')); });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.getAttribute('data-i18n-placeholder')); });
+
+            if (Object.keys(catalog).length > 0) {
+                renderStore();
+                updateCheckoutUI();
+                const overlay = document.getElementById('modal-overlay');
+                if (!overlay.classList.contains('hidden') && document.getElementById('btn-pay')) {
+                    openCartModal();
+                }
+            }
+        }
+
+        // --- Core Application Logic ---
+        const tg = window.Telegram.WebApp;
+        const API_BASE = '/api';
+        const IMG_PATH = 'compressed/';
+
+        let catalog = {};
+        let cart = {};
+        let initialCartState = {};
+        let userBalance = 0.00;
+
+        let isWebMode = false;
+        let webToken = localStorage.getItem('vault_web_token') || null;
+        let webUser = JSON.parse(localStorage.getItem('vault_web_user')) || null;
+        let currentView = null;
+        let settings = { sortMode: 'release', hideSoldOut: false, flattenCategories: false, searchQuery: '' };
+
+        const AppCore = (() => {
+            const ThemeManager = {
+                init() {
+                    const toggleBtn = document.getElementById("theme-toggle");
+                    const wrapper = document.getElementById("theme-icon-wrapper");
+                    const savedTheme = localStorage.getItem("theme");
+                    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    const isDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+
+                    if (isDark) document.documentElement.classList.add("dark");
+                    else document.documentElement.classList.remove("dark");
+
+                    if (wrapper) { wrapper.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-5 h-5"></i>`; }
+
+                    if (toggleBtn) {
+                        const newBtn = toggleBtn.cloneNode(true);
+                        toggleBtn.parentNode.replaceChild(newBtn, toggleBtn);
+                        newBtn.addEventListener("click", () => {
+                            const newIsDark = document.documentElement.classList.toggle("dark");
+                            localStorage.setItem("theme", newIsDark ? "dark" : "light");
+                            const newWrapper = document.getElementById("theme-icon-wrapper");
+                            if (newWrapper) {
+                                newWrapper.innerHTML = `<i data-lucide="${newIsDark ? 'sun' : 'moon'}" class="w-5 h-5"></i>`;
+                                lucide.createIcons({ root: newWrapper });
+                            }
+                        });
+                    }
+                }
+            };
+
+            const UIManager = {
+                showToast(message, type = 'info') {
+                    const container = document.getElementById('toast-container');
+                    const toast = document.createElement('div');
+                    const styles = {
+                        success: { bg: 'bg-success', text: 'text-white', icon: 'check-circle' },
+                        error: { bg: 'bg-danger', text: 'text-white', icon: 'alert-circle' },
+                        info: { bg: 'bg-gray-900 dark:bg-white', text: 'text-white dark:text-gray-900', icon: 'info' }
+                    };
+                    const style = styles[type] || styles.info;
+
+                    toast.className = `toast-element flex items-center gap-4 px-5 py-3.5 rounded-xl shadow-xl ${style.bg} ${style.text} animate-slide-up transition-all duration-300`;
+                    toast.innerHTML = `<i data-lucide="${style.icon}" class="w-5 h-5 flex-shrink-0"></i><span class="font-bold text-sm flex-grow">${message}</span>`;
+                    container.appendChild(toast);
+                    lucide.createIcons({ root: toast });
+
+                    if (window.tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred(type === 'error' ? 'error' : (type === 'success' ? 'success' : 'warning'));
+
+                    setTimeout(() => {
+                        toast.classList.add('opacity-0', 'translate-y-4');
+                        setTimeout(() => toast.remove(), 300);
+                    }, 4000);
+                }
+            };
+
+            return { init: () => { ThemeManager.init(); lucide.createIcons(); }, ui: UIManager };
+        })();
+
+        function getAuthHeaders() {
+            const headers = { 'Content-Type': 'application/json' };
+            if (isWebMode && webToken) headers['Authorization'] = `Bearer ${webToken}`;
+            else headers['X-TG-Secure-Data'] = tg.initData || '';
+            return headers;
+        }
+
+        // --- UI View Logic ---
+        function updateAuthUI() {
+            const elTitle = document.getElementById('welcome-text');
+            const elSub = document.getElementById('auth-status-text');
+
+            if (currentUserDisplayName) {
+                elTitle.innerText = t('welcomeUser', { name: currentUserDisplayName });
+                if (elSub) {
+                    elSub.innerText = t('authOk') || "Authenticated & Secure";
+                    elSub.className = "text-xs text-success font-bold flex items-center gap-1";
+                    elSub.innerHTML = `<i data-lucide="shield-check" class="w-3 h-3"></i> Authenticated & Secure`;
+                }
+                document.getElementById('web-actions').classList.remove('hidden');
+                document.getElementById('web-actions').classList.add('flex');
+                document.getElementById('google-btn-container').style.display = 'none';
+            } else {
+                elTitle.innerText = t('welcomeLogin');
+                if (elSub) {
+                    elSub.innerText = t('authReq') || "Please log in to purchase or donate.";
+                    elSub.className = "text-xs text-gray-500 dark:text-gray-400 font-medium";
+                }
+                document.getElementById('web-actions').classList.add('hidden');
+                document.getElementById('web-actions').classList.remove('flex');
+                document.getElementById('google-btn-container').style.display = 'flex';
+            }
+            lucide.createIcons();
+        }
+
+        function determineInitialState() {
+            updateAuthUI();
+            if (!webUser && !currentView) {
+                document.getElementById('welcome-gate').classList.remove('hidden', 'opacity-0');
+                document.getElementById('main-app').classList.add('hidden', 'opacity-0');
+            } else {
+                if (!currentView) currentView = 'store';
+                enterView(currentView);
+            }
+        }
+
+        function enterView(viewName) {
+            currentView = viewName;
+            document.getElementById('welcome-gate').classList.add('opacity-0');
+            setTimeout(() => {
+                document.getElementById('welcome-gate').classList.add('hidden');
+                document.getElementById('main-app').classList.remove('hidden');
+                setTimeout(() => document.getElementById('main-app').classList.remove('opacity-0'), 50);
+                switchView(viewName);
+            }, 300);
+        }
+
+        function resetToGate() {
+            if (webUser) return;
+            currentView = null;
+            document.getElementById('main-app').classList.add('opacity-0');
+            setTimeout(() => {
+                document.getElementById('main-app').classList.add('hidden');
+                document.getElementById('welcome-gate').classList.remove('hidden');
+                setTimeout(() => document.getElementById('welcome-gate').classList.remove('opacity-0'), 50);
+            }, 300);
+        }
+
+        async function updateCommunityStock() {
+            try {
+                const res = await fetch(`${API_BASE}/community/stock-count`);
+                const data = await res.json();
+                const el = document.getElementById('comm-stock-count');
+                if (el) el.innerText = data.count || 0;
+            } catch (e) {
+                console.warn("Could not fetch community stock");
+            }
+        }
+
+
+async function loadUserData() {
+    tg.ready(); tg.expand();
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (isWebMode && webUser) currentUserDisplayName = webUser.first_name;
+    else if (urlParams.get('name')) currentUserDisplayName = decodeURIComponent(urlParams.get('name'));
+    else if (tg.initDataUnsafe?.user) currentUserDisplayName = tg.initDataUnsafe.user.first_name;
+
+    updateAuthUI();
+
+    if (urlParams.has('balance')) {
+        userBalance = parseFloat(urlParams.get('balance')) || 0.00;
+        document.getElementById('user-balance').innerText = userBalance.toFixed(2);
+    }
+
+    let retries = 0;
+    while (!tg.initData && !isWebMode && retries < 7) { await new Promise(r => setTimeout(r, 100)); retries++; }
+
+    if (tg.initData || isWebMode) {
+        try {
+            // Add a timestamp to the URL to force a fresh request (cache busting)
+            const response = await fetch(`${API_BASE}/get_user_data?cb=${Date.now()}`, { 
+                headers: getAuthHeaders(),
+                cache: 'no-store' 
+            });
+            if (response.ok) {
+                currentUserData = await response.json(); 
+                userBalance = parseFloat(currentUserData.balance) || 0.00;
+                document.getElementById('user-balance').innerText = userBalance.toFixed(2);
+            }
+        } catch (e) { console.warn("Failed user fetch", e); }
+    }
+}
+
+async function loadLeaderboard() {
+    try {
+        const res = await fetch(`${API_BASE}/community/leaderboard?cb=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        const tbody = document.getElementById('leaderboard-body');
+
+        if (data.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="3" class="p-8 text-center text-gray-500">The vault is waiting for its first hero!</td></tr>`;
+            return;
+        }
+
+        let html = '';
+        data.forEach(user => {
+            const rankStr = user.rank === 1 ? '??' : (user.rank === 2 ? '??' : (user.rank === 3 ? '??' : `#${user.rank}`));
+            
+            // 1. Build the profile image block
+            const profilePic = user.twitch_profile_image 
+                ? `<img src="${user.twitch_profile_image}" class="w-10 h-10 rounded-full border-2 border-purple-200 dark:border-purple-900/50 object-cover flex-shrink-0">` 
+                : `<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center flex-shrink-0"><i data-lucide="user" class="w-5 h-5 text-gray-400"></i></div>`;
+            
+            // 2. Generate the Twitch link, bio, and Live Stream Preview
+            let twitchHtml = '';
+            if (user.twitch) {
+                const liveBadge = user.is_live ? `<span class="bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow-sm animate-pulse ml-1.5">LIVE</span>` : '';
+                
+                const description = user.twitch_description ? `<p class="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-snug line-clamp-2">${escapeHTML(user.twitch_description)}</p>` : '';
+                
+                let liveStreamPreview = '';
+                if (user.is_live && user.twitch_stream_thumbnail) {
+                    liveStreamPreview = `
+                        <a href="https://twitch.tv/${escapeHTML(user.twitch)}" target="_blank" class="mt-2 flex gap-2 items-center bg-purple-50 dark:bg-purple-900/20 p-2 rounded-lg border border-purple-100 dark:border-purple-800/30 hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-colors group">
+                            <div class="relative flex-shrink-0">
+                                <img src="${user.twitch_stream_thumbnail}" class="w-20 rounded shadow-sm object-cover aspect-video" alt="Stream Thumbnail">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors rounded"></div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[10px] font-bold text-gray-900 dark:text-white truncate" title="${escapeHTML(user.twitch_stream_title || 'Live Stream')}">${escapeHTML(user.twitch_stream_title || 'Live Stream')}</p>
+                                <p class="text-[9px] text-purple-600 dark:text-purple-400 font-medium flex items-center gap-1 mt-0.5"><i data-lucide="play-circle" class="w-3 h-3"></i> Watch Now</p>
+                            </div>
+                        </a>
+                    `;
+                }
+
+                twitchHtml = `
+                    <div class="flex flex-col mt-0.5 w-full max-w-sm">
+                        <a href="https://twitch.tv/${escapeHTML(user.twitch)}" target="_blank" class="text-xs font-bold text-purple-500 hover:text-purple-600 dark:hover:text-purple-400 hover:underline flex items-center w-max">
+                            <i data-lucide="monitor-play" class="w-3 h-3 mr-1"></i> ${escapeHTML(user.twitch)}
+                            ${liveBadge}
+                        </a>
+                        ${description}
+                        ${liveStreamPreview}
+                    </div>
+                `;
+            }
+
+            // 3. Assemble the row (using align-top so elements don't get misaligned by large stream thumbnails)
+            html += `
+            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                <td class="p-4 w-12 text-center font-extrabold text-gray-400 align-top pt-5">${rankStr}</td>
+                <td class="p-4 align-top">
+                    <div class="flex items-start gap-3">
+                        ${profilePic}
+                        <div class="flex-1 min-w-0">
+                            <div class="font-bold text-gray-900 dark:text-white text-sm truncate">${escapeHTML(user.username)}</div>
+                            ${twitchHtml}
+                        </div>
+                    </div>
+                </td>
+                <td class="p-4 text-right font-extrabold text-community align-top pt-5">${user.donated}</td>
+            </tr>`;
+        });
+        tbody.innerHTML = html;
+        tbody.innerHTML = data.map(u => generateTrainerCardHTML(u)).join('');
+        if (window.lucide) lucide.createIcons();
+    } catch (e) {
+        const tbody = document.getElementById('leaderboard-body');
+        if (tbody) tbody.innerHTML = `<tr><td colspan="3" class="p-4 text-center text-danger">Failed to load leaderboard.</td></tr>`;
+    }
+}
+function generateTrainerCardHTML(user, isPreview = false) {
+    const rankStr = isPreview ? '???' : (user.rank === 1 ? '??' : (user.rank === 2 ? '??' : (user.rank === 3 ? '??' : `#${user.rank}`)));
+    
+    // Pick the primary profile picture (Twitch preferred, fallback to YT, then default)
+    const profileImgSrc = user.twitch_profile_image || user.youtube_profile_image;
+    const profilePic = profileImgSrc 
+        ? `<img src="${profileImgSrc}" class="w-10 h-10 rounded-full border-2 border-purple-200 dark:border-purple-900/50 object-cover flex-shrink-0">` 
+        : `<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center flex-shrink-0"><i data-lucide="user" class="w-5 h-5 text-gray-400"></i></div>`;
+    
+    let platformsHtml = '';
+
+    // Twitch Block
+    if (user.twitch) {
+        const liveBadge = user.is_live ? `<span class="bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow-sm animate-pulse ml-1.5">LIVE</span>` : '';
+        const desc = user.twitch_description ? `<p class="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-snug line-clamp-2">${escapeHTML(user.twitch_description)}</p>` : '';
+        let streamHtml = (user.is_live && user.twitch_stream_thumbnail) ? `
+            <a href="https://twitch.tv/${escapeHTML(user.twitch)}" target="_blank" class="mt-2 flex gap-2 items-center bg-purple-50 dark:bg-purple-900/20 p-2 rounded-lg border border-purple-100 hover:bg-purple-100 dark:border-purple-800/30 transition-colors group">
+                <img src="${user.twitch_stream_thumbnail}" class="w-20 rounded shadow-sm object-cover aspect-video">
+                <div class="flex-1 min-w-0">
+                    <p class="text-[10px] font-bold text-gray-900 dark:text-white truncate">${escapeHTML(user.twitch_stream_title || 'Live Stream')}</p>
+                    <p class="text-[9px] text-purple-600 dark:text-purple-400 font-medium flex items-center gap-1"><i data-lucide="play-circle" class="w-3 h-3"></i> Watch</p>
+                </div>
+            </a>` : '';
+            
+        platformsHtml += `<div class="mb-2"><a href="https://twitch.tv/${escapeHTML(user.twitch)}" target="_blank" class="text-xs font-bold text-purple-500 hover:underline flex items-center w-max"><i data-lucide="monitor-play" class="w-3 h-3 mr-1"></i> ${escapeHTML(user.twitch)} ${liveBadge}</a>${desc}${streamHtml}</div>`;
+    }
+
+    // YouTube Block
+    if (user.youtube) {
+        const liveBadge = user.is_youtube_live ? `<span class="bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow-sm animate-pulse ml-1.5">LIVE</span>` : '';
+        const desc = user.youtube_description ? `<p class="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-snug line-clamp-2">${escapeHTML(user.youtube_description)}</p>` : '';
+        let streamHtml = (user.is_youtube_live && user.youtube_stream_thumbnail) ? `
+            <a href="https://youtube.com/@${escapeHTML(user.youtube)}" target="_blank" class="mt-2 flex gap-2 items-center bg-red-50 dark:bg-red-900/20 p-2 rounded-lg border border-red-100 hover:bg-red-100 dark:border-red-800/30 transition-colors group">
+                <img src="${user.youtube_stream_thumbnail}" class="w-20 rounded shadow-sm object-cover aspect-video">
+                <div class="flex-1 min-w-0">
+                    <p class="text-[10px] font-bold text-gray-900 dark:text-white truncate">${escapeHTML(user.youtube_stream_title || 'Live Stream')}</p>
+                    <p class="text-[9px] text-red-600 dark:text-red-400 font-medium flex items-center gap-1"><i data-lucide="play-circle" class="w-3 h-3"></i> Watch</p>
+                </div>
+            </a>` : '';
+
+        // FIX: Changed data-lucide="youtube" to data-lucide="play-square"
+        platformsHtml += `<div><a href="https://youtube.com/@${escapeHTML(user.youtube)}" target="_blank" class="text-xs font-bold text-red-500 hover:underline flex items-center w-max"><i data-lucide="play-square" class="w-3 h-3 mr-1"></i> ${escapeHTML(user.youtube)} ${liveBadge}</a>${desc}${streamHtml}</div>`;
+    }
+
+    return `
+    <tr class="${isPreview ? '' : 'hover:bg-gray-50 dark:hover:bg-gray-800/50'} transition-colors">
+        <td class="p-4 w-12 text-center font-extrabold text-gray-400 align-top pt-5">${rankStr}</td>
+        <td class="p-4 align-top">
+            <div class="flex items-start gap-3">
+                ${profilePic}
+                <div class="flex-1 min-w-0">
+                    <div class="font-bold text-gray-900 dark:text-white text-sm truncate">${escapeHTML(user.username)}</div>
+                    <div class="flex flex-col mt-0.5 w-full max-w-sm">${platformsHtml}</div>
+                </div>
+            </div>
+        </td>
+        <td class="p-4 text-right font-extrabold text-community align-top pt-5">${user.donated || (isPreview ? '???' : 0)}</td>
+    </tr>`;
+}
+
+
+function openCommunitySettingsModal() {
+    if (!currentUserData) return AppCore.ui.showToast("Please log in first.", "error");
+    
+    // Check if platforms are linked to disable inputs
+    const hasTwitch = !!currentUserData.twitch_username;
+    const hasYT = !!currentUserData.youtube_username;
+
+    // FIX: Read directly from currentUserData for the initial load, NOT the DOM.
+    const previewUser = {
+        username: currentUserData.show_name_preference === 'google_name' ? currentUserDisplayName : currentUserData.topup_code,
+        
+        twitch: (currentUserData.show_twitch && hasTwitch) ? currentUserData.twitch_username : null,
+        is_live: currentUserData.show_twitch_live !== 0,
+        twitch_profile_image: (currentUserData.show_twitch && hasTwitch) ? 'https://ui-avatars.com/api/?name=Twitch&background=9333EA&color=fff' : null,
+        twitch_stream_title: 'Previewing my awesome stream!',
+        twitch_stream_thumbnail: 'https://ui-avatars.com/api/?name=LIVE&background=9333EA&color=fff&size=320',
+        
+        youtube: (currentUserData.show_youtube && hasYT) ? currentUserData.youtube_username : null,
+        is_youtube_live: currentUserData.show_youtube_live !== 0,
+        youtube_profile_image: (currentUserData.show_youtube && hasYT) ? 'https://ui-avatars.com/api/?name=YouTube&background=DC2626&color=fff' : null,
+        youtube_stream_title: 'Previewing my YT broadcast!',
+        youtube_stream_thumbnail: 'https://ui-avatars.com/api/?name=LIVE&background=DC2626&color=fff&size=320'
+    };
+
+    const html = `
+    <h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2 text-community"><i data-lucide="settings"></i> Profile Settings</h3>
+    
+    <div class="mb-6 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800">
+        <div class="bg-gray-100 dark:bg-gray-900 text-xs font-bold text-center py-1 text-gray-500 uppercase tracking-widest">Live Preview</div>
+        <table class="w-full text-left border-collapse"><tbody id="settings-preview-body">
+            ${generateTrainerCardHTML(previewUser, true)}
+        </tbody></table>
+    </div>
+
+    <div class="space-y-4 mb-6" onchange="updateSettingsPreview()">
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <h4 class="font-bold text-sm mb-3">General Display</h4>
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-medium">Show Profile on Leaderboard</span>
+                <input type="checkbox" id="pref-show-lb" ${currentUserData.show_on_leaderboard ? 'checked' : ''} class="w-4 h-4 accent-community">
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-medium">Display Name</span>
+                <select id="pref-name" class="bg-white dark:bg-gray-800 border border-gray-200 rounded text-xs p-1 outline-none">
+                    <option value="vault_id" ${currentUserData.show_name_preference === 'vault_id' ? 'selected' : ''}>Vault ID</option>
+                    <option value="google_name" ${currentUserData.show_name_preference !== 'vault_id' ? 'selected' : ''}>Google Name</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-purple-200 dark:border-purple-900/50">
+            <div class="flex justify-between items-center mb-3">
+                <h4 class="font-bold text-sm flex items-center gap-1 text-purple-600 dark:text-purple-400"><i data-lucide="monitor-play" class="w-4 h-4"></i> Twitch</h4>
+                ${hasTwitch 
+                    ? `<button onclick="disconnectPlatform('twitch')" class="text-[10px] bg-danger/10 text-danger px-2 py-1 rounded font-bold transition-transform active:scale-95">Disconnect</button>` 
+                    : `<button onclick="linkTwitchAccountPrompt()" class="text-[10px] bg-purple-600 text-white px-2 py-1 rounded font-bold transition-transform active:scale-95">Connect</button>`}
+            </div>
+            <div class="flex justify-between items-center mb-2 ${!hasTwitch ? 'opacity-50 pointer-events-none' : ''}">
+                <span class="text-xs font-medium">Show Link on Profile</span>
+                <input type="checkbox" id="pref-show-twitch" ${currentUserData.show_twitch && hasTwitch ? 'checked' : ''} class="w-4 h-4 accent-purple-600">
+            </div>
+            <div class="flex justify-between items-center ${!hasTwitch ? 'opacity-50 pointer-events-none' : ''}">
+                <span class="text-xs font-medium">Show Live Stream Preview</span>
+                <input type="checkbox" id="pref-show-twitch-live" ${currentUserData.show_twitch_live !== 0 ? 'checked' : ''} class="w-4 h-4 accent-purple-600">
+            </div>
+        </div>
+
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-red-200 dark:border-red-900/50">
+            <div class="flex justify-between items-center mb-3">
+                <h4 class="font-bold text-sm flex items-center gap-1 text-red-600 dark:text-red-400"><i data-lucide="play-square" class="w-4 h-4"></i> YouTube</h4>
+                ${hasYT 
+                    ? `<button onclick="disconnectPlatform('youtube')" class="text-[10px] bg-danger/10 text-danger px-2 py-1 rounded font-bold transition-transform active:scale-95">Disconnect</button>` 
+                    : `<button onclick="linkYouTubeAccountPrompt()" class="text-[10px] bg-red-600 text-white px-2 py-1 rounded font-bold transition-transform active:scale-95">Connect</button>`}
+            </div>
+            <div class="flex justify-between items-center mb-2 ${!hasYT ? 'opacity-50 pointer-events-none' : ''}">
+                <span class="text-xs font-medium">Show Link on Profile</span>
+                <input type="checkbox" id="pref-show-yt" ${currentUserData.show_youtube && hasYT ? 'checked' : ''} class="w-4 h-4 accent-red-600">
+            </div>
+            <div class="flex justify-between items-center ${!hasYT ? 'opacity-50 pointer-events-none' : ''}">
+                <span class="text-xs font-medium">Show Live Stream Preview</span>
+                <input type="checkbox" id="pref-show-yt-live" ${currentUserData.show_youtube_live !== 0 ? 'checked' : ''} class="w-4 h-4 accent-red-600">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex gap-3">
+        <button class="flex-1 bg-gray-200 dark:bg-gray-700 py-4 rounded-xl font-extrabold transition-transform active:scale-95" onclick="closeModal()">Cancel</button>
+        <button class="flex-[2] bg-community text-white py-4 rounded-xl font-extrabold transition-transform active:scale-95" onclick="saveCommunitySettings()">Save Changes</button>
+    </div>
+    `;
+    openModal(html);
+}
+
+
+// Live update the preview card when checkboxes change
+function updateSettingsPreview() {
+    // Failsafe: Ensure DOM elements exist before reading them
+    const nameSelect = document.getElementById('pref-name');
+    if (!nameSelect) return;
+
+    const hasTwitch = !!currentUserData.twitch_username;
+    const hasYT = !!currentUserData.youtube_username;
+
+    const previewUser = {
+        username: nameSelect.value === 'google_name' ? currentUserDisplayName : currentUserData.topup_code,
+        
+        twitch: (document.getElementById('pref-show-twitch').checked && hasTwitch) ? currentUserData.twitch_username : null,
+        is_live: document.getElementById('pref-show-twitch-live').checked,
+        twitch_profile_image: (document.getElementById('pref-show-twitch').checked && hasTwitch) ? 'https://ui-avatars.com/api/?name=Twitch&background=9333EA&color=fff' : null,
+        twitch_stream_title: 'Previewing my awesome stream!',
+        twitch_stream_thumbnail: 'https://ui-avatars.com/api/?name=LIVE&background=9333EA&color=fff&size=320',
+        
+        youtube: (document.getElementById('pref-show-yt').checked && hasYT) ? currentUserData.youtube_username : null,
+        is_youtube_live: document.getElementById('pref-show-yt-live').checked,
+        youtube_profile_image: (document.getElementById('pref-show-yt').checked && hasYT) ? 'https://ui-avatars.com/api/?name=YouTube&background=DC2626&color=fff' : null,
+        youtube_stream_title: 'Previewing my YT broadcast!',
+        youtube_stream_thumbnail: 'https://ui-avatars.com/api/?name=LIVE&background=DC2626&color=fff&size=320'
+    };
+    
+    document.getElementById('settings-preview-body').innerHTML = generateTrainerCardHTML(previewUser, true);
+    if (window.lucide) lucide.createIcons();
+}
+
+// Disconnect function
+function disconnectPlatform(platform) {
+    if(!confirm(`Are you sure you want to disconnect ${platform}?`)) return;
+    fetch(`/api/auth/disconnect/${platform}`, { method: 'POST', headers: getAuthHeaders() })
+    .then(res => res.json())
+    .then(async data => {
+        if(data.status === 'success') {
+            AppCore.ui.showToast(`Disconnected ${platform}`, 'success');
+            await loadUserData();
+            openCommunitySettingsModal(); // Refresh modal
+        }
+    });
+}
+function saveCommunitySettings() {
+    const showLb = document.getElementById('pref-show-lb').checked ? 1 : 0;
+    const namePref = document.getElementById('pref-name').value;
+    
+    // Safely check Twitch toggles
+    const twitchCb = document.getElementById('pref-show-twitch');
+    const showTwitch = (twitchCb && twitchCb.checked) ? 1 : 0;
+    const twitchLiveCb = document.getElementById('pref-show-twitch-live');
+    const showTwitchLive = (twitchLiveCb && twitchLiveCb.checked) ? 1 : 0;
+
+    // Safely check YouTube toggles
+    const ytCb = document.getElementById('pref-show-yt');
+    const showYt = (ytCb && ytCb.checked) ? 1 : 0;
+    const ytLiveCb = document.getElementById('pref-show-yt-live');
+    const showYtLive = (ytLiveCb && ytLiveCb.checked) ? 1 : 0;
+
+    fetch('/api/community/settings/prefs', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        body: JSON.stringify({
+            show_on_leaderboard: showLb,
+            name_pref: namePref,
+            show_twitch: showTwitch,
+            show_twitch_live: showTwitchLive,
+            show_youtube: showYt,
+            show_youtube_live: showYtLive
+        })
+    })
+    .then(res => res.json())
+    .then(async (data) => {
+        if(data.status === "success") {
+            AppCore.ui.showToast("Settings updated!", "success");
+            closeModal();
+            
+            // Force a fresh data reload so UI updates
+            await loadUserData(); 
+            await loadLeaderboard(); 
+        } else {
+            AppCore.ui.showToast(data.error || "Failed to save", "error");
+        }
+    })
+    .catch(() => AppCore.ui.showToast("Network error", "error"));
+}
+
+// Helper function to safely send tokens via POST instead of URL parameters
+function createAuthForm(actionUrl) {
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = actionUrl;
+    
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    
+    if (isWebMode && webToken) {
+        input.name = 'web_token';
+        input.value = webToken;
+    } else if (window.tg && tg.initData) {
+        input.name = 'tg_data';
+        input.value = tg.initData;
+    } else {
+        return null; // Auth missing
+    }
+    
+    form.appendChild(input);
+    document.body.appendChild(form);
+    return form;
+}
+
+function linkTwitchAccountPrompt() {
+    if (!currentUserData || !currentUserData.user_id) {
+        return AppCore.ui.showToast("Please log in first.", "error");
+    }
+    const form = createAuthForm('/api/auth/twitch/login');
+    if (form) {
+        form.submit();
+    } else {
+        AppCore.ui.showToast("Authentication missing.", "error");
+    }
+}
+
+function linkYouTubeAccountPrompt() {
+    if (!currentUserData || !currentUserData.user_id) {
+        return AppCore.ui.showToast("Please log in first.", "error");
+    }
+    const form = createAuthForm('/api/auth/youtube/login');
+    if (form) {
+        form.submit();
+    } else {
+        AppCore.ui.showToast("Authentication missing.", "error");
+    }
+}
+
+        // --- Loading Data ---
+        async function loadCatalog() {
+            try {
+                const response = await fetch(`${API_BASE}/catalog`, { headers: getAuthHeaders() });
+                if (!response.ok) throw new Error(`Vault Error ${response.status}`);
+                catalog = await response.json();
+                renderStore();
+                updateCheckoutUI();
+            } catch (error) {
+                AppCore.ui.showToast(`${t('vaultOffline')}${error.message}`, 'error');
+                document.getElementById('store-content').innerHTML = `
+                    <div class="flex flex-col items-center justify-center py-20 text-center text-gray-500 dark:text-gray-400">
+                        <i data-lucide="wifi-off" class="w-16 h-16 mb-4 text-danger opacity-50"></i>
+                        <p class="font-bold text-lg">${t('connLost')}</p>
+                    </div>`;
+                lucide.createIcons();
+            }
+        }
+
+
+        // --- Auth & Session ---
+        function handleCredentialResponse(response) {
+            fetch('/api/auth/google', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: response.credential })
+            })
+            .then(res => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+            .then(data => {
+                if (data.token) {
+                    webToken = data.token; webUser = data.user;
+                    localStorage.setItem('vault_web_token', webToken);
+                    localStorage.setItem('vault_web_user', JSON.stringify(webUser));
+                    currentUserDisplayName = webUser.first_name;
+                    determineInitialState(); 
+                    loadUserData(); // Force refresh to get can_redeem status
+                    AppCore.ui.showToast(t('loginSuccess'), 'success');
+                }
+            })
+            .catch(err => AppCore.ui.showToast(t('loginFailed') + err.message, 'error'));
+        }
+
+        function initWebMode() {
+            isWebMode = true;
+            document.getElementById('session-warning').style.display = 'none';
+            determineInitialState();
+
+            if (!webUser) {
+                const checkGoogleInterval = setInterval(() => {
+                    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+                        clearInterval(checkGoogleInterval);
+                        google.accounts.id.initialize({
+                            client_id: "422416117232-0cthhq0oo0tamlets5e1208jaemmhb6q.apps.googleusercontent.com",
+                            callback: handleCredentialResponse
+                        });
+                        google.accounts.id.renderButton(
+                            document.getElementById("google-btn-container"),
+                            { theme: "outline", size: "large" }
+                        );
+                    }
+                }, 50);
+            }
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('vault_web_token'); localStorage.removeItem('vault_web_user');
+            webToken = null; webUser = null; userBalance = 0; currentUserDisplayName = null; currentUserData = null;
+            document.getElementById('user-balance').innerText = "0.00";
+            AppCore.ui.showToast(t('logoutSuccess'), 'info');
+            resetToGate();
+            initWebMode();
+        }
+
+        function initSessionTimer() {
+            setTimeout(() => {
+                const warn = document.getElementById('session-warning');
+                if(warn) warn.classList.remove('-translate-y-full');
+                if (window.tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('warning');
+            }, 840000);
+            setTimeout(() => {
+                const warn = document.getElementById('session-warning');
+                if(warn) warn.innerText = t('sessionExpiredText');
+                const btn = document.getElementById('checkout-btn');
+                if (btn) { btn.disabled = true; btn.querySelector('span').innerText = t('sessionExpiredBtn'); }
+            }, 900000);
+        }
+
+        // --- Store & UI Rendering ---
+        function updateSettings() {
+            settings.sortMode = document.getElementById('sort-select').value;
+            settings.hideSoldOut = document.getElementById('hide-sold-out').checked;
+            settings.flattenCategories = document.getElementById('flatten-view').checked;
+            settings.searchQuery = document.getElementById('search-bar').value.toLowerCase();
+            renderStore();
+        }
+
+        function renderStore() {
+            const container = document.getElementById('store-content');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const dynamicSeriesOrder = Object.keys(catalog).sort((a, b) => {
+                const getNewest = (seriesItems) => Math.max(...seriesItems.map(i => i.release_date ? new Date(i.release_date).getTime() : 0));
+                return getNewest(catalog[b]) - getNewest(catalog[a]);
+            });
+
+            let displayStructure = [];
+            if (settings.flattenCategories) {
+                let allItems = [];
+                dynamicSeriesOrder.forEach(cat => { if (catalog[cat]) allItems = allItems.concat(catalog[cat]); });
+                displayStructure.push({ title: t("allExpansions"), items: allItems });
+            } else {
+                dynamicSeriesOrder.forEach(cat => { if (catalog[cat]) displayStructure.push({ title: t(cat), items: [...catalog[cat]] }); });
+            }
+
+            let globalCardIndex = 0;
+
+            displayStructure.forEach(block => {
+                let filteredItems = block.items;
+                if (settings.hideSoldOut) filteredItems = filteredItems.filter(i => i.stock > 0);
+                if (settings.searchQuery) filteredItems = filteredItems.filter(i => (t(i.series_name) + ' ' + t(i.expansion) + ' ' + t(i.type)).toLowerCase().includes(settings.searchQuery));
+                if (filteredItems.length === 0) return;
+
+                const header = document.createElement('h2');
+                header.className = 'text-2xl font-extrabold tracking-tight mt-10 mb-4 border-b-4 border-brand-500 inline-block pb-1 dark:text-white';
+                header.innerText = block.title;
+                container.appendChild(header);
+
+                const grid = document.createElement('div');
+                grid.className = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 items-start';
+
+                const expMap = {};
+                filteredItems.forEach(item => {
+                    if (!expMap[item.expansion]) expMap[item.expansion] = { name: item.expansion, series: item.series_name, release_date: item.release_date, products: [] };
+                    expMap[item.expansion].products.push(item);
+                });
+
+                let expList = Object.values(expMap);
+                if (settings.sortMode === 'alpha') expList.sort((a, b) => t(a.name).localeCompare(t(b.name)));
+                else expList.sort((a, b) => { const dA = a.release_date ? new Date(a.release_date).getTime() : 0; const dB = b.release_date ? new Date(b.release_date).getTime() : 0; return dB - dA; });
+
+                expList.forEach(exp => {
+                    const expImg = `${IMG_PATH}${encodeURIComponent(exp.series + '_' + exp.name)}.png`;
+
+                    exp.products.forEach(item => {
+                        if (!(item.id in cart)) cart[item.id] = 0;
+                        const cleanId = String(item.id).replace(/\W/g, '');
+                        const productImg = `${IMG_PATH}${encodeURIComponent(item.series_name + '_' + item.expansion + '_' + item.type)}.png`;
+                        const currentQty = cart[item.id];
+                        const fillPercent = (currentQty / item.stock) * 100;
+                        const isFull = currentQty === item.stock;
+
+                        const card = document.createElement('div');
+                        // UPDATED CARD CSS TO ADD SOLID BACKGROUND AND SHADOW FOR BETTER CONTRAST
+                        card.className = `bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 rounded-2xl p-3 flex flex-col items-center text-center relative z-[1] transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:border-brand-500 group animate-fade-in`;
+                        card.style.animationDelay = `${Math.min(globalCardIndex * 0.03, 0.2)}s`;
+                        card.id = `card-${cleanId}`;
+                        globalCardIndex++;
+
+                        card.innerHTML = `
+                        <img src="${escapeHTML(expImg)}" class="front-exp-icon relative z-30" alt="Logo">
+                        
+                        <div class="w-full h-32 flex justify-center items-center mb-3 relative z-20">
+                            <img src="${escapeHTML(productImg)}" class="h-full object-contain transition-transform duration-300 group-hover:scale-110" onerror="this.src='${escapeHTML(expImg)}';">
+                        </div>
+                        
+                        <div class="flex flex-col w-full gap-1 flex-grow">
+                            <div class="font-extrabold text-sm leading-tight min-h-[2.5rem] dark:text-gray-100">${escapeHTML(t(item.type))}</div>
+                            <div class="text-success font-extrabold text-lg">€${parseFloat(item.price).toFixed(2)}</div>
+                            ${item.stock > 0 ? `
+                                <div class="w-full h-4 bg-gray-200 dark:bg-gray-700 rounded-full relative overflow-hidden mt-1">
+                                    <div id="stock-fill-${cleanId}" class="h-full transition-all duration-300 ${isFull ? 'bg-success' : 'bg-emerald-300 dark:bg-emerald-500'}" style="width: ${fillPercent}%;"></div>
+                                    
+                                    <div id="stock-text-${cleanId}" class="absolute inset-0 flex items-center justify-center text-[10px] font-extrabold text-gray-900 dark:text-white drop-shadow-md">${currentQty}/${item.stock}</div>
+                                </div>
+                            ` : ``} 
+                        </div>
+                        <div class="w-full flex flex-col gap-1 mt-3 relative z-10">
+                            ${item.stock > 0 ? `
+                                <div class="flex justify-between gap-1">
+                                    <button class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white flex-1 py-1.5 rounded-lg font-bold text-xs hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-95 transition-all" onclick="updateQty('${item.id}', -10, ${item.stock})">-10</button>
+                                    <button class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white flex-1 py-1.5 rounded-lg font-bold text-xs hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-95 transition-all" onclick="updateQty('${item.id}', 10, ${item.stock})">+10</button>
+                                </div>
+                                <input type="number" id="qty-${cleanId}" value="${currentQty}" readonly class="w-full text-center font-extrabold bg-surface-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg py-1.5 focus:border-brand-500 outline-none text-gray-900 dark:text-white">
+                                <div class="flex justify-between gap-1">
+                                    <button class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white flex-1 py-1.5 rounded-lg font-bold text-xs hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-95 transition-all" onclick="updateQty('${item.id}', -1, ${item.stock})">-1</button>
+                                    <button class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white flex-1 py-1.5 rounded-lg font-bold text-xs hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-95 transition-all" onclick="updateQty('${item.id}', 1, ${item.stock})">+1</button>
+                                </div>
+                            ` : `<div class="bg-danger/10 text-danger border-2 border-dashed border-danger/30 rounded-xl h-[92px] font-extrabold text-lg flex items-center justify-center uppercase tracking-wide">${t('soldOut')}</div>`}
+                        </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                });
+                container.appendChild(grid);
+            });
+            lucide.createIcons();
+        }
+
+        // --- Interaction & Cart ---
+        function updateQty(id, change, max) {
+            let current = cart[id] || 0;
+            const cleanId = String(id).replace(/\W/g, '');
+
+            if (current >= max && change > 0) {
+                AppCore.ui.showToast(t('limitReached'), 'error');
+                return;
+            }
+
+            let next = Math.max(0, Math.min(current + change, max));
+            cart[id] = next;
+
+            const input = document.getElementById(`qty-${cleanId}`);
+            if (input) input.value = next;
+
+            const fillBar = document.getElementById(`stock-fill-${cleanId}`);
+            const textBar = document.getElementById(`stock-text-${cleanId}`);
+
+            if (fillBar && textBar) {
+                fillBar.style.width = `${(next / max) * 100}%`;
+                textBar.innerText = `${next}/${max}`;
+                if (next === max) { fillBar.className = `h-full transition-all duration-300 bg-success`; }
+                else { fillBar.className = `h-full transition-all duration-300 ${document.documentElement.classList.contains('dark') ? 'bg-emerald-500' : 'bg-emerald-300'}`; }
+            }
+
+            updateCheckoutUI();
+            if (window.tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+        }
+
+        function updateCheckoutUI() {
+            let totalQty = 0, totalPrice = 0;
+            for (let [id, q] of Object.entries(cart)) {
+                if (q > 0) {
+                    let item = findItemInCatalog(id);
+                    totalQty += q; 
+                    totalPrice += q * (item ? parseFloat(item.price) : 0);
+                }
+            }
+
+            const bar = document.getElementById('checkout-bar');
+            const btnText = document.getElementById('checkout-text');
+            const edited = Object.entries(cart).some(([id, q]) => (initialCartState[id] || 0) !== q);
+
+            if (totalQty > 0) btnText.innerText = `${t('reviewOrder')} • €${totalPrice.toFixed(2)}`;
+            else btnText.innerText = t('reviewOrder');
+
+            if(bar) {
+                (totalQty > 0 || edited) ? bar.classList.remove('translate-y-full') : bar.classList.add('translate-y-full');
+            }
+        }
+
+        function openAdminContactModal() {
+            closeModal();
+            setTimeout(() => {
+                const html = `
+                <div class="text-center p-2">
+                    <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-600 dark:text-brand-400">
+                        <i data-lucide="headset" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-2">Support & Contact</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm font-medium">Reach out on any of these platforms if you need assistance.</p>
+                    
+                    <div class="flex flex-col gap-3 mb-6">
+                        <a href="https://t.me/P_CalQ" target="_blank" class="bg-[#2AABEE] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md hover:bg-[#2289BE]"><i data-lucide="send" class="w-5 h-5"></i> Telegram</a>
+                        <a href="https://discord.com/users/853343922860589066" target="_blank" class="bg-[#5865F2] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md hover:bg-[#4752C4]"><i data-lucide="message-square" class="w-5 h-5"></i> Discord</a>
+                        <a href="https://www.reddit.com/user/Repulsive_String8757" target="_blank" class="bg-[#FF4500] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md hover:bg-[#CC3700]"><i data-lucide="message-circle" class="w-5 h-5"></i> Reddit</a>
+                    </div>
+                    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>
+                </div>`;
+                openModal(html);
+            }, 300);
+        }
+
+        function openCartModal() {
+            let html = `<h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2"><i data-lucide="shopping-cart"></i> ${t('orderSummary')}</h3>`;
+            let totalCost = 0;
+            let itemsHtml = '';
+
+            for (let id in cart) {
+                if (cart[id] > 0) {
+                    const item = findItemInCatalog(id);
+                    if (!item) continue;
+                    let cost = cart[id] * parseFloat(item.price);
+                    totalCost += cost;
+
+                    itemsHtml += `
+                    <div class="py-3 border-b border-gray-200 dark:border-gray-700 flex flex-col gap-3">
+                        <div class="flex justify-between items-center cursor-pointer active:bg-gray-50 dark:active:bg-gray-800 rounded-lg transition-colors px-2" onclick="locateItem('${id}')">
+                            <div>
+                                <span class="font-semibold text-gray-900 dark:text-white">${escapeHTML(t(item.name))}</span>
+                                <div class="text-xs text-brand-600 dark:text-brand-400 font-medium mt-0.5 flex items-center gap-1"><i data-lucide="navigation" class="w-3 h-3"></i> ${t('tapLocate')}</div>
+                            </div>
+                            <span class="font-extrabold text-lg">€${cost.toFixed(2)}</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-2 bg-surface-50 dark:bg-gray-900 py-2 rounded-lg">
+                            <button class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95 transition-all" onclick="updateQtyAndRefresh('${id}', -1, ${item.stock})">-</button>
+                            <input type="number" readonly value="${cart[id]}" class="w-10 text-center font-extrabold bg-transparent outline-none text-gray-900 dark:text-white text-sm">
+                            <button class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 w-8 h-8 flex items-center justify-center rounded-lg font-bold text-sm hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95 transition-all" onclick="updateQtyAndRefresh('${id}', 1, ${item.stock})">+</button>
+                            <button class="ml-auto text-xs text-danger font-bold bg-danger/10 hover:bg-danger/20 px-3 py-1.5 rounded-md transition-colors" onclick="updateQtyAndRefresh('${id}', -${cart[id]}, ${item.stock})">${t('remove')}</button>
+                        </div>
+                    </div>`;
+                }
+            }
+
+            if (!itemsHtml) {
+                html += `
+                <div class="flex flex-col items-center py-10 text-center">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-full text-gray-400 mb-4"><i data-lucide="shopping-cart" class="w-12 h-12"></i></div>
+                    <h4 class="text-xl font-bold mb-2">${t('cartEmpty')}</h4>
+                    <p class="text-gray-500 text-sm max-w-xs">${t('emptyCartMsg')}</p>
+                </div>`;
+            } else {
+                html += `<div class="mb-4">${itemsHtml}</div>`;
+            }
+
+            // NEW AUTH LOGIC
+            let isLoggedIn = !!currentUserDisplayName;
+            let rem = userBalance - totalCost;
+            let isInsufficient = isLoggedIn && (rem < 0);
+
+            let btnClass = "bg-success text-white";
+            let btnText = t('confirmPay');
+            let disabled = "";
+            let remColor = isInsufficient ? "text-danger" : "text-gray-900 dark:text-white";
+
+            if (totalCost <= 0) { disabled = "disabled"; btnClass = "bg-gray-300 dark:bg-gray-700 text-gray-500"; btnText = t('cartEmpty'); }
+
+            html += `
+            <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl mb-4 font-semibold space-y-2 text-sm">
+                <div class="flex justify-between"><span>${t('availBalance')}</span><span>€${isLoggedIn ? userBalance.toFixed(2) : '0.00'}</span></div>
+                <div class="flex justify-between text-danger"><span>${t('orderTotal')}</span><span>-€${totalCost.toFixed(2)}</span></div>
+                <div class="flex justify-between pt-3 border-t border-gray-200 dark:border-gray-700 text-lg font-extrabold ${remColor}">
+                    <span>${t('remaining')}</span><span>€${isLoggedIn ? rem.toFixed(2) : '0.00'}</span>
+                </div>
+            </div>`;
+            
+            // Render specific banners based on auth/funds
+            if (!isLoggedIn) {
+                html += `
+                <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg mb-4 text-sm text-gray-700 dark:text-gray-300 font-medium flex items-center gap-3">
+                    <i data-lucide="log-in" class="w-6 h-6 flex-shrink-0"></i><p>${t('authReq')}</p>
+                </div>`;
+            } else if (isInsufficient) {
+                html += `
+                <div class="bg-danger/10 border-l-4 border-danger p-3 rounded-r-lg mb-4 text-sm text-danger font-medium flex items-center gap-3">
+                    <i data-lucide="alert-circle" class="w-6 h-6 flex-shrink-0"></i><p>${t('insufficientFunds')}</p>
+                </div>`;
+            }
+
+            // FIXED: Using <div> instead of <p> for the final warning wrapper so the inner <button> remains clickable
+            html += `
+            <div class="bg-brand-50/50 dark:bg-brand-900/10 border-l-4 border-brand-500 p-3 rounded-r-lg mb-6 text-xs text-brand-700 dark:text-brand-300 font-medium flex items-start gap-2">
+                <i data-lucide="info" class="w-5 h-5 flex-shrink-0 mt-0.5"></i><div class="flex-grow">${t('purchaseFinalWarning')}</div>
+            </div>
+            <div class="flex gap-3">
+                <button class="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('back')}</button>
+            `;
+
+            // Render specific action buttons based on auth/funds
+            if (!isLoggedIn) {
+                html += `<button class="flex-[2] bg-brand-600 text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform flex items-center justify-center gap-2" onclick="closeModal(); window.scrollTo({top: 0, behavior: 'smooth'});"><i data-lucide="log-in" class="w-5 h-5"></i> ${t('loginToPurchase')}</button>`;
+            } else if (isInsufficient) {
+                html += `<button class="flex-[2] bg-brand-600 text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform flex items-center justify-center gap-2" onclick="openTopupModal()"><i data-lucide="plus-circle" class="w-5 h-5"></i> ${t('topUpNow')}</button>`;
+            } else {
+                html += `<button id="btn-pay" class="flex-[2] ${btnClass} py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="submitOrder()" ${disabled}>${btnText}</button>`;
+            }
+
+            html += `</div>`;
+            openModal(html);
+        }
+
+        function downloadReceipt(encodedData) {
+            const data = JSON.parse(decodeURIComponent(encodedData));
+            let txt = "PokeVault Receipt\n\n";
+            for (let p in data) { txt += `--- ${t(p)} ---\n`; data[p].forEach(c => txt += `${c}\n`); txt += `\n`; }
+            const blob = new Blob([txt], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a"); a.href = url; a.download = "Receipt.txt"; a.click();
+        }
+
+        // --- Utility & Modals ---
+        function openModal(contentHTML) {
+            const overlay = document.getElementById('modal-overlay');
+            const wrapper = document.getElementById('modal-content-wrapper');
+            wrapper.innerHTML = contentHTML;
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+            lucide.createIcons();
+            requestAnimationFrame(() => {
+                overlay.classList.remove('opacity-0');
+                wrapper.classList.remove('translate-y-full');
+            });
+        }
+
+        function closeModal() {
+            const overlay = document.getElementById('modal-overlay');
+            const wrapper = document.getElementById('modal-content-wrapper');
+            overlay.classList.add('opacity-0');
+            wrapper.classList.add('translate-y-full');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                overlay.classList.remove('flex');
+            }, 300);
+        }
+
+        function locateItem(id) {
+            closeModal();
+            setTimeout(() => {
+                const cleanId = String(id).replace(/\W/g, '');
+                const card = document.getElementById(`card-${cleanId}`);
+                if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.classList.add('ring-4', 'ring-brand-500', 'shadow-2xl', 'scale-105', 'z-50', 'transition-all', 'duration-300');
+                    setTimeout(() => { card.classList.remove('ring-4', 'ring-brand-500', 'shadow-2xl', 'scale-105', 'z-50'); }, 1500);
+                }
+            }, 300);
+        }
+
+        function updateQtyAndRefresh(id, change, max) {
+            updateQty(id, change, max);
+            openCartModal();
+        }
+
+        function findItemInCatalog(id) { 
+            for (let cat in catalog) { 
+                const f = catalog[cat].find(i => String(i.id) === String(id)); 
+                if (f) return f; 
+            } 
+            return null; 
+        }
+
+        function escapeHTML(str) { 
+            return String(str || '').replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)); 
+        }
+
+        function openTopupModal() {
+    if (isWebMode && !webUser) return AppCore.ui.showToast(t('loginTopupReq'), "error");
+    let code = webUser ? webUser.topup_code : "N/A";
+    
+    // Dynamic strike calculation
+    let strikes = currentUserData && currentUserData.voucher_strikes ? currentUserData.voucher_strikes : 0;
+    let attemptsLeft = 5 - strikes;
+    
+    let html = `
+    <h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2"><i data-lucide="credit-card"></i> ${t('topUp')}</h3>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">${t('topUpInstructions')}</p>
+    <div class="bg-surface-50 dark:bg-gray-900 p-6 rounded-xl text-center mb-6 border border-gray-200 dark:border-gray-700">
+        <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">${t('yourCode')}</span><br>
+        <b class="text-3xl text-brand-600 dark:text-brand-400 tracking-widest block mt-1">${code}</b>
+    </div>
+    <div class="flex gap-3 mb-8">
+        <a href="https://revolut.me/calqrev" target="_blank" class="flex-1 bg-black text-white dark:bg-white dark:text-black py-3 rounded-xl font-bold text-center text-sm shadow-md">Revolut</a>
+        <a href="https://paypal.me/patrik715" target="_blank" class="flex-1 bg-[#003087] text-white py-3 rounded-xl font-bold text-center text-sm shadow-md">PayPal</a>
+    </div>
+    <p class="text-sm text-gray-600 dark:text-gray-400">${t('topUpFooter')}</p>
+    
+    <hr class="border-gray-200 dark:border-gray-700 my-6">
+    
+    <h3 class="text-lg font-extrabold mb-3 flex items-center gap-2"><i data-lucide="ticket"></i> ${t('redeemVoucher')}</h3>
+    
+    <div class="bg-danger/10 border-l-4 border-danger p-3 rounded-r-lg mb-4 text-xs text-danger font-medium">
+        <p class="mb-1"><i data-lucide="alert-triangle" class="w-3 h-3 inline-block mr-1"></i><b>Security Warning:</b> You have a maximum of <b id="attempts-left-count" class="transition-all duration-300">${attemptsLeft}</b> attempt(s) left. 5 consecutive failed guesses will lock your account for 24 hours.</p>
+        <p>If locked by mistake, <button onclick="openAdminContactModal()" class="font-bold underline hover:text-red-700">contact the admin</button>.</p>
+    </div>
+
+    <div class="flex gap-2 mb-6">
+        <input type="text" id="voucher-input" placeholder="${t('enterCode')}" class="flex-1 bg-surface-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 font-mono focus:outline-none focus:border-brand-500">
+        <button id="btn-submit-voucher" onclick="submitVoucher()" class="bg-brand-600 text-white px-6 py-3 rounded-xl font-bold active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed">${t('redeem')}</button>
+    </div>
+    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>`;
+    
+    openModal(html);
+}
+
+function submitVoucher() {
+    const codeInput = document.getElementById('voucher-input');
+    const btn = document.getElementById('btn-submit-voucher');
+    const code = codeInput.value.trim();
+    
+    if (!code) return;
+
+    // Disable button to prevent spamming while request is flying
+    btn.disabled = true;
+    btn.innerHTML = `<i data-lucide="loader" class="animate-spin w-5 h-5 mx-auto"></i>`;
+    if (window.lucide) lucide.createIcons();
+
+    fetch('/api/redeem', { method: 'POST', headers: getAuthHeaders(), body: JSON.stringify({ code: code }) })
+        .then(res => res.json())
+        .then(async data => {
+            btn.disabled = false;
+            btn.innerHTML = t('redeem');
+
+            if (data.status === "success") {
+                AppCore.ui.showToast(`${t('redeemed')}${data.amount.toFixed(2)}`, 'success');
+                closeModal(); 
+                await loadUserData();
+            } else {
+                AppCore.ui.showToast(data.message || t('invalidVoucher'), "error");
+                codeInput.value = ''; // Clear input field for convenience
+                
+                // 1. Fetch fresh data to get the updated strike count from the DB
+                await loadUserData(); 
+                
+                // 2. Update the warning text in the DOM
+                let newStrikes = currentUserData && currentUserData.voucher_strikes ? currentUserData.voucher_strikes : 0;
+                let newAttemptsLeft = 5 - newStrikes;
+                let attemptsSpan = document.getElementById('attempts-left-count');
+                
+                if (attemptsSpan) {
+                    attemptsSpan.innerText = newAttemptsLeft;
+                    
+                    // Flash the number black/white briefly to draw the user's attention to the decrease
+                    attemptsSpan.classList.add('text-gray-900', 'dark:text-white', 'text-base');
+                    setTimeout(() => attemptsSpan.classList.remove('text-gray-900', 'dark:text-white', 'text-base'), 500);
+                }
+                
+                // 3. Force close the modal if they just hit the 5th strike
+                if (newStrikes >= 5) {
+                    closeModal(); 
+                }
+            }
+        }).catch(() => {
+            btn.disabled = false;
+            btn.innerHTML = t('redeem');
+            AppCore.ui.showToast(t('networkError'), "error");
+        });
+}
+        function openHistoryModal() {
+            if (isWebMode && !webUser) return AppCore.ui.showToast(t('loginHistoryReq'), "error");
+            openModal(`
+                <h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2"><i data-lucide="history"></i> ${t('history')}</h3>
+                <div class="space-y-4 animate-pulse mb-6">
+                    <div class="h-20 bg-gray-200 dark:bg-gray-800 rounded-xl w-full"></div>
+                    <div class="h-20 bg-gray-200 dark:bg-gray-800 rounded-xl w-full"></div>
+                </div>
+                <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>
+            `);
+
+            fetch('/api/history', { headers: getAuthHeaders() })
+                .then(r => r.json())
+                .then(data => {
+                    let html = `<h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2"><i data-lucide="history"></i> ${t('history')}</h3><div class="space-y-3 max-h-[60vh] overflow-y-auto mb-6 pr-2">`;
+                    if (!data || !data.length) html += `<div class="text-center py-10 text-gray-500"><i data-lucide="inbox" class="w-12 h-12 mx-auto mb-3 opacity-50"></i><p>${t('noHistory')}</p></div>`;
+                    else data.forEach(h => {
+                        html += `<div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700 text-sm">
+                        <div class="flex justify-between items-start mb-2"><b class="text-brand-600 dark:text-brand-400">${h.date}</b><span class="font-bold">€${(h.qty * h.price).toFixed(2)}</span></div>
+                        <div class="font-medium mb-2">${h.qty}x ${t(h.product)}</div>
+                        <div class="text-xs font-mono space-y-1 text-gray-600 dark:text-gray-400">`;
+                        if (h.codes) { h.codes.slice(0, 3).forEach(c => html += `<div>${c}</div>`); if (h.codes.length > 3) html += `<i class="text-brand-500">${t('andMore', { count: h.codes.length - 3 })}</i>`; }
+                        html += `</div></div>`;
+                    });
+                    html += `</div><button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>`;
+                    openModal(html);
+                })
+                .catch(() => { closeModal(); AppCore.ui.showToast(t('cantLoadHistory'), "error"); });
+        }
+
+        function openDonateModal() {
+    if (!webUser) return AppCore.ui.showToast(t('googleLoginDonateReq'), 'error'); 
+    const html = `
+    <h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2 text-community"><i data-lucide="upload-cloud"></i> ${t('donateTitle')}</h3>
+    
+    <div class="bg-blue-50/50 dark:bg-blue-900/10 border-l-4 border-brand-500 p-3 rounded-r-lg mb-6 text-xs text-gray-600 dark:text-gray-300 font-medium">
+        <p class="mb-1"><i data-lucide="clock" class="w-3 h-3 inline-block mr-1"></i> Codes are checked and added to the community vault within 24 hours.</p>
+        <p>If there are issues, <button onclick="openAdminContactModal()" class="font-bold underline text-brand-500 hover:text-brand-600">contact the admin</button>.</p>
+    </div>
+
+    <div class="space-y-6">
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <h4 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="keyboard"></i> ${t('donateMethodText')}</h4>
+            <p class="text-xs text-gray-500 mb-3">${t('qrGenInfo')}</p>
+            <textarea id="donate-text-input" rows="5" class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg p-3 font-mono text-sm focus:ring-2 focus:ring-community outline-none" placeholder="${t('typeCodesHere')}"></textarea>
+            <button onclick="submitDonationText()" class="mt-3 w-full bg-community text-white font-bold py-3 rounded-lg active:scale-95 transition-transform shadow flex justify-center items-center gap-2" id="btn-donate-text">
+                <i data-lucide="qr-code"></i> ${t('btnUploadQR')}
+            </button>
+        </div>
+        
+        <div class="text-center text-gray-400 font-bold text-sm">OR</div>
+        
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <h4 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="camera"></i> ${t('donateMethodImg')}</h4>
+            
+            <p class="text-xs text-gray-500 mb-3">${t('qrImageWarning')}</p>
+            
+            <input type="file" id="donate-file-input" accept="image/*" class="hidden" onchange="submitDonationImage()">
+            <button onclick="document.getElementById('donate-file-input').click()" class="w-full bg-white dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 font-bold py-6 rounded-lg hover:border-community hover:text-community transition-colors flex flex-col items-center gap-2" id="btn-donate-img">
+                <i data-lucide="image-plus" class="w-8 h-8"></i> ${t('uploadImgBtn')}
+            </button>
+        </div>
+    </div>
+
+    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 mt-6 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>
+    `;
+    openModal(html);
+}
+
+        async function submitDonationText() {
+            const input = document.getElementById('donate-text-input').value;
+            const btn = document.getElementById('btn-donate-text');
+            const rawLines = input.split('\n').map(l => l.trim()).filter(l => l.length > 5);
+
+            if (rawLines.length === 0) return AppCore.ui.showToast("Please enter at least one valid code.", "error");
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader" class="animate-spin"></i> Processing...`;
+            lucide.createIcons();
+
+            try {
+                const cols = Math.min(3, rawLines.length);
+                const rows = Math.ceil(rawLines.length / cols);
+                const qrSize = 150;
+                const padding = 20;
+                const textHeight = 30;
+
+                const canvas = document.createElement('canvas');
+                canvas.width = cols * (qrSize + padding) + padding;
+                canvas.height = rows * (qrSize + textHeight + padding) + padding;
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = 0; i < rawLines.length; i++) {
+                    const code = rawLines[i];
+                    const col = i % cols;
+                    const row = Math.floor(i / cols);
+                    const x = padding + col * (qrSize + padding);
+                    const y = padding + row * (qrSize + textHeight + padding);
+
+                    const qr = new QRious({ value: code, size: qrSize, level: 'H' });
+                    const img = new Image();
+                    img.src = qr.toDataURL();
+                    await new Promise(r => { img.onload = r; });
+                    ctx.drawImage(img, x, y);
+
+                    ctx.fillStyle = '#000000';
+                    ctx.font = '16px monospace';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(code, x + (qrSize / 2), y + qrSize + 22);
+                }
+
+                canvas.toBlob(blob => {
+                    const formData = new FormData();
+                    formData.append('image', blob, `qr_donation_${Date.now()}.png`);
+                    uploadDonationFormData(formData);
+                }, 'image/png');
+
+            } catch (e) {
+                AppCore.ui.showToast("Failed to generate QR codes.", "error");
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="qr-code"></i> Generate & Upload`;
+                lucide.createIcons();
+            }
+        }
+
+        function submitDonationImage() {
+            const input = document.getElementById('donate-file-input');
+            const btn = document.getElementById('btn-donate-img');
+
+            if (!input.files || input.files.length === 0) return;
+
+            const file = input.files[0];
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader" class="animate-spin w-8 h-8"></i> Uploading...`;
+            if (window.lucide) lucide.createIcons();
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            fetch('/api/community/donate', {
+                method: 'POST',
+                headers: { 'Authorization': `Bearer ${webToken}` },
+                body: formData
+            })
+            .then(async res => {
+                const data = await res.json();
+                if (data.status === "success") {
+                    closeModal();
+                    triggerSuccessAnimation(t('donationThanks'), () => loadLeaderboard());
+                } else {
+                    throw new Error(data.error || "Upload failed");
+                }
+            })
+            .catch(err => {
+                AppCore.ui.showToast(err.message, "error");
+                resetUploadButton();
+            });
+        }
+
+        function uploadDonationFormData(formData) {
+            fetch('/api/community/donate', {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + webToken },
+                body: formData
+            })
+            .then(async res => {
+                if (!res.ok) throw new Error("Upload failed");
+                return res.json();
+            })
+            .then(data => {
+                closeModal();
+                triggerSuccessAnimation(t('donationThanks'), () => loadLeaderboard());
+            })
+            .catch(err => {
+                AppCore.ui.showToast(err.message, "error");
+                resetUploadButton();
+            });
+        }
+
+        function resetUploadButton() {
+            const btn = document.getElementById('btn-donate-img');
+            if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="image-plus" class="w-8 h-8"></i> ${t('uploadImgBtn')}`;
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+function switchView(viewName) {
+    currentView = viewName;
+    const tabStore = document.getElementById('tab-store');
+    const tabComm = document.getElementById('tab-community');
+    const activeClass = "bg-white dark:bg-gray-700 shadow-md text-brand-600 dark:text-brand-400 cursor-default active:scale-95";
+    const inactiveClass = "text-gray-500 hover:text-gray-900 dark:hover:text-white bg-transparent hover:bg-gray-300/50 dark:hover:bg-gray-600/50 shadow-none cursor-pointer active:scale-95";
+    
+    const btnTopup = document.getElementById('btn-topup');
+
+    if (viewName === 'store') {
+        tabStore.className = `flex-1 py-2 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeClass}`;
+        tabComm.className = `flex-1 py-2 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 ${inactiveClass}`;
+        document.getElementById('view-store').classList.add('active');
+        document.getElementById('view-community').classList.remove('active');
+        if(btnTopup) btnTopup.style.display = 'flex'; 
+        document.getElementById('community-bar').classList.add('translate-y-full'); 
+        updateCheckoutUI();
+    } else {
+        tabComm.className = `flex-1 py-2 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeClass}`;
+        tabStore.className = `flex-1 py-2 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 ${inactiveClass}`;
+        document.getElementById('view-community').classList.add('active');
+        document.getElementById('view-store').classList.remove('active');
+        if(btnTopup) btnTopup.style.display = 'none'; 
+        document.getElementById('checkout-bar').classList.add('translate-y-full'); 
+        
+        // NEW: Handles the locking of the bottom bar
+        renderCommunityBar(); 
+
+        loadLeaderboard();
+        updateCommunityStock();
+    }
+    lucide.createIcons();
+}
+
+
+function renderCommunityBar() {
+    const bar = document.getElementById('community-bar');
+    if (!currentUserData) return;
+
+    // Check if the user is currently locked until feedback is given
+    if (currentUserData.pending_free_feedback) {
+        bar.innerHTML = `
+        <div class="w-full max-w-7xl mx-auto flex flex-col gap-3">
+            <div class="text-[10px] font-bold text-community flex items-center gap-1.5 uppercase tracking-wider">
+                <i data-lucide="help-circle" class="w-3 h-3"></i> Feedback Required for Previous Claim
+            </div>
+            <div class="flex gap-2">
+                <button onclick="submitFeedback('WORKING')" class="flex-1 bg-success text-white font-bold py-4 rounded-xl shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-2">
+                    <i data-lucide="check" class="w-5 h-5"></i> Working
+                </button>
+                <button onclick="submitFeedback('REDEEMED_ALREADY')" class="flex-1 bg-danger text-white font-bold py-4 rounded-xl shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-2">
+                    <i data-lucide="x" class="w-5 h-5"></i> Used
+                </button>
+            </div>
+        </div>`;
+    } else {
+        bar.innerHTML = `
+        <div class="w-full max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
+            <button onclick="openCommunitySettingsModal()" class="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 sm:px-4 py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg shrink-0">
+                <i data-lucide="settings" class="w-6 h-6"></i>
+            </button>
+            <button onclick="openDonateModal()" class="flex-1 bg-community hover:bg-purple-600 text-white font-extrabold text-lg py-4 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95">
+                <i data-lucide="upload-cloud" class="w-6 h-6"></i> ${t('btnDonate')}
+            </button>
+            <button onclick="claimCommunityCode()" id="btn-claim-free" class="flex-1 bg-surface-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-community text-gray-900 dark:text-white font-extrabold text-lg py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg">
+                <i data-lucide="gift" class="w-6 h-6 text-community"></i> ${t('btnClaim')}
+            </button>
+        </div>`;
+    }
+    bar.classList.remove('translate-y-full');
+    lucide.createIcons();
+}
+
+async function submitFeedback(status) {
+    try {
+        const res = await fetch('/api/community/feedback', {
+            method: 'POST',
+            headers: getAuthHeaders(),
+            body: JSON.stringify({ status: status })
+        });
+        if (res.ok) {
+            AppCore.ui.showToast("Thank you for your feedback!", "success");
+            await loadUserData(); // Refresh the feedback status from DB
+            renderCommunityBar();
+        }
+    } catch (e) {
+        AppCore.ui.showToast("Failed to submit feedback.", "error");
+    }
+}
+function openDonateModal() {
+    if (!webUser) return AppCore.ui.showToast(t('googleLoginDonateReq'), 'error'); 
+    
+    const count = currentUserData.current_photo_count || 0;
+    const limit = currentUserData.donator_photo_limit || 10;
+
+    const html = `
+    <h3 class="text-2xl font-extrabold mb-4 flex items-center gap-2 text-community"><i data-lucide="upload-cloud"></i> ${t('donateTitle')}</h3>
+    
+    <div class="mb-6 bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800/40 rounded-xl p-4 flex justify-between items-center">
+        <div>
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Verification Status</p>
+            <p class="text-sm font-extrabold text-community">Quota: ${count} / ${limit} Photos</p>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-community/10 flex items-center justify-center text-community">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+        </div>
+    </div>
+
+    <div class="space-y-6">
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <h4 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="keyboard"></i> ${t('donateMethodText')}</h4>
+            <p class="text-xs text-gray-500 mb-3">${t('qrGenInfo')}</p>
+            <textarea id="donate-text-input" rows="5" class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg p-3 font-mono text-sm focus:ring-2 focus:ring-community outline-none" placeholder="${t('typeCodesHere')}"></textarea>
+            <button onclick="submitDonationText()" class="mt-3 w-full bg-community text-white font-bold py-3 rounded-lg active:scale-95 transition-transform shadow flex justify-center items-center gap-2" id="btn-donate-text">
+                <i data-lucide="qr-code"></i> ${t('btnUploadQR')}
+            </button>
+        </div>
+        <div class="text-center text-gray-400 font-bold text-sm">OR</div>
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <h4 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="camera"></i> ${t('donateMethodImg')}</h4>
+            <p class="text-xs text-gray-500 mb-3">${t('qrImageWarning')}</p>
+            <input type="file" id="donate-file-input" accept="image/*" class="hidden" onchange="submitDonationImage()">
+            <button onclick="document.getElementById('donate-file-input').click()" class="w-full bg-white dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 font-bold py-6 rounded-lg hover:border-community hover:text-community transition-colors flex flex-col items-center gap-2" id="btn-donate-img">
+                <i data-lucide="image-plus" class="w-8 h-8"></i> ${t('uploadImgBtn')}
+            </button>
+        </div>
+    </div>
+    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 mt-6 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>
+    `;
+    openModal(html);
+}
+
+    function submitOrder() {
+        if (isWebMode && !webUser) return AppCore.ui.showToast(t('googleLoginReq'), "error");
+
+        const payBtn = document.getElementById('btn-pay');
+        payBtn.disabled = true; payBtn.innerText = t('processing');
+
+        let out = {};
+        let totalCost = 0;
+        for (let [id, q] of Object.entries(cart)) {
+            if (q > 0) {
+                out[id] = q;
+                let item = findItemInCatalog(id);
+                if (item) totalCost += q * parseFloat(item.price);
+            }
+        }
+        let oldBalance = userBalance;
+
+        fetch(`${API_BASE}/checkout`, {
+            method: 'POST',
+            headers: getAuthHeaders(),
+            body: JSON.stringify({ action: "checkout", cart: out })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === "success") {
+                cart = {}; initialCartState = {};
+                renderStore(); updateCheckoutUI();
+                if (isWebMode) showWebReceipt(data.receipt, oldBalance, totalCost);
+                else triggerSuccessAnimation(t('orderConfirmed'), () => tg.close());
+            } else {
+                AppCore.ui.showToast(data.error || t('checkoutFailed'), "error");
+                closeModal(); loadCatalog();
+            }
+        })
+        .catch(err => {
+            AppCore.ui.showToast(t('netErrorVault'), "error");
+            payBtn.disabled = false; payBtn.innerText = t("confirmPay");
+        });
+    }
+
+    function showWebReceipt(receiptData, oldBalance = 0, totalCost = 0) {
+        let newBalance = oldBalance - totalCost;
+        let html = `<h3 class="text-2xl font-extrabold mb-4 text-success flex items-center gap-2"><i data-lucide="check-circle"></i> ${t('orderConfirmed')}</h3>
+        
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl mb-4 font-semibold text-sm">
+            <div class="flex justify-between text-gray-500 dark:text-gray-400"><span>Previous Balance</span><span>€${oldBalance.toFixed(2)}</span></div>
+            <div class="flex justify-between text-danger"><span>Order Total</span><span>-€${totalCost.toFixed(2)}</span></div>
+            <div class="flex justify-between pt-2 mt-2 border-t border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white font-extrabold text-lg"><span>New Balance</span><span>€${newBalance.toFixed(2)}</span></div>
+        </div>
+        
+        <div class="bg-surface-50 dark:bg-gray-900 p-4 rounded-xl mb-6 max-h-[40vh] overflow-y-auto text-sm space-y-4">`;
+        
+        let codeCount = 0;
+        for (let prod in receiptData) {
+            html += `<div><b class="text-brand-600 dark:text-brand-400 block mb-1">${escapeHTML(t(prod))}</b>`;
+            receiptData[prod].forEach(code => {
+                if (codeCount < 10) html += `<code class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded block mb-1 font-mono">${escapeHTML(code)}</code>`;
+                codeCount++;
+            });
+            html += `</div>`;
+        }
+        if (codeCount > 10) html += `<i class="text-gray-500">${t('andMoreCodes', { count: codeCount - 10 })}</i>`;
+        
+        html += `</div>
+        <button class="w-full bg-brand-600 text-white py-4 rounded-xl font-extrabold mb-3 active:scale-95 transition-transform" onclick="downloadReceipt('${encodeURIComponent(JSON.stringify(receiptData))}')">${t('downloadReceipt')}</button>
+        <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">${t('close')}</button>`;
+
+        openModal(html); loadUserData();
+    }
+
+    function claimCommunityCode() {
+        if (!webUser && !tg.initData) return AppCore.ui.showToast(t('googleLoginClaimReq'), 'error');
+
+        if (!currentUserData || currentUserData.free_code_available <= 0) {
+            let webCode = currentUserData ? currentUserData.topup_code : "N/A";
+            let html = `
+            <div class="text-center p-2">
+                <div class="w-20 h-20 bg-danger/20 rounded-full flex items-center justify-center mx-auto mb-4 text-danger">
+                    <i data-lucide="lock" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold mb-2">No Free Codes</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm font-medium">You currently have 0 free codes available.</p>
+                <div class="bg-surface-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-5 mb-8 text-sm text-center font-medium space-y-3">
+                    <p>Want more free codes? Go to <a href="https://reddit.com/r/PokeCodes" target="_blank" class="text-brand-500 font-bold hover:underline">r/PokeCodes</a> and leave a comment with your Vault Code on the latest official PokePatrikVault post!</p>
+                    <div class="bg-gray-200 dark:bg-gray-800 p-3 rounded-lg"><span class="text-xs text-gray-500 uppercase font-bold block mb-1">Your Vault Code</span><span class="text-2xl font-extrabold text-brand-600 dark:text-brand-400 tracking-widest">${webCode}</span></div>
+                    <p class="text-xs text-gray-500">Free vouchers are unlocked right before the new daily PokePatrikVault post is posted.</p>
+                </div>
+                <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal()">Got it</button>
+            </div>`;
+            openModal(html);
+            return;
+        }
+
+        const btn = document.getElementById('btn-claim-free');
+        btn.disabled = true;
+
+        fetch('/api/community/claim', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        body: JSON.stringify({})
+    })
+    .then(res => res.json())
+    .then(data => {
+        btn.disabled = false;
+        if (data.status === "success") {
+            loadUserData(); 
+            const html = `
+            <div class="text-center">
+                <div class="w-20 h-20 bg-community/20 rounded-full flex items-center justify-center mx-auto mb-4 text-community">
+                    <i data-lucide="gift" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold mb-2">Code Claimed!</h3>
+                <div class="bg-surface-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-4 mb-4">
+                    <div class="font-bold text-brand-600 dark:text-brand-400 mb-2">${escapeHTML(data.product)}</div>
+                    <code class="text-lg font-mono bg-white dark:bg-gray-800 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 block">${escapeHTML(data.code)}</code>
+                </div>
+                
+                <div class="bg-blue-50/50 dark:bg-blue-900/10 border-l-4 border-brand-500 p-3 rounded-r-lg mb-6 text-[10px] text-left text-gray-600 dark:text-gray-300 leading-snug">
+                    <p><b>Note:</b> All codes are verified before being put in the vault, but it may get redeemed after being verified. To keep the vault free of unreliable donators, please provide feedback via the community bar.</p>
+                </div>
+
+                <button class="w-full bg-community text-white py-4 rounded-xl font-extrabold active:scale-95 transition-transform" onclick="closeModal(); renderCommunityBar();">Awesome!</button>
+            </div>`;
+            openModal(html);
+        } else if (data.status === "feedback_required") {
+            AppCore.ui.showToast("Please provide feedback for your previous claim.", "error");
+            renderCommunityBar();
+        } else {
+            AppCore.ui.showToast(data.message || data.error, "error");
+        }
+    })
+    .catch(() => {
+        btn.disabled = false;
+        AppCore.ui.showToast(t('networkError'), "error");
+    });
+    }
+
+
+        // THE ONLY SAFE DEFINITION OF triggerSuccessAnimation
+        function triggerSuccessAnimation(subtext = "Processing...", callback = null) {
+            const overlay = document.getElementById('success-overlay');
+            const check = document.getElementById('success-check');
+            const textEl = document.getElementById('success-subtext');
+
+            if (textEl) textEl.innerText = subtext;
+
+            overlay.classList.remove('hidden'); 
+            overlay.classList.add('flex');
+
+            requestAnimationFrame(() => {
+                overlay.classList.remove('opacity-0');
+                check.classList.add('animate-bounce-check');
+                if (window.tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+            });
+
+            setTimeout(() => {
+                overlay.classList.add('opacity-0');
+                setTimeout(() => { 
+                    overlay.classList.add('hidden'); 
+                    overlay.classList.remove('flex'); 
+                    if (typeof callback === 'function') callback(); 
+                }, 300);
+            }, 2000);
+        }
+
+        // --- Entry Point ---
+        async function startApp() {
+            AppCore.init();
+            changeLanguage(currentLang);
+            updateSettings();
+            
+            if (window.tg) { tg.ready(); tg.expand(); }
+            
+            if (typeof tg === 'undefined' || tg.platform === 'unknown' || !tg.initData) initWebMode();
+            else { 
+                let checkCount = 0; 
+                while (!tg.initData && checkCount < 40) { await new Promise(r => setTimeout(r, 100)); checkCount++; } 
+                initSessionTimer(); 
+                determineInitialState();
+            }
+            
+            await loadUserData(); 
+            await loadCatalog();
+        }
+
+        document.addEventListener('DOMContentLoaded', startApp);
+
+    </script>
+    
+</body>
+
+</html>	

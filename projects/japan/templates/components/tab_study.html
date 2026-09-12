@@ -1,0 +1,148 @@
+<!-- tools/templates/components/tab_study.html — Zen Shōji Stage: Branching Information Tree (Zero-Scroll) -->
+<section id="section-study" class="h-full flex flex-col space-y-3 overflow-hidden">
+  <!-- Inline Sync Telemetry Bar -->
+  <div id="studyInlineSyncBar" class="hidden flex-shrink-0 p-2.5 border border-[#C23B22]/30 bg-[#FDF1EF] space-y-1">
+    <div class="flex items-center justify-between font-mono text-xs text-[#C23B22]">
+      <span class="font-bold uppercase flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#C23B22] animate-ping"></span>
+        Sincronizzazione in Corso
+      </span>
+      <span id="studyInlineSyncMsg">Esecuzione pipeline & push AnkiWeb...</span>
+    </div>
+    <div class="w-full bg-neutral-200 h-1 overflow-hidden">
+      <div class="sync-progress-bar h-full w-full"></div>
+    </div>
+  </div>
+
+  <!-- Information Tree: Branch Selector (Left) & Leaf Stage (Right) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-3 overflow-hidden">
+    <!-- Branch Selector Trunk (Col 4) -->
+    <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
+      <div class="space-y-2 flex-grow">
+        <!-- Branch 1: KANJI (Kurogane / Iron) -->
+        <div id="branch_btn_kanji" onclick="switchStudyBranch('kanji')" class="branch-kurogane p-3 border border-black/10 bg-white cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">漢</span>
+              <strong class="text-[#181A1B]">KANJI</strong>
+            </div>
+            <span class="text-[11px] font-mono text-neutral-500">5 in coda</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-neutral-400 pt-0.5">
+            <span>KLC 2.300</span>
+            <span>+<b id="countKanjiAdded" class="text-[#181A1B]">0</b> oggi</span>
+          </div>
+        </div>
+
+        <!-- Branch 2: VOCABOLARIO (Aizome / Indigo) -->
+        <div id="branch_btn_vocab" onclick="switchStudyBranch('vocab')" class="branch-aizome p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">語</span>
+              <strong class="text-[#1E2C3A]">VOCABOLARIO</strong>
+            </div>
+            <span class="text-[11px] font-mono text-neutral-500">20 in coda</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-neutral-400 pt-0.5">
+            <span>JMdict / i+1</span>
+            <span>+<b id="countVocabAdded" class="text-[#181A1B]">0</b> oggi</span>
+          </div>
+        </div>
+
+        <!-- Branch 3: GRAMMATICA (Shu-iro / Cinnabar) -->
+        <div id="branch_btn_grammar" onclick="switchStudyBranch('grammar')" class="branch-shu p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#C23B22] text-white text-[10px] font-bold jp-font">文</span>
+              <strong class="text-[#C23B22]">GRAMMATICA</strong>
+            </div>
+            <span class="text-[11px] font-mono text-neutral-500">5 lezioni</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-neutral-400 pt-0.5">
+            <span>Bunpro / MEXT</span>
+            <span>+<b id="countGrammarAdded" class="text-[#181A1B]">0</b> oggi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick JMdict Search Bar in Trunk -->
+      <div class="flex-shrink-0 border border-black/10 bg-white p-2 space-y-1.5">
+        <div class="flex gap-1.5">
+          <input type="text" id="vocabSearchInput" onkeydown="if(event.key==='Enter') searchManualVocab()" placeholder="Cerca lemma JMdict..." class="w-full px-2.5 py-1 text-xs font-mono bg-[#FAF8F5] border border-black/15 focus:outline-none focus:border-black">
+          <button onclick="searchManualVocab()" class="px-3 py-1 bg-[#181A1B] text-white font-mono text-xs font-bold transition tap-press">+</button>
+        </div>
+        <div id="vocabSearchResults" class="space-y-1 max-h-24 overflow-y-auto overscroll-contain"></div>
+      </div>
+    </div>
+
+    <!-- Active Leaf Focus Stage (Col 8) -->
+    <div class="md:col-span-8 border border-black/10 bg-white flex flex-col h-full overflow-hidden">
+      <!-- LEAF 1: KANJI STAGE -->
+      <div id="leaf_kanji" class="flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <div class="flex items-center gap-2 font-mono text-xs">
+            <span class="px-2 py-0.5 bg-[#181A1B] text-white font-bold text-[10px]">KANJI</span>
+            <span class="text-neutral-500">5 carte pronte per Anki</span>
+          </div>
+          <button onclick="syncBatchGroup('kanji')" class="px-4 py-1.5 bg-[#181A1B] hover:bg-[#C23B22] text-white font-mono text-xs font-bold uppercase tracking-wider transition tap-press">
+            Sincronizza Gruppo (5) →
+          </button>
+        </div>
+        <div class="flex-grow p-3 overflow-y-auto overscroll-contain">
+          <div id="previewKanjiContainer" class="grid grid-cols-5 gap-2">
+            <div class="text-xs text-neutral-400 col-span-5 py-4 text-center">Caricamento kanji...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAF 2: VOCAB STAGE -->
+      <div id="leaf_vocab" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <div class="flex items-center gap-2 font-mono text-xs">
+            <span class="px-2 py-0.5 bg-[#1E2C3A] text-white font-bold text-[10px]">VOCABOLARIO</span>
+            <span class="text-neutral-500">20 lemmi prioritari i+1</span>
+          </div>
+          <button onclick="syncBatchGroup('vocab')" class="px-4 py-1.5 bg-[#1E2C3A] hover:bg-[#C23B22] text-white font-mono text-xs font-bold uppercase tracking-wider transition tap-press">
+            Sincronizza Gruppo (20) →
+          </button>
+        </div>
+        <div class="flex-grow overflow-y-auto overscroll-contain">
+          <div id="previewVocabContainer" class="divide-y divide-black/5">
+            <div class="text-xs text-neutral-400 p-4 text-center">Caricamento vocabolario...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAF 3: GRAMMAR STAGE -->
+      <div id="leaf_grammar" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <div class="flex items-center gap-2 font-mono text-xs">
+            <span class="px-2 py-0.5 bg-[#C23B22] text-white font-bold text-[10px]">GRAMMATICA</span>
+            <span class="text-neutral-500">5 lezioni con audio</span>
+          </div>
+          <button onclick="syncBatchGroup('grammar')" class="px-4 py-1.5 bg-[#C23B22] hover:bg-[#181A1B] text-white font-mono text-xs font-bold uppercase tracking-wider transition tap-press">
+            Sincronizza Gruppo (5) →
+          </button>
+        </div>
+        <div class="flex-grow overflow-y-auto overscroll-contain p-2 space-y-2">
+          <!-- Gating Feedback Banner (Anti-Bandaid Transparent State) -->
+          <div class="p-2.5 bg-[#FAF8F5] border border-black/10 text-xs font-mono space-y-1">
+            <div class="flex items-center justify-between">
+              <strong class="text-[#181A1B] uppercase text-[10px] flex items-center gap-1.5">
+                <span>🛡️ Gating Vocab-First (i+1 Comprehensible Input)</span>
+              </strong>
+              <span class="text-[9px] px-1.5 py-0.5 bg-[#181A1B] text-white font-bold">ANKI SAFEGUARD</span>
+            </div>
+            <p class="text-[11px] text-neutral-600 leading-tight">
+              Le frasi con vocaboli non ancora ripassati in <a href="javascript:void(0)" onclick="switchStudyBranch('vocab')" class="underline font-bold text-[#1E2C3A] tap-press active:scale-95 inline-block">Vocabolario</a> vengono caricate su Anki in stato <b>Sospeso</b> (coperte, visibili in <i>Sfoglia &gt; is:suspended</i>). Diventano <b>Nuove attive</b> automaticamente non appena ripassi i vocaboli indicati sotto.
+            </p>
+          </div>
+
+          <div id="previewGrammarContainer" class="space-y-2">
+            <div class="text-xs text-neutral-400 p-4 text-center">Caricamento grammatica...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

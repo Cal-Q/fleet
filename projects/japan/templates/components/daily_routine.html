@@ -1,0 +1,92 @@
+<!-- tools/templates/components/daily_routine.html — Routine 4 Ore Nette (4 Slot da 60 min) -->
+<div class="border border-black/10 bg-white p-2.5 space-y-2">
+  <!-- Routine Masthead & Global Daily Progress -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-black/5 pb-2 text-xs font-mono">
+    <div class="flex items-center gap-2">
+      <span class="px-1.5 py-0.5 bg-[#181A1B] text-white font-bold text-[10px] jp-font">日課</span>
+      <strong class="text-[#181A1B] uppercase tracking-wider text-[11px]">Fase 1: Fondamenta & Chiusura N4 (Settembre • Macro-ciclo 1/3)</strong>
+    </div>
+    <div class="flex items-center gap-3 text-[11px]">
+      <span id="routineProgressText" class="font-bold text-[#181A1B]">0/4h Completate (0/4 Slot • 0%)</span>
+      <div class="w-24 bg-neutral-100 border border-black/10 h-1.5 overflow-hidden">
+        <div id="routineProgressBar" class="bg-[#264332] h-full w-0 transition-all duration-300"></div>
+      </div>
+      <button onclick="window.toggleDrawer('routineDetailsDrawer')" class="text-[10px] text-neutral-500 hover:text-black transition tap-press active:scale-95">
+        Roadmap ℹ️
+      </button>
+    </div>
+  </div>
+
+  <!-- 4 Sequential Daily Slots (Asymmetric Japanese Mineral Flow) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+    <!-- Slot 1: Ripasso SRS Anki (Kurogane) -->
+    <div id="slotCard1" onclick="window.launchRoutineSlot(1)" title="Clicca per accedere a Bunki / SRS Anki" class="p-2.5 border border-black/10 border-l-4 border-l-[#181A1B] bg-[#FAF8F5] flex items-center justify-between transition tap-press cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 flex items-center justify-center bg-[#181A1B] text-white text-[11px] font-bold jp-font">壱</span>
+        <div>
+          <div class="text-[11px] font-bold font-mono text-[#181A1B]">08:00 • Ripasso SRS (1h)</div>
+          <div class="text-[10px] text-neutral-500 font-mono">5.052 mature attive (Anki)</div>
+        </div>
+      </div>
+      <button type="button" id="slot1StatusPill" onclick="event.stopPropagation(); window.toggleRoutineSlot('slot1')" class="text-[10px] font-mono font-bold px-1.5 py-0.5 border border-black/20 bg-white text-neutral-600 tap-press cursor-pointer" title="Commuta completamento Slot 1">→ VAI</button>
+    </div>
+
+    <!-- Slot 2: Sprint N4 Bunpro (Matcha) -->
+    <div id="slotCard2" onclick="window.launchRoutineSlot(2)" title="Clicca per accedere al tronco Grammatica Bunpro" class="p-2.5 border border-black/10 border-l-4 border-l-[#264332] bg-[#FAF8F5] flex items-center justify-between transition tap-press cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 flex items-center justify-center bg-[#264332] text-white text-[11px] font-bold jp-font">弐</span>
+        <div>
+          <div class="text-[11px] font-bold font-mono text-[#264332]">13:00 • Sprint N4 (1h15m)</div>
+          <div class="text-[10px] text-neutral-500 font-mono">3.1 lez/die (Chiusura 28/09)</div>
+        </div>
+      </div>
+      <button type="button" id="slot2StatusPill" onclick="event.stopPropagation(); window.toggleRoutineSlot('slot2')" class="text-[10px] font-mono font-bold px-1.5 py-0.5 border border-black/20 bg-white text-neutral-600 tap-press cursor-pointer" title="Commuta completamento Slot 2">→ VAI</button>
+    </div>
+
+    <!-- Slot 3: N3/N2 & Keigo (Aizome) -->
+    <div id="slotCard3" onclick="window.launchRoutineSlot(3)" title="Clicca per accedere alla simulazione orale e Keigo" class="p-2.5 border border-black/10 border-l-4 border-l-[#1E2C3A] bg-[#FAF8F5] flex items-center justify-between transition tap-press cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 flex items-center justify-center bg-[#1E2C3A] text-white text-[11px] font-bold jp-font">参</span>
+        <div>
+          <div class="text-[11px] font-bold font-mono text-[#1E2C3A]">18:00 • Keigo & Verbi (45m)</div>
+          <div class="text-[10px] text-neutral-500 font-mono">12 forme irregolari & T/I</div>
+        </div>
+      </div>
+      <button type="button" id="slot3StatusPill" onclick="event.stopPropagation(); window.toggleRoutineSlot('slot3')" class="text-[10px] font-mono font-bold px-1.5 py-0.5 border border-black/20 bg-white text-neutral-600 tap-press cursor-pointer" title="Commuta completamento Slot 3">→ VAI</button>
+    </div>
+
+    <!-- Slot 4: Drill Test MEXT (Shu-iro) -->
+    <div id="slotCard4" onclick="window.launchRoutineSlot(4)" title="Clicca per accedere ai quesiti di Part A" class="p-2.5 border border-black/10 border-l-4 border-l-[#C23B22] bg-[#FAF8F5] flex items-center justify-between transition tap-press cursor-pointer">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 flex items-center justify-center bg-[#C23B22] text-white text-[11px] font-bold jp-font">肆</span>
+        <div>
+          <div class="text-[11px] font-bold font-mono text-[#C23B22]">21:00 • Drill Part A (1h)</div>
+          <div class="text-[10px] text-neutral-500 font-mono">Solo Part A: target 95% (33pt)</div>
+        </div>
+      </div>
+      <button type="button" id="slot4StatusPill" onclick="event.stopPropagation(); window.toggleRoutineSlot('slot4')" class="text-[10px] font-mono font-bold px-1.5 py-0.5 border border-black/20 bg-white text-neutral-600 tap-press cursor-pointer" title="Commuta completamento Slot 4">→ VAI</button>
+    </div>
+  </div>
+
+  <!-- Collapsible Drawer: 3-Macrocycle Periodization Roadmap -->
+  <div id="routineDetailsDrawer" class="disclosure-drawer transition-all duration-300">
+    <div class="p-2.5 bg-[#FAF8F5] border border-black/10 text-xs font-mono space-y-1.5 text-neutral-600">
+      <div class="font-bold text-[#181A1B] uppercase text-[10px]">Architettura a 3 Macro-cicli (Periodizzazione Scientifica MEXT):</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px]">
+        <div class="p-2 border border-[#264332]/30 bg-[#EEF7F1]">
+          <strong class="text-[#264332]">FASE 1: Settembre (In Corso)</strong>
+          <p class="text-[10px] text-neutral-600 mt-0.5">Chiusura N4 (62 lez, 3.1/die), 12 verbi Keigo irregolari, blindatura Part A al 95% (33/35 pt).</p>
+        </div>
+        <div class="p-2 border border-black/10 bg-white opacity-80">
+          <strong class="text-[#1E2C3A]">FASE 2: Ottobre - Novembre</strong>
+          <p class="text-[10px] text-neutral-600 mt-0.5">Attraversamento 220 lez N3 (3.6/die), verbi composti N2, drill selettivo Part B.</p>
+        </div>
+        <div class="p-2 border border-black/10 bg-white opacity-80">
+          <strong class="text-[#C23B22]">FASE 3: Dicembre - Gennaio</strong>
+          <p class="text-[10px] text-neutral-600 mt-0.5">Full past papers cronometrati (60m A+B+C), skimming veloce, difesa studio plan e simulazione orale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

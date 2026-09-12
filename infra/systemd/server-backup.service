@@ -1,0 +1,12 @@
+[Unit]
+Description=Automated System Backup and Cold Storage Sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/server-backup/backup_all.sh
+User=root
+IOSchedulingClass=idle
+CPUSchedulingPolicy=idle
+Nice=19

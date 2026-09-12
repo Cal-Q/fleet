@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# attach-agy: Attach to or spawn a persistent Antigravity agent tmux session on Server 1
+# Single Responsibility: Project mapping & persistent tmux session management.
+set -u
+
+PROJECT="${1:-master}"
+if [ "$PROJECT" = "--help" ] || [ "$PROJECT" = "-h" ]; then
+    echo "Usage: attach-agy <project> [agy-options...]"
+    echo "Projects: master, fitness, thoughts, mext, pokeuser, SinoiaGang, ssbu_brain, tutor, bunkibot, marketsniper, printbot, jptranscriber"
+    exit 0
+fi
+
+shift || true
+EXTRA_ARGS="${*:- -c}"
+
+resolve_project() {
+    case "$1" in
+        japan) echo "japan /opt/japan" ;;
+        fitness) echo "fitness /opt/fitness" ;;
+        thoughts) echo "thoughts /opt/thoughts" ;;
+        master) echo "master /opt/master" ;;
+        poke|pokeuser|pokevault) echo "pokeuser /opt/pokevault" ;;
+        mext|road-to-mext) echo "mext /opt/road-to-mext" ;;
+        sinoia|SinoiaGang|sinoiagang) echo "SinoiaGang /home/SinoiaGang" ;;
+        ssbu|ssbu_brain|smashbot) echo "ssbu_brain /mnt/workspaces/ssbu_brain" ;;
+        sniper|marketsniper|marketplace-sniper) echo "marketsniper /opt/marketplace-sniper" ;;
+        bunki|bunkibot|bunpro) echo "bunkibot /opt/bunpro-anki" ;;
+        print|printbot|remote-print) echo "printbot /opt/remote-print" ;;
+        tutor) echo "tutor /home/tutor" ;;
+        jptrans|jptranscriber) echo "jptranscriber /home/jptranscriber" ;;
+        *)
+            if id "$1" >/dev/null 2>&1; then
+                echo "$1 /home/$1"
+            else
+                echo "UNKNOWN UNKNOWN"
+            fi
+            ;;
+    esac
+}
+
+MAPPING=$(resolve_project "$PROJECT")
+UID_NAME=$(echo "$MAPPING" | awk '{print $1}')
+WORKSPACE=$(echo "$MAPPING" | awk '{print $2}')
+
+if [ "$UID_NAME" = "UNKNOWN" ]; then
+    echo -e "\033[1;31mError: Unknown project '$PROJECT'.\033[0m"
+    echo "Available: master, mext, pokeuser, SinoiaGang, ssbu_brain, tutor, bunkibot, marketsniper, printbot, jptranscriber"
+    exit 1
+fi
+
+SESSION="agy-${UID_NAME}"
+
+# Session already exists: attach if interactive, else exit 0
+if tmux has-session -t "$SESSION" 2>/dev/null; then
+    if [ -t 0 ]; then
+        exec tmux attach-session -t "$SESSION"
+    else
+        echo "Session $SESSION is running."
+        exit 0
+    fi
+fi
+
+RUNNER="/usr/local/bin/run-agy-session '$UID_NAME' '$UID_NAME' '$WORKSPACE' '$EXTRA_ARGS'"
+if [ -t 0 ]; then
+    exec tmux new-session -s "$SESSION" -n "$UID_NAME" "$RUNNER"
+else
+    tmux new-session -d -s "$SESSION" -n "$UID_NAME" "$RUNNER"
+    echo "Spawned detached persistent session: $SESSION"
+fi

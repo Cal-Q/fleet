@@ -1,0 +1,294 @@
+server {
+    # Cloudflare Tunnel connects from 127.0.0.1, so nginx sees every visitor
+    # (real user or bot) as 127.0.0.1 unless told to trust the header the
+    # tunnel forwards. Only 127.0.0.1 is trusted, so a direct external hit
+    # (nginx also listens on the public IP - see /ptcg proxy traffic) cannot
+    # spoof this: real_ip only reads CF-Connecting-IP when the TCP peer
+    # itself is 127.0.0.1.
+    set_real_ip_from 127.0.0.1;
+    real_ip_header CF-Connecting-IP;
+    listen 80;
+    listen [::]:80;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    ssi on;
+    server_name pokepatrikvault.com www.pokepatrikvault.com;
+
+    ssl_certificate /etc/letsencrypt/live/pokepatrikvault.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/pokepatrikvault.com/privkey.pem;
+
+    root /var/www/pokevault;
+    index index.html;
+
+    # One hostname for the site. www served the identical document with a 200
+    # and no redirect; the canonical tag kept it out of the index, but crawl
+    # budget and any inbound link were still split across two hosts. Must be the
+    # first thing in the block so it beats every location below.
+    if ($host = www.pokepatrikvault.com) {
+        return 301 https://pokepatrikvault.com$request_uri;
+    }
+
+    client_max_body_size 20M;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    add_header Cross-Origin-Opener-Policy "same-origin-allow-popups" always;
+
+    # --- Aggressive Caching for Static Assets ---
+
+    # HQ renders: immutable — filename encodes content (expansion + qty)
+    # Deny every dotfile under the web root. /var/www/pokevault became a git
+    # repo on 2026-08-03, which put .git/ inside a directory nginx serves
+    # directly: .git/config, .git/HEAD and .git/logs/HEAD were all returning
+    # 200, and that is enough for a git-dumper to reconstruct the entire
+    # repository and its history from the outside. Must sit above the static
+    # -asset and catch-all locations so nothing reaches the filesystem first.
+    # .well-known is exempted so ACME/certbot renewals keep working.
+    location ~ /\.(?!well-known) {
+        deny all;
+        return 404;
+    }
+
+    location ^~ /calq-browser/ {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # WebSocket support
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location ^~ /images/renders_hq/ {
+        # `expires 1y` is deliberately absent: it emits its own Cache-Control
+        # header, so together with the add_header below the response carried two
+        # conflicting Cache-Control lines and browsers took the first — dropping
+        # `immutable`. add_header alone is the authoritative one.
+        expires off;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Access-Control-Allow-Origin *;
+        access_log off;
+        try_files $uri =404;
+    }
+
+    # LQ renders: no-cache — updated in-place by the thumbnail renderer
+    location ^~ /images/renders/ {
+        expires off;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma no-cache;
+        try_files $uri =404;
+    }
+
+    # Card scans live under /opt, not the site root. Must be a ^~ prefix match:
+    # the regex location below matches any *.jpg/*.webp and would otherwise
+    # resolve these against `root /var/www/pokevault`, where they do not exist.
+    # Served from disk rather than proxied so the API's 120/min limiter and
+    # Python overhead stay off static assets.
+    location ^~ /images/cards/ {
+        alias /opt/pokevault/images/cards/;
+        # `expires 1y` is deliberately absent: it emits its own Cache-Control
+        # header, so together with the add_header below the response carried two
+        # conflicting Cache-Control lines and browsers took the first — dropping
+        # `immutable`. add_header alone is the authoritative one.
+        expires off;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Access-Control-Allow-Origin *;
+        access_log off;
+        try_files $uri =404;
+    }
+
+    # Orphaned pre-refactor JS: not loaded by any <script> tag (README
+    # "Dead code" section — kept as the only surviving copy, editing them
+    # has no effect on the site), but still 200 and unflagged for crawlers.
+    location ~ ^/js/(adminold|appold|profileold|creator)\.js$ {
+        add_header X-Robots-Tag "noindex, nofollow" always;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        try_files $uri =404;
+    }
+
+    # woff2/woff/ttf added: the self-hosted icon subset fell through to the
+    # catch-all and was served with no cache headers at all, so every visit
+    # re-fetched it. Fonts preloaded with `crossorigin` also need the CORS header
+    # this block sets, or the preload is discarded and the font fetched twice.
+    location ~* \.(?:css|js|jpg|jpeg|gif|png|ico|svg|webp|woff2|woff|ttf)$ {
+        # `expires 1y` is deliberately absent: it emits its own Cache-Control
+        # header, so together with the add_header below the response carried two
+        # conflicting Cache-Control lines and browsers took the first — dropping
+        # `immutable`. add_header alone is the authoritative one.
+        expires off;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Access-Control-Allow-Origin *;
+        access_log off;
+        try_files $uri =404;
+    }
+
+    location ~ ^/(terms|privacy|cookies|refunds|imprint|it|de|fr|es|nl|pt|fi)$ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # /codes/ is the same resource as /codes. Exact-match location, so it wins
+    # over the regex below rather than reaching Flask and 404ing.
+    location = /codes/ { return 301 https://pokepatrikvault.com/codes; }
+
+    # Per-expansion SEO landing pages (/codes, /codes/<slug>) — Flask-rendered,
+    # live stock/price per request. See app/routes/api_set_pages.py.
+    location ~ ^/codes(/.*)?$ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # An unsellable or misspelled slug aborts 404 in Flask, which answers
+        # with its bare default page. Serve the site's own 404 instead so a dead
+        # set link is a normal dead end with navigation, not a blank wall.
+        proxy_intercept_errors on;
+        error_page 404 /404.html;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000/;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        proxy_set_header CF-Connecting-IP $http_cf_connecting_ip;
+        proxy_set_header CF-Ray $http_cf_ray;
+        proxy_set_header CF-Visitor $http_cf_visitor;
+
+        proxy_pass_request_headers on;
+        proxy_set_header Authorization $http_authorization;
+        proxy_set_header X-TG-Secure-Data $http_x_tg_secure_data;
+
+        proxy_read_timeout 120s;
+        proxy_connect_timeout 120s;
+
+        proxy_cache off;
+        proxy_no_cache 1;
+        proxy_cache_bypass $http_upgrade;
+        add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0";
+    }
+
+    location /order/ {
+        return 301 https://redeem.calq.it$request_uri;
+    }
+
+
+    # NOTE: this used to alias /ptcg/api/images/ straight to /opt/pokevault/images/,
+    # which short-circuited the admin check on ptcg_server's /api/images/<filename>
+    # route and published ~700 scraped seller photos to anyone who guessed a
+    # filename. Now proxied like everything else under /ptcg/ so Flask enforces
+    # auth. Callers already carry credentials: admin.js appends ?token=, and
+    # scanner_cli.py sends X-Admin-Token. Cost is the 30d edge cache on images.
+
+    location ^~ /ptcg/ {
+        proxy_pass http://127.0.0.1:5000/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        # proxy_pass strips the /ptcg prefix, so the app cannot build a correct
+        # redirect back to itself from request.path alone. The admin pages need
+        # this to bounce ?token=… into a cookie without dropping the prefix.
+        proxy_set_header X-Original-URI $request_uri;
+    }
+
+    # /index and /index.html are the same document as / — collapse them so the
+    # homepage has one URL. Safe next to `location = /`: its try_files serves
+    # /index.html as a file check (not the last argument), so it does not
+    # internally redirect back through this location.
+    location = /index      { return 301 https://pokepatrikvault.com/; }
+    location = /index.html { return 301 https://pokepatrikvault.com/; }
+
+    # Internal tooling pages. Publicly readable and crawlable, with no robots
+    # meta of their own — keep them reachable but out of the search index.
+    location ~ ^/(ebay-preview|private_render|thumbnails|viewer)(\.html)?$ {
+        add_header X-Robots-Tag "noindex, nofollow" always;
+        try_files /$1.html =404;
+    }
+
+    # One-off delivery of userscripts that carry the ingest credential. The path
+    # segment is the only secret here, so: never cached (an edge copy would
+    # outlive deletion of the file), never indexed, never referrer-leaked, and
+    # no directory listing. Delete the directory once the scripts are installed.
+    location ^~ /dl/ {
+        add_header Cache-Control "no-store, private" always;
+        add_header X-Robots-Tag "noindex, nofollow, noarchive" always;
+        add_header Referrer-Policy "no-referrer" always;
+        autoindex off;
+        try_files $uri =404;
+    }
+
+    # /faq and /guides are the canonical URLs; the .html forms served the same
+    # document at a second URL. try_files below resolves /faq to faq.html
+    # internally without re-entering location matching, so there is no loop.
+    # privacy/terms/cookies/refunds/imprint never had .html files — they are
+    # Flask-rendered — but bingbot keeps fetching /privacy.html from somewhere and
+    # taking a 404. Redirecting costs nothing and turns a dead end into a signal.
+    location ~ ^/(faq|guides|support|privacy|terms|cookies|refunds|imprint)\.html$ {
+        return 301 https://pokepatrikvault.com/$1;
+    }
+
+    # SPA deep links. Must match validViews in /var/www/pokevault/js/app.js:388
+    # ('faq' is intentionally absent — it has its own static page, faq.html).
+    #
+    # These return index.html, so each was a crawlable 200 duplicate of the
+    # homepage — canonical-tagged to "/", but still four extra URLs to crawl and
+    # /admin among them. noindex says it outright; `follow` is deliberate, so
+    # links inside the shell are still traversed. Not robots.txt-disallowed:
+    # a blocked URL is never fetched, so its noindex would never be read.
+    location ~ ^/(catalog|profile|admin|creator)(/.*)?$ {
+        add_header X-Robots-Tag "noindex, follow" always;
+        # HTML must revalidate. js/css are served immutable for a year and
+        # cache-busted with ?v=N in index.html — but index.html itself carried
+        # no Cache-Control at all, so browsers applied heuristic freshness and
+        # could hold a stale shell pointing at the previous ?v=. That silently
+        # defeats the whole busting scheme: the bump ships, nobody sees it.
+        # no-cache still caches, it just forces a conditional request (304).
+        add_header Cache-Control "no-cache" always;
+        try_files /index.html =404;
+    }
+
+    location = / {
+        # HTML must revalidate. js/css are served immutable for a year and
+        # cache-busted with ?v=N in index.html — but index.html itself carried
+        # no Cache-Control at all, so browsers applied heuristic freshness and
+        # could hold a stale shell pointing at the previous ?v=. That silently
+        # defeats the whole busting scheme: the bump ships, nobody sees it.
+        # no-cache still caches, it just forces a conditional request (304).
+        add_header Cache-Control "no-cache" always;
+        try_files /index.html =404;
+    }
+
+    # Static file, then <name>.html, then a real 404. Previously ended in
+    # /index.html, which returned 200 + the homepage for every unknown path
+    # (soft-404) and fed search engines duplicates of the homepage.
+    location / {
+        # HTML must revalidate. js/css are served immutable for a year and
+        # cache-busted with ?v=N in index.html — but index.html itself carried
+        # no Cache-Control at all, so browsers applied heuristic freshness and
+        # could hold a stale shell pointing at the previous ?v=. That silently
+        # defeats the whole busting scheme: the bump ships, nobody sees it.
+        # no-cache still caches, it just forces a conditional request (304).
+        add_header Cache-Control "no-cache" always;
+        try_files $uri $uri.html $uri/ =404;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+}

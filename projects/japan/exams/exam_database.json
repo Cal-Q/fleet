@@ -1,0 +1,489 @@
+[
+  {
+    "id": "MEXT-A-01",
+    "section": "A",
+    "level": "JLPT N3/N4",
+    "category": "Kanji Reading / Kanji Writing",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n昨日は とても 【さむかった】 です。",
+    "options": {
+      "A": "寒かった",
+      "B": "暑かった",
+      "C": "痛かった",
+      "D": "暗かった"
+    },
+    "answer": "A",
+    "explanation": "「さむい」 corrisponde al kanji 寒 (freddo climatico/atmosferico). 暑 (caldo), 痛 (doloroso), 暗 (buio/oscuro)."
+  },
+  {
+    "id": "MEXT-A-02",
+    "section": "A",
+    "level": "JLPT N3",
+    "category": "Grammar Particles",
+    "question": "毎朝、駅まで 自転車＿＿＿ 行きます。",
+    "options": {
+      "A": "に",
+      "B": "で",
+      "C": "を",
+      "D": "へ"
+    },
+    "answer": "B",
+    "explanation": "La particella で (de) indica il mezzo o strumento con cui si compie un'azione di movimento: 自転車で行きます (vado in bicicletta)."
+  },
+  {
+    "id": "MEXT-A-03",
+    "section": "A",
+    "level": "JLPT N3",
+    "category": "Vocabulary in Context",
+    "question": "試験の 時間に ＿＿＿ように、早く 家を 出ました。",
+    "options": {
+      "A": "まにあう",
+      "B": "おくれる",
+      "C": "とどく",
+      "D": "あう"
+    },
+    "answer": "A",
+    "explanation": "時間に間に合う (じかんにまにあう) significa 'essere puntuali / fare in tempo'. Il costrutto ~ように indica lo scopo ('affinché facessi in tempo all'esame')."
+  },
+  {
+    "id": "MEXT-B-01",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "突然雨が ＿＿＿きたので、近くのカフェに駆け込んだ。",
+    "options": {
+      "A": "降りだして",
+      "B": "降りつづけて",
+      "C": "降りやんで",
+      "D": "降りこんで"
+    },
+    "answer": "A",
+    "explanation": "Il verbo ausiliare ~出す (~dasu) esprime l'inizio improvviso o repentino di un'azione/fenomeno: 降り出す (iniziare a piovere improvvisamente). Si sposa con l'avverbio 突然 (all'improvviso)."
+  },
+  {
+    "id": "MEXT-B-02",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Keigo (敬語 - Sonkeigo/Kenjougo)",
+    "question": "田中先生、先週お送りした論文の原稿は もう ＿＿＿でしょうか。",
+    "options": {
+      "A": "ご覧になりました",
+      "B": "拝見しました",
+      "C": "お見せになりました",
+      "D": "拝読いたしました"
+    },
+    "answer": "A",
+    "explanation": "Ci si rivolge al professore (田中先生). L'azione di guardare/leggere la bozza è compiuta dal docente, quindi è obbligatorio il Sonkeigo (forma di rispetto): ご覧になる (goran ni naru). 拝見する e 拝読する sono Kenjougo (umili), usati solo per le proprie azioni!"
+  },
+  {
+    "id": "MEXT-B-03",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Functional Grammar (文法機能語)",
+    "question": "この映画は、単なる娯楽作品＿＿＿、現代社会の課題を浮き彫りにしている。",
+    "options": {
+      "A": "にとどまらず",
+      "B": "にかぎって",
+      "C": "に反して",
+      "D": "をこめて"
+    },
+    "answer": "A",
+    "explanation": "～にとどまらず (~ni todomarazu) significa 'non limitandosi a... / non solo...': 'Questo film non si limita a essere una semplice opera di intrattenimento, ma mette in risalto le problematiche della società contemporanea'."
+  },
+  {
+    "id": "MEXT-C-01",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions (文章語表現)",
+    "question": "いかに優れた学説で＿＿＿、実証的なデータによる裏付けがなければ信憑性を欠く。",
+    "options": {
+      "A": "あろうと",
+      "B": "あるまいか",
+      "C": "ありながら",
+      "D": "あるべく"
+    },
+    "answer": "A",
+    "explanation": "Il costrutto formale 「いかに～であろうと」（または「たとえ～であろうと」）significa 'per quanto possa essere... / indipendentemente da quanto sia...': 'Per quanto possa trattarsi di una teoria accademica eccellente, senza il supporto di dati empirici pecca di credibilità'."
+  },
+  {
+    "id": "MEXT-C-02",
+    "section": "C",
+    "level": "JLPT N1+",
+    "category": "Formal Connectives & Idioms",
+    "question": "長年の歴史研究の成果を＿＿＿、ついに『近世日伊交流史』の決定版が上梓された。",
+    "options": {
+      "A": "踏まえて",
+      "B": "かえりみず",
+      "C": "もってして",
+      "D": "よそに"
+    },
+    "answer": "A",
+    "explanation": "～を踏まえて (~o fumaete) significa 'basandosi su / tenendo conto di / facendo tesoro di': 'Facendo tesoro dei risultati di molti anni di ricerca storica, è stato finalmente dato alle stampe...' 上梓する (じょうしする) è un termine formale per 'pubblicare'."
+  },
+  {
+    "id": "MEXT-C-03",
+    "section": "C",
+    "level": "JLPT N1/N1+",
+    "category": "Academic Reading Comprehension",
+    "question": "「文化の受容とは単なる模倣ではなく、受容側の主体的選択と土着文化との習合プロセスにほかならない。」\n筆者の主張に合致するものはどれか。",
+    "options": {
+      "A": "文化を受容する側は外来文化を受動的・機械的に模倣する傾向がある。",
+      "B": "文化の受容は、受け入れ側の能動的選択と伝統との融合によって成立する。",
+      "C": "土着の文化は外来の文化によって完全に排除・代替されるべきである。",
+      "D": "歴史上の文化受容においては、主体的判断よりも偶然性のほうが大きく作用する。"
+    },
+    "answer": "B",
+    "explanation": "Il testo dice: 'L'accoglimento di una cultura non è mera imitazione, ma nient'altro che il processo di convergenza (習合) tra la scelta soggettiva/attiva del ricevente e la cultura autoctona (土着文化)'. L'opzione B rispecchia fedelmente: 能動的選択 (scelta attiva) e 伝統との融合 (fusione con le tradizioni)."
+  },
+  {
+    "id": "MEXT-2014-A-01",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Grammar Particles",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "きのう プール＿＿＿ およぎました。",
+    "options": {
+      "A": "を",
+      "B": "に",
+      "C": "で",
+      "D": "が"
+    },
+    "answer": "C",
+    "explanation": "La particella で indica il luogo in cui si svolge un'azione dinamica (泳ぎました = ho nuotato nel/al). ❌ A (を): indica moto attraverso spazio continuo (es. 川を泳ぐ) o complemento oggetto, ma con プール si specifica il luogo dell'azione (で). ❌ B (に): indica stato in luogo con verbi statici (いる/ある) o meta di movimento (行く). ❌ D (が): marca il soggetto grammaticale."
+  },
+  {
+    "id": "MEXT-2014-A-02",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "たいふうが きています。はやく いえに ＿＿＿が いいです。",
+    "options": {
+      "A": "かえるまで",
+      "B": "かえると",
+      "C": "かえったほう",
+      "D": "かえったから"
+    },
+    "answer": "C",
+    "explanation": "Il costrutto di consiglio/suggerimento è [Forma Passata Ta] + ほうがいい (～たほうがいい): 帰ったほうがいい (è meglio tornare a casa). ❌ A (帰るまで): 'fino al ritorno'. ❌ B (帰ると): condizionale naturale 'quando/se torno'. ❌ D (帰ったから): causale 'poiché sono tornato'."
+  },
+  {
+    "id": "MEXT-2014-A-03",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Grammar Particles",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "うちから だいがくまで 20ぷん＿＿＿ かかります。",
+    "options": {
+      "A": "など",
+      "B": "で",
+      "C": "ごろ",
+      "D": "ぐらい"
+    },
+    "answer": "D",
+    "explanation": "ぐらい (oppure くらい) si unisce a durate temporali o quantità per indicare approssimazione: 20分ぐらい (circa 20 minuti). ❌ C (ごろ): indica un punto preciso nel tempo approssimato (es. 3時ごろ = verso le 3), mai una durata! ❌ A (など): 'eccetera'. ❌ B (で): mezzo/limite."
+  },
+  {
+    "id": "MEXT-2014-A-04",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Vocabulary in Context",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "ちょっと うるさいので、テレビを ＿＿＿ください。",
+    "options": {
+      "A": "けして",
+      "B": "きえて",
+      "C": "おれて",
+      "D": "おこって"
+    },
+    "answer": "A",
+    "explanation": "消す (けす) è il verbo transitivo per 'spegnere' (dispositivi/fuoco) associato all'accusativo テレビを. ❌ B (消えて - きえる): è il corrispondente intransitivo ('spegnersi da sé', richiede が). ❌ C (折れて - おれる): 'spezzarsi'. ❌ D (怒って - おこる): 'arrabbiarsi'."
+  },
+  {
+    "id": "MEXT-2014-A-06",
+    "section": "A",
+    "level": "JLPT N3/N4",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "きのうの おまつりは 外国人が ＿＿＿そうです。",
+    "options": {
+      "A": "多く",
+      "B": "多かった",
+      "C": "多いだった",
+      "D": "多いかった"
+    },
+    "answer": "B",
+    "explanation": "Si parla di ieri (きのう), quindi serve il passato dell'i-aggettivo 多い: 多かった (おおかった). Unito al hearsay ～そうです ('ho sentito dire che c'erano molti stranieri'). ❌ A (多く): forma avverbiale/sospensiva. ❌ C/D (多いだった / 多いかった): forme grammaticalmente inesistenti per gli aggettivi in -i."
+  },
+  {
+    "id": "MEXT-2014-A-07",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Compound Verbs (複合動詞)",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "このなつは ふじさんに のぼって ＿＿＿ つもりです。",
+    "options": {
+      "A": "みる",
+      "B": "する",
+      "C": "いる",
+      "D": "ある"
+    },
+    "answer": "A",
+    "explanation": "Il costrutto ausiliare ～てみる indica 'provare a compiere un'azione (per vedere come va)': 登ってみる (provare a scalare il Monte Fuji). ❌ B (する): non si aggancia a ～て con valore modale. ❌ C (いる): indicherebbe azione progressiva o stato risultante. ❌ D (ある): indicherebbe stato intenzionale con verbi transitivi."
+  },
+  {
+    "id": "MEXT-2014-A-08",
+    "section": "A",
+    "level": "JLPT N3/N4",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "あたらしい パソコンを かう ＿＿＿ アルバイトを しています。",
+    "options": {
+      "A": "ように",
+      "B": "ままに",
+      "C": "ほどに",
+      "D": "ために"
+    },
+    "answer": "D",
+    "explanation": "～ために (tameni) con un verbo d'azione volitiva (買う) esprime lo scopo soggettivo: 'lavoro part-time AL FINE DI comprare un nuovo PC'. ❌ A (ように): esprime scopo con verbi di stato, potenziali o negativi (es. 買えるように), non con azioni volitive dirette! ❌ B (ままに): 'così com'è'. ❌ C (ほどに): 'al punto tale che'."
+  },
+  {
+    "id": "MEXT-2014-A-09",
+    "section": "A",
+    "level": "JLPT N3/N4",
+    "category": "Vocabulary in Context",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "きょう だいじな かいぎが あることを ＿＿＿ わすれていました。",
+    "options": {
+      "A": "ゆっくり",
+      "B": "はっきり",
+      "C": "すっかり",
+      "D": "しっかり"
+    },
+    "answer": "C",
+    "explanation": "L'avverbio すっかり (sukkari) associato a 忘れる significa 'dimenticarsi completamente/del tutto'. ❌ A (ゆっくり): 'con calma / lentamente'. ❌ B (はっきり): 'chiaramente / nitidamente' (es. はっきり覚えている). ❌ D (しっかり): 'saldamente / con giudizio'."
+  },
+  {
+    "id": "MEXT-2014-A-10",
+    "section": "A",
+    "level": "JLPT N4",
+    "category": "Vocabulary in Context",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "わたしは にほんの おんがくに ＿＿＿が あります。",
+    "options": {
+      "A": "ばんぐみ",
+      "B": "もんだい",
+      "C": "しんぱい",
+      "D": "きょうみ"
+    },
+    "answer": "D",
+    "explanation": "Collocazione fissa: [X] に 興味がある (きょうみがある) = 'avere interesse per X'. ❌ A (番組): programma TV. ❌ B (問題): problema. ❌ C (心配): preoccupazione (si usa 心配する o 心配がある)."
+  },
+  {
+    "id": "MEXT-2014-A-16",
+    "section": "A",
+    "level": "JLPT N4/N3",
+    "category": "Keigo (敬語 - Sonkeigo/Kenjougo)",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "田中さん:「どちらから いらっしゃいましたか。」\nニメーシャさん:「スリランカから ＿＿＿。」",
+    "options": {
+      "A": "いらっしゃいました",
+      "B": "来られました",
+      "C": "まいりました",
+      "D": "行きました"
+    },
+    "answer": "C",
+    "explanation": "Nimesha sta parlando della PROPRIA azione di venire (dal Sri Lanka). Deve usare il Kenjougo (forma umile): 参りました (まいりました). ❌ A (いらっしゃいました): è Sonkeigo (rispetto verso l'altro, errore gravissimo usarlo per sé!). ❌ B (来られました): forma passivo-onorifica di rispetto. ❌ D (行きました): non è Keigo e significa 'sono andato'."
+  },
+  {
+    "id": "MEXT-2014-B-01",
+    "section": "B",
+    "level": "JLPT N3",
+    "category": "Grammar Particles",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "試験は、半年＿＿＿ 一度あります。",
+    "options": {
+      "A": "より",
+      "B": "に",
+      "C": "で",
+      "D": "から"
+    },
+    "answer": "B",
+    "explanation": "La particella に indica la frequenza in un dato intervallo temporale: 半年に一度 (una volta ogni sei mesi). Formula fissa: [Periodo] + に + [Volte]. ❌ A (より): paragone. ❌ C (で): strumento/luogo. ❌ D (から): punto di partenza."
+  },
+  {
+    "id": "MEXT-2014-B-02",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "友だちに相談した＿＿＿、こころよく手伝ってくれました。",
+    "options": {
+      "A": "ところ",
+      "B": "と",
+      "C": "くせに",
+      "D": "からといって"
+    },
+    "answer": "A",
+    "explanation": "～たところ (~ta tokoro) esprime l'esito di un'azione passata: 'avendo fatto X, si è verificato come risultato Y' ('Dopo essermi consultato con un amico, mi ha aiutato volentieri'). ❌ B (と): condizionale generale/invariabile. ❌ C (くせに): sfumatura di biasimo/rimprovero ('nonostante ciò... e invece!'). ❌ D (からといって): 'non è detto che solo perché...'."
+  },
+  {
+    "id": "MEXT-2014-B-03",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "三月＿＿＿、ずいぶん寒いですね。",
+    "options": {
+      "A": "にとっては",
+      "B": "については",
+      "C": "にしては",
+      "D": "においては"
+    },
+    "answer": "C",
+    "explanation": "～にしては (~ni shite wa) indica una discrepanza rispetto a ciò che ci si aspetterebbe da uno standard noto: 'Per essere marzo, fa decisamente freddo!' (ci si aspetterebbe clima primaverile). ❌ A (にとっては): 'dal punto di vista di X'. ❌ B (については): 'riguardo a X'. ❌ D (においては): 'nel contesto di / presso (formale)'."
+  },
+  {
+    "id": "MEXT-2014-B-04",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Causative-Passive",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "寮の食堂では、ずいぶんまずいものを＿＿＿。",
+    "options": {
+      "A": "食べせられた",
+      "B": "食べされられた",
+      "C": "食べされた",
+      "D": "食べさせられた"
+    },
+    "answer": "D",
+    "explanation": "Il verbo 食べる è di 2° gruppo (Ichidan). La forma causativo-passiva (essere costretto a mangiare) si forma con la base 食べ- + させられる: 食べさせられた. ❌ A/B/C: errori morfologici inesistenti nella coniugazione dei verbi Ichidan."
+  },
+  {
+    "id": "MEXT-2014-B-05",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "まだ2回勝った＿＿＿。優勝するにはあと3回勝たなければならない。",
+    "options": {
+      "A": "ものだ",
+      "B": "に相違ない",
+      "C": "にすぎない",
+      "D": "ということだ"
+    },
+    "answer": "C",
+    "explanation": "～にすぎない (~ni suginai) significa 'non è altro che / è solo / è semplicemente': 'Abbiamo vinto solo 2 volte (non è altro che una vittoria parziale). Per vincere il campionato dobbiamo vincere altre 3 volte'. ❌ A (ものだ): norma generale o nostalgia. ❌ B (に相違ない): 'senza dubbio / certamente'. ❌ D (ということだ): 'significa che / ho inteso che'."
+  },
+  {
+    "id": "MEXT-2014-B-06",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Sentence Structure & Connectives",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "いつ来てもかまいません。＿＿＿ 来る前に連絡するように。",
+    "options": {
+      "A": "ただし",
+      "B": "そこで",
+      "C": "しかも",
+      "D": "あるいは"
+    },
+    "answer": "A",
+    "explanation": "ただし (tadashi) introduce una condizione restrittiva o eccezione a quanto appena affermato: 'Puoi venire quando vuoi. TUTTAVIA / A PATTO CHE ti metta in contatto prima di venire'. ❌ B (そこで): 'pertanto / di conseguenza'. ❌ C (しかも): 'inoltre / per giunta'. ❌ D (あるいは): 'oppure / o altrimenti'."
+  },
+  {
+    "id": "MEXT-2014-B-08",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Functional Grammar",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "自動車は便利な ＿＿＿、安全性にはまだ問題がある。",
+    "options": {
+      "A": "反面",
+      "B": "最中",
+      "C": "結果",
+      "D": "以上"
+    },
+    "answer": "A",
+    "explanation": "～反面 (~hanmen) significa 'd'altro canto / al tempo stesso / d'altra parte': 'Le automobili sono comode, ma d'altro canto presentano ancora problemi di sicurezza'. ❌ B (最中 - さいちゅう): 'nel bel mezzo di un'azione'. ❌ C (結果): 'come risultato di'. ❌ D (以上 - いじょう): 'dal momento che / visto che'."
+  },
+  {
+    "id": "MEXT-2014-B-09",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Keigo (敬語 - Sonkeigo/Kenjougo)",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "鈴木さん:「遠いところ、ようこそいらっしゃいました。何か冷たいものでも いかがですか？」\n山口さん:「ありがとうございます。でも、急ぎますので、＿＿＿。」",
+    "options": {
+      "A": "どうぞおかまいしてください",
+      "B": "どうもお気遣い感謝します",
+      "C": "どうもかまわれましても",
+      "D": "どうぞおかまいなく"
+    },
+    "answer": "D",
+    "explanation": "Formula fissa di cortesia nell'etichetta giapponese: どうぞおかまいなく (douzo okamainaku) significa 'Non si disturbi per me / Non si dia pena'. ❌ A (どうぞおかまいしてください): senza senso ('per favore si disturbi per me!'). ❌ B: frase innaturale e colloquialmente sgrammaticata in risposta a un'offerta di rinfresco. ❌ C: sintassi scorretta."
+  },
+  {
+    "id": "MEXT-2014-B-10",
+    "section": "B",
+    "level": "JLPT N2",
+    "category": "Keigo (敬語 - Sonkeigo/Kenjougo)",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "山田さん:「あ、森本さん。」\n森本さん:「あ、山田さん、久しぶりですね。」\n山田さん:「＿＿＿。」\n森本さん:「元気ですか。」",
+    "options": {
+      "A": "お元気でいらっしゃいますね",
+      "B": "ご無沙汰しております",
+      "C": "お邪魔しております",
+      "D": "失礼しております"
+    },
+    "answer": "B",
+    "explanation": "ご無沙汰しております (ごぶさたしております) è la formula formale obbligatoria (Kenjougo) quando ci si rincontra dopo molto tempo senza essersi sentiti ('Mi scuso per la lunga assenza di contatti / Non ci sentiamo da molto'). ❌ A: affermazione stramba invece di un saluto. ❌ C (お邪魔しております): usato entrando in casa altrui. ❌ D (失礼しております): scusa generica."
+  },
+  {
+    "id": "MEXT-2014-C-01",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "成功のためには、日頃の努力が必要なのは、あえて言う＿＿＿。",
+    "options": {
+      "A": "ところもないものだ",
+      "B": "ところもないことだ",
+      "C": "までもあないものだ",
+      "D": "までもないことだ"
+    },
+    "answer": "D",
+    "explanation": "Costrutto formale scritto: 言うまでもない (~iu made mo nai) = 'è ovvio / non c'è nemmeno bisogno di dire che': 'Che per avere successo sia necessario lo sforzo quotidiano è cosa che non serve neppure rimarcare'. ❌ A/B: ところもない non ha questo significato. ❌ C: ものだ si usa per considerazioni morali o leggi di natura, ma con 言うまでもない la sostantivazione fissa è ことだ."
+  },
+  {
+    "id": "MEXT-2014-C-02",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "どの大学に行ったらいいか、いまだに＿＿＿。",
+    "options": {
+      "A": "決めかねている",
+      "B": "決めざるをえない",
+      "C": "決めだしている",
+      "D": "決めることにならない"
+    },
+    "answer": "A",
+    "explanation": "Il suffisso N1 ～かねる (Radice Masu + かねる) esprime l'impossibilità o grande difficoltà psicologica nel compiere un'azione: 決めかねている = 'fatico a decidere / sono indeciso su quale università scegliere'. ❌ B (決めざるをえない): 'non posso fare a meno di decidere / sono obbligato a decidere'. ❌ C (決めだしている): 'sto iniziando a decidere'. ❌ D (決めることにならない): 'non risulta che io decida'."
+  },
+  {
+    "id": "MEXT-2014-C-03",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Connectives & Idioms",
+    "source": "MEXT 2014 Japanese Exam (Laboratory)",
+    "question": "客が乗り込むやいなや、タクシーは猛スピードで発進した。",
+    "options": {
+      "A": "乗り込んだだけで",
+      "B": "乗り込むか否かを問わず",
+      "C": "乗り込むとすぐに",
+      "D": "乗り込むまでもなく"
+    },
+    "answer": "C",
+    "explanation": "La struttura formale N1 ～やいなや (~ya ina ya) indica la simultaneità immediata di due eventi successivi: 'non appena il passeggero è salito, il taxi è partito a tutta velocità' = 乗り込むとすぐに. ❌ A: 'solo salendo'. ❌ B: 'indipendentemente dal fatto che salga o meno'. ❌ D: 'senza neppure bisogno di salire'."
+  }
+]

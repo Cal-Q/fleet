@@ -1,0 +1,139 @@
+/* static/css/editorial.css — Japanese Zen Architectural Design System */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;600;700;900&family=Shippori+Mincho:wght@400;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'textbook';
+  src: url('/static/fonts/_HGSKyokashotai.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --zen-washi: #FAF8F5;
+  --zen-hinoki: #F4EFE6;
+  --zen-kurogane: #181A1B;
+  --zen-sumi: #2D3135;
+  --zen-shu: #C23B22;
+  --zen-aizome: #1E2C3A;
+  --zen-matcha: #264332;
+  --zen-border: rgba(24, 26, 27, 0.12);
+  --zen-border-subtle: rgba(24, 26, 27, 0.06);
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--zen-washi);
+  color: var(--zen-kurogane);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Zen Shōji Screen Lattice Pattern */
+.zen-shoji-pattern {
+  background-color: var(--zen-washi);
+  background-image: 
+    linear-gradient(rgba(24, 26, 27, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 26, 27, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Tab Bleed Prevention */
+.hidden { display: none !important; }
+
+/* Typographical Systems */
+.font-editorial-serif { font-family: 'Cinzel', Georgia, serif; letter-spacing: 0.02em; }
+.font-sans { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+.font-mono { font-family: 'Space Mono', ui-monospace, monospace; }
+.jp-font { font-family: 'textbook', 'Shippori Mincho', 'Noto Serif JP', serif; }
+
+/* Kumiko & Shōji Architectural Dividers */
+.hairline-border { border: 1px solid var(--zen-border); }
+.hairline-border-t { border-top: 1px solid var(--zen-border); }
+.hairline-border-b { border-bottom: 1px solid var(--zen-border); }
+.hairline-border-r { border-right: 1px solid var(--zen-border); }
+
+/* Branch Architectural Distinct Colors */
+.branch-kurogane { border-left: 3px solid var(--zen-kurogane) !important; }
+.branch-aizome { border-left: 3px solid var(--zen-aizome) !important; }
+.branch-shu { border-left: 3px solid var(--zen-shu) !important; }
+.branch-matcha { border-left: 3px solid var(--zen-matcha) !important; }
+
+/* Navigation Dock Button Styling */
+.nav-dock-btn {
+  border-bottom: 2px solid transparent;
+  color: #737373;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.15s ease;
+}
+.nav-dock-btn:hover { color: var(--zen-kurogane); }
+.nav-dock-btn.active-dock-tab {
+  border-bottom: 2px solid var(--zen-kurogane) !important;
+  color: var(--zen-kurogane) !important;
+  font-weight: 700;
+}
+.nav-dock-btn:active {
+  transform: scale(0.97);
+}
+
+/* Subtle Interactive Tactile Press */
+.tap-press {
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.12s ease;
+}
+.tap-press:active { transform: scale(0.98); }
+
+/* Progressive Disclosure Animation */
+.disclosure-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+.disclosure-drawer.open {
+  max-height: 2400px;
+  opacity: 1;
+}
+
+/* Invisible Scrollbars Everywhere (No Scrollbars Invariant) */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Mobile-Style Drag-To-Scroll Indicator & Cursor */
+.overflow-y-auto, .overflow-x-auto, [data-drag-scroll] {
+  overscroll-behavior: contain;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+body.is-dragging-active, body.is-dragging-active * {
+  cursor: grabbing !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Inline Sync Telemetry Progress Bar */
+.sync-progress-bar {
+  background: repeating-linear-gradient(45deg, #C23B22, #C23B22 10px, #9E2E18 10px, #9E2E18 20px);
+  background-size: 200% 200%;
+  animation: syncStripes 1s linear infinite;
+}
+@keyframes syncStripes {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}

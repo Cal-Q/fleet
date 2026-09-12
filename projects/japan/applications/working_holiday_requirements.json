@@ -1,0 +1,101 @@
+{
+  "program": "Visto Vacanza-Lavoro (Working Holiday Visa) Italia-Giappone",
+  "effective_date": "2026-04-01",
+  "official_url": "https://www.it.emb-japan.go.jp/itpr_it/visto_italiani_vacanza-lavoro.html",
+  "embassy_contact": {
+    "email": "consolare@ro.mofa.go.jp",
+    "address": "Via Quintino Sella, 60, 00187 Roma",
+    "procedure": "Email preventiva con documenti -> Ricezione convocazione -> Appuntamento di persona a Roma"
+  },
+  "financial_requirements": {
+    "visa_fee_eur": 0.0,
+    "fee_note": "Gratuito per cittadini italiani (reciprocità bilaterale)",
+    "return_flight_funds_eur": 2000.0,
+    "initial_living_funds_eur": 1800.0,
+    "total_recommended_balance_eur": 3800.0,
+    "proof_type": "Estratto conto bancario degli ultimi 3 mesi intestato al richiedente"
+  },
+  "candidate_eligibility": {
+    "candidate": "Patrik Potenza",
+    "birth_date": "2002-01-27",
+    "age": 24,
+    "max_age_limit": 30,
+    "eligible_until": "2033-01-26",
+    "citizenship": "Italiana",
+    "residence": "Torino (TO), Italia",
+    "status": "fully_eligible"
+  },
+  "documents": [
+    {
+      "id": "wh_passport",
+      "name": "Passaporto Ordinario Italiano",
+      "details": "Minimo 2 pagine bianche contigue; validità residua di almeno 15 mesi (durata soggiorno + 3 mesi)",
+      "mandatory": true,
+      "cost_eur": 116.0
+    },
+    {
+      "id": "wh_app_form",
+      "name": "Modulo di Richiesta Visto (査証申請書)",
+      "details": "Visa Application Form compilato e firmato",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_photo",
+      "name": "1 Fototessera ICAO recente",
+      "details": "Scattata negli ultimi 6 mesi; incollata tassativamente con colla (NO graffette o spillatrice)",
+      "mandatory": true,
+      "cost_eur": 8.0
+    },
+    {
+      "id": "wh_cv",
+      "name": "Curriculum Vitae (履歴書)",
+      "details": "In lingua inglese o giapponese con percorso accademico e lavorativo",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_activity_plan",
+      "name": "Schema delle Attività Previste (活動予定概要)",
+      "details": "Itinerario cronologico e programma di soggiorno/viaggio/lavoro accessorio",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_reason_letter",
+      "name": "Dichiarazione d'Intenti / Motivazione (理由書)",
+      "details": "Formato libero (inglese o giapponese): ragioni culturali e personali del soggiorno vacanza",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_bank_statement",
+      "name": "Estratto Conto Bancario Ultimi 3 Mesi",
+      "details": "Intestato al candidato, saldo attivo >= 3.800 € (o 1.800 € con volo A/R confermato)",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_flight_reservation",
+      "name": "Biglietto Aereo A/R (o prova fondi)",
+      "details": "Solo se già prenotato; altrimenti coperto dal fondo di 2.000 € nell'estratto conto",
+      "mandatory": false,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_health_pledge",
+      "name": "Dichiarazione Adesione Assicurazione Sanitaria",
+      "details": "Impegno formale all'iscrizione al Kokumin Kenko Hoken al comune di arrivo (~3.500 JPY/mese)",
+      "mandatory": true,
+      "cost_eur": 0.0
+    },
+    {
+      "id": "wh_privacy_consent",
+      "name": "Modulo di Consenso Dati Personali",
+      "details": "Informativa privacy consolare sottoscritta",
+      "mandatory": true,
+      "cost_eur": 0.0
+    }
+  ],
+  "strategic_recommendation": "Preservare intatto come Safety Net (Plan B) post-selezione MEXT o post-laurea L-11. Non consumare prima di Febbraio 2027 per non compromettere la borsa MEXT (117.000 JPY/mese, 100% spesato) né violare il vincolo di frequenza continuativa UniTO."
+}

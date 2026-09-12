@@ -1,0 +1,78 @@
+<!-- tools/templates/components/tab_interview.html — Zen Shōji Branching Tree (Zero-Scroll) -->
+<section id="section-interview" class="h-full flex flex-col space-y-3 overflow-hidden hidden">
+  <!-- Asymmetrical Telemetry Strip (Anti-Clone) -->
+  <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="w-6 h-6 flex items-center justify-center bg-[#1E2C3A] text-white text-xs font-bold jp-font">面</span>
+      <div>
+        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">Simulatore Colloquio & Modelli Keigo</h2>
+        <span class="text-[10px] font-mono text-neutral-400">Prova Orale Ambasciata di Roma (Pomeriggio Prove Scritte)</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+      <span class="px-2 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332] font-bold">Filtro Accademico 100%</span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Commissione Ministeriale</span>
+    </div>
+  </div>
+
+  <!-- Branching Information Tree: Trunk (Left) & Leaf Stage (Right) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-3 overflow-hidden">
+    <!-- Branch Selector Trunk (Col 4) -->
+    <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
+      <div class="space-y-2">
+        <!-- Branch: Orale (Aizome) -->
+        <div class="branch-aizome p-3 border border-black/10 bg-white space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">面</span>
+              <strong class="text-[#1E2C3A]">QUESITI DI SELEZIONE</strong>
+            </div>
+            <span class="text-[10px] font-mono text-[#264332] bg-[#EEF7F1] px-1.5 py-0.5 border border-[#264332]/20 font-bold">Sonkeigo / Kenjougo</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Sintesi vocale e risposte modello ufficiali</div>
+        </div>
+
+        <!-- Academic Persona Guidance Notice -->
+        <div class="p-3 bg-[#FAF8F5] border border-black/10 space-y-1.5 text-xs">
+          <div class="flex items-center gap-1.5 text-[10px] font-mono font-bold text-[#181A1B] uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#264332]"></span>
+            <span>Triade Sociologica Obbligatoria:</span>
+          </div>
+          <p class="text-[11px] text-neutral-600 font-sans leading-relaxed">
+            1. <b>Terzi Luoghi & Socialità</b>: Prevenzione isolamento giovanile (Oldenburg).<br>
+            2. <b>Sinoira Gang</b>: No-profit Comala e Madiba a Torino.<br>
+            3. <b>Etnografia</b>: Circoli universitari (サークル) per la tesi L-11 UniTO.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4-Pillar Action Guidance & Invariant Box -->
+      <div class="p-3 bg-white border border-black/10 text-xs font-mono space-y-2">
+        <div class="font-bold text-[#1E2C3A] uppercase text-[11px] border-b border-black/5 pb-1">
+          Guida Rapida • Slot 3 (45m)
+        </div>
+        <div class="text-[11px] text-neutral-600 space-y-1.5">
+          <div>• <b>Cosa fare</b>: Pratica i quesiti orali probabili dell'Ambasciata.</div>
+          <div>• <b>Come farlo</b>: Premi <i>Ascolta</i>, recita la risposta usando la Triade Sociologica, poi verifica il modello.</div>
+          <div>• <b>Quando ho finito</b>: Registrazione automatica all'ascolto di un quesito.</div>
+        </div>
+        <!-- Come Continuare -->
+        <div class="pt-1.5 border-t border-black/5">
+          <button onclick="window.launchRoutineSlot(4)" class="w-full py-1.5 px-2 bg-[#C23B22] hover:bg-[#a8331d] text-white font-mono text-[10px] font-bold uppercase transition tap-press flex items-center justify-center gap-1">
+            <span>Procedi allo Slot 4: Drill Test MEXT →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leaf Stage (Col 8) -->
+    <div class="md:col-span-8 flex flex-col bg-white border border-black/10 overflow-hidden">
+      <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+        <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Domande Probabili della Commissione</span>
+        <span class="text-[10px] font-mono text-neutral-500">Formulazione Bilingue JA/IT</span>
+      </div>
+      <div id="interviewContainer" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3 space-y-3"></div>
+    </div>
+  </div>
+</section>
+

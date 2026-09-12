@@ -1,0 +1,159 @@
+{
+  "student": {
+    "name": "Patrik Potenza",
+    "matricola": "993141",
+    "degree_course": "Lingue e Culture dell'Asia e dell'Africa (L-11)",
+    "university": "Università degli Studi di Torino",
+    "official_media_aritmetica": 30.0,
+    "official_media_ponderata": 30.0,
+    "high_school": {
+      "school_name": "IIS Ettore Majorana",
+      "location": "Grugliasco (Torino), Italy",
+      "qualification": "Diploma di Perito Informatico",
+      "graduation_year": 2019,
+      "grade": "90 / 100"
+    },
+    "emergency_contacts": {
+      "location": "Torino, Italy",
+      "relations": ["Father", "Mother", "Brother"]
+    }
+  },
+  "summary": {
+    "cfu_verbalizzati_unito": 6,
+    "cfu_esterni_showa": 2,
+    "cfu_totali_attuali": 8,
+    "mext_gpa_attuale": 3.0,
+    "mext_gpa_formula": "((CFU_P3 * 3) + (CFU_P2 * 2) + (CFU_P1 * 1) + (CFU_P0 * 0)) / CFU_Totali"
+  },
+  "attivita_superate": [
+    {
+      "code": "STU0668",
+      "name": "INTRODUZIONE AGLI STUDI SUL GIAPPONE (ON-LINE)",
+      "year": 1,
+      "cfu": 6,
+      "status": "Superata",
+      "academic_year": "2025/2026",
+      "grade": "30L",
+      "numeric_grade": 30,
+      "date": "2026-02-05",
+      "mext_point": 3,
+      "is_area": true,
+      "notes": "Verbalizzato con lode. Punteggio MEXT massimo (3 punti)."
+    },
+    {
+      "code": "STU0755",
+      "name": "OFA – SU: COMPETENZE DI ITALIANO PER LE SCIENZE UMANISTICHE",
+      "year": 1,
+      "cfu": 0,
+      "status": "Superata",
+      "academic_year": "2025/2026",
+      "grade": "IDO",
+      "numeric_grade": null,
+      "date": "2025-10-29",
+      "mext_point": null,
+      "is_area": false,
+      "notes": "Idoneità conseguita. Nessun impatto su media/CFU."
+    },
+    {
+      "code": "SHOWA_Z000149",
+      "name": "Basic Japanese I (Showa Women's University, Tokyo)",
+      "year": 1,
+      "cfu": 2,
+      "status": "Certificato esterno",
+      "academic_year": "2025/2026",
+      "grade": "S (100-90)",
+      "numeric_grade": 30,
+      "date": "2026-08-27",
+      "mext_point": 3,
+      "is_area": true,
+      "notes": "Certificato ufficiale No. Z000149 (Student ID 70326052). In attesa di convalida TAF D/F UniTO."
+    }
+  ],
+  "attivita_in_corso_frequentate": [
+    {
+      "code": "LIN0005",
+      "name": "LINGUA GIAPPONESE (prima annualità)",
+      "year": 1,
+      "cfu": 12,
+      "status": "Frequenza attribuita d'ufficio",
+      "academic_year": "2025/2026",
+      "grade": null,
+      "is_area": true,
+      "notes": "Insegnamento fondamentale d'area. Da verbalizzare per il contingente crediti."
+    },
+    {
+      "code": "STU0625",
+      "name": "STORIA DEL GIAPPONE",
+      "year": 1,
+      "cfu": 12,
+      "status": "Frequenza attribuita d'ufficio",
+      "academic_year": "2025/2026",
+      "grade": null,
+      "is_area": true,
+      "notes": "Insegnamento fondamentale d'area. Target sessione invernale gennaio/febbraio 2027."
+    },
+    {
+      "code": "STU0160",
+      "name": "LINGUA E TRADUZIONE INGLESE (prima annualità)",
+      "year": 1,
+      "cfu": 12,
+      "status": "Frequenza attribuita d'ufficio",
+      "academic_year": "2025/2026",
+      "grade": null,
+      "is_area": false,
+      "parziali": [
+        {"data": "2026-06-17", "prova": "Lettorato cognomi M-Z", "esito": "26"},
+        {"data": "2026-07-31", "prova": "Parziale mod. 1", "esito": "Insufficiente"}
+      ],
+      "notes": "Parziali non completati. Non influisce sulla media finché non verbalizzato."
+    },
+    {
+      "code": "K0314",
+      "name": "LETTERATURA BIZANTINA",
+      "year": 1,
+      "cfu": 6,
+      "status": "Frequenza attribuita d'ufficio",
+      "academic_year": "2025/2026",
+      "grade": null,
+      "is_area": false,
+      "notes": "Insegnamento a scelta/TAF affine. Non verbalizzato."
+    },
+    {
+      "code": "STU0286",
+      "name": "LETTERATURA PER RAGAZZI",
+      "year": 1,
+      "cfu": 12,
+      "status": "Frequenza attribuita d'ufficio",
+      "academic_year": "2025/2026",
+      "grade": null,
+      "is_area": false,
+      "notes": "Insegnamento a scelta/TAF affine. Non verbalizzato."
+    }
+  ],
+  "attivita_pianificate": [
+    {
+      "code": "LIN0128",
+      "name": "LINGUA GIAPPONESE (terza annualità)",
+      "year": 0,
+      "cfu": 9,
+      "status": "Pianificata",
+      "is_area": true
+    },
+    {
+      "code": "LIN0537",
+      "name": "ATTIVITA' FORMATIVA ALL'ESTERO",
+      "year": 0,
+      "cfu": 3,
+      "status": "Pianificata",
+      "is_area": true
+    },
+    {
+      "code": "LIN0538",
+      "name": "ATTIVITA' DI RICERCA ALL'ESTERO PER LA PROVA FINALE",
+      "year": 0,
+      "cfu": 3,
+      "status": "Pianificata",
+      "is_area": true
+    }
+  ]
+}

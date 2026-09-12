@@ -1,0 +1,50 @@
+{
+  "sessions": [
+    {
+      "session_id": "sess_1789056269",
+      "timestamp": "2026-09-10T16:04:29.618207",
+      "score": 0,
+      "total": 0,
+      "percentage": 0.0,
+      "time_seconds": 6,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 0
+        },
+        "B": {
+          "correct": 0,
+          "total": 0
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {}
+    },
+    {
+      "session_id": "sess_1789056271",
+      "timestamp": "2026-09-10T16:04:31.458345",
+      "score": 0,
+      "total": 0,
+      "percentage": 0.0,
+      "time_seconds": 8,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 0
+        },
+        "B": {
+          "correct": 0,
+          "total": 0
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {}
+    }
+  ]
+}

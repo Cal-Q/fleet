@@ -1,0 +1,59 @@
+<!-- tools/templates/components/header_zen.html — Compact Zen Masthead with Real-Time Sliding Track -->
+<!-- Strictly <= 200 lines invariant. -->
+<header class="flex-shrink-0 h-[40px] px-3 bg-[#FAF8F5] border-b border-black/10 flex items-center justify-between font-mono select-none z-30">
+  <!-- Left: Candidate Academic Identity Badge -->
+  <div class="flex items-center gap-2 text-xs">
+    <div class="flex items-center gap-1">
+      <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">文</span>
+      <span class="font-bold text-[#181A1B] text-[11px] tracking-tight hidden sm:inline">UniTO L-11</span>
+    </div>
+    <span class="text-neutral-300 hidden sm:inline">/</span>
+    <span class="px-1.5 py-0.5 bg-[#264332]/10 text-[#264332] text-[10px] font-bold border border-[#264332]/20">
+      30.0 GPA • 8 CFU
+    </span>
+  </div>
+
+  <!-- Center: Real-time Swipe Track & Direct Cues (Sinoira Gang Pattern) -->
+  <div class="flex items-center gap-2 text-[10px]">
+    <!-- Mobile Swipe Cue -->
+    <span class="flex items-center gap-1 md:hidden text-neutral-400 text-[9px]">
+      <span class="text-neutral-300">◄</span>
+    </span>
+
+    <!-- Sliding Dot & Pill Track Indicator -->
+    <div class="w-28 sm:w-36 h-3.5 bg-black/5 border border-black/10 rounded-full relative p-0.5 flex items-center justify-between overflow-hidden">
+      <!-- 5 Target Clickable Dots -->
+      <button id="topDot_routine" class="w-1.5 h-1.5 rounded-full bg-black/30 z-10 hover:bg-black transition-colors mx-1 tap-press active:scale-75" title="01 Routine"></button>
+      <button id="topDot_study" class="w-1.5 h-1.5 rounded-full bg-black/30 z-10 hover:bg-black transition-colors mx-1 tap-press active:scale-75" title="02 Studio"></button>
+      <button id="topDot_bunki" class="w-1.5 h-1.5 rounded-full bg-black/30 z-10 hover:bg-black transition-colors mx-1 tap-press active:scale-75" title="03 Bunki"></button>
+      <button id="topDot_exams" class="w-1.5 h-1.5 rounded-full bg-black/30 z-10 hover:bg-black transition-colors mx-1 tap-press active:scale-75" title="04 Prove"></button>
+      <button id="topDot_dossier" class="w-1.5 h-1.5 rounded-full bg-black/30 z-10 hover:bg-black transition-colors mx-1 tap-press active:scale-75" title="05 Dossier"></button>
+
+      <!-- Continuous Real-Time Sliding Black Pill -->
+      <div
+        id="topTrackPill"
+        class="absolute top-0.5 bottom-0.5 left-0 rounded-full bg-[#181A1B] pointer-events-none will-change-transform"
+        style="width: 20%; transform: translate3d(0%, 0, 0);"
+      ></div>
+    </div>
+
+    <!-- Active Stage Label -->
+    <span id="topStageLabel" class="font-bold text-[#181A1B] text-[10px] tracking-wider min-w-[75px]">
+      日課 ROUTINE
+    </span>
+
+    <!-- Mobile Swipe Right Cue -->
+    <span class="flex items-center gap-1 md:hidden text-neutral-400 text-[9px]">
+      <span class="text-neutral-300">►</span>
+    </span>
+  </div>
+
+  <!-- Right: Official MEXT Deadline Countdown -->
+  <div class="flex items-center gap-1.5 text-xs">
+    <div class="px-2 py-0.5 bg-[#C23B22]/10 border border-[#C23B22]/30 text-[#C23B22] text-[10px] font-bold flex items-center gap-1">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#C23B22] animate-pulse"></span>
+      <span id="countdownDays" class="font-bold">152d</span>
+      <span class="hidden sm:inline text-[9px] text-[#C23B22]/80">al Bando MEXT</span>
+    </div>
+  </div>
+</header>

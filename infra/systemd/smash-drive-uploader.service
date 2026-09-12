@@ -1,0 +1,15 @@
+[Unit]
+Description=Smash Google Drive Archiver (Cloud Storage Egress)
+After=network.target
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-broadcaster
+ExecStart=/home/smashbot/smash-agent/backend/.venv/bin/python3 /home/smashbot/smash-broadcaster/drive_uploader.py
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

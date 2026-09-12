@@ -1,0 +1,18 @@
+[Unit]
+Description=PokeVault Telegram Bot
+After=network.target
+
+[Service]
+User=pokeuser
+Group=pokeuser
+WorkingDirectory=/opt/pokevault
+EnvironmentFile=/opt/pokevault/.env
+Environment="DATABASE_URL=/var/lib/pokevault/vault.db"
+Environment="DB_PATH=/var/lib/pokevault/vault.db"
+# This points to the python inside your venv folder
+ExecStart=/opt/pokevault/venv/bin/python /opt/pokevault/vault.py
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target

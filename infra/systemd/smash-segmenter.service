@@ -1,0 +1,14 @@
+[Unit]
+Description=Smash Master Segmenter (Lossless Copy Chunk Slicer)
+After=network.target
+
+[Service]
+Type=simple
+User=smashbot
+ExecStart=/usr/local/bin/ffmpeg -v warning -nostats -re -i "udp://0.0.0.0:8890?reuse=1&fifo_size=10000000&overrun_nonfatal=1" -c copy -f segment -segment_time 6 -strftime 1 -reset_timestamps 1 /home/smashbot/storage/staging/%%Y%%m%%dT%%H%%M%%SZ.mp4
+Restart=always
+RestartSec=2
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

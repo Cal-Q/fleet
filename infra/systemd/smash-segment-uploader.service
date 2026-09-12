@@ -1,0 +1,23 @@
+[Unit]
+Description=Smash segment uploader (drains recorded segments to Google Drive)
+Documentation=file:///home/ssbu_brain/docs/specs/ARCHIVE_PIPELINE_DESIGN.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-agent/backend
+ExecStart=/home/smashbot/smash-agent/backend/.venv/bin/python \
+          /home/smashbot/smash-agent/backend/segment_uploader.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/smashbot/smash-storage/logs/uploader.log
+StandardError=append:/home/smashbot/smash-storage/logs/uploader.log
+
+# Recording must never be able to starve the other tenants on this host.
+Nice=5
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=multi-user.target

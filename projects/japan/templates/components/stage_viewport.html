@@ -1,0 +1,48 @@
+<!-- tools/templates/components/stage_viewport.html — GPU Accelerated Horizontal Stage Track -->
+<!-- Strictly <= 200 lines invariant. -->
+<main
+  id="stageViewportContainer"
+  class="flex-1 min-h-0 w-full overflow-hidden relative select-text touch-pan-y"
+>
+  <div
+    id="stageViewportTrack"
+    class="h-full w-full flex flex-row will-change-transform"
+    style="transform: translate3d(0%, 0, 0);"
+  >
+    <!-- Stage 1: 日課 ROUTINE (Daily Command Center) -->
+    <div id="stage_routine" class="w-full min-w-full h-full flex-shrink-0 px-2 sm:px-4 py-1 flex flex-col overflow-hidden">
+      <div class="h-full flex flex-col space-y-2 overflow-y-auto overscroll-contain no-scrollbar">
+        {% include "components/daily_routine.html" %}
+      </div>
+    </div>
+
+    <!-- Stage 2: 学習 STUDIO (Kanji / Vocab / Grammar Batch Groups) -->
+    <div id="stage_study" class="w-full min-w-full h-full flex-shrink-0 px-2 sm:px-4 py-1 flex flex-col overflow-hidden">
+      <div class="h-full flex flex-col space-y-2 overflow-y-auto overscroll-contain no-scrollbar">
+        {% include "components/tab_study.html" %}
+      </div>
+    </div>
+
+    <!-- Stage 3: 復習 BUNKI (SRS Anki Sync & Travel Monitor) -->
+    <div id="stage_bunki" class="w-full min-w-full h-full flex-shrink-0 px-2 sm:px-4 py-1 flex flex-col overflow-hidden">
+      <div class="h-full flex flex-col space-y-2 overflow-y-auto overscroll-contain no-scrollbar">
+        {% include "components/tab_bunki.html" %}
+      </div>
+    </div>
+
+    <!-- Stage 4: 試練 PROVE (Drill Test MEXT & Orale Keigo) -->
+    <div id="stage_exams" class="w-full min-w-full h-full flex-shrink-0 px-2 sm:px-4 py-1 flex flex-col overflow-hidden">
+      <div class="h-full flex flex-col space-y-2 overflow-y-auto overscroll-contain no-scrollbar">
+        {% include "components/tab_exams.html" %}
+      </div>
+    </div>
+
+    <!-- Stage 5: 計画 DOSSIER (Esse3 Record, Piano di Studio, Università) -->
+    <div id="stage_dossier" class="w-full min-w-full h-full flex-shrink-0 px-2 sm:px-4 py-1 flex flex-col overflow-hidden">
+      <div class="h-full flex flex-col space-y-2 overflow-y-auto overscroll-contain no-scrollbar">
+        {% include "components/tab_dossier.html" %}
+      </div>
+    </div>
+  </div>
+</main>
+

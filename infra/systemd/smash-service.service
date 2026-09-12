@@ -1,0 +1,15 @@
+[Unit]
+Description=Smash Cloud Backend Service & Telemetry API
+After=network.target
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-agent/backend
+ExecStart=/home/smashbot/smash-agent/backend/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 4200
+Restart=always
+RestartSec=2
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

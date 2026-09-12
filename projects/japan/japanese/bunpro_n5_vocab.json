@@ -1,0 +1,8802 @@
+[
+  {
+    "id": "849",
+    "raw": "私（わたし）",
+    "word": "私",
+    "reading": "わたし",
+    "meaning": "I, me",
+    "level": "N5"
+  },
+  {
+    "id": "685",
+    "raw": "本（ほん）",
+    "word": "本",
+    "reading": "ほん",
+    "meaning": "book, volume, script, counter (for long cylindrical objects like pencils, etc.)",
+    "level": "N5"
+  },
+  {
+    "id": "791",
+    "raw": "猫（ねこ）",
+    "word": "猫",
+    "reading": "ねこ",
+    "meaning": "cat",
+    "level": "N5"
+  },
+  {
+    "id": "507",
+    "raw": "学生（がくせい）",
+    "word": "学生",
+    "reading": "がくせい",
+    "meaning": "student (esp. a university student)",
+    "level": "N5"
+  },
+  {
+    "id": "882",
+    "raw": "綺麗（きれい）",
+    "word": "綺麗",
+    "reading": "きれい",
+    "meaning": "pretty, lovely, beautiful, fair, clean",
+    "level": "N5"
+  },
+  {
+    "id": "755",
+    "raw": "海（うみ）",
+    "word": "海",
+    "reading": "うみ",
+    "meaning": "sea, ocean, waters",
+    "level": "N5"
+  },
+  {
+    "id": "645",
+    "raw": "映画（えいが）",
+    "word": "映画",
+    "reading": "えいが",
+    "meaning": "movie, film",
+    "level": "N5"
+  },
+  {
+    "id": "492",
+    "raw": "好（す）き",
+    "word": "好き",
+    "reading": "すき",
+    "meaning": "liking, fondness, love",
+    "level": "N5"
+  },
+  {
+    "id": "511",
+    "raw": "家（いえ）",
+    "word": "家",
+    "reading": "いえ",
+    "meaning": "house, residence, dwelling, family",
+    "level": "N5"
+  },
+  {
+    "id": "512",
+    "raw": "家（うち）",
+    "word": "家",
+    "reading": "うち",
+    "meaning": "house, me, my, ours",
+    "level": "N5"
+  },
+  {
+    "id": "740",
+    "raw": "水（みず）",
+    "word": "水",
+    "reading": "みず",
+    "meaning": "water (esp. cool, fresh water, e.g. drinking water)",
+    "level": "N5"
+  },
+  {
+    "id": "429",
+    "raw": "同（おな）じ",
+    "word": "同じ",
+    "reading": "おなじ",
+    "meaning": "same, identical, equal, uniform, equivalent, similar, common (origin), changeless, alike",
+    "level": "N5"
+  },
+  {
+    "id": "474",
+    "raw": "大変（たいへん）",
+    "word": "大変",
+    "reading": "たいへん",
+    "meaning": "very, greatly, immense, enormous, great, serious, grave, dreadful, terrible, difficult, hard, major incident, disaster, tough, problem, hardship, terribly, awfully",
+    "level": "N5"
+  },
+  {
+    "id": "977",
+    "raw": "質問（しつもん）",
+    "word": "質問",
+    "reading": "しつもん",
+    "meaning": "question, inquiry, enquiry",
+    "level": "N5"
+  },
+  {
+    "id": "972",
+    "raw": "あなた",
+    "word": "あなた",
+    "reading": "あなた",
+    "meaning": "you",
+    "level": "N5"
+  },
+  {
+    "id": "216",
+    "raw": "ペン",
+    "word": "ペン",
+    "reading": "ペン",
+    "meaning": "pen",
+    "level": "N5"
+  },
+  {
+    "id": "416",
+    "raw": "友達（ともだち）",
+    "word": "友達",
+    "reading": "ともだち",
+    "meaning": "friend, companion",
+    "level": "N5"
+  },
+  {
+    "id": "663",
+    "raw": "暑（あつ）い",
+    "word": "暑い",
+    "reading": "あつい",
+    "meaning": "hot (weather, etc.), warm",
+    "level": "N5"
+  },
+  {
+    "id": "468",
+    "raw": "大丈夫（だいじょうぶ）",
+    "word": "大丈夫",
+    "reading": "だいじょうぶ",
+    "meaning": "safe, all right, alright, OK, okay, sure",
+    "level": "N5"
+  },
+  {
+    "id": "412",
+    "raw": "危険（きけん）",
+    "word": "危険",
+    "reading": "きけん",
+    "meaning": "danger, peril, hazard",
+    "level": "N5"
+  },
+  {
+    "id": "475",
+    "raw": "大好（だいす）き",
+    "word": "大好き",
+    "reading": "だいすき",
+    "meaning": "loveable, very likeable, like very much",
+    "level": "N5"
+  },
+  {
+    "id": "1072",
+    "raw": "風邪（かぜ）",
+    "word": "風邪",
+    "reading": "かぜ",
+    "meaning": "common cold, cold, influenza, flu, ague",
+    "level": "N5"
+  },
+  {
+    "id": "49",
+    "raw": "お母（かあ）さん",
+    "word": "お母さん",
+    "reading": "おかあさん",
+    "meaning": "mother",
+    "level": "N5"
+  },
+  {
+    "id": "789",
+    "raw": "犬（いぬ）",
+    "word": "犬",
+    "reading": "いぬ",
+    "meaning": "dog (Canis (lupus) familiaris)",
+    "level": "N5"
+  },
+  {
+    "id": "243",
+    "raw": "レストラン",
+    "word": "レストラン",
+    "reading": "レストラン",
+    "meaning": "restaurant (esp. Western-style)",
+    "level": "N5"
+  },
+  {
+    "id": "1025",
+    "raw": "金曜日（きんようび）",
+    "word": "金曜日",
+    "reading": "きんようび",
+    "meaning": "Friday",
+    "level": "N5"
+  },
+  {
+    "id": "636",
+    "raw": "日本人（にほんじん）",
+    "word": "日本人",
+    "reading": "にほんじん",
+    "meaning": "Japanese person, Japanese people",
+    "level": "N5"
+  },
+  {
+    "id": "358",
+    "raw": "先生（せんせい）",
+    "word": "先生",
+    "reading": "せんせい",
+    "meaning": "teacher, master, doctor",
+    "level": "N5"
+  },
+  {
+    "id": "73",
+    "raw": "カレンダー",
+    "word": "カレンダー",
+    "reading": "カレンダー",
+    "meaning": "calendar",
+    "level": "N5"
+  },
+  {
+    "id": "577",
+    "raw": "必要（ひつよう）",
+    "word": "必要",
+    "reading": "ひつよう",
+    "meaning": "necessary, needed, essential, indispensable",
+    "level": "N5"
+  },
+  {
+    "id": "579",
+    "raw": "忙（いそが）しい",
+    "word": "忙しい",
+    "reading": "いそがしい",
+    "meaning": "busy, hectic, occupied, engaged",
+    "level": "N5"
+  },
+  {
+    "id": "792",
+    "raw": "玄関（げんかん）",
+    "word": "玄関",
+    "reading": "げんかん",
+    "meaning": "entranceway, entry hall, vestibule, foyer, entryway, mud room",
+    "level": "N5"
+  },
+  {
+    "id": "665",
+    "raw": "暗（くら）い",
+    "word": "暗い",
+    "reading": "くらい",
+    "meaning": "dark, gloomy",
+    "level": "N5"
+  },
+  {
+    "id": "643",
+    "raw": "明日（あした）",
+    "word": "明日",
+    "reading": "あした",
+    "meaning": "tomorrow",
+    "level": "N5"
+  },
+  {
+    "id": "674",
+    "raw": "月曜日（げつようび）",
+    "word": "月曜日",
+    "reading": "げつようび",
+    "meaning": "Monday",
+    "level": "N5"
+  },
+  {
+    "id": "743",
+    "raw": "汚（きたな）い",
+    "word": "汚い",
+    "reading": "きたない",
+    "meaning": "dirty, filthy, foul, unclean",
+    "level": "N5"
+  },
+  {
+    "id": "367",
+    "raw": "公園（こうえん）",
+    "word": "公園",
+    "reading": "こうえん",
+    "meaning": "(public) park",
+    "level": "N5"
+  },
+  {
+    "id": "548",
+    "raw": "広（ひろ）い",
+    "word": "広い",
+    "reading": "ひろい",
+    "meaning": "spacious, vast, wide",
+    "level": "N5"
+  },
+  {
+    "id": "564",
+    "raw": "彼（かれ）",
+    "word": "彼",
+    "reading": "かれ",
+    "meaning": "he, him",
+    "level": "N5"
+  },
+  {
+    "id": "113",
+    "raw": "さん",
+    "word": "さん",
+    "reading": "さん",
+    "meaning": "Mr., Mrs., Miss, Ms., -san",
+    "level": "N5"
+  },
+  {
+    "id": "677",
+    "raw": "有名（ゆうめい）",
+    "word": "有名",
+    "reading": "ゆうめい",
+    "meaning": "famous",
+    "level": "N5"
+  },
+  {
+    "id": "567",
+    "raw": "彼女（かのじょ）",
+    "word": "彼女",
+    "reading": "かのじょ",
+    "meaning": "she, her",
+    "level": "N5"
+  },
+  {
+    "id": "423",
+    "raw": "可愛（かわい）い",
+    "word": "可愛い",
+    "reading": "かわいい",
+    "meaning": "cute, adorable, charming, lovely, pretty",
+    "level": "N5"
+  },
+  {
+    "id": "351",
+    "raw": "元気（げんき）",
+    "word": "元気",
+    "reading": "げんき",
+    "meaning": "lively, full of spirit, energetic, vigorous, vital, spirited",
+    "level": "N5"
+  },
+  {
+    "id": "192",
+    "raw": "ノート",
+    "word": "ノート",
+    "reading": "ノート",
+    "meaning": "notebook, copy-book, exercise book",
+    "level": "N5"
+  },
+  {
+    "id": "680",
+    "raw": "服（ふく）",
+    "word": "服",
+    "reading": "ふく",
+    "meaning": "clothes (esp. Western clothes)",
+    "level": "N5"
+  },
+  {
+    "id": "421",
+    "raw": "古（ふる）い",
+    "word": "古い",
+    "reading": "ふるい",
+    "meaning": "old (not person), aged, ancient, antiquated, stale, threadbare, outmoded, obsolete article",
+    "level": "N5"
+  },
+  {
+    "id": "772",
+    "raw": "火曜日（かようび）",
+    "word": "火曜日",
+    "reading": "かようび",
+    "meaning": "Tuesday",
+    "level": "N5"
+  },
+  {
+    "id": "1047",
+    "raw": "雨（あめ）",
+    "word": "雨",
+    "reading": "あめ",
+    "meaning": "rain",
+    "level": "N5"
+  },
+  {
+    "id": "656",
+    "raw": "晩（ばん）",
+    "word": "晩",
+    "reading": "ばん",
+    "meaning": "evening, night",
+    "level": "N5"
+  },
+  {
+    "id": "200",
+    "raw": "パン",
+    "word": "パン",
+    "reading": "パン",
+    "meaning": "bread, pastries (e.g. croissants), pastry-based products",
+    "level": "N5"
+  },
+  {
+    "id": "95",
+    "raw": "これ",
+    "word": "これ",
+    "reading": "これ",
+    "meaning": "this, this one",
+    "level": "N5"
+  },
+  {
+    "id": "522",
+    "raw": "寿司（すし）",
+    "word": "寿司",
+    "reading": "すし",
+    "meaning": "sushi, anything made with vinegared rice (may also contain vegetables, spices, fish, or other delicacies)",
+    "level": "N5"
+  },
+  {
+    "id": "333",
+    "raw": "何（なん）",
+    "word": "何",
+    "reading": "なん",
+    "meaning": "what",
+    "level": "N5"
+  },
+  {
+    "id": "334",
+    "raw": "何（なに）",
+    "word": "何",
+    "reading": "なに",
+    "meaning": "what",
+    "level": "N5"
+  },
+  {
+    "id": "280",
+    "raw": "丸（まる）い",
+    "word": "丸い",
+    "reading": "まるい",
+    "meaning": "round, circular, spherical",
+    "level": "N5"
+  },
+  {
+    "id": "343",
+    "raw": "便利（べんり）",
+    "word": "便利",
+    "reading": "べんり",
+    "meaning": "convenient, handy, useful",
+    "level": "N5"
+  },
+  {
+    "id": "65",
+    "raw": "お風呂（ふろ）",
+    "word": "お風呂",
+    "reading": "おふろ",
+    "meaning": "bath",
+    "level": "N5"
+  },
+  {
+    "id": "149",
+    "raw": "それ",
+    "word": "それ",
+    "reading": "それ",
+    "meaning": "that, it",
+    "level": "N5"
+  },
+  {
+    "id": "28",
+    "raw": "エアコン",
+    "word": "エアコン",
+    "reading": "エアコン",
+    "meaning": "air con, air conditioner, air conditioning",
+    "level": "N5"
+  },
+  {
+    "id": "51",
+    "raw": "お皿（さら）",
+    "word": "お皿",
+    "reading": "おさら",
+    "meaning": "plate, dish",
+    "level": "N5"
+  },
+  {
+    "id": "82",
+    "raw": "ケーキ",
+    "word": "ケーキ",
+    "reading": "ケーキ",
+    "meaning": "cake",
+    "level": "N5"
+  },
+  {
+    "id": "785",
+    "raw": "牛乳（ぎゅうにゅう）",
+    "word": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "meaning": "(cow's) milk",
+    "level": "N5"
+  },
+  {
+    "id": "70",
+    "raw": "カメラ",
+    "word": "カメラ",
+    "reading": "カメラ",
+    "meaning": "camera",
+    "level": "N5"
+  },
+  {
+    "id": "540",
+    "raw": "帽子（ぼうし）",
+    "word": "帽子",
+    "reading": "ぼうし",
+    "meaning": "hat, cap",
+    "level": "N5"
+  },
+  {
+    "id": "102",
+    "raw": "コンビニ",
+    "word": "コンビニ",
+    "reading": "コンビニ",
+    "meaning": "convenience store",
+    "level": "N5"
+  },
+  {
+    "id": "220",
+    "raw": "ホテル",
+    "word": "ホテル",
+    "reading": "ホテル",
+    "meaning": "hotel",
+    "level": "N5"
+  },
+  {
+    "id": "1053",
+    "raw": "電車（でんしゃ）",
+    "word": "電車",
+    "reading": "でんしゃ",
+    "meaning": "train, electric train",
+    "level": "N5"
+  },
+  {
+    "id": "353",
+    "raw": "兄（あに）",
+    "word": "兄",
+    "reading": "あに",
+    "meaning": "elder brother, older brother",
+    "level": "N5"
+  },
+  {
+    "id": "600",
+    "raw": "手紙（てがみ）",
+    "word": "手紙",
+    "reading": "てがみ",
+    "meaning": "letter",
+    "level": "N5"
+  },
+  {
+    "id": "987",
+    "raw": "車（くるま）",
+    "word": "車",
+    "reading": "くるま",
+    "meaning": "car, automobile, vehicle",
+    "level": "N5"
+  },
+  {
+    "id": "681",
+    "raw": "朝（あさ）",
+    "word": "朝",
+    "reading": "あさ",
+    "meaning": "morning",
+    "level": "N5"
+  },
+  {
+    "id": "62",
+    "raw": "お金（かね）",
+    "word": "お金",
+    "reading": "おかね",
+    "meaning": "money",
+    "level": "N5"
+  },
+  {
+    "id": "627",
+    "raw": "新（あたら）しい",
+    "word": "新しい",
+    "reading": "あたらしい",
+    "meaning": "new, novel, fresh, recent, latest, up-to-date, modern",
+    "level": "N5"
+  },
+  {
+    "id": "703",
+    "raw": "椅子（いす）",
+    "word": "椅子",
+    "reading": "いす",
+    "meaning": "chair, stool",
+    "level": "N5"
+  },
+  {
+    "id": "347",
+    "raw": "傘（かさ）",
+    "word": "傘",
+    "reading": "かさ",
+    "meaning": "umbrella, parasol",
+    "level": "N5"
+  },
+  {
+    "id": "430",
+    "raw": "名前（なまえ）",
+    "word": "名前",
+    "reading": "なまえ",
+    "meaning": "name, full name",
+    "level": "N5"
+  },
+  {
+    "id": "800",
+    "raw": "生徒（せいと）",
+    "word": "生徒",
+    "reading": "せいと",
+    "meaning": "pupil, student",
+    "level": "N5"
+  },
+  {
+    "id": "50",
+    "raw": "お父（とう）さん",
+    "word": "お父さん",
+    "reading": "おとうさん",
+    "meaning": "father, dad, papa, pa, pop, daddy, dada",
+    "level": "N5"
+  },
+  {
+    "id": "654",
+    "raw": "時計（とけい）",
+    "word": "時計",
+    "reading": "とけい",
+    "meaning": "watch, clock, timepiece",
+    "level": "N5"
+  },
+  {
+    "id": "309",
+    "raw": "今日（きょう）",
+    "word": "今日",
+    "reading": "きょう",
+    "meaning": "today, this day",
+    "level": "N5"
+  },
+  {
+    "id": "464",
+    "raw": "夜（よる）",
+    "word": "夜",
+    "reading": "よる",
+    "meaning": "evening, night",
+    "level": "N5"
+  },
+  {
+    "id": "1018",
+    "raw": "部屋（へや）",
+    "word": "部屋",
+    "reading": "へや",
+    "meaning": "room, apartment, flat, pad, chamber",
+    "level": "N5"
+  },
+  {
+    "id": "1085",
+    "raw": "駅（えき）",
+    "word": "駅",
+    "reading": "えき",
+    "meaning": "station",
+    "level": "N5"
+  },
+  {
+    "id": "217",
+    "raw": "ホーム",
+    "word": "ホーム",
+    "reading": "ホーム",
+    "meaning": "platform",
+    "level": "N5"
+  },
+  {
+    "id": "16",
+    "raw": "いい",
+    "word": "いい",
+    "reading": "いい",
+    "meaning": "good, excellent, fine, nice, pleasant, agreeable",
+    "level": "N5"
+  },
+  {
+    "id": "299",
+    "raw": "人（じん）",
+    "word": "人",
+    "reading": "じん",
+    "meaning": "-ian (e.g. Italian), -ite (e.g. Tokyoite)",
+    "level": "N5"
+  },
+  {
+    "id": "300",
+    "raw": "人（ひと）",
+    "word": "人",
+    "reading": "ひと",
+    "meaning": "man, person, others",
+    "level": "N5"
+  },
+  {
+    "id": "301",
+    "raw": "人（にん）",
+    "word": "人",
+    "reading": "にん",
+    "meaning": "counter for people",
+    "level": "N5"
+  },
+  {
+    "id": "648",
+    "raw": "昨日（きのう）",
+    "word": "昨日",
+    "reading": "きのう",
+    "meaning": "yesterday",
+    "level": "N5"
+  },
+  {
+    "id": "164",
+    "raw": "テスト",
+    "word": "テスト",
+    "reading": "テスト",
+    "meaning": "test",
+    "level": "N5"
+  },
+  {
+    "id": "704",
+    "raw": "楽（たの）しい",
+    "word": "楽しい",
+    "reading": "たのしい",
+    "meaning": "enjoyable, fun",
+    "level": "N5"
+  },
+  {
+    "id": "519",
+    "raw": "寒（さむ）い",
+    "word": "寒い",
+    "reading": "さむい",
+    "meaning": "cold (e.g. weather)",
+    "level": "N5"
+  },
+  {
+    "id": "1087",
+    "raw": "高（たか）い",
+    "word": "高い",
+    "reading": "たかい",
+    "meaning": "high, tall",
+    "level": "N5"
+  },
+  {
+    "id": "491",
+    "raw": "女（おんな）の子（こ）",
+    "word": "女の子",
+    "reading": "おんなのこ",
+    "meaning": "girl, daughter",
+    "level": "N5"
+  },
+  {
+    "id": "1058",
+    "raw": "面白（おもしろ）い",
+    "word": "面白い",
+    "reading": "おもしろい",
+    "meaning": "interesting, fascinating, intriguing, enthralling",
+    "level": "N5"
+  },
+  {
+    "id": "83",
+    "raw": "ゲーム",
+    "word": "ゲーム",
+    "reading": "ゲーム",
+    "meaning": "game",
+    "level": "N5"
+  },
+  {
+    "id": "994",
+    "raw": "近（ちか）い",
+    "word": "近い",
+    "reading": "ちかい",
+    "meaning": "near, close, short (distance)",
+    "level": "N5"
+  },
+  {
+    "id": "466",
+    "raw": "大（おお）きい",
+    "word": "大きい",
+    "reading": "おおきい",
+    "meaning": "big, large, great, loud",
+    "level": "N5"
+  },
+  {
+    "id": "495",
+    "raw": "姉（あね）",
+    "word": "姉",
+    "reading": "あね",
+    "meaning": "older sister, elder sister",
+    "level": "N5"
+  },
+  {
+    "id": "888",
+    "raw": "美味（おい）しい",
+    "word": "美味しい",
+    "reading": "おいしい",
+    "meaning": "delicious, tasty, sweet",
+    "level": "N5"
+  },
+  {
+    "id": "148",
+    "raw": "その",
+    "word": "その",
+    "reading": "その",
+    "meaning": "that, the",
+    "level": "N5"
+  },
+  {
+    "id": "10",
+    "raw": "アパート",
+    "word": "アパート",
+    "reading": "アパート",
+    "meaning": "apartment building, apartment block, apartment house",
+    "level": "N5"
+  },
+  {
+    "id": "314",
+    "raw": "今週（こんしゅう）",
+    "word": "今週",
+    "reading": "こんしゅう",
+    "meaning": "this week",
+    "level": "N5"
+  },
+  {
+    "id": "315",
+    "raw": "仕事（しごと）",
+    "word": "仕事",
+    "reading": "しごと",
+    "meaning": "work, job, business, occupation, employment, vocation, task",
+    "level": "N5"
+  },
+  {
+    "id": "462",
+    "raw": "多（おお）い",
+    "word": "多い",
+    "reading": "おおい",
+    "meaning": "many, numerous",
+    "level": "N5"
+  },
+  {
+    "id": "91",
+    "raw": "この",
+    "word": "この",
+    "reading": "この",
+    "meaning": "this",
+    "level": "N5"
+  },
+  {
+    "id": "377",
+    "raw": "冷（つめ）たい",
+    "word": "冷たい",
+    "reading": "つめたい",
+    "meaning": "cold (to the touch), chilly, icy, freezing",
+    "level": "N5"
+  },
+  {
+    "id": "508",
+    "raw": "安（やす）い",
+    "word": "安い",
+    "reading": "やすい",
+    "meaning": "cheap, inexpensive",
+    "level": "N5"
+  },
+  {
+    "id": "110",
+    "raw": "サッカー",
+    "word": "サッカー",
+    "reading": "サッカー",
+    "meaning": "soccer",
+    "level": "N5"
+  },
+  {
+    "id": "1032",
+    "raw": "長（なが）い",
+    "word": "長い",
+    "reading": "ながい",
+    "meaning": "long (distance)",
+    "level": "N5"
+  },
+  {
+    "id": "664",
+    "raw": "暖（あたた）かい",
+    "word": "暖かい",
+    "reading": "あたたかい",
+    "meaning": "warm, mild, genial",
+    "level": "N5"
+  },
+  {
+    "id": "581",
+    "raw": "怖（こわ）い",
+    "word": "怖い",
+    "reading": "こわい",
+    "meaning": "scary, frightening, eerie, dreadful",
+    "level": "N5"
+  },
+  {
+    "id": "1014",
+    "raw": "遠（とお）い",
+    "word": "遠い",
+    "reading": "とおい",
+    "meaning": "far, distant",
+    "level": "N5"
+  },
+  {
+    "id": "1046",
+    "raw": "難（むずか）しい",
+    "word": "難しい",
+    "reading": "むずかしい",
+    "meaning": "difficult, hard, troublesome, complicated, serious (disease, problem, etc.)",
+    "level": "N5"
+  },
+  {
+    "id": "178",
+    "raw": "とても",
+    "word": "とても",
+    "reading": "とても",
+    "meaning": "very, awfully, exceedingly, really",
+    "level": "N5"
+  },
+  {
+    "id": "1061",
+    "raw": "鞄（かばん）",
+    "word": "鞄",
+    "reading": "かばん",
+    "meaning": "bag, satchel, briefcase, basket",
+    "level": "N5"
+  },
+  {
+    "id": "879",
+    "raw": "絵（え）",
+    "word": "絵",
+    "reading": "え",
+    "meaning": "picture, drawing, painting, sketch",
+    "level": "N5"
+  },
+  {
+    "id": "490",
+    "raw": "女（おんな）の人（ひと）",
+    "word": "女の人",
+    "reading": "おんなのひと",
+    "meaning": "woman",
+    "level": "N5"
+  },
+  {
+    "id": "662",
+    "raw": "暇（ひま）",
+    "word": "暇",
+    "reading": "ひま",
+    "meaning": "spare time, free time, leisure, bored",
+    "level": "N5"
+  },
+  {
+    "id": "1057",
+    "raw": "静（しず）か",
+    "word": "静か",
+    "reading": "しずか",
+    "meaning": "quiet, silent",
+    "level": "N5"
+  },
+  {
+    "id": "472",
+    "raw": "大切（たいせつ）",
+    "word": "大切",
+    "reading": "たいせつ",
+    "meaning": "important, necessary, indispensable",
+    "level": "N5"
+  },
+  {
+    "id": "305",
+    "raw": "今（いま）",
+    "word": "今",
+    "reading": "いま",
+    "meaning": "now, the present time, just now, soon, immediately, (one) more",
+    "level": "N5"
+  },
+  {
+    "id": "611",
+    "raw": "授業（じゅぎょう）",
+    "word": "授業",
+    "reading": "じゅぎょう",
+    "meaning": "lesson, class work, teaching, instruction",
+    "level": "N5"
+  },
+  {
+    "id": "58",
+    "raw": "お茶（ちゃ）",
+    "word": "お茶",
+    "reading": "おちゃ",
+    "meaning": "tea (usu. green)",
+    "level": "N5"
+  },
+  {
+    "id": "72",
+    "raw": "カレー",
+    "word": "カレー",
+    "reading": "カレー",
+    "meaning": "curry",
+    "level": "N5"
+  },
+  {
+    "id": "989",
+    "raw": "辛（から）い",
+    "word": "辛い",
+    "reading": "からい",
+    "meaning": "spicy, hot, salty",
+    "level": "N5"
+  },
+  {
+    "id": "683",
+    "raw": "木（き）",
+    "word": "木",
+    "reading": "き",
+    "meaning": "tree, shrub, bush",
+    "level": "N5"
+  },
+  {
+    "id": "534",
+    "raw": "川（かわ）",
+    "word": "川",
+    "reading": "かわ",
+    "meaning": "river, stream",
+    "level": "N5"
+  },
+  {
+    "id": "871",
+    "raw": "細（ほそ）い",
+    "word": "細い",
+    "reading": "ほそい",
+    "meaning": "thin, slender, fine",
+    "level": "N5"
+  },
+  {
+    "id": "715",
+    "raw": "欲（ほ）しい",
+    "word": "欲しい",
+    "reading": "ほしい",
+    "meaning": "wanted, wished for, in need of, desired",
+    "level": "N5"
+  },
+  {
+    "id": "978",
+    "raw": "赤（あか）",
+    "word": "赤",
+    "reading": "あか",
+    "meaning": "red, crimson, scarlet",
+    "level": "N5"
+  },
+  {
+    "id": "639",
+    "raw": "早（はや）い",
+    "word": "早い",
+    "reading": "はやい",
+    "meaning": "fast, quick, hasty, brisk",
+    "level": "N5"
+  },
+  {
+    "id": "899",
+    "raw": "背（せ）が高（たか）い",
+    "word": "背が高い",
+    "reading": "せがたかい",
+    "meaning": "tall (of a person)",
+    "level": "N5"
+  },
+  {
+    "id": "1021",
+    "raw": "野球（やきゅう）",
+    "word": "野球",
+    "reading": "やきゅう",
+    "meaning": "baseball",
+    "level": "N5"
+  },
+  {
+    "id": "780",
+    "raw": "熱（あつ）い",
+    "word": "熱い",
+    "reading": "あつい",
+    "meaning": "hot (thing), passionate",
+    "level": "N5"
+  },
+  {
+    "id": "196",
+    "raw": "バス",
+    "word": "バス",
+    "reading": "バス",
+    "meaning": "bus",
+    "level": "N5"
+  },
+  {
+    "id": "886",
+    "raw": "練習（れんしゅう）",
+    "word": "練習",
+    "reading": "れんしゅう",
+    "meaning": "practice, training, drill, (an) exercise, workout",
+    "level": "N5"
+  },
+  {
+    "id": "445",
+    "raw": "土曜日（どようび）",
+    "word": "土曜日",
+    "reading": "どようび",
+    "meaning": "Saturday",
+    "level": "N5"
+  },
+  {
+    "id": "142",
+    "raw": "そうです",
+    "word": "そうです",
+    "reading": "そうです",
+    "meaning": "that is so, that is right, it looks to me, that's my impression",
+    "level": "N5"
+  },
+  {
+    "id": "741",
+    "raw": "水曜日（すいようび）",
+    "word": "水曜日",
+    "reading": "すいようび",
+    "meaning": "Wednesday",
+    "level": "N5"
+  },
+  {
+    "id": "909",
+    "raw": "自転車（じてんしゃ）",
+    "word": "自転車",
+    "reading": "じてんしゃ",
+    "meaning": "bicycle, bike",
+    "level": "N5"
+  },
+  {
+    "id": "948",
+    "raw": "見（み）る",
+    "word": "見る",
+    "reading": "みる",
+    "meaning": "to see, to look, to watch, to view, to observe",
+    "level": "N5"
+  },
+  {
+    "id": "520",
+    "raw": "寝（ね）る",
+    "word": "寝る",
+    "reading": "ねる",
+    "meaning": "to lie down, to sleep",
+    "level": "N5"
+  },
+  {
+    "id": "949",
+    "raw": "覚（おぼ）える",
+    "word": "覚える",
+    "reading": "おぼえる",
+    "meaning": "to memorize, to memorise, to commit to memory, to learn by heart, to bear in mind, to remember",
+    "level": "N5"
+  },
+  {
+    "id": "1077",
+    "raw": "食（た）べる",
+    "word": "食べる",
+    "reading": "たべる",
+    "meaning": "to eat",
+    "level": "N5"
+  },
+  {
+    "id": "754",
+    "raw": "浴（あ）びる",
+    "word": "浴びる",
+    "reading": "あびる",
+    "meaning": "to splash over oneself (e.g. water), to take (e.g. shower), to bask in (e.g. the sun), to bathe in, to be flooded with (e.g. light), to be covered in",
+    "level": "N5"
+  },
+  {
+    "id": "346",
+    "raw": "借（か）りる",
+    "word": "借りる",
+    "reading": "かりる",
+    "meaning": "to borrow, to have a loan",
+    "level": "N5"
+  },
+  {
+    "id": "982",
+    "raw": "起（お）きる",
+    "word": "起きる",
+    "reading": "おきる",
+    "meaning": "to get up, to rise, to blaze up (fire)",
+    "level": "N5"
+  },
+  {
+    "id": "1034",
+    "raw": "閉（し）める",
+    "word": "閉める",
+    "reading": "しめる",
+    "meaning": "to close, to shut",
+    "level": "N5"
+  },
+  {
+    "id": "381",
+    "raw": "出（で）かける",
+    "word": "出かける",
+    "reading": "でかける",
+    "meaning": "to go out (e.g. on an excursion or outing), to leave, to depart, to start, to set out",
+    "level": "N5"
+  },
+  {
+    "id": "618",
+    "raw": "教（おし）える",
+    "word": "教える",
+    "reading": "おしえる",
+    "meaning": "to teach, to inform, to instruct",
+    "level": "N5"
+  },
+  {
+    "id": "497",
+    "raw": "始（はじ）める",
+    "word": "始める",
+    "reading": "はじめる",
+    "meaning": "to start, to begin, to commence, to initiate, to originate",
+    "level": "N5"
+  },
+  {
+    "id": "893",
+    "raw": "聞（き）く",
+    "word": "聞く",
+    "reading": "きく",
+    "meaning": "to hear",
+    "level": "N5"
+  },
+  {
+    "id": "552",
+    "raw": "座（すわ）る",
+    "word": "座る",
+    "reading": "すわる",
+    "meaning": "to sit, to squat",
+    "level": "N5"
+  },
+  {
+    "id": "1081",
+    "raw": "飲（の）む",
+    "word": "飲む",
+    "reading": "のむ",
+    "meaning": "to drink, to gulp, to swallow, to take (medicine)",
+    "level": "N5"
+  },
+  {
+    "id": "323",
+    "raw": "会（あ）う",
+    "word": "会う",
+    "reading": "あう",
+    "meaning": "to meet, to encounter, to see",
+    "level": "N5"
+  },
+  {
+    "id": "1074",
+    "raw": "飛（と）ぶ",
+    "word": "飛ぶ",
+    "reading": "とぶ",
+    "meaning": "to fly, to soar",
+    "level": "N5"
+  },
+  {
+    "id": "935",
+    "raw": "行（い）く",
+    "word": "行く",
+    "reading": "いく",
+    "meaning": "to go, to move (in a direction or towards a specific location), to head (towards), to be transported (towards), to reach",
+    "level": "N5"
+  },
+  {
+    "id": "751",
+    "raw": "泳（およ）ぐ",
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "meaning": "to swim",
+    "level": "N5"
+  },
+  {
+    "id": "958",
+    "raw": "話（はな）す",
+    "word": "話す",
+    "reading": "はなす",
+    "meaning": "to talk, to speak, to converse, to chat",
+    "level": "N5"
+  },
+  {
+    "id": "724",
+    "raw": "歩（ある）く",
+    "word": "歩く",
+    "reading": "あるく",
+    "meaning": "to walk",
+    "level": "N5"
+  },
+  {
+    "id": "729",
+    "raw": "死（し）ぬ",
+    "word": "死ぬ",
+    "reading": "しぬ",
+    "meaning": "to die, to pass away",
+    "level": "N5"
+  },
+  {
+    "id": "539",
+    "raw": "帰（かえ）る",
+    "word": "帰る",
+    "reading": "かえる",
+    "meaning": "to return, to come home, to go home, to go back",
+    "level": "N5"
+  },
+  {
+    "id": "767",
+    "raw": "漢字（かんじ）",
+    "word": "漢字",
+    "reading": "かんじ",
+    "meaning": "Chinese characters, kanji",
+    "level": "N5"
+  },
+  {
+    "id": "134",
+    "raw": "スポーツ",
+    "word": "スポーツ",
+    "reading": "スポーツ",
+    "meaning": "sport, sports",
+    "level": "N5"
+  },
+  {
+    "id": "167",
+    "raw": "テレビ",
+    "word": "テレビ",
+    "reading": "テレビ",
+    "meaning": "television, TV",
+    "level": "N5"
+  },
+  {
+    "id": "168",
+    "raw": "ドア",
+    "word": "ドア",
+    "reading": "ドア",
+    "meaning": "door (Western-style)",
+    "level": "N5"
+  },
+  {
+    "id": "1093",
+    "raw": "鶏肉（とりにく）",
+    "word": "鶏肉",
+    "reading": "とりにく",
+    "meaning": "chicken meat",
+    "level": "N5"
+  },
+  {
+    "id": "190",
+    "raw": "ニュース",
+    "word": "ニュース",
+    "reading": "ニュース",
+    "meaning": "news",
+    "level": "N5"
+  },
+  {
+    "id": "383",
+    "raw": "出（で）る",
+    "word": "出る",
+    "reading": "でる",
+    "meaning": "to leave, to exit, to go out, to come out, to get out",
+    "level": "N5"
+  },
+  {
+    "id": "221",
+    "raw": "ホラー",
+    "word": "ホラー",
+    "reading": "ホラー",
+    "meaning": "horror",
+    "level": "N5"
+  },
+  {
+    "id": "640",
+    "raw": "早（はや）く",
+    "word": "早く",
+    "reading": "はやく",
+    "meaning": "early, soon",
+    "level": "N5"
+  },
+  {
+    "id": "578",
+    "raw": "忘（わす）れる",
+    "word": "忘れる",
+    "reading": "わすれる",
+    "meaning": "to forget, to leave carelessly, to be forgetful of, to forget about, to forget (an article)",
+    "level": "N5"
+  },
+  {
+    "id": "895",
+    "raw": "肉（にく）",
+    "word": "肉",
+    "reading": "にく",
+    "meaning": "flesh",
+    "level": "N5"
+  },
+  {
+    "id": "606",
+    "raw": "持（も）つ",
+    "word": "持つ",
+    "reading": "もつ",
+    "meaning": "to hold (in one's hand), to take, to carry",
+    "level": "N5"
+  },
+  {
+    "id": "322",
+    "raw": "休（やす）む",
+    "word": "休む",
+    "reading": "やすむ",
+    "meaning": "to be absent, to take a day off",
+    "level": "N5"
+  },
+  {
+    "id": "838",
+    "raw": "知（し）る",
+    "word": "知る",
+    "reading": "しる",
+    "meaning": "to be aware of, to know, to be conscious of, to cognize, to cognise",
+    "level": "N5"
+  },
+  {
+    "id": "1091",
+    "raw": "魚（さかな）",
+    "word": "魚",
+    "reading": "さかな",
+    "meaning": "fish",
+    "level": "N5"
+  },
+  {
+    "id": "478",
+    "raw": "大学生（だいがくせい）",
+    "word": "大学生",
+    "reading": "だいがくせい",
+    "meaning": "university student, college student",
+    "level": "N5"
+  },
+  {
+    "id": "646",
+    "raw": "映画館（えいがかん）",
+    "word": "映画館",
+    "reading": "えいがかん",
+    "meaning": "movie theatre, movie theater, cinema",
+    "level": "N5"
+  },
+  {
+    "id": "86",
+    "raw": "コーヒー",
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "meaning": "coffee",
+    "level": "N5"
+  },
+  {
+    "id": "88",
+    "raw": "ここ",
+    "word": "ここ",
+    "reading": "ここ",
+    "meaning": "here, this place",
+    "level": "N5"
+  },
+  {
+    "id": "424",
+    "raw": "台所（だいどころ）",
+    "word": "台所",
+    "reading": "だいどころ",
+    "meaning": "kitchen",
+    "level": "N5"
+  },
+  {
+    "id": "458",
+    "raw": "外（そと）",
+    "word": "外",
+    "reading": "そと",
+    "meaning": "outside, exterior",
+    "level": "N5"
+  },
+  {
+    "id": "549",
+    "raw": "店（みせ）",
+    "word": "店",
+    "reading": "みせ",
+    "meaning": "store, shop, establishment, restaurant",
+    "level": "N5"
+  },
+  {
+    "id": "1078",
+    "raw": "食（た）べ物（もの）",
+    "word": "食べ物",
+    "reading": "たべもの",
+    "meaning": "food",
+    "level": "N5"
+  },
+  {
+    "id": "145",
+    "raw": "そこ",
+    "word": "そこ",
+    "reading": "そこ",
+    "meaning": "there (place relatively near listener)",
+    "level": "N5"
+  },
+  {
+    "id": "198",
+    "raw": "パソコン",
+    "word": "パソコン",
+    "reading": "パソコン",
+    "meaning": "personal computer",
+    "level": "N5"
+  },
+  {
+    "id": "641",
+    "raw": "明（あか）るい",
+    "word": "明るい",
+    "reading": "あかるい",
+    "meaning": "bright, colourful",
+    "level": "N5"
+  },
+  {
+    "id": "169",
+    "raw": "トイレ",
+    "word": "トイレ",
+    "reading": "トイレ",
+    "meaning": "toilet, restroom, bathroom, lavatory",
+    "level": "N5"
+  },
+  {
+    "id": "561",
+    "raw": "強（つよ）い",
+    "word": "強い",
+    "reading": "つよい",
+    "meaning": "strong, powerful, mighty, potent",
+    "level": "N5"
+  },
+  {
+    "id": "619",
+    "raw": "教室（きょうしつ）",
+    "word": "教室",
+    "reading": "きょうしつ",
+    "meaning": "classroom",
+    "level": "N5"
+  },
+  {
+    "id": "566",
+    "raw": "あそこ",
+    "word": "あそこ",
+    "reading": "あそこ",
+    "meaning": "there (place physically distant from both speaker and listener), over there, that place, yonder",
+    "level": "N5"
+  },
+  {
+    "id": "624",
+    "raw": "文法（ぶんぽう）",
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "meaning": "grammar",
+    "level": "N5"
+  },
+  {
+    "id": "890",
+    "raw": "習（なら）う",
+    "word": "習う",
+    "reading": "ならう",
+    "meaning": "to take lessons in, to be taught, to learn (from a teacher), to study (under a teacher), to get training in",
+    "level": "N5"
+  },
+  {
+    "id": "104",
+    "raw": "ご飯（はん）",
+    "word": "ご飯",
+    "reading": "ごはん",
+    "meaning": "cooked rice, food",
+    "level": "N5"
+  },
+  {
+    "id": "443",
+    "raw": "図書館（としょかん）",
+    "word": "図書館",
+    "reading": "としょかん",
+    "meaning": "library",
+    "level": "N5"
+  },
+  {
+    "id": "637",
+    "raw": "日本語（にほんご）",
+    "word": "日本語",
+    "reading": "にほんご",
+    "meaning": "Japanese (language)",
+    "level": "N5"
+  },
+  {
+    "id": "506",
+    "raw": "学校（がっこう）",
+    "word": "学校",
+    "reading": "がっこう",
+    "meaning": "school",
+    "level": "N5"
+  },
+  {
+    "id": "629",
+    "raw": "新聞（しんぶん）",
+    "word": "新聞",
+    "reading": "しんぶん",
+    "meaning": "newspaper",
+    "level": "N5"
+  },
+  {
+    "id": "963",
+    "raw": "読（よ）む",
+    "word": "読む",
+    "reading": "よむ",
+    "meaning": "to read",
+    "level": "N5"
+  },
+  {
+    "id": "667",
+    "raw": "曲（ま）がる",
+    "word": "曲がる",
+    "reading": "まがる",
+    "meaning": "to bend, to curve, to warp, to wind, to twist",
+    "level": "N5"
+  },
+  {
+    "id": "887",
+    "raw": "置（お）く",
+    "word": "置く",
+    "reading": "おく",
+    "meaning": "to put, to place",
+    "level": "N5"
+  },
+  {
+    "id": "689",
+    "raw": "机（つくえ）",
+    "word": "机",
+    "reading": "つくえ",
+    "meaning": "desk",
+    "level": "N5"
+  },
+  {
+    "id": "817",
+    "raw": "病院（びょういん）",
+    "word": "病院",
+    "reading": "びょういん",
+    "meaning": "hospital",
+    "level": "N5"
+  },
+  {
+    "id": "997",
+    "raw": "返（かえ）す",
+    "word": "返す",
+    "reading": "かえす",
+    "meaning": "to return (something), to restore, to put back",
+    "level": "N5"
+  },
+  {
+    "id": "1054",
+    "raw": "青（あお）",
+    "word": "青",
+    "reading": "あお",
+    "meaning": "blue",
+    "level": "N5"
+  },
+  {
+    "id": "668",
+    "raw": "書（か）く",
+    "word": "書く",
+    "reading": "かく",
+    "meaning": "to write, to compose, to pen",
+    "level": "N5"
+  },
+  {
+    "id": "1008",
+    "raw": "遊（あそ）ぶ",
+    "word": "遊ぶ",
+    "reading": "あそぶ",
+    "meaning": "to play, to enjoy oneself, to have a good time",
+    "level": "N5"
+  },
+  {
+    "id": "633",
+    "raw": "旅行（りょこう）",
+    "word": "旅行",
+    "reading": "りょこう",
+    "meaning": "travel, trip",
+    "level": "N5"
+  },
+  {
+    "id": "455",
+    "raw": "夏休（なつやす）み",
+    "word": "夏休み",
+    "reading": "なつやすみ",
+    "meaning": "summer vacation, summer holiday",
+    "level": "N5"
+  },
+  {
+    "id": "349",
+    "raw": "僕（ぼく）",
+    "word": "僕",
+    "reading": "ぼく",
+    "meaning": "I, me, kid",
+    "level": "N5"
+  },
+  {
+    "id": "981",
+    "raw": "走（はし）る",
+    "word": "走る",
+    "reading": "はしる",
+    "meaning": "to run",
+    "level": "N5"
+  },
+  {
+    "id": "137",
+    "raw": "すみません",
+    "word": "すみません",
+    "reading": "すみません",
+    "meaning": "excuse me, pardon me, I'm sorry, I beg your pardon",
+    "level": "N5"
+  },
+  {
+    "id": "494",
+    "raw": "妹（いもうと）",
+    "word": "妹",
+    "reading": "いもうと",
+    "meaning": "younger sister",
+    "level": "N5"
+  },
+  {
+    "id": "121",
+    "raw": "ジュース",
+    "word": "ジュース",
+    "reading": "ジュース",
+    "meaning": "juice",
+    "level": "N5"
+  },
+  {
+    "id": "392",
+    "raw": "初（はじ）めて",
+    "word": "初めて",
+    "reading": "はじめて",
+    "meaning": "for the first time",
+    "level": "N5"
+  },
+  {
+    "id": "44",
+    "raw": "お弁当（べんとう）",
+    "word": "お弁当",
+    "reading": "おべんとう",
+    "meaning": "bento (Japanese box lunch)",
+    "level": "N5"
+  },
+  {
+    "id": "425",
+    "raw": "右（みぎ）",
+    "word": "右",
+    "reading": "みぎ",
+    "meaning": "right, right hand side",
+    "level": "N5"
+  },
+  {
+    "id": "408",
+    "raw": "半分（はんぶん）",
+    "word": "半分",
+    "reading": "はんぶん",
+    "meaning": "half",
+    "level": "N5"
+  },
+  {
+    "id": "403",
+    "raw": "医者（いしゃ）",
+    "word": "医者",
+    "reading": "いしゃ",
+    "meaning": "(medical) doctor, physician",
+    "level": "N5"
+  },
+  {
+    "id": "676",
+    "raw": "有（あ）る",
+    "word": "有る",
+    "reading": "ある",
+    "meaning": "to be, to exist, to live",
+    "level": "N5"
+  },
+  {
+    "id": "655",
+    "raw": "時間（じかん）",
+    "word": "時間",
+    "reading": "じかん",
+    "meaning": "time",
+    "level": "N5"
+  },
+  {
+    "id": "868",
+    "raw": "紙（かみ）",
+    "word": "紙",
+    "reading": "かみ",
+    "meaning": "paper",
+    "level": "N5"
+  },
+  {
+    "id": "440",
+    "raw": "喫茶店（きっさてん）",
+    "word": "喫茶店",
+    "reading": "きっさてん",
+    "meaning": "coffee shop, tearoom, coffee lounge, coffeehouse, cafe",
+    "level": "N5"
+  },
+  {
+    "id": "840",
+    "raw": "砂糖（さとう）",
+    "word": "砂糖",
+    "reading": "さとう",
+    "meaning": "sugar",
+    "level": "N5"
+  },
+  {
+    "id": "960",
+    "raw": "誕生日（たんじょうび）",
+    "word": "誕生日",
+    "reading": "たんじょうび",
+    "meaning": "birthday",
+    "level": "N5"
+  },
+  {
+    "id": "811",
+    "raw": "留学生（りゅうがくせい）",
+    "word": "留学生",
+    "reading": "りゅうがくせい",
+    "meaning": "overseas student, exchange student",
+    "level": "N5"
+  },
+  {
+    "id": "460",
+    "raw": "外国人（がいこくじん）",
+    "word": "外国人",
+    "reading": "がいこくじん",
+    "meaning": "foreigner, foreign citizen, foreign national, alien, non-Japanese",
+    "level": "N5"
+  },
+  {
+    "id": "375",
+    "raw": "写真（しゃしん）",
+    "word": "写真",
+    "reading": "しゃしん",
+    "meaning": "photograph, photo, picture, snapshot, snap",
+    "level": "N5"
+  },
+  {
+    "id": "399",
+    "raw": "動物（どうぶつ）",
+    "word": "動物",
+    "reading": "どうぶつ",
+    "meaning": "animal",
+    "level": "N5"
+  },
+  {
+    "id": "1080",
+    "raw": "飲（の）み物（もの）",
+    "word": "飲み物",
+    "reading": "のみもの",
+    "meaning": "drink, beverage",
+    "level": "N5"
+  },
+  {
+    "id": "710",
+    "raw": "橋（はし）",
+    "word": "橋",
+    "reading": "はし",
+    "meaning": "bridge",
+    "level": "N5"
+  },
+  {
+    "id": "813",
+    "raw": "番号（ばんごう）",
+    "word": "番号",
+    "reading": "ばんごう",
+    "meaning": "number, series of digits",
+    "level": "N5"
+  },
+  {
+    "id": "558",
+    "raw": "弟（おとうと）",
+    "word": "弟",
+    "reading": "おとうと",
+    "meaning": "younger brother, little brother, kid brother",
+    "level": "N5"
+  },
+  {
+    "id": "974",
+    "raw": "買（か）う",
+    "word": "買う",
+    "reading": "かう",
+    "meaning": "to buy, to purchase",
+    "level": "N5"
+  },
+  {
+    "id": "699",
+    "raw": "果物（くだもの）",
+    "word": "果物",
+    "reading": "くだもの",
+    "meaning": "fruit",
+    "level": "N5"
+  },
+  {
+    "id": "565",
+    "raw": "あの",
+    "word": "あの",
+    "reading": "あの",
+    "meaning": "that, those, the",
+    "level": "N5"
+  },
+  {
+    "id": "836",
+    "raw": "着（き）る",
+    "word": "着る",
+    "reading": "きる",
+    "meaning": "to wear (in modern Japanese, from the shoulders down), to put on",
+    "level": "N5"
+  },
+  {
+    "id": "933",
+    "raw": "薬（くすり）を飲（の）む",
+    "word": "薬を飲む",
+    "reading": "くすりをのむ",
+    "meaning": "to take medicine",
+    "level": "N5"
+  },
+  {
+    "id": "809",
+    "raw": "町（まち）",
+    "word": "町",
+    "reading": "まち",
+    "meaning": "town, block, neighbourhood, neighborhood",
+    "level": "N5"
+  },
+  {
+    "id": "855",
+    "raw": "窓（まど）",
+    "word": "窓",
+    "reading": "まど",
+    "meaning": "window",
+    "level": "N5"
+  },
+  {
+    "id": "1035",
+    "raw": "開（ひら）く",
+    "word": "開く",
+    "reading": "ひらく",
+    "meaning": "to open, to undo, to unseal, to unpack",
+    "level": "N5"
+  },
+  {
+    "id": "1036",
+    "raw": "開（あ）く",
+    "word": "開く",
+    "reading": "あく",
+    "meaning": "to open (e.g. doors), to be open (for business)",
+    "level": "N5"
+  },
+  {
+    "id": "586",
+    "raw": "悪（わる）い",
+    "word": "悪い",
+    "reading": "わるい",
+    "meaning": "bad, poor, inferior",
+    "level": "N5"
+  },
+  {
+    "id": "1003",
+    "raw": "遅（おそ）い",
+    "word": "遅い",
+    "reading": "おそい",
+    "meaning": "slow",
+    "level": "N5"
+  },
+  {
+    "id": "1099",
+    "raw": "鼻（はな）",
+    "word": "鼻",
+    "reading": "はな",
+    "meaning": "nose",
+    "level": "N5"
+  },
+  {
+    "id": "400",
+    "raw": "動物園（どうぶつえん）",
+    "word": "動物園",
+    "reading": "どうぶつえん",
+    "meaning": "zoo, zoological gardens",
+    "level": "N5"
+  },
+  {
+    "id": "350",
+    "raw": "優（やさ）しい",
+    "word": "優しい",
+    "reading": "やさしい",
+    "meaning": "tender, kind, gentle, graceful, affectionate, amiable, nice",
+    "level": "N5"
+  },
+  {
+    "id": "397",
+    "raw": "勉強（べんきょう）",
+    "word": "勉強",
+    "reading": "べんきょう",
+    "meaning": "study",
+    "level": "N5"
+  },
+  {
+    "id": "773",
+    "raw": "灰皿（はいざら）",
+    "word": "灰皿",
+    "reading": "はいざら",
+    "meaning": "ashtray",
+    "level": "N5"
+  },
+  {
+    "id": "341",
+    "raw": "使（つか）う",
+    "word": "使う",
+    "reading": "つかう",
+    "meaning": "to use (a thing, method, etc.), to make use of, to put to use",
+    "level": "N5"
+  },
+  {
+    "id": "964",
+    "raw": "誰（だれ）",
+    "word": "誰",
+    "reading": "だれ",
+    "meaning": "who",
+    "level": "N5"
+  },
+  {
+    "id": "210",
+    "raw": "プール",
+    "word": "プール",
+    "reading": "プール",
+    "meaning": "(swimming) pool",
+    "level": "N5"
+  },
+  {
+    "id": "138",
+    "raw": "する",
+    "word": "する",
+    "reading": "する",
+    "meaning": "to do, to carry out, to perform, to cost",
+    "level": "N5"
+  },
+  {
+    "id": "359",
+    "raw": "先輩（せんぱい）",
+    "word": "先輩",
+    "reading": "せんぱい",
+    "meaning": "senior (at work or school), superior, elder, older graduate, progenitor, old-timer",
+    "level": "N5"
+  },
+  {
+    "id": "207",
+    "raw": "ピザ",
+    "word": "ピザ",
+    "reading": "ピザ",
+    "meaning": "pizza",
+    "level": "N5"
+  },
+  {
+    "id": "524",
+    "raw": "小（ちい）さい",
+    "word": "小さい",
+    "reading": "ちいさい",
+    "meaning": "small, little, tiny",
+    "level": "N5"
+  },
+  {
+    "id": "950",
+    "raw": "親切（しんせつ）",
+    "word": "親切",
+    "reading": "しんせつ",
+    "meaning": "kind, gentle, considerate, generous, friendly, nice",
+    "level": "N5"
+  },
+  {
+    "id": "864",
+    "raw": "簡単（かんたん）",
+    "word": "簡単",
+    "reading": "かんたん",
+    "meaning": "simple, easy, uncomplicated",
+    "level": "N5"
+  },
+  {
+    "id": "454",
+    "raw": "夏（なつ）",
+    "word": "夏",
+    "reading": "なつ",
+    "meaning": "summer",
+    "level": "N5"
+  },
+  {
+    "id": "707",
+    "raw": "楽（たの）しむ",
+    "word": "楽しむ",
+    "reading": "たのしむ",
+    "meaning": "to enjoy (oneself)",
+    "level": "N5"
+  },
+  {
+    "id": "914",
+    "raw": "色（いろ）",
+    "word": "色",
+    "reading": "いろ",
+    "meaning": "colour, color",
+    "level": "N5"
+  },
+  {
+    "id": "953",
+    "raw": "言葉（ことば）",
+    "word": "言葉",
+    "reading": "ことば",
+    "meaning": "language, dialect, word",
+    "level": "N5"
+  },
+  {
+    "id": "1011",
+    "raw": "道（みち）",
+    "word": "道",
+    "reading": "みち",
+    "meaning": "road, street, way, path, course, route, lane",
+    "level": "N5"
+  },
+  {
+    "id": "531",
+    "raw": "山（やま）",
+    "word": "山",
+    "reading": "やま",
+    "meaning": "mountain, hill",
+    "level": "N5"
+  },
+  {
+    "id": "324",
+    "raw": "会社（かいしゃ）",
+    "word": "会社",
+    "reading": "かいしゃ",
+    "meaning": "company, corporation",
+    "level": "N5"
+  },
+  {
+    "id": "610",
+    "raw": "掃除（そうじ）",
+    "word": "掃除",
+    "reading": "そうじ",
+    "meaning": "cleaning, sweeping, dusting, scrubbing",
+    "level": "N5"
+  },
+  {
+    "id": "193",
+    "raw": "パーティー",
+    "word": "パーティー",
+    "reading": "パーティー",
+    "meaning": "party",
+    "level": "N5"
+  },
+  {
+    "id": "959",
+    "raw": "話（はなし）をする",
+    "word": "話をする",
+    "reading": "はなしをする",
+    "meaning": "to have a talk, to tell a story",
+    "level": "N5"
+  },
+  {
+    "id": "635",
+    "raw": "日本（にほん）",
+    "word": "日本",
+    "reading": "にほん",
+    "meaning": "Japan",
+    "level": "N5"
+  },
+  {
+    "id": "1051",
+    "raw": "電気（でんき）",
+    "word": "電気",
+    "reading": "でんき",
+    "meaning": "electricity, electric light, light bulb, electric",
+    "level": "N5"
+  },
+  {
+    "id": "815",
+    "raw": "疲（つか）れる",
+    "word": "疲れる",
+    "reading": "つかれる",
+    "meaning": "to get tired, to tire",
+    "level": "N5"
+  },
+  {
+    "id": "502",
+    "raw": "子供（こども）",
+    "word": "子供",
+    "reading": "こども",
+    "meaning": "child, children",
+    "level": "N5"
+  },
+  {
+    "id": "850",
+    "raw": "私（わたし）たち",
+    "word": "私たち",
+    "reading": "わたしたち",
+    "meaning": "we, us",
+    "level": "N5"
+  },
+  {
+    "id": "477",
+    "raw": "大学（だいがく）",
+    "word": "大学",
+    "reading": "だいがく",
+    "meaning": "post-secondary education institution, incl. university, college, etc.",
+    "level": "N5"
+  },
+  {
+    "id": "69",
+    "raw": "カフェ",
+    "word": "カフェ",
+    "reading": "カフェ",
+    "meaning": "café, coffeehouse",
+    "level": "N5"
+  },
+  {
+    "id": "903",
+    "raw": "脱（ぬ）ぐ",
+    "word": "脱ぐ",
+    "reading": "ぬぐ",
+    "meaning": "to take off (clothes, shoes, etc.), to undress",
+    "level": "N5"
+  },
+  {
+    "id": "27",
+    "raw": "うん",
+    "word": "うん",
+    "reading": "うん",
+    "meaning": "yes, yeah",
+    "level": "N5"
+  },
+  {
+    "id": "195",
+    "raw": "はい",
+    "word": "はい",
+    "reading": "はい",
+    "meaning": "yes, that is correct",
+    "level": "N5"
+  },
+  {
+    "id": "884",
+    "raw": "緑（みどり）",
+    "word": "緑",
+    "reading": "みどり",
+    "meaning": "green",
+    "level": "N5"
+  },
+  {
+    "id": "476",
+    "raw": "大嫌（だいきら）い",
+    "word": "大嫌い",
+    "reading": "だいきらい",
+    "meaning": "detestable, abhorrent, loathsome",
+    "level": "N5"
+  },
+  {
+    "id": "499",
+    "raw": "嫌（きら）い",
+    "word": "嫌い",
+    "reading": "きらい",
+    "meaning": "dislike, hate",
+    "level": "N5"
+  },
+  {
+    "id": "338",
+    "raw": "作（つく）る",
+    "word": "作る",
+    "reading": "つくる",
+    "meaning": "to make, to produce, to manufacture, to build, to construct",
+    "level": "N5"
+  },
+  {
+    "id": "284",
+    "raw": "乗（の）る",
+    "word": "乗る",
+    "reading": "のる",
+    "meaning": "to get on (train, plane, bus, ship, etc.), to get in, to board, to take, to embark",
+    "level": "N5"
+  },
+  {
+    "id": "215",
+    "raw": "ベッド",
+    "word": "ベッド",
+    "reading": "ベッド",
+    "meaning": "bed",
+    "level": "N5"
+  },
+  {
+    "id": "321",
+    "raw": "休（やす）み",
+    "word": "休み",
+    "reading": "やすみ",
+    "meaning": "rest, recess, respite, being closed",
+    "level": "N5"
+  },
+  {
+    "id": "378",
+    "raw": "冷蔵庫（れいぞうこ）",
+    "word": "冷蔵庫",
+    "reading": "れいぞうこ",
+    "meaning": "refrigerator",
+    "level": "N5"
+  },
+  {
+    "id": "916",
+    "raw": "花（はな）",
+    "word": "花",
+    "reading": "はな",
+    "meaning": "flower, blossom, bloom, petal",
+    "level": "N5"
+  },
+  {
+    "id": "103",
+    "raw": "コンピューター",
+    "word": "コンピューター",
+    "reading": "コンピューター",
+    "meaning": "computer",
+    "level": "N5"
+  },
+  {
+    "id": "1028",
+    "raw": "鉛筆（えんぴつ）",
+    "word": "鉛筆",
+    "reading": "えんぴつ",
+    "meaning": "pencil",
+    "level": "N5"
+  },
+  {
+    "id": "798",
+    "raw": "甘（あま）い",
+    "word": "甘い",
+    "reading": "あまい",
+    "meaning": "sweet-tasting, sweet, sugary, sugared",
+    "level": "N5"
+  },
+  {
+    "id": "155",
+    "raw": "タクシー",
+    "word": "タクシー",
+    "reading": "タクシー",
+    "meaning": "taxi",
+    "level": "N5"
+  },
+  {
+    "id": "387",
+    "raw": "分（わ）かる",
+    "word": "分かる",
+    "reading": "わかる",
+    "meaning": "to understand, to comprehend, to grasp, to see, to get, to follow",
+    "level": "N5"
+  },
+  {
+    "id": "628",
+    "raw": "新幹線（しんかんせん）",
+    "word": "新幹線",
+    "reading": "しんかんせん",
+    "meaning": "Shinkansen, bullet train",
+    "level": "N5"
+  },
+  {
+    "id": "1076",
+    "raw": "飛行機（ひこうき）",
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "meaning": "aeroplane, airplane, aircraft",
+    "level": "N5"
+  },
+  {
+    "id": "934",
+    "raw": "行（い）き",
+    "word": "行き",
+    "reading": "いき",
+    "meaning": "the way there, outbound leg, outbound trip, departing leg",
+    "level": "N5"
+  },
+  {
+    "id": "253",
+    "raw": "一月（いちがつ）",
+    "word": "一月",
+    "reading": "いちがつ",
+    "meaning": "January",
+    "level": "N5"
+  },
+  {
+    "id": "486",
+    "raw": "太（ふと）い",
+    "word": "太い",
+    "reading": "ふとい",
+    "meaning": "fat, thick",
+    "level": "N5"
+  },
+  {
+    "id": "615",
+    "raw": "撮（と）る",
+    "word": "撮る",
+    "reading": "とる",
+    "meaning": "to take (a photo)",
+    "level": "N5"
+  },
+  {
+    "id": "649",
+    "raw": "昼（ひる）",
+    "word": "昼",
+    "reading": "ひる",
+    "meaning": "noon, midday",
+    "level": "N5"
+  },
+  {
+    "id": "776",
+    "raw": "点（つ）ける",
+    "word": "点ける",
+    "reading": "つける",
+    "meaning": "to turn on, to switch on, to light up",
+    "level": "N5"
+  },
+  {
+    "id": "376",
+    "raw": "冬（ふゆ）",
+    "word": "冬",
+    "reading": "ふゆ",
+    "meaning": "winter",
+    "level": "N5"
+  },
+  {
+    "id": "717",
+    "raw": "歌（うた）う",
+    "word": "歌う",
+    "reading": "うたう",
+    "meaning": "to sing",
+    "level": "N5"
+  },
+  {
+    "id": "71",
+    "raw": "カラオケ",
+    "word": "カラオケ",
+    "reading": "カラオケ",
+    "meaning": "karaoke",
+    "level": "N5"
+  },
+  {
+    "id": "59",
+    "raw": "お菓子（かし）",
+    "word": "お菓子",
+    "reading": "おかし",
+    "meaning": "confections, sweets, candy",
+    "level": "N5"
+  },
+  {
+    "id": "12",
+    "raw": "アメリカ",
+    "word": "アメリカ",
+    "reading": "アメリカ",
+    "meaning": "America",
+    "level": "N5"
+  },
+  {
+    "id": "1059",
+    "raw": "靴（くつ）",
+    "word": "靴",
+    "reading": "くつ",
+    "meaning": "shoes, boots, footwear, footgear",
+    "level": "N5"
+  },
+  {
+    "id": "496",
+    "raw": "始（はじ）まる",
+    "word": "始まる",
+    "reading": "はじまる",
+    "meaning": "to begin, to start, to commence",
+    "level": "N5"
+  },
+  {
+    "id": "973",
+    "raw": "買（か）い物（もの）",
+    "word": "買い物",
+    "reading": "かいもの",
+    "meaning": "shopping, purchased goods",
+    "level": "N5"
+  },
+  {
+    "id": "942",
+    "raw": "西（にし）",
+    "word": "西",
+    "reading": "にし",
+    "meaning": "west",
+    "level": "N5"
+  },
+  {
+    "id": "1070",
+    "raw": "風（かぜ）",
+    "word": "風",
+    "reading": "かぜ",
+    "meaning": "wind, breeze, draught, draft",
+    "level": "N5"
+  },
+  {
+    "id": "119",
+    "raw": "シャワーを浴（あ）びる",
+    "word": "シャワーを浴びる",
+    "reading": "シャワーをあびる",
+    "meaning": "to take a shower",
+    "level": "N5"
+  },
+  {
+    "id": "969",
+    "raw": "豚肉（ぶたにく）",
+    "word": "豚肉",
+    "reading": "ぶたにく",
+    "meaning": "pork",
+    "level": "N5"
+  },
+  {
+    "id": "851",
+    "raw": "秋（あき）",
+    "word": "秋",
+    "reading": "あき",
+    "meaning": "autumn, fall",
+    "level": "N5"
+  },
+  {
+    "id": "1022",
+    "raw": "野菜（やさい）",
+    "word": "野菜",
+    "reading": "やさい",
+    "meaning": "vegetable",
+    "level": "N5"
+  },
+  {
+    "id": "588",
+    "raw": "意味（いみ）",
+    "word": "意味",
+    "reading": "いみ",
+    "meaning": "meaning, significance",
+    "level": "N5"
+  },
+  {
+    "id": "411",
+    "raw": "危（あぶ）ない",
+    "word": "危ない",
+    "reading": "あぶない",
+    "meaning": "dangerous, risky, hazardous, perilous, precarious",
+    "level": "N5"
+  },
+  {
+    "id": "634",
+    "raw": "日曜日（にちようび）",
+    "word": "日曜日",
+    "reading": "にちようび",
+    "meaning": "Sunday",
+    "level": "N5"
+  },
+  {
+    "id": "197",
+    "raw": "バス停（てい）",
+    "word": "バス停",
+    "reading": "バスてい",
+    "meaning": "bus stop",
+    "level": "N5"
+  },
+  {
+    "id": "1040",
+    "raw": "降（お）りる",
+    "word": "降りる",
+    "reading": "おりる",
+    "meaning": "to descend (e.g. a mountain), to go down, to come down",
+    "level": "N5"
+  },
+  {
+    "id": "966",
+    "raw": "警察（けいさつ）",
+    "word": "警察",
+    "reading": "けいさつ",
+    "meaning": "police",
+    "level": "N5"
+  },
+  {
+    "id": "436",
+    "raw": "呼（よ）ぶ",
+    "word": "呼ぶ",
+    "reading": "よぶ",
+    "meaning": "to call out (to), to call, to invoke",
+    "level": "N5"
+  },
+  {
+    "id": "752",
+    "raw": "洗（あら）う",
+    "word": "洗う",
+    "reading": "あらう",
+    "meaning": "to wash",
+    "level": "N5"
+  },
+  {
+    "id": "570",
+    "raw": "待（ま）つ",
+    "word": "待つ",
+    "reading": "まつ",
+    "meaning": "to wait",
+    "level": "N5"
+  },
+  {
+    "id": "807",
+    "raw": "男（おとこ）の人（ひと）",
+    "word": "男の人",
+    "reading": "おとこのひと",
+    "meaning": "man",
+    "level": "N5"
+  },
+  {
+    "id": "1007",
+    "raw": "遊（あそ）び",
+    "word": "遊び",
+    "reading": "あそび",
+    "meaning": "playing",
+    "level": "N5"
+  },
+  {
+    "id": "1062",
+    "raw": "音楽（おんがく）",
+    "word": "音楽",
+    "reading": "おんがく",
+    "meaning": "music, musical movement",
+    "level": "N5"
+  },
+  {
+    "id": "389",
+    "raw": "切手（きって）",
+    "word": "切手",
+    "reading": "きって",
+    "meaning": "stamp (postage), merchandise certificate",
+    "level": "N5"
+  },
+  {
+    "id": "125",
+    "raw": "スーパー",
+    "word": "スーパー",
+    "reading": "スーパー",
+    "meaning": "supermarket",
+    "level": "N5"
+  },
+  {
+    "id": "976",
+    "raw": "賑（にぎ）やか",
+    "word": "賑やか",
+    "reading": "にぎやか",
+    "meaning": "bustling, busy, lively",
+    "level": "N5"
+  },
+  {
+    "id": "360",
+    "raw": "先週（せんしゅう）",
+    "word": "先週",
+    "reading": "せんしゅう",
+    "meaning": "last week, the week before",
+    "level": "N5"
+  },
+  {
+    "id": "1052",
+    "raw": "電話（でんわ）",
+    "word": "電話",
+    "reading": "でんわ",
+    "meaning": "telephone call, phone call",
+    "level": "N5"
+  },
+  {
+    "id": "786",
+    "raw": "牛肉（ぎゅうにく）",
+    "word": "牛肉",
+    "reading": "ぎゅうにく",
+    "meaning": "beef",
+    "level": "N5"
+  },
+  {
+    "id": "404",
+    "raw": "午前（ごぜん）",
+    "word": "午前",
+    "reading": "ごぜん",
+    "meaning": "morning, a.m.",
+    "level": "N5"
+  },
+  {
+    "id": "784",
+    "raw": "牛（うし）",
+    "word": "牛",
+    "reading": "うし",
+    "meaning": "cattle (Bos taurus), cow, bull, ox, calf",
+    "level": "N5"
+  },
+  {
+    "id": "517",
+    "raw": "宿題（しゅくだい）",
+    "word": "宿題",
+    "reading": "しゅくだい",
+    "meaning": "homework",
+    "level": "N5"
+  },
+  {
+    "id": "768",
+    "raw": "漫画（まんが）",
+    "word": "漫画",
+    "reading": "まんが",
+    "meaning": "cartoon, comic, comic strip",
+    "level": "N5"
+  },
+  {
+    "id": "952",
+    "raw": "言（い）う",
+    "word": "言う",
+    "reading": "いう",
+    "meaning": "to say, to utter, to declare",
+    "level": "N5"
+  },
+  {
+    "id": "409",
+    "raw": "南（みなみ）",
+    "word": "南",
+    "reading": "みなみ",
+    "meaning": "south",
+    "level": "N5"
+  },
+  {
+    "id": "46",
+    "raw": "おはよう",
+    "word": "おはよう",
+    "reading": "おはよう",
+    "meaning": "good morning",
+    "level": "N5"
+  },
+  {
+    "id": "1041",
+    "raw": "降（ふ）る",
+    "word": "降る",
+    "reading": "ふる",
+    "meaning": "to fall (e.g. rain), to precipitate",
+    "level": "N5"
+  },
+  {
+    "id": "609",
+    "raw": "捨（す）てる",
+    "word": "捨てる",
+    "reading": "すてる",
+    "meaning": "to throw away, to cast away, to dump, to discard",
+    "level": "N5"
+  },
+  {
+    "id": "286",
+    "raw": "乾杯（かんぱい）",
+    "word": "乾杯",
+    "reading": "かんぱい",
+    "meaning": "cheers, bottoms-up, prosit",
+    "level": "N5"
+  },
+  {
+    "id": "736",
+    "raw": "毎週（まいしゅう）",
+    "word": "毎週",
+    "reading": "まいしゅう",
+    "meaning": "every week",
+    "level": "N5"
+  },
+  {
+    "id": "1092",
+    "raw": "鳥（とり）",
+    "word": "鳥",
+    "reading": "とり",
+    "meaning": "bird",
+    "level": "N5"
+  },
+  {
+    "id": "695",
+    "raw": "来週（らいしゅう）",
+    "word": "来週",
+    "reading": "らいしゅう",
+    "meaning": "next week",
+    "level": "N5"
+  },
+  {
+    "id": "877",
+    "raw": "結婚（けっこん）",
+    "word": "結婚",
+    "reading": "けっこん",
+    "meaning": "marriage",
+    "level": "N5"
+  },
+  {
+    "id": "653",
+    "raw": "時々（ときどき）",
+    "word": "時々",
+    "reading": "ときどき",
+    "meaning": "sometimes, at times",
+    "level": "N5"
+  },
+  {
+    "id": "329",
+    "raw": "住（す）む",
+    "word": "住む",
+    "reading": "すむ",
+    "meaning": "to live (of humans), to reside, to inhabit, to dwell, to abide",
+    "level": "N5"
+  },
+  {
+    "id": "452",
+    "raw": "売（う）る",
+    "word": "売る",
+    "reading": "うる",
+    "meaning": "to sell",
+    "level": "N5"
+  },
+  {
+    "id": "696",
+    "raw": "東（ひがし）",
+    "word": "東",
+    "reading": "ひがし",
+    "meaning": "east",
+    "level": "N5"
+  },
+  {
+    "id": "395",
+    "raw": "前（まえ）",
+    "word": "前",
+    "reading": "まえ",
+    "meaning": "ago, before (some event), previously, in front (of)",
+    "level": "N5"
+  },
+  {
+    "id": "498",
+    "raw": "娘（むすめ）",
+    "word": "娘",
+    "reading": "むすめ",
+    "meaning": "daughter",
+    "level": "N5"
+  },
+  {
+    "id": "748",
+    "raw": "泣（な）く",
+    "word": "泣く",
+    "reading": "なく",
+    "meaning": "to cry, to weep, to sob, to howl",
+    "level": "N5"
+  },
+  {
+    "id": "763",
+    "raw": "渡（わた）る",
+    "word": "渡る",
+    "reading": "わたる",
+    "meaning": "to cross over, to go across",
+    "level": "N5"
+  },
+  {
+    "id": "361",
+    "raw": "入（はい）る",
+    "word": "入る",
+    "reading": "はいる",
+    "meaning": "to enter, to go into",
+    "level": "N5"
+  },
+  {
+    "id": "259",
+    "raw": "だけ",
+    "word": "だけ",
+    "reading": "だけ",
+    "meaning": "only, just, merely, simply, no more than, nothing but, alone",
+    "level": "N5"
+  },
+  {
+    "id": "184",
+    "raw": "どれ",
+    "word": "どれ",
+    "reading": "どれ",
+    "meaning": "which (of three or more), let me see, let's see",
+    "level": "N5"
+  },
+  {
+    "id": "175",
+    "raw": "どこ",
+    "word": "どこ",
+    "reading": "どこ",
+    "meaning": "where, what place",
+    "level": "N5"
+  },
+  {
+    "id": "180",
+    "raw": "どの",
+    "word": "どの",
+    "reading": "どの",
+    "meaning": "which, what (way)",
+    "level": "N5"
+  },
+  {
+    "id": "444",
+    "raw": "国（くに）",
+    "word": "国",
+    "reading": "くに",
+    "meaning": "country, state",
+    "level": "N5"
+  },
+  {
+    "id": "626",
+    "raw": "料理（りょうり）",
+    "word": "料理",
+    "reading": "りょうり",
+    "meaning": "cooking, cookery, cuisine",
+    "level": "N5"
+  },
+  {
+    "id": "230",
+    "raw": "もう",
+    "word": "もう",
+    "reading": "もう",
+    "meaning": "now, soon, shortly, before long, presently, already, yet, by now, not anymore, further, more, again, another, the other, exclamation of frustration",
+    "level": "N5"
+  },
+  {
+    "id": "170",
+    "raw": "どうして",
+    "word": "どうして",
+    "reading": "どうして",
+    "meaning": "why?, for what reason, how, in what way, for what purpose, what for",
+    "level": "N5"
+  },
+  {
+    "id": "580",
+    "raw": "怒（おこ）る",
+    "word": "怒る",
+    "reading": "おこる",
+    "meaning": "to get angry, to get mad",
+    "level": "N5"
+  },
+  {
+    "id": "487",
+    "raw": "太（ふと）る",
+    "word": "太る",
+    "reading": "ふとる",
+    "meaning": "to grow fat (stout, plump), to become fat, to gain weight",
+    "level": "N5"
+  },
+  {
+    "id": "594",
+    "raw": "なる",
+    "word": "なる",
+    "reading": "なる",
+    "meaning": "to become, to get, to grow, to turn, to reach, to attain",
+    "level": "N5"
+  },
+  {
+    "id": "237",
+    "raw": "ゆっくり",
+    "word": "ゆっくり",
+    "reading": "ゆっくり",
+    "meaning": "slowly, unhurriedly, without haste, leisurely, at one's leisure",
+    "level": "N5"
+  },
+  {
+    "id": "1048",
+    "raw": "雪（ゆき）",
+    "word": "雪",
+    "reading": "ゆき",
+    "meaning": "snow",
+    "level": "N5"
+  },
+  {
+    "id": "129",
+    "raw": "スキー",
+    "word": "スキー",
+    "reading": "スキー",
+    "meaning": "skiing",
+    "level": "N5"
+  },
+  {
+    "id": "66",
+    "raw": "お風呂（ふろ）に入（はい）る",
+    "word": "お風呂に入る",
+    "reading": "おふろにはいる",
+    "meaning": "to take a bath, to have a bath",
+    "level": "N5"
+  },
+  {
+    "id": "761",
+    "raw": "涼（すず）しい",
+    "word": "涼しい",
+    "reading": "すずしい",
+    "meaning": "cool, refreshing",
+    "level": "N5"
+  },
+  {
+    "id": "327",
+    "raw": "会議（かいぎ）",
+    "word": "会議",
+    "reading": "かいぎ",
+    "meaning": "meeting, conference, session, assembly, council, convention, congress",
+    "level": "N5"
+  },
+  {
+    "id": "874",
+    "raw": "終（お）わる",
+    "word": "終わる",
+    "reading": "おわる",
+    "meaning": "to finish, to end, to close",
+    "level": "N5"
+  },
+  {
+    "id": "657",
+    "raw": "晩（ばん）ご飯（はん）",
+    "word": "晩ご飯",
+    "reading": "ばんごはん",
+    "meaning": "dinner, evening meal",
+    "level": "N5"
+  },
+  {
+    "id": "725",
+    "raw": "歯（は）",
+    "word": "歯",
+    "reading": "は",
+    "meaning": "tooth",
+    "level": "N5"
+  },
+  {
+    "id": "255",
+    "raw": "一緒（いっしょ）に",
+    "word": "一緒に",
+    "reading": "いっしょに",
+    "meaning": "together (with), at the same time, in a lump",
+    "level": "N5"
+  },
+  {
+    "id": "622",
+    "raw": "散歩（さんぽ）",
+    "word": "散歩",
+    "reading": "さんぽ",
+    "meaning": "walk, stroll",
+    "level": "N5"
+  },
+  {
+    "id": "224",
+    "raw": "まだ",
+    "word": "まだ",
+    "reading": "まだ",
+    "meaning": "as yet, hitherto, only, still",
+    "level": "N5"
+  },
+  {
+    "id": "818",
+    "raw": "痛（いた）い",
+    "word": "痛い",
+    "reading": "いたい",
+    "meaning": "painful, sore",
+    "level": "N5"
+  },
+  {
+    "id": "390",
+    "raw": "切符（きっぷ）",
+    "word": "切符",
+    "reading": "きっぷ",
+    "meaning": "ticket",
+    "level": "N5"
+  },
+  {
+    "id": "759",
+    "raw": "消（け）す",
+    "word": "消す",
+    "reading": "けす",
+    "meaning": "to erase, to delete, to cross out",
+    "level": "N5"
+  },
+  {
+    "id": "861",
+    "raw": "答（こた）える",
+    "word": "答える",
+    "reading": "こたえる",
+    "meaning": "to answer, to reply",
+    "level": "N5"
+  },
+  {
+    "id": "666",
+    "raw": "曇（くも）り",
+    "word": "曇り",
+    "reading": "くもり",
+    "meaning": "cloudiness, cloudy weather, shadow",
+    "level": "N5"
+  },
+  {
+    "id": "790",
+    "raw": "狭（せま）い",
+    "word": "狭い",
+    "reading": "せまい",
+    "meaning": "narrow, confined, small",
+    "level": "N5"
+  },
+  {
+    "id": "693",
+    "raw": "来年（らいねん）",
+    "word": "来年",
+    "reading": "らいねん",
+    "meaning": "next year",
+    "level": "N5"
+  },
+  {
+    "id": "1071",
+    "raw": "風呂（ふろ）",
+    "word": "風呂",
+    "reading": "ふろ",
+    "meaning": "bath, bathtub",
+    "level": "N5"
+  },
+  {
+    "id": "753",
+    "raw": "洗濯（せんたく）",
+    "word": "洗濯",
+    "reading": "せんたく",
+    "meaning": "washing, laundry",
+    "level": "N5"
+  },
+  {
+    "id": "433",
+    "raw": "いいえ",
+    "word": "いいえ",
+    "reading": "いいえ",
+    "meaning": "no, nay",
+    "level": "N5"
+  },
+  {
+    "id": "266",
+    "raw": "上手（じょうず）",
+    "word": "上手",
+    "reading": "じょうず",
+    "meaning": "skill, skillful, dexterity",
+    "level": "N5"
+  },
+  {
+    "id": "267",
+    "raw": "上手（うま）い",
+    "word": "上手い",
+    "reading": "うまい",
+    "meaning": "skillful, skilful, clever, expert, wise, successful",
+    "level": "N5"
+  },
+  {
+    "id": "415",
+    "raw": "去年（きょねん）",
+    "word": "去年",
+    "reading": "きょねん",
+    "meaning": "last year",
+    "level": "N5"
+  },
+  {
+    "id": "1063",
+    "raw": "いただきます",
+    "word": "いただきます",
+    "reading": "いただきます",
+    "meaning": "thank you (for the meal just served), I receive (this meal)",
+    "level": "N5"
+  },
+  {
+    "id": "181",
+    "raw": "どのくらい",
+    "word": "どのくらい",
+    "reading": "どのくらい",
+    "meaning": "how long, how far, how much",
+    "level": "N5"
+  },
+  {
+    "id": "992",
+    "raw": "まで",
+    "word": "まで",
+    "reading": "まで",
+    "meaning": "until (a time), till, to, up to",
+    "level": "N5"
+  },
+  {
+    "id": "694",
+    "raw": "来月（らいげつ）",
+    "word": "来月",
+    "reading": "らいげつ",
+    "meaning": "next month",
+    "level": "N5"
+  },
+  {
+    "id": "153",
+    "raw": "ダイエット",
+    "word": "ダイエット",
+    "reading": "ダイエット",
+    "meaning": "diet",
+    "level": "N5"
+  },
+  {
+    "id": "357",
+    "raw": "先月（せんげつ）",
+    "word": "先月",
+    "reading": "せんげつ",
+    "meaning": "last month",
+    "level": "N5"
+  },
+  {
+    "id": "684",
+    "raw": "木曜日（もくようび）",
+    "word": "木曜日",
+    "reading": "もくようび",
+    "meaning": "Thursday",
+    "level": "N5"
+  },
+  {
+    "id": "406",
+    "raw": "午後（ごご）",
+    "word": "午後",
+    "reading": "ごご",
+    "meaning": "afternoon, p.m.",
+    "level": "N5"
+  },
+  {
+    "id": "252",
+    "raw": "一昨日（おととい）",
+    "word": "一昨日",
+    "reading": "おととい",
+    "meaning": "day before yesterday",
+    "level": "N5"
+  },
+  {
+    "id": "642",
+    "raw": "明後日（あさって）",
+    "word": "明後日",
+    "reading": "あさって",
+    "meaning": "day after tomorrow",
+    "level": "N5"
+  },
+  {
+    "id": "990",
+    "raw": "辞書（じしょ）",
+    "word": "辞書",
+    "reading": "じしょ",
+    "meaning": "dictionary, lexicon",
+    "level": "N5"
+  },
+  {
+    "id": "878",
+    "raw": "結構（けっこう）",
+    "word": "結構",
+    "reading": "けっこう",
+    "meaning": "splendid, nice, quite, wonderful, delicious, sweet, no thank you, I'm good (when refusing), enough",
+    "level": "N5"
+  },
+  {
+    "id": "7",
+    "raw": "アイスクリーム",
+    "word": "アイスクリーム",
+    "reading": "アイスクリーム",
+    "meaning": "ice cream, icecream",
+    "level": "N5"
+  },
+  {
+    "id": "22",
+    "raw": "いつも",
+    "word": "いつも",
+    "reading": "いつも",
+    "meaning": "always, all the time, at all times",
+    "level": "N5"
+  },
+  {
+    "id": "1001",
+    "raw": "週末（しゅうまつ）",
+    "word": "週末",
+    "reading": "しゅうまつ",
+    "meaning": "weekend",
+    "level": "N5"
+  },
+  {
+    "id": "598",
+    "raw": "手（て）",
+    "word": "手",
+    "reading": "て",
+    "meaning": "hand, arm",
+    "level": "N5"
+  },
+  {
+    "id": "268",
+    "raw": "上着（うわぎ）",
+    "word": "上着",
+    "reading": "うわぎ",
+    "meaning": "coat, tunic, jacket, outer garment",
+    "level": "N5"
+  },
+  {
+    "id": "177",
+    "raw": "どちら",
+    "word": "どちら",
+    "reading": "どちら",
+    "meaning": "which way, which direction, where, who",
+    "level": "N5"
+  },
+  {
+    "id": "500",
+    "raw": "嬉（うれ）しい",
+    "word": "嬉しい",
+    "reading": "うれしい",
+    "meaning": "happy, glad, pleasant",
+    "level": "N5"
+  },
+  {
+    "id": "822",
+    "raw": "白（しろ）い",
+    "word": "白い",
+    "reading": "しろい",
+    "meaning": "white",
+    "level": "N5"
+  },
+  {
+    "id": "254",
+    "raw": "一番（いちばん）",
+    "word": "一番",
+    "reading": "いちばん",
+    "meaning": "number one, first, first place",
+    "level": "N5"
+  },
+  {
+    "id": "303",
+    "raw": "人口（じんこう）",
+    "word": "人口",
+    "reading": "じんこう",
+    "meaning": "population",
+    "level": "N5"
+  },
+  {
+    "id": "229",
+    "raw": "メニュー",
+    "word": "メニュー",
+    "reading": "メニュー",
+    "meaning": "menu",
+    "level": "N5"
+  },
+  {
+    "id": "924",
+    "raw": "茶色（ちゃいろ）",
+    "word": "茶色",
+    "reading": "ちゃいろ",
+    "meaning": "light brown, tawny",
+    "level": "N5"
+  },
+  {
+    "id": "1094",
+    "raw": "黄色（きいろ）",
+    "word": "黄色",
+    "reading": "きいろ",
+    "meaning": "yellow, amber",
+    "level": "N5"
+  },
+  {
+    "id": "860",
+    "raw": "答（こた）え",
+    "word": "答え",
+    "reading": "こたえ",
+    "meaning": "answer, reply, response, solution",
+    "level": "N5"
+  },
+  {
+    "id": "614",
+    "raw": "探（さが）す",
+    "word": "探す",
+    "reading": "さがす",
+    "meaning": "to search (for something desired, needed), to look for",
+    "level": "N5"
+  },
+  {
+    "id": "335",
+    "raw": "何（なに）か",
+    "word": "何か",
+    "reading": "なにか",
+    "meaning": "something, some, any",
+    "level": "N5"
+  },
+  {
+    "id": "862",
+    "raw": "箱（はこ）",
+    "word": "箱",
+    "reading": "はこ",
+    "meaning": "box, case, chest, package, pack",
+    "level": "N5"
+  },
+  {
+    "id": "762",
+    "raw": "渡（わた）す",
+    "word": "渡す",
+    "reading": "わたす",
+    "meaning": "to hand over, to pass, to give",
+    "level": "N5"
+  },
+  {
+    "id": "470",
+    "raw": "大人（おとな）",
+    "word": "大人",
+    "reading": "おとな",
+    "meaning": "adult",
+    "level": "N5"
+  },
+  {
+    "id": "24",
+    "raw": "インド",
+    "word": "インド",
+    "reading": "インド",
+    "meaning": "India",
+    "level": "N5"
+  },
+  {
+    "id": "209",
+    "raw": "ビル",
+    "word": "ビル",
+    "reading": "ビル",
+    "meaning": "multi-floor building, multi-story building",
+    "level": "N5"
+  },
+  {
+    "id": "954",
+    "raw": "試合（しあい）",
+    "word": "試合",
+    "reading": "しあい",
+    "meaning": "match, game, bout, contest",
+    "level": "N5"
+  },
+  {
+    "id": "484",
+    "raw": "天気（てんき）",
+    "word": "天気",
+    "reading": "てんき",
+    "meaning": "weather, the elements",
+    "level": "N5"
+  },
+  {
+    "id": "1015",
+    "raw": "やる",
+    "word": "やる",
+    "reading": "やる",
+    "meaning": "to do, to undertake, to perform, to play (a game), to study",
+    "level": "N5"
+  },
+  {
+    "id": "1084",
+    "raw": "首（くび）",
+    "word": "首",
+    "reading": "くび",
+    "meaning": "neck, fired",
+    "level": "N5"
+  },
+  {
+    "id": "955",
+    "raw": "試験（しけん）",
+    "word": "試験",
+    "reading": "しけん",
+    "meaning": "examination, test, study, trial, experiment",
+    "level": "N5"
+  },
+  {
+    "id": "488",
+    "raw": "奥（おく）さん",
+    "word": "奥さん",
+    "reading": "おくさん",
+    "meaning": "wife, your wife, his wife, married lady, madam",
+    "level": "N5"
+  },
+  {
+    "id": "993",
+    "raw": "までに",
+    "word": "までに",
+    "reading": "までに",
+    "meaning": "by, not later than, before",
+    "level": "N5"
+  },
+  {
+    "id": "1030",
+    "raw": "銀行（ぎんこう）",
+    "word": "銀行",
+    "reading": "ぎんこう",
+    "meaning": "bank",
+    "level": "N5"
+  },
+  {
+    "id": "745",
+    "raw": "決（き）める",
+    "word": "決める",
+    "reading": "きめる",
+    "meaning": "to decide, to choose, to determine, to make up one's mind, to resolve, to set one's heart on, to settle, to arrange, to set, to appoint, to fix",
+    "level": "N5"
+  },
+  {
+    "id": "917",
+    "raw": "花瓶（かびん）",
+    "word": "花瓶",
+    "reading": "かびん",
+    "meaning": "(flower) vase",
+    "level": "N5"
+  },
+  {
+    "id": "362",
+    "raw": "入（い）れる",
+    "word": "入れる",
+    "reading": "いれる",
+    "meaning": "to put in, to let in, to take in, to bring in, to insert, to set (a jewel, etc.), to ink in (e.g. a tattoo), to score (a point )",
+    "level": "N5"
+  },
+  {
+    "id": "623",
+    "raw": "文化（ぶんか）",
+    "word": "文化",
+    "reading": "ぶんか",
+    "meaning": "culture, civilization, civilisation",
+    "level": "N5"
+  },
+  {
+    "id": "557",
+    "raw": "引（ひ）く",
+    "word": "引く",
+    "reading": "ひく",
+    "meaning": "to pull",
+    "level": "N5"
+  },
+  {
+    "id": "832",
+    "raw": "眠（ねむ）い",
+    "word": "眠い",
+    "reading": "ねむい",
+    "meaning": "sleepy, drowsy, somnolent",
+    "level": "N5"
+  },
+  {
+    "id": "905",
+    "raw": "自分（じぶん）",
+    "word": "自分",
+    "reading": "じぶん",
+    "meaning": "myself, yourself, oneself, himself, herself",
+    "level": "N5"
+  },
+  {
+    "id": "434",
+    "raw": "吸（す）う",
+    "word": "吸う",
+    "reading": "すう",
+    "meaning": "to smoke, to breathe in, to inhale",
+    "level": "N5"
+  },
+  {
+    "id": "530",
+    "raw": "履（は）く",
+    "word": "履く",
+    "reading": "はく",
+    "meaning": "to put on (lower-body clothing, e.g. pants, skirt, footwear), to wear",
+    "level": "N5"
+  },
+  {
+    "id": "236",
+    "raw": "もっと",
+    "word": "もっと",
+    "reading": "もっと",
+    "meaning": "(some) more, even more, longer, further",
+    "level": "N5"
+  },
+  {
+    "id": "728",
+    "raw": "歴史（れきし）",
+    "word": "歴史",
+    "reading": "れきし",
+    "meaning": "history",
+    "level": "N5"
+  },
+  {
+    "id": "348",
+    "raw": "働（はたら）く",
+    "word": "働く",
+    "reading": "はたらく",
+    "meaning": "to work, to labor, to labour",
+    "level": "N5"
+  },
+  {
+    "id": "1097",
+    "raw": "黒（くろ）い",
+    "word": "黒い",
+    "reading": "くろい",
+    "meaning": "black",
+    "level": "N5"
+  },
+  {
+    "id": "621",
+    "raw": "教科書（きょうかしょ）",
+    "word": "教科書",
+    "reading": "きょうかしょ",
+    "meaning": "textbook, coursebook, schoolbook",
+    "level": "N5"
+  },
+  {
+    "id": "620",
+    "raw": "教師（きょうし）",
+    "word": "教師",
+    "reading": "きょうし",
+    "meaning": "teacher (classroom)",
+    "level": "N5"
+  },
+  {
+    "id": "734",
+    "raw": "毎晩（まいばん）",
+    "word": "毎晩",
+    "reading": "まいばん",
+    "meaning": "every night",
+    "level": "N5"
+  },
+  {
+    "id": "277",
+    "raw": "両親（りょうしん）",
+    "word": "両親",
+    "reading": "りょうしん",
+    "meaning": "parents, both parents",
+    "level": "N5"
+  },
+  {
+    "id": "401",
+    "raw": "勤（つと）める",
+    "word": "勤める",
+    "reading": "つとめる",
+    "meaning": "to work (for), to be employed (at), to serve (in)",
+    "level": "N5"
+  },
+  {
+    "id": "816",
+    "raw": "病気（びょうき）",
+    "word": "病気",
+    "reading": "びょうき",
+    "meaning": "illness, disease, sickness",
+    "level": "N5"
+  },
+  {
+    "id": "587",
+    "raw": "悲（かな）しい",
+    "word": "悲しい",
+    "reading": "かなしい",
+    "meaning": "sad, sorrowful",
+    "level": "N5"
+  },
+  {
+    "id": "518",
+    "raw": "寂（さび）しい",
+    "word": "寂しい",
+    "reading": "さびしい",
+    "meaning": "lonely, lonesome, solitary, desolate",
+    "level": "N5"
+  },
+  {
+    "id": "435",
+    "raw": "吹（ふ）く",
+    "word": "吹く",
+    "reading": "ふく",
+    "meaning": "to blow (e.g. wind), to play a wind instrument",
+    "level": "N5"
+  },
+  {
+    "id": "863",
+    "raw": "箸（はし）",
+    "word": "箸",
+    "reading": "はし",
+    "meaning": "chopsticks",
+    "level": "N5"
+  },
+  {
+    "id": "919",
+    "raw": "若（わか）い",
+    "word": "若い",
+    "reading": "わかい",
+    "meaning": "young, youthful",
+    "level": "N5"
+  },
+  {
+    "id": "844",
+    "raw": "社長（しゃちょう）",
+    "word": "社長",
+    "reading": "しゃちょう",
+    "meaning": "company president, manager, director",
+    "level": "N5"
+  },
+  {
+    "id": "869",
+    "raw": "素敵（すてき）",
+    "word": "素敵",
+    "reading": "すてき",
+    "meaning": "lovely, wonderful, nice, great, fantastic, superb, cool",
+    "level": "N5"
+  },
+  {
+    "id": "576",
+    "raw": "心配（しんぱい）",
+    "word": "心配",
+    "reading": "しんぱい",
+    "meaning": "worry, concern, anxiety, uneasiness, fear",
+    "level": "N5"
+  },
+  {
+    "id": "867",
+    "raw": "紅茶（こうちゃ）",
+    "word": "紅茶",
+    "reading": "こうちゃ",
+    "meaning": "black tea",
+    "level": "N5"
+  },
+  {
+    "id": "37",
+    "raw": "お土産（みやげ）",
+    "word": "お土産",
+    "reading": "おみやげ",
+    "meaning": "local specialty or souvenir bought as a gift while travelling",
+    "level": "N5"
+  },
+  {
+    "id": "732",
+    "raw": "母（はは）",
+    "word": "母",
+    "reading": "はは",
+    "meaning": "mother",
+    "level": "N5"
+  },
+  {
+    "id": "523",
+    "raw": "封筒（ふうとう）",
+    "word": "封筒",
+    "reading": "ふうとう",
+    "meaning": "envelope",
+    "level": "N5"
+  },
+  {
+    "id": "90",
+    "raw": "コップ",
+    "word": "コップ",
+    "reading": "コップ",
+    "meaning": "glass (i.e. drinking vessel), tumbler",
+    "level": "N5"
+  },
+  {
+    "id": "139",
+    "raw": "セーター",
+    "word": "セーター",
+    "reading": "セーター",
+    "meaning": "sweater, jumper",
+    "level": "N5"
+  },
+  {
+    "id": "782",
+    "raw": "父（ちち）",
+    "word": "父",
+    "reading": "ちち",
+    "meaning": "father",
+    "level": "N5"
+  },
+  {
+    "id": "1045",
+    "raw": "雑誌（ざっし）",
+    "word": "雑誌",
+    "reading": "ざっし",
+    "meaning": "journal, magazine, periodical",
+    "level": "N5"
+  },
+  {
+    "id": "414",
+    "raw": "厚（あつ）い",
+    "word": "厚い",
+    "reading": "あつい",
+    "meaning": "thick, deep, heavy",
+    "level": "N5"
+  },
+  {
+    "id": "159",
+    "raw": "チケット",
+    "word": "チケット",
+    "reading": "チケット",
+    "meaning": "ticket",
+    "level": "N5"
+  },
+  {
+    "id": "932",
+    "raw": "薬（くすり）",
+    "word": "薬",
+    "reading": "くすり",
+    "meaning": "medicine, pharmaceuticals, (legal) drugs",
+    "level": "N5"
+  },
+  {
+    "id": "1073",
+    "raw": "風邪（かぜ）をひく",
+    "word": "風邪をひく",
+    "reading": "かぜをひく",
+    "meaning": "to catch a cold",
+    "level": "N5"
+  },
+  {
+    "id": "365",
+    "raw": "全部（ぜんぶ）",
+    "word": "全部",
+    "reading": "ぜんぶ",
+    "meaning": "all, entire, whole, altogether",
+    "level": "N5"
+  },
+  {
+    "id": "141",
+    "raw": "然（そ）う",
+    "word": "然う",
+    "reading": "そう",
+    "meaning": "in that way, thus, such",
+    "level": "N5"
+  },
+  {
+    "id": "493",
+    "raw": "どう",
+    "word": "どう",
+    "reading": "どう",
+    "meaning": "how, in what way, how about",
+    "level": "N5"
+  },
+  {
+    "id": "9",
+    "raw": "あのー",
+    "word": "あのー",
+    "reading": "あのー",
+    "meaning": "say, well, um, er",
+    "level": "N5"
+  },
+  {
+    "id": "166",
+    "raw": "でも",
+    "word": "でも",
+    "reading": "でも",
+    "meaning": "but, however, though, nevertheless, still, yet, even so",
+    "level": "N5"
+  },
+  {
+    "id": "582",
+    "raw": "思（おも）う",
+    "word": "思う",
+    "reading": "おもう",
+    "meaning": "to think, to consider, to believe",
+    "level": "N5"
+  },
+  {
+    "id": "691",
+    "raw": "来（く）る",
+    "word": "来る",
+    "reading": "くる",
+    "meaning": "to come (spatially or temporally), to approach, to arrive",
+    "level": "N5"
+  },
+  {
+    "id": "248",
+    "raw": "ちょっと",
+    "word": "ちょっと",
+    "reading": "ちょっと",
+    "meaning": "just a minute, short time, just a little",
+    "level": "N5"
+  },
+  {
+    "id": "288",
+    "raw": "事（こと）",
+    "word": "事",
+    "reading": "こと",
+    "meaning": "thing, matter",
+    "level": "N5"
+  },
+  {
+    "id": "116",
+    "raw": "じゃあ",
+    "word": "じゃあ",
+    "reading": "じゃあ",
+    "meaning": "then, well, so, well then",
+    "level": "N5"
+  },
+  {
+    "id": "563",
+    "raw": "あれ",
+    "word": "あれ",
+    "reading": "あれ",
+    "meaning": "that, that thing",
+    "level": "N5"
+  },
+  {
+    "id": "675",
+    "raw": "ありがとう",
+    "word": "ありがとう",
+    "reading": "ありがとう",
+    "meaning": "thank you, thanks",
+    "level": "N5"
+  },
+  {
+    "id": "101",
+    "raw": "こんな",
+    "word": "こんな",
+    "reading": "こんな",
+    "meaning": "such (about something or someone close to the speaker (including the speaker), or about ideas expressed by the speaker), like this",
+    "level": "N5"
+  },
+  {
+    "id": "652",
+    "raw": "時（とき）",
+    "word": "時",
+    "reading": "とき",
+    "meaning": "time, hour, moment",
+    "level": "N5"
+  },
+  {
+    "id": "651",
+    "raw": "時（じ）",
+    "word": "時",
+    "reading": "じ",
+    "meaning": "hour, o'clock",
+    "level": "N5"
+  },
+  {
+    "id": "708",
+    "raw": "様（さま）",
+    "word": "様",
+    "reading": "さま",
+    "meaning": "Mr., Mrs., Miss, Ms.",
+    "level": "N5"
+  },
+  {
+    "id": "278",
+    "raw": "中（なか）",
+    "word": "中",
+    "reading": "なか",
+    "meaning": "inside, in",
+    "level": "N5"
+  },
+  {
+    "id": "154",
+    "raw": "だから",
+    "word": "だから",
+    "reading": "だから",
+    "meaning": "so, therefore, accordingly, consequently, on those grounds, that is why, for that reason",
+    "level": "N5"
+  },
+  {
+    "id": "957",
+    "raw": "話（はなし）",
+    "word": "話",
+    "reading": "はなし",
+    "meaning": "talk, speech, chat, story, conversation",
+    "level": "N5"
+  },
+  {
+    "id": "396",
+    "raw": "力（ちから）",
+    "word": "力",
+    "reading": "ちから",
+    "meaning": "force, strength, might, vigour (vigor), energy",
+    "level": "N5"
+  },
+  {
+    "id": "543",
+    "raw": "年（とし）",
+    "word": "年",
+    "reading": "とし",
+    "meaning": "year",
+    "level": "N5"
+  },
+  {
+    "id": "542",
+    "raw": "年（ねん）",
+    "word": "年",
+    "reading": "ねん",
+    "meaning": "year",
+    "level": "N5"
+  },
+  {
+    "id": "806",
+    "raw": "男（おとこ）",
+    "word": "男",
+    "reading": "おとこ",
+    "meaning": "man, male",
+    "level": "N5"
+  },
+  {
+    "id": "630",
+    "raw": "方（かた）",
+    "word": "方",
+    "reading": "かた",
+    "meaning": "direction, way, person",
+    "level": "N5"
+  },
+  {
+    "id": "1013",
+    "raw": "違（ちが）う",
+    "word": "違う",
+    "reading": "ちがう",
+    "meaning": "to differ (from), to vary",
+    "level": "N5"
+  },
+  {
+    "id": "501",
+    "raw": "子（こ）",
+    "word": "子",
+    "reading": "こ",
+    "meaning": "child, young woman",
+    "level": "N5"
+  },
+  {
+    "id": "146",
+    "raw": "そして",
+    "word": "そして",
+    "reading": "そして",
+    "meaning": "and, and then, thus, and now, and finally, furthermore",
+    "level": "N5"
+  },
+  {
+    "id": "891",
+    "raw": "考（かんが）える",
+    "word": "考える",
+    "reading": "かんがえる",
+    "meaning": "to think about, to take into consideration",
+    "level": "N5"
+  },
+  {
+    "id": "826",
+    "raw": "目（め）",
+    "word": "目",
+    "reading": "め",
+    "meaning": "eye, eyeball",
+    "level": "N5"
+  },
+  {
+    "id": "451",
+    "raw": "声（こえ）",
+    "word": "声",
+    "reading": "こえ",
+    "meaning": "voice",
+    "level": "N5"
+  },
+  {
+    "id": "109",
+    "raw": "さあ",
+    "word": "さあ",
+    "reading": "さあ",
+    "meaning": "come, come now, come along, go on, hurry up",
+    "level": "N5"
+  },
+  {
+    "id": "29",
+    "raw": "ええ",
+    "word": "ええ",
+    "reading": "ええ",
+    "meaning": "yes, that is correct, right",
+    "level": "N5"
+  },
+  {
+    "id": "382",
+    "raw": "出（だ）す",
+    "word": "出す",
+    "reading": "だす",
+    "meaning": "to take out, to get out",
+    "level": "N5"
+  },
+  {
+    "id": "712",
+    "raw": "次（つぎ）",
+    "word": "次",
+    "reading": "つぎ",
+    "meaning": "next, following, subsequent",
+    "level": "N5"
+  },
+  {
+    "id": "276",
+    "raw": "世界（せかい）",
+    "word": "世界",
+    "reading": "せかい",
+    "meaning": "the world, society, the universe",
+    "level": "N5"
+  },
+  {
+    "id": "489",
+    "raw": "女（おんな）",
+    "word": "女",
+    "reading": "おんな",
+    "meaning": "female, woman, female sex",
+    "level": "N5"
+  },
+  {
+    "id": "225",
+    "raw": "ママ",
+    "word": "ママ",
+    "reading": "ママ",
+    "meaning": "Mama",
+    "level": "N5"
+  },
+  {
+    "id": "1067",
+    "raw": "頼（たの）む",
+    "word": "頼む",
+    "reading": "たのむ",
+    "meaning": "to request, to beg, to ask",
+    "level": "N5"
+  },
+  {
+    "id": "1068",
+    "raw": "顔（かお）",
+    "word": "顔",
+    "reading": "かお",
+    "meaning": "face, visage",
+    "level": "N5"
+  },
+  {
+    "id": "944",
+    "raw": "見（み）える",
+    "word": "見える",
+    "reading": "みえる",
+    "meaning": "to be seen, to be in sight",
+    "level": "N5"
+  },
+  {
+    "id": "465",
+    "raw": "夢（ゆめ）",
+    "word": "夢",
+    "reading": "ゆめ",
+    "meaning": "dream",
+    "level": "N5"
+  },
+  {
+    "id": "171",
+    "raw": "どうぞ",
+    "word": "どうぞ",
+    "reading": "どうぞ",
+    "meaning": "please, kindly, I beg of you",
+    "level": "N5"
+  },
+  {
+    "id": "187",
+    "raw": "なぜ",
+    "word": "なぜ",
+    "reading": "なぜ",
+    "meaning": "why, how",
+    "level": "N5"
+  },
+  {
+    "id": "185",
+    "raw": "どんな",
+    "word": "どんな",
+    "reading": "どんな",
+    "meaning": "what kind of, what sort of",
+    "level": "N5"
+  },
+  {
+    "id": "89",
+    "raw": "こちら",
+    "word": "こちら",
+    "reading": "こちら",
+    "meaning": "this way (direction close to the speaker or towards the speaker), this direction",
+    "level": "N5"
+  },
+  {
+    "id": "308",
+    "raw": "今度（こんど）",
+    "word": "今度",
+    "reading": "こんど",
+    "meaning": "now, this time, next time, another time",
+    "level": "N5"
+  },
+  {
+    "id": "96",
+    "raw": "これから",
+    "word": "これから",
+    "reading": "これから",
+    "meaning": "from now on, after this, in the future, in future, soon",
+    "level": "N5"
+  },
+  {
+    "id": "417",
+    "raw": "取（と）る",
+    "word": "取る",
+    "reading": "とる",
+    "meaning": "to take, to pick up, to harvest, to earn, to win, to choose",
+    "level": "N5"
+  },
+  {
+    "id": "670",
+    "raw": "最後（さいご）",
+    "word": "最後",
+    "reading": "さいご",
+    "meaning": "last, end, conclusion, latest, most recent",
+    "level": "N5"
+  },
+  {
+    "id": "945",
+    "raw": "見（み）せる",
+    "word": "見せる",
+    "reading": "みせる",
+    "meaning": "to show, to display",
+    "level": "N5"
+  },
+  {
+    "id": "262",
+    "raw": "上（うえ）",
+    "word": "上",
+    "reading": "うえ",
+    "meaning": "above, up, over, elder (e.g. daughter)",
+    "level": "N5"
+  },
+  {
+    "id": "355",
+    "raw": "先（さき）",
+    "word": "先",
+    "reading": "さき",
+    "meaning": "previous, prior, former, some time ago, preceding, front, ahead",
+    "level": "N5"
+  },
+  {
+    "id": "687",
+    "raw": "本当（ほんとう）",
+    "word": "本当",
+    "reading": "ほんとう",
+    "meaning": "truth, reality, actuality, fact",
+    "level": "N5"
+  },
+  {
+    "id": "21",
+    "raw": "いつ",
+    "word": "いつ",
+    "reading": "いつ",
+    "meaning": "when, at what time, how soon",
+    "level": "N5"
+  },
+  {
+    "id": "572",
+    "raw": "後（あと）",
+    "word": "後",
+    "reading": "あと",
+    "meaning": "behind, rear, later",
+    "level": "N5"
+  },
+  {
+    "id": "571",
+    "raw": "後（ご）",
+    "word": "後",
+    "reading": "ご",
+    "meaning": "after, post-",
+    "level": "N5"
+  },
+  {
+    "id": "527",
+    "raw": "少（すこ）し",
+    "word": "少し",
+    "reading": "すこし",
+    "meaning": "small quantity, little, few, something",
+    "level": "N5"
+  },
+  {
+    "id": "824",
+    "raw": "皆（みな）さん",
+    "word": "皆さん",
+    "reading": "みなさん",
+    "meaning": "all, everyone, everybody",
+    "level": "N5"
+  },
+  {
+    "id": "364",
+    "raw": "全然（ぜんぜん）",
+    "word": "全然",
+    "reading": "ぜんぜん",
+    "meaning": "(not) at all, (not) in the slightest",
+    "level": "N5"
+  },
+  {
+    "id": "418",
+    "raw": "受（う）ける",
+    "word": "受ける",
+    "reading": "うける",
+    "meaning": "to receive, to get",
+    "level": "N5"
+  },
+  {
+    "id": "173",
+    "raw": "どうも",
+    "word": "どうも",
+    "reading": "どうも",
+    "meaning": "thanks, thank you, somehow, in spite of oneself, try as one might, no matter how hard one may try (to,not to), for some reason",
+    "level": "N5"
+  },
+  {
+    "id": "316",
+    "raw": "他（ほか）",
+    "word": "他",
+    "reading": "ほか",
+    "meaning": "other (place, thing, person), the rest",
+    "level": "N5"
+  },
+  {
+    "id": "738",
+    "raw": "気持（きも）ち",
+    "word": "気持ち",
+    "reading": "きもち",
+    "meaning": "feeling, sensation, mood",
+    "level": "N5"
+  },
+  {
+    "id": "854",
+    "raw": "空（そら）",
+    "word": "空",
+    "reading": "そら",
+    "meaning": "sky, the air, the heavens",
+    "level": "N5"
+  },
+  {
+    "id": "1065",
+    "raw": "頭（あたま）",
+    "word": "頭",
+    "reading": "あたま",
+    "meaning": "head",
+    "level": "N5"
+  },
+  {
+    "id": "1023",
+    "raw": "金（かね）",
+    "word": "金",
+    "reading": "かね",
+    "meaning": "money",
+    "level": "N5"
+  },
+  {
+    "id": "1039",
+    "raw": "関係（かんけい）",
+    "word": "関係",
+    "reading": "かんけい",
+    "meaning": "relation, relationship, connection",
+    "level": "N5"
+  },
+  {
+    "id": "469",
+    "raw": "大事（だいじ）",
+    "word": "大事",
+    "reading": "だいじ",
+    "meaning": "important, valuable, serious matter",
+    "level": "N5"
+  },
+  {
+    "id": "77",
+    "raw": "くらい",
+    "word": "くらい",
+    "reading": "くらい",
+    "meaning": "approximately, about, around, or so",
+    "level": "N5"
+  },
+  {
+    "id": "881",
+    "raw": "続（つづ）ける",
+    "word": "続ける",
+    "reading": "つづける",
+    "meaning": "to continue, to keep up, to keep on",
+    "level": "N5"
+  },
+  {
+    "id": "575",
+    "raw": "ごめんなさい",
+    "word": "ごめんなさい",
+    "reading": "ごめんなさい",
+    "meaning": "I'm sorry, my apologies, excuse me, pardon me",
+    "level": "N5"
+  },
+  {
+    "id": "439",
+    "raw": "問題（もんだい）",
+    "word": "問題",
+    "reading": "もんだい",
+    "meaning": "question (e.g. on a test), problem",
+    "level": "N5"
+  },
+  {
+    "id": "152",
+    "raw": "それに",
+    "word": "それに",
+    "reading": "それに",
+    "meaning": "besides, in addition, also, moreover",
+    "level": "N5"
+  },
+  {
+    "id": "744",
+    "raw": "決（き）まる",
+    "word": "決まる",
+    "reading": "きまる",
+    "meaning": "to be decided, to be settled",
+    "level": "N5"
+  },
+  {
+    "id": "597",
+    "raw": "所（ところ）",
+    "word": "所",
+    "reading": "ところ",
+    "meaning": "place, spot, scene, site",
+    "level": "N5"
+  },
+  {
+    "id": "947",
+    "raw": "見（み）つける",
+    "word": "見つける",
+    "reading": "みつける",
+    "meaning": "to discover, to find (e.g. an error in a book), to come across, to detect, to spot",
+    "level": "N5"
+  },
+  {
+    "id": "371",
+    "raw": "円（えん）",
+    "word": "円",
+    "reading": "えん",
+    "meaning": "yen, Japanese monetary unit, circle",
+    "level": "N5"
+  },
+  {
+    "id": "398",
+    "raw": "動（うご）く",
+    "word": "動く",
+    "reading": "うごく",
+    "meaning": "to move, to stir, to shift, to shake, to swing",
+    "level": "N5"
+  },
+  {
+    "id": "795",
+    "raw": "王（おう）",
+    "word": "王",
+    "reading": "おう",
+    "meaning": "king, ruler, sovereign, monarch",
+    "level": "N5"
+  },
+  {
+    "id": "235",
+    "raw": "もちろん",
+    "word": "もちろん",
+    "reading": "もちろん",
+    "meaning": "of course, certainly, naturally",
+    "level": "N5"
+  },
+  {
+    "id": "551",
+    "raw": "度（ど）",
+    "word": "度",
+    "reading": "ど",
+    "meaning": "degree (angle, temperature, scale, etc.)",
+    "level": "N5"
+  },
+  {
+    "id": "545",
+    "raw": "幸（しあわ）せ",
+    "word": "幸せ",
+    "reading": "しあわせ",
+    "meaning": "happiness, good fortune, luck, blessing",
+    "level": "N5"
+  },
+  {
+    "id": "591",
+    "raw": "感（かん）じ",
+    "word": "感じ",
+    "reading": "かんじ",
+    "meaning": "feeling, sense, impression",
+    "level": "N5"
+  },
+  {
+    "id": "515",
+    "raw": "家族（かぞく）",
+    "word": "家族",
+    "reading": "かぞく",
+    "meaning": "family, members of a family",
+    "level": "N5"
+  },
+  {
+    "id": "757",
+    "raw": "消（き）える",
+    "word": "消える",
+    "reading": "きえる",
+    "meaning": "to go out, to vanish, to disappear",
+    "level": "N5"
+  },
+  {
+    "id": "583",
+    "raw": "急（いそ）ぐ",
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "meaning": "to hurry, to rush, to hasten, to make something happen sooner",
+    "level": "N5"
+  },
+  {
+    "id": "669",
+    "raw": "最初（さいしょ）",
+    "word": "最初",
+    "reading": "さいしょ",
+    "meaning": "beginning, outset, first, onset",
+    "level": "N5"
+  },
+  {
+    "id": "722",
+    "raw": "止（や）める",
+    "word": "止める",
+    "reading": "やめる",
+    "meaning": "to stop (an activity), to cease, to discontinue, to end, to quit",
+    "level": "N5"
+  },
+  {
+    "id": "721",
+    "raw": "止（と）める",
+    "word": "止める",
+    "reading": "とめる",
+    "meaning": "to stop, to turn off",
+    "level": "N5"
+  },
+  {
+    "id": "1038",
+    "raw": "間（あいだ）",
+    "word": "間",
+    "reading": "あいだ",
+    "meaning": "space (between), gap, interval, distance, stretch",
+    "level": "N5"
+  },
+  {
+    "id": "866",
+    "raw": "約束（やくそく）",
+    "word": "約束",
+    "reading": "やくそく",
+    "meaning": "promise, agreement, arrangement, one's word, contract, pact, appointment, engagement, date",
+    "level": "N5"
+  },
+  {
+    "id": "730",
+    "raw": "残（のこ）る",
+    "word": "残る",
+    "reading": "のこる",
+    "meaning": "to remain, to be left",
+    "level": "N5"
+  },
+  {
+    "id": "698",
+    "raw": "枚（まい）",
+    "word": "枚",
+    "reading": "まい",
+    "meaning": "counter for flat objects (e.g. sheets of paper)",
+    "level": "N5"
+  },
+  {
+    "id": "442",
+    "raw": "困（こま）る",
+    "word": "困る",
+    "reading": "こまる",
+    "meaning": "to be troubled, to be worried, to be bothered, to be embarrassed, to be stumped",
+    "level": "N5"
+  },
+  {
+    "id": "420",
+    "raw": "口（くち）",
+    "word": "口",
+    "reading": "くち",
+    "meaning": "mouth",
+    "level": "N5"
+  },
+  {
+    "id": "658",
+    "raw": "普通（ふつう）",
+    "word": "普通",
+    "reading": "ふつう",
+    "meaning": "normal, ordinary, regular, usual, common, average",
+    "level": "N5"
+  },
+  {
+    "id": "690",
+    "raw": "村（むら）",
+    "word": "村",
+    "reading": "むら",
+    "meaning": "village",
+    "level": "N5"
+  },
+  {
+    "id": "929",
+    "raw": "落（お）ちる",
+    "word": "落ちる",
+    "reading": "おちる",
+    "meaning": "to fall down, to drop, to fall (e.g. rain), to sink (e.g. sun or moon), to fall onto (e.g. light or one's gaze), to be used in a certain place (e.g. money)",
+    "level": "N5"
+  },
+  {
+    "id": "812",
+    "raw": "番（ばん）",
+    "word": "番",
+    "reading": "ばん",
+    "meaning": "number (in a series), one's turn, turn",
+    "level": "N5"
+  },
+  {
+    "id": "394",
+    "raw": "別（べつ）に",
+    "word": "別に",
+    "reading": "べつに",
+    "meaning": "(not) particularly, (not) especially, (not) specially, separately, apart, additionally, extra",
+    "level": "N5"
+  },
+  {
+    "id": "946",
+    "raw": "見（み）つかる",
+    "word": "見つかる",
+    "reading": "みつかる",
+    "meaning": "to be found, to be discovered",
+    "level": "N5"
+  },
+  {
+    "id": "857",
+    "raw": "笑（わら）う",
+    "word": "笑う",
+    "reading": "わらう",
+    "meaning": "to laugh",
+    "level": "N5"
+  },
+  {
+    "id": "999",
+    "raw": "送（おく）る",
+    "word": "送る",
+    "reading": "おくる",
+    "meaning": "to send (a thing), to dispatch, to despatch, to transmit",
+    "level": "N5"
+  },
+  {
+    "id": "856",
+    "raw": "立（た）つ",
+    "word": "立つ",
+    "reading": "たつ",
+    "meaning": "to stand, to rise, to stand up",
+    "level": "N5"
+  },
+  {
+    "id": "727",
+    "raw": "歳（さい）",
+    "word": "歳",
+    "reading": "さい",
+    "meaning": "years-old",
+    "level": "N5"
+  },
+  {
+    "id": "672",
+    "raw": "最近（さいきん）",
+    "word": "最近",
+    "reading": "さいきん",
+    "meaning": "most recent, these days, right now, recently, nowadays",
+    "level": "N5"
+  },
+  {
+    "id": "1064",
+    "raw": "頃（ころ）",
+    "word": "頃",
+    "reading": "ころ",
+    "meaning": "(approximate) time, around, about, toward",
+    "level": "N5"
+  },
+  {
+    "id": "269",
+    "raw": "下（した）",
+    "word": "下",
+    "reading": "した",
+    "meaning": "below, down, under, younger (e.g. daughter)",
+    "level": "N5"
+  },
+  {
+    "id": "592",
+    "raw": "感（かん）じる",
+    "word": "感じる",
+    "reading": "かんじる",
+    "meaning": "to feel, to sense, to experience",
+    "level": "N5"
+  },
+  {
+    "id": "873",
+    "raw": "終（お）わり",
+    "word": "終わり",
+    "reading": "おわり",
+    "meaning": "the end",
+    "level": "N5"
+  },
+  {
+    "id": "1037",
+    "raw": "開（あ）ける",
+    "word": "開ける",
+    "reading": "あける",
+    "meaning": "to open (a door, etc.), to unwrap (e.g. parcel, package), to unlock",
+    "level": "N5"
+  },
+  {
+    "id": "984",
+    "raw": "足（あし）",
+    "word": "足",
+    "reading": "あし",
+    "meaning": "foot, leg",
+    "level": "N5"
+  },
+  {
+    "id": "799",
+    "raw": "生（う）まれる",
+    "word": "生まれる",
+    "reading": "うまれる",
+    "meaning": "to be born",
+    "level": "N5"
+  },
+  {
+    "id": "533",
+    "raw": "島（しま）",
+    "word": "島",
+    "reading": "しま",
+    "meaning": "island",
+    "level": "N5"
+  },
+  {
+    "id": "231",
+    "raw": "もう一度（いちど）",
+    "word": "もう一度",
+    "reading": "もういちど",
+    "meaning": "once more, again",
+    "level": "N5"
+  },
+  {
+    "id": "151",
+    "raw": "それでは",
+    "word": "それでは",
+    "reading": "それでは",
+    "meaning": "well then ...",
+    "level": "N5"
+  },
+  {
+    "id": "428",
+    "raw": "合（あ）う",
+    "word": "合う",
+    "reading": "あう",
+    "meaning": "to come together, to merge, to unite, to meet",
+    "level": "N5"
+  },
+  {
+    "id": "797",
+    "raw": "理由（りゆう）",
+    "word": "理由",
+    "reading": "りゆう",
+    "meaning": "reason, pretext, motive",
+    "level": "N5"
+  },
+  {
+    "id": "233",
+    "raw": "もしもし",
+    "word": "もしもし",
+    "reading": "もしもし",
+    "meaning": "hello (e.g. on phone)",
+    "level": "N5"
+  },
+  {
+    "id": "731",
+    "raw": "残念（ざんねん）",
+    "word": "残念",
+    "reading": "ざんねん",
+    "meaning": "deplorable, regrettable, disappointing, vexing, unfortunate",
+    "level": "N5"
+  },
+  {
+    "id": "1016",
+    "raw": "選手（せんしゅ）",
+    "word": "選手",
+    "reading": "せんしゅ",
+    "meaning": "player (in game), team member",
+    "level": "N5"
+  },
+  {
+    "id": "263",
+    "raw": "上（あ）がる",
+    "word": "上がる",
+    "reading": "あがる",
+    "meaning": "to rise, to go up, to come up, to ascend, to be raised",
+    "level": "N5"
+  },
+  {
+    "id": "894",
+    "raw": "聞（き）こえる",
+    "word": "聞こえる",
+    "reading": "きこえる",
+    "meaning": "to be heard, to be audible",
+    "level": "N5"
+  },
+  {
+    "id": "388",
+    "raw": "切（き）る",
+    "word": "切る",
+    "reading": "きる",
+    "meaning": "to cut, to cut through, to perform (surgery)",
+    "level": "N5"
+  },
+  {
+    "id": "467",
+    "raw": "大（おお）きな",
+    "word": "大きな",
+    "reading": "おおきな",
+    "meaning": "big, large, great",
+    "level": "N5"
+  },
+  {
+    "id": "787",
+    "raw": "物（もの）",
+    "word": "物",
+    "reading": "もの",
+    "meaning": "thing, object, article, stuff, substance",
+    "level": "N5"
+  },
+  {
+    "id": "448",
+    "raw": "城（しろ）",
+    "word": "城",
+    "reading": "しろ",
+    "meaning": "castle",
+    "level": "N5"
+  },
+  {
+    "id": "912",
+    "raw": "船（ふね）",
+    "word": "船",
+    "reading": "ふね",
+    "meaning": "ship, boat, watercraft, vessel, seaplane",
+    "level": "N5"
+  },
+  {
+    "id": "775",
+    "raw": "点（てん）",
+    "word": "点",
+    "reading": "てん",
+    "meaning": "dot, spot, speck, mark, grade, score, points, point, goal, run, aspect, detail, part, respect, way, viewpoint, punctuation mark, dot stroke, counter for points, marks, goals, etc., counter for goods, items, articles of clothing, works of art",
+    "level": "N5"
+  },
+  {
+    "id": "673",
+    "raw": "月（つき）",
+    "word": "月",
+    "reading": "つき",
+    "meaning": "moon",
+    "level": "N5"
+  },
+  {
+    "id": "189",
+    "raw": "について",
+    "word": "について",
+    "reading": "について",
+    "meaning": "concerning, regarding",
+    "level": "N5"
+  },
+  {
+    "id": "310",
+    "raw": "こんにちは",
+    "word": "こんにちは",
+    "reading": "こんにちは",
+    "meaning": "hello, good day, good afternoon",
+    "level": "N5"
+  },
+  {
+    "id": "481",
+    "raw": "天（てん）",
+    "word": "天",
+    "reading": "てん",
+    "meaning": "sky",
+    "level": "N5"
+  },
+  {
+    "id": "880",
+    "raw": "続（つづ）く",
+    "word": "続く",
+    "reading": "つづく",
+    "meaning": "to continue, to last, to go on",
+    "level": "N5"
+  },
+  {
+    "id": "975",
+    "raw": "貸（か）す",
+    "word": "貸す",
+    "reading": "かす",
+    "meaning": "to lend, to loan",
+    "level": "N5"
+  },
+  {
+    "id": "26",
+    "raw": "ううん",
+    "word": "ううん",
+    "reading": "ううん",
+    "meaning": "no, um, er, well",
+    "level": "N5"
+  },
+  {
+    "id": "705",
+    "raw": "楽（たの）しみ",
+    "word": "楽しみ",
+    "reading": "たのしみ",
+    "meaning": "enjoyment, pleasure, diversion, amusement, hobby",
+    "level": "N5"
+  },
+  {
+    "id": "599",
+    "raw": "手伝（てつだ）う",
+    "word": "手伝う",
+    "reading": "てつだう",
+    "meaning": "to help, to assist, to aid",
+    "level": "N5"
+  },
+  {
+    "id": "995",
+    "raw": "近（ちか）く",
+    "word": "近く",
+    "reading": "ちかく",
+    "meaning": "near, neighbourhood, neighborhood, vicinity",
+    "level": "N5"
+  },
+  {
+    "id": "733",
+    "raw": "毎日（まいにち）",
+    "word": "毎日",
+    "reading": "まいにち",
+    "meaning": "every day",
+    "level": "N5"
+  },
+  {
+    "id": "264",
+    "raw": "上（あ）げる",
+    "word": "上げる",
+    "reading": "あげる",
+    "meaning": "to raise, to elevate",
+    "level": "N5"
+  },
+  {
+    "id": "282",
+    "raw": "久（ひさ）しぶり",
+    "word": "久しぶり",
+    "reading": "ひさしぶり",
+    "meaning": "a long time (since the last time), first in a long time",
+    "level": "N5"
+  },
+  {
+    "id": "432",
+    "raw": "向（む）こう",
+    "word": "向こう",
+    "reading": "むこう",
+    "meaning": "opposite side, other side, opposite direction",
+    "level": "N5"
+  },
+  {
+    "id": "647",
+    "raw": "春（はる）",
+    "word": "春",
+    "reading": "はる",
+    "meaning": "spring, springtime",
+    "level": "N5"
+  },
+  {
+    "id": "720",
+    "raw": "止（と）まる",
+    "word": "止まる",
+    "reading": "とまる",
+    "meaning": "to stop (moving), to come to a stop",
+    "level": "N5"
+  },
+  {
+    "id": "150",
+    "raw": "それから",
+    "word": "それから",
+    "reading": "それから",
+    "meaning": "and then, after that, and also",
+    "level": "N5"
+  },
+  {
+    "id": "1044",
+    "raw": "集（あつ）める",
+    "word": "集める",
+    "reading": "あつめる",
+    "meaning": "to collect, to assemble, to gather",
+    "level": "N5"
+  },
+  {
+    "id": "1019",
+    "raw": "酒（さけ）",
+    "word": "酒",
+    "reading": "さけ",
+    "meaning": "alcohol, sake",
+    "level": "N5"
+  },
+  {
+    "id": "156",
+    "raw": "ただいま",
+    "word": "ただいま",
+    "reading": "ただいま",
+    "meaning": "here I am, I'm home!, right now, at present",
+    "level": "N5"
+  },
+  {
+    "id": "930",
+    "raw": "落（お）とす",
+    "word": "落とす",
+    "reading": "おとす",
+    "meaning": "to drop, to lose, to let fall, to shed (light), to cast (one's gaze), to pour in (liquid), to leave behind",
+    "level": "N5"
+  },
+  {
+    "id": "770",
+    "raw": "火（ひ）",
+    "word": "火",
+    "reading": "ひ",
+    "meaning": "fire, flame, blaze",
+    "level": "N5"
+  },
+  {
+    "id": "716",
+    "raw": "歌（うた）",
+    "word": "歌",
+    "reading": "うた",
+    "meaning": "song",
+    "level": "N5"
+  },
+  {
+    "id": "902",
+    "raw": "胸（むね）",
+    "word": "胸",
+    "reading": "むね",
+    "meaning": "chest, breast",
+    "level": "N5"
+  },
+  {
+    "id": "962",
+    "raw": "説明（せつめい）",
+    "word": "説明",
+    "reading": "せつめい",
+    "meaning": "explanation, exposition",
+    "level": "N5"
+  },
+  {
+    "id": "702",
+    "raw": "森（もり）",
+    "word": "森",
+    "reading": "もり",
+    "meaning": "forest",
+    "level": "N5"
+  },
+  {
+    "id": "1031",
+    "raw": "鍵（かぎ）",
+    "word": "鍵",
+    "reading": "かぎ",
+    "meaning": "key, lock",
+    "level": "N5"
+  },
+  {
+    "id": "1",
+    "raw": "丸（まる）",
+    "word": "丸",
+    "reading": "まる",
+    "meaning": "circle (sometimes used for zero)",
+    "level": "N5"
+  },
+  {
+    "id": "144",
+    "raw": "そうですね",
+    "word": "そうですね",
+    "reading": "そうですね",
+    "meaning": "that's so, isn't it",
+    "level": "N5"
+  },
+  {
+    "id": "872",
+    "raw": "紹介（しょうかい）",
+    "word": "紹介",
+    "reading": "しょうかい",
+    "meaning": "introduction, presentation, referral, listing",
+    "level": "N5"
+  },
+  {
+    "id": "559",
+    "raw": "弱（よわ）い",
+    "word": "弱い",
+    "reading": "よわい",
+    "meaning": "weak, frail, delicate, tender, unskilled, weak (wine)",
+    "level": "N5"
+  },
+  {
+    "id": "601",
+    "raw": "手術（しゅじゅつ）",
+    "word": "手術",
+    "reading": "しゅじゅつ",
+    "meaning": "surgery, operation, procedure",
+    "level": "N5"
+  },
+  {
+    "id": "319",
+    "raw": "代（だい）",
+    "word": "代",
+    "reading": "だい",
+    "meaning": "charge, cost, price, generation, age, school year, cohort, reign, era, a representative of, on behalf of, for, switchboard number, counter for decades of ages, eras, etc., counter for generations, proxy application company, pronoun, substitute, period, fee",
+    "level": "N5"
+  },
+  {
+    "id": "823",
+    "raw": "皆（みな）",
+    "word": "皆",
+    "reading": "みな",
+    "meaning": "all, everyone, everybody",
+    "level": "N5"
+  },
+  {
+    "id": "535",
+    "raw": "左（ひだり）",
+    "word": "左",
+    "reading": "ひだり",
+    "meaning": "left, left hand side",
+    "level": "N5"
+  },
+  {
+    "id": "318",
+    "raw": "付（つ）く",
+    "word": "付く",
+    "reading": "つく",
+    "meaning": "to be attached, to be connected with, to adhere, to stick, to cling",
+    "level": "N5"
+  },
+  {
+    "id": "1043",
+    "raw": "集（あつ）まる",
+    "word": "集まる",
+    "reading": "あつまる",
+    "meaning": "to gather, to collect, to assemble",
+    "level": "N5"
+  },
+  {
+    "id": "593",
+    "raw": "感謝（かんしゃ）",
+    "word": "感謝",
+    "reading": "かんしゃ",
+    "meaning": "thanks, gratitude",
+    "level": "N5"
+  },
+  {
+    "id": "228",
+    "raw": "メール",
+    "word": "メール",
+    "reading": "メール",
+    "meaning": "email, mail, post, message, text, sms",
+    "level": "N5"
+  },
+  {
+    "id": "208",
+    "raw": "びっくり",
+    "word": "びっくり",
+    "reading": "びっくり",
+    "meaning": "to be surprised, to be amazed, to be frightened, to be astonished, to get startled, to jump",
+    "level": "N5"
+  },
+  {
+    "id": "1033",
+    "raw": "門（もん）",
+    "word": "門",
+    "reading": "もん",
+    "meaning": "gate",
+    "level": "N5"
+  },
+  {
+    "id": "302",
+    "raw": "人々（ひとびと）",
+    "word": "人々",
+    "reading": "ひとびと",
+    "meaning": "people, men and women",
+    "level": "N5"
+  },
+  {
+    "id": "835",
+    "raw": "着（つ）く",
+    "word": "着く",
+    "reading": "つく",
+    "meaning": "to arrive at, to reach",
+    "level": "N5"
+  },
+  {
+    "id": "910",
+    "raw": "興味（きょうみ）",
+    "word": "興味",
+    "reading": "きょうみ",
+    "meaning": "interest (in something), curiosity (about something), zest (for)",
+    "level": "N5"
+  },
+  {
+    "id": "574",
+    "raw": "後（うし）ろ",
+    "word": "後ろ",
+    "reading": "うしろ",
+    "meaning": "back, behind, rear",
+    "level": "N5"
+  },
+  {
+    "id": "801",
+    "raw": "生活（せいかつ）",
+    "word": "生活",
+    "reading": "せいかつ",
+    "meaning": "living, life (one's daily existence), livelihood",
+    "level": "N5"
+  },
+  {
+    "id": "904",
+    "raw": "自信（じしん）",
+    "word": "自信",
+    "reading": "じしん",
+    "meaning": "self-confidence, confidence (in oneself)",
+    "level": "N5"
+  },
+  {
+    "id": "603",
+    "raw": "払（はら）う",
+    "word": "払う",
+    "reading": "はらう",
+    "meaning": "to pay (e.g. money, bill), to brush off, to clear away, to prune, to drive away",
+    "level": "N5"
+  },
+  {
+    "id": "1002",
+    "raw": "週間（しゅうかん）",
+    "word": "週間",
+    "reading": "しゅうかん",
+    "meaning": "week",
+    "level": "N5"
+  },
+  {
+    "id": "915",
+    "raw": "色々（いろいろ）",
+    "word": "色々",
+    "reading": "いろいろ",
+    "meaning": "various",
+    "level": "N5"
+  },
+  {
+    "id": "176",
+    "raw": "ところで",
+    "word": "ところで",
+    "reading": "ところで",
+    "meaning": "by the way, incidentally",
+    "level": "N5"
+  },
+  {
+    "id": "1088",
+    "raw": "高校（こうこう）",
+    "word": "高校",
+    "reading": "こうこう",
+    "meaning": "senior high school",
+    "level": "N5"
+  },
+  {
+    "id": "605",
+    "raw": "押（お）す",
+    "word": "押す",
+    "reading": "おす",
+    "meaning": "to push, to press",
+    "level": "N5"
+  },
+  {
+    "id": "270",
+    "raw": "下（さ）がる",
+    "word": "下がる",
+    "reading": "さがる",
+    "meaning": "to come down, to go down, to fall, to drop, to sink, to get lower",
+    "level": "N5"
+  },
+  {
+    "id": "510",
+    "raw": "客（きゃく）",
+    "word": "客",
+    "reading": "きゃく",
+    "meaning": "guest, visitor",
+    "level": "N5"
+  },
+  {
+    "id": "821",
+    "raw": "白（しろ）",
+    "word": "白",
+    "reading": "しろ",
+    "meaning": "white",
+    "level": "N5"
+  },
+  {
+    "id": "979",
+    "raw": "赤（あか）い",
+    "word": "赤い",
+    "reading": "あかい",
+    "meaning": "red",
+    "level": "N5"
+  },
+  {
+    "id": "1096",
+    "raw": "黒（くろ）",
+    "word": "黒",
+    "reading": "くろ",
+    "meaning": "black",
+    "level": "N5"
+  },
+  {
+    "id": "845",
+    "raw": "神様（かみさま）",
+    "word": "神様",
+    "reading": "かみさま",
+    "meaning": "God",
+    "level": "N5"
+  },
+  {
+    "id": "78",
+    "raw": "クラス",
+    "word": "クラス",
+    "reading": "クラス",
+    "meaning": "class",
+    "level": "N5"
+  },
+  {
+    "id": "92",
+    "raw": "この間（あいだ）",
+    "word": "この間",
+    "reading": "このあいだ",
+    "meaning": "the other day, lately, recently, during this period",
+    "level": "N5"
+  },
+  {
+    "id": "307",
+    "raw": "今年（ことし）",
+    "word": "今年",
+    "reading": "ことし",
+    "meaning": "this year",
+    "level": "N5"
+  },
+  {
+    "id": "342",
+    "raw": "例（たと）えば",
+    "word": "例えば",
+    "reading": "たとえば",
+    "meaning": "for example, for instance, e.g.",
+    "level": "N5"
+  },
+  {
+    "id": "1012",
+    "raw": "違（ちが）い",
+    "word": "違い",
+    "reading": "ちがい",
+    "meaning": "difference, discrepancy",
+    "level": "N5"
+  },
+  {
+    "id": "525",
+    "raw": "小（ちい）さな",
+    "word": "小さな",
+    "reading": "ちいさな",
+    "meaning": "small, little, tiny",
+    "level": "N5"
+  },
+  {
+    "id": "892",
+    "raw": "耳（みみ）",
+    "word": "耳",
+    "reading": "みみ",
+    "meaning": "ear",
+    "level": "N5"
+  },
+  {
+    "id": "161",
+    "raw": "デート",
+    "word": "デート",
+    "reading": "デート",
+    "meaning": "date (with someone), (social) outing (for two), date night",
+    "level": "N5"
+  },
+  {
+    "id": "354",
+    "raw": "兄弟（きょうだい）",
+    "word": "兄弟",
+    "reading": "きょうだい",
+    "meaning": "siblings, brothers and sisters",
+    "level": "N5"
+  },
+  {
+    "id": "52",
+    "raw": "お礼（れい）",
+    "word": "お礼",
+    "reading": "おれい",
+    "meaning": "thanks, gratitude",
+    "level": "N5"
+  },
+  {
+    "id": "793",
+    "raw": "玉（たま）",
+    "word": "玉",
+    "reading": "たま",
+    "meaning": "ball, sphere, globe, orb, serving, pile (of noodles, etc.)",
+    "level": "N5"
+  },
+  {
+    "id": "257",
+    "raw": "隣（となり）",
+    "word": "隣",
+    "reading": "となり",
+    "meaning": "neighbor",
+    "level": "N5"
+  },
+  {
+    "id": "613",
+    "raw": "掛（か）ける",
+    "word": "掛ける",
+    "reading": "かける",
+    "meaning": "to hang up (e.g. a coat, a picture on the wall), to let hang, to suspend (from), to hoist (e.g. sail), to raise (e.g. flag)",
+    "level": "N5"
+  },
+  {
+    "id": "998",
+    "raw": "返事（へんじ）",
+    "word": "返事",
+    "reading": "へんじ",
+    "meaning": "reply, answer, response",
+    "level": "N5"
+  },
+  {
+    "id": "1069",
+    "raw": "願（ねが）い",
+    "word": "願い",
+    "reading": "ねがい",
+    "meaning": "desire, wish, hope",
+    "level": "N5"
+  },
+  {
+    "id": "560",
+    "raw": "張（は）る",
+    "word": "張る",
+    "reading": "はる",
+    "meaning": "to stick, to paste, to affix",
+    "level": "N5"
+  },
+  {
+    "id": "985",
+    "raw": "踊（おど）る",
+    "word": "踊る",
+    "reading": "おどる",
+    "meaning": "to dance (orig. a hopping dance)",
+    "level": "N5"
+  },
+  {
+    "id": "1049",
+    "raw": "雲（くも）",
+    "word": "雲",
+    "reading": "くも",
+    "meaning": "cloud",
+    "level": "N5"
+  },
+  {
+    "id": "521",
+    "raw": "寺（てら）",
+    "word": "寺",
+    "reading": "てら",
+    "meaning": "temple (Buddhist)",
+    "level": "N5"
+  },
+  {
+    "id": "223",
+    "raw": "まあまあ",
+    "word": "まあまあ",
+    "reading": "まあまあ",
+    "meaning": "so-so, passable, fairly",
+    "level": "N5"
+  },
+  {
+    "id": "40",
+    "raw": "お姉（ねえ）さん",
+    "word": "お姉さん",
+    "reading": "おねえさん",
+    "meaning": "elder sister",
+    "level": "N5"
+  },
+  {
+    "id": "988",
+    "raw": "軽（かる）い",
+    "word": "軽い",
+    "reading": "かるい",
+    "meaning": "light (i.e. not heavy), feeling light (i.e. offering little resistance, moving easily), promiscuous",
+    "level": "N5"
+  },
+  {
+    "id": "463",
+    "raw": "多分（たぶん）",
+    "word": "多分",
+    "reading": "たぶん",
+    "meaning": "perhaps, probably, generous, much, many",
+    "level": "N5"
+  },
+  {
+    "id": "573",
+    "raw": "後（あと）で",
+    "word": "後で",
+    "reading": "あとで",
+    "meaning": "afterwards",
+    "level": "N5"
+  },
+  {
+    "id": "808",
+    "raw": "男（おとこ）の子（こ）",
+    "word": "男の子",
+    "reading": "おとこのこ",
+    "meaning": "boy, male child, baby boy",
+    "level": "N5"
+  },
+  {
+    "id": "568",
+    "raw": "彼氏（かれし）",
+    "word": "彼氏",
+    "reading": "かれし",
+    "meaning": "boyfriend",
+    "level": "N5"
+  },
+  {
+    "id": "23",
+    "raw": "いらっしゃいませ",
+    "word": "いらっしゃいませ",
+    "reading": "いらっしゃいませ",
+    "meaning": "welcome",
+    "level": "N5"
+  },
+  {
+    "id": "36",
+    "raw": "お兄（にい）さん",
+    "word": "お兄さん",
+    "reading": "おにいさん",
+    "meaning": "older brother, elder brother",
+    "level": "N5"
+  },
+  {
+    "id": "18",
+    "raw": "いい子（こ）",
+    "word": "いい子",
+    "reading": "いいこ",
+    "meaning": "good boy, good girl",
+    "level": "N5"
+  },
+  {
+    "id": "980",
+    "raw": "赤（あか）ちゃん",
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "meaning": "baby, infant",
+    "level": "N5"
+  },
+  {
+    "id": "607",
+    "raw": "指（ゆび）",
+    "word": "指",
+    "reading": "ゆび",
+    "meaning": "finger, toe, digit",
+    "level": "N5"
+  },
+  {
+    "id": "528",
+    "raw": "少（すく）ない",
+    "word": "少ない",
+    "reading": "すくない",
+    "meaning": "few, a little, scarce, insufficient, seldom",
+    "level": "N5"
+  },
+  {
+    "id": "951",
+    "raw": "角（かど）",
+    "word": "角",
+    "reading": "かど",
+    "meaning": "corner (e.g. desk, pavement)",
+    "level": "N5"
+  },
+  {
+    "id": "883",
+    "raw": "緊張（きんちょう）",
+    "word": "緊張",
+    "reading": "きんちょう",
+    "meaning": "tension, mental strain, nervousness",
+    "level": "N5"
+  },
+  {
+    "id": "701",
+    "raw": "案内（あんない）",
+    "word": "案内",
+    "reading": "あんない",
+    "meaning": "guidance, leading (the way), showing around",
+    "level": "N5"
+  },
+  {
+    "id": "413",
+    "raw": "卵（たまご）",
+    "word": "卵",
+    "reading": "たまご",
+    "meaning": "eggs, egg, spawn, roe",
+    "level": "N5"
+  },
+  {
+    "id": "537",
+    "raw": "さようなら",
+    "word": "さようなら",
+    "reading": "さようなら",
+    "meaning": "farewell, adieu, goodbye, so long",
+    "level": "N5"
+  },
+  {
+    "id": "56",
+    "raw": "お腹（なか）",
+    "word": "お腹",
+    "reading": "おなか",
+    "meaning": "stomach",
+    "level": "N5"
+  },
+  {
+    "id": "900",
+    "raw": "背中（せなか）",
+    "word": "背中",
+    "reading": "せなか",
+    "meaning": "back (of body)",
+    "level": "N5"
+  },
+  {
+    "id": "544",
+    "raw": "年生（ねんせい）",
+    "word": "年生",
+    "reading": "ねんせい",
+    "meaning": "pupil in ... year, student in ... year",
+    "level": "N5"
+  },
+  {
+    "id": "590",
+    "raw": "意見（いけん）",
+    "word": "意見",
+    "reading": "いけん",
+    "meaning": "opinion, view, comment",
+    "level": "N5"
+  },
+  {
+    "id": "983",
+    "raw": "趣味（しゅみ）",
+    "word": "趣味",
+    "reading": "しゅみ",
+    "meaning": "hobby, pastime",
+    "level": "N5"
+  },
+  {
+    "id": "402",
+    "raw": "北（きた）",
+    "word": "北",
+    "reading": "きた",
+    "meaning": "north",
+    "level": "N5"
+  },
+  {
+    "id": "967",
+    "raw": "警察官（けいさつかん）",
+    "word": "警察官",
+    "reading": "けいさつかん",
+    "meaning": "police officer, policeman, policewoman",
+    "level": "N5"
+  },
+  {
+    "id": "127",
+    "raw": "スイッチ",
+    "word": "スイッチ",
+    "reading": "スイッチ",
+    "meaning": "switch",
+    "level": "N5"
+  },
+  {
+    "id": "927",
+    "raw": "荷物（にもつ）",
+    "word": "荷物",
+    "reading": "にもつ",
+    "meaning": "luggage, baggage, package",
+    "level": "N5"
+  },
+  {
+    "id": "147",
+    "raw": "そちら",
+    "word": "そちら",
+    "reading": "そちら",
+    "meaning": "that way (direction distant from the speaker, close to the listener)",
+    "level": "N5"
+  },
+  {
+    "id": "829",
+    "raw": "看護師（かんごし）",
+    "word": "看護師",
+    "reading": "かんごし",
+    "meaning": "(hospital) nurse, registered nurse, RN",
+    "level": "N5"
+  },
+  {
+    "id": "907",
+    "raw": "自然（しぜん）",
+    "word": "自然",
+    "reading": "しぜん",
+    "meaning": "nature, spontaneity",
+    "level": "N5"
+  },
+  {
+    "id": "870",
+    "raw": "紫（むらさき）",
+    "word": "紫",
+    "reading": "むらさき",
+    "meaning": "purple, violet",
+    "level": "N5"
+  },
+  {
+    "id": "713",
+    "raw": "次（つぎ）に",
+    "word": "次に",
+    "reading": "つぎに",
+    "meaning": "next, then, after that",
+    "level": "N5"
+  },
+  {
+    "id": "596",
+    "raw": "戸（と）",
+    "word": "戸",
+    "reading": "と",
+    "meaning": "door (esp. Japanese-style)",
+    "level": "N5"
+  },
+  {
+    "id": "1090",
+    "raw": "髪（かみ）",
+    "word": "髪",
+    "reading": "かみ",
+    "meaning": "hair (on the head)",
+    "level": "N5"
+  },
+  {
+    "id": "124",
+    "raw": "スーツ",
+    "word": "スーツ",
+    "reading": "スーツ",
+    "meaning": "suit",
+    "level": "N5"
+  },
+  {
+    "id": "750",
+    "raw": "注意（ちゅうい）",
+    "word": "注意",
+    "reading": "ちゅうい",
+    "meaning": "caution, being careful, attention (heed), warning, advice",
+    "level": "N5"
+  },
+  {
+    "id": "313",
+    "raw": "今朝（けさ）",
+    "word": "今朝",
+    "reading": "けさ",
+    "meaning": "this morning",
+    "level": "N5"
+  },
+  {
+    "id": "273",
+    "raw": "下手（へた）",
+    "word": "下手",
+    "reading": "へた",
+    "meaning": "unskillful, poor, awkward",
+    "level": "N5"
+  },
+  {
+    "id": "865",
+    "raw": "糸（いと）",
+    "word": "糸",
+    "reading": "いと",
+    "meaning": "thread, yarn, string",
+    "level": "N5"
+  },
+  {
+    "id": "271",
+    "raw": "下（さ）げる",
+    "word": "下げる",
+    "reading": "さげる",
+    "meaning": "to hang, to suspend, to wear (e.g. decoration)",
+    "level": "N5"
+  },
+  {
+    "id": "896",
+    "raw": "肩（かた）",
+    "word": "肩",
+    "reading": "かた",
+    "meaning": "shoulder",
+    "level": "N5"
+  },
+  {
+    "id": "585",
+    "raw": "性格（せいかく）",
+    "word": "性格",
+    "reading": "せいかく",
+    "meaning": "character, personality, disposition, nature",
+    "level": "N5"
+  },
+  {
+    "id": "1006",
+    "raw": "遅刻（ちこく）",
+    "word": "遅刻",
+    "reading": "ちこく",
+    "meaning": "lateness, tardiness, arriving late",
+    "level": "N5"
+  },
+  {
+    "id": "765",
+    "raw": "温泉（おんせん）",
+    "word": "温泉",
+    "reading": "おんせん",
+    "meaning": "hot spring",
+    "level": "N5"
+  },
+  {
+    "id": "550",
+    "raw": "店員（てんいん）",
+    "word": "店員",
+    "reading": "てんいん",
+    "meaning": "shop assistant, employee, clerk, salesperson",
+    "level": "N5"
+  },
+  {
+    "id": "831",
+    "raw": "真面目（まじめ）",
+    "word": "真面目",
+    "reading": "まじめ",
+    "meaning": "diligent, serious, honest, sober, grave, earnest, steady",
+    "level": "N5"
+  },
+  {
+    "id": "852",
+    "raw": "科学（かがく）",
+    "word": "科学",
+    "reading": "かがく",
+    "meaning": "science",
+    "level": "N5"
+  },
+  {
+    "id": "709",
+    "raw": "横（よこ）",
+    "word": "横",
+    "reading": "よこ",
+    "meaning": "horizontal (as opposed to vertical), lying down, the same level (social standing)",
+    "level": "N5"
+  },
+  {
+    "id": "711",
+    "raw": "機会（きかい）",
+    "word": "機会",
+    "reading": "きかい",
+    "meaning": "chance, opportunity",
+    "level": "N5"
+  },
+  {
+    "id": "431",
+    "raw": "吐（は）く",
+    "word": "吐く",
+    "reading": "はく",
+    "meaning": "to vomit, to throw up, to spit up, to breathe out",
+    "level": "N5"
+  },
+  {
+    "id": "920",
+    "raw": "英語（えいご）",
+    "word": "英語",
+    "reading": "えいご",
+    "meaning": "English (language)",
+    "level": "N5"
+  },
+  {
+    "id": "1055",
+    "raw": "青（あお）い",
+    "word": "青い",
+    "reading": "あおい",
+    "meaning": "blue, green",
+    "level": "N5"
+  },
+  {
+    "id": "1042",
+    "raw": "階段（かいだん）",
+    "word": "階段",
+    "reading": "かいだん",
+    "meaning": "stairs, stairway, staircase",
+    "level": "N5"
+  },
+  {
+    "id": "970",
+    "raw": "財布（さいふ）",
+    "word": "財布",
+    "reading": "さいふ",
+    "meaning": "purse, handbag, wallet",
+    "level": "N5"
+  },
+  {
+    "id": "839",
+    "raw": "短（みじか）い",
+    "word": "短い",
+    "reading": "みじかい",
+    "meaning": "short",
+    "level": "N5"
+  },
+  {
+    "id": "747",
+    "raw": "泊（と）まる",
+    "word": "泊まる",
+    "reading": "とまる",
+    "meaning": "to stay at (e.g. hotel)",
+    "level": "N5"
+  },
+  {
+    "id": "473",
+    "raw": "大勢（おおぜい）",
+    "word": "大勢",
+    "reading": "おおぜい",
+    "meaning": "many, crowd, great number of people",
+    "level": "N5"
+  },
+  {
+    "id": "183",
+    "raw": "ドライブ",
+    "word": "ドライブ",
+    "reading": "ドライブ",
+    "meaning": "drive, trip by car, driving",
+    "level": "N5"
+  },
+  {
+    "id": "205",
+    "raw": "ビール",
+    "word": "ビール",
+    "reading": "ビール",
+    "meaning": "beer",
+    "level": "N5"
+  },
+  {
+    "id": "328",
+    "raw": "低（ひく）い",
+    "word": "低い",
+    "reading": "ひくい",
+    "meaning": "low (rank, degree, value, content, quality, etc.)",
+    "level": "N5"
+  },
+  {
+    "id": "848",
+    "raw": "禁止（きんし）",
+    "word": "禁止",
+    "reading": "きんし",
+    "meaning": "prohibition, inhibition, ban",
+    "level": "N5"
+  },
+  {
+    "id": "996",
+    "raw": "近所（きんじょ）",
+    "word": "近所",
+    "reading": "きんじょ",
+    "meaning": "neighbourhood, neighborhood",
+    "level": "N5"
+  },
+  {
+    "id": "756",
+    "raw": "海外（かいがい）",
+    "word": "海外",
+    "reading": "かいがい",
+    "meaning": "foreign, abroad, overseas",
+    "level": "N5"
+  },
+  {
+    "id": "34",
+    "raw": "お休（やす）み",
+    "word": "お休み",
+    "reading": "おやすみ",
+    "meaning": "holiday, day off, absence",
+    "level": "N5"
+  },
+  {
+    "id": "1089",
+    "raw": "高校生（こうこうせい）",
+    "word": "高校生",
+    "reading": "こうこうせい",
+    "meaning": "senior high school student",
+    "level": "N5"
+  },
+  {
+    "id": "1050",
+    "raw": "零（れい）",
+    "word": "零",
+    "reading": "れい",
+    "meaning": "zero, nought",
+    "level": "N5"
+  },
+  {
+    "id": "922",
+    "raw": "茶（ちゃ）",
+    "word": "茶",
+    "reading": "ちゃ",
+    "meaning": "tea",
+    "level": "N5"
+  },
+  {
+    "id": "437",
+    "raw": "咲（さ）く",
+    "word": "咲く",
+    "reading": "さく",
+    "meaning": "to bloom",
+    "level": "N5"
+  },
+  {
+    "id": "1083",
+    "raw": "飼（か）う",
+    "word": "飼う",
+    "reading": "かう",
+    "meaning": "to keep (a pet or other animal), to have, to own, to raise, to rear, to feed",
+    "level": "N5"
+  },
+  {
+    "id": "804",
+    "raw": "用事（ようじ）",
+    "word": "用事",
+    "reading": "ようじ",
+    "meaning": "tasks, things to do, errand, business (to take care of), affairs, engagement",
+    "level": "N5"
+  },
+  {
+    "id": "206",
+    "raw": "ピアノ",
+    "word": "ピアノ",
+    "reading": "ピアノ",
+    "meaning": "piano",
+    "level": "N5"
+  },
+  {
+    "id": "1017",
+    "raw": "選択（せんたく）",
+    "word": "選択",
+    "reading": "せんたく",
+    "meaning": "selection, choice, option",
+    "level": "N5"
+  },
+  {
+    "id": "526",
+    "raw": "小学生（しょうがくせい）",
+    "word": "小学生",
+    "reading": "しょうがくせい",
+    "meaning": "elementary school student, primary school student, grade school student",
+    "level": "N5"
+  },
+  {
+    "id": "450",
+    "raw": "塾（じゅく）",
+    "word": "塾",
+    "reading": "じゅく",
+    "meaning": "cram school, private tutoring school, juku",
+    "level": "N5"
+  },
+  {
+    "id": "186",
+    "raw": "ナイフ",
+    "word": "ナイフ",
+    "reading": "ナイフ",
+    "meaning": "knife",
+    "level": "N5"
+  },
+  {
+    "id": "926",
+    "raw": "草（くさ）",
+    "word": "草",
+    "reading": "くさ",
+    "meaning": "grass, weed, herb, thatch",
+    "level": "N5"
+  },
+  {
+    "id": "697",
+    "raw": "林（はやし）",
+    "word": "林",
+    "reading": "はやし",
+    "meaning": "woods, forest, copse, thicket",
+    "level": "N5"
+  },
+  {
+    "id": "85",
+    "raw": "コーチ",
+    "word": "コーチ",
+    "reading": "コーチ",
+    "meaning": "coach",
+    "level": "N5"
+  },
+  {
+    "id": "245",
+    "raw": "ワイン",
+    "word": "ワイン",
+    "reading": "ワイン",
+    "meaning": "wine",
+    "level": "N5"
+  },
+  {
+    "id": "847",
+    "raw": "祭（まつ）り",
+    "word": "祭り",
+    "reading": "まつり",
+    "meaning": "festival, feast",
+    "level": "N5"
+  },
+  {
+    "id": "446",
+    "raw": "地図（ちず）",
+    "word": "地図",
+    "reading": "ちず",
+    "meaning": "map",
+    "level": "N5"
+  },
+  {
+    "id": "326",
+    "raw": "会話（かいわ）",
+    "word": "会話",
+    "reading": "かいわ",
+    "meaning": "conversation",
+    "level": "N5"
+  },
+  {
+    "id": "965",
+    "raw": "警官（けいかん）",
+    "word": "警官",
+    "reading": "けいかん",
+    "meaning": "policeman",
+    "level": "N5"
+  },
+  {
+    "id": "595",
+    "raw": "成績（せいせき）",
+    "word": "成績",
+    "reading": "せいせき",
+    "meaning": "results, record, grades, marks",
+    "level": "N5"
+  },
+  {
+    "id": "805",
+    "raw": "田舎（いなか）",
+    "word": "田舎",
+    "reading": "いなか",
+    "meaning": "rural area, countryside, the sticks",
+    "level": "N5"
+  },
+  {
+    "id": "554",
+    "raw": "弁当（べんとう）",
+    "word": "弁当",
+    "reading": "べんとう",
+    "meaning": "bento, Japanese box lunch",
+    "level": "N5"
+  },
+  {
+    "id": "553",
+    "raw": "建物（たてもの）",
+    "word": "建物",
+    "reading": "たてもの",
+    "meaning": "building",
+    "level": "N5"
+  },
+  {
+    "id": "320",
+    "raw": "以内（いない）",
+    "word": "以内",
+    "reading": "いない",
+    "meaning": "within, inside of, less than",
+    "level": "N5"
+  },
+  {
+    "id": "853",
+    "raw": "移（うつ）る",
+    "word": "移る",
+    "reading": "うつる",
+    "meaning": "to move (house), to transfer (department)",
+    "level": "N5"
+  },
+  {
+    "id": "407",
+    "raw": "半（はん）",
+    "word": "半",
+    "reading": "はん",
+    "meaning": "half, semi-",
+    "level": "N5"
+  },
+  {
+    "id": "943",
+    "raw": "要（い）る",
+    "word": "要る",
+    "reading": "いる",
+    "meaning": "to be needed, to be wanted",
+    "level": "N5"
+  },
+  {
+    "id": "94",
+    "raw": "コピー",
+    "word": "コピー",
+    "reading": "コピー",
+    "meaning": "copy, photocopy",
+    "level": "N5"
+  },
+  {
+    "id": "449",
+    "raw": "塩（しお）",
+    "word": "塩",
+    "reading": "しお",
+    "meaning": "salt (i.e. sodium chloride), common salt, table salt",
+    "level": "N5"
+  },
+  {
+    "id": "1010",
+    "raw": "運転（うんてん）",
+    "word": "運転",
+    "reading": "うんてん",
+    "meaning": "operation (of a machine, etc.), operating, running, run",
+    "level": "N5"
+  },
+  {
+    "id": "227",
+    "raw": "メートル",
+    "word": "メートル",
+    "reading": "メートル",
+    "meaning": "metre, meter",
+    "level": "N5"
+  },
+  {
+    "id": "287",
+    "raw": "予約（よやく）",
+    "word": "予約",
+    "reading": "よやく",
+    "meaning": "reservation, appointment, booking, advance order",
+    "level": "N5"
+  },
+  {
+    "id": "529",
+    "raw": "居（い）る",
+    "word": "居る",
+    "reading": "いる",
+    "meaning": "to be (of animate objects), to exist",
+    "level": "N5"
+  },
+  {
+    "id": "456",
+    "raw": "夕方（ゆうがた）",
+    "word": "夕方",
+    "reading": "ゆうがた",
+    "meaning": "evening, dusk",
+    "level": "N5"
+  },
+  {
+    "id": "766",
+    "raw": "湖（みずうみ）",
+    "word": "湖",
+    "reading": "みずうみ",
+    "meaning": "lake",
+    "level": "N5"
+  },
+  {
+    "id": "661",
+    "raw": "晴（は）れる",
+    "word": "晴れる",
+    "reading": "はれる",
+    "meaning": "to clear up, to clear away, to be sunny, to stop raining",
+    "level": "N5"
+  },
+  {
+    "id": "846",
+    "raw": "神社（じんじゃ）",
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaning": "Shinto shrine",
+    "level": "N5"
+  },
+  {
+    "id": "659",
+    "raw": "景色（けしき）",
+    "word": "景色",
+    "reading": "けしき",
+    "meaning": "scenery, scene, landscape",
+    "level": "N5"
+  },
+  {
+    "id": "897",
+    "raw": "背（せ）",
+    "word": "背",
+    "reading": "せ",
+    "meaning": "back, spine",
+    "level": "N5"
+  },
+  {
+    "id": "504",
+    "raw": "季節（きせつ）",
+    "word": "季節",
+    "reading": "きせつ",
+    "meaning": "season, time of year",
+    "level": "N5"
+  },
+  {
+    "id": "384",
+    "raw": "出口（でぐち）",
+    "word": "出口",
+    "reading": "でぐち",
+    "meaning": "exit, gateway, way out, outlet, leak, vent",
+    "level": "N5"
+  },
+  {
+    "id": "368",
+    "raw": "公開（こうかい）",
+    "word": "公開",
+    "reading": "こうかい",
+    "meaning": "opening to the public, making available to the public, putting on display, exhibiting, showing (play, movie, etc.), holding (interview, etc.), open, public",
+    "level": "N5"
+  },
+  {
+    "id": "214",
+    "raw": "ページ",
+    "word": "ページ",
+    "reading": "ページ",
+    "meaning": "page",
+    "level": "N5"
+  },
+  {
+    "id": "87",
+    "raw": "ゴールド",
+    "word": "ゴールド",
+    "reading": "ゴールド",
+    "meaning": "gold",
+    "level": "N5"
+  },
+  {
+    "id": "122",
+    "raw": "シリーズ",
+    "word": "シリーズ",
+    "reading": "シリーズ",
+    "meaning": "series",
+    "level": "N5"
+  },
+  {
+    "id": "612",
+    "raw": "掛（か）かる",
+    "word": "掛かる",
+    "reading": "かかる",
+    "meaning": "to take (a resource, e.g. time or money), to hang, to come into view",
+    "level": "N5"
+  },
+  {
+    "id": "939",
+    "raw": "袋（ふくろ）",
+    "word": "袋",
+    "reading": "ふくろ",
+    "meaning": "bag, sack, pouch",
+    "level": "N5"
+  },
+  {
+    "id": "330",
+    "raw": "住所（じゅうしょ）",
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "meaning": "address (e.g. of house), residence, domicile",
+    "level": "N5"
+  },
+  {
+    "id": "179",
+    "raw": "どなた",
+    "word": "どなた",
+    "reading": "どなた",
+    "meaning": "who?",
+    "level": "N5"
+  },
+  {
+    "id": "31",
+    "raw": "エレベーター",
+    "word": "エレベーター",
+    "reading": "エレベーター",
+    "meaning": "elevator, lift",
+    "level": "N5"
+  },
+  {
+    "id": "562",
+    "raw": "弾（ひ）く",
+    "word": "弾く",
+    "reading": "ひく",
+    "meaning": "to play (piano, guitar)",
+    "level": "N5"
+  },
+  {
+    "id": "345",
+    "raw": "信号（しんごう）",
+    "word": "信号",
+    "reading": "しんごう",
+    "meaning": "signal, signalling, signaling, traffic light, traffic signal",
+    "level": "N5"
+  },
+  {
+    "id": "834",
+    "raw": "眼鏡（めがね）",
+    "word": "眼鏡",
+    "reading": "めがね",
+    "meaning": "spectacles, glasses",
+    "level": "N5"
+  },
+  {
+    "id": "332",
+    "raw": "体調（たいちょう）",
+    "word": "体調",
+    "reading": "たいちょう",
+    "meaning": "physical condition",
+    "level": "N5"
+  },
+  {
+    "id": "114",
+    "raw": "シェフ",
+    "word": "シェフ",
+    "reading": "シェフ",
+    "meaning": "chef",
+    "level": "N5"
+  },
+  {
+    "id": "386",
+    "raw": "出身（しゅっしん）",
+    "word": "出身",
+    "reading": "しゅっしん",
+    "meaning": "person's origin (e.g. city, country, parentage, school)",
+    "level": "N5"
+  },
+  {
+    "id": "281",
+    "raw": "主婦（しゅふ）",
+    "word": "主婦",
+    "reading": "しゅふ",
+    "meaning": "housewife, mistress (of the house), homemaker",
+    "level": "N5"
+  },
+  {
+    "id": "457",
+    "raw": "夕飯（ゆうはん）",
+    "word": "夕飯",
+    "reading": "ゆうはん",
+    "meaning": "evening meal",
+    "level": "N5"
+  },
+  {
+    "id": "1027",
+    "raw": "釣（つ）り",
+    "word": "釣り",
+    "reading": "つり",
+    "meaning": "fishing, angling",
+    "level": "N5"
+  },
+  {
+    "id": "1009",
+    "raw": "運動（うんどう）",
+    "word": "運動",
+    "reading": "うんどう",
+    "meaning": "exercise, physical training, work-out",
+    "level": "N5"
+  },
+  {
+    "id": "265",
+    "raw": "上（のぼ）る",
+    "word": "上る",
+    "reading": "のぼる",
+    "meaning": "to ascend, to go up, to climb, to be presented (of food)",
+    "level": "N5"
+  },
+  {
+    "id": "837",
+    "raw": "着物（きもの）",
+    "word": "着物",
+    "reading": "きもの",
+    "meaning": "clothing, clothes",
+    "level": "N5"
+  },
+  {
+    "id": "556",
+    "raw": "引（ひ）き出（だ）す",
+    "word": "引き出す",
+    "reading": "ひきだす",
+    "meaning": "to pull out, to take out, to draw out, to withdraw",
+    "level": "N5"
+  },
+  {
+    "id": "427",
+    "raw": "叶（かな）う",
+    "word": "叶う",
+    "reading": "かなう",
+    "meaning": "to come true (of a wish, prayer, etc.), to be realized, to be fulfilled",
+    "level": "N5"
+  },
+  {
+    "id": "312",
+    "raw": "今月（こんげつ）",
+    "word": "今月",
+    "reading": "こんげつ",
+    "meaning": "this month",
+    "level": "N5"
+  },
+  {
+    "id": "132",
+    "raw": "ストレス",
+    "word": "ストレス",
+    "reading": "ストレス",
+    "meaning": "stress",
+    "level": "N5"
+  },
+  {
+    "id": "279",
+    "raw": "中国（ちゅうごく）",
+    "word": "中国",
+    "reading": "ちゅうごく",
+    "meaning": "China",
+    "level": "N5"
+  },
+  {
+    "id": "339",
+    "raw": "作家（さっか）",
+    "word": "作家",
+    "reading": "さっか",
+    "meaning": "author, writer, novelist, artist",
+    "level": "N5"
+  },
+  {
+    "id": "461",
+    "raw": "外科（げか）",
+    "word": "外科",
+    "reading": "げか",
+    "meaning": "surgery",
+    "level": "N5"
+  },
+  {
+    "id": "162",
+    "raw": "テーブル",
+    "word": "テーブル",
+    "reading": "テーブル",
+    "meaning": "table",
+    "level": "N5"
+  },
+  {
+    "id": "55",
+    "raw": "お祭（まつ）り",
+    "word": "お祭り",
+    "reading": "おまつり",
+    "meaning": "festival, feast, carnival",
+    "level": "N5"
+  },
+  {
+    "id": "111",
+    "raw": "サボる",
+    "word": "サボる",
+    "reading": "サボる",
+    "meaning": "to be truant, to slack off, to play hooky, to skip school, to cut class, to skip out",
+    "level": "N5"
+  },
+  {
+    "id": "810",
+    "raw": "留学（りゅうがく）",
+    "word": "留学",
+    "reading": "りゅうがく",
+    "meaning": "studying abroad",
+    "level": "N5"
+  },
+  {
+    "id": "17",
+    "raw": "いい事（こと）",
+    "word": "いい事",
+    "reading": "いいこと",
+    "meaning": "good thing, nice thing",
+    "level": "N5"
+  },
+  {
+    "id": "218",
+    "raw": "ポケット",
+    "word": "ポケット",
+    "reading": "ポケット",
+    "meaning": "pocket",
+    "level": "N5"
+  },
+  {
+    "id": "1024",
+    "raw": "金持（かねも）ち",
+    "word": "金持ち",
+    "reading": "かねもち",
+    "meaning": "rich person",
+    "level": "N5"
+  },
+  {
+    "id": "118",
+    "raw": "シャワー",
+    "word": "シャワー",
+    "reading": "シャワー",
+    "meaning": "shower",
+    "level": "N5"
+  },
+  {
+    "id": "859",
+    "raw": "等（など）",
+    "word": "等",
+    "reading": "など",
+    "meaning": "et cetera, etc., and the like, and so forth",
+    "level": "N5"
+  },
+  {
+    "id": "98",
+    "raw": "ゴロゴロ",
+    "word": "ゴロゴロ",
+    "reading": "ゴロゴロ",
+    "meaning": "thundering, purring, grumbling (e.g. stomach)",
+    "level": "N5"
+  },
+  {
+    "id": "632",
+    "raw": "方面（ほうめん）",
+    "word": "方面",
+    "reading": "ほうめん",
+    "meaning": "direction, district, area, field, sphere",
+    "level": "N5"
+  },
+  {
+    "id": "202",
+    "raw": "バンド",
+    "word": "バンド",
+    "reading": "バンド",
+    "meaning": "band, musical band",
+    "level": "N5"
+  },
+  {
+    "id": "516",
+    "raw": "家賃（やちん）",
+    "word": "家賃",
+    "reading": "やちん",
+    "meaning": "rent",
+    "level": "N5"
+  },
+  {
+    "id": "226",
+    "raw": "蜜柑（みかん）",
+    "word": "蜜柑",
+    "reading": "みかん",
+    "meaning": "mandarin (esp. the satsuma mandarin (Citrus unshiu)), mandarin orange, tangerine, clementine",
+    "level": "N5"
+  },
+  {
+    "id": "459",
+    "raw": "外国（がいこく）",
+    "word": "外国",
+    "reading": "がいこく",
+    "meaning": "foreign country",
+    "level": "N5"
+  },
+  {
+    "id": "617",
+    "raw": "政治（せいじ）",
+    "word": "政治",
+    "reading": "せいじ",
+    "meaning": "politics, government",
+    "level": "N5"
+  },
+  {
+    "id": "13",
+    "raw": "アルバイト",
+    "word": "アルバイト",
+    "reading": "アルバイト",
+    "meaning": "part-time job, side job",
+    "level": "N5"
+  },
+  {
+    "id": "638",
+    "raw": "日記（にっき）",
+    "word": "日記",
+    "reading": "にっき",
+    "meaning": "diary, journal",
+    "level": "N5"
+  },
+  {
+    "id": "80",
+    "raw": "グリーン",
+    "word": "グリーン",
+    "reading": "グリーン",
+    "meaning": "green (color), lawn, golf green",
+    "level": "N5"
+  },
+  {
+    "id": "182",
+    "raw": "トマト",
+    "word": "トマト",
+    "reading": "トマト",
+    "meaning": "tomato (Solanum lycopersicum)",
+    "level": "N5"
+  },
+  {
+    "id": "157",
+    "raw": "タバコ",
+    "word": "タバコ",
+    "reading": "タバコ",
+    "meaning": "tobacco, cigarette, cigaret, cigar",
+    "level": "N5"
+  },
+  {
+    "id": "589",
+    "raw": "意地悪（いじわる）",
+    "word": "意地悪",
+    "reading": "いじわる",
+    "meaning": "malicious, ill-tempered, unkind",
+    "level": "N5"
+  },
+  {
+    "id": "311",
+    "raw": "今晩（こんばん）",
+    "word": "今晩",
+    "reading": "こんばん",
+    "meaning": "tonight, this evening",
+    "level": "N5"
+  },
+  {
+    "id": "275",
+    "raw": "下着（したぎ）",
+    "word": "下着",
+    "reading": "したぎ",
+    "meaning": "underwear",
+    "level": "N5"
+  },
+  {
+    "id": "212",
+    "raw": "フォーク",
+    "word": "フォーク",
+    "reading": "フォーク",
+    "meaning": "fork",
+    "level": "N5"
+  },
+  {
+    "id": "735",
+    "raw": "毎朝（まいあさ）",
+    "word": "毎朝",
+    "reading": "まいあさ",
+    "meaning": "every morning",
+    "level": "N5"
+  },
+  {
+    "id": "961",
+    "raw": "語（ご）",
+    "word": "語",
+    "reading": "ご",
+    "meaning": "language, word",
+    "level": "N5"
+  },
+  {
+    "id": "1079",
+    "raw": "食堂（しょくどう）",
+    "word": "食堂",
+    "reading": "しょくどう",
+    "meaning": "dining room, dining hall, cafeteria, messroom",
+    "level": "N5"
+  },
+  {
+    "id": "75",
+    "raw": "キャンプ",
+    "word": "キャンプ",
+    "reading": "キャンプ",
+    "meaning": "camp",
+    "level": "N5"
+  },
+  {
+    "id": "20",
+    "raw": "イタリア",
+    "word": "イタリア",
+    "reading": "イタリア",
+    "meaning": "Italy",
+    "level": "N5"
+  },
+  {
+    "id": "97",
+    "raw": "コレクション",
+    "word": "コレクション",
+    "reading": "コレクション",
+    "meaning": "collection",
+    "level": "N5"
+  },
+  {
+    "id": "160",
+    "raw": "ツアー",
+    "word": "ツアー",
+    "reading": "ツアー",
+    "meaning": "tour",
+    "level": "N5"
+  },
+  {
+    "id": "126",
+    "raw": "スイカ",
+    "word": "スイカ",
+    "reading": "スイカ",
+    "meaning": "watermelon (Citrullus lanatus)",
+    "level": "N5"
+  },
+  {
+    "id": "76",
+    "raw": "くしゃみ",
+    "word": "くしゃみ",
+    "reading": "くしゃみ",
+    "meaning": "sneeze",
+    "level": "N5"
+  },
+  {
+    "id": "941",
+    "raw": "被（かぶ）る",
+    "word": "被る",
+    "reading": "かぶる",
+    "meaning": "to put on (one's head), to wear, to have on, to pull over (one's head), to crown (oneself)",
+    "level": "N5"
+  },
+  {
+    "id": "602",
+    "raw": "手袋（てぶくろ）",
+    "word": "手袋",
+    "reading": "てぶくろ",
+    "meaning": "glove, mitten, mitt",
+    "level": "N5"
+  },
+  {
+    "id": "986",
+    "raw": "身長（しんちょう）",
+    "word": "身長",
+    "reading": "しんちょう",
+    "meaning": "height (of body), stature",
+    "level": "N5"
+  },
+  {
+    "id": "99",
+    "raw": "コンサート",
+    "word": "コンサート",
+    "reading": "コンサート",
+    "meaning": "concert",
+    "level": "N5"
+  },
+  {
+    "id": "201",
+    "raw": "ハンカチ",
+    "word": "ハンカチ",
+    "reading": "ハンカチ",
+    "meaning": "handkerchief",
+    "level": "N5"
+  },
+  {
+    "id": "123",
+    "raw": "シルバー",
+    "word": "シルバー",
+    "reading": "シルバー",
+    "meaning": "silver",
+    "level": "N5"
+  },
+  {
+    "id": "165",
+    "raw": "デパート",
+    "word": "デパート",
+    "reading": "デパート",
+    "meaning": "department store",
+    "level": "N5"
+  },
+  {
+    "id": "19",
+    "raw": "イギリス",
+    "word": "イギリス",
+    "reading": "イギリス",
+    "meaning": "United Kingdom, Britain, Great Britain, England",
+    "level": "N5"
+  },
+  {
+    "id": "297",
+    "raw": "交番（こうばん）",
+    "word": "交番",
+    "reading": "こうばん",
+    "meaning": "police box, small neighborhood police station",
+    "level": "N5"
+  },
+  {
+    "id": "239",
+    "raw": "ラジオ",
+    "word": "ラジオ",
+    "reading": "ラジオ",
+    "meaning": "radio",
+    "level": "N5"
+  },
+  {
+    "id": "63",
+    "raw": "お金持（かねも）ち",
+    "word": "お金持ち",
+    "reading": "おかねもち",
+    "meaning": "rich person",
+    "level": "N5"
+  },
+  {
+    "id": "128",
+    "raw": "スカート",
+    "word": "スカート",
+    "reading": "スカート",
+    "meaning": "skirt",
+    "level": "N5"
+  },
+  {
+    "id": "1086",
+    "raw": "骨折（こっせつ）",
+    "word": "骨折",
+    "reading": "こっせつ",
+    "meaning": "bone fracture",
+    "level": "N5"
+  },
+  {
+    "id": "483",
+    "raw": "天（てん）ぷら",
+    "word": "天ぷら",
+    "reading": "てんぷら",
+    "meaning": "tempura, deep-fried fish and vegetables in a light batter",
+    "level": "N5"
+  },
+  {
+    "id": "1060",
+    "raw": "靴下（くつした）",
+    "word": "靴下",
+    "reading": "くつした",
+    "meaning": "socks, sock, stockings, stocking",
+    "level": "N5"
+  },
+  {
+    "id": "538",
+    "raw": "差（さ）す",
+    "word": "差す",
+    "reading": "さす",
+    "meaning": "to shine",
+    "level": "N5"
+  },
+  {
+    "id": "513",
+    "raw": "家事（かじ）",
+    "word": "家事",
+    "reading": "かじ",
+    "meaning": "housework, domestic chores",
+    "level": "N5"
+  },
+  {
+    "id": "33",
+    "raw": "オレンジ",
+    "word": "オレンジ",
+    "reading": "オレンジ",
+    "meaning": "orange (fruit, colour)",
+    "level": "N5"
+  },
+  {
+    "id": "906",
+    "raw": "自動車（じどうしゃ）",
+    "word": "自動車",
+    "reading": "じどうしゃ",
+    "meaning": "automobile",
+    "level": "N5"
+  },
+  {
+    "id": "48",
+    "raw": "お正月（しょうがつ）",
+    "word": "お正月",
+    "reading": "おしょうがつ",
+    "meaning": "New Year (esp. first three days)",
+    "level": "N5"
+  },
+  {
+    "id": "136",
+    "raw": "スマホ",
+    "word": "スマホ",
+    "reading": "スマホ",
+    "meaning": "smartphone, smart phone",
+    "level": "N5"
+  },
+  {
+    "id": "723",
+    "raw": "正月（しょうがつ）",
+    "word": "正月",
+    "reading": "しょうがつ",
+    "meaning": "New Year (esp. first three days)",
+    "level": "N5"
+  },
+  {
+    "id": "678",
+    "raw": "有名人（ゆうめいじん）",
+    "word": "有名人",
+    "reading": "ゆうめいじん",
+    "meaning": "celebrity, famous person, public figure, big name",
+    "level": "N5"
+  },
+  {
+    "id": "117",
+    "raw": "シャツ",
+    "word": "シャツ",
+    "reading": "シャツ",
+    "meaning": "shirt (underwear), undershirt, singlet",
+    "level": "N5"
+  },
+  {
+    "id": "4",
+    "raw": "Ｔ（ティー）シャツ",
+    "word": "Ｔシャツ",
+    "reading": "Ｔシャツ",
+    "meaning": "T-shirt, tee shirt",
+    "level": "N5"
+  },
+  {
+    "id": "112",
+    "raw": "サラダ",
+    "word": "サラダ",
+    "reading": "サラダ",
+    "meaning": "salad",
+    "level": "N5"
+  },
+  {
+    "id": "419",
+    "raw": "受付（うけつけ）",
+    "word": "受付",
+    "reading": "うけつけ",
+    "meaning": "reception (desk), information desk",
+    "level": "N5"
+  },
+  {
+    "id": "555",
+    "raw": "引（ひ）き出（だ）し",
+    "word": "引き出し",
+    "reading": "ひきだし",
+    "meaning": "drawer, withdrawal, variety of knowledge",
+    "level": "N5"
+  },
+  {
+    "id": "584",
+    "raw": "急行（きゅうこう）",
+    "word": "急行",
+    "reading": "きゅうこう",
+    "meaning": "hurrying (to somewhere), rushing, hastening",
+    "level": "N5"
+  },
+  {
+    "id": "682",
+    "raw": "朝（あさ）ご飯（はん）",
+    "word": "朝ご飯",
+    "reading": "あさごはん",
+    "meaning": "breakfast",
+    "level": "N5"
+  },
+  {
+    "id": "918",
+    "raw": "花見（はなみ）",
+    "word": "花見",
+    "reading": "はなみ",
+    "meaning": "cherry blossom viewing, flower viewing",
+    "level": "N5"
+  },
+  {
+    "id": "625",
+    "raw": "文章（ぶんしょう）",
+    "word": "文章",
+    "reading": "ぶんしょう",
+    "meaning": "sentence, article, composition",
+    "level": "N5"
+  },
+  {
+    "id": "194",
+    "raw": "バーベキュー",
+    "word": "バーベキュー",
+    "reading": "バーベキュー",
+    "meaning": "barbecue, BBQ",
+    "level": "N5"
+  },
+  {
+    "id": "211",
+    "raw": "フィルム",
+    "word": "フィルム",
+    "reading": "フィルム",
+    "meaning": "film",
+    "level": "N5"
+  },
+  {
+    "id": "769",
+    "raw": "漫画家（まんがか）",
+    "word": "漫画家",
+    "reading": "まんがか",
+    "meaning": "cartoonist, comic book artist, manga artist, manga author, mangaka",
+    "level": "N5"
+  },
+  {
+    "id": "928",
+    "raw": "菓子（かし）",
+    "word": "菓子",
+    "reading": "かし",
+    "meaning": "confectionery, sweets, candy, cake",
+    "level": "N5"
+  },
+  {
+    "id": "749",
+    "raw": "注射（ちゅうしゃ）",
+    "word": "注射",
+    "reading": "ちゅうしゃ",
+    "meaning": "injection, jab, shot",
+    "level": "N5"
+  },
+  {
+    "id": "135",
+    "raw": "ズボン",
+    "word": "ズボン",
+    "reading": "ズボン",
+    "meaning": "trousers, pants",
+    "level": "N5"
+  },
+  {
+    "id": "718",
+    "raw": "歌手（かしゅ）",
+    "word": "歌手",
+    "reading": "かしゅ",
+    "meaning": "singer",
+    "level": "N5"
+  },
+  {
+    "id": "42",
+    "raw": "お巡（まわ）りさん",
+    "word": "お巡りさん",
+    "reading": "おまわりさん",
+    "meaning": "police officer",
+    "level": "N5"
+  },
+  {
+    "id": "107",
+    "raw": "サークル",
+    "word": "サークル",
+    "reading": "サークル",
+    "meaning": "group with a common interest (e.g. students), club (e.g. company sports club), circle",
+    "level": "N5"
+  },
+  {
+    "id": "130",
+    "raw": "ステーキ",
+    "word": "ステーキ",
+    "reading": "ステーキ",
+    "meaning": "steak",
+    "level": "N5"
+  },
+  {
+    "id": "547",
+    "raw": "幾（いく）ら",
+    "word": "幾ら",
+    "reading": "いくら",
+    "meaning": "how much?, how many?",
+    "level": "N5"
+  },
+  {
+    "id": "1095",
+    "raw": "黄色（きいろ）い",
+    "word": "黄色い",
+    "reading": "きいろい",
+    "meaning": "yellow, shrill (high pitched) voice",
+    "level": "N5"
+  },
+  {
+    "id": "480",
+    "raw": "大抵（たいてい）",
+    "word": "大抵",
+    "reading": "たいてい",
+    "meaning": "mostly, ordinarily, usually, generally",
+    "level": "N5"
+  },
+  {
+    "id": "260",
+    "raw": "丈夫（じょうぶ）",
+    "word": "丈夫",
+    "reading": "じょうぶ",
+    "meaning": "healthy, robust, strong, solid, durable",
+    "level": "N5"
+  },
+  {
+    "id": "876",
+    "raw": "経済（けいざい）",
+    "word": "経済",
+    "reading": "けいざい",
+    "meaning": "economy, economics",
+    "level": "N5"
+  },
+  {
+    "id": "222",
+    "raw": "ボランティア",
+    "word": "ボランティア",
+    "reading": "ボランティア",
+    "meaning": "volunteer",
+    "level": "N5"
+  },
+  {
+    "id": "885",
+    "raw": "締（し）める",
+    "word": "締める",
+    "reading": "しめる",
+    "meaning": "to tie, to fasten",
+    "level": "N5"
+  },
+  {
+    "id": "67",
+    "raw": "カーテン",
+    "word": "カーテン",
+    "reading": "カーテン",
+    "meaning": "curtain, curtains",
+    "level": "N5"
+  },
+  {
+    "id": "1026",
+    "raw": "金色（きんいろ）",
+    "word": "金色",
+    "reading": "きんいろ",
+    "meaning": "golden (colour, color)",
+    "level": "N5"
+  },
+  {
+    "id": "719",
+    "raw": "歌舞伎（かぶき）",
+    "word": "歌舞伎",
+    "reading": "かぶき",
+    "meaning": "kabuki, Japanese classical drama",
+    "level": "N5"
+  },
+  {
+    "id": "74",
+    "raw": "キャベツ",
+    "word": "キャベツ",
+    "reading": "キャベツ",
+    "meaning": "cabbage (Brassica oleracea)",
+    "level": "N5"
+  },
+  {
+    "id": "971",
+    "raw": "貰（もら）う",
+    "word": "貰う",
+    "reading": "もらう",
+    "meaning": "to receive, to take, to accept",
+    "level": "N5"
+  },
+  {
+    "id": "569",
+    "raw": "往復（おうふく）",
+    "word": "往復",
+    "reading": "おうふく",
+    "meaning": "making a round trip, going and returning, coming and going",
+    "level": "N5"
+  },
+  {
+    "id": "1020",
+    "raw": "醤油（しょうゆ）",
+    "word": "醤油",
+    "reading": "しょうゆ",
+    "meaning": "soy sauce, shoyu",
+    "level": "N5"
+  },
+  {
+    "id": "292",
+    "raw": "二十歳（はたち）",
+    "word": "二十歳",
+    "reading": "はたち",
+    "meaning": "20 years old",
+    "level": "N5"
+  },
+  {
+    "id": "370",
+    "raw": "内科（ないか）",
+    "word": "内科",
+    "reading": "ないか",
+    "meaning": "internal medicine, i.e. treatment by medical procedures rather than surgical procedures",
+    "level": "N5"
+  },
+  {
+    "id": "991",
+    "raw": "辺（へん）",
+    "word": "辺",
+    "reading": "へん",
+    "meaning": "area, vicinity, region",
+    "level": "N5"
+  },
+  {
+    "id": "41",
+    "raw": "お寺（てら）",
+    "word": "お寺",
+    "reading": "おてら",
+    "meaning": "temple",
+    "level": "N5"
+  },
+  {
+    "id": "686",
+    "raw": "本屋（ほんや）",
+    "word": "本屋",
+    "reading": "ほんや",
+    "meaning": "bookstore, bookshop",
+    "level": "N5"
+  },
+  {
+    "id": "889",
+    "raw": "美術館（びじゅつかん）",
+    "word": "美術館",
+    "reading": "びじゅつかん",
+    "meaning": "art gallery, art museum",
+    "level": "N5"
+  },
+  {
+    "id": "405",
+    "raw": "午前中（ごぜんちゅう）",
+    "word": "午前中",
+    "reading": "ごぜんちゅう",
+    "meaning": "in the morning, during the morning",
+    "level": "N5"
+  },
+  {
+    "id": "15",
+    "raw": "アンケート",
+    "word": "アンケート",
+    "reading": "アンケート",
+    "meaning": "questionnaire, survey",
+    "level": "N5"
+  },
+  {
+    "id": "858",
+    "raw": "笠（かさ）",
+    "word": "笠",
+    "reading": "かさ",
+    "meaning": "conical hat (East-Asian style), coolie hat",
+    "level": "N5"
+  },
+  {
+    "id": "5",
+    "raw": "ばつ",
+    "word": "ばつ",
+    "reading": "ばつ",
+    "meaning": "x (mark), cross",
+    "level": "N5"
+  },
+  {
+    "id": "777",
+    "raw": "点滴（てんてき）",
+    "word": "点滴",
+    "reading": "てんてき",
+    "meaning": "IV, raindrops, falling drop of water",
+    "level": "N5"
+  },
+  {
+    "id": "546",
+    "raw": "幾（いく）つ",
+    "word": "幾つ",
+    "reading": "いくつ",
+    "meaning": "how many, how much, a few (when followed by か)",
+    "level": "N5"
+  },
+  {
+    "id": "244",
+    "raw": "レポート",
+    "word": "レポート",
+    "reading": "レポート",
+    "meaning": "report, paper",
+    "level": "N5"
+  },
+  {
+    "id": "340",
+    "raw": "作文（さくぶん）",
+    "word": "作文",
+    "reading": "さくぶん",
+    "meaning": "writing (an essay, prose, etc.), composition",
+    "level": "N5"
+  },
+  {
+    "id": "203",
+    "raw": "ハンバーガー",
+    "word": "ハンバーガー",
+    "reading": "ハンバーガー",
+    "meaning": "hamburger (on a bun)",
+    "level": "N5"
+  },
+  {
+    "id": "923",
+    "raw": "茶碗（ちゃわん）",
+    "word": "茶碗",
+    "reading": "ちゃわん",
+    "meaning": "rice bowl, tea cup, teacup",
+    "level": "N5"
+  },
+  {
+    "id": "337",
+    "raw": "余（あま）り",
+    "word": "余り",
+    "reading": "あまり",
+    "meaning": "remainder, rest, balance, remains, scraps, residue, remnant",
+    "level": "N5"
+  },
+  {
+    "id": "485",
+    "raw": "天気予報（てんきよほう）",
+    "word": "天気予報",
+    "reading": "てんきよほう",
+    "meaning": "weather forecast, weather report",
+    "level": "N5"
+  },
+  {
+    "id": "660",
+    "raw": "晴（は）れ",
+    "word": "晴れ",
+    "reading": "はれ",
+    "meaning": "clear weather, fine weather",
+    "level": "N5"
+  },
+  {
+    "id": "379",
+    "raw": "凄（すご）い",
+    "word": "凄い",
+    "reading": "すごい",
+    "meaning": "terrible, dreadful, amazing, great , wonderful, terrific",
+    "level": "N5"
+  },
+  {
+    "id": "426",
+    "raw": "右側（みぎがわ）",
+    "word": "右側",
+    "reading": "みぎがわ",
+    "meaning": "right side, right-hand side",
+    "level": "N5"
+  },
+  {
+    "id": "447",
+    "raw": "地蔵（じぞう）",
+    "word": "地蔵",
+    "reading": "じぞう",
+    "meaning": "Kshitigarbha (bodhisattva who looks over children, travellers and the underworld), Ksitigarbha, Jizō",
+    "level": "N5"
+  },
+  {
+    "id": "30",
+    "raw": "エジプト",
+    "word": "エジプト",
+    "reading": "エジプト",
+    "meaning": "Egypt",
+    "level": "N5"
+  },
+  {
+    "id": "140",
+    "raw": "咳（せき）",
+    "word": "咳",
+    "reading": "せき",
+    "meaning": "cough, coughing, tussis",
+    "level": "N5"
+  },
+  {
+    "id": "739",
+    "raw": "気温（きおん）",
+    "word": "気温",
+    "reading": "きおん",
+    "meaning": "air temperature",
+    "level": "N5"
+  },
+  {
+    "id": "133",
+    "raw": "スプーン",
+    "word": "スプーン",
+    "reading": "スプーン",
+    "meaning": "spoon",
+    "level": "N5"
+  },
+  {
+    "id": "296",
+    "raw": "交差点（こうさてん）",
+    "word": "交差点",
+    "reading": "こうさてん",
+    "meaning": "crossing, intersection",
+    "level": "N5"
+  },
+  {
+    "id": "14",
+    "raw": "アレルギー",
+    "word": "アレルギー",
+    "reading": "アレルギー",
+    "meaning": "allergy",
+    "level": "N5"
+  },
+  {
+    "id": "79",
+    "raw": "グラム",
+    "word": "グラム",
+    "reading": "グラム",
+    "meaning": "gram, gramme",
+    "level": "N5"
+  },
+  {
+    "id": "471",
+    "raw": "大使館（たいしかん）",
+    "word": "大使館",
+    "reading": "たいしかん",
+    "meaning": "embassy",
+    "level": "N5"
+  },
+  {
+    "id": "115",
+    "raw": "ジャーナリスト",
+    "word": "ジャーナリスト",
+    "reading": "ジャーナリスト",
+    "meaning": "journalist",
+    "level": "N5"
+  },
+  {
+    "id": "213",
+    "raw": "ぶどう",
+    "word": "ぶどう",
+    "reading": "ぶどう",
+    "meaning": "grape, grapevine",
+    "level": "N5"
+  },
+  {
+    "id": "514",
+    "raw": "家具（かぐ）",
+    "word": "家具",
+    "reading": "かぐ",
+    "meaning": "furniture",
+    "level": "N5"
+  },
+  {
+    "id": "758",
+    "raw": "消（け）しゴム",
+    "word": "消しゴム",
+    "reading": "けしゴム",
+    "meaning": "eraser, rubber",
+    "level": "N5"
+  },
+  {
+    "id": "774",
+    "raw": "灰色（はいいろ）",
+    "word": "灰色",
+    "reading": "はいいろ",
+    "meaning": "grey, gray, ashen",
+    "level": "N5"
+  },
+  {
+    "id": "84",
+    "raw": "ヶ月（かげつ）",
+    "word": "ヶ月",
+    "reading": "ヶかげつ",
+    "meaning": "months (period of)",
+    "level": "N5"
+  },
+  {
+    "id": "32",
+    "raw": "オーストラリア",
+    "word": "オーストラリア",
+    "reading": "オーストラリア",
+    "meaning": "Australia",
+    "level": "N5"
+  },
+  {
+    "id": "422",
+    "raw": "可哀想（かわいそう）",
+    "word": "可哀想",
+    "reading": "かわいそう",
+    "meaning": "poor, pitiable, pathetic, pitiful",
+    "level": "N5"
+  },
+  {
+    "id": "293",
+    "raw": "二日酔（ふつかよ）い",
+    "word": "二日酔い",
+    "reading": "ふつかよい",
+    "meaning": "hangover",
+    "level": "N5"
+  },
+  {
+    "id": "536",
+    "raw": "左側（ひだりがわ）",
+    "word": "左側",
+    "reading": "ひだりがわ",
+    "meaning": "left side, left-hand side",
+    "level": "N5"
+  },
+  {
+    "id": "688",
+    "raw": "本棚（ほんだな）",
+    "word": "本棚",
+    "reading": "ほんだな",
+    "meaning": "bookshelves, bookshelf, bookcase",
+    "level": "N5"
+  },
+  {
+    "id": "875",
+    "raw": "終電（しゅうでん）",
+    "word": "終電",
+    "reading": "しゅうでん",
+    "meaning": "last train (of the day)",
+    "level": "N5"
+  },
+  {
+    "id": "45",
+    "raw": "お手洗（てあら）い",
+    "word": "お手洗い",
+    "reading": "おてあらい",
+    "meaning": "toilet, restroom, lavatory, bathroom",
+    "level": "N5"
+  },
+  {
+    "id": "241",
+    "raw": "レコード",
+    "word": "レコード",
+    "reading": "レコード",
+    "meaning": "record (e.g. LP)",
+    "level": "N5"
+  },
+  {
+    "id": "1100",
+    "raw": "鼻水（はなみず）",
+    "word": "鼻水",
+    "reading": "はなみず",
+    "meaning": "nasal mucus, dripping nose, snot",
+    "level": "N5"
+  },
+  {
+    "id": "366",
+    "raw": "八百屋（やおや）",
+    "word": "八百屋",
+    "reading": "やおや",
+    "meaning": "greengrocer",
+    "level": "N5"
+  },
+  {
+    "id": "242",
+    "raw": "レジ",
+    "word": "レジ",
+    "reading": "レジ",
+    "meaning": "(cash) register",
+    "level": "N5"
+  },
+  {
+    "id": "81",
+    "raw": "グレー",
+    "word": "グレー",
+    "reading": "グレー",
+    "meaning": "grey (gray)",
+    "level": "N5"
+  },
+  {
+    "id": "363",
+    "raw": "入口（いりぐち）",
+    "word": "入口",
+    "reading": "いりぐち",
+    "meaning": "entrance, entry, gate, approach, mouth",
+    "level": "N5"
+  },
+  {
+    "id": "1082",
+    "raw": "飴（あめ）",
+    "word": "飴",
+    "reading": "あめ",
+    "meaning": "(hard) candy, toffee",
+    "level": "N5"
+  },
+  {
+    "id": "742",
+    "raw": "水色（みずいろ）",
+    "word": "水色",
+    "reading": "みずいろ",
+    "meaning": "light blue, pale blue, aqua",
+    "level": "N5"
+  },
+  {
+    "id": "325",
+    "raw": "会社員（かいしゃいん）",
+    "word": "会社員",
+    "reading": "かいしゃいん",
+    "meaning": "company employee, office worker, white-collar worker",
+    "level": "N5"
+  },
+  {
+    "id": "61",
+    "raw": "お酒（さけ）",
+    "word": "お酒",
+    "reading": "おさけ",
+    "meaning": "alcohol, sake",
+    "level": "N5"
+  },
+  {
+    "id": "105",
+    "raw": "ご馳走（ちそう）",
+    "word": "ご馳走",
+    "reading": "ごちそう",
+    "meaning": "feast, treating (someone)",
+    "level": "N5"
+  },
+  {
+    "id": "120",
+    "raw": "ジャンル",
+    "word": "ジャンル",
+    "reading": "ジャンル",
+    "meaning": "genre",
+    "level": "N5"
+  },
+  {
+    "id": "650",
+    "raw": "昼（ひる）ご飯（はん）",
+    "word": "昼ご飯",
+    "reading": "ひるごはん",
+    "meaning": "lunch, midday meal",
+    "level": "N5"
+  },
+  {
+    "id": "258",
+    "raw": "万年筆（まんねんひつ）",
+    "word": "万年筆",
+    "reading": "まんねんひつ",
+    "meaning": "fountain pen",
+    "level": "N5"
+  },
+  {
+    "id": "93",
+    "raw": "この頃（ごろ）",
+    "word": "この頃",
+    "reading": "このごろ",
+    "meaning": "these days, nowadays, now, at present, recently, lately",
+    "level": "N5"
+  },
+  {
+    "id": "68",
+    "raw": "カナダ",
+    "word": "カナダ",
+    "reading": "カナダ",
+    "meaning": "Canada",
+    "level": "N5"
+  },
+  {
+    "id": "820",
+    "raw": "発音（はつおん）",
+    "word": "発音",
+    "reading": "はつおん",
+    "meaning": "pronunciation",
+    "level": "N5"
+  },
+  {
+    "id": "841",
+    "raw": "研究者（けんきゅうしゃ）",
+    "word": "研究者",
+    "reading": "けんきゅうしゃ",
+    "meaning": "researcher",
+    "level": "N5"
+  },
+  {
+    "id": "700",
+    "raw": "格好（かっこう）いい",
+    "word": "格好いい",
+    "reading": "かっこういい",
+    "meaning": "attractive, good-looking, stylish, cool, smooth, neat, with-it, groovy",
+    "level": "N5"
+  },
+  {
+    "id": "410",
+    "raw": "単語（たんご）",
+    "word": "単語",
+    "reading": "たんご",
+    "meaning": "word, vocabulary, (usually) single-character word",
+    "level": "N5"
+  },
+  {
+    "id": "778",
+    "raw": "無（な）くす",
+    "word": "無くす",
+    "reading": "なくす",
+    "meaning": "to lose something",
+    "level": "N5"
+  },
+  {
+    "id": "453",
+    "raw": "売店（ばいてん）",
+    "word": "売店",
+    "reading": "ばいてん",
+    "meaning": "stand, stall, booth, kiosk, store",
+    "level": "N5"
+  },
+  {
+    "id": "541",
+    "raw": "平日（へいじつ）",
+    "word": "平日",
+    "reading": "へいじつ",
+    "meaning": "weekday, ordinary days (i.e. non-holiday)",
+    "level": "N5"
+  },
+  {
+    "id": "240",
+    "raw": "リットル",
+    "word": "リットル",
+    "reading": "リットル",
+    "meaning": "litre, liter",
+    "level": "N5"
+  },
+  {
+    "id": "1029",
+    "raw": "銀色（ぎんいろ）",
+    "word": "銀色",
+    "reading": "ぎんいろ",
+    "meaning": "silver (color, colour)",
+    "level": "N5"
+  },
+  {
+    "id": "771",
+    "raw": "火傷（やけど）",
+    "word": "火傷",
+    "reading": "やけど",
+    "meaning": "burn, scald",
+    "level": "N5"
+  },
+  {
+    "id": "2",
+    "raw": "一号車（いちごうしゃ）",
+    "word": "一号車",
+    "reading": "いちごうしゃ",
+    "meaning": "Car No. 1",
+    "level": "N5"
+  },
+  {
+    "id": "482",
+    "raw": "天（あま）の川（がわ）",
+    "word": "天の川",
+    "reading": "あまのがわ",
+    "meaning": "Milky Way, luminous band corresponding to the plane of the galaxy",
+    "level": "N5"
+  },
+  {
+    "id": "1098",
+    "raw": "黒板（こくばん）",
+    "word": "黒板",
+    "reading": "こくばん",
+    "meaning": "blackboard",
+    "level": "N5"
+  },
+  {
+    "id": "131",
+    "raw": "ストーブ",
+    "word": "ストーブ",
+    "reading": "ストーブ",
+    "meaning": "(room) heater, stove",
+    "level": "N5"
+  },
+  {
+    "id": "532",
+    "raw": "山道（やまみち）",
+    "word": "山道",
+    "reading": "やまみち",
+    "meaning": "mountain road, mountain trail",
+    "level": "N5"
+  },
+  {
+    "id": "803",
+    "raw": "産婦人科（さんふじんか）",
+    "word": "産婦人科",
+    "reading": "さんふじんか",
+    "meaning": "maternity and gynaecology department (gynecology), department of obstetrics and gynaecology (gynecology)",
+    "level": "N5"
+  },
+  {
+    "id": "344",
+    "raw": "保険証（ほけんしょう）",
+    "word": "保険証",
+    "reading": "ほけんしょう",
+    "meaning": "insurance card",
+    "level": "N5"
+  },
+  {
+    "id": "788",
+    "raw": "特急（とっきゅう）",
+    "word": "特急",
+    "reading": "とっきゅう",
+    "meaning": "limited express (train for which a limited-express ticket is required)",
+    "level": "N5"
+  },
+  {
+    "id": "108",
+    "raw": "サーフィン",
+    "word": "サーフィン",
+    "reading": "サーフィン",
+    "meaning": "surfing",
+    "level": "N5"
+  },
+  {
+    "id": "760",
+    "raw": "消防士（しょうぼうし）",
+    "word": "消防士",
+    "reading": "しょうぼうし",
+    "meaning": "firefighter, fireman, fireperson",
+    "level": "N5"
+  },
+  {
+    "id": "11",
+    "raw": "アボカド",
+    "word": "アボカド",
+    "reading": "アボカド",
+    "meaning": "avocado (Persea americana)",
+    "level": "N5"
+  },
+  {
+    "id": "814",
+    "raw": "番線（ばんせん）",
+    "word": "番線",
+    "reading": "ばんせん",
+    "meaning": "track number",
+    "level": "N5"
+  },
+  {
+    "id": "631",
+    "raw": "方言（ほうげん）",
+    "word": "方言",
+    "reading": "ほうげん",
+    "meaning": "dialect, provincialism",
+    "level": "N5"
+  },
+  {
+    "id": "283",
+    "raw": "乗（の）り換（か）え",
+    "word": "乗り換え",
+    "reading": "のりかえ",
+    "meaning": "transfer (trains, buses, etc.), change, connection",
+    "level": "N5"
+  },
+  {
+    "id": "794",
+    "raw": "玉（たま）ねぎ",
+    "word": "玉ねぎ",
+    "reading": "たまねぎ",
+    "meaning": "onion (Allium cepa)",
+    "level": "N5"
+  },
+  {
+    "id": "25",
+    "raw": "インフルエンザ",
+    "word": "インフルエンザ",
+    "reading": "インフルエンザ",
+    "meaning": "influenza, flu",
+    "level": "N5"
+  },
+  {
+    "id": "100",
+    "raw": "コンセント",
+    "word": "コンセント",
+    "reading": "コンセント",
+    "meaning": "electrical outlet, wall socket, power plug",
+    "level": "N5"
+  },
+  {
+    "id": "901",
+    "raw": "背広（せびろ）",
+    "word": "背広",
+    "reading": "せびろ",
+    "meaning": "business suit",
+    "level": "N5"
+  },
+  {
+    "id": "764",
+    "raw": "温（ぬる）い",
+    "word": "温い",
+    "reading": "ぬるい",
+    "meaning": "lukewarm, tepid",
+    "level": "N5"
+  },
+  {
+    "id": "274",
+    "raw": "下痢（げり）",
+    "word": "下痢",
+    "reading": "げり",
+    "meaning": "diarrhea, diarrhoea",
+    "level": "N5"
+  },
+  {
+    "id": "746",
+    "raw": "沢山（たくさん）",
+    "word": "沢山",
+    "reading": "たくさん",
+    "meaning": "a lot, lots, plenty, many, a large number, much, a great deal, a good deal",
+    "level": "N5"
+  },
+  {
+    "id": "940",
+    "raw": "被（かぶ）せる",
+    "word": "被せる",
+    "reading": "かぶせる",
+    "meaning": "to cover (with something), to put on (e.g. on someone else's head), to plate something (with a metal), to pour or dash a liquid (on something), to charge (a person with a guilt)",
+    "level": "N5"
+  },
+  {
+    "id": "925",
+    "raw": "茶色（ちゃいろ）い",
+    "word": "茶色い",
+    "reading": "ちゃいろい",
+    "meaning": "light brown, tawny",
+    "level": "N5"
+  },
+  {
+    "id": "796",
+    "raw": "玩具（おもちゃ）",
+    "word": "玩具",
+    "reading": "おもちゃ",
+    "meaning": "toy, plaything",
+    "level": "N5"
+  },
+  {
+    "id": "830",
+    "raw": "真（ま）っ直（す）ぐ",
+    "word": "真っ直ぐ",
+    "reading": "まっすぐ",
+    "meaning": "straight (ahead), direct, upright, erect",
+    "level": "N5"
+  },
+  {
+    "id": "289",
+    "raw": "二（ふた）つ目（め）",
+    "word": "二つ目",
+    "reading": "ふたつめ",
+    "meaning": "one after next, second, next after first",
+    "level": "N5"
+  },
+  {
+    "id": "931",
+    "raw": "葉書（はがき）",
+    "word": "葉書",
+    "reading": "はがき",
+    "meaning": "postcard",
+    "level": "N5"
+  },
+  {
+    "id": "374",
+    "raw": "再来週（さらいしゅう）",
+    "word": "再来週",
+    "reading": "さらいしゅう",
+    "meaning": "week after next",
+    "level": "N5"
+  },
+  {
+    "id": "1075",
+    "raw": "飛行場（ひこうじょう）",
+    "word": "飛行場",
+    "reading": "ひこうじょう",
+    "meaning": "airfield, airport",
+    "level": "N5"
+  },
+  {
+    "id": "372",
+    "raw": "再来年（さらいねん）",
+    "word": "再来年",
+    "reading": "さらいねん",
+    "meaning": "year after next",
+    "level": "N5"
+  },
+  {
+    "id": "616",
+    "raw": "改札（かいさつ）",
+    "word": "改札",
+    "reading": "かいさつ",
+    "meaning": "examination of tickets",
+    "level": "N5"
+  },
+  {
+    "id": "783",
+    "raw": "片道（かたみち）",
+    "word": "片道",
+    "reading": "かたみち",
+    "meaning": "one-way (trip)",
+    "level": "N5"
+  },
+  {
+    "id": "968",
+    "raw": "豚（とん）カツ",
+    "word": "豚カツ",
+    "reading": "とんカツ",
+    "meaning": "tonkatsu, breaded pork cutlet",
+    "level": "N5"
+  },
+  {
+    "id": "251",
+    "raw": "一昨年（おととし）",
+    "word": "一昨年",
+    "reading": "おととし",
+    "meaning": "year before last",
+    "level": "N5"
+  },
+  {
+    "id": "802",
+    "raw": "生物学（せいぶつがく）",
+    "word": "生物学",
+    "reading": "せいぶつがく",
+    "meaning": "biology",
+    "level": "N5"
+  },
+  {
+    "id": "246",
+    "raw": "一（ひと）つ目（め）",
+    "word": "一つ目",
+    "reading": "ひとつめ",
+    "meaning": "first, initial, first thing, one-eyed",
+    "level": "N5"
+  },
+  {
+    "id": "6",
+    "raw": "Ｙ（ワイ）シャツ",
+    "word": "Ｙシャツ",
+    "reading": "Ｙシャツ",
+    "meaning": "shirt, business shirt, dress shirt",
+    "level": "N5"
+  },
+  {
+    "id": "819",
+    "raw": "発疹（ほっしん）",
+    "word": "発疹",
+    "reading": "ほっしん",
+    "meaning": "rash, eruption",
+    "level": "N5"
+  },
+  {
+    "id": "8",
+    "raw": "アウトドア",
+    "word": "アウトドア",
+    "reading": "アウトドア",
+    "meaning": "outdoor, al fresco",
+    "level": "N5"
+  },
+  {
+    "id": "604",
+    "raw": "抗生物質（こうせいぶっしつ）",
+    "word": "抗生物質",
+    "reading": "こうせいぶっしつ",
+    "meaning": "antibiotic, antibiotics",
+    "level": "N5"
+  },
+  {
+    "id": "913",
+    "raw": "良（よ）く",
+    "word": "良く",
+    "reading": "よく",
+    "meaning": "nicely, properly, well, skillfully, skilfully",
+    "level": "N5"
+  },
+  {
+    "id": "106",
+    "raw": "ご馳走様（ちそうさま）",
+    "word": "ご馳走様",
+    "reading": "ごちそうさま",
+    "meaning": "thank you (for the meal), that was a delicious meal",
+    "level": "N5"
+  },
+  {
+    "id": "204",
+    "raw": "ピーナッツ",
+    "word": "ピーナッツ",
+    "reading": "ピーナッツ",
+    "meaning": "peanut",
+    "level": "N5"
+  },
+  {
+    "id": "921",
+    "raw": "苺（いちご）",
+    "word": "苺",
+    "reading": "いちご",
+    "meaning": "strawberry (esp. the garden strawberry, Fragaria x ananassa)",
+    "level": "N5"
+  },
+  {
+    "id": "608",
+    "raw": "指定席（していせき）",
+    "word": "指定席",
+    "reading": "していせき",
+    "meaning": "reserved seat",
+    "level": "N5"
+  },
+  {
+    "id": "644",
+    "raw": "易（やさ）しい",
+    "word": "易しい",
+    "reading": "やさしい",
+    "meaning": "easy, plain, simple",
+    "level": "N5"
+  },
+  {
+    "id": "833",
+    "raw": "眼科（がんか）",
+    "word": "眼科",
+    "reading": "がんか",
+    "meaning": "ophthalmology, eye doctor",
+    "level": "N5"
+  },
+  {
+    "id": "234",
+    "raw": "餅（もち）",
+    "word": "餅",
+    "reading": "もち",
+    "meaning": "mochi, (sticky) rice cake",
+    "level": "N5"
+  },
+  {
+    "id": "479",
+    "raw": "大学院生（だいがくいんせい）",
+    "word": "大学院生",
+    "reading": "だいがくいんせい",
+    "meaning": "graduate student",
+    "level": "N5"
+  },
+  {
+    "id": "726",
+    "raw": "歯科（しか）",
+    "word": "歯科",
+    "reading": "しか",
+    "meaning": "dentistry",
+    "level": "N5"
+  },
+  {
+    "id": "1056",
+    "raw": "青信号（あおしんごう）",
+    "word": "青信号",
+    "reading": "あおしんごう",
+    "meaning": "green light (traffic)",
+    "level": "N5"
+  },
+  {
+    "id": "285",
+    "raw": "乗車券（じょうしゃけん）",
+    "word": "乗車券",
+    "reading": "じょうしゃけん",
+    "meaning": "ticket (for bus, train, etc.), passenger ticket",
+    "level": "N5"
+  },
+  {
+    "id": "250",
+    "raw": "一年生（いちねんせい）",
+    "word": "一年生",
+    "reading": "いちねんせい",
+    "meaning": "first-year student, annual (plant)",
+    "level": "N5"
+  },
+  {
+    "id": "373",
+    "raw": "再来月（さらいげつ）",
+    "word": "再来月",
+    "reading": "さらいげつ",
+    "meaning": "month after next",
+    "level": "N5"
+  },
+  {
+    "id": "779",
+    "raw": "煩（うるさ）い",
+    "word": "煩い",
+    "reading": "うるさい",
+    "meaning": "noisy, loud",
+    "level": "N5"
+  },
+  {
+    "id": "369",
+    "raw": "共通語（きょうつうご）",
+    "word": "共通語",
+    "reading": "きょうつうご",
+    "meaning": "common language, lingua franca, universal language (usually in reference to English)",
+    "level": "N5"
+  },
+  {
+    "id": "163",
+    "raw": "テープレコーダー",
+    "word": "テープレコーダー",
+    "reading": "テープレコーダー",
+    "meaning": "tape recorder",
+    "level": "N5"
+  },
+  {
+    "id": "509",
+    "raw": "定期券（ていきけん）",
+    "word": "定期券",
+    "reading": "ていきけん",
+    "meaning": "commuter pass, season ticket",
+    "level": "N5"
+  },
+  {
+    "id": "908",
+    "raw": "自由席（じゆうせき）",
+    "word": "自由席",
+    "reading": "じゆうせき",
+    "meaning": "unreserved seat, non-reserved seat",
+    "level": "N5"
+  },
+  {
+    "id": "505",
+    "raw": "学割（がくわり）",
+    "word": "学割",
+    "reading": "がくわり",
+    "meaning": "student discount",
+    "level": "N5"
+  },
+  {
+    "id": "827",
+    "raw": "直（す）ぐ",
+    "word": "直ぐ",
+    "reading": "すぐ",
+    "meaning": "immediately, at once, right away, directly",
+    "level": "N5"
+  },
+  {
+    "id": "356",
+    "raw": "先（ま）ず",
+    "word": "先ず",
+    "reading": "まず",
+    "meaning": "first (of all), firstly, to begin with, before anything else",
+    "level": "N5"
+  },
+  {
+    "id": "391",
+    "raw": "切符（きっぷ）売（う）り場（ば）",
+    "word": "切符売り場",
+    "reading": "きっぷうりば",
+    "meaning": "ticket window, box office",
+    "level": "N5"
+  },
+  {
+    "id": "3",
+    "raw": "Ｌ（エル）サイズ",
+    "word": "Ｌサイズ",
+    "reading": "Ｌサイズ",
+    "meaning": "Large size",
+    "level": "N5"
+  },
+  {
+    "id": "54",
+    "raw": "お祖父（じい）さん",
+    "word": "お祖父さん",
+    "reading": "おじいさん",
+    "meaning": "grandfather",
+    "level": "N5"
+  },
+  {
+    "id": "706",
+    "raw": "楽（たの）しみにする",
+    "word": "楽しみにする",
+    "reading": "たのしみにする",
+    "meaning": "to look forward to something",
+    "level": "N5"
+  },
+  {
+    "id": "317",
+    "raw": "他（ほか）に",
+    "word": "他に",
+    "reading": "ほかに",
+    "meaning": "in addition, besides",
+    "level": "N5"
+  },
+  {
+    "id": "352",
+    "raw": "元気（げんき）がない",
+    "word": "元気がない",
+    "reading": "げんきがない",
+    "meaning": "don't look well",
+    "level": "N5"
+  },
+  {
+    "id": "38",
+    "raw": "お地蔵（じぞう）さん",
+    "word": "お地蔵さん",
+    "reading": "おじぞうさん",
+    "meaning": "Jizo (esp. statue), Kshitigarbha, Ksitigarbha",
+    "level": "N5"
+  },
+  {
+    "id": "679",
+    "raw": "ありがとうございます",
+    "word": "ありがとうございます",
+    "reading": "ありがとうございます",
+    "meaning": "thank you",
+    "level": "N5"
+  },
+  {
+    "id": "828",
+    "raw": "直（す）ぐに",
+    "word": "直ぐに",
+    "reading": "すぐに",
+    "meaning": "instantly, immediately",
+    "level": "N5"
+  },
+  {
+    "id": "671",
+    "raw": "最後（さいご）に",
+    "word": "最後に",
+    "reading": "さいごに",
+    "meaning": "lastly",
+    "level": "N5"
+  },
+  {
+    "id": "272",
+    "raw": "下（くだ）さい",
+    "word": "下さい",
+    "reading": "ください",
+    "meaning": "please give me",
+    "level": "N5"
+  },
+  {
+    "id": "825",
+    "raw": "皆（みな）で",
+    "word": "皆で",
+    "reading": "みなで",
+    "meaning": "all (of the people) together",
+    "level": "N5"
+  },
+  {
+    "id": "936",
+    "raw": "行（い）ってきます",
+    "word": "行ってきます",
+    "reading": "いってきます",
+    "meaning": "I'm off, see you later",
+    "level": "N5"
+  },
+  {
+    "id": "842",
+    "raw": "砕（くだ）けた言（い）い方（かた）",
+    "word": "砕けた言い方",
+    "reading": "くだけたいいかた",
+    "meaning": "colloquial expression, slang, casual expression",
+    "level": "N5"
+  },
+  {
+    "id": "1066",
+    "raw": "頭（あたま）がいい",
+    "word": "頭がいい",
+    "reading": "あたまがいい",
+    "meaning": "bright, intelligent",
+    "level": "N5"
+  },
+  {
+    "id": "737",
+    "raw": "気分（きぶん）が悪（わる）い",
+    "word": "気分が悪い",
+    "reading": "きぶんがわるい",
+    "meaning": "feel sick, feel unwell",
+    "level": "N5"
+  },
+  {
+    "id": "158",
+    "raw": "タバコを吸（す）う",
+    "word": "タバコを吸う",
+    "reading": "タバコをすう",
+    "meaning": "to smoke a cigarette",
+    "level": "N5"
+  },
+  {
+    "id": "47",
+    "raw": "おはようございます",
+    "word": "おはようございます",
+    "reading": "おはようございます",
+    "meaning": "good morning",
+    "level": "N5"
+  },
+  {
+    "id": "53",
+    "raw": "お祖母（ばあ）さん",
+    "word": "お祖母さん",
+    "reading": "おばあさん",
+    "meaning": "grandmother",
+    "level": "N5"
+  },
+  {
+    "id": "188",
+    "raw": "二（に）ヶ月前（かげつまえ）",
+    "word": "二ヶ月前",
+    "reading": "にヶかげつまえ",
+    "meaning": "two months ago",
+    "level": "N5"
+  },
+  {
+    "id": "43",
+    "raw": "お帰（かえ）りなさい",
+    "word": "お帰りなさい",
+    "reading": "おかえりなさい",
+    "meaning": "welcome home",
+    "level": "N5"
+  },
+  {
+    "id": "298",
+    "raw": "交通系（こうつうけい）ＩＣ（アイシー）カード",
+    "word": "交通系ＩＣカード",
+    "reading": "こうつうけいＩＣカード",
+    "meaning": "rechargeable card such as a Suica, Icoca, Pasmo, etc.",
+    "level": "N5"
+  },
+  {
+    "id": "306",
+    "raw": "今学期（こんがっき）",
+    "word": "今学期",
+    "reading": "こんがっき",
+    "meaning": "this semester",
+    "level": "N5"
+  },
+  {
+    "id": "199",
+    "raw": "ハラルフード",
+    "word": "ハラルフード",
+    "reading": "ハラルフード",
+    "meaning": "halal food",
+    "level": "N5"
+  },
+  {
+    "id": "57",
+    "raw": "お腹（なか）が空（す）く",
+    "word": "お腹が空く",
+    "reading": "おなかがすく",
+    "meaning": "to become hungry, to get an empty stomach",
+    "level": "N5"
+  },
+  {
+    "id": "331",
+    "raw": "体（からだ）に気（き）をつける",
+    "word": "体に気をつける",
+    "reading": "からだにきをつける",
+    "meaning": "to take care of oneself",
+    "level": "N5"
+  },
+  {
+    "id": "336",
+    "raw": "何（なに）も",
+    "word": "何も",
+    "reading": "なにも",
+    "meaning": "(not) anything, (nothing) at all, (not) any, nothing",
+    "level": "N5"
+  },
+  {
+    "id": "39",
+    "raw": "お大事（だいじ）に",
+    "word": "お大事に",
+    "reading": "おだいじに",
+    "meaning": "take care of yourself, get well soon, God bless you",
+    "level": "N5"
+  },
+  {
+    "id": "441",
+    "raw": "嘘（うそ）をつく",
+    "word": "嘘をつく",
+    "reading": "うそをつく",
+    "meaning": "to tell a lie, to fib",
+    "level": "N5"
+  },
+  {
+    "id": "60",
+    "raw": "お返事（へんじ）",
+    "word": "お返事",
+    "reading": "おへんじ",
+    "meaning": "reply, answer, response",
+    "level": "N5"
+  },
+  {
+    "id": "174",
+    "raw": "どうやって",
+    "word": "どうやって",
+    "reading": "どうやって",
+    "meaning": "how, in what way, by what means",
+    "level": "N5"
+  },
+  {
+    "id": "1000",
+    "raw": "速（はや）く",
+    "word": "速く",
+    "reading": "はやく",
+    "meaning": "early, soon, fast",
+    "level": "N5"
+  },
+  {
+    "id": "385",
+    "raw": "出来（でき）るだけ",
+    "word": "出来るだけ",
+    "reading": "できるだけ",
+    "meaning": "as much as one can, as much as possible, if at all possible",
+    "level": "N5"
+  },
+  {
+    "id": "290",
+    "raw": "二三日（にさんにち）",
+    "word": "二三日",
+    "reading": "にさんにち",
+    "meaning": "two or three days",
+    "level": "N5"
+  },
+  {
+    "id": "172",
+    "raw": "どうですか",
+    "word": "どうですか",
+    "reading": "どうですか",
+    "meaning": "How about ...?, How is ...?",
+    "level": "N5"
+  },
+  {
+    "id": "291",
+    "raw": "二人（ふたり）ずつ",
+    "word": "二人ずつ",
+    "reading": "ふたりずつ",
+    "meaning": "two by two, by twos, as a couple",
+    "level": "N5"
+  },
+  {
+    "id": "247",
+    "raw": "一人（ひとり）で",
+    "word": "一人で",
+    "reading": "ひとりで",
+    "meaning": "alone, by oneself, on one's own",
+    "level": "N5"
+  },
+  {
+    "id": "393",
+    "raw": "初（はじ）めまして",
+    "word": "初めまして",
+    "reading": "はじめまして",
+    "meaning": "How do you do?, I am glad to meet you",
+    "level": "N5"
+  },
+  {
+    "id": "438",
+    "raw": "咳（せき）が出（で）る",
+    "word": "咳が出る",
+    "reading": "せきがでる",
+    "meaning": "to cough",
+    "level": "N5"
+  },
+  {
+    "id": "692",
+    "raw": "来学期（らいがっき）",
+    "word": "来学期",
+    "reading": "らいがっき",
+    "meaning": "next semester",
+    "level": "N5"
+  },
+  {
+    "id": "143",
+    "raw": "そうですか",
+    "word": "そうですか",
+    "reading": "そうですか",
+    "meaning": "I see, is that so?",
+    "level": "N5"
+  },
+  {
+    "id": "191",
+    "raw": "人参（にんじん）",
+    "word": "人参",
+    "reading": "にんじん",
+    "meaning": "carrot (Daucus carota), ginseng",
+    "level": "N5"
+  },
+  {
+    "id": "219",
+    "raw": "ホストファミリー",
+    "word": "ホストファミリー",
+    "reading": "ホストファミリー",
+    "meaning": "host family",
+    "level": "N5"
+  },
+  {
+    "id": "232",
+    "raw": "もう直（す）ぐ",
+    "word": "もう直ぐ",
+    "reading": "もうすぐ",
+    "meaning": "soon, shortly, before long, nearly, almost",
+    "level": "N5"
+  },
+  {
+    "id": "503",
+    "raw": "字引（じびき）",
+    "word": "字引",
+    "reading": "じびき",
+    "meaning": "dictionary",
+    "level": "N5"
+  },
+  {
+    "id": "304",
+    "raw": "人気（にんき）がある",
+    "word": "人気がある",
+    "reading": "にんきがある",
+    "meaning": "to be popular",
+    "level": "N5"
+  },
+  {
+    "id": "1005",
+    "raw": "遅（おそ）くなる",
+    "word": "遅くなる",
+    "reading": "おそくなる",
+    "meaning": "to be late",
+    "level": "N5"
+  },
+  {
+    "id": "249",
+    "raw": "一年（いちねん）に一度（いちど）",
+    "word": "一年に一度",
+    "reading": "いちねんにいちど",
+    "meaning": "once a year",
+    "level": "N5"
+  },
+  {
+    "id": "1004",
+    "raw": "遅（おそ）く",
+    "word": "遅く",
+    "reading": "おそく",
+    "meaning": "late",
+    "level": "N5"
+  },
+  {
+    "id": "898",
+    "raw": "背（せ）が低（ひく）い",
+    "word": "背が低い",
+    "reading": "せがひくい",
+    "meaning": "short (of a person)",
+    "level": "N5"
+  },
+  {
+    "id": "295",
+    "raw": "二週間前（にしゅうかんまえ）",
+    "word": "二週間前",
+    "reading": "にしゅうかんまえ",
+    "meaning": "two weeks ago",
+    "level": "N5"
+  },
+  {
+    "id": "938",
+    "raw": "行目（ぎょうめ）",
+    "word": "行目",
+    "reading": "ぎょうめ",
+    "meaning": "line number ...",
+    "level": "N5"
+  },
+  {
+    "id": "714",
+    "raw": "次発（じはつ）",
+    "word": "次発",
+    "reading": "じはつ",
+    "meaning": "second train to depart, following train, next train",
+    "level": "N5"
+  },
+  {
+    "id": "937",
+    "raw": "行（い）ってらっしゃい",
+    "word": "行ってらっしゃい",
+    "reading": "いってらっしゃい",
+    "meaning": "have a good day, take care, see you",
+    "level": "N5"
+  },
+  {
+    "id": "843",
+    "raw": "硬（かた）い言（い）い方（かた）",
+    "word": "硬い言い方",
+    "reading": "かたいいいかた",
+    "meaning": "bookish expression, written expression",
+    "level": "N5"
+  },
+  {
+    "id": "911",
+    "raw": "興味（きょうみ）がある",
+    "word": "興味がある",
+    "reading": "きょうみがある",
+    "meaning": "to be interested (in)",
+    "level": "N5"
+  },
+  {
+    "id": "35",
+    "raw": "お元気（げんき）で",
+    "word": "お元気で",
+    "reading": "おげんきで",
+    "meaning": "take care",
+    "level": "N5"
+  },
+  {
+    "id": "294",
+    "raw": "二時半（にじはん）",
+    "word": "二時半",
+    "reading": "にじはん",
+    "meaning": "half past two",
+    "level": "N5"
+  },
+  {
+    "id": "238",
+    "raw": "よろしくお願（ねが）いします",
+    "word": "よろしくお願いします",
+    "reading": "よろしくおねがいします",
+    "meaning": "please remember me, please help me, please treat me well, I look forward to working with you",
+    "level": "N5"
+  },
+  {
+    "id": "781",
+    "raw": "熱（ねつ）がある",
+    "word": "熱がある",
+    "reading": "ねつがある",
+    "meaning": "to have a fever",
+    "level": "N5"
+  },
+  {
+    "id": "956",
+    "raw": "詰（つま）らない",
+    "word": "詰らない",
+    "reading": "つまらない",
+    "meaning": "dull, uninteresting, boring, tedious",
+    "level": "N5"
+  },
+  {
+    "id": "380",
+    "raw": "凄（すご）く",
+    "word": "凄く",
+    "reading": "すごく",
+    "meaning": "awfully, very, immensely",
+    "level": "N5"
+  },
+  {
+    "id": "256",
+    "raw": "丁寧（ていねい）な言（い）い方（かた）",
+    "word": "丁寧な言い方",
+    "reading": "ていねいないいかた",
+    "meaning": "polite expression",
+    "level": "N5"
+  },
+  {
+    "id": "261",
+    "raw": "三（みっ）つ目（め）",
+    "word": "三つ目",
+    "reading": "みっつめ",
+    "meaning": "third",
+    "level": "N5"
+  },
+  {
+    "id": "64",
+    "raw": "お願（ねが）いします",
+    "word": "お願いします",
+    "reading": "おねがいします",
+    "meaning": "please",
+    "level": "N5"
+  }
+]

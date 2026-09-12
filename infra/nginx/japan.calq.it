@@ -1,0 +1,33 @@
+server {
+        server_name japan.calq.it;
+  
+        location / {
+            proxy_pass http://localhost:3033;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    
+    listen 443 ssl; # managed by Certbot
+    listen [::]:443 ssl;
+    ssl_certificate /etc/letsencrypt/live/japan.calq.it/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/japan.calq.it/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = japan.calq.it) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80;
+    listen [::]:80;
+        server_name japan.calq.it;
+    return 404; # managed by Certbot
+
+
+}

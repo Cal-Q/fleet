@@ -1,0 +1,14 @@
+[Unit]
+Description=Smash Ultimate UDP Telemetry Relay Service
+After=network.target
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-agent/backend
+ExecStart=/usr/bin/python3 /home/smashbot/smash-agent/backend/telemetry_relay.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

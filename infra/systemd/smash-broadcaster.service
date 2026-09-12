@@ -1,0 +1,15 @@
+[Unit]
+Description=Smash Zen AVX2 Live Broadcaster (Dynamic Overlay + Twitch RTMP)
+After=network.target mediamtx.service
+
+[Service]
+Type=simple
+User=smashbot
+WorkingDirectory=/home/smashbot/smash-agent/server
+ExecStart=/home/smashbot/smash-agent/server/zen_broadcaster live_1091072634_LJiiFOEsdJnK0y7QhueHANnvyNqB1m rtmp://127.0.0.1:3500/live/stream
+Restart=always
+RestartSec=2
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

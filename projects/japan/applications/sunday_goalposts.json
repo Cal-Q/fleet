@@ -1,0 +1,258 @@
+{
+  "project": "MEXT 2027 Sunday Goalposts",
+  "start_date": "2026-09-06",
+  "exam_target_date": "2027-02-20",
+  "total_weeks": 24,
+  "weeks": [
+    {
+      "week": 0,
+      "date": "2026-09-06",
+      "phase": "M01: Sprint Chiusura N4",
+      "target_grammar": "N4 123/185 (62 residue)",
+      "target_kanji": "1099 KLC maturi",
+      "target_vocab": "3543 attivi (Anki)",
+      "milestone_admin": "Setup completo, Esse3 30.0/30, GPA MEXT 3.00",
+      "status": "completed"
+    },
+    {
+      "week": 1,
+      "date": "2026-09-13",
+      "phase": "M01: Sprint Chiusura N4",
+      "target_grammar": "N4 141/185 (44 residue)",
+      "target_kanji": "1135 KLC maturi (+35)",
+      "target_vocab": "3643 attivi (+100)",
+      "milestone_admin": "Mantenimento 0 backlog SRS Anki",
+      "status": "active"
+    },
+    {
+      "week": 2,
+      "date": "2026-09-20",
+      "phase": "M01: Sprint Chiusura N4",
+      "target_grammar": "N4 159/185 (26 residue)",
+      "target_kanji": "1170 KLC maturi (+35)",
+      "target_vocab": "3743 attivi (+100)",
+      "milestone_admin": "Accesso portale Polizia per prenotazione passaporto Questura",
+      "status": "pending"
+    },
+    {
+      "week": 3,
+      "date": "2026-09-27",
+      "phase": "M01: Sprint Chiusura N4",
+      "target_grammar": "N4 177/185 (8 residue)",
+      "target_kanji": "1205 KLC maturi (+35)",
+      "target_vocab": "3843 attivi (+100)",
+      "milestone_admin": "Conferma data appuntamento passaporto Questura di Torino",
+      "status": "pending"
+    },
+    {
+      "week": 4,
+      "date": "2026-10-04",
+      "phase": "M02: Blitz N3 Fase 1",
+      "target_grammar": "N4 185/185 (100% CHIUSO) + N3 15/220",
+      "target_kanji": "1240 KLC maturi (+35)",
+      "target_vocab": "3943 attivi (+100)",
+      "milestone_admin": "Celebrazione chiusura N4; Part A Past Paper 2016 (sez. vocaboli)",
+      "status": "pending"
+    },
+    {
+      "week": 5,
+      "date": "2026-10-11",
+      "phase": "M02: Blitz N3 Fase 1",
+      "target_grammar": "N3 40/220",
+      "target_kanji": "1275 KLC maturi (+35)",
+      "target_vocab": "4083 attivi (+140)",
+      "milestone_admin": "Focus connettivi causali (~わけだ, ~わりに)",
+      "status": "pending"
+    },
+    {
+      "week": 6,
+      "date": "2026-10-18",
+      "phase": "M02: Blitz N3 Fase 1",
+      "target_grammar": "N3 65/220",
+      "target_kanji": "1310 KLC maturi (+35)",
+      "target_vocab": "4223 attivi (+140)",
+      "milestone_admin": "Particelle composte blocco 1 (~に対して, ~に関して)",
+      "status": "pending"
+    },
+    {
+      "week": 7,
+      "date": "2026-10-25",
+      "phase": "M02: Blitz N3 Fase 1",
+      "target_grammar": "N3 90/220",
+      "target_kanji": "1345 KLC maturi (+35)",
+      "target_vocab": "4363 attivi (+140)",
+      "milestone_admin": "Primo mock parziale Part A (Target: >= 85%)",
+      "status": "pending"
+    },
+    {
+      "week": 8,
+      "date": "2026-11-01",
+      "phase": "M03: Blitz N3 Fase 2",
+      "target_grammar": "N3 115/220 (50% N3 raggiunto)",
+      "target_kanji": "1380 KLC maturi (+35)",
+      "target_vocab": "4503 attivi (+140)",
+      "milestone_admin": "Email formale alla Prof.ssa Daniela Moro per lettera raccomandazione",
+      "status": "pending"
+    },
+    {
+      "week": 9,
+      "date": "2026-11-08",
+      "phase": "M03: Blitz N3 Fase 2",
+      "target_grammar": "N3 140/220",
+      "target_kanji": "1415 KLC maturi (+35)",
+      "target_vocab": "4643 attivi (+140)",
+      "milestone_admin": "Verbi composti blocco 1 (~込む, ~切る, ~直す)",
+      "status": "pending"
+    },
+    {
+      "week": 10,
+      "date": "2026-11-15",
+      "phase": "M03: Blitz N3 Fase 2",
+      "target_grammar": "N3 165/220",
+      "target_kanji": "1450 KLC maturi (+35)",
+      "target_vocab": "4783 attivi (+140)",
+      "milestone_admin": "Ricezione/conferma disponibilità Prof.ssa Daniela Moro",
+      "status": "pending"
+    },
+    {
+      "week": 11,
+      "date": "2026-11-22",
+      "phase": "M03: Blitz N3 Fase 2",
+      "target_grammar": "N3 190/220",
+      "target_kanji": "1485 KLC maturi (+35)",
+      "target_vocab": "4923 attivi (+140)",
+      "milestone_admin": "Drill completo Part A MEXT 2018 (Target: >= 90%)",
+      "status": "pending"
+    },
+    {
+      "week": 12,
+      "date": "2026-11-29",
+      "phase": "M03: Blitz N3 Fase 2",
+      "target_grammar": "N3 220/220 (100% N3 CHIUSO)",
+      "target_kanji": "1520 KLC maturi (+35)",
+      "target_vocab": "5063 attivi (+140)",
+      "milestone_admin": "Chiusura 100% Bunpro N3; raccolta bozza firmata Prof.ssa Moro",
+      "status": "pending"
+    },
+    {
+      "week": 13,
+      "date": "2026-12-06",
+      "phase": "M04: Chirurgia Keigo N2 & Bando",
+      "target_grammar": "Keigo Forme Speciali (いらっしゃる, 申し上げる, 存じる)",
+      "target_kanji": "1555 KLC maturi (+35)",
+      "target_vocab": "5203 attivi (+140)",
+      "milestone_admin": "Uscita Bando MEXT 2027; verifica linee guida Ambasciata Roma",
+      "status": "pending"
+    },
+    {
+      "week": 14,
+      "date": "2026-12-13",
+      "phase": "M04: Chirurgia Keigo N2 & Bando",
+      "target_grammar": "Keigo Prefissazione Cortese (お~になる / お~する) & Verbi Composti 2",
+      "target_kanji": "1590 KLC maturi (+35)",
+      "target_vocab": "5343 attivi (+140)",
+      "milestone_admin": "Visita Dott. Mirko Iozzia a Torino per Certificate of Health",
+      "status": "pending"
+    },
+    {
+      "week": 15,
+      "date": "2026-12-20",
+      "phase": "M04: Chirurgia Keigo N2 & Bando",
+      "target_grammar": "Connettivi saggistici Part B (~にすぎない, ~ざるを得ない)",
+      "target_kanji": "1625 KLC maturi (+35)",
+      "target_vocab": "5483 attivi (+140)",
+      "milestone_admin": "Esecuzione radiografia torace per certificato medico",
+      "status": "pending"
+    },
+    {
+      "week": 16,
+      "date": "2026-12-27",
+      "phase": "M04: Chirurgia Keigo N2 & Bando",
+      "target_grammar": "Consolidamento Keigo & Part B Drill",
+      "target_kanji": "1660 KLC maturi (+35)",
+      "target_vocab": "5623 attivi (+140)",
+      "milestone_admin": "Bozza compilata Application Form e Placement Preference (Waseda/Osaka/TUFS)",
+      "status": "pending"
+    },
+    {
+      "week": 17,
+      "date": "2027-01-03",
+      "phase": "M05: Appelli UniTO & Mock MEXT",
+      "target_grammar": "Revisione Error Log Grammaticale N4/N3",
+      "target_kanji": "1695 KLC maturi (+35)",
+      "target_vocab": "5763 attivi (+140)",
+      "milestone_admin": "Sprint ripasso esami UniTO (Giapponese 1 & Storia 1)",
+      "status": "pending"
+    },
+    {
+      "week": 18,
+      "date": "2027-01-10",
+      "phase": "M05: Appelli UniTO & Mock MEXT",
+      "target_grammar": "Mock Exam MEXT 2016 Completo (120 min)",
+      "target_kanji": "1730 KLC maturi (+35)",
+      "target_vocab": "5903 attivi (+140)",
+      "milestone_admin": "Sostenimento appello LIN0005 Lingua Giapponese 1 (12 CFU)",
+      "status": "pending"
+    },
+    {
+      "week": 19,
+      "date": "2027-01-17",
+      "phase": "M05: Appelli UniTO & Mock MEXT",
+      "target_grammar": "Mock Exam MEXT 2018 Completo (120 min)",
+      "target_kanji": "1765 KLC maturi (+35)",
+      "target_vocab": "6043 attivi (+140)",
+      "milestone_admin": "Sostenimento appello STU0625 Storia del Giappone (12 CFU)",
+      "status": "pending"
+    },
+    {
+      "week": 20,
+      "date": "2027-01-24",
+      "phase": "M05: Appelli UniTO & Mock MEXT",
+      "target_grammar": "Mock Exam MEXT 2019 Completo (120 min, Target: >= 65%)",
+      "target_kanji": "1800 KLC maturi (+35)",
+      "target_vocab": "6183 attivi (+140)",
+      "milestone_admin": "Verifica verbalizzazioni a libretto Esse3 (raggiunti 32 CFU d'area)",
+      "status": "pending"
+    },
+    {
+      "week": 21,
+      "date": "2027-01-31",
+      "phase": "M05: Appelli UniTO & Mock MEXT",
+      "target_grammar": "Rifinitura risposte orali simulatore (Kenjougo)",
+      "target_kanji": "1835 KLC maturi (+35)",
+      "target_vocab": "6323 attivi (+140)",
+      "milestone_admin": "Ritiro certificato iscrizione con esami timbrato e firmato in segreteria UniTO",
+      "status": "pending"
+    },
+    {
+      "week": 22,
+      "date": "2027-02-07",
+      "phase": "M06: Invio Bando & Tapering",
+      "target_grammar": "Tapering SRS (zero nuove card, solo revisione)",
+      "target_kanji": "Mantenimento",
+      "target_vocab": "Mantenimento",
+      "milestone_admin": "DOMANDA INVIATA IL 5 FEB ORE 08:00 AM; conferma telefonica 06-487991",
+      "status": "pending"
+    },
+    {
+      "week": 23,
+      "date": "2027-02-14",
+      "phase": "M06: Invio Bando & Tapering",
+      "target_grammar": "Simulazione Orale intensiva a voce alta & Error Log",
+      "target_kanji": "Mantenimento",
+      "target_vocab": "Mantenimento",
+      "milestone_admin": "Logistica trasferta Roma (biglietti treno, alloggio vicino Ambasciata)",
+      "status": "pending"
+    },
+    {
+      "week": 24,
+      "date": "2027-02-21",
+      "phase": "M06: Prova Scritta & Orale a Roma",
+      "target_grammar": "ESAME MEXT A ROMA (Part A, B, C) + COLLOQUIO ORALE",
+      "target_kanji": "Picco prestazionale",
+      "target_vocab": "Picco prestazionale",
+      "milestone_admin": "Completamento prove scritte e orali all'Ambasciata del Giappone a Roma",
+      "status": "pending"
+    }
+  ]
+}

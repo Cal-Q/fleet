@@ -1,0 +1,18 @@
+[Unit]
+Description=Remote Print Backend
+After=network.target
+
+[Service]
+Type=simple
+User=printbot
+WorkingDirectory=/opt/remote-print
+Environment=PATH=/opt/remote-print/.venv/bin:/usr/bin
+EnvironmentFile=/opt/remote-print/.env
+ExecStart=/opt/remote-print/.venv/bin/uvicorn backend.main:app --host 127.0.0.1 --port 3950
+Restart=always
+RestartSec=5
+MemoryMax=300M
+CPUQuota=60%
+
+[Install]
+WantedBy=multi-user.target
