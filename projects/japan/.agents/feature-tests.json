@@ -1,0 +1,83 @@
+[
+  {
+    "feature": "kanji_deck_restoration_and_merge",
+    "timestamp": "2026-09-12T15:40:00Z",
+    "status": "passed",
+    "evidence": {
+      "kanji_image_deck_total_cards": 2309,
+      "kanji_image_deck_studied_cards": 1108,
+      "kanji_cards_with_meaning_field": 2309,
+      "vocab_deck_total_cards": 3356,
+      "vocab_deck_studied_cards": 1788,
+      "vocab_deck_pure_kana_count": 666,
+      "vocab_deck_pure_kana_pct": 19.8,
+      "preserved_reviews_total": 216309,
+      "preserved_recent_reviews_7d": 2653,
+      "ankiweb_sync_status": "success",
+      "sample_merged_cards": [
+        {
+          "kanji": "私",
+          "reps": 6,
+          "ivl": 251,
+          "meaning": "わたし<br>- I (slightly formal or feminine)"
+        },
+        {
+          "kanji": "白",
+          "reps": 5,
+          "ivl": 231,
+          "meaning": "しろ<br>- White"
+        },
+        {
+          "kanji": "右",
+          "reps": 17,
+          "ivl": 144,
+          "meaning": "みぎ<br>- right"
+        },
+        {
+          "kanji": "愛",
+          "reps": 12,
+          "ivl": 189,
+          "meaning": "あい<br>- love<br>- affection"
+        }
+      ],
+      "sample_restored_vocab": [
+        {
+          "front": "確<ruby>認<rt>にん</rt></ruby>",
+          "reading": "かくにん"
+        },
+        {
+          "front": "気持ち",
+          "reading": "きもち"
+        },
+        {
+          "front": "利用",
+          "reading": "りよう"
+        },
+        {
+          "front": "愛す",
+          "reading": "あいす"
+        }
+      ]
+    }
+  },
+  {
+    "feature": "travel_decks_completed_mark_and_cooldown",
+    "timestamp": "2026-09-12T15:56:00Z",
+    "status": "passed",
+    "evidence": {
+      "safety_backup": "/opt/japan/.local/share/Anki2/User 1/collection.anki2.bak_before_cooldown_1789228532",
+      "total_cards_updated": 6968,
+      "total_notes_tagged_completato": 6968,
+      "cooldown_range_days": "1 to 10",
+      "due_today_after_update": 0,
+      "new_cards_after_update": 0,
+      "ankiweb_sync_status": "success",
+      "decks_updated": [
+        "[JAP] [TRAVEL] Kanji - Image Deck (2309 cards)",
+        "[JAP] [TRAVEL] Japanese -> Phonetic + Meaning (3357 cards)",
+        "[JAP] [TRAVEL] [1] Jap Sentences (1300 cards)",
+        "[JAP] [TRAVEL] [2] Jap Review Sentences (2 cards)"
+      ]
+    }
+  }
+]

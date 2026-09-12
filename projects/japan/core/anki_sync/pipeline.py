@@ -74,7 +74,7 @@ def get_decks(
         except (IndexError, ValueError):
             pass
 
-    # Kanji To Kana: 1 card per Kanji form + attach Kodansha image if single kanji
+    # Kanji To Kana & Kanji Image Deck Meaning
     kanji_combined = KDictionary()
     for kana, items in group_by(mixed_kanjis, lambda m: m.kana):
         for kanji, kanji_group in group_by(items, lambda m: m.kanji):
@@ -82,13 +82,18 @@ def get_decks(
             bulleted_english = "<br>".join(f"- {e}" for e in english_meanings)
             kanji_combined.add_combination(kanji, f"{kana}<br>{bulleted_english}")
 
-    kanji_to_kana = kanji_combined.get_add_or_update_info("Form", "Meaning")
-    for item in kanji_to_kana:
+    raw_kanji_to_kana = kanji_combined.get_add_or_update_info("Form", "Meaning")
+    kanji_to_kana: list[AddOrUpdateInfo] = []
+    kanji_image_meanings: list[AddOrUpdateInfo] = []
+
+    for item in raw_kanji_to_kana:
         form = item.fields_and_values.get("Form", "")
-        if len(form) == 1 and form in kanji_images:
-            item.fields_and_values["Image"] = kanji_images[form]
+        meaning = item.fields_and_values.get("Meaning", "")
+        if len(form) == 1 and deck_manager.is_allowed_kanji_character(form):
+            kanji_image_meanings.append(AddOrUpdateInfo(fields_and_values={"Kanji": form, "Meaning": meaning}))
         else:
             item.fields_and_values["Image"] = ""
+            kanji_to_kana.append(item)
 
     # Writing Practice deck
     keyword_to_id: dict[str, str] = {}
@@ -120,6 +125,7 @@ def get_decks(
     return {
         "Writing Practice": writing_practice,
         "Kanji To Kana": kanji_to_kana,
+        "Kanji Image Meaning": kanji_image_meanings,
     }
 
 
@@ -140,6 +146,13 @@ def execute_updates(collection_path: str, update_info: dict[str, list[AddOrUpdat
                 "Form",
                 update_info["Kanji To Kana"],
                 True,
+            ),
+            (
+                "[JAP]\x1f[TRAVEL]\x1fKanji - Image Deck",
+                "Kanji Image Model",
+                "Kanji",
+                update_info.get("Kanji Image Meaning", []),
+                False,
             ),
         ],
     )

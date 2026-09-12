@@ -6,7 +6,6 @@ import sqlite3
 import time
 
 from .anki_direct_writer_helpers import (
-    batch_remove_kanji_from_image_deck,
     create_deck,
     delete_notes_sql,
     generate_guid,
@@ -55,7 +54,6 @@ def _sync_single_deck_conn(
 
     now = int(time.time())
     processed_keys: set[str] = set()
-    kanji_with_images: set[str] = set()
     current_due = get_max_due(conn)
 
     notes_to_update: list[tuple[str, int, int, int]] = []
@@ -69,8 +67,6 @@ def _sync_single_deck_conn(
 
         processed_keys.add(key)
         img_val = info.fields_and_values.get("Image", "")
-        if img_val:
-            kanji_with_images.add(key)
 
         if key in existing_notes:
             note_id, current_fields = existing_notes[key]
@@ -130,9 +126,6 @@ def _sync_single_deck_conn(
             "VALUES (?, ?, 0, ?, -1, 0, 0, ?, 0, 0, 0, 0, 0, 0, 0, 0, '')",
             cards_to_add,
         )
-
-    if kanji_with_images:
-        batch_remove_kanji_from_image_deck(conn, kanji_with_images)
 
     if allow_delete:
         ids_to_delete = [note_id for key, (note_id, _) in existing_notes.items() if key not in processed_keys]

@@ -69,7 +69,7 @@ def pre_sync_and_leech_lifecycle() -> bool:
                 log("AnkiWeb requested FULL_DOWNLOAD — downloading collection...")
                 col.close_for_full_sync()
                 col.full_upload_or_download(auth=auth, server_usn=None, upload=False)
-                col.reopen()
+                col.reopen(after_full_sync=True)
 
             l_res = process_leech_lifecycle(col, cooldown_days=30)
             if l_res.dconf_updated > 0:
@@ -134,7 +134,7 @@ def post_sync() -> bool:
                 log("AnkiWeb requires FULL_UPLOAD — uploading full collection...")
                 col.close_for_full_sync()
                 col.full_upload_or_download(auth=auth, server_usn=None, upload=True)
-                col.reopen()
+                col.reopen(after_full_sync=True)
             return True
         finally:
             if col:

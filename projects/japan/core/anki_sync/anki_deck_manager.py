@@ -73,7 +73,10 @@ class AnkiDeckManager:
         if self._allowed_kanji is not None:
             return self._allowed_kanji
 
-        dict_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "dict_index.sqlite3")
+        base_project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        dict_path = os.path.join(base_project_dir, "data", "dict_index.sqlite3")
+        if not os.path.isfile(dict_path):
+            dict_path = "/opt/japan/data/dict_index.sqlite3"
         kanjis_contained: dict[str, int] = {}
         if os.path.isfile(dict_path):
             conn = sqlite3.connect(dict_path)
@@ -94,7 +97,13 @@ class AnkiDeckManager:
         return self._allowed_kanji
 
     def is_allowed_kanji_character(self, kanji: str) -> bool:
-        return kanji in self._get_allowed_kanji()
+        if not kanji:
+            return False
+        c = kanji[0]
+        code = ord(c)
+        if 0x4E00 <= code <= 0x9FFF or 0x3400 <= code <= 0x4DBF or 0xF900 <= code <= 0xFAFF:
+            return True
+        return c in self._get_allowed_kanji()
 
     def is_allowed_non_kanji_character(self, character: str) -> bool:
         char_type = get_japanese_char_type(character)
