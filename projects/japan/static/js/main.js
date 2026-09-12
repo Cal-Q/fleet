@@ -94,3 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
   syncSlot1UI();
 });
 
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    loadStudyStatus();
+  }
+});
+

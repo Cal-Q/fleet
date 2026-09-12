@@ -20,7 +20,7 @@ export async function loadStudyStatus() {
 
 export async function loadUpcomingPreviews() {
   try {
-    const res = await fetch('/api/study/next');
+    const res = await fetch('/api/study/next?t=' + Date.now());
     const data = await res.json();
 
     nextKanjiBatch = data.kanji || [];
@@ -87,11 +87,12 @@ function renderGrammarPreview(items) {
     const samples = (g.unreviewed_vocab_samples || g.missing_vocab || []).slice(0, 5).join(', ');
     const lockInfo = isLocked ? `
       <div class="mt-1 p-1.5 bg-[#FDF1EF] border border-[#C23B22]/20 text-[10px] font-mono flex items-center justify-between gap-1">
-        <span class="text-[#C23B22] truncate" title="Mancano: ${samples}">🔒 <b>Coperta (Sospesa):</b> mancano: <b>${samples}</b></span>
+        <span class="text-[#C23B22] truncate" title="Mancano: ${samples}">🔒 <b>BLOCCATA:</b> mancano <b>${samples}</b></span>
         <button onclick="switchStudyBranch('vocab')" class="flex-shrink-0 text-[9px] px-1 py-0.5 bg-[#1E2C3A] text-white font-bold hover:bg-black uppercase">Vocaboli →</button>
       </div>` : `
-      <div class="mt-1 px-1.5 py-0.5 bg-[#EEF7F1] border border-[#264332]/20 text-[10px] font-mono text-[#264332] font-bold">
-        ✅ Vocaboli Noti: si attiva subito come Nuova in Anki
+      <div class="mt-1 px-1.5 py-0.5 bg-[#EEF7F1] border border-[#264332]/20 text-[10px] font-mono text-[#264332] font-bold flex items-center justify-between">
+        <span>🔓 <b>SBLOCCATA:</b> Vocaboli noti (si attiva come Nuova in Anki)</span>
+        <span class="text-[9px] px-1 bg-[#264332] text-white uppercase font-mono">Pronta</span>
       </div>`;
     const sList = (g.sentences || []).slice(0, 2).map(s => `
       <div class="p-1.5 bg-[#FAF8F5] border border-black/5 text-xs">
@@ -121,6 +122,7 @@ export function switchStudyBranch(b) {
       btn.classList.toggle('bg-[#FAF8F5]', x !== b); btn.classList.toggle('opacity-70', x !== b);
     }
   });
+  loadUpcomingPreviews();
 }
 export function toggleDrawer(id) { document.getElementById(id)?.classList.toggle('open'); }
 

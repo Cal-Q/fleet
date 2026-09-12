@@ -155,5 +155,26 @@
         ]
       }
     }
+  },
+  {
+    "feature": "frontend_anti_cache_and_explicit_sbloccata_rendering",
+    "timestamp": "2026-09-12T17:50:00Z",
+    "status": "passed",
+    "evidence": {
+      "root_cause": "Browser held open session from 16:34:47 before service restart; API was not re-fetched without manual reload or visibility event.",
+      "fixes_applied": [
+        "Added ?t=Date.now() cachebuster to fetch('/api/study/next') and fetch('/api/study/status').",
+        "Added document.visibilitychange listener in main.js to auto-refresh state when tab is focused.",
+        "Added loadUpcomingPreviews() directly into switchStudyBranch so switching to Grammatica instantly fetches live data.",
+        "Updated UI templates with explicit '5 pronte (Sbloccate)' labels and green '🔓 SBLOCCATA' badge on each card.",
+        "Bumped index.html asset version to v=20260912_17."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "html_label": "5 pronte (Sbloccate con audio)",
+        "script_version": "main.js?v=20260912_17",
+        "api_unlocked_titles": ["いたす", "なさる", "はずだ", "ことができる", "がひつよう"]
+      }
+    }
   }
 ]
