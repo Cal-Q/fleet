@@ -2387,6 +2387,106 @@
         "total_sentences": 5,
         "url": "https://bunpro.jp/grammar_points/%E3%81%8A-%E3%81%AB%E3%81%AA%E3%82%8B",
         "studied": true
+      },
+      {
+        "id": 192,
+        "title": "いたす",
+        "meaning": "To do (Humble), To venerably do",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%84%E3%81%9F%E3%81%99",
+        "studied": true
+      },
+      {
+        "id": 193,
+        "title": "なさる",
+        "meaning": "To do (Honorific)",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%95%E3%82%8B",
+        "studied": true
+      },
+      {
+        "id": 151,
+        "title": "はずだ",
+        "meaning": "Bound to (be), Expected to (be), Should be (able)",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9A%E3%81%A0",
+        "studied": true
+      },
+      {
+        "id": 110,
+        "title": "ことができる",
+        "meaning": "Can, Be able to",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B",
+        "studied": true
+      },
+      {
+        "id": 127,
+        "title": "がひつよう",
+        "meaning": "Need, Necessary",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86",
+        "studied": true
+      },
+      {
+        "id": 132,
+        "title": "れる・られる (Potential)",
+        "meaning": "To be able, Can (Potential)",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/Verb[potential]",
+        "studied": true
+      },
+      {
+        "id": 139,
+        "title": "ひつようがある",
+        "meaning": "It is necessary to",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86%E3%81%8C%E3%81%82%E3%82%8B",
+        "studied": true
+      },
+      {
+        "id": 141,
+        "title": "し～し",
+        "meaning": "And, Giving reasons",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%97-%E3%81%97",
+        "studied": true
+      },
+      {
+        "id": 144,
+        "title": "そんなに",
+        "meaning": "So (much), That much, Like that",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%93%E3%81%AA%E3%81%AB",
+        "studied": true
+      },
+      {
+        "id": 156,
+        "title": "かどうか",
+        "meaning": "Whether or not, If...or not",
+        "level": "N4",
+        "matched_sentences": 0,
+        "total_sentences": 5,
+        "url": "https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B",
+        "studied": true
       }
     ],
     "N3": [],
@@ -2398,51 +2498,6 @@
     "N5": [],
     "N4": [
       {
-        "id": 110,
-        "title": "ことができる",
-        "meaning": "Can, Be able to",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B"
-      },
-      {
-        "id": 127,
-        "title": "がひつよう",
-        "meaning": "Need, Necessary",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86"
-      },
-      {
-        "id": 132,
-        "title": "れる・られる (Potential)",
-        "meaning": "To be able, Can (Potential)",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/Verb[potential]"
-      },
-      {
-        "id": 139,
-        "title": "ひつようがある",
-        "meaning": "It is necessary to",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86%E3%81%8C%E3%81%82%E3%82%8B"
-      },
-      {
-        "id": 141,
-        "title": "し～し",
-        "meaning": "And, Giving reasons",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%97-%E3%81%97"
-      },
-      {
         "id": 146,
         "title": "たところだ",
         "meaning": "Just finished doing, Was just doing",
@@ -2450,15 +2505,6 @@
         "matched_sentences": 0,
         "total_sentences": 5,
         "url": "https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0"
-      },
-      {
-        "id": 144,
-        "title": "そんなに",
-        "meaning": "So (much), That much, Like that",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%93%E3%81%AA%E3%81%AB"
       },
       {
         "id": 148,
@@ -2477,24 +2523,6 @@
         "matched_sentences": 0,
         "total_sentences": 5,
         "url": "https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0"
-      },
-      {
-        "id": 156,
-        "title": "かどうか",
-        "meaning": "Whether or not, If...or not",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B"
-      },
-      {
-        "id": 151,
-        "title": "はずだ",
-        "meaning": "Bound to (be), Expected to (be), Should be (able)",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9A%E3%81%A0"
       },
       {
         "id": 152,
@@ -2630,24 +2658,6 @@
         "matched_sentences": 0,
         "total_sentences": 5,
         "url": "https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82"
-      },
-      {
-        "id": 192,
-        "title": "いたす",
-        "meaning": "To do (Humble), To venerably do",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%84%E3%81%9F%E3%81%99"
-      },
-      {
-        "id": 193,
-        "title": "なさる",
-        "meaning": "To do (Honorific)",
-        "level": "N4",
-        "matched_sentences": 0,
-        "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%95%E3%82%8B"
       },
       {
         "id": 194,

@@ -897,5 +897,63 @@
         "label": "#6526 足跡 (あしあと)"
       }
     ]
+  },
+  "2026-09-12": {
+    "date": "2026-09-12",
+    "kanji": 0,
+    "vocab": 0,
+    "grammar": 10,
+    "items": [
+      {
+        "time": "18:43:46",
+        "category": "grammar",
+        "label": "#192 いたす"
+      },
+      {
+        "time": "18:43:46",
+        "category": "grammar",
+        "label": "#193 なさる"
+      },
+      {
+        "time": "18:43:46",
+        "category": "grammar",
+        "label": "#151 はずだ"
+      },
+      {
+        "time": "18:43:46",
+        "category": "grammar",
+        "label": "#110 ことができる"
+      },
+      {
+        "time": "18:43:46",
+        "category": "grammar",
+        "label": "#127 がひつよう"
+      },
+      {
+        "time": "18:43:54",
+        "category": "grammar",
+        "label": "#132 れる・られる (Potential)"
+      },
+      {
+        "time": "18:43:54",
+        "category": "grammar",
+        "label": "#139 ひつようがある"
+      },
+      {
+        "time": "18:43:54",
+        "category": "grammar",
+        "label": "#141 し～し"
+      },
+      {
+        "time": "18:43:54",
+        "category": "grammar",
+        "label": "#144 そんなに"
+      },
+      {
+        "time": "18:43:54",
+        "category": "grammar",
+        "label": "#156 かどうか"
+      }
+    ]
   }
 }
