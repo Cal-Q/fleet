@@ -795,5 +795,15 @@
       "categories_covered": ["Reading Comprehension (読解)", "Advanced Written Expressions", "Formal Written Discourse", "Sentence Scrambling (★)", "Kanji Semantic Mining"],
       "live_api_verification": "GET /api/exams/questions?section=C verified on Ionos returning 8 rotated questions including advanced N1 drills and pedagogical explanations."
     }
+  },
+  {
+    "feature": "mandatory_documentation_consultation_and_live_web_integration",
+    "timestamp": "2026-09-13T22:55:30Z",
+    "status": "passed",
+    "evidence": {
+      "directive_enacted": "Added Directive 24 to /opt/master/.agents/rules/GLOBAL_AGENTS.md and README.md requiring mandatory documentation consultation at every step and dual-channel web synchronization.",
+      "ui_integrated": "Added Branch 3 (RICERCA & REGISTRO) and Leaf 3 to templates/components/tab_dossier.html and static/js/modules/dossier.js for reading all 32 research dossiers directly in the browser.",
+      "live_api_verification": "Verified GET /api/research/dossiers returning 200 OK with top entries: registro_proattivo_rischi_e_soluzioni_mext.md and guida_decodifica_morfosintattica_e_risoluzione_parte_b.md."
+    }
   }
 ]
