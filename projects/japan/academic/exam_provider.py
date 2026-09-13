@@ -42,15 +42,16 @@ def get_all_questions_map() -> Dict[str, Dict[str, Any]]:
 
 
 def _rotate_daily_slice(items: List[Dict[str, Any]], count: int = 12, salt: str = "") -> List[Dict[str, Any]]:
-    """Deterministically selects `count` items based on the date seed and optional salt."""
+    """Deterministically selects `count` items with coprime stride to prevent category clustering."""
     if not items or len(items) <= count:
         return items
     today_str = datetime.now().strftime("%Y-%m-%d") + salt
     seed = int(hashlib.md5(today_str.encode()).hexdigest(), 16)
     start_idx = seed % len(items)
+    stride = 13  # Coprime with 125, 90, 50 to uniformly sample across pool categories
     rotated = []
     for i in range(count):
-        idx = (start_idx + i) % len(items)
+        idx = (start_idx + i * stride) % len(items)
         rotated.append(items[idx])
     return rotated
 

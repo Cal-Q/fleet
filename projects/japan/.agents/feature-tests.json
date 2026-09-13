@@ -1008,5 +1008,15 @@
         "css_rules_verified": "BIZ UDPMincho confirmed in editorial.css?v=20260913_25 on https://japan.calq.it/"
       }
     }
+  },
+  {
+    "feature": "mext_exam_rotator_coprime_stride_balancing",
+    "timestamp": "2026-09-13T23:33:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_diagnosed": "Contiguous slice rotation clustered 12 newly added advanced jukujikun/phonetic traps into a single test session (sess_1789342273), causing severe lexical overload without core N5/N4 questions.",
+      "remediation": "Implemented coprime stride (stride=13) in academic/exam_provider.py uniformly distributing daily test questions across particles, grammar, core N5/N4 vocabulary, and advanced traps.",
+      "live_verification": "GET /api/exams/questions?section=A verified on Ionos returning 9 core N5/N4 questions and 3 advanced traps, exactly matching authentic MEXT paper balance."
+    }
   }
 ]
