@@ -805,5 +805,20 @@
       "ui_integrated": "Added Branch 3 (RICERCA & REGISTRO) and Leaf 3 to templates/components/tab_dossier.html and static/js/modules/dossier.js for reading all 32 research dossiers directly in the browser.",
       "live_api_verification": "Verified GET /api/research/dossiers returning 200 OK with top entries: registro_proattivo_rischi_e_soluzioni_mext.md and guida_decodifica_morfosintattica_e_risoluzione_parte_b.md."
     }
+  },
+  {
+    "feature": "mext_mincho_typography_and_section_aware_pacing",
+    "timestamp": "2026-09-13T22:58:00Z",
+    "status": "passed",
+    "evidence": {
+      "typography": "Implemented .jp-mincho font-family stack (Shippori Mincho, Noto Serif JP, MS Mincho, Yu Mincho) with letter-spacing in static/css/editorial.css for authentic MEXT paper exam rendering.",
+      "pacing": "Implemented section-specific pacing thresholds in static/js/modules/exam_pacing.js (Part A: <=25s optimal, <=35s warning; Part B: <=40s optimal, <=55s warning; Part C: <=120s optimal, <=180s warning).",
+      "integration": "Wired currentSection into updatePacingUI inside static/js/modules/exams.js and applied .jp-mincho to question text and option cards.",
+      "file_line_counts": {
+        "static/css/editorial.css": 152,
+        "static/js/modules/exam_pacing.js": 64,
+        "static/js/modules/exams.js": 195
+      }
+    }
   }
 ]
