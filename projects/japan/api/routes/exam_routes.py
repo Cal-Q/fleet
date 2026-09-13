@@ -12,12 +12,12 @@ from pydantic import BaseModel
 
 from academic.exam_analytics import get_analytics, record_session
 from academic.exam_notes import get_user_notes, save_user_note, save_bulk_notes
+from academic.exam_provider import get_questions_for_session, get_all_questions_map
 
 router = APIRouter(tags=["exams"])
 
 WORKSPACE_DIR = "/opt/japan"
 EXAMS_DIR = os.path.join(WORKSPACE_DIR, "exams")
-EXAM_DB_FILE = os.path.join(EXAMS_DIR, "exam_database.json")
 EXAM_HIST_FILE = os.path.join(EXAMS_DIR, "history.json")
 
 
@@ -36,23 +36,8 @@ class NoteSaveRequest(BaseModel):
 
 @router.get("/api/exams/questions")
 def get_exam_questions(section: Optional[str] = None, category: Optional[str] = None):
-    """Returns questions filtered by section and category, enriched with saved notes."""
-    if not os.path.exists(EXAM_DB_FILE):
-        raise HTTPException(status_code=404, detail="Database esami non trovato.")
-    with open(EXAM_DB_FILE, "r", encoding="utf-8") as f:
-        questions = json.load(f)
-
-    if section and section.upper() != "ALL":
-        questions = [q for q in questions if q.get("section") == section.upper()]
-    if category:
-        questions = [q for q in questions if q.get("category", "").lower() == category.lower()]
-
-    user_notes = get_user_notes()
-    for q in questions:
-        n = user_notes.get(q.get("id"), {})
-        q["saved_comment"] = n.get("comment", "")
-        q["saved_answer"] = n.get("selected_answer", "")
-    return questions
+    """Returns questions filtered by section and category, dynamically rotated and enriched with saved notes."""
+    return get_questions_for_session(section=section, category=category)
 
 
 @router.get("/api/exams/notes")
@@ -70,11 +55,7 @@ def save_note_endpoint(req: NoteSaveRequest):
 @router.post("/api/exams/submit")
 def submit_exam(req: ExamSubmitRequest):
     """Evaluates answers, logs granular question-level records, and returns analysis."""
-    if not os.path.exists(EXAM_DB_FILE):
-        raise HTTPException(status_code=404, detail="Database esami non trovato.")
-    with open(EXAM_DB_FILE, "r", encoding="utf-8") as f:
-        questions = json.load(f)
-    q_map = {q["id"]: q for q in questions}
+    q_map = get_all_questions_map()
 
     total = len(req.answers)
     score = 0

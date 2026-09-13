@@ -1,5 +1,24 @@
 [
   {
+    "feature": "mext_unseen_drill_pool_and_proactive_risk_prevention",
+    "timestamp": "2026-09-13T21:55:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_anticipated": "1) Recognition familiarity bias: repeating 13 static questions or textbook sentences ruins recall; 2) Blind Past Papers invariant: 2017-2019 must remain unseen for Phase 3 timed mocks; 3) 60-minute time collapse, oral interview cognitive freeze, and UniTO bureaucratic latency.",
+      "remediation": [
+        "Authored comprehensive strategic dossier research/dossier_prevenzione_criticita_future_mext.md mapping the 5 latent traps (Pacing 60 min, Distrattori fonetico-grafici, Imboscata colloquio pomeridiano, Valanga SRS inizio semestre UniTO, Strozzature burocratiche).",
+        "Created exams/drill_pool_part_a.json with 45 authentic, rigorously calibrated unseen Part A questions targeting phonological distractors, radical lookalikes, particle nuances, and context vocabulary.",
+        "Created modular academic/exam_provider.py (97 lines) featuring deterministic circular daily rotation based on date hash.",
+        "Updated api/routes/exam_routes.py (144 lines) to serve rotated questions and lookup answers from both pools.",
+        "Verified live execution on Ionos (12 fresh questions served on GET /api/exams/questions?section=A)."
+      ],
+      "file_line_counts": {
+        "academic/exam_provider.py": 97,
+        "api/routes/exam_routes.py": 144
+      }
+    }
+  },
+  {
     "feature": "mext_exam_lab_parte_1_default_goal_and_auto_purge",
     "timestamp": "2026-09-13T21:30:00Z",
     "status": "passed",

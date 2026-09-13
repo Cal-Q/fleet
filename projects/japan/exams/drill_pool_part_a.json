@@ -1,0 +1,677 @@
+[
+  {
+    "id": "DRILL-A-01",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nここから 空港まで 【地下鉄】で 行きます。",
+    "options": {
+      "A": "ちかてつ",
+      "B": "じかてつ",
+      "C": "ちかでつ",
+      "D": "じかでつ"
+    },
+    "answer": "A",
+    "explanation": "「地下鉄」 si legge ちかてつ (chikatetsu). Trappola fonetica tipica MEXT: 地 si legge ち (non sonorizzato じ), e 鉄 si legge てつ (non でつ)."
+  },
+  {
+    "id": "DRILL-A-02",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n熱が あるので、午後に 【病院】へ 行きます。",
+    "options": {
+      "A": "びょういん",
+      "B": "びょいん",
+      "C": "びょうえん",
+      "D": "びょうかん"
+    },
+    "answer": "A",
+    "explanation": "「病院」 si legge びょういん (byōin) con vocale allungata ょう. Distrattore classico: びょいん (senza allungamento) e 美容院 (びよういん, parrucchiere)."
+  },
+  {
+    "id": "DRILL-A-03",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n公園で 友達と 【写真】を とりました。",
+    "options": {
+      "A": "しゃしん",
+      "B": "しゃじん",
+      "C": "さしん",
+      "D": "さじん"
+    },
+    "answer": "A",
+    "explanation": "「写真」 si legge しゃしん (shashin). 写 (しゃ) + 真 (しん). Distrattore: 真 non prende dakuon (non è じん)."
+  },
+  {
+    "id": "DRILL-A-04",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n郵便局で 84円の 【切手】を 買いました。",
+    "options": {
+      "A": "きって",
+      "B": "きて",
+      "C": "きっぷ",
+      "D": "きるて"
+    },
+    "answer": "A",
+    "explanation": "「切手」 si legge きって (kitte) con geminata (sokuon っ). Distrattore: きっぷ è 切符 (biglietto), きて è senza sokuon."
+  },
+  {
+    "id": "DRILL-A-05",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n父は 貿易の 【会社】に つとめて います。",
+    "options": {
+      "A": "かいしゃ",
+      "B": "がいしゃ",
+      "C": "かいじゃ",
+      "D": "がいじゃ"
+    },
+    "answer": "A",
+    "explanation": "「会社」 si legge かいしゃ (kaisha). Distrattore: 会 all'inizio non si sonorizza in がい, 社 è しゃ (non じゃ)."
+  },
+  {
+    "id": "DRILL-A-06",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n先生の 【質問】に 正しく 答えました。",
+    "options": {
+      "A": "しつもん",
+      "B": "しづもん",
+      "C": "じつもん",
+      "D": "しちもん"
+    },
+    "answer": "A",
+    "explanation": "「質問」 si legge しつもん (shitsumon). 質 (しつ) non è sonorizzato (non じつ), 問 (もん)."
+  },
+  {
+    "id": "DRILL-A-07",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n来週、北海道へ 【旅行】に 行きます。",
+    "options": {
+      "A": "りょこう",
+      "B": "りょうこう",
+      "C": "ろこう",
+      "D": "りょごう"
+    },
+    "answer": "A",
+    "explanation": "「旅行」 si legge りょこう (ryokō). 旅 è りょ (breve, NON りょう), 行 è こう (lungo, NON ごう)."
+  },
+  {
+    "id": "DRILL-A-08",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n毎朝、駅の前で 【新聞】を 買います。",
+    "options": {
+      "A": "しんぶん",
+      "B": "じんぶん",
+      "C": "しんもん",
+      "D": "じんもん"
+    },
+    "answer": "A",
+    "explanation": "「新聞」 si legge しんぶん (shinbun). 新 (しん, sorda), 聞 (ぶん, sonora). 人文 è じんぶん."
+  },
+  {
+    "id": "DRILL-A-09",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nこの まちは 夜でも 【安全】です。",
+    "options": {
+      "A": "あんぜん",
+      "B": "あんせん",
+      "C": "あんじん",
+      "D": "あんちん"
+    },
+    "answer": "A",
+    "explanation": "「安全」 si legge あんぜん (anzen). 全 prende la lettura on ぜん (con dakuon)."
+  },
+  {
+    "id": "DRILL-A-10",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nパーティーの 【案内】の 手紙が とどきました。",
+    "options": {
+      "A": "あんない",
+      "B": "あない",
+      "C": "あんだい",
+      "D": "あんたい"
+    },
+    "answer": "A",
+    "explanation": "「案内」 si legge あんない (annai). 案 (あん) + 内 (ない)."
+  },
+  {
+    "id": "DRILL-A-11",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n会議の 【準備】が もう 終わりました。",
+    "options": {
+      "A": "じゅんび",
+      "B": "じゅんぴ",
+      "C": "じゅんひ",
+      "D": "じんび"
+    },
+    "answer": "A",
+    "explanation": "「準備」 si legge じゅんび (junbi). 備 è び (sonoro, non ぴ né ひ)."
+  },
+  {
+    "id": "DRILL-A-12",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n明日の 朝 8時に 駅で 【集合】しましょう。",
+    "options": {
+      "A": "しゅうごう",
+      "B": "しゅごう",
+      "C": "しゅうこう",
+      "D": "じゅうごう"
+    },
+    "answer": "A",
+    "explanation": "「集合」 si legge しゅうごう (shūgō). 集 (しゅう, con vocale allungata), 合 (ごう, sonoro)."
+  },
+  {
+    "id": "DRILL-A-13",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nあの 人は とても 【親切】な 人です。",
+    "options": {
+      "A": "しんせつ",
+      "B": "じんせつ",
+      "C": "しんぜつ",
+      "D": "しんせっ"
+    },
+    "answer": "A",
+    "explanation": "「親切」 si legge しんせつ (shinsetsu). 親 (しん), 切 (せつ). Nessun dakuon."
+  },
+  {
+    "id": "DRILL-A-14",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n電車が まもなく 【出発】します。",
+    "options": {
+      "A": "しゅっぱつ",
+      "B": "しゅつはつ",
+      "C": "しゅぱつ",
+      "D": "しゅうぱつ"
+    },
+    "answer": "A",
+    "explanation": "「出発」 si legge しゅっぱつ (shuppatsu). Assimilazione fonetica regolarissima: 出 (しゅつ) + 発 (はつ) = しゅっぱつ."
+  },
+  {
+    "id": "DRILL-A-15",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n午後は 【都合】が 悪いです。",
+    "options": {
+      "A": "つごう",
+      "B": "づごう",
+      "C": "つこう",
+      "D": "づこう"
+    },
+    "answer": "A",
+    "explanation": "「都合」 si legge つごう (tsugō). 都 (つ), 合 (ごう)."
+  },
+  {
+    "id": "DRILL-A-16",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n駅の前で 友達を 30分 【まちました】。",
+    "options": {
+      "A": "待ちました",
+      "B": "持ちました",
+      "C": "特ちました",
+      "D": "侍ちました"
+    },
+    "answer": "A",
+    "explanation": "「まつ」 corrisponde a 待 (aspettare). 持 (tenere in mano, radicale mano 扌), 特 (speciale, radicale mucca 牛), 侍 (samurai)."
+  },
+  {
+    "id": "DRILL-A-17",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n友達に 面白い 本を 【かしました】。",
+    "options": {
+      "A": "貸しました",
+      "B": "買いました",
+      "C": "賃しました",
+      "D": "質しました"
+    },
+    "answer": "A",
+    "explanation": "「かす」 (prestare) si scrive 貸. 買 significa comprare (かう), 賃 significa canone/tariffa (ちん)."
+  },
+  {
+    "id": "DRILL-A-18",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n国へ 手紙を 【おくりました】。",
+    "options": {
+      "A": "送りました",
+      "B": "通りました",
+      "C": "返りました",
+      "D": "近りました"
+    },
+    "answer": "A",
+    "explanation": "「おくる」 (spedire/inviare) si scrive 送. 通 (とおる, passare attraverso), 返 (かえす, restituire), 近 (ちかい, vicino)."
+  },
+  {
+    "id": "DRILL-A-19",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n窓を あけると、すずしい 【かぜ】が 入ってきました。",
+    "options": {
+      "A": "風",
+      "B": "嵐",
+      "C": "気",
+      "D": "凪"
+    },
+    "answer": "A",
+    "explanation": "「かぜ」 (vento) si scrive 風. 嵐 significa tempesta (あらし), 気 significa aria/spirito (き)."
+  },
+  {
+    "id": "DRILL-A-20",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\nきのうから 頭が とても 【いたいです】。",
+    "options": {
+      "A": "痛いです",
+      "B": "病いです",
+      "C": "症いです",
+      "D": "疫いです"
+    },
+    "answer": "A",
+    "explanation": "「いたい」 (doloroso) si scrive 痛 (radicale della malattia 疒 + 甬). 病 si legge びょう / やまい."
+  },
+  {
+    "id": "DRILL-A-21",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n大学で 外国人に 英語を 【おしえて】 います。",
+    "options": {
+      "A": "教えて",
+      "B": "考えて",
+      "C": "孝えて",
+      "D": "政えて"
+    },
+    "answer": "A",
+    "explanation": "「おしえる」 (insegnare) si scrive 教. 考 (かんがえる, pensare), 孝 (filialità), 政 (せい, politica)."
+  },
+  {
+    "id": "DRILL-A-22",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n毎朝 7時に 家を 【でます】。",
+    "options": {
+      "A": "出ます",
+      "B": "山ます",
+      "C": "去ます",
+      "D": "立ます"
+    },
+    "answer": "A",
+    "explanation": "「でる」 (uscire) si scrive 出. 山 (やま, montagna), 去 (さる, passato)."
+  },
+  {
+    "id": "DRILL-A-23",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n疲れたので 少し 【やすみましょう】。",
+    "options": {
+      "A": "休みましょう",
+      "B": "体みましょう",
+      "C": "本みましょう",
+      "D": "林みましょう"
+    },
+    "answer": "A",
+    "explanation": "「やすむ」 (riposare) si scrive 休 (radicale persona 亻 + albero 木). 体 è からだ (corpo, 亻 + 本)."
+  },
+  {
+    "id": "DRILL-A-24",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n授業の あとで 先生と 【はなしました】。",
+    "options": {
+      "A": "話しました",
+      "B": "語しました",
+      "C": "言しました",
+      "D": "読しました"
+    },
+    "answer": "A",
+    "explanation": "「はなす」 (parlare) si scrive 話 (言 + 舌). 語 si usa in 語る (かたる) o come suffisso lingua (日本語), 言 è いう."
+  },
+  {
+    "id": "DRILL-A-25",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\nもっと 【ひろい】 アパートに 引っ越したいです。",
+    "options": {
+      "A": "広い",
+      "B": "広いい",
+      "C": "店い",
+      "D": "床い"
+    },
+    "answer": "A",
+    "explanation": "「ひろい」 (ampio/spazioso) si scrive 広い. 店 (みせ, negozio), 床 (ゆか, pavimento/letto)."
+  },
+  {
+    "id": "DRILL-A-26",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n毎朝、公園（ ）散歩します。",
+    "options": {
+      "A": "を",
+      "B": "で",
+      "C": "に",
+      "D": "へ"
+    },
+    "answer": "A",
+    "explanation": "Con verbi di movimento continuo lungo un percorso o spazio aperto (散歩する, 歩く, 走る, 渡る), lo spazio attraversato è marcato da を (non で)."
+  },
+  {
+    "id": "DRILL-A-27",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n事故（ ）電車が 20分 遅れました。",
+    "options": {
+      "A": "で",
+      "B": "に",
+      "C": "を",
+      "D": "から"
+    },
+    "answer": "A",
+    "explanation": "La particella で marca la causa o ragione non intenzionale di un evento spiacevole/imprevisto: 事故で (a causa di un incidente), 台風で, 風邪で."
+  },
+  {
+    "id": "DRILL-A-28",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n週末、友達（ ）映画を 見に 行きました。",
+    "options": {
+      "A": "と",
+      "B": "に",
+      "C": "で",
+      "D": "を"
+    },
+    "answer": "A",
+    "explanation": "La particella と indica la compagnia o l'azione reciproca svolta con qualcuno (insieme a): 友達と (con un amico)."
+  },
+  {
+    "id": "DRILL-A-29",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n新幹線は バス（ ）ずっと 早いです。",
+    "options": {
+      "A": "より",
+      "B": "ほど",
+      "C": "から",
+      "D": "まで"
+    },
+    "answer": "A",
+    "explanation": "Costruzione comparativa standard: [A] は [B] より + agg. (A è più ... di B). バスより = più del bus."
+  },
+  {
+    "id": "DRILL-A-30",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n京都駅から 東京駅（ ）新幹線で 2時間半 かかります。",
+    "options": {
+      "A": "まで",
+      "B": "に",
+      "C": "へ",
+      "D": "で"
+    },
+    "answer": "A",
+    "explanation": "Punto di partenza e punto di arrivo: [punto A] から [punto B] まで (da ... fino a ...)."
+  },
+  {
+    "id": "DRILL-A-31",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n部屋に だれ（ ）いませんでした。",
+    "options": {
+      "A": "も",
+      "B": "か",
+      "C": "は",
+      "D": "が"
+    },
+    "answer": "A",
+    "explanation": "Negazione totale: pronome interrogativo + も + verbo negativo. だれもいません (non c'era nessuno)."
+  },
+  {
+    "id": "DRILL-A-32",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n教室に 学生が 20人（ ）います。",
+    "options": {
+      "A": "ぐらい",
+      "B": "ごろ",
+      "C": "ほど",
+      "D": "ばかり"
+    },
+    "answer": "A",
+    "explanation": "Per quantità numeriche approssimative si usa ぐらい / くらい (circa 20 persone). ごろ si usa solo per punti precisi nel tempo (es. 3時ごろ)."
+  },
+  {
+    "id": "DRILL-A-33",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nあそこに 犬が 1ぴき（ ）います。",
+    "options": {
+      "A": "だけ",
+      "B": "しか",
+      "C": "でも",
+      "D": "ほど"
+    },
+    "answer": "A",
+    "explanation": "だけ si usa con verbi affermativi per esprimere 'soltanto/solo'. しか richiederebbe obbligatoriamente il verbo negativo (1ぴきしかいません)."
+  },
+  {
+    "id": "DRILL-A-34",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nこの 料理は はし（ ）食べます。",
+    "options": {
+      "A": "で",
+      "B": "に",
+      "C": "を",
+      "D": "と"
+    },
+    "answer": "A",
+    "explanation": "La particella で indica lo strumento o mezzo materiale con cui si compie l'azione: はしで食べます (mangiare con le bacchette)."
+  },
+  {
+    "id": "DRILL-A-35",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n私は 1週間に 2回（ ）テニスを します。",
+    "options": {
+      "A": "＿＿＿",
+      "B": "に",
+      "C": "で",
+      "D": "を"
+    },
+    "answer": "A",
+    "explanation": "I quantificatori di frequenza e conteggio (2回) non richiedono particelle aggiuntive dopo il numero prima del complemento oggetto: 1週間に2回テニスをします."
+  },
+  {
+    "id": "DRILL-A-36",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n寒いですから、窓を （ ）ください。",
+    "options": {
+      "A": "しめて",
+      "B": "あけて",
+      "C": "とめて",
+      "D": "つけて"
+    },
+    "answer": "A",
+    "explanation": "Se fa freddo (寒いですから), l'azione logica è chiudere la finestra: 閉める (しめる). 開ける (あける) significa aprire, 止める (とめる) fermare, つける accendere."
+  },
+  {
+    "id": "DRILL-A-37",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n部屋が 暗いですから、電気を （ ）ましょう。",
+    "options": {
+      "A": "つけ",
+      "B": "けし",
+      "C": "あけ",
+      "D": "しめ"
+    },
+    "answer": "A",
+    "explanation": "電気をつける significa accendere la luce. 消す (けす) significa spegnere. Poiché la stanza è buia (暗い), bisogna accenderla."
+  },
+  {
+    "id": "DRILL-A-38",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n電車を （ ）ときに、かばんを 忘れました。",
+    "options": {
+      "A": "おりる",
+      "B": "のる",
+      "C": "あがる",
+      "D": "はいる"
+    },
+    "answer": "A",
+    "explanation": "Dimenticare una borsa sul treno avviene tipicamente quando si scende dal veicolo: 電車を降りる (でんしゃをおいる). Salire è 乗る (のる)."
+  },
+  {
+    "id": "DRILL-A-39",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n約束の 時間に （ ）ように、タクシーに 乗りました。",
+    "options": {
+      "A": "まにあう",
+      "B": "おくれる",
+      "C": "あう",
+      "D": "つく"
+    },
+    "answer": "A",
+    "explanation": "間に合う (まにあう) significa 'essere in tempo / non arrivare in ritardo'. ~ように indica lo scopo ('per fare in tempo all'orario pattuito')."
+  },
+  {
+    "id": "DRILL-A-40",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nこの 本は （ ）読んだので、内容を よく おぼえて います。",
+    "options": {
+      "A": "何度も",
+      "B": "全然",
+      "C": "めったに",
+      "D": "あまり"
+    },
+    "answer": "A",
+    "explanation": "何度も (なんども) significa 'ripetute volte / molte volte'. Le altre opzioni (全然, めったに, あまり) richiedono una frase negativa."
+  },
+  {
+    "id": "DRILL-A-41",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nバスが （ ）来ないので、歩いて 駅へ 向かいました。",
+    "options": {
+      "A": "なかなか",
+      "B": "すっかり",
+      "C": "やっと",
+      "D": "ぜひ"
+    },
+    "answer": "A",
+    "explanation": "なかなか + negativo esprime che qualcosa tarda ad accadere o non si realizza facilmente nonostante l'attesa ('non arrivava proprio'). やっと richiede una forma affermativa (arrivare finalmente)."
+  },
+  {
+    "id": "DRILL-A-42",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n日本へ 行ったら、（ ）富士山に 登りたいです。",
+    "options": {
+      "A": "ぜひ",
+      "B": "けっして",
+      "C": "たぶん",
+      "D": "ぜんぜん"
+    },
+    "answer": "A",
+    "explanation": "ぜひ esprime un forte desiderio o invito ed è regolarmente abbinato a ~たい / ~てください ('voglio assolutamente salire sul Fuji')."
+  },
+  {
+    "id": "DRILL-A-43",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n薬を 飲んだら、頭痛が （ ）治まりました。",
+    "options": {
+      "A": "だんだん",
+      "B": "そろそろ",
+      "C": "どんどん",
+      "D": "ますます"
+    },
+    "answer": "A",
+    "explanation": "だんだん esprime una trasformazione graduale e progressiva ('a poco a poco il mal di testa è calato'). そろそろ significa 'a momenti / è quasi ora'."
+  },
+  {
+    "id": "DRILL-A-44",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n道が わからなくなったので、交番で （ ）を聞きました。",
+    "options": {
+      "A": "道順",
+      "B": "近道",
+      "C": "交差点",
+      "D": "歩道"
+    },
+    "answer": "A",
+    "explanation": "道順 (みちじゅん) significa indicazioni / percorso stradale. 交番で道順を聞く = chiedere indicazioni stradali al kōban."
+  },
+  {
+    "id": "DRILL-A-45",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n朝、目覚まし時計が 鳴ったのに （ ）できませんでした。",
+    "options": {
+      "A": "起きる",
+      "B": "起きることが",
+      "C": "起きた",
+      "D": "起きて"
+    },
+    "answer": "A",
+    "explanation": "Nel pattern potenziale elementare [Verbo Dizionario] + ことができる / できない: 起きることが できませんでした."
+  }
+]
