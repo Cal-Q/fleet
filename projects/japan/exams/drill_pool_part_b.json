@@ -673,5 +673,230 @@
     },
     "answer": "A",
     "explanation": "お召し上がりください è la forma sonkeigo corretta per invitare cortesemente un ospite a mangiare o bere. いただく è umile, mai per l'ospite."
+  },
+  {
+    "id": "DRILL-B-46",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "社長は ただいま 会議中ですので、終わり次第 こちらから お電話を （ ）。",
+    "options": {
+      "A": "差し上げます",
+      "B": "くださいます",
+      "C": "いただきます",
+      "D": "なさいます"
+    },
+    "answer": "A",
+    "explanation": "お電話を差し上げる è la forma kenjōgo (umile) corretta per dire al cliente che noi faremo una telefonata a lui."
+  },
+  {
+    "id": "DRILL-B-47",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "この 歴史小説は 面白すぎて、徹夜で 最後まで （ ）しまった。",
+    "options": {
+      "A": "読み通して",
+      "B": "読み直して",
+      "C": "読み出して",
+      "D": "読み落として"
+    },
+    "answer": "A",
+    "explanation": "読み通す (よみとおす) significa leggere qualcosa dall'inizio alla fine senza interruzioni. 読み直す è rileggere, 読み落とす è saltare una parte inavvertitamente."
+  },
+  {
+    "id": "DRILL-B-48",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar (接続)",
+    "question": "今回の コンテストの 受賞は、今後の 長い 研究の 第一歩（ ）。",
+    "options": {
+      "A": "にすぎない",
+      "B": "にあたらない",
+      "C": "にかぎらない",
+      "D": "にそういない"
+    },
+    "answer": "A",
+    "explanation": "〜にすぎない significa 'non è nient'altro che / è soltanto', minimizzando o collocando l'evento nella giusta modesta prospettiva."
+  },
+  {
+    "id": "DRILL-B-49",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n日本語の ＿＿ ＿＿ ★ ＿＿ なかなか 難しい。\n①敬語表現は　②使い分けるのが　③相手の立場に　④応じて",
+    "options": {
+      "A": "① (敬語表現は)",
+      "B": "② (使い分けるのが)",
+      "C": "③ (相手の立場に)",
+      "D": "④ (応じて)"
+    },
+    "answer": "D",
+    "explanation": "Ordine corretto: [①敬語表現は] [③相手の立場に] ★[④応じて] [②使い分けるのが] なかなか難しい. La stella cade su ④. Costruzione N2: 〜に応じて (in base a / a seconda di)."
+  },
+  {
+    "id": "DRILL-B-50",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "明日、先生の ご研究室へ ご挨拶に （ ）たいと 存じます。",
+    "options": {
+      "A": "伺い",
+      "B": "いらっしゃい",
+      "C": "おいでになり",
+      "D": "参られ"
+    },
+    "answer": "A",
+    "explanation": "伺う (うかがう) è il kenjōgo (verbo umile) di 行く/訪ねる per recarsi presso la sede di un superiore (professore). いらっしゃる e おいでになる sono sonkeigo per il superiore."
+  },
+  {
+    "id": "DRILL-B-51",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "チーム全員の 粘り強い 協力によって、困難な プロジェクトを ついに （ ）。",
+    "options": {
+      "A": "成し遂げた",
+      "B": "引き受けた",
+      "C": "取り消した",
+      "D": "申し入れた"
+    },
+    "answer": "A",
+    "explanation": "成し遂げる (なしとげる) significa condurre a termine con successo un compito arduo dopo grandi sforzi. 引き受ける è accettare/assumersi un lavoro."
+  },
+  {
+    "id": "DRILL-B-52",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar (相関変化)",
+    "question": "都市化が 急速に 進む（ ）、地域の 伝統行事が 衰退しつつある。",
+    "options": {
+      "A": "につれて",
+      "B": "に際して",
+      "C": "に先立って",
+      "D": "について"
+    },
+    "answer": "A",
+    "explanation": "〜につれて esprime un cambiamento proporzionale e parallelo nel tempo: 'man mano che / con l'avanzare di X, anche Y muta'. に際して significa in occasione di."
+  },
+  {
+    "id": "DRILL-B-53",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Adverbs & Logic",
+    "question": "親切の つもりで 手伝ったのだが、（ ）迷惑を かけてしまったようだ。",
+    "options": {
+      "A": "かえって",
+      "B": "せめて",
+      "C": "まさか",
+      "D": "とうとう"
+    },
+    "answer": "A",
+    "explanation": "「かえって」 indica un esito paradossale o contrario all'intenzione iniziale: 'anziché aiutare, al contrario ho finito per arrecare disturbo'."
+  },
+  {
+    "id": "DRILL-B-54",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\nいくら ＿＿ ＿＿ ★ ＿＿ 理解できない。\n①専門的な理論は　②説明されても　③初心者には　④丁寧に",
+    "options": {
+      "A": "① (専門的な理論は)",
+      "B": "② (説明されても)",
+      "C": "③ (初心者には)",
+      "D": "④ (丁寧に)"
+    },
+    "answer": "B",
+    "explanation": "Ordine corretto: [①専門的な理論は] [④丁寧に] ★[②説明されても] [③初心者には] 理解できない. La stella cade su ②. Modello N2: いくら〜ても (per quanto...)."
+  },
+  {
+    "id": "DRILL-B-55",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (丁寧語・美化語)",
+    "question": "お客様、何か お困りの ことは （ ）でしょうか。",
+    "options": {
+      "A": "ございません",
+      "B": "いらっしゃいません",
+      "C": "存じません",
+      "D": "いただきません"
+    },
+    "answer": "A",
+    "explanation": "ございます è il teineigo formale di あります. 'C'è qualcosa in cui posso esserle d'aiuto?' si esprime cortesemente con お困りのことはございませんか/ございませんでしょうか."
+  },
+  {
+    "id": "DRILL-B-56",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar (接続)",
+    "question": "いくら 収入が 高い（ ）、健康を 害しては 何にも ならない。",
+    "options": {
+      "A": "からといって",
+      "B": "からには",
+      "C": "からして",
+      "D": "から見れば"
+    },
+    "answer": "A",
+    "explanation": "〜からといって con reggenza negativa esprime 'non è detto / non giustifica che solo perché X allora Y': non serve a nulla avere un alto reddito se ci si rovina la salute."
+  },
+  {
+    "id": "DRILL-B-57",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Idiomatic Collocations",
+    "question": "他人が 話している 最中に、横から 口を （ ）のは マナー違反だ。",
+    "options": {
+      "A": "挟む",
+      "B": "入れる",
+      "C": "突く",
+      "D": "切る"
+    },
+    "answer": "A",
+    "explanation": "L'espressione idiomatica è 口を挟む (くちをはさむ): interrompere bruscamente inserendosi nel discorso altrui."
+  },
+  {
+    "id": "DRILL-B-58",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar (状況・不可能性)",
+    "question": "明日の 朝までに レポートを 仕上げなければならず、今夜は （ ）。",
+    "options": {
+      "A": "寝るどころではない",
+      "B": "寝るわけがない",
+      "C": "寝るはずがない",
+      "D": "寝てはいけない"
+    },
+    "answer": "A",
+    "explanation": "〜どころではない significa 'altro che fare X / la situazione è così critica che non è assolutamente concepibile fare X' (altro che dormire stanotte!)."
+  },
+  {
+    "id": "DRILL-B-59",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n留学試験に ＿＿ ＿＿ ★ ＿＿ 努力を 重ねた。\n①毎日夜遅くまで　②合格するために　③睡眠時間を　④削って",
+    "options": {
+      "A": "① (毎日夜遅くまで)",
+      "B": "② (合格するために)",
+      "C": "③ (睡眠時間を)",
+      "D": "④ (削って)"
+    },
+    "answer": "C",
+    "explanation": "Ordine corretto: [②合格するために] [①毎日夜遅くまで] ★[③睡眠時間を] [④削って] 努力を重ねた. La stella cade su ③."
+  },
+  {
+    "id": "DRILL-B-60",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (謙譲語II)",
+    "question": "会場の 準備が 整いましたので、ただいまより 式典を （ ）ます。",
+    "options": {
+      "A": "執り行い",
+      "B": "執り行われ",
+      "C": "執り行わせ",
+      "D": "執り行いになり"
+    },
+    "answer": "A",
+    "explanation": "執り行う (とりおこなう) significa svolgere/celebrare formalmente una cerimonia. In contesto di annuncio formale: 執り行います. 執り行いになり è un ibrido errato."
   }
 ]

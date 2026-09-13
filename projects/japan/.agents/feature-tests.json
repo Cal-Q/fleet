@@ -775,5 +775,25 @@
         "ankiweb_sync": "success"
       }
     }
+  },
+  {
+    "feature": "proactive_risk_registry_and_directive_23",
+    "timestamp": "2026-09-13T22:45:10Z",
+    "status": "passed",
+    "evidence": {
+      "directive_enacted": "Added Directive 23 to /opt/master/.agents/rules/GLOBAL_AGENTS.md enforcing autonomous, continuous anticipation of failure modes without waiting for user input.",
+      "living_registry_created": "research/registro_proattivo_rischi_e_soluzioni_mext.md (41 lines <= 200)",
+      "live_api_synchronization": "GET /api/research/dossiers verified on Ionos returning 200 OK with registro_proattivo_rischi_e_soluzioni_mext.md as the newest entry."
+    }
+  },
+  {
+    "feature": "mext_drill_pool_part_c_50_items_expansion",
+    "timestamp": "2026-09-13T22:45:50Z",
+    "status": "passed",
+    "evidence": {
+      "items_added": "Expanded exams/drill_pool_part_c.json from 34 to 50 items (DRILL-C-35 to DRILL-C-50).",
+      "categories_covered": ["Reading Comprehension (読解)", "Advanced Written Expressions", "Formal Written Discourse", "Sentence Scrambling (★)", "Kanji Semantic Mining"],
+      "live_api_verification": "GET /api/exams/questions?section=C verified on Ionos returning 8 rotated questions including advanced N1 drills and pedagogical explanations."
+    }
   }
 ]

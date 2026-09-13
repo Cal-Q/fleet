@@ -508,5 +508,245 @@
     },
     "answer": "A",
     "explanation": "Ordine corretto: [③人類に 多大な 恩恵を] [②のみならず] ★[①計り知れない] [④深刻な 環境破壊] をもたらした. La stella cade su ①. Modello N1 〜のみならず (non solo... ma anche)."
+  },
+  {
+    "id": "DRILL-C-35",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "集中豪雨による 土砂崩れの ため、住民は 避難生活（ ）ことになった。",
+    "options": {
+      "A": "を余儀なくされる",
+      "B": "をものともせず",
+      "C": "を禁じ得ない",
+      "D": "に至らない"
+    },
+    "answer": "A",
+    "explanation": "「〜を余儀なくされる」（をよぎなくされる） indica l'essere costretti ineluttabilmente a compiere un'azione a causa di eventi avversi o forze maggiori esterne al proprio volere."
+  },
+  {
+    "id": "DRILL-C-36",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "少子高齢化が 急速に 進む 現代（ ）、地域社会の 持続可能性が 深く 問われている。",
+    "options": {
+      "A": "にあって",
+      "B": "に至って",
+      "C": "をめぐって",
+      "D": "を経て"
+    },
+    "answer": "A",
+    "explanation": "「〜にあって」 è un costrutto formale da saggistica che significa 'trovandosi in una situazione/epoca/condizione straordinaria o critica' (nella situazione attuale in cui...)."
+  },
+  {
+    "id": "DRILL-C-37",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "歴史的な 円安の 進行が 原油価格の高騰（ ）、国内の 物価上昇に 拍車を かけている。",
+    "options": {
+      "A": "と相まって",
+      "B": "と引き換えに",
+      "C": "と並んで",
+      "D": "とあれば"
+    },
+    "answer": "A",
+    "explanation": "「〜と相まって」（とあいまって） esprime la combinazione o sinergia di due fattori causali che cooperano per amplificare drammaticamente un certo effetto."
+  },
+  {
+    "id": "DRILL-C-38",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「ゲームセンターやカードショップといった遊技空間は、単なる娯楽の場にとどまらず、世代や属性の異なる人々が対等に対面する『偶発的な公共性』を帯びている。デジタル化によってオンライン上の接続が偏在する時代だからこそ、身体を伴う物理的な空間の価値はむしろ再評価されるべきではないだろうか。」\n問：筆者の考えに最も合致するものはどれか。",
+    "options": {
+      "A": "デジタル化が進む現代において、身体性を伴う対面交流の場はより重要な意義を持つ。",
+      "B": "オンラインゲームの普及により、物理的な遊技空間はもはや役割を終えた。",
+      "C": "カードショップは娯楽の場であり、公共的な役割を担うことはない。",
+      "D": "世代間の交流を促進するには、オンライン空間への移行が最優先である。"
+    },
+    "answer": "A",
+    "explanation": "L'autore sottolinea che nell'era dell'iper-connessione digitale, il valore dello spazio fisico incarnato (身体を伴う物理的な空間の価値) assume un significato ancor più prezioso grazie agli incontri spontanei tra pari."
+  },
+  {
+    "id": "DRILL-C-39",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Kanji Semantic Mining",
+    "question": "泥（ ）に なりながら、ボランティアの 人々は 被災地の がれき撤去を 続けた。",
+    "options": {
+      "A": "まみれ",
+      "B": "ずくめ",
+      "C": "だらけ",
+      "D": "ぐるみ"
+    },
+    "answer": "A",
+    "explanation": "「〜まみれ」 si applica specificamente a sostanze viscide, polverose o liquide (fango 泥, polvere 埃, sangue 血) che ricoprono in modo sgradevole la superficie del corpo. 「だらけ」 indica invece presenza diffusa di difetti/errori."
+  },
+  {
+    "id": "DRILL-C-40",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\nいかに ＿＿ ＿＿ ★ ＿＿ 達成することは 困難である。\n①優れた　②チームワークなしには　③目標を　④計画であっても",
+    "options": {
+      "A": "② (チームワークなしには)",
+      "B": "① (優れた)",
+      "C": "④ (計画であっても)",
+      "D": "③ (目標を)"
+    },
+    "answer": "A",
+    "explanation": "Sequenza corretta: いかに [①優れた] [④計画であっても] ★[②チームワークなしには] [③目標を] 達成することは 困難である。 La stella cade su ②. Modello: いかに〜であっても (per quanto... possa essere) abbinato alla condizione sine qua non (〜なしには)."
+  },
+  {
+    "id": "DRILL-C-41",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "東京公演（ ）、全国１０都市を 巡る 大規模な 記念ツアーが 幕を開けた。",
+    "options": {
+      "A": "を皮切りに",
+      "B": "を限りに",
+      "C": "をもって",
+      "D": "を踏まえ"
+    },
+    "answer": "A",
+    "explanation": "「〜を皮切りに（して）」（をかわきりに） indica che un primo evento funge da calcio d'inizio o capofila per una lunga serie di eventi analoghi in rapida successione."
+  },
+  {
+    "id": "DRILL-C-42",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "安全確認を 怠ったまま 運行を 再開するとは、危険（ ）行為だ。",
+    "options": {
+      "A": "極まりない",
+      "B": "極まらない",
+      "C": "限りない",
+      "D": "たまらない"
+    },
+    "answer": "A",
+    "explanation": "「〜極まりない」（きわまりない） è un costrutto accademico/formale che esprime l'apice estremo di uno stato negativo o deplorevole ('estremamente / al colmo della pericolosità')."
+  },
+  {
+    "id": "DRILL-C-43",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "未経験の 新入社員（ ）、長年の 経験を 持つ 幹部が このような 重大ミスを 犯すとは 遺憾である。",
+    "options": {
+      "A": "ならいざしらず",
+      "B": "とはいえ",
+      "C": "にしろ",
+      "D": "からには"
+    },
+    "answer": "A",
+    "explanation": "「〜ならいざしらず」 esprime: 'se si trattasse di X sarebbe forse comprensibile/ammissibile, ma trattandosi di Y la cosa è assolutamente inaccettabile'."
+  },
+  {
+    "id": "DRILL-C-44",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「言葉の意味は静止した辞書の中に完結しているのではない。他者との対話や文脈のズレを埋める相互交渉のプロセスの中で、常に生成され変容し続けるものである。したがって、語彙の習得とは単なる記号の暗記ではなく、他者と意味を共創する身体的スキルの獲得にほかならない。」\n問：筆者の語彙習得に関する見解として最も適切なものはどれか。",
+    "options": {
+      "A": "語彙の習得とは、他者との生きた対話を通じて意味を共に創り出す実践である。",
+      "B": "辞書の定義を正確に記憶することが、最も確実な語彙習得の基盤である。",
+      "C": "言葉の意味は普遍的であり、対話の文脈によって変化することはない。",
+      "D": "語彙の暗記は身体的スキルとは無関係な純粋な知的作業である。"
+    },
+    "answer": "A",
+    "explanation": "L'autore definisce l'apprendimento lessicale come acquisizione di abilità relazionali e corporee per co-creare significato insieme all'interlocutore (他者と意味を共創する身体的スキルの獲得にほかならない), confutando la mera memorizzazione passiva da dizionario."
+  },
+  {
+    "id": "DRILL-C-45",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "その 若手ピアニストの 魂のこもった 圧倒的な 演奏は、聴衆に 深い 感動を（ ）。",
+    "options": {
+      "A": "与えずにはおかなかった",
+      "B": "与えざるを得なかった",
+      "C": "与えるわけにはいかなかった",
+      "D": "与えるまでもなかった"
+    },
+    "answer": "A",
+    "explanation": "「〜ずにはおかない」 significa che un'azione o evento induce/provoca inesorabilmente e potentemente un determinato impatto emotivo su altri ('non poté non suscitare profonda commozione')."
+  },
+  {
+    "id": "DRILL-C-46",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "一国の 指導者（ ）者、常に 私利私欲を 捨てて 国民の 幸福を 最優先に すべきだ。",
+    "options": {
+      "A": "たる",
+      "B": "なる",
+      "C": "であれ",
+      "D": "としての"
+    },
+    "answer": "A",
+    "explanation": "「〜たるもの」（N + たる + N） è una classica formula etica scritta di registro alto: 'chiunque si fregi o rivesta il nobile ruolo di X ha il dovere morale di...'."
+  },
+  {
+    "id": "DRILL-C-47",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼は 非常に 優秀な 研究者だが、自己の 仮説に 固執して 他者の 指摘を 軽視する（ ）。",
+    "options": {
+      "A": "きらいがある",
+      "B": "おそれがある",
+      "C": "わけがある",
+      "D": "節がある"
+    },
+    "answer": "A",
+    "explanation": "「〜きらいがある」 esprime l'avere una perniciosa tendenza o inclinazione caratteriale negativa ('ha la cattiva abitudine / tendenza a sottovalutare le critiche altrui')."
+  },
+  {
+    "id": "DRILL-C-48",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n環境保護の 重要性は ＿＿ ＿＿ ★ ＿＿ 経済活動との 両立は 容易ではない。\n①理解しつつも　②現実には　③痛いほど　④十分に",
+    "options": {
+      "A": "① (理解しつつも)",
+      "B": "② (現実には)",
+      "C": "③ (痛いほど)",
+      "D": "④ (十分に)"
+    },
+    "answer": "A",
+    "explanation": "Sequenza corretta: 環境保護の 重要性は [④十分に] [③痛いほど] ★[①理解しつつも] [②現実には] 経済活動との 両立は 容易ではない。 La stella cade su ①. Modello: 〜つつも (pur comprendendo appieno... la realtà pratica è assai diversa)."
+  },
+  {
+    "id": "DRILL-C-49",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼は 地方視察の 公務（ ）、地域の 伝統工芸の 工房を 訪ねて 独自の 調査を 行った。",
+    "options": {
+      "A": "にかこつけて",
+      "B": "にかまけて",
+      "C": "にひきかえ",
+      "D": "に即して"
+    },
+    "answer": "A",
+    "explanation": "「〜にかこつけて」 significa prendere una circostanza ufficiale come pretesto o copertura opportunistica per svolgere un'altra attività personale o collaterale."
+  },
+  {
+    "id": "DRILL-C-50",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「現代社会における『教養』とは、蓄積された知識の多寡ではない。自己の拠って立つ常識や偏見を相対化し、異質な他者の視点から世界を捉え直す批評的態度のことである。異文化を学ぶ本質は、自己を揺さぶり、自明の理と信じていた前提を問い直す契機を得る点にある。」\n問：筆者が述べる「異文化を学ぶ本質」とはどのようなことか。",
+    "options": {
+      "A": "自らの常識や前提を批判的に見つめ直し、視点を広げる契機とすること。",
+      "B": "相手の文化に関する膨大な知識を収集し、百科事典的に記憶すること。",
+      "C": "自国の文化や価値観の優位性を他国の文化と比較して再確認すること。",
+      "D": "自己の信念を捨て去り、異文化の常識に完全に同化すること。"
+    },
+    "answer": "A",
+    "explanation": "L'autore definisce la cultura umanistica e lo studio interculturale come un'opportunità critica per relativizzare i propri pregiudizi e mettere in discussione le proprie premesse (自己の拠って立つ常識を相対化し、自明の理と信じていた前提を問い直す契機), come sintetizzato fedelmente dall'opzione A."
   }
 ]

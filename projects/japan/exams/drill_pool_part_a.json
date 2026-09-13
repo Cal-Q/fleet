@@ -1348,5 +1348,305 @@
     },
     "answer": "A",
     "explanation": "「経験」 si legge けいけん (keiken, esperienza). 経 ha radicale糸 (filo) ed on'yomi けい; non confondere con 軽 (radicale車, on'yomi けい, kun'yomi かるい)."
+  },
+  {
+    "id": "DRILL-A-91",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n面接の 日には 受験票を 【持参】してください。",
+    "options": {
+      "A": "じさん",
+      "B": "たいさん",
+      "C": "まつさん",
+      "D": "とくさん"
+    },
+    "answer": "A",
+    "explanation": "「持参」 si legge じさん (portare con sé). 持 (radicale 扌 mano) ha on'yomi じ e kun'yomi もつ; non confondere con 待 (radicale 彳 passo, まつ)."
+  },
+  {
+    "id": "DRILL-A-92",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles (助詞)",
+    "question": "課題の レポートは 金曜日の ５時（ ）提出してください。",
+    "options": {
+      "A": "までに",
+      "B": "まで",
+      "C": "に",
+      "D": "から"
+    },
+    "answer": "A",
+    "explanation": "〜までに indica la scadenza entro cui completare un'azione puntuale (consegnare entro le 5). 〜まで (senza に) esprime invece un'azione continua che dura fino a quel momento."
+  },
+  {
+    "id": "DRILL-A-93",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Distinctions (Radical Lookalikes)",
+    "question": "つぎの ぶんの （ ）には どの 漢字を いれますか。\n来週の 出張の スケジュールは まだ（ ）です。",
+    "options": {
+      "A": "未定",
+      "B": "末定",
+      "C": "来定",
+      "D": "定未"
+    },
+    "answer": "A",
+    "explanation": "「未定」（みてい） significa 'non ancora deciso'. 未 ha il tratto superiore più corto di quello inferiore ('non ancora'). 末 ha il tratto superiore più lungo ('fine/estremità', es. 月末)."
+  },
+  {
+    "id": "DRILL-A-94",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Distinctions (Homophones)",
+    "question": "つぎの ぶんの （ ）には どの 漢字を いれますか。\n処方された 薬を 飲んだら、かぜが すっかり（ ）ました。",
+    "options": {
+      "A": "治り",
+      "B": "直り",
+      "C": "戻り",
+      "D": "復り"
+    },
+    "answer": "A",
+    "explanation": "Guarire da una malattia o ferita si scrive 治る (なおる). 直る (なおる) si usa per la riparazione di oggetti guasti o correzione di comportamenti."
+  },
+  {
+    "id": "DRILL-A-95",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary (Transitive Pairs)",
+    "question": "研究の ために、大学の 図書館から 専門書を ３冊（ ）ました。",
+    "options": {
+      "A": "借り",
+      "B": "貸し",
+      "C": "返し",
+      "D": "渡し"
+    },
+    "answer": "A",
+    "explanation": "Prendere in prestito da un'istituzione o persona (図書館から) è 借りる (かりる). 貸す (かす) significa prestare a qualcuno."
+  },
+  {
+    "id": "DRILL-A-96",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles & Collocations",
+    "question": "喫茶店で 注文を 聞かれて、「私は ホットコーヒーに （ ）。」と 答えた。",
+    "options": {
+      "A": "します",
+      "B": "なります",
+      "C": "います",
+      "D": "あります"
+    },
+    "answer": "A",
+    "explanation": "La formula fissa per ordinare cibo/bevande o prendere una decisione volontaria tra varie alternative è 〜にする (コーヒーにします)."
+  },
+  {
+    "id": "DRILL-A-97",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Counters (助数詞)",
+    "question": "大学の 駐車場に、新車の バスが ２（ ）止まっています。",
+    "options": {
+      "A": "台",
+      "B": "本",
+      "C": "枚",
+      "D": "頭"
+    },
+    "answer": "A",
+    "explanation": "Il contatore per veicoli a motore, biciclette e macchinari elettronici è 台 (だい). 本 è per oggetti cilindrici lunghi, 枚 per superfici piatte, 頭 per grandi animali."
+  },
+  {
+    "id": "DRILL-A-98",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (Third-person sensations)",
+    "question": "妹は 虫を 見ると、いつも とても （ ）。",
+    "options": {
+      "A": "怖がります",
+      "B": "怖いです",
+      "C": "怖くなります",
+      "D": "怖いそうです"
+    },
+    "answer": "A",
+    "explanation": "Quando si descrivono sensazioni psicologiche o desideri di terze persone manifestati esteriormente, si sostituisce l'aggettivo in -い con 〜がる (怖がる, 痛がる, 寒がる)."
+  },
+  {
+    "id": "DRILL-A-99",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜そう Conjectures)",
+    "question": "西の 空が 急に 暗くなって、今にも 雨が （ ）です。",
+    "options": {
+      "A": "降りそう",
+      "B": "降るそう",
+      "C": "降ったそう",
+      "D": "降りるそう"
+    },
+    "answer": "A",
+    "explanation": "Per esprimere una congettura visiva imminente basata su segni evidenti ('sembra sul punto di'), la radice verbale (masu-stem) si lega a そう: 降りそう. 降るそう significherebbe 'ho sentito dire che pioverà' (hearsay)."
+  },
+  {
+    "id": "DRILL-A-100",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜てある vs 〜ている)",
+    "question": "教室の 黒板に、明日の 集合時間が きれいに （ ）あります。",
+    "options": {
+      "A": "書いて",
+      "B": "書かれて",
+      "C": "書いてい",
+      "D": "書かせて"
+    },
+    "answer": "A",
+    "explanation": "〜てある si usa con verbi transitivi (書く $\to$ 書いてある) per indicare uno stato risultante da un'azione intenzionale svolta da qualcuno."
+  },
+  {
+    "id": "DRILL-A-101",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Counters (助数詞)",
+    "question": "喉が 渇いたので、冷たい お茶を もう １（ ）ください。",
+    "options": {
+      "A": "杯",
+      "B": "皿",
+      "C": "冊",
+      "D": "個"
+    },
+    "answer": "A",
+    "explanation": "Il contatore per tazze, bicchieri e liquidi versati è 杯 (はい/ぱい: 1杯 = いっぱい, 2杯 = にはい, 3杯 = さんばい). 皿 è per piatti di portata."
+  },
+  {
+    "id": "DRILL-A-102",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n留学生の みなさんに キャンパスを 【案内】します。",
+    "options": {
+      "A": "あんない",
+      "B": "あんうち",
+      "C": "かんない",
+      "D": "あんてい"
+    },
+    "answer": "A",
+    "explanation": "「案内」 si legge あんない (guidare/mostrare il percorso). 内 ha la pronuncia speciale ない in 案内 e 境内."
+  },
+  {
+    "id": "DRILL-A-103",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜やすい / 〜にくい)",
+    "question": "この 万年筆は 重さが ちょうどよくて、とても （ ）です。",
+    "options": {
+      "A": "書きやすい",
+      "B": "書くやすい",
+      "C": "書かれやすい",
+      "D": "書きいい"
+    },
+    "answer": "A",
+    "explanation": "La facilità oggettiva di compiere un'azione si forma con masu-stem + やすい: 書く $\to$ 書きやすい. Per la difficoltà: 書きにくい."
+  },
+  {
+    "id": "DRILL-A-104",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Adverbs (副詞)",
+    "question": "電車の 発車時刻が 近いので、（ ）改札口へ 向かった。",
+    "options": {
+      "A": "急いで",
+      "B": "ゆっくり",
+      "C": "うっかり",
+      "D": "のんびり"
+    },
+    "answer": "A",
+    "explanation": "「急いで」（いそいで） significa in fretta / affrettandosi. ゆっくり e のんびり significano con calma; うっかり per distrazione."
+  },
+  {
+    "id": "DRILL-A-105",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Conditionals (条件形)",
+    "question": "駅の 券売機は、お金を 入れて ボタンを （ ）、切符が 出てきます。",
+    "options": {
+      "A": "押すと",
+      "B": "押すなら",
+      "C": "押したらば",
+      "D": "押すのに"
+    },
+    "answer": "A",
+    "explanation": "La particella 〜と si usa per meccanismi automatici e conseguenze certe e naturali: ボタンを押すと、切符が出てくる (premendo il pulsante, il biglietto esce immancabilmente)."
+  },
+  {
+    "id": "DRILL-A-106",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n明日の 会議の 【よてい】を 手帳に 書きました。",
+    "options": {
+      "A": "予定",
+      "B": "与定",
+      "C": "予丁",
+      "D": "預定"
+    },
+    "answer": "A",
+    "explanation": "「よてい」（programma/piano） si scrive 予定. Distrattori: 与 (dare/concedere), 預 (deposito/custodia)."
+  },
+  {
+    "id": "DRILL-A-107",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles (助詞)",
+    "question": "弟は テストの前日なのに、勉強しないで テレビ（ ）見ている。",
+    "options": {
+      "A": "ばかり",
+      "B": "ほど",
+      "C": "さえ",
+      "D": "までに"
+    },
+    "answer": "A",
+    "explanation": "〜ばかり indica fare ripetutamente ed esclusivamente una certa azione con una sfumatura critica o di biasimo ('non fa altro che guardare la TV')."
+  },
+  {
+    "id": "DRILL-A-108",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Frequency & Rates",
+    "question": "この 目薬は、１日（ ）２回 さしてください。",
+    "options": {
+      "A": "に",
+      "B": "で",
+      "C": "を",
+      "D": "から"
+    },
+    "answer": "A",
+    "explanation": "La frequenza per unità di tempo si esprime con la particella に: 1日（期間）に 2回（頻度） (due volte al giorno)."
+  },
+  {
+    "id": "DRILL-A-109",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "換気のために、部屋の 窓を （ ）てください。",
+    "options": {
+      "A": "開けて",
+      "B": "開いて",
+      "C": "閉まって",
+      "D": "ついて"
+    },
+    "answer": "A",
+    "explanation": "窓を... richiede il verbo transitivo 開ける (あける, aprire). 開く (あく) è intransitivo e si userebbe con 窓が."
+  },
+  {
+    "id": "DRILL-A-110",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n美味しい お菓子ですから、どうぞ 【遠慮】なく 召し上がってください。",
+    "options": {
+      "A": "えんりょ",
+      "B": "おんりょ",
+      "C": "えんろ",
+      "D": "えんれい"
+    },
+    "answer": "A",
+    "explanation": "「遠慮」 si legge えんりょ (riserva/ritegno/farsi scrupoli). 遠 (えん) + 慮 (りょ). Formula di cortesia: 遠慮なく (senza complimenti)."
   }
 ]

@@ -11,7 +11,9 @@
 ## 1. Quadro Diagnostico di Partenza & Modello Matematico
 
 ### 1.1 Ground Truth Iniziale (Giorno 1 • 13 Settembre 2026)
-* **Vocabolario & Kanji Maturo (Anki)**: 5.052 carte mature attive (Kurogane deck + Kodansha Kanji 1.099 kanji).
+* **Vocabolario & Kanji Maturo (Anki)**: 5.052 carte mature complessive.
+  * **Kanji già studiati (`reps > 0`)**: 1.105 kanji padroneggiati.
+  * **Kanji residui da studiare**: 1.204 kanji (N5: 7, N4: 23, N3: 251, N2: 217, N1: 200).
 * **Progresso Grammaticale Bunpro**:
   * **N5**: 132 / 132 (100.0% completato)
   * **N4**: 138 / 185 (74.6% completato • **47 punti rimanenti**)
@@ -53,6 +55,13 @@
 * **Slot 4 (55 min)**: Simulazione d'esame integrale cronometrata (Parti A+B+C con revisione distrattori).
 * **Fase Tapering (Giorni 152 – 161 • 11 Feb – 20 Feb 2027)**: Riduzione del carico orario, ripasso leggero delle schede riassuntive, sonno e tenuta psicofisica.
 * **Giorno 161 (20 Febbraio 2027)**: **ESAME UFFICIALE MEXT A ROMA**.
+
+### 2.4 Strategia di Progressione Kanji SRS (5 al giorno • Modello Resiliente)
+Per evitare il sovraccarico cognitivo ed eliminare il rischio di burnout da ripassi, il piano fissa un ritmo calibrato di **5 kanji nuovi/die**:
+* **Tappa 1 (Giorni 1–6 • 13 Set – 19 Set)**: Blindatura del 100% dei **30 kanji residui di N5 e N4** (7 N5 + 23 N4).
+* **Tappa 2 (Giorni 7–56 • 20 Set – 08 Nov)**: Completamento integrale dei **251 kanji di N3** a supporto della Sezione A e B.
+* **Tappa 3 (Giorni 57–160 • Nov – Feb 2027)**: Espansione selettiva su N2/N1 (~500 caratteri aggiuntivi), raggiungendo **~1.850–1.900 kanji solidi** al giorno dell'esame.
+* **Prioritizzazione Semantica Integrata**: La coda di studio privilegia dinamicamente i kanji contenuti nelle parole delle imminenti regole grammaticali Bunpro, azzerando gli attriti di lettura nelle frasi.
 
 ---
 
