@@ -21,10 +21,13 @@ Nel modulo MEXT, i criteri devono posizionare il candidato nelle fasce d'eccelle
 
 | Parametro Valutato | Fascia da Sollecitare | Motivazione Oggettiva Verificabile |
 | :--- | :---: | :--- |
-| **Academic Performance** | **Top 5%** (Outstanding) | Media Esse3 $\ge 28.7$ / 30 (30L in Introduzione + 28–30 in Lingua 1); MEXT GPA perfetto = 3.0 / 3.0 (Fascia A). |
+| **Academic Performance** | **Top 2% / Top 5%** | Media Esse3 $\ge 28.7$ / 30 (30L in Introduzione + 28–30 in Lingua 1); MEXT GPA perfetto = 3.0 / 3.0 (Fascia A). |
 | **Intellectual Curiosity & Research Potential** | **Top 2%** (Exceptional) | Progetto di ricerca strutturato su "Terzi Luoghi e Subculture Giovanili" e operato in associazione no-profit. |
-| **Emotional Maturity & Cross-Cultural Adaptability** | **Top 5%** (Outstanding) | Esperienza comprovata nella gestione associativa giovanile (*Sinoira Gang*) e leadership comunitaria. |
+| **Emotional Maturity & Cross-Cultural Adaptability** | **Top 2% / Top 5%** | Esperienza comprovata nella gestione associativa giovanile (*Sinoira Gang*) e leadership comunitaria. |
 | **Japanese Language Aptitude** | **Top 5%** (Outstanding) | Superamento precoce dei livelli di kanji (1.100+ caratteri) e studio costante documentato. |
+
+> [!NOTE]
+> **La Psicologia del "Top 2%" nei Docenti Italiani**: I professori non calcolano percentili decimali con software statistici; compilano il modulo con un'ottica di *advocacy* (vogliono che il loro studente UniTO vinca la borsa contro i candidati di Ca' Foscari o Sapienza). Presentando il modulo MEXT con la voce *Intellectual Curiosity* già proposta su **Top 2%** (pienamente giustificata dal 30L e dal progetto inedito sui Terzi Luoghi), il docente la convalida e la sottoscrive regolarmente.
 
 ---
 
