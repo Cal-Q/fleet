@@ -41,13 +41,15 @@
 | **R-19** | **Strozzature Burocratiche & Chiusure Festive UniTO**: Ritardi nel certificato segreteria Esse3, timbri e firme. | Novembre – Febbraio | Banner tassativo P0 Roadmap integrato in Leaf 2 di `tab_dossier.html` (15 Nov preavviso, 01 Dic Esse3, 15 Dic Rx, 05 Feb plico). | ✅ Attivo |
 | **R-20** | **Disallineamento AnkiDroid Offline & Protezione Database**: Ripasso in mobilità senza rete e rischio conflitti `col.mod`. | Tutto il periodo | Sentinel atomico [backup_sentinel.py](file:///mnt/workspaces/japan/core/anki_sync/backup_sentinel.py), snapshot automatico pre-sync e comando `python3 core/anki_cli.py check`. | ✅ Attivo |
 | **R-21** | **Decadimento Mnemonico Onomatopee & Mimetiche**: Trabocchetti su `擬音語・擬態語` (es. `さっぱり` vs `すっきり`) in Parte B. | Ottobre – Febbraio | Dossier [guida_decodifica_giongo_gitaigo_mext.md](file:///mnt/workspaces/japan/research/guida_decodifica_giongo_gitaigo_mext.md) con tassonomia suffissi, 20 collocazioni d'esame e algoritmo a 3 filtri. | ✅ Attivo |
+| **R-22** | **Falsi Amici Sintattici Deontici/Epistemici**: Confusione tra `〜わけにはいかない` (dovere morale) e `〜わけがない` (impossibilità logica). | Ottobre – Gennaio | Matrice decisionale [matrice_decisionale_costrutti_epistemici_e_deontici_mext.md](file:///mnt/workspaces/japan/research/matrice_decisionale_costrutti_epistemici_e_deontici_mext.md) con flowchart a 2 domande. | ✅ Attivo |
+| **R-23** | **Asimmetria Prosodica Pitch Accent Orale**: Pronuncia tonale piatta/errata sui termini accademici (`居場所`, `社会学`, `参与観察`). | Dicembre – Febbraio | Integrazione sistematica dei pattern melodici (`[平板]`, `[頭高]`, `[中高]`) in [academic/interview_questions.json](file:///mnt/workspaces/japan/academic/interview_questions.json). | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-22 (Falsi Amici Sintattici Deontici/Epistemici)**: Confusione tra `〜わけにはいかない` (necessità morale/sociale) e `〜わけがない` (impossibilità oggettiva). *Azione da predisporre*: matrice comparativa con flowchart decisionale.
-2. **Vulnerabilità R-23 (Asimmetria Prosodica nel Pitch Accent Orale)**: Accento tonale errato su termini chiave della tesi (`社会学`, `居場所`, `若者`) durante il colloquio. *Azione da predisporre*: drill di pronuncia fonetica integrati nello stage Orale.
+1. **Vulnerabilità R-24 (Affaticamento Muscolare Mano Destra da Compilazione OMR)**: Rigidità e crampi da impugnatura matita 2B su 100 risposte. *Azione da predisporre*: protocollo di riscaldamento neuromuscolare ed ergonomia dell'impugnatura.
+2. **Vulnerabilità R-25 (Disallineamento Connettori Concessivi Saggistici N1)**: Sfumature tra `〜にもかかわらず`, `〜とはいうものの`, `〜とはいえ` in Parte C. *Azione da predisporre*: tassonomia comparativa dei 15 connettori avversativi formali.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*

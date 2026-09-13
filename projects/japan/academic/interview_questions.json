@@ -7,7 +7,8 @@
     "key_points": [
       "Usare Kenjougo: [Nome]と申します (e non です)",
       "Menzionare l'Università di Torino (トリノ大学) e l'indirizzo (アジア・アフリカ言語文化学科)",
-      "Sottolineare che si è al 2º anno e cosa si è studiato al 1º anno (grammatica, storia, cultura)"
+      "Sottolineare che si è al 2º anno e cosa si è studiato al 1º anno (grammatica, storia, cultura)",
+      "Prosodia & Pitch Accent: トリノ大学 [4] (to-ri-no-da\\i-ga-ku), 専攻 [0] (Heiban: se-n-ko-u ‾‾‾), 日本史 [0] (Heiban)"
     ],
     "model_answer_ja": "はじめまして、パトリック・ポテンツァと申します。現在、トリノ大学アジア・アフリカ言語文化学部の２年生でございます。１年次より日本語の文法、読解、ならびに日本史を精力的に学んでまいりました。本日はこのような貴重な面接の機会をいただき、心より感謝申し上げます。どうぞよろしくお願い申し上げます。"
   },
@@ -19,7 +20,8 @@
     "key_points": [
       "Non è un semplice scambio turistico o solo linguistico: è un programma di alta formazione accademica statale",
       "Opportunità di redigere un elaborato/tesina di ricerca (修了論文) sotto tutoraggio accademico giapponese",
-      "Accesso a biblioteche universitarie e fonti storiche/letterarie primarie inaccessibili in Italia"
+      "Accesso a biblioteche universitarie e fonti storiche/letterarie primarie inaccessibili in Italia",
+      "Prosodia & Pitch Accent: 奨学金 [0] (Heiban: sho-u-ga-ku-ki-n ‾‾‾), 研修 [0] (Heiban), 一次史料 [4] (i-chi-ji-shi\\-ryo-u)"
     ],
     "model_answer_ja": "一般的な語学留学や短期交換留学とは異なり、日研生プログラムは日本の国立・公立大学において専門的な指導教授のもと、学術的な調査研究を行い修了論文を執筆できる唯一無二の制度だからです。トリノ大学で培った基礎の上に、現地の一次史料や学術文献を直接紐解き、より高度な学問的知見を獲得したいと考えております。"
   },
@@ -27,11 +29,12 @@
     "id": "INT-03",
     "category": "研修計画 (Study & Research Plan)",
     "question_ja": "日本での１年間の研修期間中、具体的にどのようなテーマについて研究したいとお考えですか。",
-    "question_it": "Durante l'anno di studio in Giappone, su quale tema specifico intende condurre la sua ricerca?",
+    "question_it": "Durante l'anno di studio in Giappone, su quale tema specifico intende condudere la sua ricerca?",
     "key_points": [
       "Inquadrare la ricerca nella sociologia urbana e nei 'Terzi Luoghi' (Third Places - Ray Oldenburg)",
       "Analizzare gli spazi territoriali e i circoli universitari (Sākuru/Kōryūkai) contro l'isolamento giovanile",
-      "Collegare l'esperienza no-profit di 'Sinoira Gang' a Torino per la tesi di laurea triennale al rientro"
+      "Collegare l'esperienza no-profit di 'Sinoira Gang' a Torino per la tesi di laurea triennale al rientro",
+      "Prosodia & Pitch Accent: 居場所 [0] (Heiban: i-ba-sho ‾‾‾), 若者 [0] (Heiban: wa-ka-mo-no ‾‾‾), 社会学 [3] (sha-ka-i\\-ga-ku)"
     ],
     "model_answer_ja": "私は現代日本における若者のコミュニティ形成と、対戦型アナログ・デジタルゲームを通じた社会的役割について研究したいと考えております。特に都市社会学における「サードプレイス（第三の居場所）」の観点から、大学の公認サークルや地域の交流会が青少年の孤立防止といかに結びついているかを調査し、帰国後はトリノ大学の卒業論文および地域の非営利活動に還元する所存です。"
   },
@@ -43,7 +46,8 @@
     "key_points": [
       "Dimostrare di aver letto il Course Guide (目次 e programma dettagliato)",
       "Collegare il Tipo di corso (a: cultura/storia, b: lingua) al proprio piano di studi",
-      "Non basarsi sulla notorietà della città, ma sui corsi, laboratori e docenti dell'ateneo"
+      "Non basarsi sulla notorietà della città, ma sui corsi, laboratori e docenti dell'ateneo",
+      "Prosodia & Pitch Accent: 講義 [1] (Atamadaka: ko\\-u-gi), 教授陣 [0] (Heiban), 充実 [0] (Heiban: ju-u-ji-tsu ‾‾‾)"
     ],
     "model_answer_ja": "『コースガイド』を精読し、自身の研究関心である青少年文化論および現代日本社会学に関する専門講義と指導体制が最も充実している大学を選定いたしました。特に第１希望の大学におきましては、地域コミュニティ論の第一人者である教授陣のゼミが開講されており、一次史料へのアクセス環境も極めて優れているためです。"
   },
@@ -55,7 +59,8 @@
     "key_points": [
       "FONDAMENTALE: Dichiarare con fermezza che si tornerà a UniTO per completare il 3º anno e laurearsi!",
       "Utilizzare il lavoro svolto in Giappone come base della Tesi di Laurea Triennale",
-      "Obiettivi futuri: prosecuzione magistrale, mediazione culturale, diplomazia o divulgazione accademica"
+      "Obiettivi futuri: prosecuzione magistrale, mediazione culturale, diplomazia o divulgazione accademica",
+      "Prosodia & Pitch Accent: 復学 [0] (Heiban), 卒業論文 [4] (so-tsu-gyo-u-ro\\-n-bu-n), 架け橋 [2] (ka-ke\\-ha-shi)"
     ],
     "model_answer_ja": "日本での１年間の研修終了後は、直ちにトリノ大学に復学し、３年次の学業を修めて日本で収集した実証データをもとに卒業論文を執筆・完成させます。将来的には、この貴重な学びを活かし、学術・文化・経済の各分野において日本とイタリアの相互理解を深める架け橋として貢献したいと存じます。"
   },
@@ -67,7 +72,8 @@
     "key_points": [
       "La sociologia dei Terzi Luoghi richiede ricerca etnografica e osservazione partecipante in situ",
       "Accesso a fonti primarie e bollettini universitari (紀要 - Kiyō) non digitalizzati né disponibili in Europa",
-      "Interviste dirette a gestori di spazi giovanili, card room e responsabili di circoli universitari"
+      "Interviste dirette a gestori di spazi giovanili, card room e responsabili di circoli universitari",
+      "Prosodia & Pitch Accent: 実地調査 [4] (ji-t-chi-cho\\-u-sa), 紀要 [1] (Atamadaka: ki\\-yo-u), 還元 [0] (Heiban)"
     ],
     "model_answer_ja": "第三の居場所に関する研究は、二次文献の精読のみでは決して完結いたしません。現地のカードショップや大学公認サークルにおける参与観察、運営者や若年層への実地聞き取り調査、そして日本の大学紀要にのみ所蔵されている最新の社会学一次資料の収集が不可欠だからでございます。現地で得た確かな実証データをトリノ大学の卒業研究に還元したいと考えております。"
   },
@@ -79,7 +85,8 @@
     "key_points": [
       "Citare Huizinga (Homo Ludens) e Oldenburg (Third Places) come fondamenti teorici consolidati",
       "La funzione preventiva contro la solitudine metropolitana (muen shakai) e il ritiro giovanile (hikikomori)",
-      "L'esperienza civica no-profit con Sinoira Gang a Torino come prova di impegno sociale reale"
+      "L'esperienza civica no-profit con Sinoira Gang a Torino come prova di impegno sociale reale",
+      "Prosodia & Pitch Accent: 娯楽 [0] (Heiban: go-ra-ku ‾‾‾), 無縁社会 [4] (mu-e-n-sha\\-ka-i), 連帯 [0] (Heiban)"
     ],
     "model_answer_ja": "ホイジンガの『ホモ・ルーデンス』やオルデンバーグの『第三の居場所』理論が示す通り、遊びを通じた自発的連帯は都市の孤立（無縁社会）を防ぐ極めて重要な社会的セーフティネットです。トリノでの非営利活動『シノイラ・ギャング』の経験と日本の実地データを融合させ、青少年の居場所作りに寄与する確かな学術的知見を提示したいと考えております。"
   },
@@ -91,7 +98,8 @@
     "key_points": [
       "Menzionare esplicitamente: 参与観察 (Osservazione Partecipante)",
       "Menzionare: 半構造化面接 (Interviste Semi-strutturate a gestori e giocatori)",
-      "Menzionare: 言説分析 (Analisi del discorso sulle norme di rispetto e reciprocità)"
+      "Menzionare: 言説分析 (Analisi del discorso sulle norme di rispetto e reciprocità)",
+      "Prosodia & Pitch Accent: 参与観察 [4] (sa-n-yo-ka\\-n-sa-tsu), 半構造化面接 [7], 言説分析 [5] (ge-n-se-tsu-bu\\-n-se-ki)"
     ],
     "model_answer_ja": "質的社会調査法を主軸とし、三つの手法を組み合わせます。第一に、都内および近郊の公認遊戯空間における「参与観察」を通じて対局時の身体的コミュニケーション作法を記録します。第二に、店舗管理者および参加者への「半構造化面接」を行い、心理的帰属意識の変化を定性分析します。第三に、空間内で共有されるルールの「言説分析」を行い、社会的包摂のメカニズムを明らかにします。"
   },
@@ -103,7 +111,8 @@
     "key_points": [
       "Corsi di sociologia urbana (現代日本社会論, 地域社会学)",
       "Corsi su giovani e media (青少年文化論, ポップカルチャー研究)",
-      "Partecipazione a un seminario accademico (演習・ゼミ) per la stesura della tesina"
+      "Partecipazione a un seminario accademico (演習・ゼミ) per la stesura della tesina",
+      "Prosodia & Pitch Accent: 演習 [0] (Heiban: e-n-shu-u ‾‾‾), ゼミ [1] (Atamadaka: ze\\-mi), 多角的 [0] (Heiban)"
     ],
     "model_answer_ja": "日本語研修科目に加え、社会学部または人文学部で開講されている「現代日本社会論」および「青少年文化論」の講義を履修したいと考えております。また、指導教授の研究室の「演習（ゼミ）」に所属し、日本人学生との学術的議論を重ねながら、日本社会の構造的課題と地域コミュニティの役割について多角的な考察を深めたいと存じます。"
   },
@@ -115,7 +124,8 @@
     "key_points": [
       "Atteggiamento proattivo di ascolto e umiltà culturale (郷に入っては郷に従え)",
       "Costruzione rapida di una rete di supporto (tutor universitario, ufficio studenti internazionali)",
-      "Esperienza pregressa di leadership e mediazione maturata nella gestione di associazioni giovanili"
+      "Esperienza pregressa di leadership e mediazione maturata nella gestione di associazioni giovanili",
+      "Prosodia & Pitch Accent: 謙虚 [1] (Atamadaka: ke\\-n-kyo), 柔軟性 [0] (Heiban: ju-u-na-n-se-i ‾‾‾), 契機 [1] (ke\\-i-ki)"
     ],
     "model_answer_ja": "「郷に入っては郷に従え」の精神を重んじ、自己の価値観を押し付けることなく、まずは相手の文化背景や慣習を謙虚に観察し理解するよう努めます。また、大学の留学生相談室やチューター学生との連携を密にし、孤立を防ぐネットワークを早期に築きます。これまでの非営利団体運営で培った対話力と柔軟性を活かし、困難を成長の契機に変えていく所存です。"
   }
