@@ -41,8 +41,8 @@ Unified Japanese language mastery, Anki SRS engine, and MEXT scholarship qualifi
 | **Parte C** | N1 | 30 | 9 (30%) | **10–12 (33–40%)** | 20–22 min riservati alla lettura accademica. |
 | **TOTALE** | — | **100** | **59%** | **63–68%** | **55 minuti operativi netti** (+5 min buffer OMR matita 2B). |
 
-- **Banca Dati Drill Originale (250 Quesiti Inediti)**:
-  - [`drill_pool_part_a.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_a.json): **110 item** (particelle, coppie omofone, radicali simili).
+- **Banca Dati Drill Originale (265 Quesiti Inediti)**:
+  - [`drill_pool_part_a.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_a.json): **125 item** (particelle, coppie omofone, composti irregolari, jukujikun).
   - [`drill_pool_part_b.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_b.json): **90 item** (Keigo, causativo-passivo, coppie `自他動詞`, `〜てある`).
   - [`drill_pool_part_c.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_c.json): **50 item** (letture accademiche sui Terzi Luoghi, formule scritte N1).
 - **Simulatore Orale Ambasciata**:
@@ -57,7 +57,7 @@ La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fl
 2. **学習 Studio**: Batch di studio guidato con sblocco progressivo kanji, vocaboli e grammatica.
 3. **復習 Bunki**: Telemetria Anki SRS, verifica zero arretrati e riabilitazione leech.
 4. **試練 Prove**: Motore d'esame a rotazione giornaliera con cronometro di pacing e simulatore orale.
-5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (46 report navigabili in tempo reale).
+5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (49 report navigabili in tempo reale).
 
 ---
 

@@ -965,5 +965,30 @@
         "web_sync": "tab_dossier.html updated to 46 Dossier badge, README.md updated to 46 dossiers and 12 interview scenarios"
       }
     }
+  },
+  {
+    "feature": "mext_top_99_percent_confidence_capstone",
+    "timestamp": "2026-09-13T23:19:30Z",
+    "status": "passed",
+    "evidence": {
+      "frontiers_covered": [
+        "1) Mask acoustic attenuation and active Keigo clarification probes (R-36)",
+        "2) Part A tactical abandonment and emergency pacing protocol (R-37)",
+        "3) UniTO professor recommendation letter format and strict seal protocol (R-38)"
+      ],
+      "dossiers_created": [
+        "research/protocollo_decodifica_acustica_mascherine_colloquio.md (42 lines <= 200)",
+        "research/protocollo_abbandono_tattico_e_pacing_salvavita_parte_a.md (34 lines <= 200)",
+        "research/protocollo_lettera_raccomandazione_professori_unito.md (42 lines <= 200)"
+      ],
+      "drill_expansion": "Expanded exams/drill_pool_part_a.json from 110 to 125 items (+15 items DRILL-A-111 to DRILL-A-125, total pool 265 questions: Part A 125, Part B 90, Part C 50).",
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (70 lines <= 200) registering R-01 through R-38 as Attivo.",
+      "live_verification": {
+        "public_dossiers_count": 49,
+        "total_drills_count": 265,
+        "submit_test_drill_a_111": "passed (100% score, is_correct=True)",
+        "web_sync": "tab_dossier.html updated to 49 Dossier badge, README.md updated to 265 items and 49 dossiers"
+      }
+    }
   }
 ]

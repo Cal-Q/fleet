@@ -55,13 +55,16 @@
 | **R-33** | **Strozzatura Esse3 UniTO Sessione Invernale**: Ritardi verbalizzazione esami gennaio 2027 a ridosso chiusura plico 05 Febbraio. | Gennaio 2027 | Protocollo [protocollo_verbalizzazione_esse3_sessione_invernale_mext.md](file:///mnt/workspaces/japan/research/protocollo_verbalizzazione_esse3_sessione_invernale_mext.md) con 1º appello anticipato e template d'urgenza. | ✅ Attivo |
 | **R-34** | **Saturazione Ottica OMR per Sbavature Grafite 2B**: Errore di doppia marcatura (*Jūfuku Kaitō*) da cancellature incomplete. | Febbraio 2027 | Protocollo [protocollo_decontaminazione_omr_e_cancellatura_ottica.md](file:///mnt/workspaces/japan/research/protocollo_decontaminazione_omr_e_cancellatura_ottica.md) con Tombow Mono Zero e pennellino. | ✅ Attivo |
 | **R-35** | **Trappola Temi Sensibili & Diplomazia Orale**: Risposte polarizzate o eurocentriche su denatalità e questioni sociali al colloquio. | Gennaio – Febbraio | Guida [guida_gestione_temi_sensibili_colloquio_mext.md](file:///mnt/workspaces/japan/research/guida_gestione_temi_sensibili_colloquio_mext.md) con metodo dei 3 filtri e scenari INT-11/12. | ✅ Attivo |
+| **R-36** | **Disorientamento Fonetico Mascherine Commissari**: Attenuazione frequenze vocali $>2.5$kHz e ambiguità morfologica su finali verbali. | Febbraio 2027 | Protocollo [protocollo_decodifica_acustica_mascherine_colloquio.md](file:///mnt/workspaces/japan/research/protocollo_decodifica_acustica_mascherine_colloquio.md) con 3 formule di chiarimento attivo in Keigo. | ✅ Attivo |
+| **R-37** | **Blocco Cognitivo su Kanji Singolo Parte A**: Fissazione ossessiva $>25$s su composti rari che brucia tempo prezioso per Parte C. | Settembre – Febbraio | Protocollo [protocollo_abbandono_tattico_e_pacing_salvavita_parte_a.md](file:///mnt/workspaces/japan/research/protocollo_abbandono_tattico_e_pacing_salvavita_parte_a.md) con regola dei 20s e micro-punto. | ✅ Attivo |
+| **R-38** | **Discrepanza Formato Lettera Raccomandazione UniTO**: Lettera generica italiana priva di griglia comparativa o lembo non sigillato. | Novembre – Gennaio | Protocollo [protocollo_lettera_raccomandazione_professori_unito.md](file:///mnt/workspaces/japan/research/protocollo_lettera_raccomandazione_professori_unito.md) con format MEXT e sigillo ermetico. | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-36 (Disorientamento Fonetico da Mascherine Chirurgiche dei Commissari)**: Attenuazione acustica delle frequenze superiori a 3kHz della voce dei commissari che indossano mascherine FFP2/chirurgiche durante il colloquio.
-2. **Vulnerabilità R-37 (Sindrome da Blocco Mentale su Kanji Isolato in Parte A)**: Fissazione ossessiva su un singolo kanji trabocchetto che brucia oltre 45 secondi; regola dell'abbandono tattico con segnaposto a matita.
+1. **Vulnerabilità R-39 (Decadimento della Velocità Motoria Fine nel Rientro da Roma a Freddo)**: Ipotermia delle dita sul treno Frecciarossa/Italo per il rientro, con impatto sui successivi esami della sessione invernale UniTO.
+2. **Vulnerabilità R-40 (Asimmetria Temporale tra Risultati First Screening e Pianificazione Secondo Semestre UniTO)**: Gestione del piano carriera L-11 nel limbo temporale tra marzo e luglio 2027 in attesa del Second Screening definitivo da Tokyo.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*

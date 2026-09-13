@@ -1,0 +1,42 @@
+# 📜 Protocollo: Lettera di Raccomandazione & Sigillo Formale UniTO
+
+**Focus**: Massimizzazione del punteggio nella valutazione documentale MEXT ed eliminazione dell'attrito burocratico con i docenti UniTO.  
+**Docenti di Riferimento UniTO**: Prof.ssa Daniela Moro (L-OR/22 - Letteratura Giapponese) / Prof.ssa Paola Maurizi (L-OR/22 - Filologia/Linguistica).
+
+---
+
+## 1. La Trappola della Lettera di Raccomandazione Generica
+
+In Italia, i docenti universitari tendono a redigere lettere di referenza generiche in forma libera su carta intestata d'Ateneo ("Si certifica che lo studente Patrik Potenza è diligente...").  
+Tuttavia, le linee guida MEXT impongono standard rigorosi:
+- **Modulo Ufficiale MEXT (*Recommendation Form*)**: Deve essere preferibilmente compilato il format ministeriale allegato all'Application Guidelines, contenente la **griglia di valutazione quantitativa** (Top 2%, Top 5%, Top 10% degli studenti dell'ateneo).
+- **Sigillo Ermetico Obbligatorio (*Strict Seal / 厳重封印*)**: La lettera deve essere inserita in una busta da lettera ufficiale UniTO, sigillata e **firmata/timbbrata dal docente a cavallo del lembo di chiusura posteriore**.
+- *Se la busta è aperta o priva di controfirma sul lembo, la documentazione può essere giudicata non conforme e penalizzata dalla commissione*.
+
+---
+
+## 2. Griglia di Valutazione Comparativa MEXT (Target Ideale)
+
+Nel modulo MEXT, i criteri devono posizionare il candidato nelle fasce d'eccellenza:
+
+| Parametro Valutato | Fascia da Sollecitare | Motivazione Oggettiva Verificabile |
+| :--- | :---: | :--- |
+| **Academic Performance** | **Top 5%** (Outstanding) | Media Esse3 pari a 30.0 / 30; voto di 30 e Lode in Introduzione al Giappone. |
+| **Intellectual Curiosity & Research Potential** | **Top 2%** (Exceptional) | Progetto di ricerca strutturato su "Terzi Luoghi e Subculture Giovanili" e operato in associazione no-profit. |
+| **Emotional Maturity & Cross-Cultural Adaptability** | **Top 5%** (Outstanding) | Esperienza comprovata nella gestione associativa giovanile (*Sinoira Gang*) e leadership comunitaria. |
+| **Japanese Language Aptitude** | **Top 5%** (Outstanding) | Superamento precoce dei livelli di kanji (1.100+ caratteri) e studio costante documentato. |
+
+---
+
+## 3. Procedura Operativa in 3 Passi per il Candidato
+
+1. **Predisposizione del "Dossier Docente" Chiavi-in-Mano (Entro 15 Novembre 2026)**:
+   Fornire alla professoressa:
+   - Modulo MEXT Recommendation Form precompilato nelle parti anagrafiche del candidato.
+   - Bozza sintetica delle attività accademiche e del progetto di ricerca.
+   - Copia del libretto Esse3 aggiornato (con media e CFU).
+   - Una busta ufficiale intestata dell'Università di Torino.
+2. **Incontro di Allineamento Accademico (Fine Novembre – Inizio Dicembre 2026)**:
+   Incontro breve in orario di ricevimento a Palazzo Nuovo per illustrare la coerenza del progetto con la tesi triennale al rientro.
+3. **Ritiro del Plico Sigillato (Entro 15 Gennaio 2027)**:
+   Verifica materiale che il lembo posteriore della busta rechi la firma del docente sovrapposta al bordo incollato e il timbro del Dipartimento.

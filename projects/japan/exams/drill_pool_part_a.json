@@ -1648,5 +1648,230 @@
     },
     "answer": "A",
     "explanation": "「遠慮」 si legge えんりょ (riserva/ritegno/farsi scrupoli). 遠 (えん) + 慮 (りょ). Formula di cortesia: 遠慮なく (senza complimenti)."
+  },
+  {
+    "id": "DRILL-A-111",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nもっと 【身近】な 例を 挙げて 説明してください。",
+    "options": {
+      "A": "みぢか",
+      "B": "しんきん",
+      "C": "みちか",
+      "D": "しんちか"
+    },
+    "answer": "A",
+    "explanation": "「身近」 si legge みぢか (familiare / vicino a sé). 身 (み) + 近 (ちか $\to$ ぢか con rendaku)."
+  },
+  {
+    "id": "DRILL-A-112",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n親しい 間柄ですから、どうぞ 【気兼ね】しないでください。",
+    "options": {
+      "A": "きがね",
+      "B": "きけん",
+      "C": "きかね",
+      "D": "きがえ"
+    },
+    "answer": "A",
+    "explanation": "「気兼ね」 si legge きがね (farsi riguardi / ritrosia verso qualcuno). 気 (き) + 兼ね (かね $\to$ がね)."
+  },
+  {
+    "id": "DRILL-A-113",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nベテランの 職人は、素晴らしい 【手際】で 料理を 完成させた。",
+    "options": {
+      "A": "てぎわ",
+      "B": "てさい",
+      "C": "てきわ",
+      "D": "しゅさい"
+    },
+    "answer": "A",
+    "explanation": "「手際」 si legge てぎわ (destrezza / efficienza manuale o operativa). 手 (て) + 際 (きわ $\to$ ぎわ)."
+  },
+  {
+    "id": "DRILL-A-114",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n式典には、場に 【相応しい】 服装で 参加してください。",
+    "options": {
+      "A": "ふさわしい",
+      "B": "あいわしい",
+      "C": "そうおうしい",
+      "D": "すがわしい"
+    },
+    "answer": "A",
+    "explanation": "「相応しい」 si legge ふさわしい (adatto / appropriato / consono alla circostanza)."
+  },
+  {
+    "id": "DRILL-A-115",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica - 熟字訓)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n専門的な 機械の 修理は、【素人】には 難しい。",
+    "options": {
+      "A": "しろうと",
+      "B": "そじん",
+      "C": "すにん",
+      "D": "そにん"
+    },
+    "answer": "A",
+    "explanation": "「素人」 è uno jukujikun canonico e si legge しろうと (profano / dilettante / non specialista). L'opposto è 玄人 (くろうと)."
+  },
+  {
+    "id": "DRILL-A-116",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nここで 少し 【一息】 入れてから、作業を 再開しましょう。",
+    "options": {
+      "A": "ひといき",
+      "B": "いちそく",
+      "C": "いちいき",
+      "D": "ひとそく"
+    },
+    "answer": "A",
+    "explanation": "「一息」 si legge ひといき (un respiro / una breve sosta o pausa di riposo: 一息入れる)."
+  },
+  {
+    "id": "DRILL-A-117",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n彼は 冗談ではなく、【本気】で 留学を 決意したようだ。",
+    "options": {
+      "A": "ほんき",
+      "B": "もとき",
+      "C": "ほんぎ",
+      "D": "ほんけ"
+    },
+    "answer": "A",
+    "explanation": "「本気」 si legge ほんき (fare sul serio / serietà d'intenti). 本 (ほん) + 気 (き)."
+  },
+  {
+    "id": "DRILL-A-118",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n出発の 【間際】に なって、忘れ物に 気づいた。",
+    "options": {
+      "A": "まぎわ",
+      "B": "かんさい",
+      "C": "まきわ",
+      "D": "あいだぎわ"
+    },
+    "answer": "A",
+    "explanation": "「間際」 si legge まぎわ (proprio sul punto di / all'ultimo istante prima di un evento). 間 (ま) + 際 (ぎわ)."
+  },
+  {
+    "id": "DRILL-A-119",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nこの 問題は 被害が 広がる 前に、【早急】に 解決すべきだ。",
+    "options": {
+      "A": "さっきゅう",
+      "B": "はやきゅう",
+      "C": "そうきゅ",
+      "D": "さくきゅう"
+    },
+    "answer": "A",
+    "explanation": "「早急」 si legge さっきゅう (o そうきゅう: con urgenza estrema / immediatamente)."
+  },
+  {
+    "id": "DRILL-A-120",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n出席者の 【過半数】が 新しい 提案に 賛成した。",
+    "options": {
+      "A": "かはんすう",
+      "B": "すぎはんすう",
+      "C": "かはんかず",
+      "D": "かはんじゅ"
+    },
+    "answer": "A",
+    "explanation": "「過半数」 si legge かはんすう (la maggioranza assoluta / più della metà)."
+  },
+  {
+    "id": "DRILL-A-121",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nこの カフェは 静かで、とても 【居心地】が よい。",
+    "options": {
+      "A": "いごこち",
+      "B": "きょしんち",
+      "C": "いここち",
+      "D": "きょごこち"
+    },
+    "answer": "A",
+    "explanation": "「居心地」 si legge いごこち (sensazione di comodità/agio nell'abitare o trovarsi in un luogo). 居る (いる $\to$ い) + 心地 (ここち $\to$ ごこち)."
+  },
+  {
+    "id": "DRILL-A-122",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica - 熟字訓)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n春の 訪れとともに、雪の 【名残】も 消え去った。",
+    "options": {
+      "A": "なごり",
+      "B": "めいざん",
+      "C": "なざん",
+      "D": "みょうざん"
+    },
+    "answer": "A",
+    "explanation": "「名残」 si legge なごり (tracce residue / commiato nostalgico). È una lettura jukujikun tradizionale."
+  },
+  {
+    "id": "DRILL-A-123",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n今晩の 夕食の 【献立】を 考える。",
+    "options": {
+      "A": "こんだて",
+      "B": "けんりつ",
+      "C": "こんりつ",
+      "D": "けんたて"
+    },
+    "answer": "A",
+    "explanation": "「献立」 si legge こんだて (menù / lista delle vivande / pianificazione dei piatti)."
+  },
+  {
+    "id": "DRILL-A-124",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica - 熟字訓)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n海外旅行の 前に、銀行で 外国【為替】の レートを 確認した。",
+    "options": {
+      "A": "かわせ",
+      "B": "いがえ",
+      "C": "ためがえ",
+      "D": "いかえ"
+    },
+    "answer": "A",
+    "explanation": "「為替」 è uno jukujikun classico e si legge かわせ (cambio valutario / vaglia finanziario)."
+  },
+  {
+    "id": "DRILL-A-125",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica - 熟字訓)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n着物を 着るときには、白い 【足袋】を はきます。",
+    "options": {
+      "A": "たび",
+      "B": "あしたい",
+      "C": "あしぶくろ",
+      "D": "そくたい"
+    },
+    "answer": "A",
+    "explanation": "「足袋」 è uno jukujikun tradizionale e si legge たび (i tipici calzini tradizionali infradito indossati con i geta o gli zori)."
   }
 ]
