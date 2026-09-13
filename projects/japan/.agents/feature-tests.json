@@ -1,5 +1,24 @@
 [
   {
+    "feature": "mext_live_leech_rehabilitation_and_160day_milestone_gates",
+    "timestamp": "2026-09-13T22:35:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Implemented live SQLite card rehabilitation in api/routes/srs_routes.py (unsuspends cards, resets lapses to 0, sets interval to 1d, factor to 1500, removes leech tag).",
+        "Fixed property mismatch in static/js/modules/bunki.js (front vs word) ensuring Japanese text and lapse counts render properly in Leech Quarantine UI.",
+        "Exercised POST /api/leeches/review on Ionos: rehabilitated card 1789028986244 (意外), verified SQLite state changed to queue=2, type=2, ivl=1, factor=1500, lapses=0.",
+        "Authored research/protocollo_cura_dei_leech_e_rieducazione_mnemonica.md analyzing the 18 critical leeches and 734 lapsed cards, proving they overlap with MEXT exam traps, and establishing the 4-step Kintsugi repair method.",
+        "Authored research/roadmap_milestone_e_gate_di_controllo_160gg.md detailing the 6 survival gates (Day 15, 45, 75, 105, 135, 155), quantitative pass/fail thresholds, and emergency remediation protocols."
+      ],
+      "file_line_counts": {
+        "api/routes/srs_routes.py": 117,
+        "static/js/modules/bunki.js": 174,
+        "templates/components/tab_bunki.html": 133
+      }
+    }
+  },
+  {
     "feature": "mext_30q_full_mock_simulation_and_tax_immunity_protocol",
     "timestamp": "2026-09-13T22:31:00Z",
     "status": "passed",

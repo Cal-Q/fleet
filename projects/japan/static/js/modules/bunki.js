@@ -51,9 +51,9 @@ export async function loadLeeches() {
 
     listEl.innerHTML = data.items.map(item => `
       <div class="p-2.5 border-b border-black/10 flex items-center justify-between gap-4 text-xs">
-        <div>
-          <div class="font-bold jp-font text-base text-[#111111]">${item.word}</div>
-          <div class="font-mono text-[10px] text-neutral-500">${item.deck_name} • Lapsi: ${item.lapses}</div>
+        <div class="min-w-0 flex-1">
+          <div class="font-bold jp-font text-base text-[#111111] truncate" title="${item.front || item.word}">${item.front || item.word}</div>
+          <div class="font-mono text-[10px] text-neutral-500">${item.deck_name || "Anki Core"} • Lapsi: <b>${item.lapses}</b></div>
         </div>
         <div class="flex items-center gap-1.5 font-mono text-[10px]">
           <button onclick="window.reviewLeechAction(${item.card_id}, 'rehabilitate')" class="px-2 py-0.5 border border-black hover:bg-black hover:text-white uppercase font-bold transition">

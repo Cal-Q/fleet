@@ -76,4 +76,42 @@ def api_get_leeches():
 
 @router.post("/api/leeches/review")
 def api_post_leech_review(req: dict):
-    return {"status": "ok", "message": "Azione registrata con successo."}
+    cid = req.get("card_id")
+    action = req.get("action", "rehabilitate")
+    if not cid:
+        raise HTTPException(status_code=400, detail="card_id missing")
+    try:
+        conn = open_anki_db()
+        cur = conn.cursor()
+        if action == "rehabilitate":
+            cur.execute("""
+                UPDATE cards 
+                SET queue = 2, type = 2, ivl = 1, factor = 1500, lapses = 0, usn = -1 
+                WHERE id = ?
+            """, (cid,))
+            cur.execute("SELECT nid FROM cards WHERE id = ?", (cid,))
+            row = cur.fetchone()
+            if row:
+                nid = row[0]
+                cur.execute("SELECT tags FROM notes WHERE id = ?", (nid,))
+                trow = cur.fetchone()
+                if trow and trow[0]:
+                    cleaned_tags = " ".join([t for t in trow[0].split() if t != "leech"])
+                    cur.execute("UPDATE notes SET tags = ?, usn = -1 WHERE id = ?", (cleaned_tags, nid))
+        elif action == "retire":
+            cur.execute("SELECT nid FROM cards WHERE id = ?", (cid,))
+            row = cur.fetchone()
+            if row:
+                nid = row[0]
+                cur.execute("SELECT tags FROM notes WHERE id = ?", (nid,))
+                trow = cur.fetchone()
+                existing = trow[0] if trow and trow[0] else ""
+                if "retired_leech" not in existing:
+                    new_tags = f"{existing} retired_leech".strip()
+                    cur.execute("UPDATE notes SET tags = ?, usn = -1 WHERE id = ?", (new_tags, nid))
+        conn.commit()
+        conn.close()
+        return {"status": "ok", "action": action, "card_id": cid}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
