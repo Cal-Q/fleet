@@ -66,6 +66,15 @@ Quando la docente che ha bocciato a Lingua è la **stessa identica persona che h
 4. **Script di Riallineamento al Ricevimento**:
    > *"Professoressa, ci tenevo particolarmente a fare bene con lei dopo il percorso di Introduzione agli Studi sul Giappone. All'appello scorso ho compreso chiaramente quali automatismi linguistici dovevo consolidare; ho lavorato duramente in queste settimane per riportare la preparazione al livello di rigore che la materia richiede."*
 
+### 4.2 Esami di Altri Docenti Non Ancora Sostenuti (Es. Storia del Giappone STU0625)
+
+Qualora la docente visualizzi il libretto Esse3 e noti che Storia del Giappone (12 CFU) non è ancora verbalizzata:
+1. **Piena Autonomia del Piano di Studi**: Nell'università italiana, ogni studente ripartisce liberamente gli esami tra le sessioni estiva, autunnale e invernale. Avere Storia programmata per gennaio 2027 è la prassi regolare della coorte L-11.
+2. **Indifferenza Accademica**: Il docente raccomandante valuta unicamente il rendimento nei propri insegnamenti (Studi Culturali e Lingua), non sindacando sulla calendarizzazione dei corsi di altri colleghi.
+3. **Risposta Strategica Impeccabile (se richiesta chiarificazione)**:
+   > *"Professoressa, ho preferito concentrare le energie sullo scoglio fondamentale dei 12 CFU di Lingua e sui fondamenti culturali del primo anno; ho calendarizzato Storia del Giappone per il primo appello della sessione invernale di gennaio."*
+   Tale motivazione denota gestione matura del carico cognitivo ed estremo rispetto per la mole di studio richiesta dalla lingua.
+
 ---
 
 ## 5. Piano B Istituzionale: Alternativa Multi-Docente UniTO
