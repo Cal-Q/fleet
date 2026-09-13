@@ -16,7 +16,7 @@ from pydantic import BaseModel
 
 router = APIRouter(tags=["system"])
 
-WORKSPACE_DIR = "/opt/japan"
+WORKSPACE_DIR = os.environ.get("WORKSPACE_DIR") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 APPLICATIONS_DIR = os.path.join(WORKSPACE_DIR, "applications")
 EXAMS_DIR = os.path.join(WORKSPACE_DIR, "exams")
 RESEARCH_DIR = os.path.join(WORKSPACE_DIR, "research")
@@ -169,7 +169,10 @@ def get_research_dossiers():
 
 @router.get("/api/research/dossier/{filename}")
 def get_research_dossier_content(filename: str):
-    safe_path = os.path.abspath(os.path.join(RESEARCH_DIR, filename))
+    clean_name = os.path.basename(filename)
+    if not clean_name.endswith(".md"):
+        raise HTTPException(status_code=400, detail="Solo file markdown consentiti.")
+    safe_path = os.path.abspath(os.path.join(RESEARCH_DIR, clean_name))
     if not safe_path.startswith(os.path.abspath(RESEARCH_DIR)) or not os.path.exists(safe_path):
         raise HTTPException(status_code=404, detail="Dossier non trovato.")
     with open(safe_path, "r", encoding="utf-8") as fp:
