@@ -79,7 +79,9 @@
       "academic_year": "2025/2026",
       "grade": null,
       "is_area": true,
-      "notes": "Insegnamento fondamentale d'area. Da verbalizzare per il contingente crediti."
+      "parziali": [30, 28, 30],
+      "proiezione_voto_finale": "29-30",
+      "notes": "Parziali brillanti conseguiti (30, 28, 30). Esame finale da sostenere per la verbalizzazione (target 28-30, Top 2% confermato)."
     },
     {
       "code": "STU0625",
