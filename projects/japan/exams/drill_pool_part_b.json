@@ -298,5 +298,155 @@
     },
     "answer": "D",
     "explanation": "Ordine corretto: 図書館では [③他人の迷惑に] [④ならないように] ★[①静かに] [②しなければ] ならない (3 - 4 - 1 - 2). La stella ★ corrisponde a ①, opzione A."
+  },
+  {
+    "id": "DRILL-B-21",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "「明日の午後、先生の 研究室に 伺って ＿＿＿でしょうか。」",
+    "options": {
+      "A": "もよろしい",
+      "B": "くださる",
+      "C": "いらっしゃる",
+      "D": "なさる"
+    },
+    "answer": "A",
+    "explanation": "Chiedere un permesso formale per un'azione compiuta dal parlante (伺う, andare a trovare): 〜てもよろしいでしょうか (Le andrebbe bene se venissi...?)."
+  },
+  {
+    "id": "DRILL-B-22",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "電車の中で 知らない 人に 道を ＿＿＿困ってしまった。",
+    "options": {
+      "A": "聞かれて",
+      "B": "聞きかけて",
+      "C": "聞き直して",
+      "D": "聞き込んで"
+    },
+    "answer": "A",
+    "explanation": "Passivo di disturbo o imprevisto: 道を聞かれて (essendomi stata chiesta la strada da uno sconosciuto)."
+  },
+  {
+    "id": "DRILL-B-23",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "「本日 お配りした 資料を どうぞ ＿＿＿ください。」",
+    "options": {
+      "A": "ご覧",
+      "B": "拝見",
+      "C": "お見せ",
+      "D": "お聞き"
+    },
+    "answer": "A",
+    "explanation": "Invitare formalmente un superiore o il pubblico a visionare un documento: どうぞご覧ください (dōzo goran kudasai). 拝見 è Kenjougo (solo per sé)."
+  },
+  {
+    "id": "DRILL-B-24",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "彼女は 何かを ＿＿＿途中で やめて、静かに 部屋を 出て行った。",
+    "options": {
+      "A": "言いかけて",
+      "B": "言い切って",
+      "C": "言い直して",
+      "D": "言い出して"
+    },
+    "answer": "A",
+    "explanation": "〜かける (~kakeru) indica un'azione iniziata e interrotta a metà prima di essere completata: 言いかける (stare per dire qualcosa e poi fermarsi)."
+  },
+  {
+    "id": "DRILL-B-25",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "この 地域では、りんご＿＿＿、ぶどうや 桃などの 果物の 栽培が 盛んだ。",
+    "options": {
+      "A": "をはじめ",
+      "B": "をきっかけに",
+      "C": "にともなって",
+      "D": "をこめて"
+    },
+    "answer": "A",
+    "explanation": "〜をはじめ（として） introduce un esempio primario o rappresentativo seguito da altri elementi della stessa categoria ('a cominciare dalle mele, si coltivano uve e pesche')."
+  },
+  {
+    "id": "DRILL-B-26",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "日本への 留学＿＿＿、国際交流の ボランティア活動に 参加するようになった。",
+    "options": {
+      "A": "をきっかけに",
+      "B": "をはじめ",
+      "C": "にともなって",
+      "D": "にすぎず"
+    },
+    "answer": "A",
+    "explanation": "〜をきっかけに(して) indica l'evento scatenante o l'occasione di svolta che innesca una nuova serie di comportamenti o decisioni ('innescato dal soggiorno di studio in Giappone')."
+  },
+  {
+    "id": "DRILL-B-27",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "分からない ことが ございましたら、窓口まで お気軽に お＿＿＿ください。",
+    "options": {
+      "A": "問い合わせ",
+      "B": "話し合い",
+      "C": "待ち合わせ",
+      "D": "助け合い"
+    },
+    "answer": "A",
+    "explanation": "問い合わせる (toiawaseru) significa 'fare una richiesta di chiarimento / informarsi': お問い合わせください (non esiti a contattarci/chiederci chiarimenti)."
+  },
+  {
+    "id": "DRILL-B-28",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "「部長、先ほどの 件、確かに ＿＿＿いたしました。」",
+    "options": {
+      "A": "承知",
+      "B": "ご承知",
+      "C": "お知り",
+      "D": "ご理解"
+    },
+    "answer": "A",
+    "explanation": "Confermare formalmente a un superiore l'avvenuta comprensione e presa in carico di un'istruzione: 承知いたしました (shōchi itashimashita). 分かりました è informale; 了解いたしました è considerato scortese da subordinati a superiori."
+  },
+  {
+    "id": "DRILL-B-29",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "今回の プロジェクトの 成功は、チーム全員の 協力が あったから＿＿＿だ。",
+    "options": {
+      "A": "こそ",
+      "B": "さえ",
+      "C": "ばかり",
+      "D": "だけ"
+    },
+    "answer": "A",
+    "explanation": "〜からこそ esprime un'enfasi causale decisa ed esclusiva ('è proprio e soltanto grazie al fatto che... che abbiamo avuto successo')."
+  },
+  {
+    "id": "DRILL-B-30",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\nいくら ＿＿ ＿＿ ★ ＿＿ 間に合わないだろう。\n①タクシーに　②急いでも　③乗って　④今からでは",
+    "options": {
+      "A": "① (タクシーに)",
+      "B": "② (急いでも)",
+      "C": "③ (乗って)",
+      "D": "④ (今からでは)"
+    },
+    "answer": "A",
+    "explanation": "Ordine corretto: いくら [④今からでは] [②急いでも] ★[①タクシーに] [③乗って] 間に合わないだろう... o [②急いでも] [④今からでは] [①タクシーに] [③乗って]. La stella ★ cade su ① (タクシーに)."
   }
 ]

@@ -8,6 +8,7 @@ import json
 import os
 from typing import Optional
 from fastapi import APIRouter, HTTPException
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 from academic.exam_analytics import get_analytics, record_session
@@ -142,3 +143,14 @@ def get_interview_questions():
     """Returns mock interview questions with model answers."""
     from academic.interview_simulator import QUESTIONS
     return QUESTIONS
+
+
+@router.get("/api/exams/omr-sheet", response_class=HTMLResponse)
+def get_omr_sheet():
+    """Serves printable A4 MEXT OMR Answer Sheet."""
+    omr_path = os.path.join(WORKSPACE_DIR, "templates", "omr_sheet.html")
+    if os.path.exists(omr_path):
+        with open(omr_path, "r", encoding="utf-8") as f:
+            return f.read()
+    return "<h1>OMR Sheet Not Found</h1>"
+

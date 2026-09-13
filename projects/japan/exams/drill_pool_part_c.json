@@ -148,5 +148,155 @@
     },
     "answer": "A",
     "explanation": "威信をかける (ishin o kakeru) è la collocazione fissa che significa 'mettere in gioco il prestigio / giocarsi la reputazione'. 命をかける (rischiare la vita), 威信をかける (mettere in gioco il prestigio)."
+  },
+  {
+    "id": "DRILL-C-11",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "指導者＿＿＿、常に全体の利益を優先して行動すべきである。",
+    "options": {
+      "A": "たるもの",
+      "B": "まじき",
+      "C": "なりに",
+      "D": "がてら"
+    },
+    "answer": "A",
+    "explanation": "〜たるもの (~taru mono) si lega a sostantivi che indicano uno status elevato, un ruolo di guida o una professione di responsabilità ('colui che è... / in quanto leader, ha il dovere morale di...')."
+  },
+  {
+    "id": "DRILL-C-12",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "教育者として、生徒の信頼を裏切るような行為は許す＿＿＿ことだ。",
+    "options": {
+      "A": "まじき",
+      "B": "べき",
+      "C": "たる",
+      "D": "ざる"
+    },
+    "answer": "A",
+    "explanation": "〜あるまじき / 〜許すまじき esprime 'qualcosa che assolutamente non deve accadere / inammissibile da parte di chi riveste una data carica morale': 許すまじき行為 (un atto imperdonabile)."
+  },
+  {
+    "id": "DRILL-C-13",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "この 繊細な 色彩感覚は、日本の 伝統工芸＿＿＿ 素晴らしい 特徴だ。",
+    "options": {
+      "A": "ならではの",
+      "B": "をおいて",
+      "C": "に至るまで",
+      "D": "にかこつけて"
+    },
+    "answer": "A",
+    "explanation": "〜ならではの esprime 'proprio e peculiare di... / qualcosa che solo X può offrire': 伝統工芸ならではの (esclusivo/proprio dell'artigianato tradizionale)."
+  },
+  {
+    "id": "DRILL-C-14",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「地方都市における人口減少と高齢化に伴い、地域の共同体機能の維持が喫緊の課題となっている。かつて地縁や血縁によって自明のものとされていた相互扶助の仕組みは崩壊しつつあり、今後は共通の関心や趣味を媒介とした新しい形の『選択的コミュニティ』が、社会的セーフティネットの役割を補完することが期待されている。」\n問：筆者の見解として最も適切なものはどれか。",
+    "options": {
+      "A": "趣味や関心を基礎とする選択的なつながりが、従来の地縁関係の衰退を補う可能性がある。",
+      "B": "血縁や地縁に基づく相互扶助を完全に復活させることが、地方問題の唯一の解決策である。",
+      "C": "新しいコミュニティの形成は、伝統的な地域社会の秩序を破壊する危険性がある。",
+      "D": "人口減少下においては、いかなる共同体組織もセーフティネットとして機能し得ない。"
+    },
+    "answer": "A",
+    "explanation": "Mining semantico: il testo evidenzia che il mutuo aiuto basato sulla parentela/territorio crolla (自明のものとされていた...崩壊しつつあり) e che i legami fondati su interessi comuni (共通の関心や趣味を媒介とした『選択的コミュニティ』) sono chiamati a integrare la rete di sicurezza sociale. L'opzione A sintetizza fedelmente."
+  },
+  {
+    "id": "DRILL-C-15",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "被災地の一日も早い復興を、心より祈っ＿＿＿。",
+    "options": {
+      "A": "てやまない",
+      "B": "てならない",
+      "C": "たまらない",
+      "D": "てかなわない"
+    },
+    "answer": "A",
+    "explanation": "〜てやまない (~te yamanai) è una formula scritta formale per esprimere un sentimento profondo, continuo e incessante (sperare, pregare, augurarsi di cuore): 心より祈ってやまない."
+  },
+  {
+    "id": "DRILL-C-16",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Kanji Semantic Mining",
+    "question": "つぎの ぶんの 【＿＿＿】に 最も 適当な ものは どれですか。\n異なる 文化を 理解するためには、自らの 既成概念を 【＿＿＿】する 勇気が 求められる。",
+    "options": {
+      "A": "刷新",
+      "B": "固執",
+      "C": "維持",
+      "D": "模倣"
+    },
+    "answer": "A",
+    "explanation": "既成概念 (preconcetti / nozioni consolidate) richiede di essere rinnovata/superata: 刷新 (さっしん, rinnovamento radicale). 固執 è ostinazione, 維持 è mantenimento, 模倣 è imitazione."
+  },
+  {
+    "id": "DRILL-C-17",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼は 物事を 少し 悲観的に 考え＿＿＿ところがある。",
+    "options": {
+      "A": "すぎるきらいがある",
+      "B": "がちになる",
+      "C": "そうにみえる",
+      "D": "かねない"
+    },
+    "answer": "A",
+    "explanation": "〜きらいがある (~kirai ga aru) indica la tendenza a manifestare una caratteristica o abitudine non positiva/sfavorevole: 悲観的に考えすぎるきらいがある (ha la deplorevole tendenza a pensare in modo troppo pessimistico)."
+  },
+  {
+    "id": "DRILL-C-18",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「ボードゲームや対戦型カードゲームが現代社会において再評価されている背景には、画面を介したデジタルコミュニケーションでは得られない『身体的な臨場感』への希求がある。対面での駆け引きや偶然性の共有は、効率性のみを追求する現代の都市生活において、人間的な相互了解を回復する契機となっている。」\n問：文章の内容と合致するものはどれか。",
+    "options": {
+      "A": "対面でのアナログな遊戯体験が、デジタル偏重の都市生活における人間的交流を再生させている。",
+      "B": "効率性を重視する現代社会では、偶然性を伴うアナログゲームは急速に衰退している。",
+      "C": "デジタルゲームの臨場感は、すでに対面でのカードゲームの相互了解度を上回っている。",
+      "D": "現代の若者がカードゲームを求める唯一の理由は、ルールの複雑さと競争性にある。"
+    },
+    "answer": "A",
+    "explanation": "Mining semantico: il testo parla del bisogno di presenza fisica (身体的な臨場感) e del recupero dell'intesa umana reciproca (人間的な相互了解を回復する契機) offerto dal gioco analogico a fronte dell'efficienza asettica della vita urbana. L'opzione A sintetizza questo nucleo concettuale fondamentale per lo Study Plan di Patrik."
+  },
+  {
+    "id": "DRILL-C-19",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "あの ピアニストの 魂のこもった 演奏には、聴衆の 誰もが 感動を 禁じ＿＿＿。",
+    "options": {
+      "A": "得なかった",
+      "B": "かねなかった",
+      "C": "相違なかった",
+      "D": "すぎなかった"
+    },
+    "answer": "A",
+    "explanation": "〜を禁じ得ない (~o kinji enai) significa 'non poter fare a meno di provare / non poter trattenere' un'emozione forte (rabbia, commozione, compassione): 感動を禁じ得なかった (non si è potuto trattenere la commozione)."
+  },
+  {
+    "id": "DRILL-C-20",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "親からの 多大な 支援が あった＿＿＿、今の 私の 学問的 成功が ある。",
+    "options": {
+      "A": "からこそ",
+      "B": "わりに",
+      "C": "にしたがって",
+      "D": "どころか"
+    },
+    "answer": "A",
+    "explanation": "〜からこそ esprime l'enfasi causale esclusiva: 'È proprio e solo grazie al grande supporto ricevuto dai miei genitori che oggi c'è il mio successo accademico'."
   }
 ]

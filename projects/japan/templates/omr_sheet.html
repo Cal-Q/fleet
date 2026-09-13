@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MEXT Japanese Studies Examination — Official OMR Answer Sheet</title>
+  <style>
+    @page { size: A4 portrait; margin: 12mm; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #111; margin: 0; padding: 15px; }
+    .header-box { border: 2px solid #000; padding: 8px 12px; margin-bottom: 12px; text-align: center; }
+    .header-box h1 { margin: 0 0 4px 0; font-size: 15px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .header-box h2 { margin: 0; font-size: 12px; font-weight: normal; }
+    .meta-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+    .meta-field { border-bottom: 1px solid #000; padding: 4px 2px; font-size: 11px; }
+    .meta-field span { font-weight: bold; margin-right: 6px; }
+    .sheet-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .col-box { border: 1px solid #333; padding: 6px 8px; }
+    .col-title { font-size: 11px; font-weight: bold; background: #eee; padding: 3px 5px; text-align: center; border-bottom: 1px solid #333; margin: -6px -8px 6px -8px; }
+    .row-q { display: flex; align-items: center; justify-content: space-between; padding: 1.5px 0; border-bottom: 0.5px dotted #ddd; }
+    .q-num { width: 22px; font-weight: bold; text-align: right; margin-right: 4px; font-size: 10px; }
+    .bubbles { display: flex; gap: 6px; }
+    .bubble { width: 15px; height: 15px; border: 1px solid #333; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 8.5px; font-weight: bold; }
+    .instructions { margin-top: 10px; font-size: 9.5px; border-top: 1px solid #666; padding-top: 6px; line-height: 1.35; color: #444; }
+    .print-bar { background: #264332; color: #fff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-family: monospace; font-size: 12px; border-radius: 4px; }
+    .print-btn { background: #fff; color: #264332; border: none; padding: 6px 14px; font-weight: bold; cursor: pointer; border-radius: 3px; }
+    @media print { .print-bar { display: none; } body { padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="print-bar">
+    <span>🖨️ Scheda Risposte Ottica MEXT (100 Quesiti A4) • Pronta per la stampa</span>
+    <button class="print-btn" onclick="window.print()">Stampa su A4 (Ctrl+P)</button>
+  </div>
+
+  <div class="header-box">
+    <h1>Japanese Government (MEXT) Scholarship Examination</h1>
+    <h2>Japanese Studies Students (日研生) — Answer Sheet / 答案用紙 (Total: 60 Minutes)</h2>
+  </div>
+
+  <div class="meta-grid">
+    <div class="meta-field"><span>Full Name:</span> POTENZA PATRIK</div>
+    <div class="meta-field"><span>Examinee No.:</span> 993141</div>
+    <div class="meta-field"><span>Date:</span> 2027 / 02 / ___</div>
+  </div>
+
+  <div class="sheet-grid">
+    <!-- Column 1: Section A (1-35) -->
+    <div class="col-box">
+      <div class="col-title">PART A (初級 • N5/N4) — 35 Quesiti</div>
+      <!-- Generate 1-35 rows -->
+      <div id="col_a_rows"></div>
+    </div>
+
+    <!-- Column 2: Section B (1-35) -->
+    <div class="col-box">
+      <div class="col-title">PART B (中級 • N3/N2) — 35 Quesiti</div>
+      <div id="col_b_rows"></div>
+    </div>
+
+    <!-- Column 3: Section C (1-30) -->
+    <div class="col-box">
+      <div class="col-title">PART C (上級 • N1) — 30 Quesiti</div>
+      <div id="col_c_rows"></div>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <b>INSTRUCTIONS FOR CANDIDATE:</b> Use HB or 2B black pencil only. Fill the bubble completely like this: ● (not ✖, ✔, or half-filled). Erase cleanly with a vinyl eraser if you change an answer. Do not make stray marks. Keep rows strictly aligned.
+  </div>
+
+  <script>
+    function renderCol(containerId, start, count) {
+      const el = document.getElementById(containerId);
+      let html = '';
+      for (let i = 0; i < count; i++) {
+        const num = start + i;
+        html += `<div class="row-q">
+          <span class="q-num">${num}.</span>
+          <div class="bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>`;
+      }
+      el.innerHTML = html;
+    }
+    renderCol('col_a_rows', 1, 35);
+    renderCol('col_b_rows', 36, 35);
+    renderCol('col_c_rows', 71, 30);
+  </script>
+</body>
+</html>

@@ -57,3 +57,46 @@ Guida completa per superare il **colloquio orale** della Borsa di Studio MEXT pe
 - **Domanda:** 「１年間の研修を終えて帰国した後、どのような進路を考えていますか。」
 - **Risposta obbligatoria per UniTO:**
   > 「帰国後は直ちにトリノ大学に戻り、３年次を修了して卒業論文を執筆・提出いたします。日本での１年間の研究成果と一次資料を活用し、[argomento tesi]について質の高い卒業論文を完成させる予定です。卒業後は日伊の文化・学術・経済の架け橋となる分野に進みたいと考えております。」
+
+---
+
+## 3. 🚨 Protocolli di Emergenza Linguistica & Gestione Imprevisti
+
+All'Ambasciata di Roma, il peggior errore non è non capire una domanda: è bloccarsi in silenzio o dire "Ehh...". I diplomatici valutano la capacità di gestire l'imprevisto con naturalezza e rispetto.
+
+### Situazione A: Domanda Non Compresa o Audio Basso
+* ❌ **Cosa NON fare**: Dire "Eh?", "Scusi?", "Nani?", o rimanere immobili a occhi sgranati.
+* ✅ **Formula Keigo di Salvataggio**:
+  > **「大変恐れ入りますが、少々聞き取れませんでしたので、もう一度おっしゃっていただけますでしょうか。」**  
+  *(Taihen osoreirimasu ga, shōshō kikitoremasen deshita node, mō ichido osshatte itadakemasu deshō ka.)*  
+  *(Mi scusi immensamente, non ho percepito bene: potrebbe gentilmente ripetere una volta?)*
+
+### Situazione B: Bisogno di 5 Secondi per Strutturare il Pensiero
+* ❌ **Cosa NON fare**: Silenzio assoluto per 10 secondi o guardare il soffitto.
+* ✅ **Formula per Guadagnare Tempo**:
+  > **「少々考えをまとめさせていただいてもよろしいでしょうか。」**  
+  *(Shōshō kangae o matome sasete itadaitemo yoroshii deshō ka.)*  
+  *(Potrei avere qualche istante per riordinare le idee?)*
+
+### Situazione C: Termine Specifico Non Conosciuto in Giapponese
+* ❌ **Cosa NON fare**: Passare bruscamente all'italiano senza permesso.
+* ✅ **Formula di Transizione**:
+  > **「恐縮ですが、その専門用語をイタリア語でお答えしてもよろしいでしょうか。」**  
+  *(Kyōshuku desu ga, sono senmon yōgo o itariago de okotae shitemo yoroshii deshō ka.)*  
+  *(Mi scuso, mi sarebbe concesso rispondere a questo termine tecnico in italiano?)*
+
+---
+
+## 4. 🥋 Body Language & Etichetta Diplomatica Giapponese
+
+1. **La Postura a Sedere (*Chakuza*)**:
+   - Schiena rigorosamente dritta, staccata di 5-10 cm dallo schienale della sedia.
+   - Mani aperte con dita unite posate morbidamente sulle cosce.
+   - Gambe parallele (mai accavallate).
+2. **Il Contatto Visivo (*Aicon*)**:
+   - Alternare lo sguardo tra il diplomatico che pone la domanda e gli altri due commissari.
+   - Annui leggermente mentre parlano (*Aizuchi* non verbale) per dimostrare ascolto attivo.
+3. **L'Uscita dalla Stanza**:
+   - Alzarsi in piedi accanto alla sedia.
+   - Inchino formale a 30°: **「本日はお忙しい中、誠にありがとうございました。」**
+   - Camminare verso la porta, voltarsi verso la commissione prima di uscire: **「失礼いたします」** con inchino leggero a 15°, uscire e chiudere la porta delicatamente senza voltare le spalle di colpo.

@@ -673,5 +673,305 @@
     },
     "answer": "A",
     "explanation": "Nel pattern potenziale elementare [Verbo Dizionario] + ことができる / できない: 起きることが できませんでした."
+  },
+  {
+    "id": "DRILL-A-46",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n次の 【交差点】を 右に まがって ください。",
+    "options": {
+      "A": "こうさてん",
+      "B": "こさてん",
+      "C": "こうざてん",
+      "D": "こざてん"
+    },
+    "answer": "A",
+    "explanation": "「交差点」 si legge こうさてん (kōsaten). 交 (こう, lungo), 差 (さ, sordo, non sonorizzato in ざ), 点 (てん)."
+  },
+  {
+    "id": "DRILL-A-47",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n日曜日に 家族と 【動物園】へ 行きました。",
+    "options": {
+      "A": "どうぶつえん",
+      "B": "どぶつえん",
+      "C": "どうぶつかん",
+      "D": "どぶつかん"
+    },
+    "answer": "A",
+    "explanation": "「動物園」 si legge どうぶつえん (dōbutsuen). 動 (どう, vocale allungata), 物 (ぶつ), 園 (えん, giardino/parco)."
+  },
+  {
+    "id": "DRILL-A-48",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n大学で 日本の 歴史を 【専門】に 研究して います。",
+    "options": {
+      "A": "せんもん",
+      "B": "ぜんもん",
+      "C": "せんぶん",
+      "D": "ぜんぶん"
+    },
+    "answer": "A",
+    "explanation": "「専門」 si legge せんもん (senmon). 専 (せん, sordo), 門 (もん)."
+  },
+  {
+    "id": "DRILL-A-49",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nビルの 1階の 【受付】で 名前を 書いて ください。",
+    "options": {
+      "A": "うけつけ",
+      "B": "うけづけ",
+      "C": "うけつき",
+      "D": "うげつけ"
+    },
+    "answer": "A",
+    "explanation": "「受付」 si legge うけつけ (uketsuke). 受ける (うける) + 付ける (つける) = うけつけ."
+  },
+  {
+    "id": "DRILL-A-50",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n駅の 近くに 住むのは とても 【便利】です。",
+    "options": {
+      "A": "べんり",
+      "B": "へんり",
+      "C": "べんりん",
+      "D": "びんり"
+    },
+    "answer": "A",
+    "explanation": "「便利」 si legge べんり (benri). 便 è べん, 利 è り."
+  },
+  {
+    "id": "DRILL-A-51",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n京都には 【有名】な お寺が たくさん あります。",
+    "options": {
+      "A": "ゆうめい",
+      "B": "ゆめい",
+      "C": "ゆうみょう",
+      "D": "ゆみょう"
+    },
+    "answer": "A",
+    "explanation": "「有名」 si legge ゆうめい (yūmei). 有 (ゆう, con allungamento), 名 (めい)."
+  },
+  {
+    "id": "DRILL-A-52",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n重い 【荷物】を 車に つみこみました。",
+    "options": {
+      "A": "にもつ",
+      "B": "かもつ",
+      "C": "にぶつ",
+      "D": "にもの"
+    },
+    "answer": "A",
+    "explanation": "「荷物」 si legge にもつ (nimotsu). 荷 (に) + 物 (もつ). かもつ è 貨物 (merci commerciali)."
+  },
+  {
+    "id": "DRILL-A-53",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n外国での 生活は とても 良い 【経験】に なりました。",
+    "options": {
+      "A": "けいけん",
+      "B": "けけん",
+      "C": "けいげん",
+      "D": "きけん"
+    },
+    "answer": "A",
+    "explanation": "「経験」 si legge けいけん (keiken). 経 (けい, lungo) + 験 (けん, sordo)."
+  },
+  {
+    "id": "DRILL-A-54",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n重い 荷物を 部屋まで 【はこびました】。",
+    "options": {
+      "A": "運びました",
+      "B": "連びました",
+      "C": "達びました",
+      "D": "送びました"
+    },
+    "answer": "A",
+    "explanation": "「はこぶ」 (trasportare) si scrive 運. 連 (つれる, accompagnare), 達 (たつ, raggiungere), 送 (おくる, spedire)."
+  },
+  {
+    "id": "DRILL-A-55",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n宿題を 家に 【わすれました】。",
+    "options": {
+      "A": "忘れました",
+      "B": "忙れました",
+      "C": "心れました",
+      "D": "忌れました"
+    },
+    "answer": "A",
+    "explanation": "「わすれる」 (dimenticare) si scrive 忘 (radicale del cuore 心 in basso). 忙 (いそがしい, occupato, con 忄 a sinistra)."
+  },
+  {
+    "id": "DRILL-A-56",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n毎朝 シャワーを 【あびます】。",
+    "options": {
+      "A": "浴びます",
+      "B": "谷びます",
+      "C": "沿びます",
+      "D": "治びます"
+    },
+    "answer": "A",
+    "explanation": "「あびる」 (fare la doccia / cospargersi) si scrive 浴 (radicale acqua 氵 + 谷)."
+  },
+  {
+    "id": "DRILL-A-57",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\n本棚に 辞書を 【ならべました】。",
+    "options": {
+      "A": "並べました",
+      "B": "普べました",
+      "C": "業べました",
+      "D": "立べました"
+    },
+    "answer": "A",
+    "explanation": "「ならべる」 (allineare/disporre in fila) si scrive 並 (ならべる). 普 è ふ (ordinario in 普請/普通)."
+  },
+  {
+    "id": "DRILL-A-58",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう かきますか。\nこの 靴は とても 【じょうぶ】です。",
+    "options": {
+      "A": "丈夫",
+      "B": "大夫",
+      "C": "太夫",
+      "D": "犬夫"
+    },
+    "answer": "A",
+    "explanation": "「じょうぶ」 (resistente/robusto) si scrive 丈夫 (丈 + 夫). Distrattori tipici: 大 (grande), 太 (grasso)."
+  },
+  {
+    "id": "DRILL-A-59",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n会議に 10分（ ）遅刻してしまいました。",
+    "options": {
+      "A": "＿＿＿",
+      "B": "に",
+      "C": "で",
+      "D": "を"
+    },
+    "answer": "A",
+    "explanation": "I quantificatori temporali che esprimono la misura o entità del ritardo/anticipo (10分) non prendono particelle prima di 遅刻する: 10分遅刻しました."
+  },
+  {
+    "id": "DRILL-A-60",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nこの 電車は あと 1時間（ ）東京に着きます。",
+    "options": {
+      "A": "で",
+      "B": "に",
+      "C": "を",
+      "D": "から"
+    },
+    "answer": "A",
+    "explanation": "La particella で esprime il limite temporale o intervallo entro cui un'azione si conclude: あと1時間で (tra un'ora / entro un'ora)."
+  },
+  {
+    "id": "DRILL-A-61",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n空（ ）たくさんの 鳥が 飛んで います。",
+    "options": {
+      "A": "を",
+      "B": "で",
+      "C": "に",
+      "D": "へ"
+    },
+    "answer": "A",
+    "explanation": "Con verbi di moto continuo nello spazio tridimensionale (飛ぶ, 散歩する, 走る), lo spazio percorso è marcato da を: 空を飛ぶ (volare nel cielo)."
+  },
+  {
+    "id": "DRILL-A-62",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n友達に 英語の 宿題を 手伝って （ ）。",
+    "options": {
+      "A": "もらいました",
+      "B": "くれました",
+      "C": "あげました",
+      "D": "やりました"
+    },
+    "answer": "A",
+    "explanation": "Con la particella に (友達に), la persona da cui si riceve un favore o aiuto richiede 〜てもらう: 友達に手伝ってもらいました. Con が si userebbe 友達が手伝ってくれました."
+  },
+  {
+    "id": "DRILL-A-63",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n風が 強かったので、ろうそくの 火が （ ）しまいました。",
+    "options": {
+      "A": "消えて",
+      "B": "消して",
+      "C": "止めて",
+      "D": "落として"
+    },
+    "answer": "A",
+    "explanation": "La fiamma della candela (火が) è il soggetto di un evento spontaneo: serve il verbo intransitivo 消える (きえる, spegnersi). 消す (けす) è transitivo (spegnere)."
+  },
+  {
+    "id": "DRILL-A-64",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\nボタンを 押すと、自動ドアが （ ）。",
+    "options": {
+      "A": "開きます",
+      "B": "開けます",
+      "C": "始まります",
+      "D": "つけます"
+    },
+    "answer": "A",
+    "explanation": "自動ドアが... è una costruzione intransitiva con が: serve 開く (あく, aprirsi). 開ける (あける) è transitivo (aprire qualcosa)."
+  },
+  {
+    "id": "DRILL-A-65",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "つぎの ぶんの （ ）には どれを いれますか。\n家に 帰ったら、まず 上着を （ ）ます。",
+    "options": {
+      "A": "脱ぎ",
+      "B": "履き",
+      "C": "被り",
+      "D": "掛け"
+    },
+    "answer": "A",
+    "explanation": "Svestirsi / togliere abiti o scarpe si esprime con 脱ぐ (ぬぐ). 履く (はく) è indossare pantaloni/scarpe, 被る (かぶる) cappelli."
   }
 ]
