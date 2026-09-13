@@ -11,6 +11,7 @@ import { loadExam, loadExamAnalytics, submitExam, switchExamBranch, selectExamOp
 import { loadInterview, speakJapanese, toggleInlineModel } from './modules/interview.js';
 import { loadResearchDossiers, previewDossier } from './modules/research.js';
 import { initDailyRoutine, launchRoutineSlot, markRoutineSlotDone, unmarkRoutineSlot, toggleRoutineSlot, updateRoutineProgress } from './modules/routine.js';
+import { syncCurriculumPlan } from './modules/routine_curriculum.js';
 import { initDragScroll } from './modules/drag_scroll.js';
 
 // Sinoira Gang Navigation globals
@@ -94,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial stage hydration (Routine & Study baseline)
   initDailyRoutine();
+  syncCurriculumPlan();
   loadStudyStatus();
   syncSlot1UI();
 });

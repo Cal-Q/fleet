@@ -25,6 +25,7 @@ from api.routes.exam_routes import router as exam_router
 from api.routes.career_routes import router as career_router
 from api.routes.system_routes import router as system_router
 from api.routes.style_routes import router as style_router
+from api.routes.curriculum_routes import router as curriculum_router
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
@@ -65,6 +66,7 @@ app.include_router(exam_router)
 app.include_router(career_router)
 app.include_router(system_router)
 app.include_router(style_router)
+app.include_router(curriculum_router)
 
 
 @app.api_route("/", methods=["GET", "HEAD"])

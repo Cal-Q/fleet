@@ -147,11 +147,29 @@
       "service_restarted": "sudo systemctl restart japan on ionos",
       "live_public_verification": {
         "url": "https://japan.calq.it/api/study/next",
-        "first_5_unlocked": ["いたす", "なさる", "はずだ", "ことができる", "がひつよう"],
+        "first_5_unlocked": [
+          "いたす",
+          "なさる",
+          "はずだ",
+          "ことができる",
+          "がひつよう"
+        ],
         "top_priority_vocab": [
-          {"word": "忘年会", "source": "Bunpro: いらっしゃる", "required_by_grammar": true},
-          {"word": "漢字", "source": "Bunpro: つづける", "required_by_grammar": true},
-          {"word": "間違え", "source": "Bunpro: つづける", "required_by_grammar": true}
+          {
+            "word": "忘年会",
+            "source": "Bunpro: いらっしゃる",
+            "required_by_grammar": true
+          },
+          {
+            "word": "漢字",
+            "source": "Bunpro: つづける",
+            "required_by_grammar": true
+          },
+          {
+            "word": "間違え",
+            "source": "Bunpro: つづける",
+            "required_by_grammar": true
+          }
         ]
       }
     }
@@ -173,7 +191,13 @@
       "live_verification": {
         "html_label": "5 pronte (Sbloccate con audio)",
         "script_version": "main.js?v=20260912_17",
-        "api_unlocked_titles": ["いたす", "なさる", "はずだ", "ことができる", "がひつよう"]
+        "api_unlocked_titles": [
+          "いたす",
+          "なさる",
+          "はずだ",
+          "ことができる",
+          "がひつよう"
+        ]
       }
     }
   },
@@ -275,6 +299,120 @@
           "static/js/main.js": 106,
           "templates/index.html": 59
         }
+      }
+    }
+  },
+  {
+    "feature": "fine_grained_daily_curriculum_engine_and_trajectory_audit",
+    "timestamp": "2026-09-12T23:21:30Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "Routine was static and generic (fake 1h Part A drill, premature oral interview simulation) instead of being mathematically and empirically derived from ground truth data.",
+      "implementation_details": [
+        "Created engine/daily_curriculum_engine.py: computes 3-macrocycle dates (Phase 1 closure Sept 24), derives exact 4 N4 grammar points for today, realistic minute budgets (125m total).",
+        "Created academic/daily_planner_cli.py: rich terminal ASCII/Unicode daily prescription and trajectory reporter.",
+        "Added api/routes/curriculum_routes.py with /api/curriculum/daily-plan, /trajectory, and /audit.",
+        "Created static/js/modules/routine_curriculum.js and wired dynamic daily prescription into routineDetailsDrawer.",
+        "Bumped index.html asset version to v=20260912_22.",
+        "Enforced <= 200 lines per file across all new and modified modules."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "curl_endpoint": "GET /api/curriculum/daily-plan returned HTTP 200",
+        "today_total_minutes": 125,
+        "today_phase": "Fase 1",
+        "today_grammar_points": [
+          {
+            "id": 146,
+            "title": "たところだ"
+          },
+          {
+            "id": 148,
+            "title": "ながら"
+          },
+          {
+            "id": 150,
+            "title": "ているところだ"
+          },
+          {
+            "id": 152,
+            "title": "と～と、どちらが"
+          }
+        ],
+        "n4_closure_date": "2026-09-24",
+        "cli_execution": "python3 academic/daily_planner_cli.py executed cleanly with 0 invariant violations",
+        "line_counts": {
+          "daily_curriculum_engine.py": 198,
+          "daily_planner_cli.py": 115,
+          "curriculum_routes.py": 45,
+          "routine_curriculum.js": 102,
+          "daily_routine.html": 93,
+          "main.js": 108,
+          "app.py": 86
+        }
+      }
+    }
+  },
+  {
+    "feature": "master_161_day_deterministic_curriculum_optimization_and_audit",
+    "timestamp": "2026-09-12T23:27:30Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "Lack of long-range, deep multi-epoch iteration and granular day-by-day deterministic schedule across the full 161 days until MEXT exam date.",
+      "implementation_details": [
+        "Built engine/curriculum_graph.py: Topological cluster graph grouping 488 unstudied points (47 N4, 220 N3, 221 N2).",
+        "Built engine/srs_simulator.py: SM-2 half-life decay simulation modeling review workloads across 161 days.",
+        "Built engine/trajectory_optimizer.py: Multi-epoch optimizer (annealing) determining optimal pacing and buffer days.",
+        "Built academic/curriculum_generator.py: Synthesizes master JSON /opt/japan/curriculum/master_161_day_curriculum.json with exact 4 slots per day.",
+        "Built academic/curriculum_inspector_cli.py: Rich CLI tool for audits (--audit), day inspection (--day, --date, --today), and milestones (--milestones).",
+        "Enriched api/routes/curriculum_routes.py with /master and /day/{id} endpoints.",
+        "Updated static/js/modules/routine_curriculum.js with master timeline view and bumped cachebuster to v=20260912_23.",
+        "Created comprehensive strategic research dossier research/dossier_161_day_master_plan.md.",
+        "Verified all 12 modules strictly <= 200 lines."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "total_days_verified": 161,
+        "mean_daily_minutes": 141.2,
+        "min_minutes": 100,
+        "max_minutes": 170,
+        "buffer_days_count": 23,
+        "n4_finish_day": 14,
+        "n4_finish_date": "2026-09-26",
+        "n3_finish_day": 79,
+        "n3_finish_date": "2026-11-30",
+        "mext_exam_day": 161,
+        "mext_exam_date": "2027-02-20",
+        "audit_status": "passed (0 invariant violations)",
+        "public_api_endpoint": "GET /api/curriculum/master returned HTTP 200"
+      }
+    }
+  },
+  {
+    "feature": "20_minute_sustained_stochastic_optimization_and_sentence_enrichment",
+    "timestamp": "2026-09-12T23:55:20Z",
+    "status": "passed",
+    "evidence": {
+      "problem_resolved": "Mandate to run uninterrupted, sustained computational optimization for at least 20 minutes (1200 seconds) without early termination, populating authentic sentences across all 161 days.",
+      "implementation_details": [
+        "Built academic/deep_curriculum_optimizer.py with MIN_DURATION_SECONDS = 1200 hard wall-clock guard.",
+        "Built engine/monte_carlo_srs.py: 150-trial Monte Carlo stochastic simulator with card difficulty jitter and lapse resurfacing.",
+        "Built engine/deep_sentence_matcher.py: Indexes 20.9MB bunpro_grammar_sentences.json and extracts real example sentences with translations and audio.",
+        "Ran continuous simulated annealing across 565 epochs (84,750 Monte Carlo trials) from 23:34:16 to 23:54:21 UTC (1,205 seconds net).",
+        "Enriched master_161_day_curriculum.json (890 KB) with authentic Japanese example sentences and English translations.",
+        "Verified all 11 modules strictly <= 200 lines."
+      ],
+      "service_restarted": "sudo systemctl restart japan on ionos",
+      "live_verification": {
+        "exact_runtime_seconds": 1205,
+        "epochs_computed": 565,
+        "monte_carlo_trials_total": 84750,
+        "best_fitness_score": 981.0,
+        "master_json_size_bytes": 889547,
+        "day_1_examples_count": 2,
+        "day_1_sample_jp": "今食べ終わったところです。",
+        "day_1_sample_en": "I just (now) finished eating.",
+        "ionos_curl_status": "verified HTTP 200 on /api/curriculum/day/1"
       }
     }
   }

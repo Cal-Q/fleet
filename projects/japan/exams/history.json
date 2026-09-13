@@ -77,6 +77,82 @@
           "total": 1
         }
       }
+    },
+    {
+      "session_id": "sess_1789254211",
+      "timestamp": "2026-09-12T23:03:31.188816",
+      "score": 11,
+      "total": 31,
+      "percentage": 35.5,
+      "time_seconds": 454,
+      "breakdown": {
+        "A": {
+          "correct": 10,
+          "total": 13
+        },
+        "B": {
+          "correct": 1,
+          "total": 12
+        },
+        "C": {
+          "correct": 0,
+          "total": 6
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading / Kanji Writing": {
+          "correct": 1,
+          "total": 1
+        },
+        "Grammar Particles": {
+          "correct": 3,
+          "total": 4
+        },
+        "Vocabulary in Context": {
+          "correct": 3,
+          "total": 4
+        },
+        "Compound Verbs (複合動詞)": {
+          "correct": 2,
+          "total": 2
+        },
+        "Keigo (敬語 - Sonkeigo/Kenjougo)": {
+          "correct": 0,
+          "total": 4
+        },
+        "Functional Grammar (文法機能語)": {
+          "correct": 0,
+          "total": 1
+        },
+        "Advanced Written Expressions (文章語表現)": {
+          "correct": 0,
+          "total": 1
+        },
+        "Formal Connectives & Idioms": {
+          "correct": 0,
+          "total": 2
+        },
+        "Academic Reading Comprehension": {
+          "correct": 0,
+          "total": 1
+        },
+        "Functional Grammar": {
+          "correct": 2,
+          "total": 7
+        },
+        "Causative-Passive": {
+          "correct": 0,
+          "total": 1
+        },
+        "Sentence Structure & Connectives": {
+          "correct": 0,
+          "total": 1
+        },
+        "Advanced Written Expressions": {
+          "correct": 0,
+          "total": 2
+        }
+      }
     }
   ]
 }
