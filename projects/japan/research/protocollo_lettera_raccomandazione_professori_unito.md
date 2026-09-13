@@ -54,6 +54,15 @@ Se il candidato ha fallito o rifiutato un appello precedente con il docente:
    - *Pre-Appello*: Breve colloquio a ricevimento (anche 5 minuti) per mostrare umiltà e serietà: *"Professoressa, ho fatto tesoro delle sue indicazioni al primo appello e sto lavorando per colmare le lacune sui punti X e Y"*.
    - *Post-Superamento*: Ringraziamento cordiale e presentazione del dossier MEXT "chiavi-in-mano" già pronto per la firma.
 
+### 4.1 Il Caso della "Doppia Cattedra" (Stessa Docente per 30L e Lingua)
+
+Quando la docente che ha bocciato a Lingua è la **stessa identica persona che ha assegnato il 30 e Lode** in Introduzione agli Studi sul Giappone:
+1. **La Docente Conosce Già il Tuo Valore Massimo**: Non pensa che tu sia incapace; sa già che sei uno studente da 30L. La bocciatura a Lingua non era disprezzo, ma severità tecnica sui meccanismi grammaticali ("so cosa puoi dare e non ti lascio passare sotto standard").
+2. **Impatto della Resilienza**: Chi ha assegnato un 30L si sente accademisticamente investito nel successo dello studente. Vederti tornare e superare brillantemente la lingua trasforma l'inciampo in una prova lampante di serietà e tenacia.
+3. **Valore per il Modulo MEXT**: Sul format ministeriale, una raccomandazione firmata dalla stessa docente che copre sia gli studi d'area/culturali che la progressione linguistica ha un'autorevolezza raddoppiata agli occhi dell'Ambasciata.
+4. **Script di Riallineamento al Ricevimento**:
+   > *"Professoressa, ci tenevo particolarmente a fare bene con lei dopo il percorso di Introduzione agli Studi sul Giappone. All'appello scorso ho compreso chiaramente quali automatismi linguistici dovevo consolidare; ho lavorato duramente in queste settimane per riportare la preparazione al livello di rigore che la materia richiede."*
+
 ---
 
 ## 5. Piano B Istituzionale: Alternativa Multi-Docente UniTO
