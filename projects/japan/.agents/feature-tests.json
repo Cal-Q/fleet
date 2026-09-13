@@ -1,5 +1,26 @@
 [
   {
+    "feature": "mext_exam_lab_parte_1_default_goal_and_auto_purge",
+    "timestamp": "2026-09-13T21:30:00Z",
+    "status": "passed",
+    "evidence": {
+      "goal_alignment": "Confirmed Parte 1 (Part A - 初級) is the true primary goal of Fase 1 (Settembre) targeting 95% (33/35 pt).",
+      "remediation": [
+        "Updated static/js/main.js onStageActivated('exams') to default directly to loadExam('A') instead of 'all'.",
+        "Updated templates/components/tab_exams.html to make 'Parte 1: A (初級)' active by default with goal telemetry box.",
+        "Implemented daily auto-purge for mext_exam_answers in static/js/modules/exams.js so stale answers from previous days are automatically cleared.",
+        "Cleared scratch answers from localStorage upon submitExam() execution."
+      ],
+      "live_verification": "HTTP 200 on https://japan.calq.it/, asset version v=20260913_22 verified, lines per file <= 200.",
+      "file_line_counts": {
+        "static/js/modules/exams.js": 197,
+        "static/js/main.js": 109,
+        "templates/components/tab_exams.html": 138,
+        "templates/index.html": 59
+      }
+    }
+  },
+  {
     "feature": "mext_exam_lab_parte_3_reset_and_progress_isolation",
     "timestamp": "2026-09-13T21:08:00Z",
     "status": "passed",
