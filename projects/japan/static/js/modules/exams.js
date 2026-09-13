@@ -79,7 +79,8 @@ export async function loadExam(section = "all", clean = false) {
           <span class="flex items-center gap-1 font-bold text-[#181A1B]"><span>📝</span><span>Nota / Ragionamento per revisione:</span></span>
           <span id="note_status_${q.id}" class="text-[11px] font-mono text-neutral-400">Salvataggio automatico</span>
         </div>
-        <textarea id="note_${q.id}" rows="2" placeholder="Scrivi qui il tuo ragionamento o dubbi per la revisione..." oninput="window.saveQuestionNote('${q.id}')" class="w-full p-2.5 text-xs md:text-sm border border-black/10 bg-[#FAF9F6] focus:bg-white focus:border-black focus:outline-none transition rounded-none resize-y font-sans leading-relaxed">${(note && !note.includes('Commento aggiornato')) ? note : ''}</textarea>
+        <textarea id="note_${q.id}" rows="2" placeholder="Scrivi qui il tuo ragionamento o dubbi per questa prova..." oninput="window.saveQuestionNote('${q.id}')" class="w-full p-2.5 text-xs md:text-sm border border-black/10 bg-[#FAF9F6] focus:bg-white focus:border-black focus:outline-none transition rounded-none resize-y font-sans leading-relaxed"></textarea>
+        ${(note && !note.includes('Commento aggiornato')) ? `<details class="text-[11px] font-mono text-neutral-500 pt-0.5"><summary class="cursor-pointer hover:text-black font-bold select-none tap-press">📜 Appunto sessione precedente (clicca per mostrare)</summary><div class="p-2 mt-1 bg-neutral-100 border border-black/5 text-neutral-700 font-sans italic whitespace-pre-line">${note}</div></details>` : ''}
       </div>
     `;
     container.appendChild(card);
