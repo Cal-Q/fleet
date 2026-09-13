@@ -840,5 +840,23 @@
         "research/registro_proattivo_rischi_e_soluzioni_mext.md": 50
       }
     }
+  },
+  {
+    "feature": "mext_backup_sentinel_and_p0_bureaucratic_roadmap",
+    "timestamp": "2026-09-13T23:04:00Z",
+    "status": "passed",
+    "evidence": {
+      "backup_sentinel": "Created core/anki_sync/backup_sentinel.py (93 lines) registering custom unicase collation, running PRAGMA integrity_check, detecting orphan cards, and generating atomic rotating SQLite snapshots.",
+      "cli_command": "Enriched core/anki_cli.py (196 lines) with check subcommand and automatic pre-sync snapshot creation, executed live on Ionos with 0 exit code.",
+      "ui_timeline": "Added P0 Bureaucratic Roadmap banner to Leaf 2 of templates/components/tab_dossier.html (136 lines) detailing deadlines: 15 Nov preavviso, 01 Dic Esse3, 15 Dic Rx, 05 Feb plico.",
+      "documentation": "Updated README.md (87 lines) and research/registro_proattivo_rischi_e_soluzioni_mext.md (52 lines) documenting R-19 and R-20 as Attivo.",
+      "file_line_counts": {
+        "core/anki_sync/backup_sentinel.py": 93,
+        "core/anki_cli.py": 196,
+        "templates/components/tab_dossier.html": 136,
+        "README.md": 87,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 52
+      }
+    }
   }
 ]
