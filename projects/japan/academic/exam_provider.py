@@ -41,6 +41,49 @@ def get_all_questions_map() -> Dict[str, Dict[str, Any]]:
     return q_map
 
 
+def _stratified_part_a(items: List[Dict[str, Any]], count: int = 12, salt: str = "") -> List[Dict[str, Any]]:
+    """
+    Invariant 25: Stratified Blueprint Quota for Part A.
+    Guarantees balanced pedagogical distribution:
+    - 5x Grammar & Particles (N5/N4 core)
+    - 3x Kanji Orthography / Writing (N5/N4 core)
+    - 3x Core Kanji Reading & Common Vocab (N5/N4 core)
+    - 1x Advanced Phonetic / Jukujikun Trap (N3 limit)
+    Strictly eliminates category clustering and limits traps to <= 1 per session.
+    """
+    traps, grammar, writing, reading = [], [], [], []
+    for q in items:
+        cat = q.get("category", "")
+        qid = q.get("id", "")
+        try:
+            qnum = int(qid.split("-")[-1])
+        except Exception:
+            qnum = 0
+        if "熟字訓" in cat or qnum >= 111:
+            traps.append(q)
+        elif any(k in cat for k in ["Grammar", "Particle", "Form", "Conditional", "Request", "Transitive", "Conjunction"]):
+            grammar.append(q)
+        elif any(k in cat for k in ["Writing", "Homophone", "Lookalike"]):
+            writing.append(q)
+        else:
+            reading.append(q)
+
+    today_str = datetime.now().strftime("%Y-%m-%d") + salt
+
+    def _sample(bucket: List[Dict[str, Any]], n: int, b_salt: str) -> List[Dict[str, Any]]:
+        if not bucket or n <= 0:
+            return []
+        seed = int(hashlib.md5((today_str + b_salt).encode()).hexdigest(), 16)
+        start = seed % len(bucket)
+        return [bucket[(start + i * 7) % len(bucket)] for i in range(n)]
+
+    if count == 12:
+        return _sample(grammar, 5, "g") + _sample(writing, 3, "w") + _sample(reading, 3, "r") + _sample(traps, 1, "t")
+    elif count <= 6:
+        return _sample(grammar, 2, "gs") + _sample(writing, 1, "ws") + _sample(reading, 2, "rs")
+    return _rotate_daily_slice(items, count=count, salt=salt)
+
+
 def _rotate_daily_slice(items: List[Dict[str, Any]], count: int = 12, salt: str = "") -> List[Dict[str, Any]]:
     """Deterministically selects `count` items with coprime stride to prevent category clustering."""
     if not items or len(items) <= count:
@@ -80,20 +123,27 @@ def get_questions_for_session(
     """
     sec_upper = section.upper() if section else "ALL"
 
-    if sec_upper in ["A", "B", "C"]:
+    if sec_upper == "A":
+        pool = _get_pool_for_section("A")
+        if category:
+            pool = [q for q in pool if q.get("category", "").lower() == category.lower()]
+            selected = _rotate_daily_slice(pool, count=limit or 12, salt="A_cat")
+        else:
+            selected = _stratified_part_a(pool, count=limit or 12, salt="A")
+    elif sec_upper in ["B", "C"]:
         pool = _get_pool_for_section(sec_upper)
         if category:
             pool = [q for q in pool if q.get("category", "").lower() == category.lower()]
         target_count = limit or (8 if sec_upper == "C" else 12)
         selected = _rotate_daily_slice(pool, count=target_count, salt=sec_upper)
     elif sec_upper == "MOCK":
-        pool_a = _rotate_daily_slice(_get_pool_for_section("A"), count=12, salt="MOCK_A")
+        pool_a = _stratified_part_a(_get_pool_for_section("A"), count=12, salt="MOCK_A")
         pool_b = _rotate_daily_slice(_get_pool_for_section("B"), count=10, salt="MOCK_B")
         pool_c = _rotate_daily_slice(_get_pool_for_section("C"), count=8, salt="MOCK_C")
         selected = pool_a + pool_b + pool_c
     else:
         # Balanced daily mock battery across all 3 sections
-        pool_a = _rotate_daily_slice(_get_pool_for_section("A"), count=5, salt="A_all")
+        pool_a = _stratified_part_a(_get_pool_for_section("A"), count=5, salt="A_all")
         pool_b = _rotate_daily_slice(_get_pool_for_section("B"), count=5, salt="B_all")
         pool_c = _rotate_daily_slice(_get_pool_for_section("C"), count=4, salt="C_all")
         selected = pool_a + pool_b + pool_c

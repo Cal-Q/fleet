@@ -58,13 +58,14 @@
 | **R-36** | **Disorientamento Fonetico Mascherine Commissari**: Attenuazione frequenze vocali $>2.5$kHz e ambiguità morfologica su finali verbali. | Febbraio 2027 | Protocollo [protocollo_decodifica_acustica_mascherine_colloquio.md](file:///mnt/workspaces/japan/research/protocollo_decodifica_acustica_mascherine_colloquio.md) con 3 formule di chiarimento attivo in Keigo. | ✅ Attivo |
 | **R-37** | **Blocco Cognitivo su Kanji Singolo Parte A**: Fissazione ossessiva $>25$s su composti rari che brucia tempo prezioso per Parte C. | Settembre – Febbraio | Protocollo [protocollo_abbandono_tattico_e_pacing_salvavita_parte_a.md](file:///mnt/workspaces/japan/research/protocollo_abbandono_tattico_e_pacing_salvavita_parte_a.md) con regola dei 20s e micro-punto. | ✅ Attivo |
 | **R-38** | **Discrepanza Formato Lettera Raccomandazione UniTO**: Lettera generica italiana priva di griglia comparativa o lembo non sigillato. | Novembre – Gennaio | Protocollo [protocollo_lettera_raccomandazione_professori_unito.md](file:///mnt/workspaces/japan/research/protocollo_lettera_raccomandazione_professori_unito.md) con format MEXT e sigillo ermetico. | ✅ Attivo |
+| **R-39** | **Clusterizzazione Lessicale & Sovraccarico da Iterazione Cieca (`/goal`)**: Aggregazione di tranelli N3/N2 avanzati in coda al pool e rotazione contigua senza quote di categoria che azzera il punteggio di Parte A. | Tutto il periodo | Invariante 25 (Blueprint Quota stratificato: 5 Grammatica, 3 Scrittura, 3 Lettura, max 1 Tranello), Invariante 26 (Furigana obbligatorio sui kanji non-target N3+ nei carrier), Invariante 27 ([test_exam_distribution.py](file:///mnt/workspaces/japan/academic/test_exam_distribution.py) a 60 giorni). | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-39 (Decadimento della Velocità Motoria Fine nel Rientro da Roma a Freddo)**: Ipotermia delle dita sul treno Frecciarossa/Italo per il rientro, con impatto sui successivi esami della sessione invernale UniTO.
-2. **Vulnerabilità R-40 (Asimmetria Temporale tra Risultati First Screening e Pianificazione Secondo Semestre UniTO)**: Gestione del piano carriera L-11 nel limbo temporale tra marzo e luglio 2027 in attesa del Second Screening definitivo da Tokyo.
+1. **Vulnerabilità R-40 (Decadimento della Velocità Motoria Fine nel Rientro da Roma a Freddo)**: Ipotermia delle dita sul treno Frecciarossa/Italo per il rientro, con impatto sui successivi esami della sessione invernale UniTO.
+2. **Vulnerabilità R-41 (Asimmetria Temporale tra Risultati First Screening e Pianificazione Secondo Semestre UniTO)**: Gestione del piano carriera L-11 nel limbo temporale tra marzo e luglio 2027 in attesa del Second Screening definitivo da Tokyo.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*

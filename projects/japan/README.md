@@ -85,3 +85,6 @@ python3 core/anki_cli.py reschedule --days 14
 2. **Nessun Commit non Verificato**: Ogni mutazione viene validata con probe fisiche e registrata in [`.agents/feature-tests.json`](file:///mnt/workspaces/japan/.agents/feature-tests.json).
 3. **Divieto di Modifiche tramite Script Python Estemporanei**: Rispetto della Regola 22 (solo tool deterministici `replace_file_content` o `write_to_file`).
 4. **Anticipazione Proattiva Costante**: Consultazione e aggiornamento continuo di [`research/registro_proattivo_rischi_e_soluzioni_mext.md`](file:///mnt/workspaces/japan/research/registro_proattivo_rischi_e_soluzioni_mext.md).
+5. **Quota Stratificata Deterministica (Invariante 25)**: Parte A rigorosamente bilanciata (5 Grammatica/Particelle, 3 Scrittura, 3 Lettura core, max 1 Tranello N3). Zero clusterizzazioni.
+6. **Gating Frasi di Supporto & Furigana (Invariante 26)**: In Fase 1, nessun kanji sopra N4 nelle frasi carrier privo di furigana glossata.
+7. **Audit Pre-Commit a 60 Giorni (Invariante 27)**: Validazione continua con `python3 academic/test_exam_distribution.py`.

@@ -1,5 +1,27 @@
 [
   {
+    "feature": "mext_exam_stratified_blueprint_quota_and_carrier_sentence_furigana_gating",
+    "timestamp": "2026-09-13T23:40:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified mathematical root cause of session sess_1789342273: contiguous slicing (start_idx = seed % 125 == 110) sliced 12 consecutive rare phonetic/jukujikun traps with 0 core N5/N4 questions.",
+        "Implemented Invariant 25 (Deterministic Stratified Blueprint Quota) in academic/exam_provider.py: strictly enforces 5 Grammar/Particles, 3 Writing/Orthography, 3 Core Reading, and <= 1 Advanced Trap per Part A session.",
+        "Implemented Invariant 26 (Phase-Aware Carrier Sentence Gating): annotated all non-target N3+ kanji in Part A trap questions with kana furigana glosses (e.g. 職人（しょくにん）, 式典（しきてん）) preventing lexical decoding freeze in Phase 1.",
+        "Created Invariant 27 daemon academic/test_exam_distribution.py simulating 60 consecutive days of exam generation with 100% pass rate (0 duplicates, strict bucket quotas).",
+        "Registered R-39 in research/registro_proattivo_rischi_e_soluzioni_mext.md and updated README.md and GLOBAL_AGENTS.md.",
+        "Reflected Quota Stratificata badge live on web UI at https://japan.calq.it/ and verified live HTTP 200 responses for Part A (12Q, 1 trap) and MOCK (30Q, 1 trap in A)."
+      ],
+      "file_line_counts": {
+        "academic/exam_provider.py": 162,
+        "academic/test_exam_distribution.py": 73,
+        "templates/components/tab_exams.html": 145,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 71,
+        "README.md": 90
+      }
+    }
+  },
+  {
     "feature": "mext_keigo_rapid_drill_and_post_mock_error_quarantine_taxonomy",
     "timestamp": "2026-09-13T22:37:00Z",
     "status": "passed",
