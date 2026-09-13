@@ -95,7 +95,11 @@ def get_next_items(
 ) -> Dict[str, Any]:
     today_stats = load_daily_stats()
 
-    # 1. KANJI
+    # 1. VOCAB (Prioritizes unstudied vocab required by upcoming grammar rules)
+    vocab_items = get_grammar_priority_vocab(vocab_limit=vocab_limit)
+    priority_kanji = {c for v in vocab_items for c in v.get("word", "") if "\u4e00" <= c <= "\u9fff"}
+
+    # 2. KANJI (Prioritizes kanji required by grammar vocabulary, then JLPT level and ID)
     studied_kanji = get_studied_kanji_set()
     global _KODANSHA_CACHE, _KODANSHA_MTIME
     kanji_items = []
@@ -106,11 +110,12 @@ def get_next_items(
                 _KODANSHA_CACHE = json.load(f)
             _KODANSHA_MTIME = mtime
         unstudied_k = [k for k in _KODANSHA_CACHE if k["kanji"] not in studied_kanji]
-        unstudied_k.sort(key=lambda k: (LEVEL_ORDER.get(k.get("jlpt_level", "Hyōgai"), 99), k["id"]))
+        unstudied_k.sort(key=lambda k: (
+            0 if k["kanji"] in priority_kanji else 1,
+            LEVEL_ORDER.get(k.get("jlpt_level", "Hyōgai"), 99),
+            k["id"]
+        ))
         kanji_items = unstudied_k[:kanji_limit]
-
-    # 2. VOCAB (Prioritizes unstudied vocab required by upcoming grammar rules)
-    vocab_items = get_grammar_priority_vocab(vocab_limit=vocab_limit)
 
     # 3. GRAMMAR (Gated: only rules whose valid dictionary vocabularies have reps >= 1)
     unlocked_g, locked_g = evaluate_grammar_queue(grammar_limit=grammar_limit)

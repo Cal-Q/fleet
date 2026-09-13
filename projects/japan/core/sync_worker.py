@@ -14,7 +14,7 @@ from typing import Optional, Tuple
 REPO_ROOT = "/opt/japan/core"
 SYNC_AND_PUSH_PATH = os.path.join(REPO_ROOT, "sync_and_push.py")
 SYNC_QUICK_PATH = os.path.join(REPO_ROOT, "sync_quick.py")
-ANKI_PYTHON = "/usr/local/share/anki/python/bin/python3"
+ANKI_PYTHON = "/usr/bin/python3" if not os.path.isfile("/usr/local/share/anki/python/bin/python3") else "/usr/local/share/anki/python/bin/python3"
 
 _LOCK = threading.Lock()
 _LAST_SYNC_TIME = 0.0

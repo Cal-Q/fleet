@@ -33,44 +33,29 @@ export function formatPacingTime(sec) {
   return `${m}:${s}`;
 }
 
-export function evaluatePacingMetrics(elapsedSec, answeredCount, totalCount) {
+export function evaluatePacingMetrics(elapsedSec, answeredCount, totalCount, section = "A") {
   if (answeredCount <= 0) {
-    return {
-      avgSec: 0,
-      status: "idle",
-      label: "In attesa",
-      badgeClass: "text-neutral-400 bg-[#FAF8F5] border-black/10"
-    };
+    return { avgSec: 0, status: "idle", label: "In attesa", badgeClass: "text-neutral-400 bg-[#FAF8F5] border-black/10" };
   }
 
   const avgSec = Math.round(elapsedSec / answeredCount);
-  // Target: <= 30s per question is optimal for completing 100 questions within 60 min
-  if (avgSec <= 30) {
-    return {
-      avgSec,
-      status: "optimal",
-      label: `${avgSec}s/q • Ottimale`,
-      badgeClass: "text-[#264332] bg-[#EEF7F1] border-[#264332]/30"
-    };
-  } else if (avgSec <= 45) {
-    return {
-      avgSec,
-      status: "warning",
-      label: `${avgSec}s/q • Attenzione`,
-      badgeClass: "text-[#D97706] bg-[#FFFBEB] border-[#D97706]/30"
-    };
+  const sec = (section || "A").toUpperCase();
+  let optLimit = 30, warnLimit = 45;
+  if (sec === "A") { optLimit = 25; warnLimit = 35; }
+  else if (sec === "B") { optLimit = 40; warnLimit = 55; }
+  else if (sec === "C") { optLimit = 120; warnLimit = 180; }
+
+  if (avgSec <= optLimit) {
+    return { avgSec, status: "optimal", label: `${avgSec}s/q • Ottimale (${sec})`, badgeClass: "text-[#264332] bg-[#EEF7F1] border-[#264332]/30" };
+  } else if (avgSec <= warnLimit) {
+    return { avgSec, status: "warning", label: `${avgSec}s/q • Attenzione`, badgeClass: "text-[#D97706] bg-[#FFFBEB] border-[#D97706]/30" };
   } else {
-    return {
-      avgSec,
-      status: "critical",
-      label: `${avgSec}s/q • Lento (Rischio OMR)`,
-      badgeClass: "text-[#E63920] bg-[#FDF2F2] border-[#E63920]/30"
-    };
+    return { avgSec, status: "critical", label: `${avgSec}s/q • Lento (Rischio OMR)`, badgeClass: "text-[#E63920] bg-[#FDF2F2] border-[#E63920]/30" };
   }
 }
 
-export function updatePacingUI(elapsedSec, answeredCount, totalCount) {
-  const metrics = evaluatePacingMetrics(elapsedSec, answeredCount, totalCount);
+export function updatePacingUI(elapsedSec, answeredCount, totalCount, section = "A") {
+  const metrics = evaluatePacingMetrics(elapsedSec, answeredCount, totalCount, section);
   const pill = document.getElementById("examPacingPill");
   if (pill) {
     pill.className = `px-2 py-0.5 border text-xs font-mono font-bold transition-all duration-150 ${metrics.badgeClass}`;

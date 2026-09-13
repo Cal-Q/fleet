@@ -12,11 +12,21 @@ from pathlib import Path
 from anki_sync.sync_helpers import (
     anki_already_running,
     get_anki_base_and_profile,
-    sync_via_anki_gui,
 )
 
 ANKI_PYTHON = '/usr/local/share/anki/python/bin/python3'
 ANKI_PACKAGES = '/usr/local/share/anki/app_packages'
+
+# Transparent auto-delegation: If on Oracle VPS, dispatch to IONOS primary host
+if not os.path.isfile(ANKI_PYTHON):
+    import shutil
+    import subprocess
+    if shutil.which('ssh'):
+        res = subprocess.run(['ssh', '-o', 'ConnectTimeout=8', 'ionos', 'python3 /opt/japan/core/sync_and_push.py'] + sys.argv[1:])
+        sys.exit(res.returncode)
+    else:
+        sys.stderr.write("[sync_and_push] ERROR: Modern Anki runtime not found and SSH unavailable.\n")
+        sys.exit(1)
 
 if ANKI_PACKAGES not in sys.path:
     sys.path.insert(0, ANKI_PACKAGES)
@@ -25,6 +35,7 @@ if sys.executable != ANKI_PYTHON and os.path.isfile(ANKI_PYTHON):
     cur_pp = os.environ.get('PYTHONPATH', '')
     os.environ['PYTHONPATH'] = f'{ANKI_PACKAGES}:{cur_pp}'.strip(':')
     os.execv(ANKI_PYTHON, [ANKI_PYTHON] + sys.argv)
+
 
 REPO_ROOT = Path(__file__).resolve().parent
 
@@ -55,12 +66,20 @@ def pre_sync_and_leech_lifecycle() -> bool:
         pm.load(profile_name)
         auth = pm.sync_auth()
         if not auth:
-            log("No sync auth found in profile, falling back to GUI sync...")
-            return sync_via_anki_gui(base_dir, profile_name)
+            log("No sync auth found in profile, skipping remote pull.")
+            return False
 
         col_path = pm.collectionPath()
         col = anki.collection.Collection(col_path)
         try:
+            uncommitted = (
+                col.db.scalar("SELECT count(*) FROM cards WHERE usn = -1")
+                or col.db.scalar("SELECT count(*) FROM notes WHERE usn = -1")
+            )
+            if uncommitted:
+                log("Local collection has uncommitted changes — skipping pre-sync pull to preserve local edits.")
+                return True
+
             res = col.sync_collection(auth, sync_media=False)
             if getattr(res, "required", None) in (
                 anki.sync_pb2.SyncCollectionResponse.FULL_SYNC,
@@ -87,8 +106,8 @@ def pre_sync_and_leech_lifecycle() -> bool:
             except Exception:
                 pass
     except Exception as e:
-        log(f"Pre-sync encountered error ({e}), falling back to GUI sync...")
-        return sync_via_anki_gui(base_dir, profile_name)
+        log(f"Pre-sync encountered error: {e}")
+        return False
     finally:
         del col
         del pm
@@ -121,8 +140,8 @@ def post_sync() -> bool:
 
             auth = pm.sync_auth()
             if not auth:
-                log("No sync auth found in profile, falling back to GUI sync...")
-                return sync_via_anki_gui(base_dir, profile_name)
+                log("No sync auth found in profile, skipping remote push.")
+                return False
 
             now_ms = int(time.time() * 1000)
             col.db.execute(f"UPDATE col SET mod = {now_ms}")
@@ -144,8 +163,8 @@ def post_sync() -> bool:
             except Exception:
                 pass
     except Exception as e:
-        log(f"Post-sync encountered error ({e}), falling back to GUI sync...")
-        return sync_via_anki_gui(base_dir, profile_name)
+        log(f"Post-sync encountered error: {e}")
+        return False
     finally:
         del col
         del pm

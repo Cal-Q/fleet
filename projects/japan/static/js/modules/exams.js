@@ -69,13 +69,13 @@ export async function loadExam(section = "all", clean = false) {
         <span class="font-bold text-[#E63920]">Q.${String(idx + 1).padStart(2, "0")} • SEZ. ${q.section} (${q.level || "N/A"})</span>
         <span id="q_badge_${q.id}" class="${sel ? "text-xs font-mono px-2 py-0.5 border border-[#264332]/30 bg-[#EEF7F1] text-[#264332] font-bold" : "text-xs font-mono px-2 py-0.5 border border-black/10 bg-[#FAF8F5] text-neutral-400"}">${sel ? `✓ Risposta: ${sel}` : "In attesa"}</span>
       </div>
-      <div class="jp-font text-base md:text-xl text-[#111111] font-medium whitespace-pre-line leading-relaxed tracking-wide">${q.question}</div>
+      <div class="jp-mincho text-base md:text-xl text-[#111111] font-medium whitespace-pre-line leading-relaxed tracking-wide">${q.question}</div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1 font-mono text-xs md:text-sm">
         ${["A", "B", "C", "D"].filter(k => q.options && q.options[k]).map(k => {
           const isSel = (sel === k);
           return `<button type="button" id="opt_${q.id}_${k}" onclick="window.selectExamOption('${q.id}', '${k}')" class="exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left">
             <span class="opt-indicator w-6 h-6 md:w-7 md:h-7 flex-shrink-0 flex items-center justify-center border ${isSel ? "border-white bg-white text-[#181A1B]" : "border-black/20 bg-white text-neutral-600"} text-xs md:text-sm font-bold font-mono">${isSel ? "✓" : k}</span>
-            <span class="jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug">${q.options[k]}</span>
+            <span class="jp-mincho ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug">${q.options[k]}</span>
           </button>`;
         }).join("")}
       </div>
@@ -111,7 +111,7 @@ export async function loadExam(section = "all", clean = false) {
     const tEl = document.getElementById("timeElapsed");
     if (tEl) tEl.innerText = timeStr;
     const ansCount = currentQuestions.filter(q => userAnswers[q.id]).length;
-    updatePacingUI(sec, ansCount, currentQuestions.length);
+    updatePacingUI(sec, ansCount, currentQuestions.length, currentSection);
   });
 }
 
@@ -132,9 +132,9 @@ export function selectExamOption(qid, optKey) {
   ["A", "B", "C", "D"].forEach(k => {
     const el = document.getElementById(`opt_${qid}_${k}`);
     if (!el) return;
-    const ind = el.querySelector(".opt-indicator"), txt = el.querySelector(".jp-font"), isSel = (k === optKey);
+    const ind = el.querySelector(".opt-indicator"), txt = el.querySelector(".jp-mincho, .jp-font"), isSel = (k === optKey);
     el.className = `exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left`;
-    if (txt) txt.className = `jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug`;
+    if (txt) txt.className = `jp-mincho ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug`;
     if (ind) {
       ind.className = `opt-indicator w-6 h-6 md:w-7 md:h-7 flex-shrink-0 flex items-center justify-center border ${isSel ? "border-white bg-white text-[#181A1B]" : "border-black/20 bg-white text-neutral-600"} text-xs md:text-sm font-bold font-mono`;
       ind.innerText = isSel ? "✓" : k;
@@ -158,7 +158,7 @@ function updateProgressUI() {
   set("trunkProgressPill", `${answered}/${total}`);
   set("submitExamBtn", answered === total ? "Invia Esame & Correggi →" : `Invia Esame (${answered}/${total}) →`);
   set("leafBottomCount", `${answered} / ${total} completati`);
-  updatePacingUI(getElapsedSeconds(), answered, total);
+  updatePacingUI(getElapsedSeconds(), answered, total, currentSection);
 }
 
 export async function submitExam() {

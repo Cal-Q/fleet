@@ -25,6 +25,7 @@ def _sync_single_deck_conn(
     main_field_name: str,
     incoming_data: list[AddOrUpdateInfo],
     allow_delete: bool = True,
+    allow_add: bool = True,
 ) -> None:
     deck_id = get_deck_id(conn, deck_name)
     if deck_id == -1:
@@ -97,7 +98,7 @@ def _sync_single_deck_conn(
                 flat_fields = "\x1f".join(current_fields)
                 csum = get_checksum(current_fields[0] if current_fields else "")
                 notes_to_update.append((flat_fields, now, csum, note_id))
-        else:
+        elif allow_add:
             max_index = max(field_map.values())
             new_fields = [""] * (max_index + 1)
             for field_name, value in info.fields_and_values.items():
@@ -147,8 +148,11 @@ def sync_decks_batch(
     try:
         conn.execute("BEGIN")
         try:
-            for deck_name, model_name, main_field_name, incoming_data, allow_delete in deck_sync_specs:
-                _sync_single_deck_conn(conn, deck_name, model_name, main_field_name, incoming_data, allow_delete)
+            for spec in deck_sync_specs:
+                deck_name, model_name, main_field_name, incoming_data = spec[0], spec[1], spec[2], spec[3]
+                allow_delete = spec[4] if len(spec) > 4 else True
+                allow_add = spec[5] if len(spec) > 5 else True
+                _sync_single_deck_conn(conn, deck_name, model_name, main_field_name, incoming_data, allow_delete, allow_add)
             now_ms = int(time.time() * 1000)
             conn.execute("UPDATE col SET mod = ?", (now_ms,))
             conn.execute("COMMIT")
