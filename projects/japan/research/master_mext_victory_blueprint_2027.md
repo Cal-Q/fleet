@@ -128,13 +128,17 @@ Per garantire 159 giorni consecutivi di studio senza burnout durante le lezioni 
 
 ---
 
-## 6. Configurazione delle Preferenze Universitarie (Placement Preference Form)
+## 6. Configurazione delle Preferenze Universitarie (Placement Preference Form — Pure Type b)
 
-Dal catalogo ufficiale MEXT *Course Guide of Japanese Studies Program*:
+Dal catalogo ufficiale MEXT *Course Guide of Japanese Studies Program* (corso di tipo (b) mirato al perfezionamento linguistico intensivo N3 → N2/N1):
 
-1. **Prima Scelta: Kyoto University (京都大学)**
-   - *Motivazione*: Dipartimento di Sociologia e Lettere con cattedre primarie sulla cultura contemporanea del Kansai, facilità di accesso alle comunità ludiche urbane di Kyoto e Osaka.
-2. **Seconda Scelta: Tokyo University of Foreign Studies (TUFS / 東京外国語大学)**
-   - *Motivazione*: Massimo centro accademico di linguistica applicata e ricerca interdisciplinare su lingua e società, accesso immediato ai distretti urbani di Akihabara, Shinjuku e Ikebukuro per la ricerca sui terzi luoghi.
-3. **Terza Scelta: Tohoku University (東北大学 - Sendai)**
-   - *Motivazione*: Eccellenza negli studi umanistici, eccellente supporto tutoriale per gli studenti internazionali e dinamiche di comunità giovanile post-ricostruzione.
+1. **Prima Scelta: Waseda University (早稲田大学 - n. 61 del Catalogo, p. 177)**
+   - *Facoltà / Centro*: Center for Japanese Language (CJL).
+   - *Motivazione*: Massimo prestigio privato (Sōkei), flessibilità del CJL con oltre 400 corsi modulari di lingua e pragmatica; collocazione a Shinjuku/Takadanobaba, epicentro dei "Terzi Luoghi" e dei circoli studenteschi autogestiti (*sākuru*).
+2. **Seconda Scelta: Tokyo University of Foreign Studies - TUFS (東京外国語大学 - n. 20 del Catalogo, p. 56)**
+   - *Facoltà / Centro*: Japanese Language Center for International Students (JLC).
+   - *Motivazione*: Polo governativo d'eccellenza per la didattica intensiva del giapponese per stranieri; programma dedicato alla transizione N3 → N2/N1 e mediazione culturale attiva tra studenti e comunità locale.
+3. **Terza Scelta: Keio University (慶應義塾大学 - n. 57 del Catalogo, p. 166)**
+   - *Facoltà / Centro*: Japanese Language Program (JLP).
+   - *Motivazione*: Storico programma linguistico d'élite fondato nel 1953; lezioni giornaliere intensive di grammatica complessa ed esposizione orale formale; sede a Minato-ku (Tokyo) con una rete capillare di associazioni giovanili.
+- *Riserva Accademica*: **Doshisha University (同志社大学 - n. 68 del Catalogo, p. 198)**: polo d'eccellenza privato nel Kansai (Kyoto) con curricolo puro Type (b) presso il CJLC.
