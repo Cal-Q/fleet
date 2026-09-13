@@ -13,6 +13,7 @@ import { loadResearchDossiers, previewDossier } from './modules/research.js';
 import { initDailyRoutine, launchRoutineSlot, markRoutineSlotDone, unmarkRoutineSlot, toggleRoutineSlot, updateRoutineProgress } from './modules/routine.js';
 import { syncCurriculumPlan } from './modules/routine_curriculum.js';
 import { initDragScroll } from './modules/drag_scroll.js';
+import { toggleAmbientExamAudio, stopAmbientExamAudio } from './modules/exam_audio.js';
 
 // Sinoira Gang Navigation globals
 window.setActiveStage = setActiveStage;
@@ -43,6 +44,9 @@ window.switchTab = (tabId) => {
 
 // Stage activation listener for on-demand lazy hydration
 window.onStageActivated = (stageKey) => {
+  if (stageKey !== 'exams') {
+    stopAmbientExamAudio();
+  }
   if (stageKey === 'routine') {
     initDailyRoutine();
   } else if (stageKey === 'study') {
@@ -88,6 +92,8 @@ window.markRoutineSlotDone = markRoutineSlotDone;
 window.unmarkRoutineSlot = unmarkRoutineSlot;
 window.toggleRoutineSlot = toggleRoutineSlot;
 window.updateRoutineProgress = updateRoutineProgress;
+window.toggleAmbientExamAudio = toggleAmbientExamAudio;
+window.stopAmbientExamAudio = stopAmbientExamAudio;
 
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();

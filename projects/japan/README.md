@@ -41,9 +41,9 @@ Unified Japanese language mastery, Anki SRS engine, and MEXT scholarship qualifi
 | **Parte C** | N1 | 30 | 9 (30%) | **10–12 (33–40%)** | 20–22 min riservati alla lettura accademica. |
 | **TOTALE** | — | **100** | **59%** | **63–68%** | **55 minuti operativi netti** (+5 min buffer OMR matita 2B). |
 
-- **Banca Dati Drill Originale (220 Quesiti Inediti)**:
+- **Banca Dati Drill Originale (235 Quesiti Inediti)**:
   - [`drill_pool_part_a.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_a.json): **110 item** (particelle, coppie omofone, radicali simili).
-  - [`drill_pool_part_b.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_b.json): **60 item** (Keigo, composti verbali, unscrambling $\bigstar$).
+  - [`drill_pool_part_b.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_b.json): **75 item** (Keigo, causativo-passivo, composti, unscrambling $\bigstar$).
   - [`drill_pool_part_c.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_c.json): **50 item** (letture accademiche sui Terzi Luoghi, formule scritte N1).
 - **Simulatore Orale Ambasciata**:
   - [`interview_questions.json`](file:///mnt/workspaces/japan/academic/interview_questions.json): 10 scenari orali codificati con modelli Keigo, metodologie di ricerca qualitativa (`参与観察`, `半構造化面接`, `言説分析`) e difesa della tesi.

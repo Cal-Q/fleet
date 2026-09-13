@@ -898,5 +898,230 @@
     },
     "answer": "A",
     "explanation": "執り行う (とりおこなう) significa svolgere/celebrare formalmente una cerimonia. In contesto di annuncio formale: 執り行います. 執り行いになり è un ibrido errato."
+  },
+  {
+    "id": "DRILL-B-61",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Causative-Passive (使役受身)",
+    "question": "子どものころ、母に 嫌いな ピーマンを 無理やり （ ）。",
+    "options": {
+      "A": "食べさせられた",
+      "B": "食べさせてくれた",
+      "C": "食べてもらった",
+      "D": "食べてあげた"
+    },
+    "answer": "A",
+    "explanation": "La forma causativo-passiva (〜させられる / 食べさせられる) indica che il soggetto è stato costretto da altri (母に) a compiere un'azione sgradita contro la propria volontà ('fui costretto a mangiare')."
+  },
+  {
+    "id": "DRILL-B-62",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo & Permission (使役＋恩恵)",
+    "question": "本日の セミナーについて、少し 質問を （ ）いただけないでしょうか。",
+    "options": {
+      "A": "させていただき",
+      "B": "していただき",
+      "C": "おさせになり",
+      "D": "なさい"
+    },
+    "answer": "A",
+    "explanation": "「質問をさせていただく」 esprime la richiesta di permesso per chi parla di compiere l'azione ('potrebbe concedermi di fare una domanda?'). していただく chiederebbe invece all'interlocutore di fare la domanda."
+  },
+  {
+    "id": "DRILL-B-63",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Directionality & Benefactive (授受動詞)",
+    "question": "論文の 書き方に 悩んでいたところ、指導教授が 丁寧に アドバイスを （ ）。",
+    "options": {
+      "A": "くださった",
+      "B": "いただいた",
+      "C": "さしあげた",
+      "D": "やった"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto della frase è il professore (指導教授が). Quando un superiore compie un'azione a favore del parlante, il verbo di donazione d'onore è くださる. いただく richiede il parlante come soggetto (教授に〜ていただいた)."
+  },
+  {
+    "id": "DRILL-B-64",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n雨の中、＿＿ ＿＿ ★ ＿＿ 風邪を ひいてしまった。\n①駅前で　②待たされて　③一時間も　④友達に",
+    "options": {
+      "A": "① (駅前で)",
+      "B": "② (待たされて)",
+      "C": "③ (一時間も)",
+      "D": "④ (友達に)"
+    },
+    "answer": "B",
+    "explanation": "Ordine corretto: [④友達に] [①駅前で] [③一時間も] ★[②待たされて] 風邪をひいてしまった. La stella cade su ②. 待たされる è il causativo-passivo contratto di 待つ (essere costretto ad aspettare)."
+  },
+  {
+    "id": "DRILL-B-65",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Spontaneous Emotion (感情・身体感覚)",
+    "question": "初めての 海外留学を 前にして、期待と 不安で 胸が いっぱいで （ ）。",
+    "options": {
+      "A": "たまらない",
+      "B": "いけない",
+      "C": "すぎない",
+      "D": "違いない"
+    },
+    "answer": "A",
+    "explanation": "〜てたまらない esprime una sensazione emotiva o fisica così intensa da essere incontrollabile ('non sto più nella pelle / è irresistibile')."
+  },
+  {
+    "id": "DRILL-B-66",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Obligation & Double Negative (二重否定)",
+    "question": "これだけの 証拠を 突きつけられては、自らの 過ちを （ ）を得ない。",
+    "options": {
+      "A": "認めざる",
+      "B": "認めない",
+      "C": "認める",
+      "D": "認められ"
+    },
+    "answer": "A",
+    "explanation": "〜ざるを得ない si aggancia alla base in Nai (base Mizenkei: 認め-ざるを得ない). Significa 'non posso fare a meno di ammettere / sono costretto ad ammettere'. Nota: する diventa せざるを得ない."
+  },
+  {
+    "id": "DRILL-B-67",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (最高敬意の依頼)",
+    "question": "恐縮ですが、もう 一度 資料を お送り （ ）わけには まいりませんでしょうか。",
+    "options": {
+      "A": "いただく",
+      "B": "くださる",
+      "C": "さしあげる",
+      "D": "なさる"
+    },
+    "answer": "A",
+    "explanation": "〜ていただくわけにはまいりませんでしょうか è una formula di massima deferenza commerciale/accademica per chiedere: 'Non sarebbe possibile per Lei avere la gentilezza di inviarmi nuovamente il materiale?'."
+  },
+  {
+    "id": "DRILL-B-68",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "来学期から、留学生向けの 日本語演習クラスを 私が （ ）ことになりました。",
+    "options": {
+      "A": "受け持つ",
+      "B": "受け入れる",
+      "C": "受け止める",
+      "D": "受ける"
+    },
+    "answer": "A",
+    "explanation": "受け持つ (うけもつ) significa assumersi la responsabilità continuativa o la docenza di una classe, materia o reparto ('avere la cattedra / essere titolare del corso')."
+  },
+  {
+    "id": "DRILL-B-69",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n今回の 合格は、＿＿ ＿＿ ★ ＿＿ にほかならない。\n①日々の　②本人の　③絶え間ない　④努力の成果",
+    "options": {
+      "A": "① (日々の)",
+      "B": "② (本人の)",
+      "C": "③ (絶え間ない)",
+      "D": "④ (努力の成果)"
+    },
+    "answer": "D",
+    "explanation": "Ordine corretto: [②本人の] [①日々の] [③絶え間ない] ★[④努力の成果] にほかならない. La stella cade su ④. Costruzione N2: 〜にほかならない (non è altro che...)."
+  },
+  {
+    "id": "DRILL-B-70",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Possibility & Refusal (困難・拒否)",
+    "question": "個人の プライバシーに 関する お問い合わせには、一切 お答え （ ）。",
+    "options": {
+      "A": "いたしかねます",
+      "B": "いたしかねません",
+      "C": "いただきかねます",
+      "D": "いらっしゃいかねます"
+    },
+    "answer": "A",
+    "explanation": "〜かねる (いたしかねます) esprime l'impossibilità o il rifiuto cortese per motivi deontologici o di principio ('non siamo nelle condizioni di rispondere'). 〜かねない indicherebbe invece rischio/pericolo."
+  },
+  {
+    "id": "DRILL-B-71",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Formal Written Discourse (契機・起点)",
+    "question": "東京公演を （ ）、全国 10 都市での 巡回ツアーが スタートした。",
+    "options": {
+      "A": "皮切りに",
+      "B": "きっかけに",
+      "C": "契機として",
+      "D": "最後に"
+    },
+    "answer": "A",
+    "explanation": "〜を皮切りに (をかわきりに) è l'espressione formale scritta N2 che indica un evento inaugurale che dà inizio a una successione di eventi analoghi della stessa portata."
+  },
+  {
+    "id": "DRILL-B-72",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Causative + Favor (使役＋恩恵)",
+    "question": "未熟な 私に このような 貴重な 機会を （ ）、心より 感謝申し上げます。",
+    "options": {
+      "A": "与えてくださり",
+      "B": "与えさせていただき",
+      "C": "与えていただき",
+      "D": "与えられて"
+    },
+    "answer": "A",
+    "explanation": "Il superiore compie l'azione di dare un'opportunità al parlante: 機会を与えてくださり (oppure 与えていただき se preceduto da 先生に). Con il soggetto del superiore e la gratitudine per il gesto: 与えてくださり."
+  },
+  {
+    "id": "DRILL-B-73",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n善意で ＿＿ ＿＿ ★ ＿＿ ひどく 怒られた。\n①やったのに　②感謝される　③お小言を　④どころか",
+    "options": {
+      "A": "① (やったのに)",
+      "B": "② (感謝される)",
+      "C": "③ (お小言を)",
+      "D": "④ (どころか)"
+    },
+    "answer": "D",
+    "explanation": "Ordine corretto: [①やったのに] [②感謝される] ★[④どころか] [③お小言を] ひどく怒られた (ovvero どころか seguito dal peggioramento). La stella cade su ④. Costruzione N2: 〜どころか (altro che ringraziato, anzi...)."
+  },
+  {
+    "id": "DRILL-B-74",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Contrast & Concession (逆接)",
+    "question": "激しい 暴風雨（ ）、救助隊は 直ちに 捜索活動を 開始した。",
+    "options": {
+      "A": "にもかかわらず",
+      "B": "につけ",
+      "C": "にかかわらず",
+      "D": "に即して"
+    },
+    "answer": "A",
+    "explanation": "〜にもかかわらず significa 'nonostante / a dispetto di': l'azione principale si è svolta a dispetto della violenta tempesta. にかかわらず senza も significa invece 'indipendentemente da'."
+  },
+  {
+    "id": "DRILL-B-75",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Suffering Passive (迷惑の受身)",
+    "question": "大事な 面接の 当日に、電車に （ ）遅刻してしまった。",
+    "options": {
+      "A": "遅れられて",
+      "B": "遅れて",
+      "C": "遅らされて",
+      "D": "遅れさせられて"
+    },
+    "answer": "A",
+    "explanation": "Nel passivo di disturbo/svantaggio (迷惑の受身 / 間接受身), un'azione intransitiva di un terzo (電車が遅れる) causa danno o contrattempo al parlante: 電車に遅れられて."
   }
 ]

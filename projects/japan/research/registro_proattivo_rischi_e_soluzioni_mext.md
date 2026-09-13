@@ -34,13 +34,17 @@
 | **R-12** | **Asimmetria Sintassi Accademica JLPT vs MEXT**: Formule scritte formali arcaicizzanti (`~んがため`, `~まじき`). | Novembre – Febbraio | Mappatura e integrazione delle 30 strutture saggistiche classiche nei drill di Parte B e C. | ✅ Attivo |
 | **R-13** | **Decadimento Invernale del Ritmo Circadiano**: Calo luce a Dic/Gen che impatta concentrazione e memoria. | Dicembre – Gennaio | [protocollo_circadiano_e_peak_performance.md](file:///mnt/workspaces/japan/research/protocollo_circadiano_e_peak_performance.md) con timing caffeina/teanina e ancoraggio luce. | ✅ Attivo |
 | **R-14** | **Collasso da Ansia Acustica d'Aula a Roma**: Distrazione da fruscio fogli e tosse dei competitor in aula. | Febbraio 2027 | Protocollo di simulazione con rumore d'ambiente (desensibilizzazione acustica) nei 3 mock finali di Febbraio. | ✅ Programmato |
+| **R-15** | **Affaticamento Oculare & Mincho Cartaceo**: Discrepanza tra font Gothic a schermo e Mincho fitto su carta MEXT. | Tutto il periodo | Integrazione stack `.jp-mincho` (Shippori Mincho / Noto Serif JP) e soglie di pacing differenziate per sezione (A $\le 25$s, B $\le 40$s, C $\le 120$s). | ✅ Attivo |
+| **R-16** | **Trappola Direzionalità & Causativo-Passivo**: Confusione tra soggetto, beneficiario e forzatura in Parte B. | Ottobre – Gennaio | Espansione [drill_pool_part_b.json](file:///mnt/workspaces/japan/exams/drill_pool_part_b.json) a 75 item (+15 quesiti mirati su `〜させられる`, `〜ていただく`) e guida alla decodifica sintattica. | ✅ Attivo |
+| **R-17** | **Desensibilizzazione Acustica d'Esame**: Rallentamento cognitivo in aula dovuto a fruscii, tosse e matite. | Dicembre – Febbraio | Modulo audio Web Audio per generare sottofondo d'aula d'esame opzionale durante le prove nel tab Prove. | ✅ Attivo |
+| **R-18** | **Atrofia Motoria Tratti & Radicali Trabocchetto**: Quesiti su radicali (`部首`) e conteggio tratti (`画数`). | Settembre – Febbraio | Dossier didattico [guida_mnemonica_radicali_e_tratti_critici_mext.md](file:///mnt/workspaces/japan/research/guida_mnemonica_radicali_e_tratti_critici_mext.md) con tassonomia dei 40 radicali ingannevoli. | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-15 (Affaticamento Oculare & Lettura Caratteri Mincho Stretti)**: Gli schermi usano caratteri sans-serif (Gothic), i test cartacei MEXT usano Mincho fitti. *Azione da predisporre*: incorporare rendering con font Mincho ad alta fedeltà nel visualizzatore drill.
-2. **Vulnerabilità R-16 (Sincronizzazione Mobile Offline & Conflitti AnkiWeb)**: Sessioni di ripasso su treno/metro senza connettività. *Azione da predisporre*: verifica rigida dei checkpoint timestamp `col.mod` prima di ogni push sul server.
+1. **Vulnerabilità R-19 (Allerta Proattiva Scadenze Burocratiche UniTO)**: Rischio di mancata tempestività per il certificato con matricola, timbro segreteria studenti e lettera di presentazione del docente prima delle vacanze natalizie. *Azione da predisporre*: banner di allerta cronologica permanente sui tab Routine e Dossier.
+2. **Vulnerabilità R-20 (Sincronizzazione Mobile Offline & Integrità AnkiWeb)**: Sessioni di ripasso su treno/metro senza connettività con rischio disallineamento `col.mod`. *Azione da predisporre*: verifica rigida dei checkpoint timestamp `col.mod` prima di ogni push sul server.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*
