@@ -45,6 +45,18 @@
           </div>
           <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Checklist documentale & conformità submission</div>
         </div>
+
+        <!-- Branch 3: Documentazione & Strategia (Matcha) -->
+        <div id="branch_btn_dossier_research" onclick="switchDossierBranch('research')" class="branch-matcha p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#264332] text-white text-[10px] font-bold jp-font">報</span>
+              <strong class="text-[#264332]">RICERCA & REGISTRO</strong>
+            </div>
+            <span class="text-[10px] font-bold text-[#264332] bg-[#EEF7F1] px-1.5 py-0.5 border border-[#264332]/20">32 Dossier</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Registro rischi MEXT, 161-day plan & guide</div>
+        </div>
       </div>
 
       <!-- Context Note / Ground Truth -->
@@ -88,6 +100,23 @@
           <span class="text-[10px] font-mono text-neutral-500">Limite 10.0 MB</span>
         </div>
         <div id="dossierChecklist" class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3 grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </div>
+
+      <!-- Leaf 3: Research Dossiers Browser & Viewer -->
+      <div id="leaf_dossier_research" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#264332]"></span>
+            <span id="dossierViewerTitle" class="text-xs font-mono font-bold text-[#181A1B] uppercase truncate max-w-md">Archivio Dossier & Registro Proattivo</span>
+          </div>
+          <button onclick="window.loadResearchDossiers()" class="text-[10px] font-mono border border-black px-2 py-0.5 hover:bg-black hover:text-white transition tap-press active:scale-95">Aggiorna</button>
+        </div>
+        <div class="flex-grow grid grid-cols-1 md:grid-cols-12 overflow-hidden">
+          <div id="researchDossiersList" class="md:col-span-5 border-r border-black/10 overflow-y-auto overscroll-contain p-2 space-y-2 bg-white max-h-[calc(100vh-230px)]"></div>
+          <div id="dossierViewerBox" class="md:col-span-7 overflow-y-auto overscroll-contain p-3 bg-[#FAF8F5] max-h-[calc(100vh-230px)]">
+            <pre id="dossierViewerContent" class="text-xs font-mono text-neutral-800 whitespace-pre-wrap leading-relaxed">Fai clic su "Leggi Dossier →" da un report a sinistra per consultare la documentazione.</pre>
+          </div>
+        </div>
       </div>
     </div>
   </div>

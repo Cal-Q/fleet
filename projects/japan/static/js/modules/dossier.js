@@ -106,18 +106,35 @@ export async function updateDocStatus(id, newStatus) {
 
 export function switchDossierBranch(branch) {
   const isCareer = branch === 'career';
+  const isChecklist = branch === 'checklist';
+  const isResearch = branch === 'research';
+
   const leafCareer = document.getElementById('leaf_dossier_career');
   const leafChecklist = document.getElementById('leaf_dossier_checklist');
+  const leafResearch = document.getElementById('leaf_dossier_research');
+
   const btnCareer = document.getElementById('branch_btn_dossier_career');
   const btnChecklist = document.getElementById('branch_btn_dossier_checklist');
+  const btnResearch = document.getElementById('branch_btn_dossier_research');
+
   if (leafCareer) leafCareer.classList.toggle('hidden', !isCareer);
-  if (leafChecklist) leafChecklist.classList.toggle('hidden', isCareer);
+  if (leafChecklist) leafChecklist.classList.toggle('hidden', !isChecklist);
+  if (leafResearch) leafResearch.classList.toggle('hidden', !isResearch);
+
   if (btnCareer) {
     btnCareer.classList.toggle('bg-white', isCareer);
     btnCareer.classList.toggle('opacity-70', !isCareer);
   }
   if (btnChecklist) {
-    btnChecklist.classList.toggle('bg-white', !isCareer);
-    btnChecklist.classList.toggle('opacity-70', isCareer);
+    btnChecklist.classList.toggle('bg-white', isChecklist);
+    btnChecklist.classList.toggle('opacity-70', !isChecklist);
+  }
+  if (btnResearch) {
+    btnResearch.classList.toggle('bg-white', isResearch);
+    btnResearch.classList.toggle('opacity-70', !isResearch);
+  }
+
+  if (isResearch && typeof window.loadResearchDossiers === 'function') {
+    window.loadResearchDossiers();
   }
 }

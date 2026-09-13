@@ -11,6 +11,8 @@
 1. **Zero Attesa**: L'assistente non attende segnalazioni di difficoltà o stallo dal candidato; mappa l'orizzonte e disinnesca i colli di bottiglia prima che impattino lo studio.
 2. **Misurabilità & Ground Truth**: Ogni soluzione deve poggiare su strumenti concreti (codice, API, pool di drill, guide metodologiche, verifiche database).
 3. **Aggiornamento Continuo**: Ogni nuova iterazione diagnostica viene registrata in questo documento e riflessa sulla web console `japan.calq.it`.
+4. **Consultazione Preventiva Obbligatoria**: Ad ogni passo, l'assistente consulta e rilegge la documentazione (`README.md`, `research/`, `AGENTS.md`) prima di agire, assicurando la fedeltà a TUTTE le richieste.
+5. **Sincronizzazione Biviva Inseparabile**: Ogni cambiamento nella documentazione o nel paradigma deve riflettersi immediatamente e visibilmente sulla web console.
 
 ---
 

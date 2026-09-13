@@ -81,6 +81,7 @@ window.loadExamAnalytics = loadExamAnalytics;
 window.loadInterview = loadInterview;
 window.speakJapanese = speakJapanese;
 window.toggleInlineModel = toggleInlineModel;
+window.loadResearchDossiers = loadResearchDossiers;
 window.previewDossier = previewDossier;
 window.launchRoutineSlot = launchRoutineSlot;
 window.markRoutineSlotDone = markRoutineSlotDone;
