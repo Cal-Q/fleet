@@ -938,5 +938,32 @@
         "web_sync": "tab_dossier.html updated to 43 Dossier badge, README.md updated to 250 items and 43 dossiers"
       }
     }
+  },
+  {
+    "feature": "mext_esse3_winter_session_omr_clean_and_diplomacy_interview",
+    "timestamp": "2026-09-13T23:17:00Z",
+    "status": "passed",
+    "evidence": {
+      "frontiers_covered": [
+        "1) UniTO Esse3 winter session urgent grade certification protocol",
+        "2) OMR optical mark decontamination and anti-double-marking protocol",
+        "3) Sensitive themes handling and academic diplomacy for embassy interview"
+      ],
+      "dossiers_created": [
+        "research/protocollo_verbalizzazione_esse3_sessione_invernale_mext.md (56 lines <= 200)",
+        "research/protocollo_decontaminazione_omr_e_cancellatura_ottica.md (39 lines <= 200)",
+        "research/guida_gestione_temi_sensibili_colloquio_mext.md (53 lines <= 200)"
+      ],
+      "interview_scenarios_added": [
+        "INT-11: Sociological Objectivity & Sensitive Themes (少子高齢化, 居場所支援)",
+        "INT-12: Research Ethics & Fieldwork Negotiation (インフォームド・コンセント, 還元)"
+      ],
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (67 lines <= 200) registering R-33 through R-35 as Attivo.",
+      "live_verification": {
+        "public_dossiers_count": 46,
+        "interview_scenarios_count": 12,
+        "web_sync": "tab_dossier.html updated to 46 Dossier badge, README.md updated to 46 dossiers and 12 interview scenarios"
+      }
+    }
   }
 ]

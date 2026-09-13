@@ -128,5 +128,31 @@
       "Prosodia & Pitch Accent: 謙虚 [1] (Atamadaka: ke\\-n-kyo), 柔軟性 [0] (Heiban: ju-u-na-n-se-i ‾‾‾), 契機 [1] (ke\\-i-ki)"
     ],
     "model_answer_ja": "「郷に入っては郷に従え」の精神を重んじ、自己の価値観を押し付けることなく、まずは相手の文化背景や慣習を謙虚に観察し理解するよう努めます。また、大学の留学生相談室やチューター学生との連携を密にし、孤立を防ぐネットワークを早期に築きます。これまでの非営利団体運営で培った対話力と柔軟性を活かし、困難を成長の契機に変えていく所存です。"
+  },
+  {
+    "id": "INT-11",
+    "category": "社会課題と客観性 (Sociological Objectivity & Sensitive Themes)",
+    "question_ja": "少子高齢化や青少年の孤立など、現代日本社会が抱える繊細な課題に対して、外国人研究者としてどのような姿勢で客観的にアプローチしますか。",
+    "question_it": "Di fronte a tematiche delicate della società giapponese contemporanea (denatalità, isolamento giovanile), quale approccio neutrale intende adottare come ricercatore?",
+    "key_points": [
+      "Evitare categorizzazioni eurocentriche o giudizi morali affrettati",
+      "Valorizzare le risposte endogene della società civile (es.子ども食堂, 居場所支援)",
+      "Adottare una prospettiva sociologica comparata con l'Italia",
+      "Prosodia & Pitch Accent: 少子高齢化 [7], 客観的 [0] (Heiban: kya-k-ka-n-te-ki ‾‾‾), 示唆 [1] (Atamadaka: shi\\-sa)"
+    ],
+    "model_answer_ja": "自国の価値観に基づく一方的な批判を厳に戒め、一次資料と現地でのフィールドワークに基づいた客観的記述を徹底いたします。少子化や孤立は先進諸国共通の構造課題であり、日本独自の草の根の共助の取り組み（子ども食堂や居場所支援など）から学びつつ、日伊両国の比較社会学的な視座から建設的に考察を深めたいと考えております。"
+  },
+  {
+    "id": "INT-12",
+    "category": "研究倫理と地域協働 (Research Ethics & Fieldwork Negotiation)",
+    "question_ja": "フィールドワークの過程で、対象のコミュニティや参加者から調査協力を躊躇された場合、研究倫理の観点からどのように対処しますか。",
+    "question_it": "Se durante il lavoro sul campo i partecipanti o i gestori della comunità esitassero a collaborare, come affronterebbe la situazione dal punto di vista dell'etica della ricerca?",
+    "key_points": [
+      "Rispetto tassativo del consenso informato (インフォームド・コンセント) e della privacy",
+      "Non forzare mai l'interlocutore né estorcere dati",
+      "Principio di reciprocità (Give & Take) e restituzione dei risultati accademici alla comunità",
+      "Prosodia & Pitch Accent: 倫理 [1] (Atamadaka: ri\\-n-ri), 信頼関係 [5], 還元 [0] (Heiban: ka-n-ge-n ‾‾‾)"
+    ],
+    "model_answer_ja": "研究倫理の基本原則であるインフォームド・コンセントを厳格に遵守し、決して調査を強制いたしません。まず研究の趣旨やプライバシー保護の徹底を丁寧に説明し、信頼関係（ラポール）の構築を最優先といたします。また、一方的なデータの収集にとどまらず、研究成果を地域コミュニティの発展に還元する姿勢を示し、誠実な対話を重ねる所存です。"
   }
 ]

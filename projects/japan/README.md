@@ -46,7 +46,7 @@ Unified Japanese language mastery, Anki SRS engine, and MEXT scholarship qualifi
   - [`drill_pool_part_b.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_b.json): **90 item** (Keigo, causativo-passivo, coppie `自他動詞`, `〜てある`).
   - [`drill_pool_part_c.json`](file:///mnt/workspaces/japan/exams/drill_pool_part_c.json): **50 item** (letture accademiche sui Terzi Luoghi, formule scritte N1).
 - **Simulatore Orale Ambasciata**:
-  - [`interview_questions.json`](file:///mnt/workspaces/japan/academic/interview_questions.json): 10 scenari orali codificati con modelli Keigo, metodologie di ricerca qualitativa (`参与観察`, `半構造化面接`, `言説分析`) e difesa della tesi.
+  - [`interview_questions.json`](file:///mnt/workspaces/japan/academic/interview_questions.json): **12 scenari orali** codificati con modelli Keigo, pitch accent, temi sensibili di sociologia urbana, etica del fieldwork e difesa della tesi.
 
 ---
 
@@ -57,7 +57,7 @@ La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fl
 2. **学習 Studio**: Batch di studio guidato con sblocco progressivo kanji, vocaboli e grammatica.
 3. **復習 Bunki**: Telemetria Anki SRS, verifica zero arretrati e riabilitazione leech.
 4. **試練 Prove**: Motore d'esame a rotazione giornaliera con cronometro di pacing e simulatore orale.
-5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (43 report navigabili in tempo reale).
+5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (46 report navigabili in tempo reale).
 
 ---
 

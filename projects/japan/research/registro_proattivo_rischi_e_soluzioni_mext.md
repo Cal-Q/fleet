@@ -52,13 +52,16 @@
 | **R-30** | **Collasso Glicemico & Saccadico al Minuto 45**: Crollo energetico e vista affaticata sul Mincho saggistico di Parte C. | Gennaio – Febbraio | Protocollo [protocollo_resistenza_cognitiva_muro_45_minuti_mext.md](file:///mnt/workspaces/japan/research/protocollo_resistenza_cognitiva_muro_45_minuti_mext.md) con crononutrizione e reset oculare di 15s. | ✅ Attivo |
 | **R-31** | **Burnout Precoce dei Mock Ufficiali MEXT**: Compromissione del potere diagnostico delle prove 2017-2019 con studio prematuro. | Tutto il periodo | Protocollo [protocollo_conservazione_e_somministrazione_mock_mext.md](file:///mnt/workspaces/japan/research/protocollo_conservazione_e_somministrazione_mock_mext.md) con sigillo ermetico e 3 mock blind finali. | ✅ Attivo |
 | **R-32** | **Latenza di Produzione Orale del Keigo al Colloquio**: Esitazione $>1.5$s con intercalari informali (`ええと…`) che denotano traduzione mentale. | Gennaio – Febbraio | Guida [guida_automatismo_apertura_modulare_colloquio_mext.md](file:///mnt/workspaces/japan/research/guida_automatismo_apertura_modulare_colloquio_mext.md) con framework modulare in 4 fasi e 5 formule automatiche. | ✅ Attivo |
+| **R-33** | **Strozzatura Esse3 UniTO Sessione Invernale**: Ritardi verbalizzazione esami gennaio 2027 a ridosso chiusura plico 05 Febbraio. | Gennaio 2027 | Protocollo [protocollo_verbalizzazione_esse3_sessione_invernale_mext.md](file:///mnt/workspaces/japan/research/protocollo_verbalizzazione_esse3_sessione_invernale_mext.md) con 1º appello anticipato e template d'urgenza. | ✅ Attivo |
+| **R-34** | **Saturazione Ottica OMR per Sbavature Grafite 2B**: Errore di doppia marcatura (*Jūfuku Kaitō*) da cancellature incomplete. | Febbraio 2027 | Protocollo [protocollo_decontaminazione_omr_e_cancellatura_ottica.md](file:///mnt/workspaces/japan/research/protocollo_decontaminazione_omr_e_cancellatura_ottica.md) con Tombow Mono Zero e pennellino. | ✅ Attivo |
+| **R-35** | **Trappola Temi Sensibili & Diplomazia Orale**: Risposte polarizzate o eurocentriche su denatalità e questioni sociali al colloquio. | Gennaio – Febbraio | Guida [guida_gestione_temi_sensibili_colloquio_mext.md](file:///mnt/workspaces/japan/research/guida_gestione_temi_sensibili_colloquio_mext.md) con metodo dei 3 filtri e scenari INT-11/12. | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-33 (Certificazione Esse3 UniTO e Riconoscimento CFU Sessione Invernale)**: Convalida esami sostenuti a gennaio 2027 a ridosso della chiusura plico del 5 febbraio.
-2. **Vulnerabilità R-34 (Saturazione OMR con Sbavature di Grafite 2B)**: Lettura ottica errata dello scanner d'Ambasciata per cancellature incomplete o residui di gomma.
+1. **Vulnerabilità R-36 (Disorientamento Fonetico da Mascherine Chirurgiche dei Commissari)**: Attenuazione acustica delle frequenze superiori a 3kHz della voce dei commissari che indossano mascherine FFP2/chirurgiche durante il colloquio.
+2. **Vulnerabilità R-37 (Sindrome da Blocco Mentale su Kanji Isolato in Parte A)**: Fissazione ossessiva su un singolo kanji trabocchetto che brucia oltre 45 secondi; regola dell'abbandono tattico con segnaposto a matita.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*
