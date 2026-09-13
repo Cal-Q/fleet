@@ -1,5 +1,25 @@
 [
   {
+    "feature": "mext_curricula_alignment_interview_stress_and_embassy_tactical_day",
+    "timestamp": "2026-09-13T22:28:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Authored research/matrice_allineamento_curriculare_atenei_giapponesi.md detailing exact syllabus courses, seminar codes, and research links for Waseda CJL (No. 61), TUFS JLC (No. 20), Keio JLP (No. 57), and Doshisha CJLC (No. 68).",
+        "Authored research/mext_intervista_stress_test_qa_matrix.md analyzing the embassy 'Bad Cop' psychology and providing airtight Keigo scripts for the 6 critical trap objections (commercial entertainment critique, anime syndrome, UniTO return commitment, cultural isolation).",
+        "Integrated INT-07 into academic/interview_simulator.py addressing the academic and public validity of gaming third places vs commercial culture.",
+        "Authored research/protocollo_tattico_giornata_ambasciata_roma.md with minute-by-minute embassy schedule (Via Quintino Sella 60), zero-electronics diplomatic security, 6-pencil tactical kit, analog wristwatch mandate, waiting-room cognitive isolation, Box Breathing (4-4-4-4), and formal Koshitsu entry ritual.",
+        "Verified live HTTP 200 on all endpoints and confirmed all 21 research dossiers are served via /api/research/dossiers."
+      ],
+      "file_line_counts": {
+        "academic/interview_simulator.py": 155,
+        "api/routes/exam_routes.py": 157,
+        "templates/components/tab_interview.html": 79,
+        "templates/components/daily_routine.html": 94
+      }
+    }
+  },
+  {
     "feature": "mext_200_questions_live_pacing_and_tokyo_onboarding_ecosystem",
     "timestamp": "2026-09-13T22:27:00Z",
     "status": "passed",

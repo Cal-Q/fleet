@@ -80,6 +80,18 @@ QUESTIONS = [
             "Interviste dirette a gestori di spazi giovanili, card room e responsabili di circoli universitari"
         ],
         "model_answer_ja": "第三の居場所に関する研究は、二次文献の精読のみでは決して完結いたしません。現地のカードショップや大学公認サークルにおける参与観察、運営者や若年層への実地聞き取り調査、そして日本の大学紀要にのみ所蔵されている最新の社会学一次資料の収集が不可欠だからでございます。現地で得た確かな実証データをトリノ大学の卒業研究に還元したいと考えております。"
+    },
+    {
+        "id": "INT-07",
+        "category": "学術的意義と娯楽批判への反論 (Academic Significance vs Entertainment)",
+        "question_ja": "ゲームや若者コミュニティの研究は単なる消費文化・娯楽にすぎないという批判に対し、本研究が持つ学術的・公共的価値をどのように説明されますか。",
+        "question_it": "A chi obietta che lo studio di gaming e community sia mero intrattenimento o consumo, come spiega il valore accademico e pubblico della sua ricerca?",
+        "key_points": [
+            "Citare Huizinga (Homo Ludens) e Oldenburg (Third Places) come fondamenti teorici consolidati",
+            "La funzione preventiva contro la solitudine metropolitana (muen shakai) e il ritiro giovanile (hikikomori)",
+            "L'esperienza civica no-profit con Sinoira Gang a Torino come prova di impegno sociale reale"
+        ],
+        "model_answer_ja": "ホイジンガの『ホモ・ルーデンス』やオルデンバーグの『第三の居場所』理論が示す通り、遊びを通じた自発的連帯は都市の孤立（無縁社会）を防ぐ極めて重要な社会的セーフティネットです。トリノでの非営利活動『シノイラ・ギャング』の経験と日本の実地データを融合させ、青少年の居場所作りに寄与する確かな学術的知見を提示したいと考えております。"
     }
 ]
 
