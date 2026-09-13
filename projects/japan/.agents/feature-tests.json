@@ -910,5 +910,33 @@
         "README.md": 87
       }
     }
+  },
+  {
+    "feature": "mext_top_99_percent_frontiers_expansion",
+    "timestamp": "2026-09-13T23:15:00Z",
+    "status": "passed",
+    "evidence": {
+      "frontiers_covered": [
+        "1) Transitivity & Intransitivity (自他動詞) Matrix & Drills",
+        "2) Placement Preference Form 3-tier portfolio protection",
+        "3) Cognitive stamina & Minute 45 ocular/glycemic reset",
+        "4) Pristine Mock Exam 2017-2019 preservation protocol",
+        "5) Sub-1.5s Modular Keigo oral interview openers"
+      ],
+      "dossiers_created": [
+        "research/matrice_verbi_transitivi_intransitivi_mext.md (71 lines <= 200)",
+        "research/strategia_placement_preference_form_portfolio_atenei.md (42 lines <= 200)",
+        "research/protocollo_resistenza_cognitiva_muro_45_minuti_mext.md (48 lines <= 200)",
+        "research/protocollo_conservazione_e_somministrazione_mock_mext.md (40 lines <= 200)",
+        "research/guida_automatismo_apertura_modulare_colloquio_mext.md (55 lines <= 200)"
+      ],
+      "drill_expansion": "Expanded exams/drill_pool_part_b.json from 75 to 90 items (+15 items DRILL-B-76 to DRILL-B-90, total pool 250 questions).",
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (64 lines <= 200) registering R-26 through R-32 as Attivo.",
+      "live_verification": {
+        "public_dossiers_count": 43,
+        "submit_test_drill_b_76": "passed (100% score, is_correct=True, transitivity category logged)",
+        "web_sync": "tab_dossier.html updated to 43 Dossier badge, README.md updated to 250 items and 43 dossiers"
+      }
+    }
   }
 ]

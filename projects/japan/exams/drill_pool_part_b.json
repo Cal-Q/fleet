@@ -1123,5 +1123,230 @@
     },
     "answer": "A",
     "explanation": "Nel passivo di disturbo/svantaggio (迷惑の受身 / 間接受身), un'azione intransitiva di un terzo (電車が遅れる) causa danno o contrattempo al parlante: 電車に遅れられて."
+  },
+  {
+    "id": "DRILL-B-76",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞・結果状態)",
+    "question": "部屋の 空気を 入れ替えるために、窓が 少し（ ）。",
+    "options": {
+      "A": "開けてある",
+      "B": "開いている",
+      "C": "開けられている",
+      "D": "開いておく"
+    },
+    "answer": "A",
+    "explanation": "La frase esprime un fine intenzionale espresso con ために ('per cambiare l'aria'); pertanto si richiede la forma dello stato risultante intenzionale: [Transitivo + てある] con particella が -> 窓が開けてある."
+  },
+  {
+    "id": "DRILL-B-77",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・開閉)",
+    "question": "強風で ドアが 急に（ ）ので、大きな 音がした。",
+    "options": {
+      "A": "閉まった",
+      "B": "閉めた",
+      "C": "閉めさせた",
+      "D": "閉められた"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto con が è ドア e la causa è un fenomeno naturale (強風で). Si richiede il verbo intransitivo 閉まる (chiudersi spontaneamente) -> 閉まった."
+  },
+  {
+    "id": "DRILL-B-78",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・届く/届ける)",
+    "question": "市役所に 転居届を （ ）に行かなければならない。",
+    "options": {
+      "A": "届け",
+      "B": "届き",
+      "C": "届かせ",
+      "D": "届かれ"
+    },
+    "answer": "A",
+    "explanation": "La particella を precede l'oggetto diretto (転居届を); occorre il verbo transitivo 届ける (consegnare/notificare) in base ren'yōkei + に行く -> 届けに行く. 届く è intransitivo (arrivare, が)."
+  },
+  {
+    "id": "DRILL-B-79",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・消える/消す)",
+    "question": "外出する 前に、必ず 台所の 火を （ ）ことを 確認してください。",
+    "options": {
+      "A": "消した",
+      "B": "消えた",
+      "C": "消させた",
+      "D": "消えている"
+    },
+    "answer": "A",
+    "explanation": "La presenza dell'oggetto con を (火を) e l'intenzionalità del soggetto impongono il verbo transitivo 消す (spegnere). 消える è intransitivo (spegnersi, が)."
+  },
+  {
+    "id": "DRILL-B-80",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・集まる/集める)",
+    "question": "今回の 調査のために、駅前で 若者の 意見が たくさん（ ）。",
+    "options": {
+      "A": "集まった",
+      "B": "集めた",
+      "C": "集めさせた",
+      "D": "集まりつつある"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto regge la particella が (若者の意見が); il verbo corretto per descrivere il loro confluire è l'intransitivo 集まる -> 集まった. 集める è transitivo e richiederebbe を."
+  },
+  {
+    "id": "DRILL-B-81",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・冷える/冷やす)",
+    "question": "熱い お茶は、冷蔵庫に 入れて よく（ ）から 飲みましょう。",
+    "options": {
+      "A": "冷やして",
+      "B": "冷えて",
+      "C": "冷たくして",
+      "D": "冷えさせて"
+    },
+    "answer": "A",
+    "explanation": "Si tratta di un'azione intenzionale di raffreddare il tè (transitivo: 冷やす -> 冷やして). 冷える è intransitivo (raffreddarsi spontaneamente)."
+  },
+  {
+    "id": "DRILL-B-82",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞・掛かる/掛ける)",
+    "question": "壁に 美しい 風景画が （ ）。",
+    "options": {
+      "A": "掛けてある",
+      "B": "掛かっている",
+      "C": "掛けている",
+      "D": "掛けられる"
+    },
+    "answer": "A",
+    "explanation": "Un quadro appeso intenzionalmente al muro per decorazione richiede [Verbo Transitivo + てある] con particella が (風景画が掛けてある)."
+  },
+  {
+    "id": "DRILL-B-83",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・壊れる/壊す)",
+    "question": "無理な 運動を 続けて、とうとう 体を （ ）しまった。",
+    "options": {
+      "A": "壊して",
+      "B": "壊れて",
+      "C": "壊れさせて",
+      "D": "壊されて"
+    },
+    "answer": "A",
+    "explanation": "L'espressione per rovinarsi la salute è 体を壊す (transitivo con を). 壊れる è intransitivo (rompersi, regge が)."
+  },
+  {
+    "id": "DRILL-B-84",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・残る/残す)",
+    "question": "会議の 資料は、テーブルの上に まだ 何部か（ ）います。",
+    "options": {
+      "A": "残って",
+      "B": "残して",
+      "C": "残されて",
+      "D": "残させて"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto è 資料 (何部か), con stato spontaneo espresso da intransitivo + ている: 残っている. 残す è transitivo."
+  },
+  {
+    "id": "DRILL-B-85",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・落とす/落ちる)",
+    "question": "階段を 降りる 途中で、ポケットから 財布を （ ）しまった。",
+    "options": {
+      "A": "落として",
+      "B": "落ちて",
+      "C": "落とされて",
+      "D": "落ちさせて"
+    },
+    "answer": "A",
+    "explanation": "La frase presenta l'oggetto 財布 con la particella を; il verbo corretto è il transitivo 落とす (far cadere/perdere) -> 落としてしまった. 落ちる è intransitivo (cadere, が)."
+  },
+  {
+    "id": "DRILL-B-86",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・伝わる/伝える)",
+    "question": "彼女の 熱心な 説明で、研究の 趣旨が 先生に よく（ ）。",
+    "options": {
+      "A": "伝わった",
+      "B": "伝えた",
+      "C": "伝えさせた",
+      "D": "伝えてあった"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto è 趣旨 marcato con が; il senso è che 'è arrivato/si è fatto capire chiaramente al professore', richiedendo l'intransitivo 伝わる -> 伝わった."
+  },
+  {
+    "id": "DRILL-B-87",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・外れる/外す)",
+    "question": "上着の ボタンが （ ）いるのに、彼は まったく 気づいていない。",
+    "options": {
+      "A": "外れて",
+      "B": "外して",
+      "C": "外させて",
+      "D": "外されて"
+    },
+    "answer": "A",
+    "explanation": "Il bottone si è staccato/slacciato spontaneamente (ボタンが外れる). Con stato risultante si usa l'intransitivo: ボタンが外れている. 外す è transitivo."
+  },
+  {
+    "id": "DRILL-B-88",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・見つかる/見つける)",
+    "question": "図書館中を 探したが、探していた 論文集は ついに （ ）なかった。",
+    "options": {
+      "A": "見つから",
+      "B": "見つけ",
+      "C": "見つけられ",
+      "D": "見つかられ"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto è 論文集 marcato dal topic は (corrispondente a が): 'la raccolta non è saltata fuori' -> intransitivo 見つかる al negativo: 見つからなかった."
+  },
+  {
+    "id": "DRILL-B-89",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity Pairs (自他動詞・倒れる/倒す)",
+    "question": "台風の 猛烈な 突風によって、沿道の 古い 大木が （ ）しまった。",
+    "options": {
+      "A": "倒れて",
+      "B": "倒して",
+      "C": "倒させて",
+      "D": "倒されて"
+    },
+    "answer": "A",
+    "explanation": "Il soggetto è 大木 marcato con が. Trattandosi dell'albero che crolla per cause naturali, si impiega l'intransitivo 倒れる -> 倒れてしまった."
+  },
+  {
+    "id": "DRILL-B-90",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞・並ぶ/並べる)",
+    "question": "黒板の 前には、すでに 配布用の 資料が きれいに（ ）。",
+    "options": {
+      "A": "並べてある",
+      "B": "並んでいる",
+      "C": "並べている",
+      "D": "並ばせてある"
+    },
+    "answer": "A",
+    "explanation": "I documenti sono stati disposti ordinatamente da qualcuno in anticipo per la distribuzione (配布用). L'intenzionalità preparatoria richiede [Transitivo 並べる + てある] con particella が -> 資料がきれいに並べてある."
   }
 ]
