@@ -68,6 +68,18 @@ QUESTIONS = [
             "Obiettivi futuri: prosecuzione magistrale, mediazione culturale, diplomazia o divulgazione accademica"
         ],
         "model_answer_ja": "日本での１年間の研修終了後は、直ちにトリノ大学に復学し、３年次の学業を修めて日本で収集した資料をもとに卒業論文を執筆・完成させます。将来的には、この貴重な学びを活かし、学術・文化・経済の各分野において日本とイタリアの相互理解を深める架け橋として貢献したいと存じます。"
+    },
+    {
+        "id": "INT-06",
+        "category": "現地研究の必然性 (Why Japan & Not Turin?)",
+        "question_ja": "なぜトリノ大学の講義や文献調査だけでは不十分で、実際に日本に滞在して研究する必要があるのですか。",
+        "question_it": "Perché le lezioni e le ricerche bibliografiche a UniTO non sono sufficienti ed è indispensabile svolgere la ricerca sul campo in Giappone?",
+        "key_points": [
+            "La sociologia dei Terzi Luoghi richiede ricerca etnografica e osservazione partecipante in situ",
+            "Accesso a fonti primarie e bollettini universitari (紀要 - Kiyō) non digitalizzati né disponibili in Europa",
+            "Interviste dirette a gestori di spazi giovanili, card room e responsabili di circoli universitari"
+        ],
+        "model_answer_ja": "第三の居場所に関する研究は、二次文献の精読のみでは決して完結いたしません。現地のカードショップや大学公認サークルにおける参与観察、運営者や若年層への実地聞き取り調査、そして日本の大学紀要にのみ所蔵されている最新の社会学一次資料の収集が不可欠だからでございます。現地で得た確かな実証データをトリノ大学の卒業研究に還元したいと考えております。"
     }
 ]
 

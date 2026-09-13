@@ -1,0 +1,302 @@
+[
+  {
+    "id": "DRILL-B-01",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "突然強い雨が ＿＿＿きたので、近くのカフェに駆け込んだ。",
+    "options": {
+      "A": "降りだして",
+      "B": "降りつづけて",
+      "C": "降りやんで",
+      "D": "降りこんで"
+    },
+    "answer": "A",
+    "explanation": "L'ausiliare 〜出す (~dasu) esprime l'inizio improvviso o repentino di un'azione/fenomeno atmosferico: 降り出す (iniziare a piovere all'improvviso). Si abbina con l'avverbio 突然 (all'improvviso)."
+  },
+  {
+    "id": "DRILL-B-02",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "田中先生、先週お送りした論文の原稿は もう ＿＿＿でしょうか。",
+    "options": {
+      "A": "ご覧になった",
+      "B": "拝見した",
+      "C": "見られた",
+      "D": "お見せになった"
+    },
+    "answer": "A",
+    "explanation": "Riferendosi all'azione di 'guardare/leggere' compiuta dal professor Tanaka (figura superiore), serve il Sonkeigo (forma di rispetto): ご覧になる (goran ni naru). 拝見する è Kenjougo (umiltà, riferito a se stessi)."
+  },
+  {
+    "id": "DRILL-B-03",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "途中で何度あきらめそうになっても、最後まで走り＿＿＿。",
+    "options": {
+      "A": "ぬいた",
+      "B": "だした",
+      "C": "かけた",
+      "D": "なおした"
+    },
+    "answer": "A",
+    "explanation": "〜抜く (~nuku) indica il portare a termine un'azione difficile superando ostacoli e fatica fino alla fine: 走り抜く (correre fino in fondo con tenacia)."
+  },
+  {
+    "id": "DRILL-B-04",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "受付で「課長の佐藤と ＿＿＿が、いらっしゃいますでしょうか」と尋ねた。",
+    "options": {
+      "A": "申します",
+      "B": "おっしゃいます",
+      "C": "言われます",
+      "D": "存じます"
+    },
+    "answer": "A",
+    "explanation": "Presentandosi a terzi (reception), il parlante deve usare il Kenjougo (forma umile) per il verbo dire/chiamarsi: [Nome]と申します (mōshimasu). おっしゃる è Sonkeigo per superiori."
+  },
+  {
+    "id": "DRILL-B-05",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "彼は日本に10年も住んでいる＿＿＿、日本語があまり上手に話せない。",
+    "options": {
+      "A": "わりには",
+      "B": "わりに",
+      "C": "にしては",
+      "D": "反面"
+    },
+    "answer": "A",
+    "explanation": "〜わりに(は) indica una sproporzione inaspettata rispetto a un parametro o standard oggettivo ('per aver vissuto 10 anni in Giappone, parla poco bene'). にしては segue sostantivi o forme piane senza の."
+  },
+  {
+    "id": "DRILL-B-06",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "作文に誤字が多かったので、最初から書き＿＿＿ことにした。",
+    "options": {
+      "A": "直す",
+      "B": "切る",
+      "C": "出す",
+      "D": "込む"
+    },
+    "answer": "A",
+    "explanation": "〜直す (~naosu) significa rifare un'azione daccapo per correggere errori o migliorare il risultato: 書き直す (riscrivere daccapo)."
+  },
+  {
+    "id": "DRILL-B-07",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "社長、「明日の会議の資料を ＿＿＿でしょうか。」",
+    "options": {
+      "A": "拝見してもよろしい",
+      "B": "ご覧になってもよろしい",
+      "C": "お目にかかってもよろしい",
+      "D": "おっしゃってもよろしい"
+    },
+    "answer": "A",
+    "explanation": "Il parlante chiede il permesso di visionare un documento aziendale: l'azione di guardare è del parlante verso cose del presidente, quindi si usa il Kenjougo 拝見する (haiken suru)."
+  },
+  {
+    "id": "DRILL-B-08",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "明日は大切な試験があるので、今夜はテレビを見て遊んでいる＿＿＿。",
+    "options": {
+      "A": "わけにはいかない",
+      "B": "わけではない",
+      "C": "はずがない",
+      "D": "にちがいない"
+    },
+    "answer": "A",
+    "explanation": "〜わけにはいかない esprime l'impossibilità morale, sociale o logica di compiere un'azione a causa di circostanze vincolanti ('non posso proprio permettermi di guardare la TV')."
+  },
+  {
+    "id": "DRILL-B-09",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "長い行列に並んだが、目の前で限定商品が売り＿＿＿しまった。",
+    "options": {
+      "A": "切れて",
+      "B": "出して",
+      "C": "込んで",
+      "D": "抜けて"
+    },
+    "answer": "A",
+    "explanation": "売り切れる (urikireru) significa 'andare esaurito / terminare le scorte'. L'ausiliare 〜切る / 〜切れる indica l'esaurimento completo o il compimento fino all'estremo."
+  },
+  {
+    "id": "DRILL-B-10",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "先生、昨日お話しくださった参考文献の題名を まだ 覚えて ＿＿＿。",
+    "options": {
+      "A": "いらっしゃいますか",
+      "B": "おりますか",
+      "C": "参りますか",
+      "D": "申しますか"
+    },
+    "answer": "A",
+    "explanation": "Chiedendo al professore se ricorda: 〜ていらっしゃる è il Sonkeigo (rispetto) di 〜ている. おる è Kenjougo (usato solo per sé)."
+  },
+  {
+    "id": "DRILL-B-11",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "このアパートは家賃が安い＿＿＿、駅から遠くて買い物にも不便だ。",
+    "options": {
+      "A": "反面",
+      "B": "わりに",
+      "C": "どころか",
+      "D": "にしては"
+    },
+    "answer": "A",
+    "explanation": "〜反面 (hanmen) esprime 'l'altra faccia della medaglia / per converso', contrapponendo due aspetti contrastanti di uno stesso elemento (vantaggio: prezzo basso / svantaggio: scomodo)."
+  },
+  {
+    "id": "DRILL-B-12",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "電車の中で急に気分が悪くなり、途中駅で降り＿＿＿。",
+    "options": {
+      "A": "そうになった",
+      "B": "かけた",
+      "C": "切った",
+      "D": "直した"
+    },
+    "answer": "A",
+    "explanation": "〜そうになる indica che un evento negativo stava per accadere per poco ('stavo quasi per scendere / stavo per svenire'). 〜かける indica invece un'azione volontaria iniziata e non finita."
+  },
+  {
+    "id": "DRILL-B-13",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "（電話で）「恐れ入りますが、山下先生の ご自宅でしょうか。トリノ大学のパトリックと ＿＿＿。」",
+    "options": {
+      "A": "申します",
+      "B": "存じます",
+      "C": "伺います",
+      "D": "おっしゃいます"
+    },
+    "answer": "A",
+    "explanation": "Presentazione formale telefonica: [Nome]と申します (sono Patrik). 存じます = penso/so, 伺います = chiedo/visito."
+  },
+  {
+    "id": "DRILL-B-14",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "彼は病気で寝ている＿＿＿、毎日ジョギングをしているそうだ。",
+    "options": {
+      "A": "どころか",
+      "B": "ばかりか",
+      "C": "だけに",
+      "D": "からこそ"
+    },
+    "answer": "A",
+    "explanation": "〜どころか significa 'altro che / tutt'altro che!', smentendo energicamente l'ipotesi precedente ('Altro che a letto malato: fa jogging ogni giorno!')."
+  },
+  {
+    "id": "DRILL-B-15",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "二人は問題の解決に向けて、夜遅くまでじっくり話し＿＿＿。",
+    "options": {
+      "A": "合った",
+      "B": "出した",
+      "C": "切った",
+      "D": "直した"
+    },
+    "answer": "A",
+    "explanation": "話し合う (hanashiau) significa 'discutere / confrontarsi a vicenda'. L'ausiliare 〜合う indica reciprocità tra due o più parti."
+  },
+  {
+    "id": "DRILL-B-16",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "「先生、その件に関しましては、私から直接あの方に ＿＿＿。」",
+    "options": {
+      "A": "お伝えいたします",
+      "B": "お伝えになります",
+      "C": "ご伝達なさいます",
+      "D": "お伝えくださいます"
+    },
+    "answer": "A",
+    "explanation": "L'azione è svolta dal parlante (私から) verso un terzo nell'interesse dell'interlocutore: Kenjougo formula お/ご + radice + いたす: お伝えいたします (glielo comunicherò io)."
+  },
+  {
+    "id": "DRILL-B-17",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "子どもの描いた絵＿＿＿、色彩のバランスが非常に優れている。",
+    "options": {
+      "A": "にしては",
+      "B": "反面",
+      "C": "だけに",
+      "D": "をきっかけに"
+    },
+    "answer": "A",
+    "explanation": "〜にしては si lega a un sostantivo indicando una valutazione inaspettata rispetto allo standard tipico di quella categoria ('per essere il disegno di un bambino, il bilanciamento cromatico è ottimo')."
+  },
+  {
+    "id": "DRILL-B-18",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "机の上に本や書類が山のように積み＿＿＿いる。",
+    "options": {
+      "A": "上げられて",
+      "B": "出されて",
+      "C": "直されて",
+      "D": "合わされて"
+    },
+    "answer": "A",
+    "explanation": "積み上げる (tsumiageru) significa impilare verso l'alto. 積み上げられている esprime lo stato risultativo passivo."
+  },
+  {
+    "id": "DRILL-B-19",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "「先ほど伺ったご意見につきまして、私もそのように ＿＿＿。」",
+    "options": {
+      "A": "存じます",
+      "B": "おっしゃいます",
+      "C": "なさいます",
+      "D": "ご覧になります"
+    },
+    "answer": "A",
+    "explanation": "存じる (zonjiru) è il Kenjougo di 思う (pensare/ritenere): 'Anch'io la penso in questo modo' = 私もそのように存じます."
+  },
+  {
+    "id": "DRILL-B-20",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n図書館では ＿＿ ＿＿ ★ ＿＿ ならない。\n①静かに　②しなければ　③他人の迷惑に　④ならないように",
+    "options": {
+      "A": "① (静かに)",
+      "B": "② (しなければ)",
+      "C": "③ (他人の迷惑に)",
+      "D": "④ (ならないように)"
+    },
+    "answer": "D",
+    "explanation": "Ordine corretto: 図書館では [③他人の迷惑に] [④ならないように] ★[①静かに] [②しなければ] ならない (3 - 4 - 1 - 2). La stella ★ corrisponde a ①, opzione A."
+  }
+]

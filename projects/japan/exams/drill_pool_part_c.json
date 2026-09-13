@@ -1,0 +1,152 @@
+[
+  {
+    "id": "DRILL-C-01",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼＿＿＿、この困難なプロジェクトを成功に導けるリーダーは他にはいない。",
+    "options": {
+      "A": "をおいて",
+      "B": "をもって",
+      "C": "を皮切りに",
+      "D": "を限りに"
+    },
+    "answer": "A",
+    "explanation": "〜をおいて (~o oite) esprime 'all'infuori di / tranne... non c'è nessun altro', regolarmente abbinato a 〜ない per esprimere una valutazione esclusiva di eccellenza: 'All'infuori di lui, non c'è nessun altro leader'."
+  },
+  {
+    "id": "DRILL-C-02",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "いかに経験豊富な専門家＿＿＿、未来の市場動向を完全に予測することは不可能だ。",
+    "options": {
+      "A": "といえども",
+      "B": "とはいえ",
+      "C": "としたところで",
+      "D": "と思いきや"
+    },
+    "answer": "A",
+    "explanation": "〜といえども (~to iedomo) è un'espressione formale scritta concessiva ('per quanto / benché si tratti di...'): 'Per quanto sia un esperto ricco di esperienza, è impossibile prevedere completamente i trend del mercato'."
+  },
+  {
+    "id": "DRILL-C-03",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Kanji Semantic Mining",
+    "question": "つぎの ぶんの 【＿＿＿】に 最も 適当な ものは どれですか。\n伝統工芸の後継者不足は、地域社会の存続に深く【＿＿＿】重大な課題である。",
+    "options": {
+      "A": "かかわる",
+      "B": "こだわり",
+      "C": "かぎる",
+      "D": "かわる"
+    },
+    "answer": "A",
+    "explanation": "〜にかかわる (関わる) significa 'riguardare / incidere profondamente sulle sorti di': 地域社会の存続に関わる重大な課題 (una questione grave che tocca la sopravvivenza stessa della comunità locale)."
+  },
+  {
+    "id": "DRILL-C-04",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「現代の都市生活において、若者が孤独感を深める一因は、家庭でも学校でもない『第三の居場所』の喪失にある。目的なく立ち寄り、利害関係を超えて他者と偶発的な交流を持てる空間が、青少年の精神的な安定に寄与しているのである。」\n問：筆者の主張と合致するものはどれか。",
+    "options": {
+      "A": "利害関係のない第三の居場所が、青少年の孤立を防ぐ役割を果たしている。",
+      "B": "家庭や学校での交流こそが、都市の若者の孤独を解消する唯一の手段である。",
+      "C": "明確な目的を持たずに集まる空間は、青少年の精神的発達を阻害する。",
+      "D": "現代の都市空間では、第三の居場所の必要性は以前より低下している。"
+    },
+    "answer": "A",
+    "explanation": "Mining semantico: il testo afferma chiaramente che la perdita della 'terza dimora' (第三の居場所) accresce la solitudine e che lo spazio di relazione non utilitaristico (利害関係を超えて) contribuisce alla stabilità psichica. L'opzione A sintetizza fedelmente questa tesi."
+  },
+  {
+    "id": "DRILL-C-05",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "台風の接近により、交通網が麻痺し、住民は避難を＿＿＿された。",
+    "options": {
+      "A": "余儀なく",
+      "B": "余計に",
+      "C": "余分に",
+      "D": "過剰に"
+    },
+    "answer": "A",
+    "explanation": "〜を余儀なくされる (~o yoginaku sareru) significa 'essere costretti/forzati a compiere qualcosa contro la propria volontà a causa di eventi esterni insormontabili': 避難を余儀なくされた (costretti a evacuare)."
+  },
+  {
+    "id": "DRILL-C-06",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "公共の場における彼の無責任な態度は、不謹慎＿＿＿。",
+    "options": {
+      "A": "極まりない",
+      "B": "極めて",
+      "C": "限りない",
+      "D": "堪えない"
+    },
+    "answer": "A",
+    "explanation": "〜極まりない (~kiwamarinai) esprime 'all'estremo / al colmo di...', associato a stati o giudizi fortemente negativi: 不謹慎極まりない (al colmo della sconsideratezza/irriverenza)."
+  },
+  {
+    "id": "DRILL-C-07",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Kanji Semantic Mining",
+    "question": "つぎの ぶんの 【＿＿＿】に 最も 適当な ものは どれですか。\n長年の研究がついに実を結び、画期的な新薬が【＿＿＿】された。",
+    "options": {
+      "A": "創出",
+      "B": "出現",
+      "C": "脱却",
+      "D": "排除"
+    },
+    "answer": "A",
+    "explanation": "Mining dei kanji: 創 (creare dal nulla) + 出 (far uscire/produrre) = 創出 (creazione/innovazione). 出現 è apparizione spontanea, 脱却 è liberarsi da un difetto, 排除 è espulsione."
+  },
+  {
+    "id": "DRILL-C-08",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Reading Comprehension (読解)",
+    "question": "【短文読解】\n「情報化社会の進展に伴い、人々は膨大な知識に即座にアクセスできるようになった。しかし、断片的な情報を集めることと、体系的な知恵を深めることとは本質的に異なる。思索の深まりを欠いた知識の集積は、かえって批判的思考力を鈍らせる恐れがある。」\n問：文章の趣旨として最も適切なものはどれか。",
+    "options": {
+      "A": "情報へのアクセス容易性が、必ずしも真の批判的思考力の向上につながるわけではない。",
+      "B": "インターネットによる情報の蓄積こそが、体系的な学術知恵を深める最良の道である。",
+      "C": "批判的思考力を養うためには、すべてのデジタル情報の利用を制限すべきである。",
+      "D": "現代社会においては、深い思索よりも迅速な情報収集能力が重視されるべきである。"
+    },
+    "answer": "A",
+    "explanation": "Tesi dell'autore: l'accumulo di informazioni frammentarie (断片的な情報) senza riflessione profonda (思索の深まり) rischia di indebolire il pensiero critico. L'opzione A esprime perfettamente questo nucleo logico."
+  },
+  {
+    "id": "DRILL-C-09",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼女は今にも泣き出さ＿＿＿表情で、静かにうつむいていた。",
+    "options": {
+      "A": "んばかりの",
+      "B": "んがための",
+      "C": "ばかりに",
+      "D": "とばかりに"
+    },
+    "answer": "A",
+    "explanation": "〜んばかりの (~n bakari no) significa 'come se stesse quasi per / a momenti sul punto di': 今にも泣き出さんばかりの表情 (un'espressione come se stesse per scoppiare a piangere da un istante all'altro)."
+  },
+  {
+    "id": "DRILL-C-10",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Expressions",
+    "question": "国の威信を＿＿＿国際会議が、厳重な警備のもとで開幕した。",
+    "options": {
+      "A": "かけた",
+      "B": "つけた",
+      "C": "おいた",
+      "D": "こめた"
+    },
+    "answer": "A",
+    "explanation": "威信をかける (ishin o kakeru) è la collocazione fissa che significa 'mettere in gioco il prestigio / giocarsi la reputazione'. 命をかける (rischiare la vita), 威信をかける (mettere in gioco il prestigio)."
+  }
+]
