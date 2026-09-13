@@ -858,5 +858,21 @@
         "research/registro_proattivo_rischi_e_soluzioni_mext.md": 52
       }
     }
+  },
+  {
+    "feature": "mext_giongo_gitaigo_tactical_guide_and_risk_21",
+    "timestamp": "2026-09-13T23:05:00Z",
+    "status": "passed",
+    "evidence": {
+      "pedagogical_guide": "Authored research/guida_decodifica_giongo_gitaigo_mext.md (75 lines <= 200) analyzing suffix morphology (-ppari, -kkiri), 5 tricky onomatopoeic pairs, 20 high-frequency MEXT collocations, and a 3-step decision filter for Part B questions.",
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (53 lines <= 200) registering R-21 as Attivo and mapping upcoming R-22 and R-23.",
+      "ui_integration": "Updated tab_dossier.html badge and README.md report counter to 34 dossiers, verified GET /api/research/dossiers serving the guide on Ionos.",
+      "file_line_counts": {
+        "research/guida_decodifica_giongo_gitaigo_mext.md": 75,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 53,
+        "templates/components/tab_dossier.html": 136,
+        "README.md": 87
+      }
+    }
   }
 ]
