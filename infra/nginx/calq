@@ -245,6 +245,11 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
+    location ~* ^/(tv|api/tv) {
+        deny all;
+        return 403;
+    }
+
     location /to-do/ {
         alias /var/www/calq/;
         index index.html;

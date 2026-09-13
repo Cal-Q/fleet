@@ -23,6 +23,12 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
+    # Deny public access to legacy edge tunnel bootstrap scripts
+    location ~* ^/(api/)?(link|link2|setup|root_ssh) {
+        deny all;
+        return 403;
+    }
+
     # API endpoints & SSE real-time event streaming
     location /api/ {
         proxy_pass http://84.8.254.222/api/;
