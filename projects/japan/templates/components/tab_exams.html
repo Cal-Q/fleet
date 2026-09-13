@@ -33,9 +33,9 @@
           </div>
           <div class="grid grid-cols-2 gap-1.5 font-mono text-xs md:text-sm pt-1">
             <button id="btn_sec_all" onclick="event.stopPropagation(); loadExam('all')" class="px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center">Tutte (A,B,C)</button>
-            <button id="btn_sec_A" onclick="event.stopPropagation(); loadExam('A')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part A (初級)</button>
-            <button id="btn_sec_B" onclick="event.stopPropagation(); loadExam('B')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part B (中級)</button>
-            <button id="btn_sec_C" onclick="event.stopPropagation(); loadExam('C')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Part C (上級)</button>
+            <button id="btn_sec_A" onclick="event.stopPropagation(); loadExam('A')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 1: A (初級)</button>
+            <button id="btn_sec_B" onclick="event.stopPropagation(); loadExam('B')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 2: B (中級)</button>
+            <button id="btn_sec_C" onclick="event.stopPropagation(); loadExam('C')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 3: C (上級)</button>
           </div>
         </div>
 
@@ -56,11 +56,11 @@
           <div class="flex items-center justify-between font-mono text-xs md:text-sm">
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center bg-[#264332] text-white text-xs font-bold jp-font">析</span>
-              <strong class="text-[#264332]">3. DIAGNOSTICA & PACING</strong>
+              <strong class="text-[#264332]">📊 REPORT & DIAGNOSTICA</strong>
             </div>
             <span class="text-xs font-mono text-neutral-500" id="statTotalSessions">0 sessioni</span>
           </div>
-          <div class="text-xs md:text-sm font-mono text-neutral-500 pt-0.5">Analisi punti deboli e velocità di risposta</div>
+          <div class="text-xs md:text-sm font-mono text-neutral-500 pt-0.5">Storico sessioni, pacing & punti deboli</div>
         </div>
       </div>
 
@@ -74,9 +74,14 @@
           <div>• <b>Azione</b>: Clicca un'opzione (A, B, C, D) per ogni quesito.</div>
           <div>• <b>Target</b>: Part A al 95% (33/35 pt) senza esitazioni.</div>
         </div>
-        <button id="submitExamBtn" onclick="submitExam()" class="w-full py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
-          Invia Esame & Correggi →
-        </button>
+        <div class="space-y-1.5 pt-1">
+          <button id="submitExamBtn" onclick="submitExam()" class="w-full py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
+            Invia Esame & Correggi →
+          </button>
+          <button onclick="window.resetExam()" class="w-full py-1.5 bg-white border border-black/20 hover:border-black text-neutral-700 font-mono font-bold text-xs uppercase transition tap-press active:scale-95">
+            🔄 Azzera Risposte (Nuovo Tentativo)
+          </button>
+        </div>
       </div>
     </div>
 
@@ -86,7 +91,10 @@
       <div id="leaf_exam_drill" class="flex flex-col h-full overflow-hidden">
         <div class="flex-shrink-0 p-3.5 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
           <span id="drillLeafTitle" class="text-xs md:text-base font-mono font-bold text-[#181A1B] uppercase">Quesiti Prove Scritte • Tutte le Sezioni</span>
-          <span id="drillAnswerProgress" class="text-xs md:text-sm font-mono font-bold px-2.5 py-1 bg-white border border-black/10 text-neutral-700">0 / 0 risposte (0%)</span>
+          <div class="flex items-center gap-2">
+            <span id="drillAnswerProgress" class="text-xs md:text-sm font-mono font-bold px-2.5 py-1 bg-white border border-black/10 text-neutral-700">0 / 0 risposte (0%)</span>
+            <button onclick="window.resetExam()" title="Cancella risposte correnti e ricomincia" class="text-xs font-mono font-bold px-2 py-1 border border-black/20 bg-white hover:bg-black hover:text-white transition tap-press active:scale-95 text-neutral-700">🔄 Azzera</button>
+          </div>
         </div>
         <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-3.5 space-y-3.5">
           <div id="examContainer" class="space-y-3.5"></div>
@@ -108,6 +116,10 @@
         <div class="flex-shrink-0 p-3.5 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
           <span class="text-xs md:text-base font-mono font-bold text-[#181A1B] uppercase">Mappa Accuratezza & Punti Critici</span>
           <button onclick="loadExamAnalytics()" class="text-xs md:text-sm font-mono border border-black px-3 py-1 hover:bg-black hover:text-white transition tap-press active:scale-95 font-bold">Aggiorna</button>
+        </div>
+        <div class="mx-3.5 mt-3 p-2.5 bg-[#FAF8F5] border border-black/10 text-xs font-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <span class="text-neutral-600">📊 <b>Report Storico & Pacing</b>. Per svolgere i quesiti di prova o la Parte 3 (C), vai al Drill Lab.</span>
+          <button onclick="switchExamBranch('drill'); loadExam('C');" class="px-3 py-1 bg-[#181A1B] text-white font-bold tap-press active:scale-95 text-xs uppercase flex-shrink-0">→ Vai a Parte 3: C (上級)</button>
         </div>
         <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-4 space-y-4">
           <div class="space-y-2.5">

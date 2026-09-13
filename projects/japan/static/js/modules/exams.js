@@ -15,7 +15,14 @@ let timerInterval = null;
 
 export function getUserAnswer(qid) { return userAnswers[qid] || ""; }
 
-export async function loadExam(section = "all") {
+export function resetExam(section = null) {
+  const targetSection = section || currentSection || "all";
+  userAnswers = {};
+  try { localStorage.removeItem("mext_exam_answers"); } catch (e) {}
+  loadExam(targetSection, true);
+}
+
+export async function loadExam(section = "all", clean = false) {
   currentSection = section;
   highlightSectionBtn(section);
 
@@ -29,19 +36,18 @@ export async function loadExam(section = "all") {
   container.innerHTML = "";
   if (resultsBox) resultsBox.classList.add("hidden");
 
-  const titleMap = { all: "Tutte le Sezioni (A, B, C)", A: "Part A (初級 - N5/N4)", B: "Part B (中級 - N3/N2)", C: "Part C (上級 - N1)" };
+  const titleMap = { all: "Tutte le Sezioni (A, B, C)", A: "Parte 1: A (初級 - N5/N4)", B: "Parte 2: B (中級 - N3/N2)", C: "Parte 3: C (上級 - N1)" };
   const leafTitle = document.getElementById("drillLeafTitle");
   if (leafTitle) leafTitle.innerText = `Quesiti Prove Scritte • ${titleMap[section] || section}`;
 
-  try {
-    userAnswers = { ...JSON.parse(localStorage.getItem("mext_exam_answers") || "{}") };
-  } catch (e) { userAnswers = {}; }
+  if (clean) {
+    userAnswers = {};
+  } else {
+    try { userAnswers = { ...JSON.parse(localStorage.getItem("mext_exam_answers") || "{}") }; } catch (e) { userAnswers = {}; }
+  }
 
   const serverNotes = {};
-  currentQuestions.forEach(q => {
-    if (q.saved_comment) serverNotes[q.id] = q.saved_comment;
-    if (q.saved_answer && !userAnswers[q.id]) userAnswers[q.id] = q.saved_answer;
-  });
+  currentQuestions.forEach(q => { if (q.saved_comment) serverNotes[q.id] = q.saved_comment; });
   initExamNotes(serverNotes);
 
   currentQuestions.forEach((q, idx) => {
@@ -60,8 +66,7 @@ export async function loadExam(section = "all") {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1 font-mono text-xs md:text-sm">
         ${["A", "B", "C", "D"].filter(k => q.options && q.options[k]).map(k => {
           const isSel = (sel === k);
-          return `
-          <button type="button" id="opt_${q.id}_${k}" onclick="window.selectExamOption('${q.id}', '${k}')" class="exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left">
+          return `<button type="button" id="opt_${q.id}_${k}" onclick="window.selectExamOption('${q.id}', '${k}')" class="exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left">
             <span class="opt-indicator w-6 h-6 md:w-7 md:h-7 flex-shrink-0 flex items-center justify-center border ${isSel ? "border-white bg-white text-[#181A1B]" : "border-black/20 bg-white text-neutral-600"} text-xs md:text-sm font-bold font-mono">${isSel ? "✓" : k}</span>
             <span class="jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug">${q.options[k]}</span>
           </button>`;
@@ -85,9 +90,14 @@ export async function loadExam(section = "all") {
       <div id="leafBottomCount" class="text-sm md:text-base font-mono font-bold text-[#181A1B]">0 / ${currentQuestions.length} completati</div>
       <div class="text-xs md:text-sm text-neutral-500 font-mono">Tutte le risposte e note vengono salvate per la revisione.</div>
     </div>
-    <button onclick="submitExam()" class="px-5 py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
-      Invia Esame & Correggi →
-    </button>
+    <div class="flex items-center gap-2">
+      <button onclick="window.resetExam('${section}')" class="px-3.5 py-2.5 bg-white border border-black/20 hover:border-black text-neutral-700 font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95">
+        🔄 Azzera
+      </button>
+      <button onclick="submitExam()" class="px-5 py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
+        Invia Esame & Correggi →
+      </button>
+    </div>
   `;
   container.appendChild(bottomBar);
 
@@ -106,8 +116,7 @@ export async function loadExam(section = "all") {
 function highlightSectionBtn(sec) {
   ["all", "A", "B", "C"].forEach(s => {
     const b = document.getElementById("btn_sec_" + s);
-    if (!b) return;
-    b.className = (s === sec)
+    if (b) b.className = (s === sec)
       ? "px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center shadow-sm text-xs md:text-sm"
       : "px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold text-neutral-700 text-xs md:text-sm";
   });
@@ -120,8 +129,7 @@ export function selectExamOption(qid, optKey) {
   ["A", "B", "C", "D"].forEach(k => {
     const el = document.getElementById(`opt_${qid}_${k}`);
     if (!el) return;
-    const ind = el.querySelector(".opt-indicator"), txt = el.querySelector(".jp-font");
-    const isSel = (k === optKey);
+    const ind = el.querySelector(".opt-indicator"), txt = el.querySelector(".jp-font"), isSel = (k === optKey);
     el.className = `exam-opt-card flex items-center gap-3 p-3 md:p-3.5 ${isSel ? "border-2 border-[#181A1B] bg-[#181A1B] text-white shadow-sm" : "border border-black/10 bg-[#FAF9F6] hover:bg-white hover:border-black/30"} cursor-pointer transition-all duration-100 tap-press active:scale-[0.98] text-left`;
     if (txt) txt.className = `jp-font ${isSel ? "text-white font-bold" : "text-[#111111] font-medium"} text-sm md:text-base flex-1 leading-snug`;
     if (ind) {
@@ -139,7 +147,8 @@ export function selectExamOption(qid, optKey) {
 }
 
 function updateProgressUI() {
-  const answered = Object.keys(userAnswers).length, total = currentQuestions.length;
+  const answered = currentQuestions.filter(q => userAnswers[q.id]).length;
+  const total = currentQuestions.length;
   const pct = total ? Math.round((answered / total) * 100) : 0;
   const set = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
   set("drillAnswerProgress", `${answered} / ${total} (${pct}%)`);
@@ -149,10 +158,8 @@ function updateProgressUI() {
 }
 
 export async function submitExam() {
-  const answered = Object.keys(userAnswers).length, total = currentQuestions.length;
-  if (answered < total) {
-    if (!confirm(`Attenzione: ci sono ancora ${total - answered} quesiti senza risposta.\nVuoi consegnare comunque? Le risposte omesse risulteranno errate.`)) return;
-  }
+  const answered = currentQuestions.filter(q => userAnswers[q.id]).length, total = currentQuestions.length;
+  if (answered < total && !confirm(`Attenzione: ci sono ancora ${total - answered} quesiti senza risposta.\nVuoi consegnare comunque? Le risposte omesse risulteranno errate.`)) return;
   if (timerInterval) clearInterval(timerInterval);
   const spent = examStartTime ? Math.floor((Date.now() - examStartTime) / 1000) : 0;
   const answers = {};
@@ -172,9 +179,7 @@ export async function submitExam() {
 
 export function switchExamBranch(branch) {
   ["drill", "interview", "analytics"].forEach(b => {
-    const leaf = document.getElementById("leaf_exam_" + b);
-    const btn = document.getElementById("branch_btn_exam_" + b);
-    const active = (b === branch);
+    const leaf = document.getElementById("leaf_exam_" + b), btn = document.getElementById("branch_btn_exam_" + b), active = (b === branch);
     if (leaf) leaf.classList.toggle("hidden", !active);
     if (btn) {
       btn.classList.toggle("bg-white", active);
@@ -182,7 +187,6 @@ export function switchExamBranch(branch) {
       btn.classList.toggle("opacity-70", !active);
     }
   });
-
   if (branch === "interview") loadInterview();
   else if (branch === "analytics") loadExamAnalytics();
   else if (branch === "drill" && !currentQuestions.length) loadExam(currentSection);

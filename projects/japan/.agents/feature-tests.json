@@ -1,5 +1,136 @@
 [
   {
+    "feature": "mext_exam_lab_parte_3_reset_and_progress_isolation",
+    "timestamp": "2026-09-13T21:08:00Z",
+    "status": "passed",
+    "evidence": {
+      "problem_diagnosed": "1) Trunk Branch 3 was labeled '3. DIAGNOSTICA & PACING', confusing users who expected it to be Part 3 of the test; 2) 'updateProgressUI' counted ALL answers in localStorage across all sections instead of current section, causing Part C (6 questions) to show as 100% completed if 6+ answers existed from Part A/B; 3) Previous session answers (saved_answer) locked choices into answered state with no reset mechanism.",
+      "remediation": [
+        "Updated trunk Branch 3 label to '📊 REPORT & DIAGNOSTICA' with subtitle 'Storico sessioni, pacing & punti deboli'.",
+        "Added explicit 'Parte 1: A (初級)', 'Parte 2: B (中級)', 'Parte 3: C (上級)' labels to drill section buttons.",
+        "Added guidance bridge in Analytics leaf with direct '→ Vai a Parte 3: C (上級)' 1-tap jump.",
+        "Fixed progress count to strictly evaluate 'currentQuestions.filter(q => userAnswers[q.id]).length'.",
+        "Implemented 'resetExam(section)' and added tactile '🔄 Azzera' buttons in leaf header, trunk action box, and results card.",
+        "Decoupled test attempts from past submitted answers so new attempts start clean."
+      ],
+      "live_verification": "HTTP 200 on https://japan.calq.it/, verified asset versioning v=20260913_21, verified resetExam presence, verified line limits <= 200.",
+      "file_line_counts": {
+        "static/js/modules/exams.js": 193,
+        "static/js/modules/exam_analytics.js": 76,
+        "static/js/main.js": 109,
+        "templates/components/tab_exams.html": 138,
+        "templates/index.html": 59
+      }
+    }
+  },
+  {
+    "feature": "kanji_study_strategy_and_priority_integration",
+    "timestamp": "2026-09-13T21:00:00Z",
+    "status": "passed",
+    "evidence": {
+      "strategy_definition": "Adopted 5 kanji/day resilient progression to complete all N5+N4 (6 days) and N3 (50 days) with zero SRS burnout risk.",
+      "code_update": "engine/study_queue.py updated to dynamically prioritize unstudied kanji characters appearing in upcoming grammar vocabulary words.",
+      "api_verification": "GET /api/study/next returned prioritized kanji (e.g. 認 from 確認, 報, 息) followed by canonical JLPT order.",
+      "documentation_updated": [
+        "README.md (added Study Strategy & Progression Invariants section)",
+        "research/dossier_161_day_master_plan.md (updated Section 1.1 ground truth and added Section 2.4 Kanji SRS Progression Strategy)"
+      ],
+      "file_line_counts": {
+        "engine/study_queue.py": 129,
+        "README.md": 77,
+        "research/dossier_161_day_master_plan.md": 83
+      }
+    }
+  },
+  {
+    "feature": "remaining_cards_smoothed_to_future_days",
+    "timestamp": "2026-09-13T20:43:00Z",
+    "status": "passed",
+    "evidence": {
+      "action_performed": "Redistributed all 103 remaining due and learning cards across travel decks to start from tomorrow (Days 640-653).",
+      "decks_smoothed": [
+        "[JAP] [TRAVEL] Japanese -> Phonetic + Meaning (36 reviews + 27 learning)",
+        "[JAP] [TRAVEL] Kanji - Image Deck (11 reviews + 1 learning)",
+        "[JAP] [TRAVEL] [1] Jap Sentences (28 reviews)"
+      ],
+      "due_today_after_smooth": 0,
+      "learning_today_after_smooth": 0,
+      "travel_due_total": 0,
+      "ankiweb_sync_status": "success",
+      "web_api_verify_srs": {
+        "due_total": 0,
+        "verified": true,
+        "today_reviews": 610
+      }
+    }
+  },
+  {
+    "feature": "anki_sync_paradigm_rework_and_cli_unification",
+    "timestamp": "2026-09-13T20:38:00Z",
+    "status": "passed",
+    "evidence": {
+      "paradigm_rework": "Replaced legacy xvfb/AnkiConnect GUI fallback with headless Anki 26.08 Protobuf sync and transparent cross-host auto-delegation from Oracle VPS to IONOS.",
+      "cli_created": "core/anki_cli.py (156 lines) providing status, sync, and reschedule subcommands.",
+      "cli_status_verification": "Day 639 due breakdown reported accurately in <0.2s.",
+      "cli_sync_verification": "Full pipeline and AnkiWeb sync executed in 3.95s from Oracle VPS.",
+      "api_verify_srs_verification": "POST /api/bunki/verify_srs returned HTTP 200 with sync_ok=true in 2.0s.",
+      "documentation_updated": [
+        "README.md (architecture overview, CLI usage, pipeline rules)",
+        "core/README.md (subsystem guide, recipes, safety invariants)"
+      ],
+      "line_count_invariants": {
+        "sync_helpers.py": 67,
+        "sync_and_push.py": 191,
+        "sync_worker.py": 98,
+        "anki_cli.py": 156,
+        "README.md": 66,
+        "core/README.md": 43
+      }
+    }
+  },
+  {
+    "feature": "overdue_reviews_redistribution_and_ankiweb_sync",
+    "timestamp": "2026-09-13T20:33:00Z",
+    "status": "passed",
+    "evidence": {
+      "solution_applied": "Solution A (distributed 495 overdue review cards across 14 days, ~35-36 cards/day)",
+      "due_reviews_today": 36,
+      "learning_cards_today": 27,
+      "total_due_today": 63,
+      "prior_due_today": 522,
+      "reduction_pct": 87.9,
+      "distribution_schedule": "Day 0: 36 cards; Days 1-13: 35-36 cards/day",
+      "ankiweb_sync_host": "IONOS (Server 1 via Anki 26.08 native protobuf sync)",
+      "ankiweb_sync_result": "success (res.required: 0, uncommitted cards = 0)",
+      "deck_id": 1759999324396,
+      "deck_name": "[JAP] [TRAVEL] Japanese -> Phonetic + Meaning"
+    }
+  },
+  {
+    "feature": "vocab_deck_spurious_cleanup_and_srs_restoration",
+    "timestamp": "2026-09-13T19:50:00Z",
+    "status": "passed",
+    "evidence": {
+      "spurious_cards_deleted": 342,
+      "spurious_notes_deleted": 342,
+      "mature_cards_restored_to_q2": 1226,
+      "remaining_cards_in_q0": 10,
+      "total_cards_in_deck": 3015,
+      "allow_add_gated_in_direct_writer": true,
+      "allow_add_false_in_pipeline": true,
+      "pipeline_idempotency_verified": true,
+      "sample_restored_cards": [
+        {"word": "仕方", "reps": 30, "ivl": 4, "queue": 2},
+        {"word": "利用", "reps": 31, "ivl": 23, "queue": 2},
+        {"word": "表す", "reps": 14, "ivl": 52, "queue": 2},
+        {"word": "気持ち", "reps": 8, "ivl": 126, "queue": 2}
+      ],
+      "sample_spurious_deleted": [
+        "割る", "さけぶ", "来週", "チーム", "じゃんけん", "トンネル", "かいぞく", "さめ", "コンクリート"
+      ]
+    }
+  },
+  {
     "feature": "kanji_deck_restoration_and_merge",
     "timestamp": "2026-09-12T15:40:00Z",
     "status": "passed",

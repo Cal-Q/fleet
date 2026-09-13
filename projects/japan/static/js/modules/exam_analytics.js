@@ -13,7 +13,7 @@ export function renderExamResults(result, spent, currentSection) {
           <div class="text-xs md:text-sm text-neutral-500 font-mono">Tempo: ${Math.floor(spent / 60)}m ${spent % 60}s (${result.seconds_per_question}s/q)</div>
         </div>
         <div class="flex items-center gap-2 font-mono text-xs md:text-sm">
-          <button onclick=\"window.loadExam('${currentSection}')\" class="px-3.5 py-2 border border-black bg-white hover:bg-black hover:text-white transition tap-press active:scale-95 font-bold">🔄 Riprova</button>
+          <button onclick=\"window.resetExam('${currentSection}')\" class="px-3.5 py-2 border border-black bg-white hover:bg-black hover:text-white transition tap-press active:scale-95 font-bold">🔄 Riprova da Capo</button>
           <button onclick=\"window.switchExamBranch('analytics')\" class="px-3.5 py-2 bg-[#181A1B] text-white hover:bg-black transition tap-press active:scale-95 font-bold">📊 Diagnostica</button>
         </div>
       </div>
