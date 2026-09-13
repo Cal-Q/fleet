@@ -33,7 +33,13 @@ PUBLIC_DIR = os.path.join(BASE_DIR, "public")
 
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
-app = FastAPI(title="Japan • Platform & Studies", version="2.0.0")
+app = FastAPI(
+    title="Japan • Platform & Studies",
+    version="2.0.0",
+    docs_url=None,
+    redoc_url=None,
+    openapi_url=None,
+)
 
 app.add_middleware(
     CORSMiddleware,
