@@ -1,6 +1,9 @@
 server {
     server_name pokemon.calq.it;
 
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
+
     location /bozze/ {
         alias /home/SinoiaGang/sinoira-gang/public/bozze/;
         index index.html;

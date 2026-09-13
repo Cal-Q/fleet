@@ -1,6 +1,9 @@
 server {
     server_name travel.calq.it;
 
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
+
     location / {
         proxy_pass http://127.0.0.1:3001;
         proxy_http_version 1.1;

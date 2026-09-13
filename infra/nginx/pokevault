@@ -48,12 +48,11 @@ server {
     # repository and its history from the outside. Must sit above the static
     # -asset and catch-all locations so nothing reaches the filesystem first.
     # .well-known is exempted so ACME/certbot renewals keep working.
-    location ~ /\.(?!well-known) {
-        deny all;
-        return 404;
-    }
+    include snippets/block-dotfiles.conf;
 
     location ^~ /calq-browser/ {
+        allow 127.0.0.1;
+        deny all;
         proxy_pass http://127.0.0.1:8080;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;

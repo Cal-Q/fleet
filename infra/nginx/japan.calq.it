@@ -1,5 +1,8 @@
 server {
         server_name japan.calq.it;
+
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
   
         location / {
             proxy_pass http://localhost:3033;

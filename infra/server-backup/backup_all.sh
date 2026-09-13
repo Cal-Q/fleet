@@ -4,6 +4,7 @@
 # Schedule: Hourly Automated Run
 # ==============================================================================
 set -euo pipefail
+umask 077
 
 TIMESTAMP=$(date -u +%Y%m%d_%H%M%SZ)
 STAGING_DIR="/opt/server-backup/staging/${TIMESTAMP}"
