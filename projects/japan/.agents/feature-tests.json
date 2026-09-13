@@ -874,5 +874,23 @@
         "README.md": 87
       }
     }
+  },
+  {
+    "feature": "mext_epistemic_decision_matrix_and_interview_pitch_accent",
+    "timestamp": "2026-09-13T23:07:00Z",
+    "status": "passed",
+    "evidence": {
+      "pedagogical_guide": "Authored research/matrice_decisionale_costrutti_epistemici_e_deontici_mext.md (53 lines <= 200) detailing the 2-question decision flowchart distinguishing social obligation (わけにはいかない) from logical impossibility (わけがない).",
+      "interview_prosody": "Enriched academic/interview_questions.json (132 lines <= 200) with Tokyo Pitch Accent prosodic models ([平板], [頭高], [中高], [尾高]) across all 10 interview scenarios.",
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (55 lines <= 200) registering R-22 and R-23 as Attivo and mapping upcoming R-24 and R-25.",
+      "ui_integration": "Updated tab_dossier.html badge and README.md report counter to 35 dossiers, verified GET /api/interview/questions and /api/research/dossiers on Ionos.",
+      "file_line_counts": {
+        "academic/interview_questions.json": 132,
+        "research/matrice_decisionale_costrutti_epistemici_e_deontici_mext.md": 53,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 55,
+        "templates/components/tab_dossier.html": 136,
+        "README.md": 87
+      }
+    }
   }
 ]
