@@ -1,5 +1,5 @@
 /* static/css/editorial.css — Japanese Zen Architectural Design System */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;600;700;900&family=Shippori+Mincho:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;600;700;900&family=Shippori+Mincho:wght@400;600;700;800&family=BIZ+UDPMincho:wght@400;700&family=BIZ+UDMincho:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'textbook';
@@ -66,8 +66,13 @@ html, body {
 .font-editorial-serif { font-family: 'Cinzel', Georgia, serif; letter-spacing: 0.02em; }
 .font-sans { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
 .font-mono { font-family: 'Space Mono', ui-monospace, monospace; }
-.jp-font { font-family: 'textbook', 'Shippori Mincho', 'Noto Serif JP', serif; }
-.jp-mincho { font-family: 'Shippori Mincho', 'Noto Serif JP', 'MS Mincho', 'Yu Mincho', serif; letter-spacing: 0.025em; }
+.jp-font, .jp-mincho {
+  font-family: 'BIZ UDPMincho', 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'MS Mincho', serif;
+  letter-spacing: 0.025em;
+  font-feature-settings: "palt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 
 /* Kumiko & Shōji Architectural Dividers */
 .hairline-border { border: 1px solid var(--zen-border); }

@@ -990,5 +990,23 @@
         "web_sync": "tab_dossier.html updated to 49 Dossier badge, README.md updated to 265 items and 49 dossiers"
       }
     }
+  },
+  {
+    "feature": "official_exam_mincho_typography_integration",
+    "timestamp": "2026-09-13T23:26:00Z",
+    "status": "passed",
+    "evidence": {
+      "typography_standard": "Integrated BIZ UDPMincho (Morisawa Universal Design Examination Mincho), Shippori Mincho, and Noto Serif JP across all Japanese exam and study components.",
+      "implementation_details": [
+        "Preloaded Google Fonts link in templates/index.html with preconnect headers.",
+        "Updated static/css/editorial.css (.jp-font and .jp-mincho unified with BIZ UDPMincho, proportional alternate punctuation glyphs 'palt' 1, and optimizeLegibility).",
+        "Updated tailwind.config jp font stack in templates/index.html.",
+        "Bumped cache-busters to editorial.css?v=20260913_25 and main.js?v=20260913_25."
+      ],
+      "live_verification": {
+        "html_link_verified": "BIZ+UDMincho confirmed in public HTML response on https://japan.calq.it/",
+        "css_rules_verified": "BIZ UDPMincho confirmed in editorial.css?v=20260913_25 on https://japan.calq.it/"
+      }
+    }
   }
 ]
