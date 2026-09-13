@@ -85,8 +85,13 @@ def get_questions_for_session(
             pool = [q for q in pool if q.get("category", "").lower() == category.lower()]
         target_count = limit or (8 if sec_upper == "C" else 12)
         selected = _rotate_daily_slice(pool, count=target_count, salt=sec_upper)
+    elif sec_upper == "MOCK":
+        pool_a = _rotate_daily_slice(_get_pool_for_section("A"), count=12, salt="MOCK_A")
+        pool_b = _rotate_daily_slice(_get_pool_for_section("B"), count=10, salt="MOCK_B")
+        pool_c = _rotate_daily_slice(_get_pool_for_section("C"), count=8, salt="MOCK_C")
+        selected = pool_a + pool_b + pool_c
     else:
-        # Balanced mock battery across all 3 sections
+        # Balanced daily mock battery across all 3 sections
         pool_a = _rotate_daily_slice(_get_pool_for_section("A"), count=5, salt="A_all")
         pool_b = _rotate_daily_slice(_get_pool_for_section("B"), count=5, salt="B_all")
         pool_c = _rotate_daily_slice(_get_pool_for_section("C"), count=4, salt="C_all")

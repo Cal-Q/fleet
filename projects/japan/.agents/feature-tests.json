@@ -1,5 +1,25 @@
 [
   {
+    "feature": "mext_30q_full_mock_simulation_and_tax_immunity_protocol",
+    "timestamp": "2026-09-13T22:31:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Implemented dedicated 30-question full mock examination mode (12 Part A, 10 Part B, 8 Part C) in academic/exam_provider.py, static/js/modules/exams.js, and templates/components/tab_exams.html.",
+        "Verified live execution on Ionos: GET /api/exams/questions?section=mock returns exactly 30 questions with 12A, 10B, 8C breakdown.",
+        "Verified full mock submission via POST /api/exams/submit returning 100% score and recording the mock session.",
+        "Authored research/guida_decodifica_lettura_accademica_parte_c.md detailing Hyōron-bun structural discourse architecture, 10 Golden pivot connectives, the Jōho concession trap, and 20 recurrent academic Yojijukugo.",
+        "Authored research/protocollo_fiscale_e_status_unito_mext.md detailing total tax immunity under Art. 20 of Italy-Japan Tax Convention (L. 973/1973), ISEE/EDISU protection, UniTO Learning Agreement, and CFU credit conversion.",
+        "Confirmed all Python, JavaScript, and HTML files strictly comply with <= 200 lines."
+      ],
+      "file_line_counts": {
+        "academic/exam_provider.py": 111,
+        "static/js/modules/exams.js": 195,
+        "templates/components/tab_exams.html": 141
+      }
+    }
+  },
+  {
     "feature": "mext_curricula_alignment_interview_stress_and_embassy_tactical_day",
     "timestamp": "2026-09-13T22:28:00Z",
     "status": "passed",

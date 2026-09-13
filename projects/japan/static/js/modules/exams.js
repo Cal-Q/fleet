@@ -35,7 +35,13 @@ export async function loadExam(section = "all", clean = false) {
   container.innerHTML = "";
   if (resultsBox) resultsBox.classList.add("hidden");
 
-  const titleMap = { all: "Tutte le Sezioni (A, B, C)", A: "Parte 1: A (初級 - N5/N4)", B: "Parte 2: B (中級 - N3/N2)", C: "Parte 3: C (上級 - N1)" };
+  const titleMap = {
+    all: "Tutte le Sezioni (14Q)",
+    mock: "⚡ Simulazione Completa (30Q: 12A + 10B + 8C)",
+    A: "Parte 1: A (初級 - N5/N4)",
+    B: "Parte 2: B (中級 - N3/N2)",
+    C: "Parte 3: C (上級 - N1)"
+  };
   const leafTitle = document.getElementById("drillLeafTitle");
   if (leafTitle) leafTitle.innerText = `Quesiti Prove Scritte • ${titleMap[section] || section}`;
 
@@ -110,11 +116,12 @@ export async function loadExam(section = "all", clean = false) {
 }
 
 function highlightSectionBtn(sec) {
-  ["all", "A", "B", "C"].forEach(s => {
+  ["all", "mock", "A", "B", "C"].forEach(s => {
     const b = document.getElementById("btn_sec_" + s);
-    if (b) b.className = (s === sec)
-      ? "px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center shadow-sm text-xs md:text-sm"
-      : "px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold text-neutral-700 text-xs md:text-sm";
+    if (!b) return;
+    const col = (s === "mock") ? "col-span-2 " : "";
+    b.className = `${col}px-2.5 py-2 text-xs md:text-sm font-bold uppercase transition tap-press active:scale-95 text-center ` +
+      (s === sec ? "bg-[#181A1B] text-white shadow-sm" : "bg-[#FAF8F5] border border-black/10 hover:border-black text-neutral-700");
   });
 }
 
@@ -180,11 +187,7 @@ export function switchExamBranch(branch) {
   ["drill", "interview", "analytics"].forEach(b => {
     const leaf = document.getElementById("leaf_exam_" + b), btn = document.getElementById("branch_btn_exam_" + b), active = (b === branch);
     if (leaf) leaf.classList.toggle("hidden", !active);
-    if (btn) {
-      btn.classList.toggle("bg-white", active);
-      btn.classList.toggle("opacity-100", active);
-      btn.classList.toggle("opacity-70", !active);
-    }
+    if (btn) { btn.classList.toggle("bg-white", active); btn.classList.toggle("opacity-100", active); btn.classList.toggle("opacity-70", !active); }
   });
   if (branch === "interview") loadInterview();
   else if (branch === "analytics") loadExamAnalytics();
