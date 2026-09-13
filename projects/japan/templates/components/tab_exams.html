@@ -32,8 +32,8 @@
             <span class="text-xs font-mono text-neutral-500" id="statQuestionsCount">0 quesiti</span>
           </div>
           <div class="grid grid-cols-2 gap-1.5 font-mono text-xs md:text-sm pt-1">
-            <button id="btn_sec_all" onclick="event.stopPropagation(); loadExam('all')" class="px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center">Tutte (A,B,C)</button>
-            <button id="btn_sec_A" onclick="event.stopPropagation(); loadExam('A')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 1: A (初級)</button>
+            <button id="btn_sec_all" onclick="event.stopPropagation(); loadExam('all')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold text-neutral-700">Tutte (A,B,C)</button>
+            <button id="btn_sec_A" onclick="event.stopPropagation(); loadExam('A')" class="px-2.5 py-2 bg-[#181A1B] text-white font-bold uppercase transition tap-press active:scale-95 text-center shadow-sm">Parte 1: A (初級)</button>
             <button id="btn_sec_B" onclick="event.stopPropagation(); loadExam('B')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 2: B (中級)</button>
             <button id="btn_sec_C" onclick="event.stopPropagation(); loadExam('C')" class="px-2.5 py-2 bg-[#FAF8F5] border border-black/10 hover:border-black transition tap-press active:scale-95 text-center font-bold">Parte 3: C (上級)</button>
           </div>
@@ -67,12 +67,12 @@
       <!-- Action & Invariant Box: Guidance -->
       <div id="examTrunkActionBox" class="p-3.5 bg-[#FAF8F5] border border-black/10 space-y-2.5 text-xs md:text-sm font-mono">
         <div class="font-bold text-[#C23B22] uppercase text-xs md:text-sm border-b border-black/5 pb-1 flex justify-between">
-          <span>Guida Rapida • Slot 4</span>
+          <span>Goal Fase 1 • Parte 1 (A)</span>
           <span id="trunkProgressPill" class="text-neutral-500 font-bold">0/0</span>
         </div>
         <div class="text-xs md:text-sm text-neutral-600 space-y-1">
-          <div>• <b>Azione</b>: Clicca un'opzione (A, B, C, D) per ogni quesito.</div>
-          <div>• <b>Target</b>: Part A al 95% (33/35 pt) senza esitazioni.</div>
+          <div>• <b>Obiettivo Attuale</b>: Parte 1 (Part A - 初級) al 95% (33/35 pt).</div>
+          <div>• <b>Focus</b>: Particelle に/で/を, verbi base e kanji N5/N4.</div>
         </div>
         <div class="space-y-1.5 pt-1">
           <button id="submitExamBtn" onclick="submitExam()" class="w-full py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">

@@ -40,8 +40,10 @@ export async function loadExam(section = "all", clean = false) {
   const leafTitle = document.getElementById("drillLeafTitle");
   if (leafTitle) leafTitle.innerText = `Quesiti Prove Scritte • ${titleMap[section] || section}`;
 
-  if (clean) {
+  const today = new Date().toISOString().split("T")[0];
+  if (clean || localStorage.getItem("mext_exam_date") !== today) {
     userAnswers = {};
+    try { localStorage.removeItem("mext_exam_answers"); localStorage.setItem("mext_exam_date", today); } catch (e) {}
   } else {
     try { userAnswers = { ...JSON.parse(localStorage.getItem("mext_exam_answers") || "{}") }; } catch (e) { userAnswers = {}; }
   }
@@ -172,6 +174,8 @@ export async function submitExam() {
     body: JSON.stringify({ answers, comments, time_spent_seconds: spent })
   });
   const result = await res.json();
+  try { localStorage.removeItem("mext_exam_answers"); } catch (e) {}
+  userAnswers = {};
   loadExamAnalytics();
   if (typeof window.markRoutineSlotDone === "function") window.markRoutineSlotDone("slot4");
   renderExamResults(result, spent, currentSection);

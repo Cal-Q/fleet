@@ -52,7 +52,7 @@ window.onStageActivated = (stageKey) => {
     syncSlot1UI();
   } else if (stageKey === 'exams') {
     loadExamAnalytics();
-    loadExam('all');
+    loadExam('A');
   } else if (stageKey === 'dossier') {
     loadCareer();
     loadDossierStatus();
