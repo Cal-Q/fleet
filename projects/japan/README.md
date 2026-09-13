@@ -57,7 +57,7 @@ La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fl
 2. **学習 Studio**: Batch di studio guidato con sblocco progressivo kanji, vocaboli e grammatica.
 3. **復習 Bunki**: Telemetria Anki SRS, verifica zero arretrati e riabilitazione leech.
 4. **試練 Prove**: Motore d'esame a rotazione giornaliera con cronometro di pacing e simulatore orale.
-5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (32 report navigabili in tempo reale).
+5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (33 report navigabili in tempo reale).
 
 ---
 
@@ -67,10 +67,13 @@ La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fl
 # 1. Ispezione conteggi SRS live, code e versione schema (NVMe storage /opt/japan)
 python3 core/anki_cli.py status
 
-# 2. Sincronizzazione Protobuf con AnkiWeb in ~1-3 secondi (pre-sync, pipeline, push)
+# 2. Sincronizzazione Protobuf con AnkiWeb in ~1-3s (pre-sync snapshot, pipeline, push)
 python3 core/anki_cli.py sync
 
-# 3. Spalmatura picchi di ripasso arretrati su N giorni (default: 14)
+# 3. Verifica integrità SQLite, orfani e backup snapshot atomico
+python3 core/anki_cli.py check
+
+# 4. Spalmatura picchi di ripasso arretrati su N giorni (default: 14)
 python3 core/anki_cli.py reschedule --days 14
 ```
 

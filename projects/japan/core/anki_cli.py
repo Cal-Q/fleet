@@ -74,9 +74,14 @@ def show_status() -> None:
 
 
 def trigger_sync() -> int:
-    sync_script = REPO_ROOT / "core" / "sync_and_push.py"
-    t0 = time.time()
     print("🚀 Triggering AnkiWeb sync...")
+    t0 = time.time()
+    sync_script = REPO_ROOT / "core" / "sync_and_push.py"
+    try:
+        from anki_sync.backup_sentinel import create_snapshot
+        create_snapshot(str(COL_PATH))
+    except Exception:
+        pass
     cmd = [sys.executable, str(sync_script)]
     res = subprocess.run(cmd)
     elapsed = time.time() - t0
@@ -85,6 +90,26 @@ def trigger_sync() -> int:
     else:
         print(f"❌ Sync failed with exit code {res.returncode} ({elapsed:.2f}s).")
     return res.returncode
+
+
+def run_integrity_check() -> int:
+    try:
+        from anki_sync.backup_sentinel import verify_collection_integrity, create_snapshot
+        rep = verify_collection_integrity(str(COL_PATH))
+        snap = create_snapshot(str(COL_PATH))
+        print("=" * 60)
+        print("🛡️ ANKI INTEGRITY & SNAPSHOT SENTINEL")
+        print("=" * 60)
+        print(f"• SQLite Integrity  : {rep.get('pragma_integrity')}")
+        print(f"• Total Cards       : {rep.get('total_cards')}")
+        print(f"• Orphan Cards      : {rep.get('orphan_cards')}")
+        print(f"• Uncommitted Cards : {rep.get('uncommitted_cards')}")
+        print(f"• Snapshot Created  : {snap}")
+        print("=" * 60)
+        return 0 if rep.get("healthy") else 1
+    except Exception as e:
+        print(f"❌ Integrity check failed: {e}")
+        return 1
 
 
 def reschedule_overdue(days: int = 14, deck_ids: list[int] | None = None) -> int:
@@ -142,6 +167,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="action", help="Action to execute")
     sub.add_parser("status", help="Show current SRS due status across decks")
     sub.add_parser("sync", help="Trigger AnkiWeb sync and pipeline update")
+    sub.add_parser("check", help="Verify SQLite integrity and create an atomic snapshot backup")
     resch = sub.add_parser("reschedule", help="Evenly smooth overdue reviews across N days")
     resch.add_argument("--days", type=int, default=14, help="Number of days to spread over (default: 14)")
     return parser
@@ -157,6 +183,8 @@ def main() -> int:
         return 0
     elif action == "sync":
         return trigger_sync()
+    elif action == "check":
+        return run_integrity_check()
     elif action == "reschedule":
         return reschedule_overdue(args.days)
     else:
