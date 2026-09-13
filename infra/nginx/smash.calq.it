@@ -2,6 +2,8 @@ server {
     server_name smash.calq.it;
 
     root /home/smashbot/smash-agent/frontend/public_html;
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
     index index.html;
 
     # Gzip Compression

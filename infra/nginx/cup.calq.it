@@ -2,6 +2,8 @@ server {
     server_name cup.calq.it;
 
     root /opt/cup-monitor/frontend/dist;
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
     index index.html;
 
     location / {

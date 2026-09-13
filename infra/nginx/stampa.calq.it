@@ -2,6 +2,8 @@ server {
     server_name stampa.calq.it;
 
     root /opt/remote-print/frontend/dist;
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
     index index.html;
 
     client_max_body_size 50M;

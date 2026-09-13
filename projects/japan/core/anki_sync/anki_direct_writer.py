@@ -60,6 +60,9 @@ def _sync_single_deck_conn(
     notes_to_add: list[tuple[int, str, int, int, str, str, int]] = []
     cards_to_add: list[tuple[int, int, int, int]] = []
 
+    cur_res = conn.execute("SELECT coalesce(max(id), 0) FROM notes").fetchone()
+    next_note_id = max(int(time.time() * 1000), cur_res[0] if cur_res else 0)
+
     for info in incoming_data:
         key = info.fields_and_values.get(main_field_name)
         if key is None:
@@ -102,7 +105,8 @@ def _sync_single_deck_conn(
                 if idx is not None:
                     new_fields[idx] = value
 
-            note_id = int(time.time() * 1000) + len(notes_to_add)
+            next_note_id += 1
+            note_id = next_note_id
             current_due += 1
             flat_fields = "\x1f".join(new_fields)
             guid = generate_guid()

@@ -415,5 +415,44 @@
         "ionos_curl_status": "verified HTTP 200 on /api/curriculum/day/1"
       }
     }
+  },
+  {
+    "feature": "anki_direct_writer_unique_note_id_and_live_sync",
+    "timestamp": "2026-09-13T15:18:30Z",
+    "status": "passed",
+    "evidence": {
+      "bug_fixed": "UNIQUE constraint failed: notes.id in anki_direct_writer.py due to time.time()*1000 collision across multi-deck batch transactions.",
+      "fix": "Query max(id) from notes and assign strictly monotonically increasing IDs: max(now_ms, cur_max_id) + 1.",
+      "sync_result": "core/sync_and_push.py executed successfully in 785 ms, pulled down all remote AnkiWeb reviews.",
+      "today_reviews_verified": {
+        "date": "2026-09-13",
+        "total_reviews": 333,
+        "vocab_reviews": 294,
+        "kanji_reviews": 16,
+        "sentence_reviews": 23
+      }
+    }
+  },
+  {
+    "feature": "travel_decks_remediation_and_selective_cooldown",
+    "timestamp": "2026-09-13T15:27:00Z",
+    "status": "passed",
+    "evidence": {
+      "safety_backup": "/opt/japan/.local/share/Anki2/User 1/collection.anki2.bak_before_user_restore_1789313188",
+      "remediation_actions": [
+        "Reset 2,770 unstudied new cards (1,201 Kanji and 1,569 Vocab) back to queue=0 and removed 'completato' tags.",
+        "Restored 3,759 authentic future review card intervals that were not due on Sep 12.",
+        "Preserved 175 genuine due cards from Sep 12 with their 1-10 day cooldown.",
+        "Preserved all 333 reviews completed by the user today (Sep 13).",
+        "Pushed clean collection to AnkiWeb via core/sync_worker.py."
+      ],
+      "post_restore_state": {
+        "due_total": 182,
+        "kanji_new_count": 1201,
+        "vocab_new_count": 1561,
+        "kanji_image_due": 26,
+        "ankiweb_sync": "success"
+      }
+    }
   }
 ]
