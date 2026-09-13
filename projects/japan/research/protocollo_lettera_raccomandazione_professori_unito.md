@@ -40,3 +40,25 @@ Nel modulo MEXT, i criteri devono posizionare il candidato nelle fasce d'eccelle
    Incontro breve in orario di ricevimento a Palazzo Nuovo per illustrare la coerenza del progetto con la tesi triennale al rientro.
 3. **Ritiro del Plico Sigillato (Entro 15 Gennaio 2027)**:
    Verifica materiale che il lembo posteriore della busta rechi la firma del docente sovrapposta al bordo incollato e il timbro del Dipartimento.
+
+---
+
+## 4. Gestione di Esami Ripetuti & Psicologia Accademica del Docente
+
+Se il candidato ha fallito o rifiutato un appello precedente con il docente:
+1. **Nessuna Traccia Burocratica su Esse3 / Certificato MEXT**:
+   I certificati universitari per l'estero riportano unicamente gli esami superati con data e voto. Le bocciature non compaiono nel transcript inviato all'Ambasciata o a Tokyo.
+2. **Psicologia della Docente (Da "Ostacolo" a "Resilienza")**:
+   I professori bocciano decine di studenti a sessione; non vi è rancore personale. Riconquistare la fiducia richiede di superare il secondo appello con voto netto (≥ 27): in accademia, la perseveranza e la capacità di colmare le lacune sono stimate più del talento privo di sforzo.
+3. **Il Protocollo di Riconquista in 2 Mosse**:
+   - *Pre-Appello*: Breve colloquio a ricevimento (anche 5 minuti) per mostrare umiltà e serietà: *"Professoressa, ho fatto tesoro delle sue indicazioni al primo appello e sto lavorando per colmare le lacune sui punti X e Y"*.
+   - *Post-Superamento*: Ringraziamento cordiale e presentazione del dossier MEXT "chiavi-in-mano" già pronto per la firma.
+
+---
+
+## 5. Piano B Istituzionale: Alternativa Multi-Docente UniTO
+
+Il bando MEXT non vincola lo studente a uno specifico docente di lingua:
+- La raccomandazione può essere redatta e firmata da **qualsiasi professore o ricercatore del corso di laurea L-11**.
+- **Pivot Immediato**: Patrik ha già conseguito **30 e Lode** in `INTRODUZIONE AGLI STUDI SUL GIAPPONE` (STU0668) e una valutazione di **fascia S** dalla Showa Women's University di Tokyo.
+- Qualora la relazione con la docente di lingua rimanesse tiepida, la lettera può essere richiesta con garanzia di eccellenza al docente della materia d'area superata con lode, preservando al 100% l'autorevolezza della candidatura.
