@@ -57,7 +57,7 @@ La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fl
 2. **学習 Studio**: Batch di studio guidato con sblocco progressivo kanji, vocaboli e grammatica.
 3. **復習 Bunki**: Telemetria Anki SRS, verifica zero arretrati e riabilitazione leech.
 4. **試練 Prove**: Motore d'esame a rotazione giornaliera con cronometro di pacing e simulatore orale.
-5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (35 report navigabili in tempo reale).
+5. **計画 Dossier**: Libretto universitario Esse3 UniTO, checklist bando Ambasciata e **Archivio Dossier & Registro Proattivo** integrato (36 report navigabili in tempo reale).
 
 ---
 

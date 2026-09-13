@@ -43,13 +43,15 @@
 | **R-21** | **Decadimento Mnemonico Onomatopee & Mimetiche**: Trabocchetti su `擬音語・擬態語` (es. `さっぱり` vs `すっきり`) in Parte B. | Ottobre – Febbraio | Dossier [guida_decodifica_giongo_gitaigo_mext.md](file:///mnt/workspaces/japan/research/guida_decodifica_giongo_gitaigo_mext.md) con tassonomia suffissi, 20 collocazioni d'esame e algoritmo a 3 filtri. | ✅ Attivo |
 | **R-22** | **Falsi Amici Sintattici Deontici/Epistemici**: Confusione tra `〜わけにはいかない` (dovere morale) e `〜わけがない` (impossibilità logica). | Ottobre – Gennaio | Matrice decisionale [matrice_decisionale_costrutti_epistemici_e_deontici_mext.md](file:///mnt/workspaces/japan/research/matrice_decisionale_costrutti_epistemici_e_deontici_mext.md) con flowchart a 2 domande. | ✅ Attivo |
 | **R-23** | **Asimmetria Prosodica Pitch Accent Orale**: Pronuncia tonale piatta/errata sui termini accademici (`居場所`, `社会学`, `参与観察`). | Dicembre – Febbraio | Integrazione sistematica dei pattern melodici (`[平板]`, `[頭高]`, `[中高]`) in [academic/interview_questions.json](file:///mnt/workspaces/japan/academic/interview_questions.json). | ✅ Attivo |
+| **R-24** | **Affaticamento Mano Destra da Compilazione OMR**: Rigidità tenar e crampi durante l'annerimento di 100 quadratini a matita 2B. | Febbraio 2027 | Protocollo [protocollo_ergonomia_e_riscaldamento_omr_mext.md](file:///mnt/workspaces/japan/research/protocollo_ergonomia_e_riscaldamento_omr_mext.md) con kit a 3 matite e riscaldamento in 4 passi. | ✅ Attivo |
+| **R-25** | **Disallineamento Connettori Concessivi Saggistici N1**: Confusione tra concessione preliminare (*Jōho*) e tesi dell'autore in Parte C. | Gennaio – Febbraio | Tassonomia [tassonomia_connettori_concessivi_e_avversativi_parte_c.md](file:///mnt/workspaces/japan/research/tassonomia_connettori_concessivi_e_avversativi_parte_c.md) con matrice dei 10 connettori e isolamento tesi. | ✅ Attivo |
 
 ---
 
 ## 3. Matrice delle Prossime Vulnerabilità da Disinnescare
 
-1. **Vulnerabilità R-24 (Affaticamento Muscolare Mano Destra da Compilazione OMR)**: Rigidità e crampi da impugnatura matita 2B su 100 risposte. *Azione da predisporre*: protocollo di riscaldamento neuromuscolare ed ergonomia dell'impugnatura.
-2. **Vulnerabilità R-25 (Disallineamento Connettori Concessivi Saggistici N1)**: Sfumature tra `〜にもかかわらず`, `〜とはいうものの`, `〜とはいえ` in Parte C. *Azione da predisporre*: tassonomia comparativa dei 15 connettori avversativi formali.
+1. **Vulnerabilità R-26 (Ipotermia da Attesa & Rigidità Articolare Mattutina a Roma)**: Temperature invernali mattutine (5–8°C) durante l'attesa all'esterno dell'Ambasciata (Via Quintino Sella). *Azione da predisporre*: protocollo di isolamento termico mani/collo (scaldamani tascabili chimici Kairo) per preservare motricità fine.
+2. **Vulnerabilità R-27 (Inversione Uchi/Soto nei Riferimenti Accademici UniTO al Colloquio)**: Errore nel qualificare docenti di Torino come esterni (*Soto*) anziché appartenenti al gruppo d'appartenenza del candidato (*Uchi*). *Azione da predisporre*: modulo di drill dedicato in `interview_questions.json`.
 
 ---
 *Documento vivo — mantenuto e integrato autonomamente dall'agente ad ogni iterazione di miglioramento.*
