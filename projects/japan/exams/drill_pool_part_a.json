@@ -973,5 +973,380 @@
     },
     "answer": "A",
     "explanation": "Svestirsi / togliere abiti o scarpe si esprime con 脱ぐ (ぬぐ). 履く (はく) è indossare pantaloni/scarpe, 被る (かぶる) cappelli."
+  },
+  {
+    "id": "DRILL-A-66",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles (助詞)",
+    "question": "毎朝、学校へ （ ）で 行きます。",
+    "options": {
+      "A": "バス",
+      "B": "電車に",
+      "C": "歩く",
+      "D": "走る"
+    },
+    "answer": "A",
+    "explanation": "La particella で indica il mezzo di trasporto: バスで (in autobus). 歩く e 走る sono verbi; per andare a piedi si dice 歩いて (senza で)."
+  },
+  {
+    "id": "DRILL-A-67",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "だれも いないのに、部屋の 電気が （ ）います。",
+    "options": {
+      "A": "消えて",
+      "B": "消して",
+      "C": "止めて",
+      "D": "閉めて"
+    },
+    "answer": "A",
+    "explanation": "電気が... è una costruzione intransitiva di stato con 〜ている: serve 消える (きえる, spegnersi) $\to$ 消えている. 消す (けす) è transitivo con を."
+  },
+  {
+    "id": "DRILL-A-68",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles (助詞)",
+    "question": "日本酒は 米と 水（ ）作られます。",
+    "options": {
+      "A": "から",
+      "B": "で",
+      "C": "に",
+      "D": "を"
+    },
+    "answer": "A",
+    "explanation": "Quando la materia prima subisce una trasformazione chimica/non visibile nel prodotto finito, si usa から (es. 米から酒を作る). Si usa で quando il materiale resta visibile (es. 木で机を作る)."
+  },
+  {
+    "id": "DRILL-A-69",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Distinctions (Homophones)",
+    "question": "弟は 走るのが とても （ ）。",
+    "options": {
+      "A": "速い",
+      "B": "早い",
+      "C": "暑い",
+      "D": "熱い"
+    },
+    "answer": "A",
+    "explanation": "速い si riferisce alla velocità di movimento/corsa. 早い si riferisce all'orario/tempo (es. 朝早く起きる)."
+  },
+  {
+    "id": "DRILL-A-70",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n【特急】電車に 乗れば、１時間で 着きます。",
+    "options": {
+      "A": "とっきゅう",
+      "B": "どっきゅう",
+      "C": "とくきゅう",
+      "D": "とっけい"
+    },
+    "answer": "A",
+    "explanation": "「特急」 si pronuncia とっきゅう (tokkyū) con geminazione っ tra 特 (とく) e 急 (きゅう)."
+  },
+  {
+    "id": "DRILL-A-71",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Counters (助数詞)",
+    "question": "郵便局で 記念切手を （ ） 買いました。",
+    "options": {
+      "A": "３枚",
+      "B": "３本",
+      "C": "３冊",
+      "D": "３匹"
+    },
+    "answer": "A",
+    "explanation": "Il contatore per oggetti sottili e piatti (francobolli, fogli, cartoline, camicie) è 枚 (まい). 本 (ほん) è per oggetti cilindrici/lunghi, 冊 (さつ) per libri/quaderni, 匹 (ひき) per piccoli animali."
+  },
+  {
+    "id": "DRILL-A-72",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "駅へ 行く 途中で、さいふを （ ）しまいました。",
+    "options": {
+      "A": "落として",
+      "B": "落ちて",
+      "C": "倒れて",
+      "D": "壊れて"
+    },
+    "answer": "A",
+    "explanation": "さいふを... richiede un verbo transitivo: 落とす (おとす, far cadere/perdere). 落ちる (おちる) è intransitivo (cadere)."
+  },
+  {
+    "id": "DRILL-A-73",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Distinctions (Homophones)",
+    "question": "つぎの ぶんの （ ）には どの 漢字を いれますか。\nこわれた 時計を （ ）してもらいました。",
+    "options": {
+      "A": "直して",
+      "B": "治して",
+      "C": "復して",
+      "D": "改して"
+    },
+    "answer": "A",
+    "explanation": "Riparare/aggiustare macchinari, oggetti o correggere errori si scrive 直す (なおす). 治す (なおす) si usa per curare malattie o ferite del corpo."
+  },
+  {
+    "id": "DRILL-A-74",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (接続)",
+    "question": "子どもが 寝ている（ ）、本を 読みました。",
+    "options": {
+      "A": "間に",
+      "B": "間",
+      "C": "うち",
+      "D": "ごろ"
+    },
+    "answer": "A",
+    "explanation": "〜間に indica un'azione puntuale o completata all'interno dell'intervallo temporale continuo espresso dalla subordinata. 〜間 (senza に) indicherebbe che l'azione dura per l'intero intervallo."
+  },
+  {
+    "id": "DRILL-A-75",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary (擬音語・擬態語)",
+    "question": "熱い シャワーを 浴びたら、気分が （ ）した。",
+    "options": {
+      "A": "すっきり",
+      "B": "うっかり",
+      "C": "ぎっしり",
+      "D": "がっかり"
+    },
+    "answer": "A",
+    "explanation": "すっきり indica una sensazione di sollievo, freschezza e leggerezza fisica o mentale. うっかり è disattenzione, ぎっしり è stipato, がっかり è delusione."
+  },
+  {
+    "id": "DRILL-A-76",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Particles (助詞)",
+    "question": "つぎの 交差点（ ）右へ 曲がってください。",
+    "options": {
+      "A": "を",
+      "B": "に",
+      "C": "で",
+      "D": "へ"
+    },
+    "answer": "A",
+    "explanation": "Con verbi di movimento come 曲がる, 渡る, 飛ぶ, il punto o spazio attraverso cui ci si muove viene marcato dalla particella を."
+  },
+  {
+    "id": "DRILL-A-77",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Giving and Receiving (授受動詞)",
+    "question": "誕生日に 友だちが すてきな プレゼントを （ ）ました。",
+    "options": {
+      "A": "くれ",
+      "B": "あげ",
+      "C": "もらい",
+      "D": "やり"
+    },
+    "answer": "A",
+    "explanation": "Quando un'altra persona dà qualcosa a me (o al mio gruppo), il verbo è くれる (友だちが私に...くれた). あげる è quando io do ad altri."
+  },
+  {
+    "id": "DRILL-A-78",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Potential Form (可能形)",
+    "question": "苦すぎて、この 薬は （ ）。",
+    "options": {
+      "A": "飲めません",
+      "B": "飲まれません",
+      "C": "飲みません",
+      "D": "飲ませません"
+    },
+    "answer": "A",
+    "explanation": "La forma potenziale negativa di 飲む (godan) è 飲めない (飲めません). 飲まれません è passivo/onorifico, 飲ませません è causativo."
+  },
+  {
+    "id": "DRILL-A-79",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Adverbs (副詞)",
+    "question": "山田さんは 毎日 いそがしいので、（ ）映画を 見に 行きません。",
+    "options": {
+      "A": "めったに",
+      "B": "ぜんぜん",
+      "C": "なかなか",
+      "D": "たまに"
+    },
+    "answer": "A",
+    "explanation": "めったに si accompagna al verbo negativo per significare 'raramente / quasi mai'. ぜんぜん è per nulla, なかなか è non facilmente."
+  },
+  {
+    "id": "DRILL-A-80",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "風が 強いので、ドアが ひとりでに （ ）ました。",
+    "options": {
+      "A": "閉まり",
+      "B": "閉め",
+      "C": "止まり",
+      "D": "開け"
+    },
+    "answer": "A",
+    "explanation": "ドアが... intransitivo richiede 閉まる (しまる, chiudersi). ひとりでに = da solo / spontaneamente."
+  },
+  {
+    "id": "DRILL-A-81",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Distinctions (Homophones)",
+    "question": "今年の 春は とても （ ）ですね。",
+    "options": {
+      "A": "暖かい",
+      "B": "温かい",
+      "C": "熱い",
+      "D": "暑い"
+    },
+    "answer": "A",
+    "explanation": "暖かい si usa per il clima, la stagione e la temperatura dell'aria. 温かい si usa per la temperatura di bevande, cibi e sensazioni affettive (温かいスープ, 温かい心)."
+  },
+  {
+    "id": "DRILL-A-82",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Comparison (比較)",
+    "question": "新幹線と 飛行機と （ ）が 速いですか。",
+    "options": {
+      "A": "どちら",
+      "B": "どれ",
+      "C": "どこ",
+      "D": "なに"
+    },
+    "answer": "A",
+    "explanation": "Nel confronto tra DUE opzioni (AとBと), il pronome interrogativo da usare obbligatoriamente è どちら (o どっち). どれ si usa per 3 o più opzioni."
+  },
+  {
+    "id": "DRILL-A-83",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Conjunctions (接続詞)",
+    "question": "この アパートは 広くて 静かです。（ ）、家賃も 安いです。",
+    "options": {
+      "A": "それに",
+      "B": "それとも",
+      "C": "それでは",
+      "D": "しかし"
+    },
+    "answer": "A",
+    "explanation": "それに aggiunge un elemento della stessa tonalità (inoltre / per di più). それとも è disgiuntivo (o/oppure), それでは è allora."
+  },
+  {
+    "id": "DRILL-A-84",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\nここには まだ 空いている 【席】が あります。",
+    "options": {
+      "A": "せき",
+      "B": "ど",
+      "C": "しょ",
+      "D": "たく"
+    },
+    "answer": "A",
+    "explanation": "「席」 si legge せき (posto/sedile). Attenzione a non confonderlo graficamente con 度 (ど)."
+  },
+  {
+    "id": "DRILL-A-85",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (動詞の否定)",
+    "question": "「あの 先生の お名前を 知っていますか。」「いいえ、（ ）。」",
+    "options": {
+      "A": "知りません",
+      "B": "知っていません",
+      "C": "分かりませんでした",
+      "D": "知りませんでした"
+    },
+    "answer": "A",
+    "explanation": "La negazione del verbo di stato 知っている è 知りません. In giapponese standard 知っていません è un errore comune non grammaticale."
+  },
+  {
+    "id": "DRILL-A-86",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "チャイムが 鳴ったので、先生が 授業を （ ）ました。",
+    "options": {
+      "A": "始め",
+      "B": "始まり",
+      "C": "起こし",
+      "D": "出撃"
+    },
+    "answer": "A",
+    "explanation": "授業を... transitivo richiede 始める (はじめる). 始まる (はじまる) è intransitivo e reggerebbe が."
+  },
+  {
+    "id": "DRILL-A-87",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜ないで vs 〜なくて)",
+    "question": "昨夜は とても 疲れていたので、晩ご飯を （ ）、すぐ 寝ました。",
+    "options": {
+      "A": "食べないで",
+      "B": "食べなくて",
+      "C": "食べずに",
+      "D": "食べなければ"
+    },
+    "answer": "A",
+    "explanation": "〜ないで indica fare l'azione principale 'senza fare X': 晩ご飯を食べないで寝た. 〜なくて esprime invece causa/motivo o coordinazione di aggettivi."
+  },
+  {
+    "id": "DRILL-A-88",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n荷物が たくさん 入っていて、とても 【重い】です。",
+    "options": {
+      "A": "おもい",
+      "B": "かるい",
+      "C": "くらい",
+      "D": "つよい"
+    },
+    "answer": "A",
+    "explanation": "「重い」 si legge おもい (pesante). かるい si scrive 軽い."
+  },
+  {
+    "id": "DRILL-A-89",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Polite Requests (依頼)",
+    "question": "すみませんが、写真を １枚 （ ）。",
+    "options": {
+      "A": "撮っていただけませんか",
+      "B": "撮ってあげましょうか",
+      "C": "撮ってもいいですか",
+      "D": "撮りましょうか"
+    },
+    "answer": "A",
+    "explanation": "〜ていただけませんか è la richiesta cortese standard ('potrebbe per favore scattarmi una foto?'). 撮ってあげましょうか è offrire di fare la foto a qualcun altro."
+  },
+  {
+    "id": "DRILL-A-90",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "つぎの ぶんの ＿＿＿の ことばは どう よみますか。\n日本へ 行った 【経験】が ありますか。",
+    "options": {
+      "A": "けいけん",
+      "B": "きょうけん",
+      "C": "けいかん",
+      "D": "かんけん"
+    },
+    "answer": "A",
+    "explanation": "「経験」 si legge けいけん (keiken, esperienza). 経 ha radicale糸 (filo) ed on'yomi けい; non confondere con 軽 (radicale車, on'yomi けい, kun'yomi かるい)."
   }
 ]

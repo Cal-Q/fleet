@@ -4,14 +4,13 @@
 import { loadInterview } from "./interview.js";
 import { renderExamResults, loadExamAnalytics } from "./exam_analytics.js";
 import { initExamNotes, getUserComment, getAllUserComments, saveQuestionNote } from "./exam_notes.js";
+import { startPacingTimer, stopPacingTimer, getElapsedSeconds, updatePacingUI } from "./exam_pacing.js";
 
 export { loadExamAnalytics, saveQuestionNote };
 
 let currentQuestions = [];
 let userAnswers = {};
 let currentSection = "all";
-let examStartTime = null;
-let timerInterval = null;
 
 export function getUserAnswer(qid) { return userAnswers[qid] || ""; }
 
@@ -94,26 +93,20 @@ export async function loadExam(section = "all", clean = false) {
       <div class="text-xs md:text-sm text-neutral-500 font-mono">Tutte le risposte e note vengono salvate per la revisione.</div>
     </div>
     <div class="flex items-center gap-2">
-      <button onclick="window.resetExam('${section}')" class="px-3.5 py-2.5 bg-white border border-black/20 hover:border-black text-neutral-700 font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95">
-        🔄 Azzera
-      </button>
-      <button onclick="submitExam()" class="px-5 py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">
-        Invia Esame & Correggi →
-      </button>
+      <button onclick="window.resetExam('${section}')" class="px-3.5 py-2.5 bg-white border border-black/20 hover:border-black text-neutral-700 font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95">🔄 Azzera</button>
+      <button onclick="submitExam()" class="px-5 py-2.5 bg-[#264332] hover:bg-[#1b3024] text-white font-mono font-bold text-xs md:text-sm uppercase transition tap-press active:scale-95 shadow-sm">Invia Esame & Correggi →</button>
     </div>
   `;
   container.appendChild(bottomBar);
 
   updateProgressUI();
 
-  examStartTime = Date.now();
-  if (timerInterval) clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    const sec = Math.floor((Date.now() - examStartTime) / 1000);
-    const m = String(Math.floor(sec / 60)).padStart(2, "0"), s = String(sec % 60).padStart(2, "0");
+  startPacingTimer((sec, timeStr) => {
     const tEl = document.getElementById("timeElapsed");
-    if (tEl) tEl.innerText = `${m}:${s}`;
-  }, 1000);
+    if (tEl) tEl.innerText = timeStr;
+    const ansCount = currentQuestions.filter(q => userAnswers[q.id]).length;
+    updatePacingUI(sec, ansCount, currentQuestions.length);
+  });
 }
 
 function highlightSectionBtn(sec) {
@@ -158,13 +151,14 @@ function updateProgressUI() {
   set("trunkProgressPill", `${answered}/${total}`);
   set("submitExamBtn", answered === total ? "Invia Esame & Correggi →" : `Invia Esame (${answered}/${total}) →`);
   set("leafBottomCount", `${answered} / ${total} completati`);
+  updatePacingUI(getElapsedSeconds(), answered, total);
 }
 
 export async function submitExam() {
   const answered = currentQuestions.filter(q => userAnswers[q.id]).length, total = currentQuestions.length;
   if (answered < total && !confirm(`Attenzione: ci sono ancora ${total - answered} quesiti senza risposta.\nVuoi consegnare comunque? Le risposte omesse risulteranno errate.`)) return;
-  if (timerInterval) clearInterval(timerInterval);
-  const spent = examStartTime ? Math.floor((Date.now() - examStartTime) / 1000) : 0;
+  stopPacingTimer();
+  const spent = getElapsedSeconds();
   const answers = {};
   currentQuestions.forEach(q => { answers[q.id] = userAnswers[q.id] || ""; });
   const comments = getAllUserComments();

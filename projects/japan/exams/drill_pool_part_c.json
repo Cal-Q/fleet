@@ -298,5 +298,215 @@
     },
     "answer": "A",
     "explanation": "〜からこそ esprime l'enfasi causale esclusiva: 'È proprio e solo grazie al grande supporto ricevuto dai miei genitori che oggi c'è il mio successo accademico'."
+  },
+  {
+    "id": "DRILL-C-21",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "先行研究の 膨大な 成果を （ ）、本稿では 新たな 分析視角を 提示したい。",
+    "options": {
+      "A": "踏まえ",
+      "B": "携え",
+      "C": "控えて",
+      "D": "蓄え"
+    },
+    "answer": "A",
+    "explanation": "〜を踏まえる (fumaeru) significa basarsi su, tenere conto di risultati o presupposti precedenti (先行研究を踏まえて)."
+  },
+  {
+    "id": "DRILL-C-22",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "一国の 外交を 司る （ ）、いかなる 挑発にも 動じない 高度な 冷静さが 求められる。",
+    "options": {
+      "A": "者たる者",
+      "B": "者にしては",
+      "C": "者ともなると",
+      "D": "者とあって"
+    },
+    "answer": "A",
+    "explanation": "〜たる者 (~taru mono) indica i doveri e la compostezza etica imposti da un ruolo solenne o istituzionale ('in quanto colui che riveste la carica di...')."
+  },
+  {
+    "id": "DRILL-C-23",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Academic Vocabulary in Context",
+    "question": "少子高齢化の 急速な 進行は、地方都市の 経済基盤の 脆弱化に とりわけ （ ）に 現れている。",
+    "options": {
+      "A": "顕著",
+      "B": "厳重",
+      "C": "明白",
+      "D": "壮大"
+    },
+    "answer": "A",
+    "explanation": "「顕著」（けんちょ） significa evidente, rimarchevole, che si manifesta in modo netto e visibile (顕著に現れる)."
+  },
+  {
+    "id": "DRILL-C-24",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "公共の 場で 周囲の 迷惑を 省みずに 暴言を 吐くなど、非常識 （ ）。",
+    "options": {
+      "A": "極まりない",
+      "B": "極めない",
+      "C": "限らない",
+      "D": "尽くせない"
+    },
+    "answer": "A",
+    "explanation": "〜極まりない（きわまりない） esprime il grado estremo di una qualità negativa ('al colmo di / massimamente insensato')."
+  },
+  {
+    "id": "DRILL-C-25",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Academic Vocabulary in Context",
+    "question": "世代間に 生じている 著しい 不公平を （ ）するための 抜本的な 社会保障改革が 急務である。",
+    "options": {
+      "A": "是正",
+      "B": "改悪",
+      "C": "撤廃",
+      "D": "阻害"
+    },
+    "answer": "A",
+    "explanation": "「是正」（ぜせい） significa correggere, rettificare una disparità o uno squilibrio istituzionale per riportarlo a correttezza."
+  },
+  {
+    "id": "DRILL-C-26",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "長年にわたり 惜しみない ご指導を 賜りました 恩師には、感謝 （ ）。",
+    "options": {
+      "A": "にたえません",
+      "B": "を禁じえません",
+      "C": "にすぎません",
+      "D": "にかたくありません"
+    },
+    "answer": "A",
+    "explanation": "〜にたえない (ni taenai) con sentimenti come 感謝 (gratitudine) o 遺憾 (rammarico) esprime un sentimento così profondo che non si riesce a contenere a parole (感謝にたえません)."
+  },
+  {
+    "id": "DRILL-C-27",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "前回の 国際学術シンポジウムでの 議論（ ）、両大学間の 共同研究協定が 締結された。",
+    "options": {
+      "A": "を契機として",
+      "B": "を皮切りに",
+      "C": "を限りに",
+      "D": "を皮相に"
+    },
+    "answer": "A",
+    "explanation": "〜を契機として（けいきとして） indica l'evento che fa da spunto, occasione determinante o catalizzatore di un nuovo sviluppo positivo o svolta."
+  },
+  {
+    "id": "DRILL-C-28",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Academic Vocabulary in Context",
+    "question": "机上の 抽象的モデルと 複雑を極める 現場の実態との 間には、深刻な （ ）が 認められる。",
+    "options": {
+      "A": "乖離",
+      "B": "脱却",
+      "C": "孤立",
+      "D": "分裂"
+    },
+    "answer": "A",
+    "explanation": "「乖離」（かいり） indica una netta e preoccupante divergenza / separazione tra due elementi che dovrebbero coincidere (teoria e realtà pratica)."
+  },
+  {
+    "id": "DRILL-C-29",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "世界的な 半導体不足により、自動車メーカー各社は 大幅な 減産（ ）。",
+    "options": {
+      "A": "を余儀なくされた",
+      "B": "を余儀なくさせた",
+      "C": "に相違なかった",
+      "D": "にほかならなかった"
+    },
+    "answer": "A",
+    "explanation": "〜を余儀なくされる (o yoginaku sareru) significa 'essere costretto senza alcuna alternativa a subire/fare qualcosa di sfavorevole'."
+  },
+  {
+    "id": "DRILL-C-30",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "いかに 卓越した 権威ある 碩学（ ）、すべての 科学的謎を 解明できる わけではない。",
+    "options": {
+      "A": "といえども",
+      "B": "にかぎって",
+      "C": "にあって",
+      "D": "にせよ"
+    },
+    "answer": "A",
+    "explanation": "〜といえども (to iedomo) equivale a 'sebbene / quand'anche si tratti di...', introducendo una riserva o limite anche per i casi più eccelsi."
+  },
+  {
+    "id": "DRILL-C-31",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Advanced Written Grammar",
+    "question": "予期せぬ 急激な 為替変動が、輸出関連企業に 経営戦略の 根本的転換（ ）。",
+    "options": {
+      "A": "を余儀なくさせた",
+      "B": "を余儀なくされた",
+      "C": "にほかならなかった",
+      "D": "に相違なかった"
+    },
+    "answer": "A",
+    "explanation": "〜を余儀なくさせる (costruzione causativa attiva) significa 'costringere qualcuno a compiere un'azione non desiderata'. Il soggetto qui è l'evento (為替変動が企業に転換を余儀なくさせた)."
+  },
+  {
+    "id": "DRILL-C-32",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "一部の 指標に 景気回復の 兆候が 観察される（ ）、市民生活の 実感とは 大きく かけ離れている。",
+    "options": {
+      "A": "とはいえ",
+      "B": "といえど",
+      "C": "とあれば",
+      "D": "とあって"
+    },
+    "answer": "A",
+    "explanation": "〜とはいえ (to wa ie) esprime una riserva formale: 'sebbene sia pur vero che...'. Dà eleganza e rigore logico al discorso accademico."
+  },
+  {
+    "id": "DRILL-C-33",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Formal Written Discourse",
+    "question": "過去の 災害における 避難誘導の 混乱（ ）、自治体は 新たな 防災指針を 制定した。",
+    "options": {
+      "A": "に鑑み",
+      "B": "に沿い",
+      "C": "に先立ち",
+      "D": "に至り"
+    },
+    "answer": "A",
+    "explanation": "「〜に鑑み」（にかんがみ） significa 'alla luce di / tenendo conto con giudizio critico di fatti o precedenti storici/esperienziali'."
+  },
+  {
+    "id": "DRILL-C-34",
+    "section": "C",
+    "level": "JLPT N1",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n科学技術の 急速な 進歩は ＿＿ ＿＿ ★ ＿＿ をもたらした。\n①計り知れない　②のみならず　③人類に 多大な 恩恵を　④深刻な 環境破壊",
+    "options": {
+      "A": "① (計り知れない)",
+      "B": "② (のみならず)",
+      "C": "③ (人類に 多大な 恩恵を)",
+      "D": "④ (深刻な 環境破壊)"
+    },
+    "answer": "A",
+    "explanation": "Ordine corretto: [③人類に 多大な 恩恵を] [②のみならず] ★[①計り知れない] [④深刻な 環境破壊] をもたらした. La stella cade su ①. Modello N1 〜のみならず (non solo... ma anche)."
   }
 ]

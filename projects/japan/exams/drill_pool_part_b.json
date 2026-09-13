@@ -448,5 +448,230 @@
     },
     "answer": "A",
     "explanation": "Ordine corretto: いくら [④今からでは] [②急いでも] ★[①タクシーに] [③乗って] 間に合わないだろう... o [②急いでも] [④今からでは] [①タクシーに] [③乗って]. La stella ★ cade su ① (タクシーに)."
+  },
+  {
+    "id": "DRILL-B-31",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n大切な 約束が あるので、風邪を ひいたからといって ＿＿ ＿＿ ★ ＿＿。\n①休む　②わけには　③会社を　④いかない",
+    "options": {
+      "A": "① (休む)",
+      "B": "② (わけには)",
+      "C": "③ (会社を)",
+      "D": "④ (いかない)"
+    },
+    "answer": "B",
+    "explanation": "La costruzione è 〜わけにはいかない (non potersi permettere moralmente o socialmente di...). Ordine: [③会社を] [①休む] ★[②わけには] [④いかない]. La stella cade su ②."
+  },
+  {
+    "id": "DRILL-B-32",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Conjunctions (接続詞)",
+    "question": "親切の つもりで 手伝ったのに、（ ）迷惑を かけてしまった。",
+    "options": {
+      "A": "かえって",
+      "B": "まして",
+      "C": "どうせ",
+      "D": "せめて"
+    },
+    "answer": "A",
+    "explanation": "「かえって」 esprime che il risultato è stato contrario alle aspettative positive originarie ('al contrario / anziché fare bene ho finito per creare disturbo'). まして = a maggior ragione, どうせ = tanto / comunque sia."
+  },
+  {
+    "id": "DRILL-B-33",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "大型の 台風が 近づいているため、本日の 野外コンサートは （ ）ことになりました。",
+    "options": {
+      "A": "見合わせる",
+      "B": "見落とす",
+      "C": "見直す",
+      "D": "見逃す"
+    },
+    "answer": "A",
+    "explanation": "見合わせる significa sospendere temporaneamente o rinviare un evento in attesa dell'evolversi di una situazione avversa. 見落とす = non notare/trascurare, 見直す = riesaminare, 見逃す = lasciarsi scappare."
+  },
+  {
+    "id": "DRILL-B-34",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "本日は 遠方より わざわざ （ ）、誠に ありがとうございます。",
+    "options": {
+      "A": "お越しいただき",
+      "B": "参っていただき",
+      "C": "拝見していただき",
+      "D": "伺っていただき"
+    },
+    "answer": "A",
+    "explanation": "お越しいただく è l'espressione onorifica standard per ringraziare un ospite di essere venuto. 参る, 拝見する e 伺う sono kenjōgo (verbi umili) riferiti a chi parla, e non possono essere chiesti all'interlocutore con いただく."
+  },
+  {
+    "id": "DRILL-B-35",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Giving and Receiving (授受表現)",
+    "question": "恐れ入りますが、この 申請書の 書き方を もう 一度 （ ）でしょうか。",
+    "options": {
+      "A": "教えていただけます",
+      "B": "教えてくださいます",
+      "C": "教えてあげられます",
+      "D": "教えてさしあげます"
+    },
+    "answer": "A",
+    "explanation": "〜ていただけますでしょうか è la forma di richiesta più formale e deferente ('potrebbe per favore avere la gentilezza di insegnarmi...?')."
+  },
+  {
+    "id": "DRILL-B-36",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n今回の 成功は、＿＿ ＿＿ ★ ＿＿ にすぎない。\n①長い　②始まり　③道のりの　④ほんの",
+    "options": {
+      "A": "① (長い)",
+      "B": "② (始まり)",
+      "C": "③ (道のりの)",
+      "D": "④ (ほんの)"
+    },
+    "answer": "D",
+    "explanation": "Ordine corretto: [①長い] [③道のりの] ★[④ほんの] [②始まり] にすぎない ('non è che l'inizio di un lungo cammino'). La stella cade su ④."
+  },
+  {
+    "id": "DRILL-B-37",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Patterns",
+    "question": "これだけの 確実な 証拠が 提示された 以上、事実を （ ）。",
+    "options": {
+      "A": "認めざるを得ない",
+      "B": "認めるわけがない",
+      "C": "認めるはずがない",
+      "D": "認めかねない"
+    },
+    "answer": "A",
+    "explanation": "〜ざるを得ない significa 'non poter fare a meno di / essere costretto inevitabilmente a fare': 認めざるを得ない (dover riconoscere i fatti)."
+  },
+  {
+    "id": "DRILL-B-38",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "公園を 散歩して 気分転換を している ときに、画期的な 解決策を （ ）。",
+    "options": {
+      "A": "思いついた",
+      "B": "思い出した",
+      "C": "思い切った",
+      "D": "思い込んだ"
+    },
+    "answer": "A",
+    "explanation": "思いつく significa 'venire in mente una nuova idea o soluzione'. 思い出す è ricordare qualcosa del passato; 思い切る è decidersi con audacia; 思い込む è convincersi erroneamente."
+  },
+  {
+    "id": "DRILL-B-39",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar (接続)",
+    "question": "彼は 日本に 来て まだ ３か月（ ）、日常会話が とても 流暢だ。",
+    "options": {
+      "A": "にしては",
+      "B": "に反して",
+      "C": "に応じて",
+      "D": "に沿って"
+    },
+    "answer": "A",
+    "explanation": "〜にしては si usa per esprimere una valutazione inaspettata rispetto a uno standard noto: 'per essere in Giappone da soli 3 mesi, parla con grande scioltezza'."
+  },
+  {
+    "id": "DRILL-B-40",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "先生から 推薦していただいた 貴重な 資料を （ ）ました。",
+    "options": {
+      "A": "拝見し",
+      "B": "ご覧になり",
+      "C": "お目にかかり",
+      "D": "伺い"
+    },
+    "answer": "A",
+    "explanation": "拝見する (はいけんする) è il kenjōgo (verbo umile) di 見る/読む per un documento di un superiore letto da chi parla. ご覧になる è sonkeigo (per le azioni del professore)."
+  },
+  {
+    "id": "DRILL-B-41",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n学生寮では、＿＿ ＿＿ ★ ＿＿ ことになっている。\n①夜11時を　②玄関の鍵が　③過ぎると　④閉まる",
+    "options": {
+      "A": "① (夜11時を)",
+      "B": "② (玄関の鍵が)",
+      "C": "③ (過ぎると)",
+      "D": "④ (閉まる)"
+    },
+    "answer": "B",
+    "explanation": "Ordine corretto: [①夜11時を] [③過ぎると] ★[②玄関の鍵が] [④閉まる] ことになっている. La stella cade su ②."
+  },
+  {
+    "id": "DRILL-B-42",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "本学では、国際化を 推進するために 海外からの 研究者を 積極的に （ ）方針です。",
+    "options": {
+      "A": "受け入れる",
+      "B": "取り入れる",
+      "C": "引き受ける",
+      "D": "申し入れる"
+    },
+    "answer": "A",
+    "explanation": "受け入れる significa accogliere / ammettere persone o accettare proposte (留学生・研究者を受け入れる). 取り入れる è adottare metodi/tecniche; 引き受ける è assumersi un incarico."
+  },
+  {
+    "id": "DRILL-B-43",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Conjunctions (接続詞)",
+    "question": "この パソコンは 小型で 持ち運びに 適している。（ ）、バッテリーの 持ちも 抜群だ。",
+    "options": {
+      "A": "その上",
+      "B": "それなのに",
+      "C": "それなら",
+      "D": "したがって"
+    },
+    "answer": "A",
+    "explanation": "その上 (sono ue) aggiunge un ulteriore pregio/argomento a favore: 'per di più / oltretutto'. それなのに indica forte contrasto; したがって è di conseguenza logica."
+  },
+  {
+    "id": "DRILL-B-44",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "つぎの ぶんの ★ には どれが 入りますか。\n健康 ＿＿ ＿＿ ★ ＿＿ なんとかなるものだ。\n①あれば　②どんな困難も　③でさえ　④乗り越えて",
+    "options": {
+      "A": "① (あれば)",
+      "B": "② (どんな困難も)",
+      "C": "③ (でさえ)",
+      "D": "④ (乗り越えて)"
+    },
+    "answer": "B",
+    "explanation": "La costruzione è 〜さえ〜ば (basta che ci sia...). Ordine: [③でさえ] [①あれば] ★[②どんな困難も] [④乗り越えて] なんとかなるものだ. La stella cade su ②."
+  },
+  {
+    "id": "DRILL-B-45",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "料理が 冷めない うちに、どうぞ （ ）ください。",
+    "options": {
+      "A": "お召し上がり",
+      "B": "いただき",
+      "C": "拝見し",
+      "D": "召し上げ"
+    },
+    "answer": "A",
+    "explanation": "お召し上がりください è la forma sonkeigo corretta per invitare cortesemente un ospite a mangiare o bere. いただく è umile, mai per l'ospite."
   }
 ]

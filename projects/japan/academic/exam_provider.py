@@ -12,7 +12,7 @@ from typing import Any, Dict, List, Optional
 
 from academic.exam_notes import get_user_notes
 
-WORKSPACE_DIR = "/opt/japan"
+WORKSPACE_DIR = os.environ.get("WORKSPACE_DIR") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXAMS_DIR = os.path.join(WORKSPACE_DIR, "exams")
 EXAM_DB_FILE = os.path.join(EXAMS_DIR, "exam_database.json")
 DRILL_POOL_A_FILE = os.path.join(EXAMS_DIR, "drill_pool_part_a.json")

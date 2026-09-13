@@ -1,5 +1,27 @@
 [
   {
+    "feature": "mext_200_questions_live_pacing_and_tokyo_onboarding_ecosystem",
+    "timestamp": "2026-09-13T22:27:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Expanded drill banks to exactly 200 authentic questions (90 in Part A, 45 in Part B, 34 in Part C, 31 in base DB) with verified zero duplicates and full lookup mapping.",
+        "Created static/js/modules/exam_pacing.js providing modular real-time pacing evaluation (optimal <= 30s/q, warning <= 45s/q, critical > 45s/q) and tactical clock formatting.",
+        "Refactored static/js/modules/exams.js to integrate exam_pacing.js, reducing lines to 192 and eliminating raw timer variables.",
+        "Integrated live visual examPacingPill into templates/components/tab_exams.html.",
+        "Authored research/guida_ascolto_e_prosodia_orale_mext.md detailing Tokyo Pitch Accent models (Heiban, Atamadaka, Nakadaka, Odaka), keigo melody curves, spoken contractions decoding, and 4-phase daily shadowing protocol.",
+        "Authored research/dossier_mext_post_selezione_e_arrivo_tokyo.md mapping the post-embassy period (Tokyo Second Screening, CoE/Visa at Milan consulate, flight issuance, arrival at Haneda/Narita, ward registration, Yūcho Ginkō bank account, and the vital 200,000 yen initial cash buffer).",
+        "Tested live submission against Ionos port 3033 via POST /api/exams/submit returning 100% score across DRILL-A-66, DRILL-B-31, DRILL-C-21 with accurate category breakdowns."
+      ],
+      "file_line_counts": {
+        "academic/exam_provider.py": 106,
+        "static/js/modules/exams.js": 192,
+        "static/js/modules/exam_pacing.js": 79,
+        "templates/components/tab_exams.html": 140
+      }
+    }
+  },
+  {
     "feature": "mext_exhaustive_end_to_end_preparation_ecosystem",
     "timestamp": "2026-09-13T22:18:00Z",
     "status": "passed",
