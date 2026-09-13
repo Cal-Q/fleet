@@ -892,5 +892,23 @@
         "README.md": 87
       }
     }
+  },
+  {
+    "feature": "mext_omr_ergonomics_and_concessives_taxonomy",
+    "timestamp": "2026-09-13T23:09:00Z",
+    "status": "passed",
+    "evidence": {
+      "omr_ergonomics": "Authored research/protocollo_ergonomia_e_riscaldamento_omr_mext.md (44 lines <= 200) detailing the 3-pencil 2B tactical kit, 4-step neuromuscular pre-test warmup, and centrifugal spiral bubbling technique.",
+      "concessives_taxonomy": "Authored research/tassonomia_connettori_concessivi_e_avversativi_parte_c.md (45 lines <= 200) analyzing the rhetorical Jōho-Kōki structure, 10 formal concessive connectors, and the thesis isolation algorithm in Part C.",
+      "risk_registry": "Updated research/registro_proattivo_rischi_e_soluzioni_mext.md (57 lines <= 200) registering R-24 and R-25 as Attivo and mapping upcoming R-26 and R-27.",
+      "ui_integration": "Updated tab_dossier.html badge and README.md report counter to 36 dossiers, verified GET /api/research/dossiers serving both new guides on Ionos.",
+      "file_line_counts": {
+        "research/protocollo_ergonomia_e_riscaldamento_omr_mext.md": 44,
+        "research/tassonomia_connettori_concessivi_e_avversativi_parte_c.md": 45,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 57,
+        "templates/components/tab_dossier.html": 136,
+        "README.md": 87
+      }
+    }
   }
 ]
