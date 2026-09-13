@@ -820,5 +820,25 @@
         "static/js/modules/exams.js": 195
       }
     }
+  },
+  {
+    "feature": "mext_part_b_expansion_ambient_audio_and_radical_guide",
+    "timestamp": "2026-09-13T23:01:00Z",
+    "status": "passed",
+    "evidence": {
+      "pool_expansion": "Expanded exams/drill_pool_part_b.json from 60 to 75 items (DRILL-B-61 to DRILL-B-75) targeting causative-passive, directionality, and complex Keigo request traps.",
+      "audio_desensitization": "Created static/js/modules/exam_audio.js (125 lines) generating brown/pink ambient room resonance and analog clock ticking to build acoustic resilience against embassy hall noise.",
+      "ui_integration": "Integrated tactile ambientSoundToggle into templates/components/tab_exams.html, wired onStageActivated audio stoppage in static/js/main.js, and bumped cache buster to v=20260913_24.",
+      "pedagogical_guide": "Authored research/guida_mnemonica_radicali_e_tratti_critici_mext.md (69 lines) covering the 7 geometric radical placements, 10 tricky 1-stroke kanji pairs, and block-addition stroke counting.",
+      "physical_verification": "Tested live POST /api/exams/submit on Ionos with DRILL-B-61 (100% score) and verified GET /api/research/dossiers serving 32 dossiers.",
+      "file_line_counts": {
+        "static/js/modules/exam_audio.js": 125,
+        "research/guida_mnemonica_radicali_e_tratti_critici_mext.md": 69,
+        "templates/components/tab_exams.html": 142,
+        "static/js/main.js": 116,
+        "README.md": 84,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 50
+      }
+    }
   }
 ]
