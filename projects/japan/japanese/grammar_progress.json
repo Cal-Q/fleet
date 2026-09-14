@@ -2929,7 +2929,8 @@
         "level": "N3",
         "matched_sentences": 0,
         "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%84%E3%81%84"
+        "url": "https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%84%E3%81%84",
+        "studied": false
       },
       {
         "id": 196,
@@ -3037,7 +3038,8 @@
         "level": "N3",
         "matched_sentences": 0,
         "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%B0-%E3%81%BB%E3%81%A9"
+        "url": "https://bunpro.jp/grammar_points/%E3%81%B0-%E3%81%BB%E3%81%A9",
+        "studied": false
       },
       {
         "id": 209,
@@ -3064,7 +3066,8 @@
         "level": "N3",
         "matched_sentences": 0,
         "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%86%E3%81%A1%E3%81%AB"
+        "url": "https://bunpro.jp/grammar_points/%E3%81%86%E3%81%A1%E3%81%AB",
+        "studied": false
       },
       {
         "id": 212,
@@ -3262,7 +3265,8 @@
         "level": "N3",
         "matched_sentences": 0,
         "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%89%E3%81%842"
+        "url": "https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%89%E3%81%842",
+        "studied": false
       },
       {
         "id": 235,
@@ -4144,7 +4148,8 @@
         "level": "N3",
         "matched_sentences": 0,
         "total_sentences": 5,
-        "url": "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB"
+        "url": "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB",
+        "studied": false
       },
       {
         "id": 452,

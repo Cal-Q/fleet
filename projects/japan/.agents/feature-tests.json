@@ -1,5 +1,25 @@
 [
   {
+    "feature": "srs_upstream_cache_freshness_and_zero_silent_fallthrough",
+    "timestamp": "2026-09-14T10:43:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of premature N3 grammar injection: static user_reviewed_vocab.json snapshot (4,163 words) caused false locks on all 47 unstudied N4 grammar rules.",
+        "Reverted 25 N3 notes and cards from Anki collection.anki2 with grave records (usn = -1) and pushed sync to AnkiWeb via run_sync_and_push().",
+        "Updated engine/grammar_vocab_gate.py to dynamically verify collection.anki2 mtime and auto-refresh the reviewed vocab cache (6,588 words).",
+        "Adopted Invariant 28 (SRS Upstream Cache Freshness & Zero-Silent-Fallthrough Invariant) in GLOBAL_AGENTS.md and README.md.",
+        "Registered R-41 in research/registro_proattivo_rischi_e_soluzioni_mext.md.",
+        "Verified physical ground truth: /api/study/next serves 5 pure N4 rules (#166, #170, #177, #179, #380) with 0 missing vocab."
+      ],
+      "file_line_counts": {
+        "engine/grammar_vocab_gate.py": 184,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 73,
+        "README.md": 91
+      }
+    }
+  },
+  {
     "feature": "mext_exam_stratified_blueprint_quota_and_carrier_sentence_furigana_gating",
     "timestamp": "2026-09-13T23:40:00Z",
     "status": "passed",

@@ -88,3 +88,4 @@ python3 core/anki_cli.py reschedule --days 14
 5. **Quota Stratificata Deterministica (Invariante 25)**: Parte A rigorosamente bilanciata (5 Grammatica/Particelle, 3 Scrittura, 3 Lettura core, max 1 Tranello N3). Zero clusterizzazioni.
 6. **Gating Frasi di Supporto & Furigana (Invariante 26)**: In Fase 1, nessun kanji sopra N4 nelle frasi carrier privo di furigana glossata.
 7. **Audit Pre-Commit a 60 Giorni (Invariante 27)**: Validazione continua con `python3 academic/test_exam_distribution.py`.
+8. **Freschezza Cache SRS & Zero Fallthrough Silenzioso (Invariante 28)**: Controllo live `mtime` del database Anki e divieto categorico di salti di livello (N3/N2) durante la Fase 1 N4.
