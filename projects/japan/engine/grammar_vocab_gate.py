@@ -12,7 +12,7 @@ import re
 import sys
 from typing import Any, Dict, List, Set, Tuple
 
-from core.db import open_anki_db, open_dict_db
+from core.db import open_anki_db, open_dict_db, ANKI_COLLECTION_PATH
 from engine.grammar_clusters import classify_mext_cluster, grammar_sort_key
 
 BASE_DIR = "/opt/japan"
@@ -48,9 +48,10 @@ def get_existing_vocab_words() -> Set[str]:
 
 def get_reviewed_vocab_set(refresh: bool = False) -> Set[str]:
     if not refresh and os.path.exists(REVIEWED_VOCAB_FILE):
-        cached = load_cached_json(REVIEWED_VOCAB_FILE)
-        if isinstance(cached, list):
-            return set(cached)
+        if not os.path.exists(ANKI_COLLECTION_PATH) or os.path.getmtime(REVIEWED_VOCAB_FILE) >= os.path.getmtime(ANKI_COLLECTION_PATH):
+            cached = load_cached_json(REVIEWED_VOCAB_FILE)
+            if isinstance(cached, list):
+                return set(cached)
 
     try:
         col = open_anki_db()
