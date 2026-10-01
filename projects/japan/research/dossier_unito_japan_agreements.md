@@ -171,18 +171,8 @@ Gli accordi sottoscritti prevedono, da un lato, una partnership per la cooperazi
 ```
 
 ### Evidence: Cooperation agreements - University of Turin (en.unito.it)
-
 **Source**: [https://en.unito.it/international-relations/international-cooperation/cooperation-agreements](https://en.unito.it/international-relations/international-cooperation/cooperation-agreements)
-
-```text
-# Cooperation agreements | University of Turin
-The University of Turin cooperates with international universities and institutions to developjoint research and education activitiesand fosterprofessors and students exchange programs.
-Today UniTo is involved inover 550 formal agreementswith Universities in 90 countries all over the world and in several international networks.
-Through the map, it is possible to view all existing agreements and learn essential information about the partnerships.
-## Types of agreements
-- Memorandum of understanding:cooperation agreement of general interest, signed by the University of Turin and one or more foreign institutions, on a proposal from the Rector, the Vice Rector for Internationalisation or during institutional meetings. It is aimed at establishing a first institutional contact in order to strengthen cultural and scientific relations and to lay the foundations for following cooperation agreements.
-- Framework Agreement for Scientific Cooperation:cooperation agreement of general interest, signed by the University of Turin and one or more foreign institutions, on a proposal from a Department, a School or a Research centre, aiming at promoting c
-```
+UniTo maintains formal cooperation agreements across 90 countries including Japan (SOKENDAI, Tokyo, Kyoto, Waseda) for joint research, faculty/student mobility, and framework scientific cooperation.
 
 ## 4. Primary Sources & Scraped Evidence Catalog
 

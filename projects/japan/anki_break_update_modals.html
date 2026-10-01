@@ -1,0 +1,89 @@
+<!-- tools/templates/components/anki_break_update_modals.html — Anti-Fatigue, Micro-Break & OTA Modals -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<!-- 4. ANTI-FATIGUE & BREAK MODALS -->
+<div id="ankiFatigueModal" class="hidden absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-6 max-w-sm w-full space-y-4 shadow-2xl text-center">
+    <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center mx-auto text-xl">☕</div>
+    <div class="space-y-1"><h3 class="text-base font-bold text-white">Rilevata Fatica Cognitiva</h3><p id="ankiFatigueMsg" class="text-xs text-neutral-300 leading-relaxed font-sans"></p></div>
+    <div id="ankiFatigueDebugContainer" class="hidden text-left font-mono"></div>
+    <div class="flex flex-col gap-2 pt-2">
+      <button id="ankiFatigueActionBtn" onclick="window.ankiStartDynamicBreak()" class="w-full py-2.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-xs rounded-xl transition tap-press shadow-md">Fai Micro-Pausa</button>
+      <button onclick="window.ankiDismissFatigue()" class="w-full py-2 bg-white/5 hover:bg-white/10 text-neutral-400 font-mono text-xs rounded-xl transition tap-press">Continua Comunque</button>
+      <button onclick="window.ankiToggleFatigueDebug()" class="text-[10px] text-neutral-500 hover:text-neutral-300 font-mono py-1 transition tap-press">🔍 Dettagli Analisi</button>
+    </div>
+  </div>
+</div>
+
+<div id="ankiBreakModal" class="hidden absolute inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col items-center justify-center p-6 text-center select-none">
+  <!-- Active Countdown & Breathing Stage -->
+  <div id="ankiBreakActiveStage" class="flex flex-col items-center justify-center space-y-6 animate-info-fade w-full max-w-sm">
+    <div class="space-y-1">
+      <h3 class="text-lg font-bold text-white tracking-wide">Micro-Pausa di Respirazione</h3>
+      <p class="text-xs text-neutral-400 font-mono">Inspira quando si espande • Espira quando si contrae</p>
+    </div>
+    <div id="ankiBreakCircle" class="w-28 h-28 rounded-full bg-[#42A5F5]/30 border-2 border-[#42A5F5] flex items-center justify-center transition-all duration-1000 transform scale-100 shadow-lg">
+      <span id="ankiBreakTimerText" class="text-2xl font-mono font-bold text-white">2:00</span>
+    </div>
+    <button onclick="window.ankiStopBreak()" class="py-2.5 px-6 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-neutral-300 font-mono text-xs transition tap-press border border-white/10">
+      Salta Pausa & Continua ➔
+    </button>
+  </div>
+
+  <!-- Break Completed / Return to Study Stage -->
+  <div id="ankiBreakFinishedStage" class="hidden flex flex-col items-center justify-center space-y-5 animate-info-fade w-full max-w-sm">
+    <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-3xl shadow-[0_0_24px_rgba(102,187,106,0.3)] animate-pulse">
+      ✨
+    </div>
+    <div class="space-y-1.5">
+      <h3 class="text-xl font-bold text-white tracking-wide">Pausa Completata!</h3>
+      <p class="text-xs text-neutral-300 font-sans leading-relaxed max-w-xs mx-auto">
+        Mente ricaricata. Quando sei pronto a concentrarti, tocca il pulsante per continuare il ripasso.
+      </p>
+    </div>
+    <div class="w-full pt-2">
+      <button onclick="window.ankiStopBreak()" class="w-full py-3.5 bg-gradient-to-r from-[#2196F3] to-[#1E88E5] hover:from-[#1E88E5] hover:to-[#1976D2] active:scale-95 text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-xl transition tap-press flex items-center justify-center gap-2 border border-blue-400/40">
+        <span>🎯 Ritorna a Studiare</span>
+        <span class="text-xs opacity-80">➔</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 5. OTA UPDATE & VERSION CHECKER MODAL -->
+<div id="ankiUpdateModal" class="hidden absolute inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-4 font-mono select-none" onclick="if(event.target===this)window.ankiCloseUpdateModal()">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl relative text-xs">
+    <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2.5">
+      <div class="flex items-center gap-2">
+        <span class="text-base">🚀</span>
+        <span class="font-bold text-white uppercase tracking-wider">Aggiornamenti & OTA</span>
+      </div>
+      <button onclick="window.ankiCloseUpdateModal()" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm tap-press">✕</button>
+    </div>
+    
+    <div class="bg-[#141414] border border-[#2A2A2A] rounded-xl p-3 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="text-neutral-400 text-[11px]">Versione Installata:</span>
+        <span id="ankiUpdateCurrentVersion" class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[11px] font-mono font-bold">v2.5.0</span>
+      </div>
+      <div id="ankiUpdateStatusText" class="text-xs text-neutral-300 font-sans py-1 leading-snug">
+        Tocca il pulsante in basso per verificare la disponibilità di nuove versioni.
+      </div>
+    </div>
+
+    <div class="space-y-1.5">
+      <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Note di Rilascio / Novità:</div>
+      <ul id="ankiUpdateChangelog" class="space-y-1 bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 max-h-36 overflow-y-auto overscroll-contain">
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Pausa studio: blocco conteggio tempo sessione durante la micro-pausa</span></li>
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Schermata di ripresa tattile con suono e feedback armonico di fine pausa</span></li>
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Persistenza locale impostazioni e FSRS ottimizzato</span></li>
+      </ul>
+    </div>
+
+    <div id="ankiUpdateActionArea" class="space-y-2 pt-1">
+      <button id="ankiBtnCheckUpdates" onclick="window.ankiCheckUpdates()" class="w-full py-2.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition tap-press active:scale-95 flex items-center justify-center gap-2 border border-blue-400/30">
+        <span>🔄 Verifica Nuove Versioni</span>
+      </button>
+    </div>
+  </div>
+</div>

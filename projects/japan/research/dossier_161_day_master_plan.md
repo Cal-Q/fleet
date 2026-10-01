@@ -33,26 +33,26 @@
 
 ### FASE 1: Fondamenta & Chiusura N4 (Giorni 1 – 14 • 13 Set – 26 Set 2026)
 * **Obiettivo Primario**: Portare Bunpro N4 al 100% (185/185) studiando i 47 punti rimanenti a ritmo di **4 punti/giorno**.
-* **Slot 1 (40 min)**: Mantenimento Anki SRS mature a zero arretrati (~35-45 card/die).
-* **Slot 2 (45 min)**: Studio dei 4 punti Bunpro odierni (es. `たところだ`, `ながら`, `ているところだ`, `たばかり`).
-* **Slot 3 (25 min)**: Frasi d'esempio Bunpro + consolidamento delle 12 coppie Keigo irregolari (come carte lessicali, NO simulazioni orali complesse).
-* **Slot 4 (15 min)**: Drill mirato Sezione A (10-12 quesiti di particelle e kanji elementari).
+* **Slot 1 (15 min)**: Drill mirato Sezione A (10-12 quesiti di particelle e kanji elementari).
+* **Slot 2 (25 min)**: Frasi d'esempio Bunpro + consolidamento delle 12 coppie Keigo irregolari (come carte lessicali, NO simulazioni orali complesse).
+* **Slot 3 (40 min)**: Mantenimento Anki SRS mature a zero arretrati (~35-45 card/die).
+* **Slot 4 (45 min)**: Studio dei 4 punti Bunpro odierni (es. `たところだ`, `ながら`, `ているところだ`, `たばかり`).
 * **Milestone Giorno 14 (26 Set)**: **N4 100% Completato**. Giorno cuscinetto per review generale.
 
 ### FASE 2: Padronanza N3 & Drill Selettivo Parte B (Giorni 15 – 79 • 27 Set – 30 Nov 2026)
 * **Obiettivo Primario**: Attraversamento completo di 220 punti Bunpro N3 a ritmo di **4 punti/giorno di studio** (con 1 giorno cuscinetto ogni 7).
-* **Slot 1 (40 min)**: SRS Anki con innesto vocaboli ed espressioni N3.
-* **Slot 2 (45 min)**: Studio intensivo grammatica N3 (connettori logici `わけ`, `にしては`, `反面`, `にすぎない`).
-* **Slot 3 (25 min)**: Verbi composti N2 (`～切る`, `～出す`, `～直す`, `～込む`) e causativo-passivo.
-* **Slot 4 (25 min)**: Drill Parte B (12-15 quesiti a crocette su grammatica intermedia).
+* **Slot 1 (25 min)**: Drill Parte B (12-15 quesiti a crocette su grammatica intermedia).
+* **Slot 2 (25 min)**: Verbi composti N2 (`～切る`, `～出す`, `～直す`, `～込む`) e causativo-passivo.
+* **Slot 3 (40 min)**: SRS Anki con innesto vocaboli ed espressioni N3.
+* **Slot 4 (45 min)**: Studio intensivo grammatica N3 (connettori logici `わけ`, `にしては`, `反面`, `にすぎない`).
 * **Milestone Giorno 79 (30 Nov)**: **N3 100% Completato**. Punteggio target su Parte B: **>55%**.
 
 ### FASE 3: Full Past Papers, Skimming & Difesa Orale (Giorni 80 – 161 • 01 Dic 2026 – 20 Feb 2027)
 * **Obiettivo Primario**: Padroneggiare la gestione del tempo d'esame (60 minuti integrali A+B+C) e la fluidità orale in Keigo per il colloquio d'ambasciata.
-* **Slot 1 (35 min)**: SRS Anki di mantenimento rapido.
-* **Slot 2 (40 min)**: Skimming accademico e lettura veloce testi complessi (sociologia urbana, saggi culturali).
-* **Slot 3 (35 min)**: Simulazione orale del colloquio d'ambasciata (shadowing audio, motivazione MEXT, progetto Terzi Luoghi e UniTO).
-* **Slot 4 (55 min)**: Simulazione d'esame integrale cronometrata (Parti A+B+C con revisione distrattori).
+* **Slot 1 (55 min)**: Simulazione d'esame integrale cronometrata (Parti A+B+C con revisione distrattori).
+* **Slot 2 (35 min)**: Simulazione orale del colloquio d'ambasciata (shadowing audio, motivazione MEXT, progetto Terzi Luoghi e UniTO).
+* **Slot 3 (35 min)**: SRS Anki di mantenimento rapido.
+* **Slot 4 (40 min)**: Skimming accademico e lettura veloce testi complessi (sociologia urbana, saggi culturali).
 * **Fase Tapering (Giorni 152 – 161 • 11 Feb – 20 Feb 2027)**: Riduzione del carico orario, ripasso leggero delle schede riassuntive, sonno e tenuta psicofisica.
 * **Giorno 161 (20 Febbraio 2027)**: **ESAME UFFICIALE MEXT A ROMA**.
 

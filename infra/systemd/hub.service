@@ -8,7 +8,7 @@ User=master
 Group=master
 WorkingDirectory=/opt/hub/web
 Environment=PYTHONPATH=/opt/hub
-Environment=HUB_PIN=superpato777
+EnvironmentFile=/etc/default/hub
 ExecStart=/usr/bin/python3 /opt/hub/web/app.py
 Restart=always
 RestartSec=3

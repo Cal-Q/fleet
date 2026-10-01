@@ -1873,5 +1873,455 @@
     },
     "answer": "A",
     "explanation": "「足袋」 è uno jukujikun tradizionale e si legge たび (i tipici calzini tradizionali infradito indossati con i geta o gli zori)."
+  },
+  {
+    "id": "DRILL-A-126",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "駅の 前で 【案内】の パンフレットを もらいました。",
+    "options": {
+      "A": "あんない",
+      "B": "あない",
+      "C": "あんないち",
+      "D": "おくない"
+    },
+    "answer": "A",
+    "explanation": "「案内」は「あんない」。案(あん)＋内(ない)。"
+  },
+  {
+    "id": "DRILL-A-127",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "旅行の 【準備】は もう すべて 終わりましたか。",
+    "options": {
+      "A": "じゅんび",
+      "B": "ずんび",
+      "C": "じゅんひ",
+      "D": "じゅび"
+    },
+    "answer": "A",
+    "explanation": "「準備」は「じゅんび」。備は「び」(濁音)。"
+  },
+  {
+    "id": "DRILL-A-128",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "友達と 三時に 会う 【約束】を しました。",
+    "options": {
+      "A": "やくそく",
+      "B": "やくぞく",
+      "C": "わくそく",
+      "D": "やっそく"
+    },
+    "answer": "A",
+    "explanation": "「約束」は「やくそく」。束は清音の「そく」。"
+  },
+  {
+    "id": "DRILL-A-129",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "次の 【急行】 電車に 乗ると 早く 着きます。",
+    "options": {
+      "A": "きゅうこう",
+      "B": "きゅこう",
+      "C": "きゅうぎょう",
+      "D": "きゅぎょう"
+    },
+    "answer": "A",
+    "explanation": "「急行」は「きゅうこう」。長音の「きゅう」。"
+  },
+  {
+    "id": "DRILL-A-130",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "バスは 定刻通りに バス停を 【出発】しました。",
+    "options": {
+      "A": "しゅっぱつ",
+      "B": "しゅつはつ",
+      "C": "しゅっばつ",
+      "D": "しゅうはつ"
+    },
+    "answer": "A",
+    "explanation": "「出発」は促音化して「しゅっぱつ」。"
+  },
+  {
+    "id": "DRILL-A-131",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "車が たくさん 通るので 【注意】して ください。",
+    "options": {
+      "A": "ちゅうい",
+      "B": "じゅうい",
+      "C": "ちゅい",
+      "D": "ちゅうき"
+    },
+    "answer": "A",
+    "explanation": "「注意」は「ちゅうい」。注(ちゅう)＋意(い)。"
+  },
+  {
+    "id": "DRILL-A-132",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "明日は 少し 【都合】が 悪いので 行けません。",
+    "options": {
+      "A": "つごう",
+      "B": "とごう",
+      "C": "つあい",
+      "D": "ずごう"
+    },
+    "answer": "A",
+    "explanation": "「都合」は「つごう」。合は連濁して「ごう」。"
+  },
+  {
+    "id": "DRILL-A-133",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "ホテルの 【受付】で 部屋の 鍵を もらいました。",
+    "options": {
+      "A": "うけつけ",
+      "B": "うけづけ",
+      "C": "うけつき",
+      "D": "うけがき"
+    },
+    "answer": "A",
+    "explanation": "「受付」は「うけつけ」。受(うけ)＋付(つけ)。"
+  },
+  {
+    "id": "DRILL-A-134",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "山の 上から 見た 海の 【景色】は とても 美しかった。",
+    "options": {
+      "A": "けしき",
+      "B": "けいしょく",
+      "C": "げしき",
+      "D": "けいしき"
+    },
+    "answer": "A",
+    "explanation": "「景色」は「けしき」。色を「しき」と読む語。"
+  },
+  {
+    "id": "DRILL-A-135",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica)",
+    "question": "海外で 働いた 【経験】は 役に立ちます。",
+    "options": {
+      "A": "けいけん",
+      "B": "げいけん",
+      "C": "けいかん",
+      "D": "けんけい"
+    },
+    "answer": "A",
+    "explanation": "「経験」は「けいけん」。経(けい)＋験(けん)。"
+  },
+  {
+    "id": "DRILL-A-136",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "休みの 日には 公園に 人が たくさん 【あつまり】ます。",
+    "options": {
+      "A": "集まり",
+      "B": "拾まり",
+      "C": "住まり",
+      "D": "進まり"
+    },
+    "answer": "A",
+    "explanation": "「あつまる」は「集まる」。「拾」はひろう、「住」はすむ。"
+  },
+  {
+    "id": "DRILL-A-137",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "母に 誕生日 プレゼントを 【おくり】ました。",
+    "options": {
+      "A": "送り",
+      "B": "返し",
+      "C": "届き",
+      "D": "通り"
+    },
+    "answer": "A",
+    "explanation": "「おくる」は「送る」。「返」はかえす、「届」はとどく。"
+  },
+  {
+    "id": "DRILL-A-138",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "駅の 近くに スーパーが あって とても 【べんり】です。",
+    "options": {
+      "A": "便利",
+      "B": "便理",
+      "C": "使利",
+      "D": "便立"
+    },
+    "answer": "A",
+    "explanation": "「べんり」は「便利」。「理」や「使」との混同に注意。"
+  },
+  {
+    "id": "DRILL-A-139",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "分からない 言葉は 辞書で 【しらべ】ましょう。",
+    "options": {
+      "A": "調べ",
+      "B": "課べ",
+      "C": "談べ",
+      "D": "設べ"
+    },
+    "answer": "A",
+    "explanation": "「しらべる」は「調べる」。言偏の漢字(課・談・設)との判別。"
+  },
+  {
+    "id": "DRILL-A-140",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "道に 落ちて いた ゴミを 【ひろい】ました。",
+    "options": {
+      "A": "拾い",
+      "B": "捨て",
+      "C": "持ち",
+      "D": "指し"
+    },
+    "answer": "A",
+    "explanation": "「ひろう」は「拾う」。「捨てる」(すてる)の対義語。"
+  },
+  {
+    "id": "DRILL-A-141",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Writing (Grafia)",
+    "question": "庭に きれいな 花の 木を 【うえ】ました。",
+    "options": {
+      "A": "植え",
+      "B": "直え",
+      "C": "置え",
+      "D": "増え"
+    },
+    "answer": "A",
+    "explanation": "「うえる」は「植える」。「直す」「置く」「増える」との判別。"
+  },
+  {
+    "id": "DRILL-A-142",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "彼は 毎日 走っている（ ）、全然 体重が 減りません。",
+    "options": {
+      "A": "のに",
+      "B": "ので",
+      "C": "なら",
+      "D": "から"
+    },
+    "answer": "A",
+    "explanation": "逆接・不満・意外を表す「〜のに」。予想と反対の結果になる用法。"
+  },
+  {
+    "id": "DRILL-A-143",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Conditionals (条件形)",
+    "question": "窓を 開けた（ ）、涼しい 風が 入ってきた。",
+    "options": {
+      "A": "ら",
+      "B": "ば",
+      "C": "なら",
+      "D": "と"
+    },
+    "answer": "A",
+    "explanation": "〜たら「〜したところ(発見・契機)」。過去の発見には「〜たら」を用いる。"
+  },
+  {
+    "id": "DRILL-A-144",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "大雪が 降った（ ）、電車が 止まって しまいました。",
+    "options": {
+      "A": "ために",
+      "B": "ように",
+      "C": "とおりに",
+      "D": "そうに"
+    },
+    "answer": "A",
+    "explanation": "原因・理由を表す「〜ために」。客観的な因果関係を示す表現。"
+  },
+  {
+    "id": "DRILL-A-145",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "日本語の 新聞が 読める（ ）に なりたいです。",
+    "options": {
+      "A": "よう",
+      "B": "そう",
+      "C": "ため",
+      "D": "こと"
+    },
+    "answer": "A",
+    "explanation": "可能動詞＋「〜ようになる」で能力や状態の変化・到達を表す。"
+  },
+  {
+    "id": "DRILL-A-146",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar Particles",
+    "question": "来週 試験が ある（ ）どうか、先生に 聞いて みます。",
+    "options": {
+      "A": "か",
+      "B": "が",
+      "C": "と",
+      "D": "の"
+    },
+    "answer": "A",
+    "explanation": "「〜かどうか」の埋め込み疑問文形式。普通形＋かどうか。"
+  },
+  {
+    "id": "DRILL-A-147",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜やすい / 〜にくい)",
+    "question": "この 靴は とても 軽くて（ ）やすいです。",
+    "options": {
+      "A": "歩き",
+      "B": "歩く",
+      "C": "歩いて",
+      "D": "歩いた"
+    },
+    "answer": "A",
+    "explanation": "動詞ます形語幹＋「〜やすい」で容易さ・性質を表す。"
+  },
+  {
+    "id": "DRILL-A-148",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Giving and Receiving (授受動詞)",
+    "question": "先生に 日本の 文化に ついての 本を（ ）ました。",
+    "options": {
+      "A": "いただき",
+      "B": "くれ",
+      "C": "あげ",
+      "D": "やり"
+    },
+    "answer": "A",
+    "explanation": "目上の人から物をもらう謙譲表現「いただく」。"
+  },
+  {
+    "id": "DRILL-A-149",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜てある vs 〜ている)",
+    "question": "誰も いない 部屋の 電気が ついて（ ）ます。",
+    "options": {
+      "A": "い",
+      "B": "あり",
+      "C": "おき",
+      "D": "み"
+    },
+    "answer": "A",
+    "explanation": "自動詞「つく」＋「〜ている」で結果状態を表す。"
+  },
+  {
+    "id": "DRILL-A-150",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Grammar (〜てある vs 〜ている)",
+    "question": "机の 上に 明日の 資料が 置いて（ ）ます。",
+    "options": {
+      "A": "あり",
+      "B": "い",
+      "C": "しまい",
+      "D": "み"
+    },
+    "answer": "A",
+    "explanation": "他動詞「置く」＋「〜てある」で誰かが意図して準備した結果状態を表す。"
+  },
+  {
+    "id": "DRILL-A-151",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "強い 風が 吹いて、窓が 急に（ ）。",
+    "options": {
+      "A": "閉まりました",
+      "B": "閉めました",
+      "C": "開けました",
+      "D": "消しました"
+    },
+    "answer": "A",
+    "explanation": "窓(主語)＋「閉まる」(自動詞)。「閉める」は他動詞。"
+  },
+  {
+    "id": "DRILL-A-152",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "汚れた 服を 洗濯機に 入れて きれいに（ ）。",
+    "options": {
+      "A": "洗いました",
+      "B": "拭きました",
+      "C": "磨きました",
+      "D": "干しました"
+    },
+    "answer": "A",
+    "explanation": "洗濯機で服を「洗う」。「拭く」はタオル等、「磨く」は歯や靴。"
+  },
+  {
+    "id": "DRILL-A-153",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Transitive vs Intransitive",
+    "question": "歩いて いる ときに、ポケットから 鍵を（ ）しまった。",
+    "options": {
+      "A": "落として",
+      "B": "落ちて",
+      "C": "下りて",
+      "D": "下げて"
+    },
+    "answer": "A",
+    "explanation": "鍵(を)＋「落とす」(他動詞)。「落ちる」は自動詞(が)。"
+  },
+  {
+    "id": "DRILL-A-154",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Vocabulary in Context",
+    "question": "雨が やんで、暗かった 空が だんだん（ ）なってきた。",
+    "options": {
+      "A": "明るく",
+      "B": "暗く",
+      "C": "重く",
+      "D": "寒く"
+    },
+    "answer": "A",
+    "explanation": "雨がやんで空が「明るく」なる。形容詞連用形＋なる。"
+  },
+  {
+    "id": "DRILL-A-155",
+    "section": "A",
+    "level": "JLPT N4/N5",
+    "category": "Kanji Reading (Fonetica - 熟字訓)",
+    "question": "【昨日】は 一日中 家で 試験の 勉強を しました。",
+    "options": {
+      "A": "きのう",
+      "B": "さくじつ",
+      "C": "きょう",
+      "D": "あした"
+    },
+    "answer": "A",
+    "explanation": "「昨日」の日常会話訓読み熟字訓は「きのう」。"
   }
 ]

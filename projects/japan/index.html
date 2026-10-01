@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Road to MEXT • japan.calq.it</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho:wght@400;700&family=BIZ+UDPMincho:wght@400;700&family=Cinzel:wght@600;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Shippori+Mincho:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/tailwind.min.css?v=20260930_v2116">
+  <link rel="stylesheet" href="/static/css/editorial.css?v=20260918_30">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (let reg of regs) {
+          if (reg.scope && !reg.scope.includes('/anki')) {
+            reg.unregister();
+          }
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(keys => {
+        keys.filter(k => k.startsWith('anki-pwa-v12')).forEach(k => caches.delete(k));
+      });
+    }
+  </script>
+</head>
+<body class="h-dvh h-[100svh] w-screen overflow-hidden flex flex-col antialiased
+  bg-[#FAF8F5] text-[#181A1B] select-none">
+
+  <!-- Zen Top Masthead (Compact 40px) -->
+  {% include "components/header_zen.html" %}
+
+  <!-- Inline Routine Guidance Dispatch Banner -->
+  <div id="routineGuidanceBanner"
+    class="hidden flex-shrink-0 mx-2 mt-1 p-2 bg-[#FAF8F5] border-l-4
+      border-l-[#181A1B] border border-black/10 text-xs font-mono
+      flex items-center justify-between transition-all z-20">
+    <div class="flex items-center gap-2">
+      <span id="guidanceSlotSeal"
+        class="px-1.5 py-0.5 bg-[#181A1B] text-white font-bold text-[10px] jp-font">壱</span>
+      <span id="guidanceSlotText" class="text-neutral-800 text-[11px]"></span>
+    </div>
+    <button onclick="document.getElementById('routineGuidanceBanner').classList.add('hidden')"
+      class="text-neutral-400 hover:text-black font-bold px-1.5 text-xs tap-press">✕</button>
+  </div>
+
+  <!-- Stage Viewport (4 Horizontal Stages with Native Momentum & Snap) -->
+  {% include "components/stage_viewport.html" %}
+
+  <!-- Tactile Bottom Dock (Thumb-Reach 54px with Real-Time Sliding Pill) -->
+  {% include "components/bottom_dock.html" %}
+
+  <!-- Scripts with Anti-Cache Versioning -->
+  <script src="/static/js/goalposts.js?v=20260930_v2116"></script>
+  <script src="/static/js/universities.js?v=20260930_v2116"></script>
+  <script type="module" src="/static/js/main.js?v=20260930_v2116"></script>
+</body>
+</html>

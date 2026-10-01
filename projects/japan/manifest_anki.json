@@ -1,0 +1,23 @@
+{
+  "name": "AnkiDroid Web • Japan Mastery",
+  "short_name": "AnkiWeb",
+  "start_url": "/anki",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#1E1E1E",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

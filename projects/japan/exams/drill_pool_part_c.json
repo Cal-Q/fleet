@@ -748,5 +748,155 @@
     },
     "answer": "A",
     "explanation": "L'autore definisce la cultura umanistica e lo studio interculturale come un'opportunità critica per relativizzare i propri pregiudizi e mettere in discussione le proprie premesse (自己の拠って立つ常識を相対化し、自明の理と信じていた前提を問い直す契機), come sintetizzato fedelmente dall'opzione A."
+  },
+  {
+    "id": "DRILL-C-51",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "突然の 豪雨により、登山隊は 計画の 中止を（ ）。",
+    "options": {
+      "A": "余儀なくされた",
+      "B": "余儀なくさせた",
+      "C": "見送らざるをえた",
+      "D": "禁じ得なかった"
+    },
+    "answer": "A",
+    "explanation": "「〜を余儀なくされる」は不本意ながらその事態に追い込まれる硬い書き言葉。"
+  },
+  {
+    "id": "DRILL-C-52",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Formal Written Discourse",
+    "question": "前年度の 反省点を（ ）、新たな 事業計画を 策定した。",
+    "options": {
+      "A": "踏まえて",
+      "B": "限って",
+      "C": "即して",
+      "D": "巡って"
+    },
+    "answer": "A",
+    "explanation": "「〜を踏まえて」は前提や根拠・経験を基礎として物事を行う表現。"
+  },
+  {
+    "id": "DRILL-C-53",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Formal Written Discourse",
+    "question": "新空港の 建設地を（ ）、激しい 議論が 交わされた。",
+    "options": {
+      "A": "めぐって",
+      "B": "沿って",
+      "C": "もって",
+      "D": "通じて"
+    },
+    "answer": "A",
+    "explanation": "「〜をめぐって」はある問題や対立点を中心にして争いや議論が起きる意。"
+  },
+  {
+    "id": "DRILL-C-54",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "彼の 成功は、長年の 地道な 努力の 結果に（ ）。",
+    "options": {
+      "A": "ほかならない",
+      "B": "相違ない",
+      "C": "決まっている",
+      "D": "及ばない"
+    },
+    "answer": "A",
+    "explanation": "「〜にほかならない」はまさにそれ以外のものではないと断定する表現。"
+  },
+  {
+    "id": "DRILL-C-55",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Formal Written Discourse",
+    "question": "大学 卒業を（ ）、長年 住み慣れた 街を 離れる ことになった。",
+    "options": {
+      "A": "機に",
+      "B": "折に",
+      "C": "際して",
+      "D": "皮切りに"
+    },
+    "answer": "A",
+    "explanation": "「〜を機に」は時期や契機として新しい行動や変化を起こす意。"
+  },
+  {
+    "id": "DRILL-C-56",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "証拠が 揃っている 以上、彼の 主張を 認め（ ）。",
+    "options": {
+      "A": "ざるを得ない",
+      "B": "かねない",
+      "C": "っこない",
+      "D": "かねる"
+    },
+    "answer": "A",
+    "explanation": "動詞未然形＋「ざるを得ない」は状況からしてそうする他に方法がない意。"
+  },
+  {
+    "id": "DRILL-C-57",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "公共の 場所で 他人に 迷惑を かける 行為は、無責任（ ）。",
+    "options": {
+      "A": "極まりない",
+      "B": "やまない",
+      "C": "たえない",
+      "D": "かぎりない"
+    },
+    "answer": "A",
+    "explanation": "な形容詞語幹＋「極まりない」はこの上なくその状態であるという感情的強調。"
+  },
+  {
+    "id": "DRILL-C-58",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Formal Written Discourse",
+    "question": "本日の 営業は、午後五時を（ ）終了と させていただきます。",
+    "options": {
+      "A": "もちまして",
+      "B": "よりまして",
+      "C": "そいまして",
+      "D": "かけまして"
+    },
+    "answer": "A",
+    "explanation": "「〜をもって」は日時や区切りを表す極めて改まった公的表現。"
+  },
+  {
+    "id": "DRILL-C-59",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "京都の 古い 町並みは、長い 歴史を 持つ 古都（ ）の 魅力である。",
+    "options": {
+      "A": "ならでは",
+      "B": "ならではに",
+      "C": "ならではの",
+      "D": "ならではで"
+    },
+    "answer": "C",
+    "explanation": "名詞＋「ならではの」＋名詞で、それだけに特有の素晴らしい価値を表す。"
+  },
+  {
+    "id": "DRILL-C-60",
+    "section": "C",
+    "level": "JLPT N2/N1",
+    "category": "Advanced Written Expressions",
+    "question": "アニメは 日本国内（ ）、世界中で 愛されて いる。",
+    "options": {
+      "A": "にとどまらず",
+      "B": "にかかわらず",
+      "C": "にもかかわらず",
+      "D": "を問わず"
+    },
+    "answer": "A",
+    "explanation": "「〜にとどまらず」はその範囲内だけにとどまらずより広い範囲に及ぶ意。"
   }
 ]

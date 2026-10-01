@@ -1,0 +1,128 @@
+<!-- tools/templates/components/tab_strategy.html — Zen Shōji Branching Tree (Zero-Scroll) -->
+<section id="section-strategy" class="h-full flex flex-col space-y-3 overflow-hidden hidden">
+  <!-- Asymmetrical Telemetry Strip (Anti-Clone) -->
+  <div class="flex-shrink-0 p-3 bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="w-6 h-6 flex items-center justify-center bg-[#181A1B] text-white text-xs font-bold jp-font">策</span>
+      <div>
+        <h2 class="text-sm font-bold font-editorial-serif uppercase text-[#181A1B]">Master Plan Strategico & Goalposts</h2>
+        <span class="text-[10px] font-mono text-neutral-400">Impegno: 4 ore/die • ~608 ore complessive • 24 Settimane</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+      <span class="px-2 py-1 bg-[#FDF1EF] border border-[#C23B22]/20 text-[#C23B22]">Bando: <b>5 Feb 2027 08:00</b></span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Prove: <b>~20 Feb 2027</b></span>
+      <span class="px-2 py-1 bg-[#EEF7F1] border border-[#264332]/20 text-[#264332]">Chiusura N4: <b>30 Set 2026</b></span>
+      <span class="px-2 py-1 bg-[#FAF8F5] border border-black/10 text-neutral-700">Win Prob: <b class="text-[#181A1B]">~48%</b></span>
+    </div>
+  </div>
+
+  <!-- Branching Information Tree: Trunk (Left) & Leaf Stage (Right) -->
+  <div class="flex-grow grid grid-cols-1 md:grid-cols-12 gap-3 overflow-hidden">
+    <!-- Branch Selector Trunk (Col 4) -->
+    <div class="md:col-span-4 flex flex-col justify-between space-y-2 overflow-hidden">
+      <div class="space-y-2">
+        <!-- Branch 1: 24 Weeks Roadmap (Kurogane) -->
+        <div id="branch_btn_strategy_roadmap" onclick="switchStrategyBranch('roadmap')" class="branch-kurogane p-3 border border-black/10 bg-white cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#181A1B] text-white text-[10px] font-bold jp-font">歩</span>
+              <strong class="text-[#181A1B]">24 SETTIMANE ROADMAP</strong>
+            </div>
+            <span class="text-[10px] font-mono text-neutral-500">W00 - W24</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Scadenze didattiche e milestone amministrative</div>
+        </div>
+
+        <!-- Branch 2: Sunday Audit (Aizome) -->
+        <div id="branch_btn_strategy_audit" onclick="switchStrategyBranch('audit')" class="branch-aizome p-3 border border-black/10 bg-[#FAF8F5] opacity-70 cursor-pointer transition tap-press space-y-1">
+          <div class="flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 flex items-center justify-center bg-[#1E2C3A] text-white text-[10px] font-bold jp-font">検</span>
+              <strong class="text-[#1E2C3A]">AUDIT DOMENICALE LIVE</strong>
+            </div>
+            <span class="text-[10px] font-mono text-[#264332] bg-[#EEF7F1] px-1.5 py-0.5 border border-[#264332]/20 font-bold">In Corso</span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-500 pt-0.5">Verifica avanzamento reale e telemetria settimanale</div>
+        </div>
+      </div>
+
+      <!-- Copy Report & Quick Box -->
+      <div class="p-3 bg-[#FAF8F5] border border-black/10 space-y-2 text-xs">
+        <button onclick="copySundayAuditReport()" class="w-full text-center py-1.5 border border-black bg-white hover:bg-[#181A1B] hover:text-white font-mono text-[11px] font-bold uppercase transition tap-press">
+          📋 Copia Report Audit Domenicale
+        </button>
+        <p class="text-[10px] text-neutral-500 font-mono leading-tight">
+          Audit domenicale verifica coerenza tra lezioni Bunpro completate, carte mature Anki e GPA Esse3.
+        </p>
+      </div>
+    </div>
+
+    <!-- Leaf Stage (Col 8) -->
+    <div class="md:col-span-8 flex flex-col bg-white border border-black/10 overflow-hidden">
+      <!-- Leaf 1: Roadmap Table -->
+      <div id="leaf_strategy_roadmap" class="flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span class="text-xs font-mono font-bold text-[#181A1B] uppercase">Tabella di Marcia 24 Settimane (Fino a Febbraio 2027)</span>
+          <div class="flex items-center gap-1 font-mono text-[10px]">
+            <button id="gpFilterAll" onclick="filterGoalposts('all')" class="px-2 py-0.5 border bg-[#181A1B] text-white border-black transition tap-press active:scale-95">Tutte</button>
+            <button id="gpFilterActive" onclick="filterGoalposts('active')" class="px-2 py-0.5 border bg-white text-[#181A1B] border-black/20 hover:border-black transition tap-press active:scale-95">Attive</button>
+          </div>
+        </div>
+        <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)]">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="border-b border-black/10 font-mono text-[10px] uppercase text-neutral-500 bg-[#FAF8F5] sticky top-0">
+                <th class="p-2">W</th>
+                <th class="p-2">Data</th>
+                <th class="p-2">Fase</th>
+                <th class="p-2">Target Bunpro</th>
+                <th class="p-2">Target Anki</th>
+                <th class="p-2">Milestone</th>
+                <th class="p-2 text-center">Stato</th>
+              </tr>
+            </thead>
+            <tbody id="goalpostsTableBody" class="divide-y divide-black/5 font-sans"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Leaf 2: Sunday Audit Telemetry -->
+      <div id="leaf_strategy_audit" class="hidden flex flex-col h-full overflow-hidden">
+        <div class="flex-shrink-0 p-3 border-b border-black/10 flex items-center justify-between bg-[#FAF8F5]">
+          <span id="gpCurrentTitle" class="text-xs font-mono font-bold text-[#181A1B] uppercase">Audit Settimanale</span>
+          <span id="gpActiveDate" class="text-[10px] font-mono text-neutral-500"></span>
+        </div>
+        <div class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-210px)] p-4 space-y-3 font-mono text-xs">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+            <div class="p-2.5 bg-[#FAF8F5] border border-black/10">
+              <span class="text-[10px] text-neutral-400 uppercase">Bunpro N4</span>
+              <div class="text-base font-bold text-[#181A1B]" id="gpN4Studied">—</div>
+              <div class="text-[10px] text-neutral-500" id="gpN4Remaining">—</div>
+            </div>
+            <div class="p-2.5 bg-[#FAF8F5] border border-black/10">
+              <span class="text-[10px] text-neutral-400 uppercase">Bunpro N3</span>
+              <div class="text-base font-bold text-[#181A1B]" id="gpN3Studied">—</div>
+              <div class="text-[10px] text-neutral-500" id="gpN3Pct">0%</div>
+            </div>
+            <div class="p-2.5 bg-[#FAF8F5] border border-black/10">
+              <span class="text-[10px] text-neutral-400 uppercase">Esse3 GPA</span>
+              <div class="text-base font-bold text-[#264332]" id="gpGpaVal">3.00 / 3.00</div>
+              <div class="text-[10px] text-[#264332]">Top Tier</div>
+            </div>
+            <div class="p-2.5 bg-[#FAF8F5] border border-black/10">
+              <span class="text-[10px] text-neutral-400 uppercase">CFU Area</span>
+              <div class="text-base font-bold text-[#181A1B]" id="gpCfuVal">8 CFU</div>
+              <div class="text-[10px] text-neutral-500">Target: 32 CFU</div>
+            </div>
+          </div>
+          <div class="p-3 bg-[#FAF8F5] border border-black/10 space-y-1">
+            <div id="gpNextTargetTitle" class="text-xs font-bold text-[#181A1B]">Target Prossima Domenica:</div>
+            <div id="gpNextTargetDetails" class="text-xs text-neutral-600 leading-relaxed font-sans">Caricamento target...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

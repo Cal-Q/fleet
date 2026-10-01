@@ -23,6 +23,7 @@ server {
         alias /opt/cardmarket/card-images/;
         expires 30d;
         add_header Cache-Control "public, max-age=2592000, immutable";
+        include snippets/security-headers.conf;
         access_log off;
     }
 

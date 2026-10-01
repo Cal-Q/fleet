@@ -1,0 +1,50 @@
+<!-- templates/components/tab_exams_analytics.html — Diagnostics & Analytics Leaf -->
+<!-- Strictly <= 200 lines invariant. -->
+<div
+  id="leaf_exam_analytics"
+  class="hidden flex-grow flex flex-col bg-white border border-black/10 overflow-hidden"
+>
+  <div
+    class="flex-shrink-0 p-3 border-b border-black/10
+           flex items-center justify-between bg-[#FAF8F5]"
+  >
+    <div class="flex items-center gap-3">
+      <span
+        class="text-xs md:text-sm font-mono font-bold text-[#181A1B] uppercase"
+      >Mappa Accuratezza & Punti Critici</span>
+      <div class="flex items-center gap-2 font-mono text-xs">
+        <span
+          class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700"
+        >Accuratezza: <b id="statOverallAccuracy" class="text-[#181A1B]">0.0%</b></span>
+        <span
+          class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700"
+        >Pacing: <b id="statAvgPacing" class="text-[#181A1B]">0.0s</b></span>
+        <span
+          class="px-2 py-0.5 bg-[#FAF8F5] border border-black/10 text-neutral-700"
+          id="statTotalSessions"
+        >0 sessioni</span>
+      </div>
+    </div>
+    <button
+      onclick="loadExamAnalytics()"
+      class="text-xs font-mono border border-black px-2.5 py-1
+             hover:bg-black hover:text-white transition tap-press active:scale-95 font-bold"
+    >Aggiorna</button>
+  </div>
+  <div
+    class="flex-grow overflow-y-auto overscroll-contain max-h-[calc(100vh-190px)] p-4 space-y-4"
+  >
+    <div class="space-y-2">
+      <span
+        class="text-xs font-bold font-mono text-[#181A1B] uppercase"
+      >Accuratezza per Categoria:</span>
+      <div id="categoryStatsList" class="space-y-2"></div>
+    </div>
+    <div class="pt-2 border-t border-black/10 space-y-2">
+      <span
+        class="text-xs font-bold font-mono text-[#181A1B] uppercase"
+      >Diagnostica Metodo & Focus:</span>
+      <div id="diagnosticsFocusBox"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<!-- tools/templates/components/anki_settings_logs.html — Diagnostic Logs & Settings Drawers -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<!-- Diagnostic Log Modal -->
+<div id="ankiLogModal" class="hidden absolute inset-0 bg-black/85 backdrop-blur-md z-50 flex flex-col p-3 sm:p-4 font-mono select-text">
+  <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2 text-xs">
+    <div class="flex items-center gap-2"><span class="text-base">📋</span><span class="font-bold text-white uppercase">Registro Diagnostico</span><span id="ankiLogCountBadge" class="px-1.5 py-0.2 rounded bg-white/10 text-neutral-400 text-[10px]">0 eventi</span></div>
+    <button onclick="window.ankiToggleLogViewer(false)" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm">✕</button>
+  </div>
+  <div class="flex flex-wrap items-center justify-between gap-2 py-2 border-b border-[#2C2C2C]">
+    <div class="flex items-center gap-1"><button id="btnLogFilter_ALL" onclick="window.ankiSetLogFilter('ALL')" class="px-2 py-1 rounded bg-[#2196F3] text-white text-[10px] font-bold">ALL</button><button id="btnLogFilter_DECK" onclick="window.ankiSetLogFilter('DECK')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">DECK</button><button id="btnLogFilter_CARD" onclick="window.ankiSetLogFilter('CARD')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">CARD</button><button id="btnLogFilter_NET" onclick="window.ankiSetLogFilter('NET')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">NET</button><button id="btnLogFilter_ERROR" onclick="window.ankiSetLogFilter('ERROR')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">ERROR</button></div>
+    <input type="text" oninput="window.ankiSetLogSearch(this.value)" placeholder="Cerca azione/ID..." class="px-2 py-1 bg-[#181818] border border-[#2C2C2C] rounded text-[11px] text-white focus:outline-none w-36 sm:w-48">
+  </div>
+  <div id="ankiLogListContainer" class="flex-grow overflow-y-auto overscroll-contain py-2 space-y-1.5 text-xs"></div>
+  <div class="flex items-center justify-between border-t border-[#2C2C2C] pt-2 gap-2 text-xs">
+    <div class="flex items-center gap-1.5"><button onclick="window.ankiCopyLogs()" class="px-2.5 py-1.5 rounded bg-[#2A2A2A] hover:bg-[#333333] text-neutral-200 text-[11px] font-bold transition tap-press border border-[#3C3C3C]">📋 Copia</button><button onclick="window.ankiForceSyncOutbox()" class="px-2.5 py-1.5 rounded bg-emerald-900/60 hover:bg-emerald-800 text-emerald-300 text-[11px] font-bold transition tap-press border border-emerald-700/60">⚡ Sincronizza Outbox</button><button onclick="window.ankiSendLogsAction()" class="px-2.5 py-1.5 rounded bg-[#2196F3] hover:bg-[#1E88E5] text-white text-[11px] font-bold transition tap-press shadow">🚀 Invia Log</button></div>
+    <button onclick="window.ankiClearLogsAction()" class="px-2 py-1.5 rounded bg-red-950/60 hover:bg-red-900/80 text-red-300 text-[11px] font-bold transition tap-press border border-red-800/60">🗑️</button>
+  </div>
+  <div id="ankiLogToast" class="hidden absolute top-4 inset-x-4 bg-emerald-700 text-white font-mono text-xs py-2 px-3 rounded-lg shadow-xl text-center z-50"></div>
+</div>
+
+<!-- Settings Drawer -->
+<div id="ankiSettingsPanel" class="hidden absolute top-0 inset-x-0 bg-[#1E1E1E] border-b border-[#2C2C2C] shadow-2xl p-4 z-40 max-w-md mx-auto rounded-b-xl space-y-3">
+  <div class="flex items-center justify-between text-xs font-mono border-b border-[#2C2C2C] pb-2">
+    <span class="font-bold text-white uppercase tracking-wider flex items-center gap-1.5"><span>⚙️</span> Impostazioni</span>
+    <div class="flex items-center gap-3"><button onclick="window.ankiResetSettings()" class="text-[11px] text-[#42A5F5] hover:underline tap-press">Reimposta</button><button onclick="window.ankiToggleSettings(false)" class="text-neutral-400 hover:text-white text-xs font-bold px-1.5 py-0.5 rounded hover:bg-white/10">✕</button></div>
+  </div>
+  <div class="space-y-3 font-mono text-xs">
+    <div><div class="flex justify-between mb-1 text-neutral-300"><span>Fronte:</span><span id="labelFrontFontSize" class="font-bold text-[#42A5F5]">38px</span></div><input type="range" id="sliderFrontFontSize" min="20" max="76" step="2" value="38" oninput="window.ankiSetFrontFontSize(this.value)" onchange="window.ankiSetFrontFontSize(this.value)" class="w-full accent-[#42A5F5] cursor-pointer"></div>
+    <div><div class="flex justify-between mb-1 text-neutral-300"><span>Retro:</span><span id="labelBackFontSize" class="font-bold text-[#66BB6A]">20px</span></div><input type="range" id="sliderBackFontSize" min="14" max="36" step="1" value="20" oninput="window.ankiSetBackFontSize(this.value)" onchange="window.ankiSetBackFontSize(this.value)" class="w-full accent-[#66BB6A] cursor-pointer"></div>
+    <div class="border-t border-[#2C2C2C] pt-2">
+      <div class="flex justify-between mb-1 text-neutral-300"><span>Furigana:</span><span id="labelFuriganaMode" class="font-bold text-[#42A5F5]">Non Noti</span></div>
+      <div class="grid grid-cols-3 gap-1.5 text-[11px]"><button type="button" onclick="window.ankiSetFuriganaMode('unstudied')" id="btnFuriganaUnstudied" class="py-1 px-1.5 rounded border border-[#42A5F5] bg-[#42A5F5]/20 text-white font-semibold text-center transition tap-press shadow-sm">Non Noti</button><button type="button" onclick="window.ankiSetFuriganaMode('always')" id="btnFuriganaAlways" class="py-1 px-1.5 rounded border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-400 font-semibold text-center transition tap-press hover:text-white">Tutti</button><button type="button" onclick="window.ankiSetFuriganaMode('hidden')" id="btnFuriganaHidden" class="py-1 px-1.5 rounded border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-400 font-semibold text-center transition tap-press hover:text-white">Nascosto</button></div>
+    </div>
+    <div class="border-t border-[#2C2C2C] pt-2 flex items-center justify-between">
+      <div><div class="text-neutral-300 font-bold">Aggiornamenti & OTA:</div><div id="ankiSettingsVersionText" class="text-[10px] text-neutral-500">Versione corrente: {{ version }}</div></div>
+      <button type="button" onclick="window.ankiOpenUpdateModal()" class="px-2.5 py-1.5 rounded bg-[#2196F3]/20 hover:bg-[#2196F3]/30 text-[#42A5F5] border border-[#2196F3]/40 font-bold text-[11px] transition tap-press shadow-sm">🔄 Cerca Nuove</button>
+    </div>
+  </div>
+</div>

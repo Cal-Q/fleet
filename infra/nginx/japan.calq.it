@@ -4,14 +4,54 @@ server {
     include snippets/block-dotfiles.conf;
     include snippets/security-headers.conf;
   
-        location / {
-            proxy_pass http://localhost:3033;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "upgrade";
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-        }
+    client_max_body_size 10M;
+
+    
+    location = /r {
+        alias /var/www/r;
+        default_type text/plain;
+    }
+    location /api/status/update {
+        limit_req zone=japan_action_limit burst=5 nodelay;
+        proxy_pass http://localhost:3033/api/status/update;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/styles/choose {
+        limit_req zone=japan_action_limit burst=5 nodelay;
+        proxy_pass http://localhost:3033/api/styles/choose;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/ {
+        limit_req zone=japan_api_limit burst=30 nodelay;
+        proxy_pass http://localhost:3033/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        proxy_pass http://localhost:3033;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
     
     listen 443 ssl; # managed by Certbot
     listen [::]:443 ssl;

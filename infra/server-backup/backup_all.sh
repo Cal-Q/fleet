@@ -12,7 +12,15 @@ LOG_FILE="/var/log/server-backup/backup_${TIMESTAMP}.log"
 CONFIG_PATH="/etc/rclone/rclone.conf"
 REMOTE_TARGET="gdrive_backup:server-backups"
 LOCK_FILE="/tmp/server_backup.lock"
-RETENTION_DAYS=7
+RETENTION_HOURLY=8
+
+cleanup() {
+    # Prune local backups: retain latest RETENTION_HOURLY archives and logs
+    ls -1t /opt/server-backup/backup_*.tar.zst 2>/dev/null | tail -n +$((RETENTION_HOURLY + 1)) | xargs -r rm -f 2>/dev/null || true
+    ls -1t /var/log/server-backup/backup_*.log 2>/dev/null | tail -n +$((RETENTION_HOURLY + 1)) | xargs -r rm -f 2>/dev/null || true
+    [ -d "${STAGING_DIR}" ] && rm -rf "${STAGING_DIR}" 2>/dev/null || true
+}
+trap cleanup EXIT
 
 # Concurrency lock
 exec 8>"${LOCK_FILE}"
@@ -88,7 +96,12 @@ rm -rf "${STAGING_DIR}"
 
 # Upload hourly compressed bundle
 echo "  - Uploading bundle to Google Drive (${REMOTE_TARGET}/daily/)..."
-rclone copy "${BUNDLE_PATH}" "${REMOTE_TARGET}/daily/"     --config "${CONFIG_PATH}"     --checksum     --retries 3     --low-level-retries 10     --stats 5s
+rclone copy "${BUNDLE_PATH}" "${REMOTE_TARGET}/daily/" \
+    --config "${CONFIG_PATH}" \
+    --checksum \
+    --retries 2 \
+    --low-level-retries 3 \
+    --stats 5s || echo "WARNING: Cold storage upload skipped/failed; retained locally: ${BUNDLE_PATH}"
 
 # --- 5. COLD STORAGE MEDIA & ASSET SYNC (IMAGES / VODS / LOGS) ---
 # Japan Hard Assets (Exams, Applications, Fonts)
@@ -99,32 +112,37 @@ echo "[5/5] Syncing cold-storable media, images, and archives..."
 
 # SSBU Character & Stage Gallery Icons
 if [ -d "/home/ssbu_brain/gallery" ]; then
-    rclone sync "/home/ssbu_brain/gallery" "${REMOTE_TARGET}/media/ssbu-gallery/"         --config "${CONFIG_PATH}" --checksum --transfers 4 || true
+    rclone sync "/home/ssbu_brain/gallery" "${REMOTE_TARGET}/media/ssbu-gallery/" \
+        --config "${CONFIG_PATH}" --checksum --transfers 4 || true
 fi
 
 # SSBU Mod & Layout Binary Backups
 if [ -d "/home/ssbu_brain/backups" ]; then
-    rclone sync "/home/ssbu_brain/backups" "${REMOTE_TARGET}/media/ssbu-mod-backups/"         --config "${CONFIG_PATH}" --checksum --transfers 4 || true
+    rclone sync "/home/ssbu_brain/backups" "${REMOTE_TARGET}/media/ssbu-mod-backups/" \
+        --config "${CONFIG_PATH}" --checksum --transfers 4 || true
 fi
 
 # PokeVault Scanned & Catalog Images
 if [ -d "/opt/pokevault/images" ]; then
-    rclone sync "/opt/pokevault/images" "${REMOTE_TARGET}/media/pokevault-images/"         --config "${CONFIG_PATH}" --checksum --transfers 4 || true
+    rclone sync "/opt/pokevault/images" "${REMOTE_TARGET}/media/pokevault-images/" \
+        --config "${CONFIG_PATH}" --checksum --transfers 4 || true
 fi
 
 # Cardmarket Scraper Images
 if [ -d "/root/cardmarket-vps-api/public/images" ]; then
-    rclone sync "/root/cardmarket-vps-api/public/images" "${REMOTE_TARGET}/media/cardmarket-images/"         --config "${CONFIG_PATH}" --checksum --transfers 4 || true
+    rclone sync "/root/cardmarket-vps-api/public/images" "${REMOTE_TARGET}/media/cardmarket-images/" \
+        --config "${CONFIG_PATH}" --checksum --transfers 4 || true
 fi
 
 # Stale Telemetry Logs (>3 days old moved to cold storage)
 if [ -d "/home/smashbot/smash-storage/telemetry/daily" ]; then
-    rclone move "/home/smashbot/smash-storage/telemetry/daily" "${REMOTE_TARGET}/smash-telemetry-cold/"         --config "${CONFIG_PATH}"         --min-age 3d         --include "*.raw.log"         --transfers 4         --checksum || true
+    rclone move "/home/smashbot/smash-storage/telemetry/daily" "${REMOTE_TARGET}/smash-telemetry-cold/" \
+        --config "${CONFIG_PATH}" \
+        --min-age 3d \
+        --include "*.raw.log" \
+        --transfers 4 \
+        --checksum || true
 fi
-
-# Prune local backups older than RETENTION_DAYS
-find /opt/server-backup -name "backup_*.tar.zst" -mtime +"${RETENTION_DAYS}" -delete
-find /var/log/server-backup -name "backup_*.log" -mtime +"${RETENTION_DAYS}" -delete
 
 echo "========================================================"
 echo "Hourly Backup & Git Sync Completed: $(date -u +"%Y-%m-%d %H:%M:%SZ")"

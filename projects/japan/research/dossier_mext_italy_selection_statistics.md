@@ -148,109 +148,14 @@ Show
 
 ### Evidence: How to Prepare for the MEXT Scholarship Interview (Embassy) - My Mext ... (mymextscholarship.com)
 
-**Source**: [https://mymextscholarship.com/how-to-prepare-for-the-mext-scholarship-interview-embassy/](https://mymextscholarship.com/how-to-prepare-for-the-mext-scholarship-interview-embassy/)
+### Evidence: MEXT Interview Experiences & Official Japanese Studies Call
+- **My MEXT Scholarship & LearnViaHub Guides**: [https://mymextscholarship.com/how-to-prepare-for-the-mext-scholarship-interview-embassy/](https://mymextscholarship.com/how-to-prepare-for-the-mext-scholarship-interview-embassy/) — Panel interview format (3-5 examiners, 15-30 min), assessment criteria (research clarity, adaptability, linguistic readiness).
+- **Ambasciata del Giappone in Italia (Japanese Studies Call)**: [https://www.it.emb-japan.go.jp/itpr_it/studio_JapaneseStudies.html](https://www.it.emb-japan.go.jp/itpr_it/studio_JapaneseStudies.html) — Borsa riservata a studenti universitari triennali di lingua/cultura giapponese con vincolo di rientro e completamento studi in Italia.
 
-```text
-# How to Prepare for the MEXT Scholarship Interview (Embassy) - My Mext Scholarship
-If you’re applying for theEmbassy-recommended MEXT scholarship, have passed the document screening and (maybe) thetests, your next step will be passing the embassy MEXT scholarship interview.
-I have another article about theUniversity-recommended MEXT Scholarship interview. While there are differences between the two, some questions overlap, so it is worth reviewing that one, too!
-In this guide, I will cover the kinds of questions you should expect, what the interviewers are looking for, and other preparation recommendations.
-## MEXT Scholarship Interview Process
-Depending on how your country does it, you may have the written exams and the interview on separate days, or they may be different events altogether. Check with the embassy where you are applying for details.
-### MEXT Scholarship Tests
-I have written a separate article about thetests that you will have to take during the MEXT Scholarship Primary Screening. Please see that article for more advice and links to sample tests.
-## Preparing for the MEXT Scholarship Interview
-First, you should understand the structure and conduct of the interview.
-```
-
-### Evidence: MEXT Interview 2026: Questions | Preparation Guide (www.learnviahub.com)
-
-**Source**: [https://www.learnviahub.com/mext-interview/](https://www.learnviahub.com/mext-interview/)
-
-```text
-# MEXT Interview 2026: Questions | Preparation Guide
-📅 Last UpdatedAugust 2026
-👨‍💻 Reviewed ByLearnViaHub Editorial Team
-⏱️ Reading TimeApproximately 12–15 minutes
-📚 Sources ReviewedOfficial MEXT publications, Japanese embassy and consulate interview procedures, university recommendation guidelines, and alumni-reported interview experiences for the 2026–2027 cycle.
-## Quick Answer
-What is the MEXT interview?It is a formal panel interview conducted by the Japanese embassy (Embassy Recommendation) or a Japanese university (University Recommendation) to assess your motivation, research clarity, academic suitability, and cultural adaptability before your application proceeds to MEXT final screening.
-Typical format for 2026–2027:Embassy interviews last 15–30 minutes with a panel of 3–5 officials and local academics. University Recommendation interviews often include a 10-minute research presentation followed by 10–15 minutes of Q&A with faculty members.
-Focus of this page:Complete question bank with sample answers, 7-day preparation plan, panel assessment criteria, and what happens after the interview. For the full application walkthrough, see ourMEXT Application Guide.
-## Why the MEXT 
-```
-
-### Evidence: Borse MEXT 2026: Japanese Studies Students (scadenza domande: 6 ... (www.it.emb-japan.go.jp)
-
-**Source**: [https://www.it.emb-japan.go.jp/itpr_it/studio_JapaneseStudies.html](https://www.it.emb-japan.go.jp/itpr_it/studio_JapaneseStudies.html)
-
-```text
-# Borse MEXT 2026: Japanese Studies Students (scadenza domande: 6 febbraio 2026 ore 8 a.m.) | Ambasciata del Giappone in Italia
-# Borse MEXT 2026: Japanese Studies Students (scadenza domande: 6 febbraio 2026 ore 8 a.m.)
-Riservata a studenti iscritti a corsi di laurea triennale, la cui principale materia sia lingua/cultura giapponese. Per presentare domanda è necessario non essere laureati, condizione che va mantenuta fino al termine della borsa di studio; è inoltre necessario dimostrare di aver studiato lingua o cultura giapponese all'università per almeno un anno. Possono concorrere inati tra il 2 aprile 1996 e il 1° aprile 2008.Per maggiori dettagli sui requisiti richiesti per presentare domanda, nonché sulla procedura di selezione, gli importi e i termini della borsa di studio, consultare leApplication Guidelines(vedi sotto).Attenzione:come indicato nelleApplication Guidelines(paragrafo 1. “Qualifications and conditions” (9) “Return and Continue to Study after the End of the Scholarship Period”),èimperativoche il borsista, al termine del periodo della borsa di studio, torni nel proprio Paese e completi il corso di laurea triennale presso l’universitàcui risultava iscritto al mom
-```
-
-### Evidence: Borse di studio MEXT: Undergraduate Students (dal 2027) per cittadini ... (www.it.emb-japan.go.jp)
-
-**Source**: [https://www.it.emb-japan.go.jp/itpr_it/studio_UndergraduateStudents.html](https://www.it.emb-japan.go.jp/itpr_it/studio_UndergraduateStudents.html)
-
-```text
-# Borse di studio MEXT: Undergraduate Students (dal 2027) per cittadini italiani - scadenza domande: 25/05/2026 | Ambasciata del Giappone in Italia
-# Borse di studio MEXT: Undergraduate Students (dal 2027) per cittadini italiani - scadenza domande: 25/05/2026
-- Direct Placement Preference Form: è facoltativo (cfr.Application Guidelines, "4. Direct Placement", pagg. 2-3). L’elenco delle università giapponesi, con relativi codici, sarà reso disponibile successivamente. In caso non si abbia la lista in tempo utile per lo scadere della domanda, si consiglia di tralasciare l'invio di questo modulo, ma di indicarre "Yes" nella colonna "Direct Placement" del file excel "2027 Gakubu Basic Information Sheet".
-- Academic Transcript: servono lepagelle di tutti i 5 anni di scuola superiore (se si frequenta il 5° anno di scuola superiore e non si ha la pagella, si potrà inviare solo le pagelle di cui si dispone al momento di presentare domanda, integrando successivamente). Possono essere una versione digitale, se recano un timbro digitale o simili; oppure si potrà produrre una copia conforme all’originale (per l’elenco degli esami universitari, andrà bene un certificato emesso dell’università, 
-```
-
-### Evidence: Japanese Government (MEXT) Scholarship - Study in Japan Official Website (www.studyinjapan.go.jp)
-
-**Source**: [https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/](https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/)
-
-```text
-# Japanese Government (MEXT) Scholarship｜Study in Japan Official Website
-Planning to Study in Japan
-# Scholarships
-- HOME
-- Planning to Study in Japan
-- Scholarships
-- Japanese Government (MEXT) Scholarship
-Table of contents
-- TypesTypes and Their StatusEligibilityExaminations Required for Embassy Recommendation
-- Types and Their Status
-- Eligibility
-- Examinations Required for Embassy Recommendation
-- Application Process1. Embassy recommendation2. University recommendation
-- 1. Embassy recommendation
-- 2. University recommendation
-- Japanese Government (MEXT) Scholarship Applicant Qualifying Examinations - Subject Test Questions
-## Japanese Government (MEXT) Scholarship
-## Types
-As seen in the chart below, there are seven types of the Japanese Government (Monbukagakusho) Scholarship program. They are Research students, Teacher training students, Undergraduate students, Japanese studies students, college of technology students, Specialized training college students, and Young Leaders Program (YLP) students.Those who wish to study abroad are required to apply in one of two ways: embassy recommendation or university recommendation. Please see the application selection process for det
-```
-
-### Evidence: The Japanese Ministery of Science - MONBUKAGAKUSHO-Grant of the ... (www.european-funding-guide.eu)
-
-**Source**: [https://www.european-funding-guide.eu/scholarship/monbukagakusho-grant-japanese-government-students-japanese-language-culture](https://www.european-funding-guide.eu/scholarship/monbukagakusho-grant-japanese-government-students-japanese-language-culture)
-
-```text
-# The Japanese Ministery of Science - MONBUKAGAKUSHO-Grant of the Japanese Government for Students of the Japanese Language and Culture | EFG - European Funding Guide
-## You are here
-Next deadline
-varies by country/embassy
-## Quick facts
-Institution
-The Japanese Ministery of Science
-Program
-MONBUKAGAKUSHO-Grant of the Japanese Government for Students of the Japanese Language and Culture
-Amount
-€850
-Last verified: 7 July 2026
-### About this scholarship
-## What You Get
-This scholarship from Japan's Ministry of Education (MEXT) gives you¥117,000 per monthto study Japanese language and culture at a designated Japanese university forone academic year(within 12 months). On top of the monthly stipend, the programme covers your full tuition fees and provides a return economy-class flight from the nearest international airport in your home country to Japan. A regional supplement of ¥2,000–¥3,000 per month may also apply depending on your placement.
-At the end of the programme you receive a certificate of completion. This is not a degree programme — no academic qualification is awarded.
-## Who Can Apply
-- Nationality:You hold citizenship of a country that has diplomatic relations with Japan.
-```
+### Evidence: Italian Embassy MEXT & Guidelines Overview
+- **Ambasciata del Giappone in Italia**: [https://www.it.emb-japan.go.jp/itpr_it/studio_UndergraduateStudents.html](https://www.it.emb-japan.go.jp/itpr_it/studio_UndergraduateStudents.html) — Requisiti formali, transcript accademici e tempistiche di candidatura per l'Italia.
+- **Study in Japan (MEXT Portal)**: [https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/](https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/) — Tipologie di borsa, standard di ammissibilità ed esami scritti/orali di qualificazione.
+- **European Funding Guide**: [https://www.european-funding-guide.eu/scholarship/monbukagakusho-grant-japanese-government-students-japanese-language-culture](https://www.european-funding-guide.eu/scholarship/monbukagakusho-grant-japanese-government-students-japanese-language-culture) — Dettaglio coperture finanziarie (¥117,000/mese, volo A/R e tasse universitarie).
 
 ## 4. Primary Sources & Scraped Evidence Catalog
 

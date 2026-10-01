@@ -1,0 +1,94 @@
+<!-- tools/templates/components/anki_deck_views.html — Deck Picker & Deck Overview Stages -->
+<!-- Strictly <= 200 lines, <= 100 cols invariant. -->
+
+<!-- 1. DECK PICKER -->
+<div id="ankiDeckListView"
+  class="h-full flex flex-col max-w-2xl mx-auto w-full overflow-y-auto overscroll-contain
+  p-2 sm:p-4 space-y-2">
+  <!-- Real-time Offline Sync Progress Bar -->
+  <div id="ankiSyncProgressBarContainer"
+    class="hidden bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-2.5 space-y-1.5 shadow-md">
+    <div class="flex items-center justify-between text-[11px] font-mono">
+      <span id="ankiSyncProgressStatus" class="text-neutral-300 flex items-center gap-1.5">
+        <span class="animate-spin inline-block">🔄</span> Sincronizzazione in corso...
+      </span>
+      <span id="ankiSyncProgressPercent" class="text-[#42A5F5] font-bold">0%</span>
+    </div>
+    <div class="w-full bg-[#121212] rounded-full h-1.5 overflow-hidden border border-white/5">
+      <div id="ankiSyncProgressBar"
+        class="bg-gradient-to-r from-[#2196F3] to-[#42A5F5] h-full rounded-full
+        transition-all duration-200" style="width: 0%;"></div>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between px-2.5 py-1.5 font-mono text-[11px]
+    text-neutral-400 bg-[#1A1A1A] border border-[#2A2A2A] rounded-t-xl select-none">
+    <div class="flex items-center gap-2">
+      <span class="font-bold text-neutral-300">MAZZI</span>
+      <button type="button" onclick="window.ankiToggleAllCollapse(false)"
+        class="text-[10px] text-[#42A5F5] hover:underline tap-press">Espandi</button>
+      <span class="text-neutral-600">|</span>
+      <button type="button" onclick="window.ankiToggleAllCollapse(true)"
+        class="text-[10px] text-neutral-400 hover:text-white tap-press">Comprimi</button>
+    </div>
+    <div class="flex items-center font-mono text-[10px] sm:text-[11px] font-bold">
+      <span class="w-11 sm:w-14 text-right text-[#42A5F5]">Nuove</span>
+      <span class="w-11 sm:w-14 text-right text-[#EF5350]">Appr.</span>
+      <span class="w-11 sm:w-14 text-right text-[#66BB6A]">Ripasso</span>
+      <span class="w-7 sm:w-9"></span>
+    </div>
+  </div>
+  <div id="ankiDecksContainer"
+    class="bg-[#161616] border border-t-0 border-[#2A2A2A] rounded-b-xl shadow-lg
+    divide-y divide-[#222222] overflow-hidden">
+    <div class="p-8 text-center text-neutral-400 font-mono text-xs">
+      <span class="animate-spin inline-block mr-2">⏳</span> Caricamento mazzi Japan Mastery...
+    </div>
+  </div>
+  <div class="text-center text-[10px] font-mono text-neutral-500 pt-2 pb-6
+    flex items-center justify-center gap-2">
+    <button type="button" id="ankiFooterVersionText" onclick="window.ankiOpenUpdateModal()"
+      class="hover:text-neutral-300 tap-press underline">
+      Japan Mastery Web {{ version or '' }}
+    </button>
+    <span>•</span>
+    <button onclick="window.ankiForceSyncDecks()"
+      class="text-[#42A5F5] underline hover:text-white tap-press">
+      Forza Sincronizzazione
+    </button>
+  </div>
+</div>
+
+<!-- 2. DECK OVERVIEW -->
+<div id="ankiDeckOverviewView"
+  class="hidden h-full flex flex-col items-center justify-center p-4 max-w-md mx-auto
+  w-full space-y-6">
+  <div class="text-center space-y-1">
+    <h2 id="ankiOverviewDeckName" class="text-lg sm:text-xl font-bold text-white tracking-wide">
+      Mazzo
+    </h2>
+    <p class="text-xs text-neutral-400 font-mono">Riepilogo scadenze odierne</p>
+  </div>
+  <div class="grid grid-cols-3 gap-3 w-full bg-[#1E1E1E] border border-[#2C2C2C]
+    rounded-lg p-4 text-center shadow-lg">
+    <div class="space-y-1 border-r border-[#2C2C2C]">
+      <div class="text-[10px] text-neutral-400 font-mono uppercase">Nuove</div>
+      <div id="ankiOverviewNew" class="text-xl font-bold text-[#42A5F5]">0</div>
+    </div>
+    <div class="space-y-1 border-r border-[#2C2C2C]">
+      <div class="text-[10px] text-neutral-400 font-mono uppercase">Apprend.</div>
+      <div id="ankiOverviewLrn" class="text-xl font-bold text-[#EF5350]">0</div>
+    </div>
+    <div class="space-y-1">
+      <div class="text-[10px] text-neutral-400 font-mono uppercase">Ripassi</div>
+      <div id="ankiOverviewRev" class="text-xl font-bold text-[#66BB6A]">0</div>
+    </div>
+  </div>
+  <button id="ankiBtnStartStudy" onclick="window.ankiLaunchStudySession()"
+    class="w-full py-3.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-sm
+    uppercase tracking-wider rounded-lg shadow-lg transition tap-press active:scale-95
+    flex items-center justify-center gap-2">
+    <span>Studia Adesso</span>
+    <span class="text-xs opacity-70">➔</span>
+  </button>
+</div>

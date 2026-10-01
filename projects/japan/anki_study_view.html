@@ -1,0 +1,175 @@
+<!-- tools/templates/components/anki_study_view.html — Tactile Swipe Stack Study Stage -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<div
+  id="ankiStudyView"
+  class="hidden h-full flex flex-col justify-between max-w-2xl mx-auto w-full p-2 sm:p-4
+    select-none relative"
+>
+  <div
+    id="ankiTimerContainer"
+    onclick="window.ankiOpenCardTimerModal()"
+    class="flex-shrink-0 w-full bg-[#1A1A1A] border border-[#2C2C2C] hover:border-neutral-500
+      rounded-xl px-3 py-1.5 flex items-center gap-2.5 shadow-inner font-mono text-xs z-20
+      cursor-pointer tap-press transition"
+    title="Configura Timer Carta"
+  >
+    <span id="ankiTimerIcon" class="text-neutral-400 flex-shrink-0 text-xs">⏱️</span>
+    <div
+      class="flex-grow bg-[#282828] h-2 rounded-full overflow-hidden p-0.5 border border-black/40"
+    >
+      <div
+        id="ankiTimerProgress"
+        class="h-full w-full rounded-full bg-[#66BB6A] origin-left will-change-transform"
+        style="transform: scaleX(1); transform-origin: left center;"
+      ></div>
+    </div>
+    <span id="ankiTimerText" class="font-bold text-white w-12 text-right flex-shrink-0 text-[11px]">
+      15s
+    </span>
+  </div>
+  <div class="relative flex-grow my-2 w-full flex items-center justify-center overflow-hidden">
+    <div
+      id="ankiCardContainer"
+      class="absolute inset-0 bg-[#1E1E1E] border border-[#2C2C2C] rounded-xl shadow-2xl p-3
+        sm:p-5 flex flex-col justify-between items-center text-center overflow-hidden z-10
+        will-change-transform"
+    >
+      <div
+        id="ankiCardTintOverlay"
+        class="absolute inset-0 rounded-xl pointer-events-none opacity-0 z-0"
+      ></div>
+      <div
+        id="ankiBadgeWrong"
+        class="stamp-badge absolute top-4 right-4 border-2 border-[#EF5350] bg-[#2D1414]/90
+          text-[#EF5350] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase rotate-12
+          shadow-lg z-30"
+      >✕ WRONG</div>
+      <div
+        id="ankiBadgeCorrect"
+        class="stamp-badge absolute top-4 left-4 border-2 border-[#66BB6A] bg-[#142D1C]/90
+          text-[#66BB6A] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase -rotate-12
+          shadow-lg z-30"
+      >✓ CORRECT</div>
+      <div
+        id="ankiBadgeUndo"
+        class="stamp-badge absolute top-4 inset-x-0 mx-auto w-fit border-2 border-[#42A5F5]
+          bg-[#0D253A]/95 text-[#42A5F5] px-3.5 py-1 rounded-lg font-mono font-bold text-xs
+          uppercase shadow-xl z-30"
+      >↺ ANNULLA / UNDO</div>
+      <div
+        id="ankiBadgeResetTimer"
+        class="stamp-badge absolute top-4 inset-x-0 mx-auto w-fit border-2 border-[#FFA726]
+          bg-[#2D200E]/95 text-[#FFA726] px-3.5 py-1 rounded-lg font-mono font-bold text-xs
+          uppercase shadow-xl z-30"
+      >⏱️ RESET TIMER</div>
+      <div
+        id="ankiBadgeAltRule"
+        class="stamp-badge absolute bottom-6 inset-x-0 mx-auto w-fit border-2 border-[#F59E0B]
+          bg-[#2D1E0A]/95 text-[#FBBF24] px-3.5 py-1 rounded-lg font-mono font-bold text-xs
+          uppercase shadow-xl z-30"
+      >🎯 REGOLA DIVERSA</div>
+      
+      <!-- Top Zone: Front & Prompt -->
+      <div
+        id="ankiCardTopZone"
+        class="relative z-10 w-full flex-shrink-0 flex flex-col items-center justify-center pt-2"
+      >
+        <div id="ankiCardFront" class="font-bold text-white jp-font tracking-wide leading-tight">
+        </div>
+        <div id="ankiFlipPrompt" class="pt-3 text-neutral-500 font-mono text-xs animate-pulse">
+          Tocca la carta per mostrare la risposta
+        </div>
+      </div>
+
+      <!-- Middle Zone: Scrollable Back utilizing available card height -->
+      <div
+        id="ankiCardBack"
+        class="relative z-10 hidden w-full flex-grow my-2 pt-2 border-t border-[#2C2C2C] flex
+          flex-col items-center overflow-hidden animate-info-fade min-h-0"
+        style="touch-action: pan-y;"
+      >
+        <div
+          id="ankiCardReading"
+          class="font-bold text-white jp-font leading-snug flex-shrink-0 mb-2"
+        ></div>
+        <div
+          id="ankiCardMeaningScroll"
+          class="w-full flex-grow overflow-y-auto overscroll-contain px-3.5 py-2.5 space-y-2
+            text-left rounded-xl bg-[#141414] border border-[#282828] select-text shadow-inner
+            min-h-0"
+          style="touch-action: pan-y; -webkit-overflow-scrolling: touch;"
+        >
+          <div
+            id="ankiCardMeaning"
+            class="font-sans font-medium text-white text-sm sm:text-base leading-relaxed"
+          ></div>
+          <div
+            id="ankiCardNotes"
+            class="text-xs font-mono text-neutral-300 pt-2 border-t border-[#2C2C2C]/60"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Bottom Zone: Dedicated Drag & Swipe Zone (2x Larger Tactile Area: 144px) -->
+      <div
+        id="ankiCardSwipeZone"
+        class="relative z-10 w-full flex-shrink-0 min-h-[144px] py-6 px-4 flex flex-col
+          items-center justify-center cursor-grab active:cursor-grabbing border-t border-[#2C2C2C]
+          bg-[#171717]/90 hover:bg-[#1C1C1C] rounded-b-xl mt-auto select-none touch-none
+          transition-colors"
+      >
+        <div class="w-20 h-2.5 bg-[#444444] rounded-full mb-3 shadow-inner"></div>
+        <div class="flex items-center justify-center gap-4 text-xs font-mono text-neutral-400">
+          <span class="text-[#EF5350] font-bold">← WRONG</span>
+          <span class="text-neutral-500 font-semibold text-[11px]">↔ SWIPE ↔</span>
+          <span class="text-[#66BB6A] font-bold">CORRECT →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="ankiSwipeHintsBar"
+    class="invisible flex-shrink-0 flex items-center justify-between text-[10px] sm:text-[11px]
+      font-mono text-neutral-400 px-3 py-1 h-6"
+  >
+    <span class="flex items-center gap-1 text-[#EF5350]">← WRONG</span>
+    <span class="flex items-center gap-1 text-[#FFA726]">↑ RESET</span>
+    <span class="flex items-center gap-1 text-[#42A5F5]">↓ UNDO</span>
+    <span class="flex items-center gap-1 text-[#66BB6A]">CORRECT →</span>
+  </div>
+  <div class="flex-shrink-0 pt-1 h-[72px] sm:h-[76px] relative">
+    <button
+      id="ankiBtnShowAnswer"
+      onclick="window.ankiFlipCard()"
+      class="w-full h-full bg-[#2A2A2A] hover:bg-[#333333] text-white font-mono text-xs
+        sm:text-sm font-bold uppercase tracking-wider rounded-xl transition tap-press
+        active:scale-[0.98] flex items-center justify-center gap-2 border border-[#3C3C3C]
+        shadow-md"
+    >
+      <span>Mostra Risposta</span>
+      <kbd class="hidden sm:inline px-1 py-0.2 bg-white/10 text-[10px] rounded">Spazio</kbd>
+    </button>
+    <div id="ankiAnswerButtonGroup" class="hidden grid grid-cols-2 gap-3 font-mono h-full">
+      <button
+        onclick="window.ankiTriggerSwipe('left', 1)"
+        class="anki-btn-wrong h-full py-1.5 px-3 text-center rounded-xl transition tap-press flex
+          flex-col items-center justify-center shadow-lg active:scale-[0.98]"
+      >
+        <span id="ankiIvlWrong" class="text-[11px] font-bold opacity-80">&lt;10m</span>
+        <span class="text-sm sm:text-base font-bold uppercase tracking-wide mt-0.5">✕ WRONG</span>
+        <span class="text-[9px] opacity-60 mt-0.5">1 / ← Swipe</span>
+      </button>
+      <button
+        onclick="window.ankiTriggerSwipe('right', 3)"
+        class="anki-btn-correct h-full py-1.5 px-3 text-center rounded-xl transition tap-press flex
+          flex-col items-center justify-center shadow-lg font-bold active:scale-[0.98]"
+      >
+        <span id="ankiIvlCorrect" class="text-[11px] font-bold opacity-80">3g</span>
+        <span class="text-sm sm:text-base font-bold uppercase tracking-wide mt-0.5">✓ CORRECT</span>
+        <span class="text-[9px] opacity-60 mt-0.5">2 / → Swipe</span>
+      </button>
+    </div>
+  </div>
+  <div class="h-16 sm:h-4 w-full flex-shrink-0 pointer-events-none"></div>
+</div>

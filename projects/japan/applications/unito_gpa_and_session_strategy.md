@@ -42,8 +42,9 @@ Se un candidato prepara 3 esami universitari pesanti a gennaio, disperde l'energ
    - Se un esame presenta incertezza o rischio di voto basso ($\le 24$), **rifiutare il voto e rimandarlo alla sessione estiva (Giugno 2027)**.
 2. **Finestra di Isolamento (15 Gennaio – 20 Febbraio 2027)**:
    - Zero appelli universitari. Il 100% della concentrazione mentale deve essere dedicato a:
-     - Ripasso SRS ed esami mock integrali cronometrati (Slot 4).
-     - Prove di colloquio orale in Keigo (Slot 3).
+     - Esami mock integrali e drill mirati cronometrati (Slot 1).
+     - Prove di colloquio orale in Keigo e sintassi (Slot 2).
+     - Ripasso intensivo SRS e mantenimento vocaboli (Slot 3).
      - Tenuta psicofisica e ritmo circadiano.
 3. **Sessione Estiva 2027 (Recupero CFU)**:
    - Una volta superata la selezione di febbraio e ottenuta la raccomandazione dell'Ambasciata, la sessione estiva (Giugno/Luglio) consentirà di recuperare i CFU rimanenti prima della partenza per il Giappone ad autunno 2027.

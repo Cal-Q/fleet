@@ -4,16 +4,59 @@
 import { initCountdown } from './modules/navigation.js';
 import { initDock, setActiveStage, getActiveStage } from './modules/dock.js';
 import { initViewport } from './modules/viewport.js';
-import { loadStudyStatus, searchManualVocab, switchStudyBranch, syncBatchGroup, toggleDrawer } from './modules/study.js';
-import { loadCareer, loadDossierStatus, updateDocStatus, switchDossierBranch } from './modules/dossier.js';
-import { loadBunkiProfile, reviewLeechAction, verifySlot1WithAnkiWeb, syncSlot1UI } from './modules/bunki.js';
-import { loadExam, resetExam, loadExamAnalytics, submitExam, switchExamBranch, selectExamOption, saveQuestionNote, getUserAnswer } from './modules/exams.js';
-import { loadInterview, speakJapanese, toggleInlineModel } from './modules/interview.js';
+import {
+  loadStudyStatus,
+  searchManualVocab,
+  switchStudyBranch,
+  syncBatchGroup,
+  toggleDrawer,
+} from './modules/study.js';
+import {
+  loadCareer,
+  loadDossierStatus,
+  updateDocStatus,
+  switchDossierBranch,
+} from './modules/dossier.js';
+import {
+  loadExam,
+  loadNextBatch,
+  resetExam,
+  loadExamAnalytics,
+  submitExam,
+  switchExamBranch,
+  selectExamOption,
+  saveQuestionNote,
+  getUserAnswer,
+  goToQuestion,
+  nextQuestion,
+  prevQuestion,
+  toggleCurrentNote,
+  confirmResetExamTimer,
+  toggleMissingPartsMode,
+  setConfidenceLevel,
+  onCharClick,
+} from './modules/exams.js';
+import {
+  loadInterview,
+  speakJapanese,
+  toggleInlineModel,
+} from './modules/interview.js';
 import { loadResearchDossiers, previewDossier } from './modules/research.js';
-import { initDailyRoutine, launchRoutineSlot, markRoutineSlotDone, unmarkRoutineSlot, toggleRoutineSlot, updateRoutineProgress } from './modules/routine.js';
+import {
+  initDailyRoutine,
+  launchRoutineSlot,
+  markRoutineSlotDone,
+  unmarkRoutineSlot,
+  toggleRoutineSlot,
+  updateRoutineProgress,
+} from './modules/routine.js';
 import { syncCurriculumPlan } from './modules/routine_curriculum.js';
 import { initDragScroll } from './modules/drag_scroll.js';
-import { toggleAmbientExamAudio, stopAmbientExamAudio } from './modules/exam_audio.js';
+import {
+  toggleAmbientExamAudio,
+  stopAmbientExamAudio,
+} from './modules/exam_audio.js';
+import { initSrsPlayer } from './modules/srs_player.js';
 
 // Sinoira Gang Navigation globals
 window.setActiveStage = setActiveStage;
@@ -51,9 +94,6 @@ window.onStageActivated = (stageKey) => {
     initDailyRoutine();
   } else if (stageKey === 'study') {
     loadStudyStatus();
-  } else if (stageKey === 'bunki') {
-    loadBunkiProfile();
-    syncSlot1UI();
   } else if (stageKey === 'exams') {
     loadExamAnalytics();
     loadExam('A');
@@ -72,13 +112,19 @@ window.toggleDrawer = toggleDrawer;
 window.syncBatchGroup = syncBatchGroup;
 window.searchManualVocab = searchManualVocab;
 window.updateDocStatus = updateDocStatus;
-window.reviewLeechAction = reviewLeechAction;
-window.verifySlot1WithAnkiWeb = verifySlot1WithAnkiWeb;
-window.syncSlot1UI = syncSlot1UI;
 window.loadExam = loadExam;
+window.loadNextBatch = loadNextBatch;
 window.resetExam = resetExam;
+window.confirmResetExamTimer = confirmResetExamTimer;
+window.toggleMissingPartsMode = toggleMissingPartsMode;
+window.setConfidenceLevel = setConfidenceLevel;
+window.onCharClick = onCharClick;
 window.submitExam = submitExam;
 window.selectExamOption = selectExamOption;
+window.goToQuestion = goToQuestion;
+window.nextQuestion = nextQuestion;
+window.prevQuestion = prevQuestion;
+window.toggleCurrentNote = toggleCurrentNote;
 window.saveQuestionNote = saveQuestionNote;
 window.getUserAnswer = getUserAnswer;
 window.loadExamAnalytics = loadExamAnalytics;
@@ -105,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDailyRoutine();
   syncCurriculumPlan();
   loadStudyStatus();
-  syncSlot1UI();
+  initSrsPlayer();
 });
 
 document.addEventListener('visibilitychange', () => {

@@ -25,6 +25,8 @@ EXAM_HIST_FILE = os.path.join(EXAMS_DIR, "history.json")
 class ExamSubmitRequest(BaseModel):
     answers: dict  # {question_id: selected_option}
     comments: Optional[dict] = None  # {question_id: comment_text}
+    confidence_levels: Optional[dict] = None  # {question_id: 1..9}
+    unknown_characters: Optional[dict] = None  # {question_id: [chars...]}
     time_spent_seconds: int
     mode: Optional[str] = "practice"
 
@@ -36,9 +38,13 @@ class NoteSaveRequest(BaseModel):
 
 
 @router.get("/api/exams/questions")
-def get_exam_questions(section: Optional[str] = None, category: Optional[str] = None):
-    """Returns questions filtered by section and category, dynamically rotated and enriched with saved notes."""
-    return get_questions_for_session(section=section, category=category)
+def get_exam_questions(
+    section: Optional[str] = None,
+    category: Optional[str] = None,
+    batch: int = 0
+):
+    """Returns questions filtered by section and category, rotated and enriched with saved notes."""
+    return get_questions_for_session(section=section, category=category, batch=batch)
 
 
 @router.get("/api/exams/notes")
@@ -60,9 +66,16 @@ def submit_exam(req: ExamSubmitRequest):
 
     total = len(req.answers)
     score = 0
-    sec_breakdown = {"A": {"correct": 0, "total": 0}, "B": {"correct": 0, "total": 0}, "C": {"correct": 0, "total": 0}}
+    sec_breakdown = {
+        "A": {"correct": 0, "total": 0},
+        "B": {"correct": 0, "total": 0},
+        "C": {"correct": 0, "total": 0},
+    }
     cat_breakdown = {}
     details = []
+
+    conf_map = req.confidence_levels or {}
+    unknown_map = req.unknown_characters or {}
 
     for qid, user_ans in req.answers.items():
         if qid not in q_map:
@@ -71,7 +84,12 @@ def submit_exam(req: ExamSubmitRequest):
         sec = q.get("section", "A")
         cat = q.get("category", "General")
         correct_ans = q.get("answer", "")
-        is_correct = (user_ans.strip().upper() == correct_ans.strip().upper())
+        is_dont_know = user_ans == "DONT_KNOW"
+        is_correct = (
+            False
+            if is_dont_know
+            else (user_ans.strip().upper() == correct_ans.strip().upper())
+        )
 
         if is_correct:
             score += 1
@@ -90,12 +108,15 @@ def submit_exam(req: ExamSubmitRequest):
             "question": q["question"],
             "category": cat,
             "level": q.get("level", ""),
-            "user_answer": user_ans,
+            "user_answer": "NON_LO_SO" if is_dont_know else user_ans,
             "correct_answer": correct_ans,
             "is_correct": is_correct,
+            "is_dont_know": is_dont_know,
+            "confidence": conf_map.get(qid, None),
+            "unknown_characters": unknown_map.get(qid, []),
             "explanation": q.get("explanation", ""),
             "section": sec,
-            "user_comment": comment_text
+            "user_comment": comment_text,
         })
 
     if req.comments or req.answers:

@@ -57,6 +57,8 @@ def record_session(
         except Exception:
             pass
 
+    dont_know_count = sum(1 for d in details if d.get("is_dont_know"))
+    unknown_chars_count = sum(len(d.get("unknown_characters", [])) for d in details)
     summary_entry = {
         "session_id": session_id,
         "timestamp": timestamp,
@@ -65,7 +67,9 @@ def record_session(
         "percentage": pct,
         "time_seconds": time_spent_seconds,
         "breakdown": section_breakdown,
-        "category_breakdown": category_breakdown
+        "category_breakdown": category_breakdown,
+        "dont_know_count": dont_know_count,
+        "unknown_chars_count": unknown_chars_count,
     }
     hist["sessions"].append(summary_entry)
     with open(HIST_FILE, "w", encoding="utf-8") as f:
@@ -97,7 +101,11 @@ def get_analytics() -> Dict[str, Any]:
     total_correct = 0
     total_time_seconds = 0
     cat_stats: Dict[str, Dict[str, int]] = {}
-    sec_stats: Dict[str, Dict[str, int]] = {"A": {"correct": 0, "total": 0}, "B": {"correct": 0, "total": 0}, "C": {"correct": 0, "total": 0}}
+    sec_stats: Dict[str, Dict[str, int]] = {
+        "A": {"correct": 0, "total": 0},
+        "B": {"correct": 0, "total": 0},
+        "C": {"correct": 0, "total": 0},
+    }
     recent_sessions = []
 
     with open(LOG_FILE, "r", encoding="utf-8") as f:

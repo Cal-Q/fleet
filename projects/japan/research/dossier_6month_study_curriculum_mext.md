@@ -132,28 +132,9 @@ You are actually able to express two actions at the same time by using what you 
 | 見る: to look at +上げる: to rai
 ```
 
-### Evidence: Difficult Japanese Grammar Explained (Particles, Verbs, Keigo) (migaku.com)
-
+### Evidence: Difficult Japanese Grammar (Particles, Verbs, Keigo)
 **Source**: [https://migaku.com/blog/japanese/difficult-japanese-grammar](https://migaku.com/blog/japanese/difficult-japanese-grammar)
-
-```text
-# Difficult Japanese Grammar Explained (Particles, Verbs, Keigo)
-# Difficult Japanese Grammar Explained With Grammar Concepts and Complex Sentences
-Last updated: January 14, 2026
-Japanese grammar has this reputation for being tough, and honestly? It's earned. The structure is fundamentally different from English, theparticlesseem to multiply every time you open a textbook, and don't even get me started onkeigo. But once you understand why these concepts are hard, they become way more manageable whenlearning Japanese. Let me break down the absolute toughest grammar points in Japanese and give you some real explanations that actually make sense.
-- Why Japanese grammar feels so different
-- Particles: The tiny devils of Japanese grammar
-- Verb conjugations: A whole new world
-- Keigo: The honorific nightmare
-- Adjectives: Two types, different rules
-- SOV sentence structure and embedded clauses
-- The copula: Desu and da
-- Best resources to get started on basic grammar
-- FAQs
-## Why Japanese grammar feels so different
-Before we dive into specific grammar points, you need to understand the core issue. English and Japanese belong to completely different language families.
-> English follows 
-```
+Analysis of high-cognitive-load grammatical patterns: compound particles, transitive-intransitive verb pairings, and honorific / humble (*Keigo*) matrix.
 
 ### Evidence: Japanese Compound Particle Table - wasabi-jpn.com (wasabi-jpn.com)
 
@@ -192,40 +173,9 @@ Before we dive into specific grammar points, you need to understand the core iss
 | として | としまして | - | としての | - |
 ```
 
-### Evidence: JLPT Study Plan and Preparation Tips for Every Level N5-N1 (japanlivinglife.com)
-
-**Source**: [https://japanlivinglife.com/articles/jlpt-study-plan-preparation](https://japanlivinglife.com/articles/jlpt-study-plan-preparation)
-
-```text
-# JLPT Study Plan and Preparation Tips for Every Level N5-N1 | Japan Living Life
-Complete JLPT study plan with preparation tips for each level from N5 to N1. Includes study hours, best resources, practice strategies, and test day advice for foreigners in Japan.
-# JLPT Study Plan and Preparation Tips for Each Level
-Passing the Japanese-Language Proficiency Test (JLPT) is one of the most important milestones for foreigners living in Japan. Whether you need it for career advancement, university admission, or personal achievement, having a structured study plan makes all the difference. With over 1.72 million applicants worldwide in 2024 alone, the JLPT is more competitive than ever. This guide breaks down exactly how to prepare for each level from N5 to N1, with realistic timelines, proven study strategies, and the best resources available.
-If you are just starting your Japanese learning journey, check out ourcomplete guide to learning Japanese as a foreignerfor a broader roadmap before diving into JLPT-specific preparation.
-## Understanding the JLPT Levels and What Each One Requires
-The JLPT is divided into five levels, each testing progressively more advanced Japanese ability. Under
-```
-
-### Evidence: JLPT Study Schedule: How to Plan for Each Level (N5 to N1) (migaku.com)
-
-**Source**: [https://migaku.com/blog/japanese/jlpt-study-schedule-guide](https://migaku.com/blog/japanese/jlpt-study-schedule-guide)
-
-```text
-# JLPT Study Schedule: How to Plan for Each Level (N5 to N1)
-# JLPT Study Schedule: Comprehensive Study Plans for Each Level (N5 to N1)
-Last updated: March 31, 2026
-You want to pass the JLPT, but staring at a pile of textbooks and wondering where to start isn't exactly motivating.Learning Japanesefor the Japanese Language Proficiency Test can feel overwhelming when you're trying to figure outhow many kanji to learn, which grammar points matter most, and whether you're studying enough hours per day. Here's the thing: a solid JLPT study schedule makes all the difference between cramming frantically and actually retaining what you learn. Let's break down exactly how to create a study plan that works for each level.
-- Understanding the JLPT levels and what you're up against
-- How many hours to study for JLPT success
-- Building your JLPT N5 study plan
-- Creating a study schedule for JLPT N4
-- Tackling JLPT N3 with a structured approach
-- Preparing for JLPT N2 with serious commitment
-- Conquering JLPT N1 requires long-term dedication
-- Flexible adjustments and staying on track
-## Understanding the JLPT levels and what you're up against
-Before you can build a realistic study schedule, you
-```
+### Evidence: JLPT Study Resources & Empirical Prep Plans
+- **Japan Living Life (N5-N1 Guide)**: [https://japanlivinglife.com/articles/jlpt-study-plan-preparation](https://japanlivinglife.com/articles/jlpt-study-plan-preparation) — Structured breakdown of study hours, progression rates, and exam strategies.
+- **Migaku JLPT Guide**: [https://migaku.com/blog/japanese/jlpt-study-schedule-guide](https://migaku.com/blog/japanese/jlpt-study-schedule-guide) — Daily scheduling benchmarks across vocabulary, kanji acquisition, and structured grammar immersion.
 
 ## 4. Primary Sources & Scraped Evidence Catalog
 

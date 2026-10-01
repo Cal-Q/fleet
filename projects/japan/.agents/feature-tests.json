@@ -1,5 +1,931 @@
 [
   {
+    "feature": "grammar_disambiguation_bonus_element_and_sqlite_details_tables",
+    "timestamp": "2026-09-27T08:50:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Created SQLite tables bunpro_grammar_details (979 rows with nuance, caution, structure) and bunpro_grammar_sentences (16,667 rows with clean_en/clean_jp) in schema_definitions.py.",
+        "Built modular migration runner core/db_migrations/migrate_grammar_details.py (122 lines <= 200) populating SQLite dictionary database.",
+        "Extended core/grammar_details_service.py (196 lines <= 200) with direct SQLite query and format_sentence_hint function.",
+        "Updated core/anki_web_furigana.py (192 lines <= 200) to inject subtle grammar hint badge on English -> JP sentence cards, resolving ambiguous translations (e.g. たところだ vs たばかり).",
+        "Passed pre-commit exam distribution audit daemon (academic/test_exam_distribution.py) and verified formatting with unit test."
+      ],
+      "file_line_counts": {
+        "core/db.py": 94,
+        "core/db_migrations/schema_definitions.py": 113,
+        "core/db_migrations/migrate_grammar_details.py": 122,
+        "core/grammar_details_service.py": 196,
+        "core/anki_web_furigana.py": 192
+      }
+    }
+  },
+  {
+    "feature": "anki_authentic_relearning_and_lapse_isolation_lifecycle",
+    "timestamp": "2026-09-25T19:36:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated artificial single-pass 1-day lapse banishment and aligned review failure lifecycle with authentic Anki Relearning standards.",
+        "Refactored core/anki_sm2.py (174 lines <= 200): review cards on grade=1 increment lapses once, decrease factor once, and enter queue=1 (relearning) with new_due set to epoch timestamp (~10m).",
+        "Protected learning and relearning cards: repeat failures in learning do NOT increment lapses and do NOT decrease factor, completely eliminating fake leeches.",
+        "Updated static/js/modules/anki_web_ui.js (199 lines <= 200) to enqueue ALL failed cards (new, learning, and review) into _pendingLearning queue with tactile cooldown and 'Ripassa Subito' learn-ahead.",
+        "Updated static/js/modules/anki_web_queue.js (138 lines <= 200) with graduating interval of 1g for Good and <10m for Again.",
+        "Bumped Service Worker to anki-pwa-v35 and compiled new IIFE bundle static/js/anki_bundle.js (v272_anki_relearning).",
+        "Empirically validated with dedicated 5-case Python unit test scratch/test_anki_sm2_relearning.py (100% pass on review lapse, relearning repeat failure, relearning graduation, new card failure, and new card graduation).",
+        "Empirically validated with headless Chromium CDP test suite test_offline_e2e.py and test_offline_cold_boot.py on IONOS production (100% pass, verified +5 atomic revlog rows in SQLite collection.anki2)."
+      ],
+      "file_line_counts": {
+        "core/anki_sm2.py": 174,
+        "static/js/modules/anki_web_ui.js": 199,
+        "static/js/modules/anki_web_queue.js": 138,
+        "sw_anki.js": 135,
+        "templates/anki.html": 63,
+        "scripts/build_kiosk_apk.sh": 197
+      }
+    }
+  },
+  {
+    "feature": "redmi_note_7_kiosk_apk_v254_compilation_and_root_installation",
+    "timestamp": "2026-09-25T18:52:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Connected to physical Xiaomi Redmi Note 7 (lavender_eea, Android 10, Magisk root) via reverse SSH tunnel on port 2222.",
+        "Pushed updated assets to device: static/js/anki_bundle.js (62.2kb IIFE with atomic batch sync and 500-card limit), templates/anki.html (inlined layout and components), and sw_anki.js (ServiceWorker v34).",
+        "Updated scripts/build_kiosk_apk.sh (197 lines <= 200) to package version 2.5.4 (versionCode 254) with asset interception for anki.html, anki_bundle.js, sw_anki.js, tailwind.js, and font.",
+        "Compiled APK natively on device using Termux toolchain (aapt, ecj, dx) and signed with japan_debug.keystore using apksigner.",
+        "Installed silently via root (su -c 'pm install -r -d -g japan.apk'): verified dumpsys package it.calq.japan returned versionCode=254 versionName=2.5.4.",
+        "Launched activity via am start -n it.calq.japan/.MainActivity directly onto physical device screen."
+      ],
+      "file_line_counts": {
+        "scripts/build_kiosk_apk.sh": 197
+      }
+    }
+  },
+  {
+    "feature": "anki_offline_pwa_atomic_sync_and_headless_cdp_emulation_test_suite",
+    "timestamp": "2026-09-25T18:18:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Diagnosed and resolved critical offline study bugs: Bug 1 (premature queue finish on cooldown cards and disabled offline refills) and Bug 2 (progress wiped upon reconnection due to unawaited flushReviewOutbox race with loadDecks and SM-2 revlog.id primary key collisions).",
+        "Engineered POST /api/anki/sync_offline_reviews in api/routes/anki_web_routes.py (172 lines <= 200) for atomic batch processing of offline reviews.",
+        "Updated core/anki_sm2.py (173 lines <= 200) with monotonically unique timestamps preventing SQLite revlog.id collisions.",
+        "Refactored frontend into modular <= 200 line files: static/js/modules/anki_web_db.js (197 lines), static/js/modules/anki_web_decks.js (198 lines), static/js/modules/anki_web_queue.js (138 lines), static/js/modules/anki_web_ui.js (199 lines), static/js/modules/anki_web_media.js (51 lines), and static/js/modules/anki_log_viewer.js (148 lines).",
+        "Configured Service Worker static/sw_anki.js (135 lines) at scope / with CACHE_NAME anki-pwa-v34 and registered in templates/anki.html (63 lines).",
+        "Compiled and deployed IIFE bundle static/js/anki_bundle.js (62.2kb) with zero export statements, verified in headless Chromium.",
+        "Engineered pure-Python Chrome DevTools Protocol client scripts/chrome_cdp.py (163 lines <= 200) supporting network offline emulation via CDP.",
+        "Created scripts/test_offline_e2e.py (191 lines <= 200) and scripts/test_offline_cold_boot.py (73 lines <= 200).",
+        "Physically executed scripts/test_offline_e2e.py against production server (IONOS): 5 offline reviews completed without premature deck finish, outbox held 5 reviews, reconnection triggered atomic batch sync, outbox emptied to 0, SQLite collection.anki2 verified with +5 unique revlog rows (100% data integrity).",
+        "Physically executed scripts/test_offline_cold_boot.py against production server (IONOS): verified ServiceWorker registration, cut network, reloaded offline, and rendered 13 decks from offline cache."
+      ],
+      "file_line_counts": {
+        "core/anki_sm2.py": 173,
+        "api/routes/anki_web_routes.py": 172,
+        "static/js/modules/anki_web_media.js": 51,
+        "static/js/modules/anki_web_db.js": 197,
+        "static/js/modules/anki_web_decks.js": 198,
+        "static/js/modules/anki_web_queue.js": 138,
+        "static/js/modules/anki_web_ui.js": 199,
+        "static/js/modules/anki_log_viewer.js": 148,
+        "components/anki_settings_logs.html": 40,
+        "static/sw_anki.js": 135,
+        "templates/anki.html": 63,
+        "scripts/chrome_cdp.py": 163,
+        "scripts/test_offline_e2e.py": 191,
+        "scripts/test_offline_cold_boot.py": 73
+      }
+    }
+  },
+  {
+    "feature": "mext_routine_reordering_mock_and_simulation_first_priming",
+    "timestamp": "2026-09-25T10:30:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Reordered daily practice routine from passive-first to active-testing first: Slot 1 Drill Test & Mock MEXT (Shu-iro, 15m), Slot 2 Keigo & Syntax Simulations (Aizome, 25m), Slot 3 SRS Anki Reviews (Kurogane, 40m), Slot 4 Bunpro Grammar New Items (Matcha, 45m).",
+        "Eliminated cognitive priming bias and late-day fatigue collapse on high-stakes MEXT test questions (R-92).",
+        "Updated engine/daily_curriculum_engine.py (198 lines <= 200) and academic/curriculum_generator.py (173 lines <= 200) with invariant audits asserting Slot 1 Part A budget and Slot 2 oral interview gating.",
+        "Regenerated and verified all 161 days in curriculum/master_161_day_curriculum.json with 100% adherence to new slot structure.",
+        "Updated templates/components/daily_routine.html (93 lines), templates/components/tab_bunki.html (119 lines), templates/components/tab_interview.html (78 lines), components/tab_exams.html (145 lines), and static/js/modules/routine.js (181 lines).",
+        "Updated exams.js (slot1 done), interview.js (slot2 done), bunki.js (slot3 done), and routine.js (slot4 auto-clean).",
+        "Executed 60-day mock battery simulation audit academic/test_exam_distribution.py with 100% quota compliance, 0 category clusterings, and 0 duplicate IDs.",
+        "Documented R-92 in research/registro_proattivo_rischi_e_soluzioni_mext.md, README.md, and applications/unito_gpa_and_session_strategy.md."
+      ],
+      "file_line_counts": {
+        "engine/daily_curriculum_engine.py": 198,
+        "academic/curriculum_generator.py": 173,
+        "templates/components/daily_routine.html": 93,
+        "templates/components/tab_bunki.html": 119,
+        "templates/components/tab_interview.html": 78,
+        "components/tab_exams.html": 145,
+        "static/js/modules/routine.js": 181,
+        "static/js/modules/routine_curriculum.js": 142,
+        "static/js/modules/exams.js": 168,
+        "static/js/modules/interview.js": 71,
+        "static/js/modules/bunki.js": 173
+      }
+    }
+  },
+  {
+    "feature": "bunpro_grammar_details_extraction_and_study_card_enrichment",
+    "timestamp": "2026-09-24T21:12:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Parsed 979 raw Bunpro HTML files into offline database japanese/bunpro_grammar_details.json (6.2 MB) extracting About writeups, structures, cautions, and nuance comparisons.",
+        "Engineered core/grammar_details_service.py (157 lines <= 200): O(1) multi-index lookup by clean Japanese text, English translation, and CloudFront audio filename.",
+        "Enriched core/anki_web_furigana.py (192 lines <= 200) to populate sentence card meaning with dark-mode formatted Bunpro grammar details (badges, structure formula, nuance examples, caution callout).",
+        "Updated js/modules/anki_web_meanings.js (130 lines <= 200), static/js/modules/anki_web_meanings.js (130 lines <= 200), and static/js/anki_bundle.js to bypass JMdict vocab parser and render grammar details directly in ankiCardMeaningScroll.",
+        "Deployed to IONOS production and empirically verified on live API (/api/anki/deck_cards?did=1770845308673): HTTP 200, 100% grammar details presence (e.g. いらっしゃる: 9181 bytes with full conjugation table and nuance examples).",
+        "Verified browser asset delivery: https://japan.calq.it/static/js/anki_bundle.js?v=20260924_bunpro_grammar HTTP 200."
+      ],
+      "file_line_counts": {
+        "scripts/fetch_bunpro_html.py": 143,
+        "scripts/extract_bunpro_grammar_details.py": 126,
+        "core/grammar_details_service.py": 157,
+        "core/anki_web_furigana.py": 192,
+        "js/modules/anki_web_meanings.js": 130,
+        "static/js/modules/anki_web_meanings.js": 130,
+        "anki.html": 58
+      }
+    }
+  },
+  {
+    "feature": "deck_generation_hygiene_anti_archaic_filtering_and_auto_backups",
+    "timestamp": "2026-09-24T18:51:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated 119 archaic, obsolete, and unstudied new cards from [JAP]::[TRAVEL]::Japanese -> Phonetic + Meaning natively via generator hygiene.",
+        "Implemented Invariant 54: JMdict semantic filtering on senses.misc (archaic, obsolete term, rare term, historical term, outdated term) and orthographic filtering on reading_elements.info (irregular kanji usage, out-dated kanji, rarely used kanji, search-only kanji).",
+        "Enforced priority resolution in filter_valid_reading_elements prioritizing common forms (priority != []) and discarding unprioritized alternative variants.",
+        "Removed erroneous upstream activation of multi-character compound entries from single kanji in kanji_merge_manager.py.",
+        "Reset in_anki = 0 for 1588 unstudied entries in dict_index.sqlite3, preserving all 3773 authentic studied entries and reviews intact.",
+        "Integrated deterministic pre-flight database snapshotting in main.py with automated 10-backup rotation before any pipeline modification.",
+        "Empirically verified live on IONOS: 0 leaks across all reported entities (牙婆, 労き, 形木, 酒盃, 豆汁, 豆油, 七五三, 注連, 戌亥), 0 new cards in Kanji Image Deck, and exactly 4 genuine studied cards in Vocab Deck.",
+        "Restarted japan.service and verified /api/anki/decks HTTP 200 payload."
+      ],
+      "file_line_counts": {
+        "core/anki_sync/pipeline_helpers.py": 172,
+        "core/anki_sync/pipeline.py": 192,
+        "core/anki_sync/kanji_merge_manager.py": 146,
+        "core/anki_sync/main.py": 158
+      }
+    }
+  },
+  {
+    "feature": "exam_single_question_focused_runner_and_boilerplate_stripping",
+    "timestamp": "2026-09-19T07:05:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated cockpit syndrome and vertical 30-question scrolling in Stage 4 (Prove) on japan.calq.it.",
+        "Engineered Single-Question Focused Runner: exactly 1 question centered on screen with Mincho typography, generous breathing room, and 4 tactile choice cards (active:scale-[0.98]).",
+        "Built Quick-Jump Horizontal Progression Rail (#examQuestionRail): instant navigation across 1..N questions with real-time status indication (current, answered, pending).",
+        "Made question notes on-demand (collapsible drawer), completely eliminating intrusive textarea clutter across every question.",
+        "Integrated keyboard shortcuts for instant-scan workflow: [1-4] or [A-D] to select answer options, [←/→] or [J/K] to switch questions.",
+        "Implemented automatic carrier prompt sanitization in academic/exam_provider.py (173 lines <= 200): cleanly strips repetitive 'つぎの ぶんの ... どう よみますか' instructions and injects concise contextual task badges (SCRITTURA KANJI, LETTURA KANJI, GRAMMATICA & PARTICELLE, ORDINE FRASE ★).",
+        "Decomposed exam frontend into modular single-responsibility components: templates/components/tab_exams.html (93 lines <= 200), static/js/modules/exams.js (169 lines <= 200), static/js/modules/exam_card.js (64 lines <= 200).",
+        "Passed deterministic MEXT Exam Blueprint Audit Daemon over 60 simulated consecutive days (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "templates/components/tab_exams.html": 93,
+        "static/js/modules/exams.js": 169,
+        "static/js/modules/exam_card.js": 64,
+        "academic/exam_provider.py": 173,
+        "academic/test_exam_distribution.py": 74
+      }
+    }
+  },
+  {
+    "feature": "grammar_vocab_gate_katakana_and_sqlite_sync",
+    "timestamp": "2026-09-18T17:54:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Fixed katakana extraction omission in engine/grammar_vocab_gate.py (195 lines <= 200): added regex katakana sequence parser over reviewed Jap Sentences, correctly registering コーヒー and ドア as reviewed.",
+        "Eliminated phantom cache in get_existing_vocab_words: switched from stale JSON to live Anki SQLite query (did=1759999324396), correctly surfacing authentic missing blocking prereqs (直ぐに and 込める).",
+        "Enforced strict 15-sentence historical corpus rule coverage: grammar points remain rigorously bound to all words in their full vocabulary profile without sentence pruning.",
+        "Promoted missing blocking prereqs (直ぐに #726, 込める #726) to top of Stage 1 vocabulary study queue.",
+        "Verified live /api/study/next payload (直ぐに and 込める as top 2 items with req_type='blocking') and passed 60-day MEXT exam blueprint audit daemon (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "engine/grammar_vocab_gate.py": 195,
+        "engine/study_batch_grammar.py": 137
+      }
+    }
+  },
+  {
+    "feature": "anki_new_and_learning_cards_intra_session_acquisition_gating",
+    "timestamp": "2026-09-18T16:53:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Resolved syntactic encoding breakdown on new grammar points and unstudied cards: separated handling between New/Learning cards (Queue 0/1) and mature Review cards (Queue 2).",
+        "Refactored apply_sm2_review in core/anki_sm2.py (152 lines <= 200): when grade=1 on New/Learning cards, cards remain in learning queue (queue=1, ivl=0, due=now+60s) instead of being prematurely banished to tomorrow.",
+        "Integrated intra-session queue recycling in static/js/modules/anki_web_ui.js (198 lines <= 200) with enqueueFailedCard ensuring all new points repeat in current session until answered correctly (grade>=2), graduating to tomorrow only upon success.",
+        "Preserved mature review cards behavior ('mentre il resto rimane com'è'): lapses on queue=2 cards schedule cleanly for tomorrow (ivl=1, due=today+1).",
+        "Verified all 4 review transition permutations via deterministic unit tests (New fail, Learning success, Review fail, Review success).",
+        "Empirically tested and verified live Android webview on Redmi Note 7 (screencap screen_learning_verified.png)."
+      ],
+      "file_line_counts": {
+        "core/anki_sm2.py": 152,
+        "static/js/modules/anki_web_ui.js": 198,
+        "static/js/modules/anki_web_queue.js": 137
+      }
+    }
+  },
+  {
+    "feature": "anki_fatigue_relative_time_ratio_and_untimed_immunity",
+    "timestamp": "2026-09-18T13:39:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated false fatigue alerts on naturally longer questions (e.g. 30s sentences or kanji stroke practice): refactored cognitive fatigue monitor in static/js/modules/anki_web_fatigue.js (177 lines <= 200) to evaluate relative percentage of allotted time consumed (timeRatio = timeSec / durationSec) rather than fixed millisecond latency.",
+        "Engineered strict untimed card immunity: added guard (if (!durationSec || durationSec <= 0) return;) completely inhibiting fatigue tracking and modals on cards or decks in Stopwatch/Libero mode.",
+        "Integrated getCardTimerDuration(card) in static/js/modules/anki_web_ui.js (200 lines <= 200) passing exact card limit directly to recordReviewForFatigue.",
+        "Rebuilt production bundle with esbuild (52.2kb) and verified all codebase invariant line counts (<= 200 lines per file).",
+        "Passed deterministic MEXT Exam Blueprint Audit Daemon across 60 days (academic/test_exam_distribution.py).",
+        "Empirically tested and verified on physical Redmi Note 7 (Android WebView via CDP probe): 1) Untimed cards produced 0 fatigue alerts, 2) Micro-break countdown and 2-stage restorative modal executed cleanly, 3) Captured visual confirmation screen_fatigue_verified.png."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_fatigue.js": 177,
+        "static/js/modules/anki_web_ui.js": 200,
+        "static/js/modules/anki_web_timer.js": 197
+      }
+    }
+  },
+  {
+    "feature": "anki_break_timer_pause_and_restorative_return_screen",
+    "timestamp": "2026-09-18T13:11:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Implemented session timer pause during 2-minute cognitive fatigue break (pauseSessionTimer() in static/js/modules/anki_web_fatigue.js, 171 lines <= 200) ensuring break duration does not consume target study time.",
+        "Engineered 2-stage break lifecycle modal in templates/anki.html: Active Stage (#ankiBreakActiveStage with countdown & breathing guide) and Return Stage (#ankiBreakFinishedStage with restorative badge and tactile '🎯 Ritorna a Studiare' button).",
+        "Synthesized pleasant Web Audio harmonic chime (E5 659Hz, G#5 831Hz, B5 988Hz) and haptic vibration upon break countdown completion.",
+        "Built scripts/test_break_behavior.py (102 lines <= 200) running automated CDP assertions on live Redmi Note 7 Android WebView.",
+        "Empirically verified on physical device: 1) Session timer paused at 24:59 during break, 2) Active breathing stage rendered countdown (0:04), 3) On 0s, transitioned cleanly to 'Pausa Completata!' stage with chime, 4) Tapping 'Ritorna a Studiare' smoothly closed modal, resumed session timer, and restored study view.",
+        "Captured and verified live device artifacts: screen_break_active.png, screen_break_finished.png, screen_break_resumed.png."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_fatigue.js": 171,
+        "static/js/modules/anki_web_session_timer.js": 157,
+        "static/js/modules/anki_web_updater.js": 141,
+        "api/routes/anki_web_routes.py": 105,
+        "scripts/test_break_behavior.py": 102
+      }
+    }
+  },
+  {
+    "feature": "anki_multiclient_review_reconciliation_and_interval_restoration",
+    "timestamp": "2026-09-18T12:20:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Forensically diagnosed review desync: 271 reviews completed on AnkiDroid (/sdcard/AnkiDroid/collection.anki2) on 2026-09-17 were not synced to server DB, causing 218 cards to falsely reappear as due today.",
+        "Identified interval inflation: mature cards reviewed yesterday and re-reviewed today triggered double SM-2 multiplication, ballooning intervals to 100+ days.",
+        "Built scripts/reconcile_phone_and_server_reviews.py (144 lines <= 200) pulling phone database, merging 271 missing revlog rows, and restoring authentic scheduled intervals.",
+        "Reconciled 218 cards and asserted SQLite integrity (healthy: True, pragma: ok, 0 orphan cards).",
+        "Pushed reconciled database to Redmi Note 7 (/sdcard/AnkiDroid/collection.anki2 and Termux).",
+        "Empirically verified target cards on live device (厳しい ivl: 17d, 履歴書 ivl: 40d, 武力 ivl: 13d, 諦める ivl: 12d, 岸 ivl: 109d), with [TRAVEL] due reviews immediately dropping from 602 to authentic 377."
+      ],
+      "file_line_counts": {
+        "scripts/reconcile_phone_and_server_reviews.py": 144,
+        "scripts/cdp_probe.py": 73,
+        "core/anki_sm2.py": 141
+      }
+    }
+  },
+  {
+    "feature": "anki_local_first_settings_and_timers_persistence",
+    "timestamp": "2026-09-18T11:55:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Diagnosed settings wipe upon APK updates: shallow overwrites from server payload (applyServerSettings) erased local per-deck timers, while clearCardCache wiped IndexedDB meta store.",
+        "Architected dual local-first persistence subsystem: localStorage + IndexedDB meta.app_settings + window.__INITIAL_SETTINGS__ template hydration.",
+        "Implemented non-destructive deep merging in static/js/modules/anki_web_persistence.js (135 lines <= 200) and api/routes/anki_web_routes.py (104 lines <= 200) guaranteeing custom per-deck timers ({ ...remote, ...local }) are never clobbered.",
+        "Protected meta.app_settings in static/js/modules/anki_web_db.js (187 lines <= 200) during cache clear operations.",
+        "Configured fallback default presets in data/anki_settings.json (11 lines <= 200) and packaged assets into Standalone APK v2.1 in scripts/build_kiosk_apk.sh (192 lines <= 200).",
+        "Built scripts/cdp_probe.py (73 lines <= 200) connecting directly to Android WebView unix domain socket (@webview_devtools_remote_*) for deterministic end-to-end evaluation.",
+        "Empirically tested and verified on physical Redmi Note 7 (Android 10): set [TRAVEL] timer to 12s, Jap Sentences timer to 28s, fontFront to 44px, fontBack to 24px, furigana to hidden, sessionTarget to 35m.",
+        "Executed full cold force-stop (am force-stop it.calq.japan) and cold restart (am start), asserting 100% data retention from local storage with live header badge reflecting 🎯 35:00."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_db.js": 187,
+        "static/js/modules/anki_web_persistence.js": 135,
+        "static/js/modules/anki_web_settings.js": 147,
+        "static/js/modules/anki_web_timer.js": 196,
+        "api/routes/anki_web_routes.py": 104,
+        "core/anki_micro_server.py": 195,
+        "core/anki_settings_store.py": 51,
+        "scripts/build_kiosk_apk.sh": 192,
+        "scripts/cdp_probe.py": 73,
+        "data/anki_settings.json": 11
+      }
+    }
+  },
+  {
+    "feature": "anki_kanji_image_deck_purge_unstudied_cards_and_web_gating",
+    "timestamp": "2026-09-18T11:33:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Forensically diagnosed unstudied kanji emergence: 1,159 cards in Kanji - Image Deck had dummy batch import rows from 2025-11-18 with 0ms review time and deferred due dates landing on Day 644 (today).",
+        "Built scripts/purge_unstudied_image_deck.py (107 lines <= 200) executing atomic SQLite snapshot backup and fast TEMP-table deletion of all 1,160 never-studied cards/notes.",
+        "Enforced strict deterministic gating: only genuinely studied kanji (1,149 mature cards) remain in Anki; all future kanji additions occur exclusively via japan.calq.it (Stage 2 study batch / add kanji button).",
+        "Verified database integrity (PRAGMA integrity_check ok, 0 orphan cards, fix_integrity ok) and refreshed studied kanji cache in japanese/user_studied_kanji.json.",
+        "Empirically tested targeted unstudied kanji (鎮, 墨, 総, 施, 棄, 沈, 軌, 創, 裸, 厄, 排, 批, 猛, 栗) asserting exactly 0 in database.",
+        "Empirically verified deck counts on physical Redmi Note 7: [TRAVEL] review count dropped from 781/849 to authentic 608; Kanji - Image Deck due count dropped from 242 to 74 mature cards."
+      ],
+      "file_line_counts": {
+        "scripts/purge_unstudied_image_deck.py": 107,
+        "core/anki_sync/backup_sentinel.py": 94,
+        "engine/study_batch_kanji.py": 103,
+        "engine/study_queue.py": 130
+      }
+    }
+  },
+  {
+    "feature": "anki_web_card_transition_pre_mount_smoothing",
+    "timestamp": "2026-09-18T11:02:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of previous card text flash during card transitions: resetCardPosition() reset card opacity to 1 at 220ms before answerCard() and advanceQueue() updated DOM elements, while blocking network fetch stalled DOM updates.",
+        "Decoupled network sync to non-blocking async background queue in static/js/modules/anki_web_ui.js (199 lines <= 200).",
+        "Implemented animateCardEntrance() in static/js/modules/anki_web_gestures.js (198 lines <= 200), ensuring the DOM elements (#ankiCardFront, #ankiCardBack) are pre-mounted with the new card content while opacity is 0 before smoothly gliding into place (translate3d(0, 10px, 0) scale(0.96) -> translate3d(0, 0, 0) scale(1) at 120fps).",
+        "Recompiled and deployed bundle and APK to physical Redmi Note 7; empirically verified card transitions (The cherry blossom's flowers will bloom.) with 0ms flash of stale text."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_ui.js": 199,
+        "static/js/modules/anki_web_gestures.js": 198,
+        "scripts/build_kiosk_apk.sh": 197
+      }
+    }
+  },
+  {
+    "feature": "anki_standalone_kiosk_apk_v2_offline_hardening",
+    "timestamp": "2026-09-18T09:35:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated dependency on Termux background micro-server (refused 3033 root cause) by packaging anki.html, anki_bundle.js, and tailwind.js directly into APK assets/ in scripts/build_kiosk_apk.sh (197 lines <= 200).",
+        "Implemented local asset interception in MainActivity.java via shouldInterceptRequest, serving HTML/JS/CSS assets with 0ms latency in 100% offline mode without network calls.",
+        "Implemented real-time IndexedDB mutation in static/js/modules/anki_web_db.js (197 lines <= 200) via updateCachedCardReview, instantly splicing answered cards and decrementing deck review counts to prevent answered cards from reappearing upon re-entry.",
+        "Compiled, signed, and deployed APK v2.0 (it.calq.japan) on physical Redmi Note 7 (Android 10) with Termux Python daemon killed.",
+        "Empirically verified deck navigation, card flip ([DEFINIZIONE] Favola), SM-2 review grading (1 0 1 -> 1 0 0), and deck list re-entry with live screencap assertions."
+      ],
+      "file_line_counts": {
+        "scripts/build_kiosk_apk.sh": 197,
+        "static/js/modules/anki_web_ui.js": 199,
+        "static/js/modules/anki_web_db.js": 197,
+        "static/js/modules/anki_web_decks.js": 195,
+        "static/sw_anki.js": 102
+      }
+    }
+  },
+  {
+    "feature": "anki_web_persistent_telemetry_and_deck_isolation",
+    "timestamp": "2026-09-17T11:43:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built static/js/modules/anki_logger.js (128 lines <= 200) with a 300-event circular localStorage ring-buffer, window exception interceptors, and structured telemetry records (time, level, cat, act, det, online).",
+        "Built static/js/modules/anki_log_viewer.js (136 lines <= 200) providing an in-app visual diagnostics modal with category filters (ALL, DECK, CARD, NET, ERROR), search query, JSON clipboard export, server upload, and clean buffer actions.",
+        "Implemented backend telemetry ingestion in api/routes/anki_log_routes.py (108 lines <= 200) exposing POST/GET /api/anki/client_logs with JSONL persistence in /opt/japan/logs/anki_client_telemetry.jsonl.",
+        "Resolved deck refill race condition in static/js/modules/anki_web_ui.js (188 lines <= 200) and static/js/modules/anki_web_decks.js (189 lines <= 200) via monotonic _sessionToken gating, discarding stale in-flight promises from previous decks.",
+        "Hardened IndexedDB deck ID keys via Number(did) normalization in static/js/modules/anki_web_db.js (146 lines <= 200).",
+        "Recompiled standalone Android Kiosk APK (build_kiosk_apk.sh, 182 lines <= 200) with unconditional local asset interception and verified on physical Redmi Note 7 (Android 10) with live telemetry transmission (HTTP 200)."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_logger.js": 128,
+        "static/js/modules/anki_log_viewer.js": 136,
+        "static/js/modules/anki_web_ui.js": 188,
+        "static/js/modules/anki_web_decks.js": 189,
+        "static/js/modules/anki_web_db.js": 146,
+        "templates/anki.html": 165,
+        "api/routes/anki_log_routes.py": 108,
+        "scripts/build_kiosk_apk.sh": 182
+      }
+    }
+  },
+  {
+    "feature": "anki_web_offline_starlette_static_fix",
+    "timestamp": "2026-09-17T09:33:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of offline caching failure: Starlette StaticFiles security check returned 404 for all static assets (/static/js/tailwind.js, /media/_HGSKyokashotai.ttf) because BASE_DIR was hardcoded to symlink /opt/japan instead of realpath.",
+        "Replaced hardcoded BASE_DIR with dynamic os.path.dirname(os.path.dirname(os.path.abspath(__file__))) in api/app.py (149 lines <= 200) and api/routes/anki_web_routes.py (194 lines <= 200), resolving all static assets with HTTP 200 OK.",
+        "Injected Service-Worker-Allowed: / and Cache-Control: no-cache headers in FastAPI middleware, enabling static/sw_anki.js (97 lines <= 200) to control root scope / and intercept /anki requests.",
+        "Upgraded Service Worker cache to anki-pwa-v8 with robust offline navigation fallback (caches.match('/anki', { ignoreSearch: true })) and bumped UI build to v2.4.4 (20260917_v244).",
+        "Registered R-63 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit daemon (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "api/app.py": 149,
+        "api/routes/anki_web_routes.py": 194,
+        "templates/anki.html": 189,
+        "static/sw_anki.js": 97,
+        "static/js/modules/anki_web_ui.js": 191,
+        "static/js/modules/anki_web_decks.js": 177
+      }
+    }
+  },
+  {
+    "feature": "anki_web_zero_latency_ssr_and_deck_hierarchy",
+    "timestamp": "2026-09-17T09:16:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated client-side loading freeze on mobile WebViews by implementing FastAPI Server-Side Rendering (SSR) in api/routes/anki_web_routes.py (193 lines <= 200) directly populating all 13 decks and due counters into Jinja2 templates/anki.html (189 lines <= 200).",
+        "Embedded synchronous window.__INITIAL_DECKS__ JSON directly in <head> for zero-latency client-side hydration without waiting for async network roundtrips.",
+        "Hardened static/js/modules/anki_web_decks.js (177 lines <= 200) with try/catch localStorage helpers and immediate fallback to window.__INITIAL_DECKS__.",
+        "Resolved DOMContentLoaded lifecycle race condition in static/js/modules/anki_web_ui.js (191 lines <= 200) with readyState verification.",
+        "Bumped Service Worker cache to anki-pwa-v7 in static/sw_anki.js (93 lines <= 200) and upgraded UI build ID to 20260917_v243.",
+        "Registered R-62 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock blueprint audit daemon (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "templates/anki.html": 189,
+        "static/js/modules/anki_web_decks.js": 177,
+        "static/js/modules/anki_web_ui.js": 191,
+        "api/routes/anki_web_routes.py": 193,
+        "static/sw_anki.js": 93
+      }
+    }
+  },
+  {
+    "feature": "anki_web_ankidroid_native_tree_hierarchy",
+    "timestamp": "2026-09-17T07:48:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Re-engineered static/js/modules/anki_web_decks.js (171 lines <= 200) into an authentic AnkiDroid & AnkiWeb tree layout with expand/collapse chevron toggles and persistent collapse state in localStorage.",
+        "Implemented clean 3-column aligned due counters (Nuove / Apprendimento / Ripasso) in classic AnkiDroid colors (#42A5F5 / #EF5350 / #66BB6A) and unified table header in templates/anki.html (194 lines <= 200).",
+        "Upgraded Service Worker cache to anki-pwa-v5 in static/sw_anki.js (93 lines <= 200) and bumped BUILD_ID to 20260917_v241 in static/js/modules/anki_web_ui.js (184 lines <= 200).",
+        "Preserved 100% offline PWA prefetching, deck overview navigation, and full-deck random shuffle support on parent decks.",
+        "Verified 100% pass on 60-day mock simulation audit daemon (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "templates/anki.html": 194,
+        "static/js/modules/anki_web_decks.js": 171,
+        "static/js/modules/anki_web_ui.js": 184,
+        "static/sw_anki.js": 93,
+        "api/routes/anki_web_routes.py": 187
+      }
+    }
+  },
+  {
+    "feature": "anki_web_100_percent_offline_pwa_hardening",
+    "timestamp": "2026-09-17T06:52:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Vendored local static/js/tailwind.js (398KB) directly into the application, eliminating external CDN dependencies (cdn.tailwindcss.com) that prevented offline rendering.",
+        "Upgraded Service Worker to anki-pwa-v4 in static/sw_anki.js (93 lines <= 200) with robust offline navigation fallbacks (caches.match('/anki')) and Stale-While-Revalidate caching across all static JS modules and fonts.",
+        "Implemented autonomous background card prefetching in static/js/modules/anki_web_decks.js (119 lines <= 200) caching all deck cards into IndexedDB on app load.",
+        "Preserved offline review outbox queue in static/js/modules/anki_web_db.js (132 lines <= 200) with auto-flush upon network reconnection.",
+        "Updated R-51 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "static/sw_anki.js": 93,
+        "static/js/modules/anki_web_decks.js": 119,
+        "static/js/modules/anki_web_db.js": 132,
+        "templates/anki.html": 196
+      }
+    }
+  },
+  {
+    "feature": "anki_web_session_timer_and_anti_fatigue_monitor",
+    "timestamp": "2026-09-16T22:20:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built static/js/modules/anki_web_session_timer.js (119 lines <= 200) implementing configurable study session target timers (Libero/15m/25m/45m Pomodoro), header badge real-time display, audio chime notifications via Web Audio API, and haptic feedback.",
+        "Built static/js/modules/anki_web_fatigue.js (97 lines <= 200) implementing rolling cognitive fatigue detection (>=50% response latency degradation or >=3 consecutive lapses) and a 2-minute guided breathing micro-break modal.",
+        "Created static/js/modules/anki_web_decks.js (80 lines <= 200) modularizing deck listing and overview logic.",
+        "Streamlined static/js/modules/anki_web_ui.js (157 lines <= 200) and templates/anki.html (196 lines <= 200) strictly respecting the <= 200 lines invariant.",
+        "Registered R-61 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_session_timer.js": 119,
+        "static/js/modules/anki_web_fatigue.js": 97,
+        "static/js/modules/anki_web_decks.js": 80,
+        "static/js/modules/anki_web_ui.js": 157,
+        "templates/anki.html": 196
+      }
+    }
+  },
+  {
+    "feature": "fsrs_daily_deck_weight_optimization_and_card_memory_model",
+    "timestamp": "2026-09-16T22:08:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built core/fsrs_model.py (116 lines <= 200) implementing the full FSRS DSR (Difficulty, Stability, Retrievability) memory model and target retention interval formulas.",
+        "Built core/fsrs_optimizer.py (161 lines <= 200) optimizing FSRS 19-parameter weight vectors per deck by minimizing Binary Cross-Entropy (log-loss) across 218k historical reviews in Anki revlog.",
+        "Built core/fsrs_daemon.py (144 lines <= 200) reconstructing exact Stability (S), Difficulty (D), and Retrievability (R_today) for every single card (9,606 cards calibrated) and safely synchronizing SQLite ease factors.",
+        "Integrated fsrs subcommand into core/anki_cli.py (191 lines <= 200) and added REST endpoints GET /api/anki/fsrs/stats and POST /api/anki/fsrs/recalibrate in api/routes/anki_fsrs_routes.py (59 lines <= 200).",
+        "Wired automatic daily trigger into core/sync_and_push.py (200 lines <= 200) executing every day seamlessly on Ionos.",
+        "Registered R-60 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "core/fsrs_model.py": 116,
+        "core/fsrs_optimizer.py": 161,
+        "core/fsrs_daemon.py": 144,
+        "core/anki_cli.py": 191,
+        "api/routes/anki_fsrs_routes.py": 59,
+        "core/sync_and_push.py": 200
+      }
+    }
+  },
+  {
+    "feature": "anki_web_multi_deck_random_shuffle_and_flat_modern_ui",
+    "timestamp": "2026-09-16T21:55:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Enabled multi-deck random shuffling across subdecks in api/routes/anki_web_routes.py (188 lines <= 200) with ORDER BY (c.queue = 1) DESC, (c.queue = 2) DESC, RANDOM() whenever a master deck (len(child_ids) > 1) is selected.",
+        "Redesigned Anki deck picker UI on japan.calq.it/anki into sleek, flat tactile cards, eliminating archaic Anki colon notation ([JAP]::[TRAVEL]::...) and ↳ tree indents.",
+        "Added human-readable titles, custom deck icons, category badges (Vocab, Kanji, Frasi, Master Deck, UniTO), and 🎲 SHUFFLE indicators in static/js/modules/anki_web_ui.js (198 lines <= 200) and templates/anki.html (191 lines <= 200).",
+        "Preserved high-contrast SM-2 due counters (new/learning/review pills) and full deck total counts.",
+        "Registered R-58 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "api/routes/anki_web_routes.py": 188,
+        "static/js/modules/anki_web_ui.js": 198,
+        "templates/anki.html": 191
+      }
+    }
+  },
+  {
+    "feature": "vocabulary_strict_5rule_blocking_req_gating",
+    "timestamp": "2026-09-16T21:53:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Implemented strict 2-tier vocabulary gating in engine/grammar_vocab_gate.py (199 lines <= 200): Tier 1 assigns req_type = 'blocking' (🔴 REQ) strictly to vocabulary required by the immediate next 5 unstudied grammar rules (unstudied[:5]).",
+        "Tier 2 assigns req_type = 'consolidation' (🟢 REQ) to vocabulary from subsequent rules (#6+), and Tier 3 assigns 🟢 REQ to core dictionary fallbacks.",
+        "Groups JMdict coverage by grammar_id in Python rather than relying on non-deterministic SQLite WHERE IN order, strictly guaranteeing curriculum alignment.",
+        "Registered R-59 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "engine/grammar_vocab_gate.py": 199
+      }
+    }
+  },
+  {
+    "feature": "anki_web_deck_session_lifecycle_and_hierarchy_persistence",
+    "timestamp": "2026-09-16T21:48:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Eliminated premature deck session exit by implementing continuous pagination/refill in static/js/modules/anki_web_ui.js (198 lines <= 200) that seamlessly fetches remaining cards when fewer than 2 remain in the buffer.",
+        "Implemented authentic Anki session re-queuing for failed cards (Grade 1 / WRONG): failed cards are re-inserted into the active session queue (queue=1) so the session never ends until all cards are answered correctly.",
+        "Implemented recursive deck tree resolution in api/routes/anki_web_routes.py (163 lines <= 200) with get_deck_and_child_ids, accurately querying cards across parent decks and all descendant subdecks.",
+        "Aggregated recursive counts in /api/anki/decks so parent decks (e.g. [JAP], Storia del Giappone, Lingua Inglese) display the exact recursive sum of all child deck stats.",
+        "Added _isAnswering debounce lock preventing double taps, keyboard bounces, or rapid gesture events from skipping cards.",
+        "Replaced jarring auto-exit on deck completion with celebratory completion screen (renderSessionFinished in static/js/modules/anki_web_study.js, 125 lines <= 200) and explicit 'Torna ai Mazzi' button.",
+        "Extracted audio helpers to static/js/modules/anki_web_audio.js (16 lines <= 200) and keybindings to static/js/modules/anki_web_gestures.js (168 lines <= 200).",
+        "Verified 100% pass on direct backend tests and 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "api/routes/anki_web_routes.py": 163,
+        "static/js/modules/anki_web_ui.js": 198,
+        "static/js/modules/anki_web_study.js": 125,
+        "static/js/modules/anki_web_audio.js": 16,
+        "static/js/modules/anki_web_gestures.js": 168,
+        "static/js/modules/anki_web_db.js": 133,
+        "templates/anki.html": 191
+      }
+    }
+  },
+  {
+    "feature": "anki_media_image_resizing_and_http_cache_optimization",
+    "timestamp": "2026-09-16T21:44:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built core/optimize_media_images.py (121 lines <= 200) resizing 2,303 kanji PNGs in collection.media down to actual container dimensions (<=480x240) using Lanczos resampling and adaptive 128-color palette quantization.",
+        "Saved 63.26 MB (54.8% reduction from 115.44 MB down to 52.18 MB) drastically accelerating card loading on mobile networks.",
+        "Configured FastAPI Cache-Control middleware in api/app.py (127 lines <= 200) serving /media/ and /static/ with public, max-age=604800, stale-while-revalidate=86400.",
+        "Injected loading='lazy' decoding='async' into card <img> tags in core/anki_web_furigana.py (196 lines <= 200).",
+        "Verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "core/optimize_media_images.py": 121,
+        "api/app.py": 127,
+        "core/anki_web_furigana.py": 196
+      }
+    }
+  },
+  {
+    "feature": "furigana_scoped_exclusively_to_phonetic_meaning_deck",
+    "timestamp": "2026-09-16T21:25:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Restricted dynamic furigana (ruby_unstudied and ruby_all) generation strictly and exclusively to the '[JAP]::[TRAVEL]::Japanese -> Phonetic + Meaning' deck.",
+        "Guaranteed that Kanji Recognition ('Kanji - Image Deck') and Writing Practice ('Kanji -> Writing Practice') display pure, unspoilered kanji characters and English keywords on front.",
+        "Updated format_card_data in core/anki_web_furigana.py (196 lines <= 200) with is_phonetic_deck scoping.",
+        "Updated templates/anki.html (191 lines <= 200) setting label to 'Furigana (Phonetic + Meaning)'.",
+        "Verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "core/anki_web_furigana.py": 196,
+        "templates/anki.html": 191,
+        "static/js/modules/anki_web_settings.js": 162,
+        "static/js/modules/anki_web_study.js": 89,
+        "static/js/modules/anki_web_ui.js": 200
+      }
+    }
+  },
+  {
+    "feature": "vocabulary_multi_meaning_resolution",
+    "timestamp": "2026-09-16T21:20:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built resolve_multi_meanings() in engine/study_batch_vocab.py (169 lines <= 200) extracting up to 2-3 distinct meanings/senses hierarchically from JMdict entries.",
+        "Prioritizes matching gloss to input meaning if provided, then collects primary gloss from each sense, followed by secondary glosses within senses.",
+        "Integrates full POS tagging and registers all 2-3 senses into source_english_to_kana, bunpro_vocab_pending.json, and user_anki_vocab.json.",
+        "Generates multi-line bulleted meanings on Anki cards in KanjiToKana note model (e.g. 猛スピード -> great speed / recklessly fast speed; 変更 -> change / modification / alteration).",
+        "Registered R-55 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "engine/study_batch_vocab.py": 169,
+        "core/anki_web_furigana.py": 191,
+        "core/anki_sync/dictionary_matcher.py": 186,
+        "core/anki_sync/vocab_resolver_cache.py": 157,
+        "core/anki_sync/pipeline.py": 183,
+        "core/anki_sync/bunpro_vocab.py": 104,
+        "core/anki_sync/anki_direct_writer.py": 184
+      }
+    }
+  },
+  {
+    "feature": "anki_web_selective_furigana_for_unstudied_kanji",
+    "timestamp": "2026-09-16T20:56:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Fixed HTML/ruby tag stripping in core/anki_web_furigana.py (strip_ruby_to_text) to prevent furigana annotations (<rt>...) from leaking into plain text matching (e.g. resolved chickenpox 水<ruby>疱<rt>ぼう</rt></ruby><ruby>瘡<rt>そう</rt></ruby> producing clean 水疱瘡 -> 水<ruby>疱<rt>ぼう</rt></ruby><ruby>瘡<rt>そう</rt></ruby>).",
+        "Built core/anki_web_furigana.py (182 lines <= 200) with get_user_studied_kanji() resolving mature/studied kanji from collection.anki2 and JMdict furigana dictionary matcher.",
+        "Generates ruby_unstudied (furigana strictly for unstudied/unknown kanji characters), ruby_all (complete furigana), and front (plain kanji).",
+        "Streamlined api/routes/anki_web_routes.py (142 lines <= 200) and deployed live to https://japan.calq.it/api/anki/deck_cards.",
+        "Integrated 3-way Furigana Mode selector (Non Noti / Tutti / Nascosto) into settings drawer in static/js/modules/anki_web_settings.js (161 lines <= 200) and templates/anki.html (190 lines <= 200).",
+        "Updated static/js/modules/anki_web_study.js (88 lines <= 200) and static/js/modules/anki_web_ui.js (199 lines <= 200) with dynamic card refresh.",
+        "Registered R-54 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "core/anki_web_furigana.py": 182,
+        "api/routes/anki_web_routes.py": 142,
+        "static/js/modules/anki_web_settings.js": 161,
+        "static/js/modules/anki_web_study.js": 88,
+        "static/js/modules/anki_web_ui.js": 199,
+        "templates/anki.html": 190
+      }
+    }
+  },
+  {
+    "feature": "anki_web_per_deck_timer_and_stopwatch_review_persistence",
+    "timestamp": "2026-09-16T20:33:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Upgraded static/js/modules/anki_web_timer.js (158 lines <= 200) with independent per-deck timer duration persistence (localStorage anki_deck_timers) and Stopwatch / Count-Up mode (0s).",
+        "Updated static/js/modules/anki_web_settings.js (113 lines <= 200) displaying active deck name and syncing deck-specific timer slider in real time.",
+        "Integrated exact review duration recording in static/js/modules/anki_web_ui.js (198 lines <= 200) and verified SQLite revlog stores precise millisecond time per question.",
+        "Updated templates/anki.html (182 lines <= 200) with dynamic timer icon (⏱️ / ⏳) and deck target badge in settings.",
+        "Verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_timer.js": 158,
+        "static/js/modules/anki_web_settings.js": 113,
+        "static/js/modules/anki_web_ui.js": 198,
+        "templates/anki.html": 182,
+        "core/anki_sm2.py": 146
+      }
+    }
+  },
+  {
+    "feature": "anki_web_card_countdown_timer_and_pacing_bar",
+    "timestamp": "2026-09-16T20:25:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built static/js/modules/anki_web_timer.js (120 lines <= 200) with animated linear progress bar, color transitions (green/yellow/red), and auto countdown (default 15s).",
+        "Integrated countdown timer bar and visual text display at the top of the study card view in templates/anki.html (178 lines <= 200).",
+        "Added configurable Timer duration slider (0-60s with Off option) to settings drawer in static/js/modules/anki_web_settings.js (113 lines <= 200) with localStorage persistence.",
+        "Wired timer lifecycle into static/js/modules/anki_web_ui.js (197 lines <= 200): starts on card load, pauses on flip, stops on answer.",
+        "Verified 100% pass on 60-day mock simulation audit (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_timer.js": 120,
+        "static/js/modules/anki_web_settings.js": 113,
+        "static/js/modules/anki_web_ui.js": 197,
+        "templates/anki.html": 178
+      }
+    }
+  },
+  {
+    "feature": "anki_web_bracketed_reading_cleanup_and_dynamic_font_sliders",
+    "timestamp": "2026-09-16T20:20:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Implemented strip_bracketed_kanji() in api/routes/anki_web_routes.py (198 lines <= 200) comprehensively removing bracketed Japanese readings/headwords from meanings while preserving POS tags.",
+        "Built static/js/modules/anki_web_settings.js (97 lines <= 200) with independent Front (20-76px) and Back (14-36px) font size sliders.",
+        "Integrated settings drawer and real-time CSS variable bindings in templates/anki.html (165 lines <= 200) and static/js/modules/anki_web_ui.js (197 lines <= 200).",
+        "Applied card formatting across api/routes/srs_player_routes.py (100 lines <= 200) and restored Japanese headword rendering in static/js/modules/study_render.js (101 lines <= 200).",
+        "Verified 100% pass on 60-day mock simulation audit daemon (academic/test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "api/routes/anki_web_routes.py": 198,
+        "api/routes/srs_player_routes.py": 100,
+        "static/js/modules/anki_web_settings.js": 97,
+        "static/js/modules/anki_web_ui.js": 197,
+        "static/js/modules/study_render.js": 101,
+        "templates/anki.html": 165
+      }
+    }
+  },
+  {
+    "feature": "anki_web_offline_pwa_and_indexeddb_sync",
+    "timestamp": "2026-09-16T19:44:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built static/js/modules/anki_web_db.js (132 lines <= 200) implementing IndexedDB caching for decks/cards and a resilient review outbox queue.",
+        "Built static/sw_anki.js (72 lines <= 200) implementing Service Worker caching for shell HTML, JavaScript modules, and _HGSKyokashotai textbook font.",
+        "Created static/manifest_anki.json (15 lines) enabling full standalone PWA installation and background execution.",
+        "Integrated offline resilience and automatic online outbox flush into static/js/modules/anki_web_ui.js (193 lines <= 200).",
+        "Registered R-51 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified test_exam_distribution.py passes 100% across 60 simulated days."
+      ],
+      "file_line_counts": {
+        "static/js/modules/anki_web_db.js": 132,
+        "static/sw_anki.js": 72,
+        "static/manifest_anki.json": 15,
+        "static/js/modules/anki_web_ui.js": 193,
+        "templates/anki.html": 192,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 83
+      }
+    }
+  },
+  {
+    "feature": "anki_sm2_sqlite_persistence_and_tactile_undo",
+    "timestamp": "2026-09-16T19:04:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built core/anki_sm2.py (146 lines <= 200) implementing authentic Anki SM-2 interval calculations, queue transitions, and revlog inserts.",
+        "Added POST /api/anki/review endpoint to api/routes/anki_web_routes.py (150 lines <= 200) with atomic SQLite transactions.",
+        "Added instant Undo stack in static/js/modules/anki_web_ui.js (192 lines <= 200) triggered via top bar button or Z/Ctrl+Z shortcut.",
+        "Added Japanese Text-To-Speech pronunciation (ja-JP) and optimistic count updates.",
+        "Added Undo button to templates/anki.html (175 lines <= 200).",
+        "Registered R-50 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified test_exam_distribution.py passes 100% across 60 simulated days."
+      ],
+      "file_line_counts": {
+        "core/anki_sm2.py": 146,
+        "api/routes/anki_web_routes.py": 150,
+        "static/js/modules/anki_web_ui.js": 192,
+        "templates/anki.html": 175,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 81
+      }
+    }
+  },
+  {
+    "feature": "redmi_kiosk_standalone_app",
+    "timestamp": "2026-09-16T18:27:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built and compiled native standalone Kiosk Android APK (it.calq.japan - 'Japan Mastery') targeting Android 10 (API 29).",
+        "Configured fullscreen immersive single-screen container (100svh) with hardware-accelerated WebView and persistent DOM/IndexedDB storage.",
+        "Implemented strict domain lock in WebViewClient: only https://japan.calq.it is permitted; all external browsing and URL jumping are strictly blocked to eliminate study distractions.",
+        "Installed directly onto Redmi Note 7 via root pm and verified live execution: mCurrentFocus confirmed as it.calq.japan.MainActivity.",
+        "Created scripts/build_kiosk_apk.sh (154 lines <= 200) for deterministic compilation and signing.",
+        "Registered R-49 in research/registro_proattivo_rischi_e_soluzioni_mext.md."
+      ],
+      "file_line_counts": {
+        "scripts/build_kiosk_apk.sh": 154,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 78
+      }
+    }
+  },
+  {
+    "feature": "srs_interactive_card_player_phase_1",
+    "timestamp": "2026-09-16T18:12:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Built minimal, testable Phase 1 unit for native SRS player: Anki-replica card view with Japanese vocabulary cards from collection.anki2.",
+        "Created api/routes/srs_player_routes.py (116 lines <= 200) serving /api/srs/demo_cards with real card data and SM-2 interval estimates.",
+        "Created modular frontend renderers static/js/modules/srs_player_render.js (129 lines <= 200) and orchestrator static/js/modules/srs_player.js (95 lines <= 200).",
+        "Integrated interactive player directly into Tab 3 (Bunki) in templates/components/tab_bunki.html (112 lines <= 200) with top Anki counters and 4 colored bottom buttons (Ripeti, Difficile, Buono, Facile).",
+        "Supported keyboard shortcuts (Space/Enter to flip/Good, 1-4 for grading) and mobile touch tap with tactile active:scale-95 feedback.",
+        "Verified live execution: /api/srs/demo_cards returns real Japanese cards (e.g. フォーク, 発見, 意見, 交代, 伝える) in <20ms."
+      ],
+      "file_line_counts": {
+        "api/routes/srs_player_routes.py": 116,
+        "static/js/modules/srs_player.js": 95,
+        "static/js/modules/srs_player_render.js": 129,
+        "templates/components/tab_bunki.html": 112,
+        "api/app.py": 112,
+        "static/js/main.js": 119
+      }
+    }
+  },
+  {
+    "feature": "delta_sync_preservation_and_auto_full_upload_inhibition",
+    "timestamp": "2026-09-16T17:53:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of 200k full sync loop on AnkiDroid: post_sync in core/sync_and_push.py executed raw SQL UPDATE col SET mod and unconditionally called col.full_upload_or_download(upload=True) whenever full sync was indicated.",
+        "Identified secondary triggers: allow_delete=True in core/anki_sync/pipeline.py deleted notes via raw SQL violating Rust collection ledger, and reset_card_reps in core/anki_sync/anki_direct_writer.py reset reps on existing cards.",
+        "Removed raw SQL col.mod mutations from core/sync_and_push.py and core/anki_sync/anki_direct_writer.py, letting Anki native sync manage collection timestamps.",
+        "Inhibited automatic full uploads in post_sync(), strictly preserving lightweight delta sync.",
+        "Set allow_delete=False during regular vocab additions in core/anki_sync/pipeline.py and removed card reps reset.",
+        "Verified live execution: add_vocab_batch completed in 269ms with sync status required=0 (clean delta sync).",
+        "Registered R-48 in research/registro_proattivo_rischi_e_soluzioni_mext.md and confirmed 100% pass on 60-day mock simulation audit (test_exam_distribution.py)."
+      ],
+      "file_line_counts": {
+        "core/sync_and_push.py": 195,
+        "core/anki_sync/anki_direct_writer.py": 183,
+        "core/anki_sync/pipeline.py": 183,
+        "engine/study_batch_vocab.py": 143,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 77
+      }
+    }
+  },
+  {
+    "feature": "redmi_unidirectional_edge_reverse_tunnel",
+    "timestamp": "2026-09-16T17:10:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified edge connectivity constraint: Redmi Note 7 in Termux is behind cellular/home NAT (127.0.0.1/RFC1918) preventing direct inbound SSH from cloud VPS without port forwarding.",
+        "Implemented 1-hop unidirectional reverse SSH tunnel architecture in public/redmi.sh: Termux initiates reverse tunnel to japan.calq.it:2222 via restricted ed25519 tunnel key.",
+        "Enforced cryptographic port isolation on server: restrict,port-forwarding,permitlisten=\"2222\",command=\"/bin/false\" revoking PTY, shell, and commands from phone to server, ensuring 100% unidirectional control.",
+        "Updated api/app.py with lightweight /r and /scripts/redmi.sh endpoints returning text/plain bash script.",
+        "Registered R-47 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified test_exam_distribution.py passes 100% across 60 simulated days."
+      ],
+      "file_line_counts": {
+        "public/redmi.sh": 47,
+        "api/app.py": 111,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 76
+      }
+    }
+  },
+  {
+    "feature": "vocab_batch_staging_feedback_and_anki_live_telemetry",
+    "timestamp": "2026-09-16T15:40:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of perceived batch staging freeze: get_grammar_priority_vocab did not filter out existing_words from user_anki_vocab.json for unreviewed cards (reps == 0), causing /api/study/next to repetitively return the same 20 words.",
+        "Implemented curriculum-wide scan in engine/grammar_vocab_gate.py that filters out existing staged items and automatically pulls the NEXT 20 blocking REQ vocabulary items for upcoming grammar rules.",
+        "Added rich Anki telemetry and sync verification to engine/study_batch_vocab.py, engine/study_batch_kanji.py, and engine/study_batch_grammar.py returning live card counts from collection.anki2.",
+        "Implemented tactile button feedback (disabled state, in-flight spinner, completion state) and step-by-step progress tracking in static/js/modules/study.js and templates/components/tab_study.html.",
+        "Modularized UI renderers into static/js/modules/study_render.js, preserving strict <= 200 lines limit across all files.",
+        "Registered R-46 in research/registro_proattivo_rischi_e_soluzioni_mext.md and verified test_exam_distribution.py passes 100% across 60 days."
+      ],
+      "file_line_counts": {
+        "engine/grammar_vocab_gate.py": 183,
+        "engine/study_batch_vocab.py": 128,
+        "engine/study_batch_kanji.py": 104,
+        "engine/study_batch_grammar.py": 137,
+        "static/js/modules/study.js": 132,
+        "static/js/modules/study_render.js": 102,
+        "templates/components/tab_study.html": 149
+      }
+    }
+  },
+  {
+    "feature": "bunpro_ruby_clean_kana_and_autonomous_jmdict_fallback",
+    "timestamp": "2026-09-14T13:08:00Z",
+    "status": "passed",
+    "evidence": {
+      "breakthroughs": [
+        "Identified root cause of empty vocab resolution: raw Bunpro ruby strings (e.g. 少（すこ）し, 漢字（かんじ）) in source_english_to_kana failed exact matching against pure-kana JMdict reading index, resulting in empty cached resolution [].",
+        "Implemented clean_kana() regex extractor in engine/study_batch_vocab.py converting ruby brackets to canonical kana before dictionary matching and database insertion.",
+        "Added structured autonomous fallback in core/anki_sync/vocab_resolver_cache.py to ensure zero dropped cards even for colloquial/slang entries absent from JMdict.",
+        "Cleaned 17 parenthesized database entries in source_english_to_kana and purged stale resolution cache on Ionos and local SQLite.",
+        "Ran core/sync_and_push.py on Ionos: all 17 words resolved with rich JMdict linguistic structures (kanji forms, senses, POS tags, furigana segments) and were synced to AnkiWeb in 454ms.",
+        "Verified 100% pass on 60-day mock simulation audit (test_exam_distribution.py) and registered R-42 in research/registro_proattivo_rischi_e_soluzioni_mext.md."
+      ],
+      "file_line_counts": {
+        "engine/study_batch_vocab.py": 118,
+        "core/anki_sync/vocab_resolver_cache.py": 157,
+        "research/registro_proattivo_rischi_e_soluzioni_mext.md": 75
+      }
+    }
+  },
+  {
     "feature": "srs_upstream_cache_freshness_and_zero_silent_fallthrough",
     "timestamp": "2026-09-14T10:43:00Z",
     "status": "passed",

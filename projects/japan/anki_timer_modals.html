@@ -1,0 +1,107 @@
+<!-- tools/templates/components/anki_timer_modals.html — Session & Card Timer Configuration Modal -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<div id="ankiSessionTimerModal" class="hidden absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 font-mono select-none" onclick="if(event.target===this)window.ankiCloseSessionTimerModal()">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-4 sm:p-5 max-w-sm w-full space-y-3.5 shadow-2xl relative text-xs">
+    
+    <!-- Header with Tabs -->
+    <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2.5">
+      <div class="flex items-center gap-1 bg-[#141414] p-0.5 rounded-lg border border-[#2A2A2A]">
+        <button id="btnTimerTabSession" onclick="window.ankiSwitchTimerTab('session')" class="px-2.5 py-1 rounded-md text-[11px] font-bold transition tap-press bg-[#2196F3] text-white shadow-sm">🎯 Sessione</button>
+        <button id="btnTimerTabCard" onclick="window.ankiSwitchTimerTab('card')" class="px-2.5 py-1 rounded-md text-[11px] font-bold transition tap-press text-neutral-400 hover:text-white">⏱️ Per Carta</button>
+      </div>
+      <button onclick="window.ankiCloseSessionTimerModal()" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm tap-press">✕</button>
+    </div>
+
+    <!-- TAB 1: Session Timer Content -->
+    <div id="ankiTimerTabSessionContent" class="space-y-3.5">
+      <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 text-center space-y-1">
+        <div id="ankiModalTimerStatus" class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">In Corso</div>
+        <div id="ankiModalTimerDisplay" class="text-4xl font-mono font-bold text-[#66BB6A] tracking-wider">25:00</div>
+        <div id="ankiModalTimerSubtext" class="text-[11px] text-neutral-400">Target: 25 min</div>
+      </div>
+
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-neutral-300 font-semibold text-[11px]">
+          <span>Durata Target:</span>
+          <span id="ankiModalSelectedDuration" class="text-[#66BB6A] font-bold">25 min</span>
+        </div>
+        <div class="grid grid-cols-4 gap-1.5 text-[11px]">
+          <button type="button" onclick="window.ankiSetSessionPreset(0)" data-modal-min="0" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">Libero</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(5)" data-modal-min="5" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">5m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(10)" data-modal-min="10" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">10m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(15)" data-modal-min="15" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">15m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(20)" data-modal-min="20" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">20m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(25)" data-modal-min="25" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#66BB6A] bg-[#66BB6A]/20 text-white font-semibold text-center transition tap-press shadow-sm">25m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(45)" data-modal-min="45" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">45m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(60)" data-modal-min="60" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">60m</button>
+        </div>
+
+        <div class="flex items-center justify-between bg-[#161616] border border-[#2A2A2A] rounded-xl px-3 py-2 mt-2">
+          <span class="text-neutral-400 text-[11px]">Minuti Personalizzati:</span>
+          <div class="flex items-center gap-1.5">
+            <button onclick="window.ankiAdjustSessionCustomMin(-5)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">-5</button>
+            <button onclick="window.ankiAdjustSessionCustomMin(-1)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">-1</button>
+            <input type="number" id="ankiModalCustomMinInput" min="1" max="180" value="25" onchange="window.ankiSetSessionCustomMin(this.value)" class="w-12 bg-[#222] border border-[#3C3C3C] rounded text-center text-white font-bold py-1 text-xs focus:outline-none focus:border-[#66BB6A]">
+            <button onclick="window.ankiAdjustSessionCustomMin(1)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">+1</button>
+            <button onclick="window.ankiAdjustSessionCustomMin(5)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">+5</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button id="ankiModalBtnPauseResume" onclick="window.ankiTogglePauseSessionTimer()" class="py-2.5 px-3 rounded-xl bg-[#2A2A2A] hover:bg-[#333333] active:scale-95 text-white font-bold text-xs transition tap-press border border-[#3C3C3C] flex items-center justify-center gap-1.5">
+          <span id="ankiModalPauseResumeIcon">⏸</span>
+          <span id="ankiModalPauseResumeText">Pausa</span>
+        </button>
+        <button onclick="window.ankiRestartSessionTimer()" class="py-2.5 px-3 rounded-xl bg-[#2196F3] hover:bg-[#1E88E5] active:scale-95 text-white font-bold text-xs transition tap-press shadow-md flex items-center justify-center gap-1.5">
+          <span>↺</span>
+          <span>Riavvia</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 2: Card Timer Content -->
+    <div id="ankiTimerTabCardContent" class="hidden space-y-3.5">
+      <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 space-y-1.5">
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Ambito Timer</span>
+          <button type="button" onclick="window.ankiApplyTimerToAllDecks()" class="text-[10px] text-[#42A5F5] hover:underline tap-press font-bold">Applica a Tutti i Mazzi</button>
+        </div>
+        <div id="ankiCardTimerDeckLabel" class="text-xs font-bold text-white truncate">Mazzo: Generale</div>
+        <div class="text-[11px] text-neutral-400">Tempo limite di risposta per ciascuna carta</div>
+      </div>
+
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-neutral-300 font-semibold text-[11px]">
+          <span>Durata Carta:</span>
+          <span id="ankiModalCardTimerDisplay" class="text-[#FFA726] font-bold">15s</span>
+        </div>
+        <div class="grid grid-cols-4 gap-1.5 text-[11px]">
+          <button type="button" onclick="window.ankiSetCardTimerPreset(0)" data-card-sec="0" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">Off</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(5)" data-card-sec="5" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">5s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(10)" data-card-sec="10" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">10s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(15)" data-card-sec="15" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#FFA726] bg-[#FFA726]/20 text-white font-semibold text-center transition tap-press shadow-sm">15s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(20)" data-card-sec="20" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">20s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(30)" data-card-sec="30" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">30s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(45)" data-card-sec="45" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">45s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(60)" data-card-sec="60" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">60s</button>
+        </div>
+
+        <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl px-3 py-2.5 space-y-1 mt-2">
+          <div class="flex justify-between text-[11px] text-neutral-400">
+            <span>Slider Regolazione:</span>
+            <span id="labelModalCardTimerSlider" class="text-white font-bold">15s</span>
+          </div>
+          <input type="range" id="sliderModalCardTimer" min="0" max="60" step="5" value="15" oninput="window.ankiSetCardTimerPreset(this.value)" class="w-full accent-[#FFA726] cursor-pointer">
+          <div class="flex justify-between text-[10px] text-neutral-500"><span>0s (Off)</span><span>15s</span><span>30s</span><span>60s</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Action -->
+    <button onclick="window.ankiCloseSessionTimerModal()" class="w-full py-2 bg-white/5 hover:bg-white/10 active:scale-95 text-neutral-300 font-bold text-xs rounded-xl transition tap-press border border-white/5">
+      Continua Studio ➔
+    </button>
+  </div>
+</div>

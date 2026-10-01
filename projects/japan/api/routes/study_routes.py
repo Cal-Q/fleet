@@ -51,9 +51,14 @@ def post_study_add_batch(req: StudyBatchRequest):
         elif cat == "vocab":
             return add_vocab_batch(req.items)
         elif cat == "grammar":
-            return add_grammar_batch(req.items)
+            res = add_grammar_batch(req.items)
+            if res.get("status") == "error":
+                raise HTTPException(status_code=400, detail=res.get("message"))
+            return res
         else:
             raise HTTPException(status_code=400, detail=f"Categoria non valida: {cat}")
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -67,8 +72,13 @@ def post_study_add(req: StudyAddRequest):
         elif cat == "vocab":
             return add_vocab_batch([req.payload])
         elif cat == "grammar":
-            return add_grammar_batch([req.payload])
+            res = add_grammar_batch([req.payload])
+            if res.get("status") == "error":
+                raise HTTPException(status_code=400, detail=res.get("message"))
+            return res
         else:
             raise HTTPException(status_code=400, detail=f"Categoria non valida: {cat}")
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

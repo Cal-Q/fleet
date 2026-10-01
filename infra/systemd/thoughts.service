@@ -7,13 +7,18 @@ Type=simple
 User=thoughts
 Group=thoughts
 WorkingDirectory=/opt/thoughts
-Environment=PYTHONPATH=/opt/thoughts
-Environment=PORT=3040
-Environment=THOUGHTS_TOKEN=superpato777
+EnvironmentFile=/etc/default/thoughts
 ExecStart=/usr/bin/gunicorn -w 2 -b 127.0.0.1:3040 app:app
 Restart=always
 RestartSec=3
 LimitNOFILE=65536
+
+# Sandboxing & Isolated Temp
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/thoughts/data
 
 [Install]
 WantedBy=multi-user.target

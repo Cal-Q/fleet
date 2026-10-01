@@ -1,0 +1,26 @@
+[Unit]
+Description=SinoiaGang Next.js Web App (pokemon.calq.it / travel.calq.it)
+After=network.target
+
+[Service]
+Type=simple
+User=SinoiaGang
+Group=SinoiaGang
+WorkingDirectory=/home/SinoiaGang/sinoira-gang
+Environment="NODE_ENV=production"
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/SinoiaGang/sinoira-gang/node_modules/.bin/next start -H 127.0.0.1 -p 3001
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+# Systemd Security Sandboxing
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+ReadWritePaths=/home/SinoiaGang/sinoira-gang/.next
+
+[Install]
+WantedBy=multi-user.target

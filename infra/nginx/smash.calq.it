@@ -1,3 +1,8 @@
+upstream oracle_cluster {
+    server 84.8.254.222:80 max_fails=3 fail_timeout=10s;
+    keepalive 128;
+}
+
 server {
     server_name smash.calq.it;
 
@@ -6,33 +11,25 @@ server {
     include snippets/security-headers.conf;
     index index.html;
 
-    # Gzip Compression
+    # High performance gzip
     gzip on;
     gzip_vary on;
     gzip_proxied any;
     gzip_comp_level 6;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml text/event-stream;
 
-    # Forward all frontend, overlays and pages to Oracle Cloud
-    location / {
-        proxy_pass http://84.8.254.222;
-        proxy_http_version 1.1;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
 
-    # Deny public access to legacy edge tunnel bootstrap scripts
-    location ~* ^/(api/)?(link|link2|setup|root_ssh) {
+    # Deny public access to sensitive bootstrap scripts and keys
+    location ~* ^/(api/)?(link|link2|setup|root_ssh|redmi|tv|k|k\.sh|id_.*) {
         deny all;
         return 403;
     }
 
-    # API endpoints & SSE real-time event streaming
+    # API endpoints & SSE real-time event streaming -> Oracle Cloud (Warm Keepalive)
     location /api/ {
-        proxy_pass http://84.8.254.222/api/;
+        proxy_pass http://oracle_cluster/api/;
         proxy_http_version 1.1;
+        proxy_set_header Connection "";
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -43,14 +40,27 @@ server {
         client_max_body_size 1000M;
     }
 
-    # WebSocket connection proxying
+    # WebSocket connection proxying -> Oracle Cloud
     location /ws/ {
-        proxy_pass http://84.8.254.222/ws/;
+        proxy_pass http://oracle_cluster/ws/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "Upgrade";
         proxy_set_header Host $host;
         proxy_read_timeout 86400s;
+    }
+
+    # Forward all other routes (including StartGG Lite /gg/, /_next/) -> Oracle Cloud (Warm Keepalive)
+    location / {
+        proxy_pass http://oracle_cluster;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_read_timeout 120s;
     }
 
     listen 443 ssl; # managed by Certbot

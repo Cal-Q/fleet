@@ -26,80 +26,80 @@ def build_slot_tasks(day: Dict[str, Any]) -> Dict[str, Any]:
     pts = day["grammar_points"]
     srs = day.get("srs_data", {})
 
-    # Slot 1: Anki SRS
-    slot1_mins = 35 if is_buffer else (25 if is_tapering else 40)
-    slot1 = {
-        "slot": 1,
+    # Slot 1: Exam Drill
+    if is_buffer:
+        slot1 = {"slot": 1, "name": "Revisione Errori & Note Prove", "est_minutes": 20, "target": "Analisi approfondita dei commenti e dei distrattori"}
+    elif is_tapering:
+        slot1 = {"slot": 1, "name": "Warmup Leggero (5-6 quesiti)", "est_minutes": 15, "target": "Mantenimento confidenza senza affaticamento"}
+    elif phase_num == 1:
+        slot1 = {"slot": 1, "name": "Drill Mirato Parte A (10-12 Qs)", "est_minutes": 15, "target": "Target 95% su particelle e kanji elementari"}
+    elif phase_num == 2:
+        slot1 = {"slot": 1, "name": "Drill Selettivo Parte B (12-15 Qs)", "est_minutes": 25, "target": "Chirurgico su connettori e composti di Parte B"}
+    else:
+        slot1 = {"slot": 1, "name": "Full Mock Exam Cronometrato (60m)", "est_minutes": 55, "target": "Simulazione integrale A+B+C con gestione del tempo"}
+
+    # Slot 2: Verbi / Sintassi / Orale
+    if is_buffer:
+        slot2 = {"slot": 2, "name": "Riposo Cognitivo & Vocabolario Passivo", "est_minutes": 15, "target": "Ascolto passivo podcast / anime"}
+    elif phase_num == 1:
+        slot2 = {"slot": 2, "name": "Frasi Esempio & 12 Verbi Keigo", "est_minutes": 25, "target": "Lettura frasi Bunpro odierne + flashcard 12 verbi irregolari"}
+    elif phase_num == 2:
+        slot2 = {"slot": 2, "name": "Verbi Composti N2 & Forme Fisse", "est_minutes": 25, "target": "Drill coppie verbali N2 e schemi di giunzione sintattica"}
+    else:
+        slot2 = {"slot": 2, "name": "Simulazione Colloquio Orale Ambasciata", "est_minutes": 35, "target": "Shadowing risposte modello, studio plan sociologia e UniTO"}
+
+    # Slot 3: Anki SRS
+    slot3_mins = 35 if is_buffer else (25 if is_tapering else 40)
+    slot3 = {
+        "slot": 3,
         "name": "Ripasso SRS Anki (Kurogane)",
-        "est_minutes": slot1_mins,
+        "est_minutes": slot3_mins,
         "target": "Zero arretrati sulle 5.052 mature Anki",
         "projected_reps": srs.get("total_reps", 45),
         "is_buffer_mode": is_buffer
     }
 
-    # Slot 2: Grammar / Text
+    # Slot 4: Grammar / Text
     if is_buffer:
-        slot2 = {
-            "slot": 2,
+        slot4 = {
+            "slot": 4,
             "name": "Consolidamento Settimanale",
             "est_minutes": 30,
             "target": "Revisione punti deboli e schede leech della settimana",
             "items": []
         }
     elif is_tapering:
-        slot2 = {
-            "slot": 2,
+        slot4 = {
+            "slot": 4,
             "name": "Rifinitura & Lettura Calma",
             "est_minutes": 25,
             "target": "Rilettura schede riassuntive e formule fisse senza stress",
             "items": []
         }
     elif phase_num == 1:
-        slot2 = {
-            "slot": 2,
+        slot4 = {
+            "slot": 4,
             "name": f"Sprint Bunpro N4 ({len(pts)} punti)",
             "est_minutes": 45,
             "target": f"Studio intensivo di {len(pts)} punti N4",
             "items": [{"id": p["id"], "title": p["title"], "meaning": p["meaning"], "url": p.get("url", ""), "examples": p.get("examples", [])} for p in pts]
         }
     elif phase_num == 2:
-        slot2 = {
-            "slot": 2,
+        slot4 = {
+            "slot": 4,
             "name": f"Core Bunpro N3 ({len(pts)} punti)",
             "est_minutes": 45,
             "target": f"Studio intensivo di {len(pts)} punti N3",
             "items": [{"id": p["id"], "title": p["title"], "meaning": p["meaning"], "url": p.get("url", ""), "examples": p.get("examples", [])} for p in pts]
         }
     else:
-        slot2 = {
-            "slot": 2,
+        slot4 = {
+            "slot": 4,
             "name": "Skimming Accademico & Comprensione Testi",
             "est_minutes": 40,
             "target": "Lettura veloce articoli e saggi culturali livello N2/N1",
             "items": []
         }
-
-    # Slot 3: Verbi / Sintassi / Orale
-    if is_buffer:
-        slot3 = {"slot": 3, "name": "Riposo Cognitivo & Vocabolario Passivo", "est_minutes": 15, "target": "Ascolto passivo podcast / anime"}
-    elif phase_num == 1:
-        slot3 = {"slot": 3, "name": "Frasi Esempio & 12 Verbi Keigo", "est_minutes": 25, "target": "Lettura frasi Bunpro odierne + flashcard 12 verbi irregolari"}
-    elif phase_num == 2:
-        slot3 = {"slot": 3, "name": "Verbi Composti N2 & Forme Fisse", "est_minutes": 25, "target": "Drill coppie verbali N2 e schemi di giunzione sintattica"}
-    else:
-        slot3 = {"slot": 3, "name": "Simulazione Colloquio Orale Ambasciata", "est_minutes": 35, "target": "Shadowing risposte modello, studio plan sociologia e UniTO"}
-
-    # Slot 4: Exam Drill
-    if is_buffer:
-        slot4 = {"slot": 4, "name": "Revisione Errori & Note Prove", "est_minutes": 20, "target": "Analisi approfondita dei commenti e dei distrattori"}
-    elif is_tapering:
-        slot4 = {"slot": 4, "name": "Warmup Leggero (5-6 quesiti)", "est_minutes": 15, "target": "Mantenimento confidenza senza affaticamento"}
-    elif phase_num == 1:
-        slot4 = {"slot": 4, "name": "Drill Mirato Parte A (10-12 Qs)", "est_minutes": 15, "target": "Target 95% su particelle e kanji elementari"}
-    elif phase_num == 2:
-        slot4 = {"slot": 4, "name": "Drill Selettivo Parte B (12-15 Qs)", "est_minutes": 25, "target": "Chirurgico su connettori e composti di Parte B"}
-    else:
-        slot4 = {"slot": 4, "name": "Full Mock Exam Cronometrato (60m)", "est_minutes": 55, "target": "Simulazione integrale A+B+C con gestione del tempo"}
 
     total_mins = slot1["est_minutes"] + slot2["est_minutes"] + slot3["est_minutes"] + slot4["est_minutes"]
     return {"slot1": slot1, "slot2": slot2, "slot3": slot3, "slot4": slot4, "total_minutes": total_mins}

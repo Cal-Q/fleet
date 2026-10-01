@@ -1,0 +1,14 @@
+[Unit]
+Description=UniTO Lingua Giapponese 1 (Moro) Telemetry Engine
+After=network.target
+
+[Service]
+Type=simple
+User=tutor
+WorkingDirectory=/mnt/workspaces/tutor/japan_exam_tutor
+ExecStart=/usr/bin/python3 /mnt/workspaces/tutor/japan_exam_tutor/core/telemetry_service.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

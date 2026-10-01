@@ -11,9 +11,11 @@ import sys
 from datetime import datetime
 from typing import Any, Dict
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.db import open_dict_db
+
 WORKSPACE_DIR = "/opt/japan"
 GOALPOSTS_FILE = os.path.join(WORKSPACE_DIR, "applications", "sunday_goalposts.json")
-PROGRESS_FILE = os.path.join(WORKSPACE_DIR, "japanese", "grammar_progress.json")
 CAREER_FILE = os.path.join(WORKSPACE_DIR, "applications", "unito_career.json")
 
 
@@ -24,7 +26,9 @@ def load_json(path: str) -> Dict[str, Any]:
     return {}
 
 
-def get_current_week_goalpost(goalposts_data: Dict[str, Any], date_str: str) -> Dict[str, Any]:
+def get_current_week_goalpost(
+    goalposts_data: Dict[str, Any], date_str: str
+) -> Dict[str, Any]:
     """Finds the active goalpost for the given date or the closest upcoming Sunday."""
     weeks = goalposts_data.get("weeks", [])
     today = datetime.strptime(date_str, "%Y-%m-%d")
@@ -44,19 +48,38 @@ def run_weekly_review(target_date_str: str = None) -> Dict[str, Any]:
         target_date_str = datetime.now().strftime("%Y-%m-%d")
 
     goalposts = load_json(GOALPOSTS_FILE)
-    progress = load_json(PROGRESS_FILE)
     career = load_json(CAREER_FILE)
 
     current_gp = get_current_week_goalpost(goalposts, target_date_str)
-    summary = progress.get("summary", {})
+    g_stats = {}
+    try:
+        conn = open_dict_db(read_only=True)
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT level,
+                   sum(case when in_anki=1 then 1 else 0 end),
+                   sum(case when in_anki=0 then 1 else 0 end),
+                   count(*)
+            FROM bunpro_grammar_points
+            GROUP BY level
+            """
+        )
+        g_stats = {
+            r[0]: {"studied": r[1] or 0, "unstudied": r[2] or 0, "total": r[3]}
+            for r in cur.fetchall()
+        }
+        conn.close()
+    except Exception:
+        pass
 
-    n4_info = summary.get("N4", {})
-    n3_info = summary.get("N3", {})
-    studied_n4 = n4_info.get("studied", 123)
-    total_n4 = n4_info.get("total", 185)
-    unstudied_n4 = n4_info.get("unstudied", 62)
-    studied_n3 = n3_info.get("studied", 7)
-    total_n3 = n3_info.get("total", 220)
+    n4_info = g_stats.get("N4", {})
+    n3_info = g_stats.get("N3", {})
+    studied_n4 = n4_info.get("studied", 0)
+    total_n4 = n4_info.get("total", 0)
+    unstudied_n4 = n4_info.get("unstudied", 0)
+    studied_n3 = n3_info.get("studied", 0)
+    total_n3 = n3_info.get("total", 0)
 
     report = {
         "audit_date": target_date_str,
@@ -86,12 +109,17 @@ def print_cli_summary(report: Dict[str, Any]):
     print(f"📊 MEXT SUNDAY REVIEW: SETTIMANA {report['week']} ({report['goalpost_date']})")
     print(f"🎯 Fase Operativa: {report['phase']}")
     print("=" * 72)
-    print(f"📚 Grammatica Live:  N4: {report['live_metrics']['n4_studied']} ({report['live_metrics']['n4_remaining']} residue) | N3: {report['live_metrics']['n3_studied']}")
+    n4_std = report["live_metrics"]["n4_studied"]
+    n4_rem = report["live_metrics"]["n4_remaining"]
+    n3_std = report["live_metrics"]["n3_studied"]
+    print(f"📚 Grammatica Live:  N4: {n4_std} ({n4_rem} residue) | N3: {n3_std}")
     print(f"🎯 Target Settimana: {report['targets']['grammar']}")
     print(f"📝 Target Kanji:     {report['targets']['kanji']}")
     print(f"📖 Target Vocab:     {report['targets']['vocab']}")
     print(f"🏛️ Milestone Admin:  {report['targets']['admin']}")
-    print(f"⭐ GPA MEXT Live:    {report['live_metrics']['mext_gpa']} / 3.00 (CFU d'area: {report['live_metrics']['cfu_area_certified']})")
+    gpa = report["live_metrics"]["mext_gpa"]
+    cfu = report["live_metrics"]["cfu_area_certified"]
+    print(f"⭐ GPA MEXT Live:    {gpa} / 3.00 (CFU d'area: {cfu})")
     print("=" * 72)
 
 

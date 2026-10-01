@@ -1,0 +1,17 @@
+[Unit]
+Description=StartGG Lite High Performance Client
+After=network.target
+
+[Service]
+Type=simple
+User=startgg
+WorkingDirectory=/opt/startgg
+Environment=PYTHONPATH=/opt/startgg
+Environment=STARTGG_PORT=3044
+Environment=STARTGG_HOST=127.0.0.1
+ExecStart=/opt/startgg/venv/bin/python -m backend.main
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

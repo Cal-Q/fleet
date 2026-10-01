@@ -3,126 +3,228 @@
     "question_id": "MEXT-A-01",
     "comment": "Easy",
     "selected_answer": "A",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-A-02": {
     "question_id": "MEXT-A-02",
     "comment": "Easy",
     "selected_answer": "B",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-A-03": {
     "question_id": "MEXT-A-03",
     "comment": "Could be \"AU\" but I don't I feel like ma ni au is better",
     "selected_answer": "A",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-B-01": {
     "question_id": "MEXT-B-01",
     "comment": "I don't know this. Many kanji and vocabs I don't know.",
     "selected_answer": "A",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-B-02": {
     "question_id": "MEXT-B-02",
     "comment": "I literally have no idea",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-B-03": {
     "question_id": "MEXT-B-03",
     "comment": "A lot of words and kanji I do not know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-C-01": {
     "question_id": "MEXT-C-01",
     "comment": "",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-A-09": {
     "question_id": "MEXT-2014-A-09",
     "comment": "Here i'm not convinced",
     "selected_answer": "D",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-A-16": {
     "question_id": "MEXT-2014-A-16",
     "comment": "I don't know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-01": {
     "question_id": "MEXT-2014-B-01",
     "comment": "I don't know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-02": {
     "question_id": "MEXT-2014-B-02",
     "comment": "I dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-03": {
     "question_id": "MEXT-2014-B-03",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-04": {
     "question_id": "MEXT-2014-B-04",
     "comment": "I'm not convinced",
     "selected_answer": "C",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-05": {
     "question_id": "MEXT-2014-B-05",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-06": {
     "question_id": "MEXT-2014-B-06",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-08": {
     "question_id": "MEXT-2014-B-08",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-09": {
     "question_id": "MEXT-2014-B-09",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-B-10": {
     "question_id": "MEXT-2014-B-10",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-C-01": {
     "question_id": "MEXT-2014-C-01",
     "comment": "Dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-C-02": {
     "question_id": "MEXT-2014-C-02",
     "comment": "Id ont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
   },
   "MEXT-2014-C-03": {
     "question_id": "MEXT-2014-C-03",
     "comment": "dont know",
     "selected_answer": "",
-    "updated_at": "2026-09-12T23:03:31.188163"
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-21": {
+    "question_id": "DRILL-A-21",
+    "comment": "Verificato radicale",
+    "selected_answer": "A",
+    "updated_at": "2026-09-13T22:03:25.118236"
+  },
+  "DRILL-A-66": {
+    "question_id": "DRILL-A-66",
+    "comment": "Test note verify",
+    "selected_answer": "A",
+    "updated_at": "2026-09-13T22:26:51.352300"
+  },
+  "DRILL-A-111": {
+    "question_id": "DRILL-A-111",
+    "comment": "I don't know the word in there what it means but I can guess the reading",
+    "selected_answer": "B",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-112": {
+    "question_id": "DRILL-A-112",
+    "comment": "I don't know this worrd, nor the 2nd and 3rd kanji word in the sentence",
+    "selected_answer": "C",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-113": {
+    "question_id": "DRILL-A-113",
+    "comment": "I don't know the first kanji I see in here, nor the word in the pharenteses",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-114": {
+    "question_id": "DRILL-A-114",
+    "comment": "I don't know this word, nor many inside here",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-115": {
+    "question_id": "DRILL-A-115",
+    "comment": "I don't know the word, nor the 3rd kanji word",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-116": {
+    "question_id": "DRILL-A-116",
+    "comment": "I dont know the word, nor many other in this sentence",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-117": {
+    "question_id": "DRILL-A-117",
+    "comment": "I don't know many words in here",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-118": {
+    "question_id": "DRILL-A-118",
+    "comment": "Dont know the word",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-119": {
+    "question_id": "DRILL-A-119",
+    "comment": "Dont know many words",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-120": {
+    "question_id": "DRILL-A-120",
+    "comment": "Dont know",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-121": {
+    "question_id": "DRILL-A-121",
+    "comment": "Dont know",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-122": {
+    "question_id": "DRILL-A-122",
+    "comment": "dont know",
+    "selected_answer": "",
+    "updated_at": "2026-09-13T23:31:13.635623"
+  },
+  "DRILL-A-83": {
+    "question_id": "DRILL-A-83",
+    "comment": "",
+    "selected_answer": "A",
+    "updated_at": "2026-09-18T22:12:47.162831"
+  },
+  "DRILL-A-96": {
+    "question_id": "DRILL-A-96",
+    "comment": "Narimasu mi semShim",
+    "selected_answer": "A",
+    "updated_at": "2026-09-18T22:11:07.053119"
+  },
+  "DRILL-A-109": {
+    "question_id": "DRILL-A-109",
+    "comment": "",
+    "selected_answer": "B",
+    "updated_at": "2026-09-18T22:13:38.036317"
   }
 }

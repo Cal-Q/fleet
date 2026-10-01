@@ -62,8 +62,18 @@ def get_status():
     return data
 
 
+VALID_STATUSES = {
+    "certified", "in_progress", "pending_issuance", "to_collect",
+    "pending", "optional", "completed", "not_started"
+}
+
+
 @router.post("/api/status/update")
 def update_status(req: StatusUpdateRequest):
+    if req.status not in VALID_STATUSES:
+        raise HTTPException(status_code=400, detail="Stato non valido.")
+    if req.notes is not None and len(req.notes) > 2000:
+        req.notes = req.notes[:2000]
     if not os.path.exists(STATUS_FILE):
         raise HTTPException(status_code=404, detail="File di stato non trovato.")
     with open(STATUS_FILE, "r", encoding="utf-8") as f:

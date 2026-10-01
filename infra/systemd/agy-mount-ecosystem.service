@@ -1,0 +1,12 @@
+[Unit]
+Description=Antigravity Multi-Server Ecosystem Mounts
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/agy-mount-all
+
+[Install]
+WantedBy=multi-user.target

@@ -5,34 +5,44 @@ Extracts, orders, and clusters unstudied grammar points (N4, N3, N2) into cohere
 Strictly <= 200 lines invariant.
 """
 
-import json
-import os
 from typing import Any, Dict, List
 
-BASE_DIR = "/opt/japan"
-GRAMMAR_FILE = os.path.join(BASE_DIR, "japanese", "grammar_progress.json")
-POINTS_FILE = os.path.join(BASE_DIR, "japanese", "bunpro_grammar_points.json")
-
-
-def load_json_safe(path: str, default: Any = None) -> Any:
-    if os.path.exists(path):
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            return default
-    return default
+from core.db import open_dict_db
 
 
 def get_unstudied_by_level() -> Dict[str, List[Dict[str, Any]]]:
-    gp = load_json_safe(GRAMMAR_FILE, {})
-    unstudied = gp.get("unstudied_by_level", {})
-    return {
-        "N4": unstudied.get("N4", []),
-        "N3": unstudied.get("N3", []),
-        "N2": unstudied.get("N2", []),
-        "N1": unstudied.get("N1", []),
+    levels: Dict[str, List[Dict[str, Any]]] = {
+        "N4": [],
+        "N3": [],
+        "N2": [],
+        "N1": [],
     }
+    try:
+        conn = open_dict_db(read_only=True)
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT id, level, title, meaning, category, url
+            FROM bunpro_grammar_points
+            WHERE in_anki = 0
+            ORDER BY id ASC
+            """
+        )
+        for r in cur.fetchall():
+            lvl = r[1]
+            if lvl in levels:
+                levels[lvl].append({
+                    "id": r[0],
+                    "level": r[1],
+                    "title": r[2],
+                    "meaning": r[3] or "",
+                    "category": r[4] or "",
+                    "url": r[5] or f"https://bunpro.jp/grammar_points/{r[0]}",
+                })
+        conn.close()
+    except Exception:
+        pass
+    return levels
 
 
 def cluster_n4_points(points: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

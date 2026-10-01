@@ -24,7 +24,7 @@ def run_audit(days: int = 60) -> bool:
         cur_date = (base_date + timedelta(days=d)).strftime("%Y-%m-%d")
 
         # 1. Audit Section A daily battery
-        qs_a = get_questions_for_session("A")
+        qs_a = get_questions_for_session("A", target_date=cur_date)
         if len(qs_a) != 12:
             raise AssertionError(f"Day {cur_date}: Expected 12 Part A questions, got {len(qs_a)}")
 
@@ -44,7 +44,7 @@ def run_audit(days: int = 60) -> bool:
             raise AssertionError(f"Day {cur_date}: Grammar/Particles outside expected range: {len(grammar)}")
 
         # 2. Audit Full Mock battery
-        qs_mock = get_questions_for_session("MOCK")
+        qs_mock = get_questions_for_session("MOCK", target_date=cur_date)
         if len(qs_mock) != 30:
             raise AssertionError(f"Day {cur_date}: Expected 30 questions in MOCK, got {len(qs_mock)}")
 

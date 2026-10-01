@@ -1,0 +1,445 @@
+server {
+    server_name calq.it www.calq.it;
+    client_max_body_size 1000M;
+    root /var/www/calq;
+    index index.html;
+
+    include snippets/block-dotfiles.conf;
+    include snippets/security-headers.conf;
+
+    location = /transcripts/review {
+        return 301 https://$host/to-do;
+    }
+
+    location = /transcripts/review.html {
+        return 301 https://$host/to-do;
+    }
+
+    location = /transcripts {
+        return 301 https://$host/transcripts/;
+    }
+
+    location /transcripts/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://127.0.0.1:8877/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Accept-Encoding "";
+        proxy_buffering off;
+        proxy_cache off;
+        client_max_body_size 2000M;
+    }
+
+    
+
+    location = /flying-thoughts/ {
+        return 301 https://$host/thoughts/;
+    }
+
+    location = /thoughts/api/auth/unlock {
+        auth_basic off;
+        limit_req zone=thoughts_auth_limit burst=3 nodelay;
+        client_max_body_size 16k;
+        proxy_pass http://127.0.0.1:3040/api/auth/unlock;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /thoughts/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+        proxy_pass http://127.0.0.1:3040/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_cache off;
+    }
+
+    location = /unito {
+        return 301 https://$host/unito/;
+    }
+
+    location /unito/api/telemetry/ {
+        auth_basic off;
+        limit_req zone=unito_telemetry_limit burst=5 nodelay;
+        client_max_body_size 64k;
+        proxy_pass http://127.0.0.1:8765/api/telemetry/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_cache off;
+    }
+
+    location /unito/api/moro/ {
+        auth_basic off;
+        proxy_pass http://127.0.0.1:8765/api/moro/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_cache off;
+    }
+
+    location /unito/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+        add_header Cache-Control "no-cache, must-revalidate, max-age=0" always;
+        include snippets/security-headers.conf;
+        try_files $uri $uri/ /unito/index.html;
+    }
+
+
+    location = /security {
+        return 301 https://$host/security/;
+    }
+
+    location ^~ /security/css/ {
+        proxy_pass http://84.8.254.222/security/css/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /security/js/ {
+        proxy_pass http://84.8.254.222/security/js/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /security/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://84.8.254.222/security/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+
+    location = /fitness {
+        return 301 https://$host/fitness/;
+    }
+
+    location ^~ /fitness/css/ {
+        proxy_pass http://127.0.0.1:4400/fitness/css/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /fitness/js/ {
+        proxy_pass http://127.0.0.1:4400/fitness/js/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /fitness/assets/ {
+        proxy_pass http://127.0.0.1:4400/fitness/assets/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /fitness/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://127.0.0.1:4400/fitness/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location = /mindfulness {
+        return 301 https://$host/mindfulness/;
+    }
+
+    location = /mindfulness/manifest.json {
+        proxy_pass http://127.0.0.1:4500/mindfulness/manifest.json;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /mindfulness/css/ {
+        proxy_pass http://127.0.0.1:4500/mindfulness/css/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /mindfulness/js/ {
+        proxy_pass http://127.0.0.1:4500/mindfulness/js/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /mindfulness/assets/ {
+        proxy_pass http://127.0.0.1:4500/mindfulness/assets/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /mindfulness/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://127.0.0.1:4500/mindfulness/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location = /vinted {
+        return 301 https://$host/vinted/;
+    }
+
+    location ^~ /vinted/css/ {
+        proxy_pass http://84.8.254.222/vinted/css/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /vinted/js/ {
+        proxy_pass http://84.8.254.222/vinted/js/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /vinted/vnc/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://84.8.254.222/vinted/vnc/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /vinted/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://84.8.254.222/vinted/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+
+
+
+
+    location = /cardmarket {
+        return 301 https://$host/cardmarket/;
+    }
+
+    location ^~ /cardmarket/images/ {
+        proxy_pass http://84.8.254.222/cardmarket/images/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /cardmarket/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+
+        proxy_pass http://84.8.254.222/cardmarket/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location = /mamma {
+        return 301 https://$host/mamma/;
+    }
+
+    location /mamma/ {
+        proxy_pass http://84.8.254.222/mamma/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location = /sbit {
+        return 301 https://$host/sbit/;
+    }
+
+    location /sbit/ {
+        proxy_pass http://84.8.254.222/sbit/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location = /mammalibri {
+        return 301 https://$host/mammalibri/;
+    }
+
+    location ^~ /mammalibri/css/ {
+        proxy_pass http://84.8.254.222/mammalibri/css/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /mammalibri/js/ {
+        proxy_pass http://84.8.254.222/mammalibri/js/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ^~ /mammalibri/images/ {
+        proxy_pass http://84.8.254.222/mammalibri/images/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /mammalibri/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+        proxy_pass http://84.8.254.222/mammalibri/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+
+
+    location ~* ^/(tv|api/tv) {
+        deny all;
+        return 403;
+    }
+
+    location /to-do/ {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+        alias /var/www/calq/;
+        index index.html;
+    }
+
+    location = /to-do {
+        return 301 https://$host/to-do/;
+    }
+
+    location = / {
+        return 302 https://$host/thoughts/;
+    }
+
+    location / {
+        auth_request /internal_hub_auth;
+        error_page 401 =302 https://$host/login?next=$request_uri;
+        error_page 403 =302 https://$host/login?next=$request_uri;
+        try_files $uri $uri/ /index.html;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/calq.it/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/calq.it/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.calq.it) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    if ($host = calq.it) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    listen [::]:80;
+    server_name calq.it www.calq.it;
+    client_max_body_size 1000M;
+    return 404; # managed by Certbot
+}

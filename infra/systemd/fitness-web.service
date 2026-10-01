@@ -1,0 +1,24 @@
+[Unit]
+Description=Fitness Console & Smart Scale Telemetry (calq.it/fitness)
+After=network.target
+
+[Service]
+Type=simple
+User=fitness
+WorkingDirectory=/opt/fitness
+Environment="PYTHONPATH=/opt/fitness"
+ExecStart=/usr/bin/python3 -m uvicorn api.server:app --host 127.0.0.1 --port 4400
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+# Systemd Security Sandboxing
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+ReadWritePaths=/opt/fitness/data
+
+[Install]
+WantedBy=multi-user.target

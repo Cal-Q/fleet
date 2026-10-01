@@ -1,0 +1,17 @@
+[Unit]
+Description=Mindfulness 30m Time Consciousness & Reflection Web App
+After=network.target
+
+[Service]
+Type=simple
+User=master
+WorkingDirectory=/opt/mindfulness
+Environment="PYTHONPATH=/opt/mindfulness"
+Environment="MINDFULNESS_PORT=4500"
+Environment="MINDFULNESS_HOST=0.0.0.0"
+ExecStart=/usr/bin/python3 -m uvicorn api.server:app --host 0.0.0.0 --port 4500
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

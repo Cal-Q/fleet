@@ -21,12 +21,12 @@ Unified Japanese language mastery, Anki SRS engine, and MEXT scholarship qualifi
 
 - **Grammar Gating (Vocab-First Comprehensible Input)**:
   Le regole grammaticali Bunpro in `/api/study/next` rimangono bloccate fino a quando tutti i vocaboli contenuti nelle rispettive frasi d'esempio non sono stati studiati ($\ge 1$ ripetizione in Anki), eliminando l'attrito di decodifica lessicale durante lo studio della sintassi.
-- **Progressione Kanji Resiliente (5 nuovi/giorno)**:
-  - **Patrimonio**: 1.105 kanji maturi (`reps > 0`), 1.204 residui.
-  - **Fase 1 (Giorni 1–6)**: Chiusura integrale dei 30 kanji residui N5+N4 (7 N5 + 23 N4).
+- **Progressione Kanji Resiliente & Gating Deterministico (5 nuovi/giorno)**:
+  - **Patrimonio**: 1.149 kanji maturi (`reps > 0`), 1.160 carte fittizie non studiate eliminate integralmente da `Kanji - Image Deck`.
+  - **Gating Deterministico Esclusivo via Web**: Nessun kanji dormiente viene caricato automaticamente in Anki; tutte le nuove immissioni avvengono tassativamente tramite `japan.calq.it` (Stage 2 Studio Batch) con priorità ai kanji dei vocaboli delle imminenti regole grammaticali.
+  - **Fase 1 (Giorni 1–6)**: Chiusura integrale dei kanji residui N5+N4.
   - **Fase 2 (Giorni 7–56)**: Padronanza integrale dei 251 kanji N3 a supporto delle Sezioni A e B.
   - **Fase 3 (Giorni 57–160)**: Consolidamento selettivo N2/N1, raggiungendo ~1.850–1.900 caratteri prima dell'esame.
-  - **Prioritizzazione Dinamica**: La coda privilegia prioritariamente i kanji presenti nei vocaboli delle imminenti regole grammaticali.
 - **Protocollo Kintsugi per Carte Sanguisuga (*Leeches*)**:
   Le carte sospese ripetutamente da Anki (`cards.queue = -1`) non vengono abbandonate, ma riabilitate attivamente tramite il modulo [bunki.js](file:///mnt/workspaces/japan/static/js/modules/bunki.js) con scomposizione etimologica dei radicali.
 
@@ -53,7 +53,7 @@ Unified Japanese language mastery, Anki SRS engine, and MEXT scholarship qualifi
 ## 🌐 Web Platform & Console Live (`https://japan.calq.it/`)
 
 La web console è strutturata in 5 stage orizzontali navigabili a scorrimento fluido:
-1. **日課 Routine**: Command center quotidiano con i 4 slot orari e i 23 giorni cuscinetto.
+1. **日課 Routine**: Command center quotidiano con i 4 slot sequenziali (Slot 1 Drill MEXT & Mock, Slot 2 Simulazione Orale & Keigo, Slot 3 Ripasso SRS Anki, Slot 4 Nuovi Punti Bunpro) e i 23 giorni cuscinetto.
 2. **学習 Studio**: Batch di studio guidato con sblocco progressivo kanji, vocaboli e grammatica.
 3. **復習 Bunki**: Telemetria Anki SRS, verifica zero arretrati e riabilitazione leech.
 4. **試練 Prove**: Motore d'esame a rotazione giornaliera con cronometro di pacing e simulatore orale.
@@ -79,6 +79,16 @@ python3 core/anki_cli.py reschedule --days 14
 
 ---
 
+## 📱 Android Offline Kiosk & Sincronizzazione SRS (`it.calq.japan`)
+
+- **Applicazione Standalone Kiosk**: APK compilato nativamente (`scripts/build_kiosk_apk.sh`) con toolchain CLI (AAPT, ECJ, DX, APKSigner) per dispositivi dedicati (Redmi Note 7, Android 10).
+- **Intercettazione Locale WebView (`shouldInterceptRequest`)**: Risolve `anki.html`, `anki_bundle.js` e `tailwind.js` direttamente dalla memoria APK locale, eliminando qualsiasi dipendenza di rete e conservando l'origine `https://japan.calq.it` (cookie, LocalStorage e IndexedDB condivisi).
+- **Client Atomico Pre-compilato**: `npx esbuild static/js/modules/anki_main.js --bundle --format=iife --outfile=static/js/anki_bundle.js` compila i 9 sottomoduli modulari in un unico file IIFE per evitare waterfall HTTP offline.
+- **IndexedDB Outbox Pattern**: Le sessioni di studio offline salvano i voti SRS nello store locale `review_outbox` e sincronizzano automaticamente verso SQLite `collection.anki2` (`/api/anki/sync_offline_reviews`) al ripristino della connettività.
+- **Runbook Operativo & Debug ADB**: Dettagli completi in [`research/runbook_android_offline_kiosk_architecture.md`](file:///mnt/workspaces/japan/research/runbook_android_offline_kiosk_architecture.md).
+
+---
+
 ## 🛡️ Invarianti di Sviluppo & Governance
 
 1. **Limite Rigoroso $\le 200$ Righe per File**: Nessun file Python, JS o HTML può superare le 200 righe.
@@ -89,3 +99,6 @@ python3 core/anki_cli.py reschedule --days 14
 6. **Gating Frasi di Supporto & Furigana (Invariante 26)**: In Fase 1, nessun kanji sopra N4 nelle frasi carrier privo di furigana glossata.
 7. **Audit Pre-Commit a 60 Giorni (Invariante 27)**: Validazione continua con `python3 academic/test_exam_distribution.py`.
 8. **Freschezza Cache SRS & Zero Fallthrough Silenzioso (Invariante 28)**: Controllo live `mtime` del database Anki e divieto categorico di salti di livello (N3/N2) durante la Fase 1 N4.
+9. **Gating Deterministico Vocaboli & Prioritizzazione in Cima alla Coda (Invariante 30)**: Aggiunte ad Anki circoscritte solo ai vocaboli esplicitamente richiesti/staged dall'utente, prioritizzazione front-of-queue (`due = 1..N`), e sanificazione fonetica `clean_kana` con zero flooding di arretrati storici.
+10. **Audit Deterministico Multi-Area via Browser Reale (Invariante 34)**: Validazione E2E obbligatoria tramite browser headless (`python3 scripts/audit_browser_e2e.py`) che naviga tutti i 5 stage (Routine, Studio, Bunki, Prove, Dossier), testa i controlli interattivi ed asserisce zero errori in console JS prima di dichiarare qualsiasi modifica completata.
+11. **Emulazione Headless Offline CDP & Sincronizzazione Atomica Outbox (Invariante 35)**: Nessuna modifica all'app di studio mobile/PWA può essere considerata completata senza aver eseguito con successo la suite di emulazione offline (`python3 scripts/test_offline_e2e.py` e `scripts/test_offline_cold_boot.py`) su Chromium headless via Chrome DevTools Protocol (`Network.emulateNetworkConditions`). Il test verifica fisicamente il distacco di rete, la continuità della coda senza terminazioni premature (Bug 1), l'accumulo in outbox IndexedDB, il ripristino di rete, la sincronizzazione batch atomica verso `/api/anki/sync_offline_reviews` e la consistenza delle righe in `revlog` nel database SQLite `collection.anki2` con zero perdite o collisioni (Bug 2).

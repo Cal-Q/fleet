@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AnkiDroid • japan.calq.it/anki</title>
+  <link rel="manifest" href="/static/manifest_anki.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icon-192.png">
+  <meta name="theme-color" content="#121212">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="/static/js/tailwind.js"></script>
+  <style>
+    :root { --anki-front-font-size: 38px; --anki-back-font-size: 20px; }
+    @font-face { font-family: 'textbook'; src: url('/media/_HGSKyokashotai.ttf') format('truetype'); font-display: swap; }
+    body { font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color: #121212; color: #E0E0E0; }
+    .jp-font, #ankiCardFront, #ankiCardReading { font-family: 'textbook', '_HGSKyokashotai', 'BIZ UDPMincho', 'Noto Serif JP', serif !important; }
+    #ankiCardFront { font-size: var(--anki-front-font-size, 38px); } #ankiCardReading { font-size: var(--anki-back-font-size, 20px); } #ankiCardMeaning { font-size: calc(var(--anki-back-font-size, 20px) * 0.9); }
+    ruby { ruby-position: over; ruby-align: center; } rt { font-size: 0.52em; color: #FFFFFF; user-select: none; line-height: 1; opacity: 0.95; }
+    .anki-btn-wrong { background-color: #2D1414; color: #EF5350; border: 1.5px solid rgba(239,83,80,0.4); } .anki-btn-wrong:active { background-color: #EF5350; color: #FFF; transform: scale(0.95); }
+    .anki-btn-correct { background-color: #142D1C; color: #66BB6A; border: 1.5px solid rgba(102,187,106,0.4); } .anki-btn-correct:active { background-color: #66BB6A; color: #FFF; transform: scale(0.95); }
+    .tap-press:active { transform: scale(0.96); } .stamp-badge { pointer-events: none; opacity: 0; transition: opacity 0.1s ease-out; }
+  </style>
+  <script id="anki-initial-decks" type="application/json">[]</script>
+  <script id="anki-initial-settings" type="application/json">{"back_font_size": 20, "collapsed_decks": [], "deck_timers": {}, "front_font_size": 38, "furigana_mode": "unstudied", "session_target_min": 25, "timer_duration": 15}</script>
+  <script>
+    try { const _el = document.getElementById('anki-initial-decks'); window.__INITIAL_DECKS__ = (_el && _el.textContent && _el.textContent.trim().startsWith('[')) ? JSON.parse(_el.textContent) : []; } catch(e) { window.__INITIAL_DECKS__ = []; }
+    try { const _sEl = document.getElementById('anki-initial-settings'); window.__INITIAL_SETTINGS__ = (_sEl && _sEl.textContent && _sEl.textContent.trim().startsWith('{')) ? JSON.parse(_sEl.textContent) : {}; } catch(e) { window.__INITIAL_SETTINGS__ = {}; }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw_anki.js', { scope: '/' }).then(r => r.update()).catch(() => {});
+      });
+    }
+  </script>
+</head>
+<body class="h-[100svh] w-screen overflow-hidden flex flex-col antialiased bg-[#121212] text-[#E0E0E0] select-none">
+  <!-- Masthead Header -->
+  <!-- tools/templates/components/anki_header.html — Kiosk Masthead & Quick Actions -->
+<!-- Strictly <= 200 lines invariant. -->
+<header class="flex-shrink-0 bg-[#1E1E1E] text-white px-3 sm:px-4 h-14 flex items-center justify-between border-b border-[#2C2C2C] shadow-md z-30">
+  <div class="flex items-center gap-2 min-w-0">
+    <button id="ankiNavBackBtn" onclick="window.ankiShowDeckList()" class="hidden p-1.5 rounded-full hover:bg-white/10 transition tap-press text-neutral-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+    </button>
+    <div class="flex items-center gap-1.5 min-w-0">
+      <span class="w-6 h-6 rounded bg-[#2196F3] text-white font-mono font-bold text-xs flex items-center justify-center flex-shrink-0 shadow">★</span>
+      <h1 id="ankiAppTitle" class="font-bold text-sm sm:text-base tracking-wide truncate">Japan Mastery • Mazzi</h1>
+      <button id="ankiHeaderVersionBtn" onclick="window.ankiOpenUpdateModal()" class="px-1.5 py-0.2 rounded bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/40 text-[10px] font-mono font-bold flex-shrink-0 transition tap-press" title="Controlla Aggiornamenti OTA">v2.5.2</button>
+    </div>
+  </div>
+  <div class="flex items-center gap-1 font-mono text-xs flex-shrink-0">
+    <div id="ankiNeuralStatusPill" title="Stato Modello Neurale TPU" class="flex items-center gap-1 bg-[#121212] border border-[#2C2C2C] rounded-full px-2 py-0.5 text-[11px] shadow-inner select-none"><span id="ankiNeuralStatusIcon">⌛</span><span id="ankiNeuralStatusText" class="text-neutral-500 text-[10px]">AI</span></div>
+    <div id="ankiTopDuePill" class="hidden flex items-center bg-[#121212] border border-[#2C2C2C] rounded-full px-2 py-0.5 text-[11px] gap-1.5 shadow-inner"><span id="ankiCountNew" class="text-[#42A5F5] font-bold">0</span><span id="ankiCountLrn" class="text-[#EF5350] font-bold">0</span><span id="ankiCountRev" class="text-[#66BB6A] font-bold">0</span></div>
+    <button onclick="window.ankiUndo()" class="p-1.5 rounded-full hover:bg-white/10 text-neutral-300 transition tap-press" title="Annulla Ultima Carta (Z / Swipe Giù)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a5 5 0 015 5v2a5 5 0 01-5 5H6m-3-12l4-4m-4 4l4 4"/></svg></button>
+    <button onclick="window.ankiOpenUpdateModal()" class="p-1.5 rounded-full hover:bg-white/10 text-neutral-300 transition tap-press" title="Aggiornamenti & Versione"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></button>
+    <button onclick="window.ankiToggleLogViewer()" class="p-1.5 rounded-full hover:bg-white/10 text-neutral-300 transition tap-press" title="Registro Diagnostico / Debug"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></button>
+    <button onclick="window.ankiToggleSettings()" class="p-1.5 rounded-full hover:bg-white/10 text-neutral-300 transition tap-press" title="Impostazioni"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></button>
+  </div>
+</header>
+
+  <!-- Main Kiosk Body & Viewports -->
+  <main class="flex-grow flex flex-col overflow-hidden relative" id="ankiMainRoot">
+    <!-- Diagnostic Logs & Settings Drawers -->
+    <!-- tools/templates/components/anki_settings_logs.html — Diagnostic Logs & Settings Drawers -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<!-- Diagnostic Log Modal -->
+<div id="ankiLogModal" class="hidden absolute inset-0 bg-black/85 backdrop-blur-md z-50 flex flex-col p-3 sm:p-4 font-mono select-text">
+  <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2 text-xs">
+    <div class="flex items-center gap-2"><span class="text-base">📋</span><span class="font-bold text-white uppercase">Registro Diagnostico</span><span id="ankiLogCountBadge" class="px-1.5 py-0.2 rounded bg-white/10 text-neutral-400 text-[10px]">0 eventi</span></div>
+    <button onclick="window.ankiToggleLogViewer(false)" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm">✕</button>
+  </div>
+  <div class="flex flex-wrap items-center justify-between gap-2 py-2 border-b border-[#2C2C2C]">
+    <div class="flex items-center gap-1"><button id="btnLogFilter_ALL" onclick="window.ankiSetLogFilter('ALL')" class="px-2 py-1 rounded bg-[#2196F3] text-white text-[10px] font-bold">ALL</button><button id="btnLogFilter_DECK" onclick="window.ankiSetLogFilter('DECK')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">DECK</button><button id="btnLogFilter_CARD" onclick="window.ankiSetLogFilter('CARD')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">CARD</button><button id="btnLogFilter_NET" onclick="window.ankiSetLogFilter('NET')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">NET</button><button id="btnLogFilter_ERROR" onclick="window.ankiSetLogFilter('ERROR')" class="px-2 py-1 rounded bg-[#2A2A2A] text-neutral-400 text-[10px] font-bold">ERROR</button></div>
+    <input type="text" oninput="window.ankiSetLogSearch(this.value)" placeholder="Cerca azione/ID..." class="px-2 py-1 bg-[#181818] border border-[#2C2C2C] rounded text-[11px] text-white focus:outline-none w-36 sm:w-48">
+  </div>
+  <div id="ankiLogListContainer" class="flex-grow overflow-y-auto overscroll-contain py-2 space-y-1.5 text-xs"></div>
+  <div class="flex items-center justify-between border-t border-[#2C2C2C] pt-2 gap-2 text-xs">
+    <div class="flex items-center gap-1.5"><button onclick="window.ankiCopyLogs()" class="px-3 py-1.5 rounded bg-[#2A2A2A] hover:bg-[#333333] text-neutral-200 text-[11px] font-bold transition tap-press border border-[#3C3C3C]">📋 Copia JSON</button><button onclick="window.ankiSendLogsAction()" class="px-3 py-1.5 rounded bg-[#2196F3] hover:bg-[#1E88E5] text-white text-[11px] font-bold transition tap-press shadow">🚀 Invia al Server</button></div>
+    <button onclick="window.ankiClearLogsAction()" class="px-2.5 py-1.5 rounded bg-red-950/60 hover:bg-red-900/80 text-red-300 text-[11px] font-bold transition tap-press border border-red-800/60">🗑️ Pulisci</button>
+  </div>
+  <div id="ankiLogToast" class="hidden absolute top-4 inset-x-4 bg-emerald-700 text-white font-mono text-xs py-2 px-3 rounded-lg shadow-xl text-center z-50"></div>
+</div>
+
+<!-- Settings Drawer -->
+<div id="ankiSettingsPanel" class="hidden absolute top-0 inset-x-0 bg-[#1E1E1E] border-b border-[#2C2C2C] shadow-2xl p-4 z-40 max-w-md mx-auto rounded-b-xl space-y-3">
+  <div class="flex items-center justify-between text-xs font-mono border-b border-[#2C2C2C] pb-2">
+    <span class="font-bold text-white uppercase tracking-wider flex items-center gap-1.5"><span>⚙️</span> Impostazioni</span>
+    <div class="flex items-center gap-3"><button onclick="window.ankiResetSettings()" class="text-[11px] text-[#42A5F5] hover:underline tap-press">Reimposta</button><button onclick="window.ankiToggleSettings(false)" class="text-neutral-400 hover:text-white text-xs font-bold px-1.5 py-0.5 rounded hover:bg-white/10">✕</button></div>
+  </div>
+  <div class="space-y-3 font-mono text-xs">
+    <div><div class="flex justify-between mb-1 text-neutral-300"><span>Fronte:</span><span id="labelFrontFontSize" class="font-bold text-[#42A5F5]">38px</span></div><input type="range" id="sliderFrontFontSize" min="20" max="76" step="2" value="38" oninput="window.ankiSetFrontFontSize(this.value)" onchange="window.ankiSetFrontFontSize(this.value)" class="w-full accent-[#42A5F5] cursor-pointer"></div>
+    <div><div class="flex justify-between mb-1 text-neutral-300"><span>Retro:</span><span id="labelBackFontSize" class="font-bold text-[#66BB6A]">20px</span></div><input type="range" id="sliderBackFontSize" min="14" max="36" step="1" value="20" oninput="window.ankiSetBackFontSize(this.value)" onchange="window.ankiSetBackFontSize(this.value)" class="w-full accent-[#66BB6A] cursor-pointer"></div>
+    <div class="border-t border-[#2C2C2C] pt-2">
+      <div class="flex justify-between mb-1 text-neutral-300"><span>Furigana:</span><span id="labelFuriganaMode" class="font-bold text-[#42A5F5]">Non Noti</span></div>
+      <div class="grid grid-cols-3 gap-1.5 text-[11px]"><button type="button" onclick="window.ankiSetFuriganaMode('unstudied')" id="btnFuriganaUnstudied" class="py-1 px-1.5 rounded border border-[#42A5F5] bg-[#42A5F5]/20 text-white font-semibold text-center transition tap-press shadow-sm">Non Noti</button><button type="button" onclick="window.ankiSetFuriganaMode('always')" id="btnFuriganaAlways" class="py-1 px-1.5 rounded border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-400 font-semibold text-center transition tap-press hover:text-white">Tutti</button><button type="button" onclick="window.ankiSetFuriganaMode('hidden')" id="btnFuriganaHidden" class="py-1 px-1.5 rounded border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-400 font-semibold text-center transition tap-press hover:text-white">Nascosto</button></div>
+    </div>
+    <div class="border-t border-[#2C2C2C] pt-2 flex items-center justify-between">
+      <div><div class="text-neutral-300 font-bold">Aggiornamenti & OTA:</div><div id="ankiSettingsVersionText" class="text-[10px] text-neutral-500">Versione corrente: v2.5.2</div></div>
+      <button type="button" onclick="window.ankiOpenUpdateModal()" class="px-2.5 py-1.5 rounded bg-[#2196F3]/20 hover:bg-[#2196F3]/30 text-[#42A5F5] border border-[#2196F3]/40 font-bold text-[11px] transition tap-press shadow-sm">🔄 Cerca Nuove</button>
+    </div>
+  </div>
+</div>
+
+    <!-- 1 & 2. Deck Picker & Overview Stages -->
+    <!-- tools/templates/components/anki_deck_views.html — Deck Picker & Deck Overview Stages -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<!-- 1. DECK PICKER -->
+<div id="ankiDeckListView" class="h-full flex flex-col max-w-2xl mx-auto w-full overflow-y-auto overscroll-contain p-2 sm:p-4 space-y-2">
+  <!-- Real-time Offline Sync Progress Bar -->
+  <div id="ankiSyncProgressBarContainer" class="hidden bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-2.5 space-y-1.5 shadow-md">
+    <div class="flex items-center justify-between text-[11px] font-mono">
+      <span id="ankiSyncProgressStatus" class="text-neutral-300 flex items-center gap-1.5"><span class="animate-spin inline-block">🔄</span> Sincronizzazione offline in corso...</span>
+      <span id="ankiSyncProgressPercent" class="text-[#42A5F5] font-bold">0%</span>
+    </div>
+    <div class="w-full bg-[#121212] rounded-full h-1.5 overflow-hidden border border-white/5">
+      <div id="ankiSyncProgressBar" class="bg-gradient-to-r from-[#2196F3] to-[#42A5F5] h-full rounded-full transition-all duration-200" style="width: 0%;"></div>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between px-2.5 py-1.5 font-mono text-[11px] text-neutral-400 bg-[#1A1A1A] border border-[#2A2A2A] rounded-t-xl select-none">
+    <div class="flex items-center gap-2"><span class="font-bold text-neutral-300">MAZZI</span><button type="button" onclick="window.ankiToggleAllCollapse(false)" class="text-[10px] text-[#42A5F5] hover:underline tap-press">Espandi</button><span class="text-neutral-600">|</span><button type="button" onclick="window.ankiToggleAllCollapse(true)" class="text-[10px] text-neutral-400 hover:text-white tap-press">Comprimi</button></div>
+    <div class="flex items-center font-mono text-[10px] sm:text-[11px] font-bold"><span class="w-11 sm:w-14 text-right text-[#42A5F5]">Nuove</span><span class="w-11 sm:w-14 text-right text-[#EF5350]">Appr.</span><span class="w-11 sm:w-14 text-right text-[#66BB6A]">Ripasso</span><span class="w-7 sm:w-9"></span></div>
+  </div>
+  <div id="ankiDecksContainer" class="bg-[#161616] border border-t-0 border-[#2A2A2A] rounded-b-xl shadow-lg divide-y divide-[#222222] overflow-hidden">
+    <div class="p-8 text-center text-neutral-400 font-mono text-xs"><span class="animate-spin inline-block mr-2">⏳</span> Caricamento mazzi Japan Mastery...</div>
+  </div>
+  <div class="text-center text-[10px] font-mono text-neutral-500 pt-2 pb-6 flex items-center justify-center gap-2"><button type="button" id="ankiFooterVersionText" onclick="window.ankiOpenUpdateModal()" class="hover:text-neutral-300 tap-press underline">Japan Mastery Web v2.5.9</button><span>•</span><button onclick="window.ankiHardReset()" class="text-[#42A5F5] underline hover:text-white tap-press">Forza Sincronizzazione</button></div>
+</div>
+
+<!-- 2. DECK OVERVIEW -->
+<div id="ankiDeckOverviewView" class="hidden h-full flex flex-col items-center justify-center p-4 max-w-md mx-auto w-full space-y-6">
+  <div class="text-center space-y-1"><h2 id="ankiOverviewDeckName" class="text-lg sm:text-xl font-bold text-white tracking-wide">Mazzo</h2><p class="text-xs text-neutral-400 font-mono">Riepilogo scadenze odierne</p></div>
+  <div class="grid grid-cols-3 gap-3 w-full bg-[#1E1E1E] border border-[#2C2C2C] rounded-lg p-4 text-center shadow-lg">
+    <div class="space-y-1 border-r border-[#2C2C2C]"><div class="text-[10px] text-neutral-400 font-mono uppercase">Nuove</div><div id="ankiOverviewNew" class="text-xl font-bold text-[#42A5F5]">0</div></div>
+    <div class="space-y-1 border-r border-[#2C2C2C]"><div class="text-[10px] text-neutral-400 font-mono uppercase">Apprend.</div><div id="ankiOverviewLrn" class="text-xl font-bold text-[#EF5350]">0</div></div>
+    <div class="space-y-1"><div class="text-[10px] text-neutral-400 font-mono uppercase">Ripassi</div><div id="ankiOverviewRev" class="text-xl font-bold text-[#66BB6A]">0</div></div>
+  </div>
+  <button onclick="window.ankiLaunchStudySession()" class="w-full py-3.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-sm uppercase tracking-wider rounded-lg shadow-lg transition tap-press active:scale-95 flex items-center justify-center gap-2"><span>Studia Adesso</span><span class="text-xs opacity-70">➔</span></button>
+</div>
+
+    <!-- 3. Tactile Swipe Stack Study View -->
+    <!-- tools/templates/components/anki_study_view.html — Tactile Swipe Stack Study Stage -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<div id="ankiStudyView" class="hidden h-full flex flex-col justify-between max-w-2xl mx-auto w-full p-2 sm:p-4 select-none relative">
+  <div id="ankiTimerContainer" onclick="window.ankiOpenCardTimerModal()" class="flex-shrink-0 w-full bg-[#1A1A1A] border border-[#2C2C2C] hover:border-neutral-500 rounded-xl px-3 py-1.5 flex items-center gap-2.5 shadow-inner font-mono text-xs z-20 cursor-pointer tap-press transition" title="Configura Timer Carta">
+    <span id="ankiTimerIcon" class="text-neutral-400 flex-shrink-0 text-xs">⏱️</span>
+    <div class="flex-grow bg-[#282828] h-2 rounded-full overflow-hidden p-0.5 border border-black/40"><div id="ankiTimerProgress" class="h-full w-full rounded-full bg-[#66BB6A] origin-left will-change-transform" style="transform: scaleX(1); transform-origin: left center;"></div></div>
+    <span id="ankiTimerText" class="font-bold text-white w-12 text-right flex-shrink-0 text-[11px]">15s</span>
+  </div>
+  <div class="relative flex-grow my-2 w-full flex items-center justify-center overflow-hidden">
+    <div id="ankiCardContainer" class="absolute inset-0 bg-[#1E1E1E] border border-[#2C2C2C] rounded-xl shadow-2xl p-3 sm:p-5 flex flex-col justify-between items-center text-center overflow-hidden z-10 will-change-transform">
+      <div id="ankiCardTintOverlay" class="absolute inset-0 rounded-xl pointer-events-none opacity-0 z-0"></div>
+      <div id="ankiBadgeWrong" class="stamp-badge absolute top-4 right-4 border-2 border-[#EF5350] bg-[#2D1414]/90 text-[#EF5350] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase rotate-12 shadow-lg z-30">✕ WRONG</div>
+      <div id="ankiBadgeCorrect" class="stamp-badge absolute top-4 left-4 border-2 border-[#66BB6A] bg-[#142D1C]/90 text-[#66BB6A] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase -rotate-12 shadow-lg z-30">✓ CORRECT</div>
+      <div id="ankiBadgeUndo" class="stamp-badge absolute top-4 inset-x-0 mx-auto w-fit border-2 border-[#42A5F5] bg-[#0D253A]/95 text-[#42A5F5] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase shadow-xl z-30">↺ ANNULLA / UNDO</div>
+      <div id="ankiBadgeResetTimer" class="stamp-badge absolute top-4 inset-x-0 mx-auto w-fit border-2 border-[#FFA726] bg-[#2D200E]/95 text-[#FFA726] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase shadow-xl z-30">⏱️ RESET TIMER</div>
+      <div id="ankiBadgeAltRule" class="stamp-badge absolute bottom-6 inset-x-0 mx-auto w-fit border-2 border-[#F59E0B] bg-[#2D1E0A]/95 text-[#FBBF24] px-3.5 py-1 rounded-lg font-mono font-bold text-xs uppercase shadow-xl z-30">🎯 REGOLA DIVERSA</div>
+      
+      <!-- Top Zone: Front & Prompt -->
+      <div id="ankiCardTopZone" class="relative z-10 w-full flex-shrink-0 flex flex-col items-center justify-center pt-2">
+        <div id="ankiCardFront" class="font-bold text-white jp-font tracking-wide leading-tight"></div>
+        <div id="ankiFlipPrompt" class="pt-3 text-neutral-500 font-mono text-xs animate-pulse">Tocca la carta per mostrare la risposta</div>
+      </div>
+
+      <!-- Middle Zone: Scrollable Back utilizing available card height -->
+      <div id="ankiCardBack" class="relative z-10 hidden w-full flex-grow my-2 pt-2 border-t border-[#2C2C2C] flex flex-col items-center overflow-hidden animate-info-fade min-h-0">
+        <div id="ankiCardReading" class="font-bold text-white jp-font leading-snug flex-shrink-0 mb-2"></div>
+        <div id="ankiCardMeaningScroll" class="w-full flex-grow overflow-y-auto overscroll-contain px-3.5 py-2.5 space-y-2 text-left rounded-xl bg-[#141414] border border-[#282828] select-text shadow-inner min-h-0" style="touch-action: pan-y; -webkit-overflow-scrolling: touch;">
+          <div id="ankiCardMeaning" class="font-sans font-medium text-white text-sm sm:text-base leading-relaxed"></div>
+          <div id="ankiCardNotes" class="text-xs font-mono text-neutral-300 pt-2 border-t border-[#2C2C2C]/60"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Zone: Dedicated Drag & Swipe Zone (2x Larger Tactile Area: 144px) -->
+      <div id="ankiCardSwipeZone" class="relative z-10 w-full flex-shrink-0 min-h-[144px] py-6 px-4 flex flex-col items-center justify-center cursor-grab active:cursor-grabbing border-t border-[#2C2C2C] bg-[#171717]/90 hover:bg-[#1C1C1C] rounded-b-xl mt-auto select-none touch-none transition-colors">
+        <div class="w-20 h-2.5 bg-[#444444] rounded-full mb-3 shadow-inner"></div>
+        <div class="flex items-center justify-center gap-4 text-xs font-mono text-neutral-400">
+          <span class="text-[#EF5350] font-bold">← WRONG</span>
+          <span class="text-neutral-500 font-semibold text-[11px]">↔ SWIPE ↔</span>
+          <span class="text-[#66BB6A] font-bold">CORRECT →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="ankiSwipeHintsBar" class="invisible flex-shrink-0 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-neutral-400 px-3 py-1 h-6">
+    <span class="flex items-center gap-1 text-[#EF5350]">← WRONG</span>
+    <span class="flex items-center gap-1 text-[#FFA726]">↑ RESET</span>
+    <span class="flex items-center gap-1 text-[#42A5F5]">↓ UNDO</span>
+    <span class="flex items-center gap-1 text-[#66BB6A]">CORRECT →</span>
+  </div>
+  <div class="flex-shrink-0 pt-1 h-[72px] sm:h-[76px] relative">
+    <button id="ankiBtnShowAnswer" onclick="window.ankiFlipCard()" class="w-full h-full bg-[#2A2A2A] hover:bg-[#333333] text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl transition tap-press active:scale-[0.98] flex items-center justify-center gap-2 border border-[#3C3C3C] shadow-md"><span>Mostra Risposta</span><kbd class="hidden sm:inline px-1 py-0.2 bg-white/10 text-[10px] rounded">Spazio</kbd></button>
+    <div id="ankiAnswerButtonGroup" class="hidden grid grid-cols-2 gap-3 font-mono h-full">
+      <button onclick="window.ankiTriggerSwipe('left', 1)" class="anki-btn-wrong h-full py-1.5 px-3 text-center rounded-xl transition tap-press flex flex-col items-center justify-center shadow-lg active:scale-[0.98]"><span id="ankiIvlWrong" class="text-[11px] font-bold opacity-80">&lt;10m</span><span class="text-sm sm:text-base font-bold uppercase tracking-wide mt-0.5">✕ WRONG</span><span class="text-[9px] opacity-60 mt-0.5">1 / ← Swipe</span></button>
+      <button onclick="window.ankiTriggerSwipe('right', 3)" class="anki-btn-correct h-full py-1.5 px-3 text-center rounded-xl transition tap-press flex flex-col items-center justify-center shadow-lg font-bold active:scale-[0.98]"><span id="ankiIvlCorrect" class="text-[11px] font-bold opacity-80">3g</span><span class="text-sm sm:text-base font-bold uppercase tracking-wide mt-0.5">✓ CORRECT</span><span class="text-[9px] opacity-60 mt-0.5">2 / → Swipe</span></button>
+    </div>
+  </div>
+  <div class="h-16 sm:h-4 w-full flex-shrink-0 pointer-events-none"></div>
+</div>
+
+    <!-- 4. Session & Card Timer Modal -->
+    <!-- tools/templates/components/anki_timer_modals.html — Session & Card Timer Configuration Modal -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<div id="ankiSessionTimerModal" class="hidden absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 font-mono select-none" onclick="if(event.target===this)window.ankiCloseSessionTimerModal()">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-4 sm:p-5 max-w-sm w-full space-y-3.5 shadow-2xl relative text-xs">
+    
+    <!-- Header with Tabs -->
+    <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2.5">
+      <div class="flex items-center gap-1 bg-[#141414] p-0.5 rounded-lg border border-[#2A2A2A]">
+        <button id="btnTimerTabSession" onclick="window.ankiSwitchTimerTab('session')" class="px-2.5 py-1 rounded-md text-[11px] font-bold transition tap-press bg-[#2196F3] text-white shadow-sm">🎯 Sessione</button>
+        <button id="btnTimerTabCard" onclick="window.ankiSwitchTimerTab('card')" class="px-2.5 py-1 rounded-md text-[11px] font-bold transition tap-press text-neutral-400 hover:text-white">⏱️ Per Carta</button>
+      </div>
+      <button onclick="window.ankiCloseSessionTimerModal()" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm tap-press">✕</button>
+    </div>
+
+    <!-- TAB 1: Session Timer Content -->
+    <div id="ankiTimerTabSessionContent" class="space-y-3.5">
+      <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 text-center space-y-1">
+        <div id="ankiModalTimerStatus" class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">In Corso</div>
+        <div id="ankiModalTimerDisplay" class="text-4xl font-mono font-bold text-[#66BB6A] tracking-wider">25:00</div>
+        <div id="ankiModalTimerSubtext" class="text-[11px] text-neutral-400">Target: 25 min</div>
+      </div>
+
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-neutral-300 font-semibold text-[11px]">
+          <span>Durata Target:</span>
+          <span id="ankiModalSelectedDuration" class="text-[#66BB6A] font-bold">25 min</span>
+        </div>
+        <div class="grid grid-cols-4 gap-1.5 text-[11px]">
+          <button type="button" onclick="window.ankiSetSessionPreset(0)" data-modal-min="0" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">Libero</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(5)" data-modal-min="5" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">5m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(10)" data-modal-min="10" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">10m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(15)" data-modal-min="15" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">15m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(20)" data-modal-min="20" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">20m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(25)" data-modal-min="25" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#66BB6A] bg-[#66BB6A]/20 text-white font-semibold text-center transition tap-press shadow-sm">25m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(45)" data-modal-min="45" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">45m</button>
+          <button type="button" onclick="window.ankiSetSessionPreset(60)" data-modal-min="60" class="anki-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">60m</button>
+        </div>
+
+        <div class="flex items-center justify-between bg-[#161616] border border-[#2A2A2A] rounded-xl px-3 py-2 mt-2">
+          <span class="text-neutral-400 text-[11px]">Minuti Personalizzati:</span>
+          <div class="flex items-center gap-1.5">
+            <button onclick="window.ankiAdjustSessionCustomMin(-5)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">-5</button>
+            <button onclick="window.ankiAdjustSessionCustomMin(-1)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">-1</button>
+            <input type="number" id="ankiModalCustomMinInput" min="1" max="180" value="25" onchange="window.ankiSetSessionCustomMin(this.value)" class="w-12 bg-[#222] border border-[#3C3C3C] rounded text-center text-white font-bold py-1 text-xs focus:outline-none focus:border-[#66BB6A]">
+            <button onclick="window.ankiAdjustSessionCustomMin(1)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">+1</button>
+            <button onclick="window.ankiAdjustSessionCustomMin(5)" class="w-7 h-7 rounded bg-[#2A2A2A] hover:bg-[#333] active:scale-95 text-white font-bold flex items-center justify-center border border-[#3C3C3C] tap-press">+5</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button id="ankiModalBtnPauseResume" onclick="window.ankiTogglePauseSessionTimer()" class="py-2.5 px-3 rounded-xl bg-[#2A2A2A] hover:bg-[#333333] active:scale-95 text-white font-bold text-xs transition tap-press border border-[#3C3C3C] flex items-center justify-center gap-1.5">
+          <span id="ankiModalPauseResumeIcon">⏸</span>
+          <span id="ankiModalPauseResumeText">Pausa</span>
+        </button>
+        <button onclick="window.ankiRestartSessionTimer()" class="py-2.5 px-3 rounded-xl bg-[#2196F3] hover:bg-[#1E88E5] active:scale-95 text-white font-bold text-xs transition tap-press shadow-md flex items-center justify-center gap-1.5">
+          <span>↺</span>
+          <span>Riavvia</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 2: Card Timer Content -->
+    <div id="ankiTimerTabCardContent" class="hidden space-y-3.5">
+      <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 space-y-1.5">
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Ambito Timer</span>
+          <button type="button" onclick="window.ankiApplyTimerToAllDecks()" class="text-[10px] text-[#42A5F5] hover:underline tap-press font-bold">Applica a Tutti i Mazzi</button>
+        </div>
+        <div id="ankiCardTimerDeckLabel" class="text-xs font-bold text-white truncate">Mazzo: Generale</div>
+        <div class="text-[11px] text-neutral-400">Tempo limite di risposta per ciascuna carta</div>
+      </div>
+
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-neutral-300 font-semibold text-[11px]">
+          <span>Durata Carta:</span>
+          <span id="ankiModalCardTimerDisplay" class="text-[#FFA726] font-bold">15s</span>
+        </div>
+        <div class="grid grid-cols-4 gap-1.5 text-[11px]">
+          <button type="button" onclick="window.ankiSetCardTimerPreset(0)" data-card-sec="0" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">Off</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(5)" data-card-sec="5" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">5s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(10)" data-card-sec="10" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">10s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(15)" data-card-sec="15" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#FFA726] bg-[#FFA726]/20 text-white font-semibold text-center transition tap-press shadow-sm">15s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(20)" data-card-sec="20" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">20s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(30)" data-card-sec="30" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">30s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(45)" data-card-sec="45" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">45s</button>
+          <button type="button" onclick="window.ankiSetCardTimerPreset(60)" data-card-sec="60" class="anki-card-timer-preset-btn py-1.5 rounded-lg border border-[#2C2C2C] bg-[#2A2A2A] text-neutral-300 font-semibold text-center transition tap-press hover:border-neutral-500">60s</button>
+        </div>
+
+        <div class="bg-[#161616] border border-[#2A2A2A] rounded-xl px-3 py-2.5 space-y-1 mt-2">
+          <div class="flex justify-between text-[11px] text-neutral-400">
+            <span>Slider Regolazione:</span>
+            <span id="labelModalCardTimerSlider" class="text-white font-bold">15s</span>
+          </div>
+          <input type="range" id="sliderModalCardTimer" min="0" max="60" step="5" value="15" oninput="window.ankiSetCardTimerPreset(this.value)" class="w-full accent-[#FFA726] cursor-pointer">
+          <div class="flex justify-between text-[10px] text-neutral-500"><span>0s (Off)</span><span>15s</span><span>30s</span><span>60s</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Action -->
+    <button onclick="window.ankiCloseSessionTimerModal()" class="w-full py-2 bg-white/5 hover:bg-white/10 active:scale-95 text-neutral-300 font-bold text-xs rounded-xl transition tap-press border border-white/5">
+      Continua Studio ➔
+    </button>
+  </div>
+</div>
+
+    <!-- 5. Anti-Fatigue, Break & OTA Modals -->
+    <!-- tools/templates/components/anki_break_update_modals.html — Anti-Fatigue, Micro-Break & OTA Modals -->
+<!-- Strictly <= 200 lines invariant. -->
+
+<!-- 4. ANTI-FATIGUE & BREAK MODALS -->
+<div id="ankiFatigueModal" class="hidden absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-6 max-w-sm w-full space-y-4 shadow-2xl text-center">
+    <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center mx-auto text-xl">☕</div>
+    <div class="space-y-1"><h3 class="text-base font-bold text-white">Rilevata Fatica Cognitiva</h3><p id="ankiFatigueMsg" class="text-xs text-neutral-300 leading-relaxed font-sans"></p></div>
+    <div id="ankiFatigueDebugContainer" class="hidden text-left font-mono"></div>
+    <div class="flex flex-col gap-2 pt-2">
+      <button id="ankiFatigueActionBtn" onclick="window.ankiStartDynamicBreak()" class="w-full py-2.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-xs rounded-xl transition tap-press shadow-md">Fai Micro-Pausa</button>
+      <button onclick="window.ankiDismissFatigue()" class="w-full py-2 bg-white/5 hover:bg-white/10 text-neutral-400 font-mono text-xs rounded-xl transition tap-press">Continua Comunque</button>
+      <button onclick="window.ankiToggleFatigueDebug()" class="text-[10px] text-neutral-500 hover:text-neutral-300 font-mono py-1 transition tap-press">🔍 Dettagli Analisi</button>
+    </div>
+  </div>
+</div>
+
+<div id="ankiBreakModal" class="hidden absolute inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col items-center justify-center p-6 text-center select-none">
+  <!-- Active Countdown & Breathing Stage -->
+  <div id="ankiBreakActiveStage" class="flex flex-col items-center justify-center space-y-6 animate-info-fade w-full max-w-sm">
+    <div class="space-y-1">
+      <h3 class="text-lg font-bold text-white tracking-wide">Micro-Pausa di Respirazione</h3>
+      <p class="text-xs text-neutral-400 font-mono">Inspira quando si espande • Espira quando si contrae</p>
+    </div>
+    <div id="ankiBreakCircle" class="w-28 h-28 rounded-full bg-[#42A5F5]/30 border-2 border-[#42A5F5] flex items-center justify-center transition-all duration-1000 transform scale-100 shadow-lg">
+      <span id="ankiBreakTimerText" class="text-2xl font-mono font-bold text-white">2:00</span>
+    </div>
+    <button onclick="window.ankiStopBreak()" class="py-2.5 px-6 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-neutral-300 font-mono text-xs transition tap-press border border-white/10">
+      Salta Pausa & Continua ➔
+    </button>
+  </div>
+
+  <!-- Break Completed / Return to Study Stage -->
+  <div id="ankiBreakFinishedStage" class="hidden flex flex-col items-center justify-center space-y-5 animate-info-fade w-full max-w-sm">
+    <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-3xl shadow-[0_0_24px_rgba(102,187,106,0.3)] animate-pulse">
+      ✨
+    </div>
+    <div class="space-y-1.5">
+      <h3 class="text-xl font-bold text-white tracking-wide">Pausa Completata!</h3>
+      <p class="text-xs text-neutral-300 font-sans leading-relaxed max-w-xs mx-auto">
+        Mente ricaricata. Quando sei pronto a concentrarti, tocca il pulsante per continuare il ripasso.
+      </p>
+    </div>
+    <div class="w-full pt-2">
+      <button onclick="window.ankiStopBreak()" class="w-full py-3.5 bg-gradient-to-r from-[#2196F3] to-[#1E88E5] hover:from-[#1E88E5] hover:to-[#1976D2] active:scale-95 text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-xl transition tap-press flex items-center justify-center gap-2 border border-blue-400/40">
+        <span>🎯 Ritorna a Studiare</span>
+        <span class="text-xs opacity-80">➔</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 5. OTA UPDATE & VERSION CHECKER MODAL -->
+<div id="ankiUpdateModal" class="hidden absolute inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-4 font-mono select-none" onclick="if(event.target===this)window.ankiCloseUpdateModal()">
+  <div class="bg-[#1E1E1E] border border-[#2C2C2C] rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl relative text-xs">
+    <div class="flex items-center justify-between border-b border-[#2C2C2C] pb-2.5">
+      <div class="flex items-center gap-2">
+        <span class="text-base">🚀</span>
+        <span class="font-bold text-white uppercase tracking-wider">Aggiornamenti & OTA</span>
+      </div>
+      <button onclick="window.ankiCloseUpdateModal()" class="text-neutral-400 hover:text-white font-bold px-2 py-0.5 rounded hover:bg-white/10 text-sm tap-press">✕</button>
+    </div>
+    
+    <div class="bg-[#141414] border border-[#2A2A2A] rounded-xl p-3 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="text-neutral-400 text-[11px]">Versione Installata:</span>
+        <span id="ankiUpdateCurrentVersion" class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[11px] font-mono font-bold">v2.5.2</span>
+      </div>
+      <div id="ankiUpdateStatusText" class="text-xs text-neutral-300 font-sans py-1 leading-snug">
+        Tocca il pulsante in basso per verificare la disponibilità di nuove versioni.
+      </div>
+    </div>
+
+    <div class="space-y-1.5">
+      <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Note di Rilascio / Novità:</div>
+      <ul id="ankiUpdateChangelog" class="space-y-1 bg-[#161616] border border-[#2A2A2A] rounded-xl p-3 max-h-36 overflow-y-auto overscroll-contain">
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Pausa studio: blocco conteggio tempo sessione durante la micro-pausa</span></li>
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Schermata di ripresa tattile con suono e feedback armonico di fine pausa</span></li>
+        <li class="flex items-start gap-2 text-xs text-neutral-300"><span class="text-[#42A5F5] font-bold">•</span><span>Persistenza locale impostazioni e FSRS ottimizzato</span></li>
+      </ul>
+    </div>
+
+    <div id="ankiUpdateActionArea" class="space-y-2 pt-1">
+      <button id="ankiBtnCheckUpdates" onclick="window.ankiCheckUpdates()" class="w-full py-2.5 bg-[#2196F3] hover:bg-[#1E88E5] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition tap-press active:scale-95 flex items-center justify-center gap-2 border border-blue-400/30">
+        <span>🔄 Verifica Nuove Versioni</span>
+      </button>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <script defer src="/static/js/anki_bundle.js?v=20260927_v288_bundle_v53"></script>
+</body>
+</html>

@@ -1348,5 +1348,305 @@
     },
     "answer": "A",
     "explanation": "I documenti sono stati disposti ordinatamente da qualcuno in anticipo per la distribuzione (配布用). L'intenzionalità preparatoria richiede [Transitivo 並べる + てある] con particella が -> 資料がきれいに並べてある."
+  },
+  {
+    "id": "DRILL-B-91",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "提出する 前に、レポートの 誤字を もう一度（ ）。",
+    "options": {
+      "A": "見直した",
+      "B": "見送った",
+      "C": "見落とした",
+      "D": "見つめた"
+    },
+    "answer": "A",
+    "explanation": "「見直す」(みなおす)は再度確認・点検する意。「見落とす」は看過する。"
+  },
+  {
+    "id": "DRILL-B-92",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "図書館で 借りた 小説を 二日間で すべて（ ）しまった。",
+    "options": {
+      "A": "読み終えて",
+      "B": "読み直して",
+      "C": "読み飛ばして",
+      "D": "読み返して"
+    },
+    "answer": "A",
+    "explanation": "動詞ます形語幹＋「終える」で動作の完結を表す。"
+  },
+  {
+    "id": "DRILL-B-93",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "路地から 急に 子どもが 道路へ（ ）きて 驚いた。",
+    "options": {
+      "A": "飛び出して",
+      "B": "飛び降りて",
+      "C": "飛び越えて",
+      "D": "飛び立って"
+    },
+    "answer": "A",
+    "explanation": "「飛び出す」は突然中から外・前へ勢いよく出ること。"
+  },
+  {
+    "id": "DRILL-B-94",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "先輩から 頼まれた 面倒な 仕事を 喜んで（ ）。",
+    "options": {
+      "A": "引き受けた",
+      "B": "引き止めた",
+      "C": "引き返した",
+      "D": "引き分けた"
+    },
+    "answer": "A",
+    "explanation": "「引き受ける」は任務や責任を自分の役目として受託すること。"
+  },
+  {
+    "id": "DRILL-B-95",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Compound Verbs (複合動詞)",
+    "question": "帰宅の 途中で 書店に（ ）、新しい 単語帳を 買った。",
+    "options": {
+      "A": "立ち寄って",
+      "B": "立ち止まって",
+      "C": "立ち上がって",
+      "D": "立ち去って"
+    },
+    "answer": "A",
+    "explanation": "「立ち寄る」は目的地へ行く途中でついでによること。"
+  },
+  {
+    "id": "DRILL-B-96",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞)",
+    "question": "来週の 出張の スケジュールが やっと（ ）。",
+    "options": {
+      "A": "決まりました",
+      "B": "決めました",
+      "C": "定めました",
+      "D": "選びました"
+    },
+    "answer": "A",
+    "explanation": "スケジュール(主語)＋「決まる」(自動詞)。「決める」は他動詞。"
+  },
+  {
+    "id": "DRILL-B-97",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞)",
+    "question": "風で キャンプファイヤーの 火が（ ）しまった。",
+    "options": {
+      "A": "消えて",
+      "B": "消して",
+      "C": "落として",
+      "D": "失って"
+    },
+    "answer": "A",
+    "explanation": "火(が)＋「消える」(自動詞)。「消す」は他動詞(を)。"
+  },
+  {
+    "id": "DRILL-B-98",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Transitivity & State (自他動詞)",
+    "question": "注文した パソコンが 明日の 朝 実家に（ ）予定です。",
+    "options": {
+      "A": "届く",
+      "B": "届ける",
+      "C": "配る",
+      "D": "送る"
+    },
+    "answer": "A",
+    "explanation": "パソコンが(主語)実家に「届く」(自動詞)。「届ける」は配達する他動詞。"
+  },
+  {
+    "id": "DRILL-B-99",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "社長は 先ほど お客さまと 一緒に お帰りに（ ）ました。",
+    "options": {
+      "A": "なり",
+      "B": "いたし",
+      "C": "申し上げ",
+      "D": "いただき"
+    },
+    "answer": "A",
+    "explanation": "「お〜になる」は相手の行為を高める尊敬語表現。"
+  },
+  {
+    "id": "DRILL-B-100",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "確認の 上、午後 改めて こちらから お電話（ ）ます。",
+    "options": {
+      "A": "さしあげ",
+      "B": "くださり",
+      "C": "いただき",
+      "D": "なされ"
+    },
+    "answer": "A",
+    "explanation": "「お電話さしあげる」は相手に対して電話をかける謙譲表現。"
+  },
+  {
+    "id": "DRILL-B-101",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "部長、明日の 役員会議の 配布資料は もう ご覧に（ ）ましたか。",
+    "options": {
+      "A": "なり",
+      "B": "いたし",
+      "C": "まいり",
+      "D": "おり"
+    },
+    "answer": "A",
+    "explanation": "「見る」の尊敬語は「ご覧になる」。「拝見する」は自分の謙譲語。"
+  },
+  {
+    "id": "DRILL-B-102",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "先生の 重い お荷物を 私が お持ち（ ）ます。",
+    "options": {
+      "A": "し",
+      "B": "になり",
+      "C": "なさり",
+      "D": "下さり"
+    },
+    "answer": "A",
+    "explanation": "「お〜する」は自分が相手のために行う行為をへりくだる謙譲語I。"
+  },
+  {
+    "id": "DRILL-B-103",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Keigo (敬語)",
+    "question": "来週の 水曜日、午後二時に 貴社へ（ ）たいと 存じます。",
+    "options": {
+      "A": "伺い",
+      "B": "いらっしゃい",
+      "C": "おいでになり",
+      "D": "お越しになり"
+    },
+    "answer": "A",
+    "explanation": "「行く・訪ねる」の謙譲語は「伺う」。他は尊敬語。"
+  },
+  {
+    "id": "DRILL-B-104",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "激しい 雨（ ）かかわらず、会場には 多くの 観客が 詰めかけた。",
+    "options": {
+      "A": "にも",
+      "B": "へと",
+      "C": "より",
+      "D": "まで"
+    },
+    "answer": "A",
+    "explanation": "「〜にもかかわらず」は条件に反して事態が生じる逆接表現。"
+  },
+  {
+    "id": "DRILL-B-105",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "この 専門用語は、初心者（ ）は 少し 理解しにくい。",
+    "options": {
+      "A": "にとって",
+      "B": "について",
+      "C": "に対して",
+      "D": "によって"
+    },
+    "answer": "A",
+    "explanation": "「〜にとって」はその人の立場・視点から見ての評価を表す。"
+  },
+  {
+    "id": "DRILL-B-106",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "薬を 飲んだ（ ）、急に 激しい 眠気に 襲われた。",
+    "options": {
+      "A": "とたんに",
+      "B": "ついでに",
+      "C": "かわりに",
+      "D": "うえに"
+    },
+    "answer": "A",
+    "explanation": "動詞た形＋「とたんに」は直後に予期せぬ変化が起こることを表す。"
+  },
+  {
+    "id": "DRILL-B-107",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Grammar Connectives",
+    "question": "彼は 反省する（ ）、かえって 言い訳ばかり 並べ立てた。",
+    "options": {
+      "A": "どころか",
+      "B": "ばかりか",
+      "C": "ほどに",
+      "D": "だけに"
+    },
+    "answer": "A",
+    "explanation": "「〜どころか」は予想される程度から著しくかけ離れた事態を表す。"
+  },
+  {
+    "id": "DRILL-B-108",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "健康を 維持するためには、毎日の ＿ ＿ ★ ＿ 大切である。",
+    "options": {
+      "A": "バランスに",
+      "B": "気をつける",
+      "C": "食生活の",
+      "D": "ことが"
+    },
+    "answer": "B",
+    "explanation": "毎日の【食生活の(C)】【バランスに(A)】【★気をつける(B)】【ことが(D)】大切である。"
+  },
+  {
+    "id": "DRILL-B-109",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "たとえ 困難であっても、一度 ＿ ＿ ★ ＿ つもりだ。",
+    "options": {
+      "A": "決めた",
+      "B": "あきらめない",
+      "C": "目標は",
+      "D": "決して"
+    },
+    "answer": "D",
+    "explanation": "一度【決めた(A)】【目標は(C)】【決して(D)】【★あきらめない(B)】つもりだ。"
+  },
+  {
+    "id": "DRILL-B-110",
+    "section": "B",
+    "level": "JLPT N3/N2",
+    "category": "Sentence Scrambling (★)",
+    "question": "今回の 海外留学を ＿ ＿ ★ ＿ 考えている。",
+    "options": {
+      "A": "将来の",
+      "B": "進路について",
+      "C": "真剣に",
+      "D": "きっかけとして"
+    },
+    "answer": "C",
+    "explanation": "海外留学を【きっかけとして(D)】【将来の(A)】【進路について(B)】【★真剣に(C)】考えている。"
   }
 ]

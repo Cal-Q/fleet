@@ -1,9 +1,9 @@
 [Unit]
 # Auto-generated, DO NOT EDIT
 Description=Service for snap application cups.cups-browsed
-Requires=snap-cups-1238.mount
+Requires=snap-cups-1262.mount
 Wants=network.target
-After=snap-cups-1238.mount network.target snapd.apparmor.service
+After=snap-cups-1262.mount network.target snapd.apparmor.service
 X-Snappy=yes
 
 [Service]
@@ -11,7 +11,7 @@ EnvironmentFile=-/etc/environment
 ExecStart=/usr/bin/snap run cups.cups-browsed
 SyslogIdentifier=cups.cups-browsed
 Restart=always
-WorkingDirectory=/var/snap/cups/1238
+WorkingDirectory=/var/snap/cups/1262
 ExecStop=/usr/bin/snap run --command=stop cups.cups-browsed
 ExecReload=/usr/bin/snap run --command=reload cups.cups-browsed
 TimeoutStopSec=30s

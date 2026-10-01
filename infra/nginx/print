@@ -7,6 +7,7 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/print.calq.it/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    include snippets/security-headers.conf;
 
     return 301 https://stampa.calq.it$request_uri;
 }

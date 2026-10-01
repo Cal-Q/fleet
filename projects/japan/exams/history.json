@@ -153,6 +153,294 @@
           "total": 2
         }
       }
+    },
+    {
+      "session_id": "sess_1789337005",
+      "timestamp": "2026-09-13T22:03:25.119038",
+      "score": 3,
+      "total": 3,
+      "percentage": 100.0,
+      "time_seconds": 45,
+      "breakdown": {
+        "A": {
+          "correct": 1,
+          "total": 1
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 1,
+          "total": 1
+        }
+      },
+      "category_breakdown": {
+        "Kanji Writing (Grafia)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Keigo (敬語)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Kanji Semantic Mining": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789338411",
+      "timestamp": "2026-09-13T22:26:51.352989",
+      "score": 3,
+      "total": 3,
+      "percentage": 100.0,
+      "time_seconds": 45,
+      "breakdown": {
+        "A": {
+          "correct": 1,
+          "total": 1
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 1,
+          "total": 1
+        }
+      },
+      "category_breakdown": {
+        "Particles (助詞)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Sentence Scrambling (★)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Formal Written Discourse": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789338678",
+      "timestamp": "2026-09-13T22:31:18.702431",
+      "score": 3,
+      "total": 3,
+      "percentage": 100.0,
+      "time_seconds": 120,
+      "breakdown": {
+        "A": {
+          "correct": 1,
+          "total": 1
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 1,
+          "total": 1
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading (Fonetica)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Compound Verbs (複合動詞)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Advanced Written Expressions": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789338683",
+      "timestamp": "2026-09-13T22:31:23.185824",
+      "score": 3,
+      "total": 3,
+      "percentage": 100.0,
+      "time_seconds": 120,
+      "breakdown": {
+        "A": {
+          "correct": 1,
+          "total": 1
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 1,
+          "total": 1
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading (Fonetica)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Compound Verbs (複合動詞)": {
+          "correct": 1,
+          "total": 1
+        },
+        "Advanced Written Expressions": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789340508",
+      "timestamp": "2026-09-13T23:01:48.513001",
+      "score": 1,
+      "total": 1,
+      "percentage": 100.0,
+      "time_seconds": 20,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 0
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Causative-Passive (使役受身)": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789341272",
+      "timestamp": "2026-09-13T23:14:32.080608",
+      "score": 1,
+      "total": 1,
+      "percentage": 100.0,
+      "time_seconds": 15,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 0
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Transitivity & State (自他動詞・結果状態)": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789341274",
+      "timestamp": "2026-09-13T23:14:34.303285",
+      "score": 1,
+      "total": 1,
+      "percentage": 100.0,
+      "time_seconds": 15,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 0
+        },
+        "B": {
+          "correct": 1,
+          "total": 1
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Transitivity & State (自他動詞・結果状態)": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789341548",
+      "timestamp": "2026-09-13T23:19:08.919047",
+      "score": 1,
+      "total": 1,
+      "percentage": 100.0,
+      "time_seconds": 12,
+      "breakdown": {
+        "A": {
+          "correct": 1,
+          "total": 1
+        },
+        "B": {
+          "correct": 0,
+          "total": 0
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading (Fonetica)": {
+          "correct": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "session_id": "sess_1789342273",
+      "timestamp": "2026-09-13T23:31:13.636314",
+      "score": 0,
+      "total": 12,
+      "percentage": 0.0,
+      "time_seconds": 200,
+      "breakdown": {
+        "A": {
+          "correct": 0,
+          "total": 12
+        },
+        "B": {
+          "correct": 0,
+          "total": 0
+        },
+        "C": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "category_breakdown": {
+        "Kanji Reading (Fonetica)": {
+          "correct": 0,
+          "total": 10
+        },
+        "Kanji Reading (Fonetica - 熟字訓)": {
+          "correct": 0,
+          "total": 2
+        }
+      }
     }
   ]
 }

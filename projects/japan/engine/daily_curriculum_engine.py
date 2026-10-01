@@ -10,12 +10,10 @@ import json
 import os
 from typing import Any, Dict, List
 
-BASE_DIR = "/opt/japan"
-GRAMMAR_FILE = os.path.join(BASE_DIR, "japanese", "grammar_progress.json")
-BUNKI_FILE = os.path.join(BASE_DIR, "japanese", "bunki_profile.json")
-EXAMS_FILE = os.path.join(BASE_DIR, "exams", "exam_database.json")
-LOG_FILE = os.path.join(BASE_DIR, "exams", "practice_log.jsonl")
+from engine.curriculum_graph import get_unstudied_by_level
 
+BASE_DIR = "/opt/japan"
+BUNKI_FILE = os.path.join(BASE_DIR, "japanese", "bunki_profile.json")
 EXAM_TARGET_DATE = "2027-02-20"
 
 
@@ -36,8 +34,7 @@ def compute_macro_trajectory(today_str: str = None) -> Dict[str, Any]:
     target = datetime.strptime(EXAM_TARGET_DATE, "%Y-%m-%d")
     days_left = max(1, (target - today).days)
 
-    gp = load_json_safe(GRAMMAR_FILE, {})
-    unstudied = gp.get("unstudied_by_level", {})
+    unstudied = get_unstudied_by_level()
     n4_unstudied = len(unstudied.get("N4", []))
     n3_unstudied = len(unstudied.get("N3", []))
     n2_unstudied = len(unstudied.get("N2", []))
@@ -88,11 +85,11 @@ def compute_macro_trajectory(today_str: str = None) -> Dict[str, Any]:
 
 def get_today_granular_plan(today_str: str = None) -> Dict[str, Any]:
     traj = compute_macro_trajectory(today_str)
-    gp = load_json_safe(GRAMMAR_FILE, {})
     bunki = load_json_safe(BUNKI_FILE, {})
+    unstudied = get_unstudied_by_level()
 
-    unstudied_n4 = gp.get("unstudied_by_level", {}).get("N4", [])
-    unstudied_n3 = gp.get("unstudied_by_level", {}).get("N3", [])
+    unstudied_n4 = unstudied.get("N4", [])
+    unstudied_n3 = unstudied.get("N3", [])
 
     if unstudied_n4:
         active_points = unstudied_n4[:4]
@@ -119,6 +116,30 @@ def get_today_granular_plan(today_str: str = None) -> Dict[str, Any]:
     tasks = [
         {
             "slot": 1,
+            "category": "Drill Test MEXT",
+            "title": f"Verifica Mirata su {exam_title}",
+            "est_minutes": exam_time_min,
+            "section": exam_section,
+            "count": 12 if exam_section == "A" else 15,
+            "description": (
+                f"Risoluzione concentrata di 10-12 quesiti di Sezione {exam_section}. "
+                "Annotazione immediata dei dubbi e verifica attiva delle spiegazioni."
+            )
+        },
+        {
+            "slot": 2,
+            "category": "Frasi & Verbi Fondamentali",
+            "title": "Consolidamento Sintassi & 12 Verbi Keigo",
+            "est_minutes": 25,
+            "mode": interview_mode,
+            "description": (
+                "Lettura attiva frasi Bunpro per i punti odierni + 12 coppie "
+                "irregolari Keigo come carte lessicali. NESSUNA simulazione "
+                "orale complessa in questa fase."
+            )
+        },
+        {
+            "slot": 3,
             "category": "SRS Anki (Kurogane)",
             "title": "Mantenimento Carte Mature",
             "est_minutes": 40,
@@ -126,7 +147,7 @@ def get_today_granular_plan(today_str: str = None) -> Dict[str, Any]:
             "live_status": f"{bunki.get('mature_cards', 5052)} mature attive"
         },
         {
-            "slot": 2,
+            "slot": 4,
             "category": f"Grammatica Bunpro ({current_focus})",
             "title": f"Studio di {len(active_points)} Nuovi Punti Grammaticali",
             "est_minutes": 45,
@@ -139,29 +160,6 @@ def get_today_granular_plan(today_str: str = None) -> Dict[str, Any]:
                 }
                 for p in active_points
             ]
-        },
-        {
-            "slot": 3,
-            "category": "Frasi & Verbi Fondamentali",
-            "title": "Consolidamento Sintassi & 12 Verbi Keigo",
-            "est_minutes": 25,
-            "mode": interview_mode,
-            "description": (
-                "Lettura attiva frasi Bunpro per i punti odierni + 12 coppie irregolari Keigo come carte lessicali. "
-                "NESSUNA simulazione orale complessa in questa fase."
-            )
-        },
-        {
-            "slot": 4,
-            "category": "Drill Test MEXT",
-            "title": f"Verifica Mirata su {exam_title}",
-            "est_minutes": exam_time_min,
-            "section": exam_section,
-            "count": 12 if exam_section == "A" else 15,
-            "description": (
-                f"Risoluzione concentrata di 10-12 quesiti di Sezione {exam_section}. "
-                "Annotazione immediata dei dubbi e verifica attiva delle spiegazioni."
-            )
         }
     ]
 
@@ -179,16 +177,19 @@ def get_today_granular_plan(today_str: str = None) -> Dict[str, Any]:
 
 def audit_routine_invariants(plan: Dict[str, Any]) -> List[Dict[str, str]]:
     issues = []
-    task4 = next((t for t in plan["tasks"] if t["slot"] == 4), None)
-    if task4 and task4["section"] == "A" and task4["est_minutes"] > 25:
+    task1 = next((t for t in plan["tasks"] if t["slot"] == 1), None)
+    if task1 and task1["section"] == "A" and task1["est_minutes"] > 25:
         issues.append({
             "severity": "ERROR",
             "code": "OVERBUDGET_PART_A",
-            "message": f"Parte A ha solo 10-12 quesiti: {task4['est_minutes']}m è sovradimensionato (max 20m)."
+            "message": (
+                f"Parte A ha solo 10-12 quesiti: {task1['est_minutes']}m "
+                "è sovradimensionato (max 20m)."
+            )
         })
 
-    task3 = next((t for t in plan["tasks"] if t["slot"] == 3), None)
-    if plan["active_phase"] == "Fase 1" and task3 and task3["mode"] != "keigo_cards_only":
+    task2 = next((t for t in plan["tasks"] if t["slot"] == 2), None)
+    if plan["active_phase"] == "Fase 1" and task2 and task2["mode"] != "keigo_cards_only":
         issues.append({
             "severity": "ERROR",
             "code": "PREMATURE_ORAL_INTERVIEW",

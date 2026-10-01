@@ -1,0 +1,15 @@
+[Unit]
+Description=Antigravity Autonomous Quota Failover Daemon
+After=network.target agy-limits-updater.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/agy-auto-failover
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

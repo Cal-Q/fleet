@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AnkiDroid • japan.calq.it/anki</title>
+  <link rel="manifest" href="/static/manifest_anki.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icon-192.png">
+  <meta name="theme-color" content="#121212">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/tailwind.min.css?v={{ build or '20260930_v2106' }}">
+  <style>
+    :root { --anki-front-font-size: 38px; --anki-back-font-size: 20px; }
+    @font-face {
+      font-family: 'textbook';
+      src: url('/media/_HGSKyokashotai.ttf') format('truetype');
+      font-display: swap;
+    }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+    .jp-font, #ankiCardFront, #ankiCardReading {
+      font-family: 'textbook', '_HGSKyokashotai', 'BIZ UDPMincho',
+        'Noto Serif JP', serif !important;
+    }
+    #ankiCardFront { font-size: var(--anki-front-font-size, 38px); }
+    #ankiCardReading { font-size: var(--anki-back-font-size, 20px); }
+    #ankiCardMeaning { font-size: calc(var(--anki-back-font-size, 20px) * 0.9); }
+    ruby { ruby-position: over; ruby-align: center; }
+    rt { font-size: 0.52em; color: #FFFFFF; user-select: none; line-height: 1; opacity: 0.95; }
+    .anki-btn-wrong {
+      background-color: #2D1414;
+      color: #EF5350;
+      border: 1.5px solid rgba(239,83,80,0.4);
+    }
+    .anki-btn-wrong:active {
+      background-color: #EF5350;
+      color: #FFF;
+      transform: scale(0.95);
+    }
+    .anki-btn-correct {
+      background-color: #142D1C;
+      color: #66BB6A;
+      border: 1.5px solid rgba(102,187,106,0.4);
+    }
+    .anki-btn-correct:active {
+      background-color: #66BB6A;
+      color: #FFF;
+      transform: scale(0.95);
+    }
+    .tap-press:active { transform: scale(0.96); }
+    .stamp-badge { pointer-events: none; opacity: 0; }
+  </style>
+  <script id="anki-initial-decks" type="application/json">
+    {{ (decks or []) | tojson | safe }}
+  </script>
+  <script id="anki-initial-settings" type="application/json">
+    {{ (settings or {}) | tojson | safe }}
+  </script>
+  <script>
+    try {
+      const _el = document.getElementById('anki-initial-decks');
+      window.__INITIAL_DECKS__ =
+        (_el && _el.textContent && _el.textContent.trim().startsWith('['))
+          ? JSON.parse(_el.textContent) : [];
+    } catch(e) { window.__INITIAL_DECKS__ = []; }
+    try {
+      const _sEl = document.getElementById('anki-initial-settings');
+      window.__INITIAL_SETTINGS__ =
+        (_sEl && _sEl.textContent && _sEl.textContent.trim().startsWith('{'))
+          ? JSON.parse(_sEl.textContent) : {};
+    } catch(e) { window.__INITIAL_SETTINGS__ = {}; }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw_anki.js', { scope: '/' })
+          .then(r => r.update()).catch(() => {});
+      });
+    }
+  </script>
+</head>
+<body
+  class="h-[100svh] w-screen overflow-hidden flex flex-col antialiased bg-[#121212]
+  text-[#E0E0E0] select-none">
+  <!-- Masthead Header -->
+  {% include "components/anki_header.html" %}
+
+  <!-- Main Kiosk Body & Viewports -->
+  <main class="flex-grow flex flex-col overflow-hidden relative" id="ankiMainRoot">
+    <!-- Diagnostic Logs & Settings Drawers -->
+    {% include "components/anki_settings_logs.html" %}
+
+    <!-- 1 & 2. Deck Picker & Overview Stages -->
+    {% include "components/anki_deck_views.html" %}
+
+    <!-- 3. Tactile Swipe Stack Study View -->
+    {% include "components/anki_study_view.html" %}
+
+    <!-- 4. Session & Card Timer Modal -->
+    {% include "components/anki_timer_modals.html" %}
+
+    <!-- 5. Anti-Fatigue, Break & OTA Modals -->
+    {% include "components/anki_break_update_modals.html" %}
+  </main>
+
+  <script defer src="/static/js/anki_bundle.js?v={{ build or '20260930_v2116' }}"></script>
+</body>
+</html>

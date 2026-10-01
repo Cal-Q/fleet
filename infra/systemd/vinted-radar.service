@@ -1,0 +1,25 @@
+[Unit]
+Description=Vinted Radar Background Scanner (calq.it/vinted)
+After=network.target
+
+[Service]
+Type=simple
+User=master
+WorkingDirectory=/opt/vinted
+Environment="PYTHONPATH=/opt/vinted"
+Environment="PYTHONUNBUFFERED=1"
+Environment="PLAYWRIGHT_BROWSERS_PATH=/home/master/.cache/ms-playwright"
+ExecStart=/usr/bin/python3 -m vinted.cli radar --interval 300
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Systemd Security Sandboxing
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=false
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
